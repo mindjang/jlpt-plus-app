@@ -24,7 +24,7 @@ export const LevelCard: React.FC<LevelCardProps> = ({
 
   return (
     <motion.div
-      className="relative w-[65vw] max-w-[20rem] aspect-[4/5] rounded-levelCard shadow-soft overflow-hidden cursor-pointer bg-surface"
+      className="relative w-[65%] max-w-[20rem] aspect-[4/5] rounded-levelCard shadow-soft overflow-hidden cursor-pointer bg-surface"
       style={{
         background: `linear-gradient(135deg, ${gradient.from} 0%, ${gradient.to} 100%)`,
         maxWidth: 'calc(100vw - 2rem)',

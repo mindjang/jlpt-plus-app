@@ -10,6 +10,78 @@ import { Level, levelData, getLevelGradient } from '@/data'
 
 type StudyMode = 'auto' | 'chapter'
 
+// 반원형 진행률 차트 컴포넌트
+function SemicircleProgress({ value, progress, total }: { value: number; progress: number; total: number }) {
+  const radius = 80
+  const centerX = 100
+  const centerY = 100
+  const strokeWidth = 32
+  
+  // 반원 경로 계산 (왼쪽에서 오른쪽으로)
+  const startAngle = Math.PI // 180도 (왼쪽)
+  const endAngle = 0 // 0도 (오른쪽)
+  const currentAngle = startAngle - (value / 100) * (startAngle - endAngle)
+  
+  // 시작점과 끝점 좌표
+  const startX = centerX - radius
+  const startY = centerY
+  const endX = centerX + radius
+  const endY = centerY
+  
+  // 현재 진행률에 따른 끝점
+  const currentX = centerX + radius * Math.cos(currentAngle)
+  const currentY = centerY - radius * Math.sin(currentAngle)
+  
+  // 큰 호인지 작은 호인지 결정 (50% 이상이면 큰 호)
+  const largeArcFlag = value >= 50 ? 1 : 0
+  
+  // 진행률 경로
+  const progressPath = value > 0 
+    ? `M ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} 0 ${currentX} ${currentY}`
+    : ''
+  
+  return (
+    <div className="relative w-full flex-shrink-0" style={{ height: '7rem' }}>
+      <svg 
+        className="w-full h-full" 
+        viewBox="0 0 200 100" 
+        preserveAspectRatio="xMidYMid meet"
+        style={{ overflow: 'visible' }}
+      >
+        {/* 배경 반원 (회색) */}
+        <path
+          d={`M ${startX} ${startY} A ${radius} ${radius} 0 0 1 ${endX} ${endY}`}
+          fill="none"
+          stroke="#F3F3F3"
+          strokeWidth={strokeWidth}
+          strokeLinecap="round"
+        />
+        {/* 진행률 반원 (주황색) */}
+        {progressPath && (
+          <path
+            d={progressPath}
+            fill="none"
+            stroke="#FF8A00"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        )}
+      </svg>
+      {/* 텍스트 오버레이 */}
+      <div 
+        className="absolute inset-0 flex flex-col items-center justify-end pointer-events-none z-10 pb-2"
+      >
+        <span className="text-subtitle font-semibold text-text-main leading-tight">
+          {Math.round(value)}%
+        </span>
+        <span className="text-label text-text-sub leading-tight">
+          {progress}/{total}
+        </span>
+      </div>
+    </div>
+  )
+}
+
 export default function AutoStudyPage() {
   const router = useRouter()
   const params = useParams()
@@ -45,12 +117,16 @@ export default function AutoStudyPage() {
   }
 
   return (
-    <div
-      className="min-h-screen"
-      style={{
-        background: `linear-gradient(135deg, ${gradient.from} 0%, ${gradient.to} 50%, #FBFAF7 50%)`,
-      }}
-    >
+    <div className="min-h-screen relative bg-white">
+      {/* 그라데이션 배경 (상단부터 40vh까지) */}
+      <div
+        className="absolute top-0 left-0 right-0"
+        style={{
+          height: '40vh',
+          background: `linear-gradient(to bottom, ${gradient.to} 0%, ${gradient.from} 40%, #ffffff 60%)`,
+        }}
+      />
+
       <AppBar
         title={`${level} ${activeTab === 'word' ? '단어' : '한자'}`}
         onBack={() => router.back()}
@@ -65,7 +141,7 @@ export default function AutoStudyPage() {
         className="bg-transparent border-none"
       />
 
-      <div className="pb-20">
+      <div className="relative z-10 pb-20">
         {studyMode === 'auto' ? (
           // 자동 학습 모드
           <div className="px-4 pt-4 space-y-4">
@@ -82,13 +158,13 @@ export default function AutoStudyPage() {
               </div>
 
               {/* 목표 학습량과 진행률 차트 */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex-1">
+              <div className="grid grid-cols-2 gap-4 items-center justify-between">
+                <div>
                   <span className="text-body text-text-sub block mb-2">목표 학습량</span>
                   <select
                     value={targetAmount}
                     onChange={(e) => setTargetAmount(Number(e.target.value))}
-                    className="px-3 py-1.5 rounded-md border border-divider bg-surface text-body text-text-main appearance-none"
+                    className="px-3 py-1.5 w-full rounded-md border border-divider bg-surface text-body text-text-main appearance-none"
                     style={{
                       backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
                       backgroundRepeat: 'no-repeat',
@@ -104,38 +180,11 @@ export default function AutoStudyPage() {
                 </div>
 
                 {/* 진행률 반원형 차트 */}
-                <div className="relative w-28 h-14 flex-shrink-0">
-                  <svg className="w-28 h-14" viewBox="0 0 100 50" preserveAspectRatio="xMidYMid meet">
-                    {/* 배경 반원 */}
-                    <path
-                      d="M 10 50 A 40 40 0 0 1 90 50"
-                      stroke="#F3F3F3"
-                      strokeWidth="8"
-                      fill="none"
-                      strokeLinecap="round"
-                    />
-                    {/* 진행률 반원 */}
-                    <path
-                      d="M 10 50 A 40 40 0 0 1 90 50"
-                      stroke="#FF8A00"
-                      strokeWidth="8"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeDasharray={`${Math.max((sessionProgress / sessionTotal) * 125.6, 2)} 125.6`}
-                      style={{
-                        strokeDashoffset: 125.6,
-                      }}
-                    />
-                  </svg>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center" style={{ paddingTop: '0.5rem' }}>
-                    <span className="text-subtitle font-semibold text-text-main leading-tight">
-                      {Math.round((sessionProgress / sessionTotal) * 100)}%
-                    </span>
-                    <span className="text-label text-text-sub leading-tight">
-                      {sessionProgress}/{sessionTotal}
-                    </span>
-                  </div>
-                </div>
+                <SemicircleProgress 
+                  value={(sessionProgress / sessionTotal) * 100}
+                  progress={sessionProgress}
+                  total={sessionTotal}
+                />
               </div>
 
               {/* 새 단어 / 복습 단어 */}
@@ -168,7 +217,7 @@ export default function AutoStudyPage() {
             </div>
 
             {/* 학습 정보 */}
-            <div className="bg-surface rounded-card p-4 shadow-soft">
+            <div className="">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-subtitle font-semibold text-text-main">
                   {level} 학습 정보

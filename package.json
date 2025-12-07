@@ -1,0 +1,43 @@
+{
+  "name": "jlpt-study-app",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:pwa": "cross-env ENABLE_PWA=true next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "fetch-kanji": "tsx scripts/fetch-kanji.ts",
+    "fetch-words": "tsx scripts/fetch-words.ts",
+    "enrich-words": "tsx scripts/enrich-words.ts",
+    "json-to-ts": "tsx scripts/json-to-ts.ts"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/react-fontawesome": "^3.1.1",
+    "@types/react-window": "^1.8.8",
+    "framer-motion": "^11.0.0",
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "react-window": "^2.2.3",
+    "swiper": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^10.1.0",
+    "next-pwa": "^5.6.0",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

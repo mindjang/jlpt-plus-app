@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Noto_Sans_JP, Inter } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
+import { AuthProvider } from '@/components/auth/AuthProvider'
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
@@ -45,7 +46,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className={`${notoSansJP.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   )
 }

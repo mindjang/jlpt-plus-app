@@ -25,6 +25,9 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# test account info (프로덕션에서는 삭제)
+# TEST_ACCOUNT.md
+
 # vercel
 .vercel
 

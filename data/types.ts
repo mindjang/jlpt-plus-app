@@ -48,10 +48,10 @@ export interface SearchResult {
   kanjiDetails?: Array<{
     kanji: string
     meanings: string[]
-    onReadings: string[]
-    kunReadings: string[]
+    onReadings?: string[]
+    kunReadings?: string[]
     strokeCount: number
-    jlpt?: number
+    jlpt?: number | null
   }>
 }
 

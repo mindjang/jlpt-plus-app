@@ -1,0 +1,185 @@
+'use client'
+
+import React, { Suspense, useMemo, useState, useEffect } from 'react'
+import { useRouter, useParams, useSearchParams } from 'next/navigation'
+import { AppBar } from '@/components/ui/AppBar'
+import { SearchBar } from '@/components/ui/SearchBar'
+import { ListItem } from '@/components/ui/ListItem'
+import { getWordsByLevel } from '@/data/words/index'
+import { getKanjiByLevel } from '@/data/kanji/index'
+import { levels, Level } from '@/data'
+import { useAuth } from '@/components/auth/AuthProvider'
+import { getAllCardIds } from '@/lib/firebase/firestore'
+
+function NewWordsContent() {
+  const router = useRouter()
+  const params = useParams()
+  const searchParams = useSearchParams()
+  const { user } = useAuth()
+  
+  const levelParam = params.level as string
+  const typeParam = searchParams.get('type') || 'word'
+  const limitParam = searchParams.get('limit')
+  
+  const level: Level = useMemo(() => {
+    if (levelParam) {
+      const upperLevel = levelParam.toUpperCase() as Level
+      if (levels.includes(upperLevel)) {
+        return upperLevel
+      }
+    }
+    return 'N5'
+  }, [levelParam])
+
+  const limit = limitParam ? parseInt(limitParam, 10) : 20
+  const [searchQuery, setSearchQuery] = useState('')
+  const [learnedIds, setLearnedIds] = useState<Set<string>>(new Set())
+  const [loading, setLoading] = useState(true)
+
+  // 학습한 카드 ID 가져오기
+  useEffect(() => {
+    if (!user) {
+      setLoading(false)
+      return
+    }
+
+    const fetchLearnedIds = async () => {
+      try {
+        const ids = await getAllCardIds(user.uid)
+        setLearnedIds(ids)
+      } catch (error) {
+        console.error('Failed to fetch learned card IDs:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchLearnedIds()
+  }, [user])
+
+  // 새 단어/한자 목록 가져오기
+  const newItems = useMemo(() => {
+    if (loading) return []
+
+    let allItems: Array<{
+      level: Level
+      word: string
+      furigana?: string
+      meaning: string
+    }> = []
+
+    if (typeParam === 'word') {
+      const words = getWordsByLevel(level)
+      // 학습하지 않은 단어만 필터링
+      allItems = words.filter((item) => {
+        // SearchResult의 word를 ID로 사용 (실제로는 word 자체가 ID 역할)
+        // TODO: 실제 Word 타입의 id 필드와 매칭 필요
+        return !learnedIds.has(item.word)
+      })
+    } else {
+      const kanjis = getKanjiByLevel(level)
+      // 한자 데이터를 SearchResult 형식으로 변환
+      allItems = kanjis
+        .filter((kanji) => !learnedIds.has(kanji.kanji))
+        .map((kanji) => {
+          const meaning = kanji.relatedWords && kanji.relatedWords.length > 0
+            ? kanji.relatedWords[0].meaning
+            : kanji.onYomi?.[0] || kanji.kunYomi?.[0] || ''
+          
+          const furigana = kanji.onYomi?.[0] || kanji.kunYomi?.[0] || undefined
+
+          return {
+            level: kanji.level,
+            word: kanji.kanji,
+            furigana,
+            meaning,
+          }
+        })
+    }
+
+    // 검색어 필터링
+    if (searchQuery) {
+      const lowerQuery = searchQuery.toLowerCase()
+      allItems = allItems.filter(
+        (item) =>
+          item.word.includes(searchQuery) ||
+          item.furigana?.toLowerCase().includes(lowerQuery) ||
+          item.meaning.includes(searchQuery)
+      )
+    }
+
+    // 목표 학습량만큼만 반환
+    return allItems.slice(0, limit)
+  }, [level, typeParam, learnedIds, searchQuery, limit, loading])
+
+  const handleItemClick = (word: string) => {
+    if (typeParam === 'word') {
+      router.push(`/acquire/word/${encodeURIComponent(word)}`)
+    } else {
+      router.push(`/acquire/kanji/${encodeURIComponent(word)}`)
+    }
+  }
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query)
+  }
+
+  return (
+    <div className="w-full">
+      <AppBar 
+        title={`새 ${typeParam === 'word' ? '단어' : '한자'}`} 
+        onBack={() => router.back()} 
+      />
+      
+      <div className="p-4">
+        <SearchBar 
+          onSearch={handleSearch} 
+          placeholder={typeParam === 'word' ? '단어 검색...' : '한자 검색...'}
+        />
+        
+        {/* 검색 결과 */}
+        <div className="space-y-2 mt-4">
+          {loading ? (
+            <div className="flex items-center justify-center min-h-[40vh]">
+              <div className="text-body text-text-sub">로딩 중...</div>
+            </div>
+          ) : (
+            <>
+              {newItems.map((item, index) => (
+                <ListItem
+                  key={`${item.word}-${index}`}
+                  level={item.level}
+                  word={item.word}
+                  furigana={item.furigana}
+                  meaning={item.meaning}
+                  onClick={() => handleItemClick(item.word)}
+                />
+              ))}
+              {newItems.length === 0 && (
+                <div className="text-center py-8 text-body text-text-sub">
+                  {searchQuery ? '검색 결과가 없습니다.' : '새로 학습할 단어가 없습니다.'}
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default function NewWordsPage() {
+  return (
+    <Suspense fallback={
+      <div className="w-full">
+        <AppBar title="새 단어" />
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <div className="text-body text-text-sub">로딩 중...</div>
+        </div>
+      </div>
+    }>
+      <NewWordsContent />
+    </Suspense>
+  )
+}
+

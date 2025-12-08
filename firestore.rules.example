@@ -1,0 +1,18 @@
+// Firestore 보안 규칙 예시
+// Firebase Console > Firestore Database > Rules에서 사용
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 유저 문서: 본인만 읽기/쓰기 가능
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      
+      // 유저의 카드 컬렉션: 본인만 읽기/쓰기 가능
+      match /cards/{cardId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+  }
+}
+

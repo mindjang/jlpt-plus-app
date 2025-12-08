@@ -4,7 +4,8 @@
 import { WordData, SearchResult } from './types'
 import { 
   getSearchResults as getWordsSearchResults,
-  getTotalWordCount as getWordsTotalCount
+  getTotalWordCount as getWordsTotalCount,
+  findWord as findWordInIndex
 } from './words/index'
 import { 
   getWordData as getKanjiData,
@@ -15,6 +16,11 @@ import {
 // 단어 검색 (레거시 호환)
 export const getSearchResults = (query: string): SearchResult[] => {
   return getWordsSearchResults(query)
+}
+
+// 특정 단어 찾기 (레거시 호환)
+export const findWord = (word: string): SearchResult | null => {
+  return findWordInIndex(word)
 }
 
 // 한자 데이터 가져오기 (레거시 호환)

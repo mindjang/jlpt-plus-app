@@ -163,6 +163,89 @@ Tailwind 설정 파일(`tailwind.config.js`)에 모든 디자인 토큰이 정�
 - **TypeScript**: 타입 안정성
 - **Tailwind CSS**: 유틸리티 기반 스타일링
 - **Framer Motion**: 애니메이션
+- **Firebase**: Auth (Google + 이메일/비밀번호), Firestore (학습 상태 저장)
+- **Anki/SM-2 SRS**: 간격 반복 학습 알고리즘
+
+## 🔐 Firebase 설정
+
+1. Firebase 프로젝트 생성 및 설정
+2. `.env.local` 파일 생성:
+
+```bash
+NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
+```
+
+3. Firebase Console에서 Authentication 활성화:
+   - Google 로그인 제공업체 활성화
+   - 이메일/비밀번호 제공업체 활성화
+
+4. Firestore 데이터베이스 생성 (테스트 모드 또는 보안 규칙 설정)
+
+## 📚 SRS (Spaced Repetition System)
+
+Anki/SM-2 스타일의 간격 반복 학습 시스템을 구현했습니다.
+
+### 주요 기능
+- **복습 큐**: 오늘 복습해야 할 카드 자동 생성
+- **새 카드 큐**: 일일 학습 제한에 따른 새 카드 제공
+- **학습 상태 추적**: 각 카드별 복습 횟수, 간격, 난이도 계수 관리
+- **Leech 처리**: 자주 틀리는 카드 자동 숨김
+
+### 학습 모드
+1. **예문 기반 학습**: 예문을 보여주고 뜻/읽기를 떠올리는 방식
+2. **객관식 퀴즈**: 4지선다 문제로 학습
+
+### 평가 시스템
+- **Again**: 틀림 (다음날 다시)
+- **Hard**: 어려움 (간격 감소)
+- **Good**: 보통 (정상 간격)
+- **Easy**: 매우 쉬움 (간격 증가)
+
+## 📁 새로운 프로젝트 구조
+
+```
+jlpt-study-app/
+├── lib/
+│   ├── firebase/          # Firebase 설정 및 유틸
+│   │   ├── config.ts      # Firebase 초기화
+│   │   ├── auth.ts        # 인증 함수
+│   │   └── firestore.ts   # Firestore CRUD
+│   ├── srs/               # SRS 로직
+│   │   ├── reviewCard.ts  # Anki/SM-2 알고리즘
+│   │   ├── cardStatus.ts  # 카드 상태 판정
+│   │   └── studyQueue.ts  # 학습 큐 생성
+│   ├── types/             # 타입 정의
+│   │   ├── content.ts     # Word, Kanji 타입
+│   │   ├── srs.ts         # SRS 관련 타입
+│   │   └── user.ts        # 유저 타입
+│   └── utils/             # 유틸 함수
+├── components/
+│   ├── auth/              # 인증 컴포넌트
+│   │   ├── AuthProvider.tsx
+│   │   └── LoginForm.tsx
+│   └── study/             # 학습 컴포넌트
+│       ├── ExampleCard.tsx
+│       ├── QuizCard.tsx
+│       └── StudySession.tsx
+└── app/
+    └── (mobile)/
+        └── study/[level]/  # 학습 페이지
+```
+
+## 🧪 테스트 계정
+
+개발 및 테스트를 위한 임시 계정 정보는 `TEST_ACCOUNT.md` 파일을 참고하세요.
+
+**테스트 계정**:
+- 이메일: `test@jlpt-plus.app`
+- 비밀번호: `test123456`
+
+> ⚠️ 이 계정은 개발/테스트 전용입니다. 프로덕션 환경에서는 사용하지 마세요.
 
 ## 📄 라이선스
 

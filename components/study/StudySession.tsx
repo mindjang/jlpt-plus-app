@@ -27,6 +27,7 @@ interface StudySessionProps {
   dailyNewLimit?: number
   initialCompleted?: number // 세션 재진입 시 이미 완료한 개수
   onTimeUpdate?: (seconds: number) => void
+  onCompleteChange?: (completed: boolean) => void
 }
 
 export function StudySession({
@@ -37,6 +38,7 @@ export function StudySession({
   dailyNewLimit = 10,
   initialCompleted = 0,
   onTimeUpdate,
+  onCompleteChange,
 }: StudySessionProps) {
   const router = useRouter()
   const { user } = useAuth()
@@ -68,6 +70,7 @@ export function StudySession({
     const stats = calculateStudyStats(finalQueue, studyTime)
     setCompletedStats(stats)
     setIsCompleted(true)
+    onCompleteChange?.(true)
   }
 
   // 학습 큐 로드
@@ -121,6 +124,11 @@ export function StudySession({
       return () => clearTimeout(timeoutId)
     }
   }, [studyTime, onTimeUpdate])
+
+  // 부모에 완료 상태 초기화 전달
+  useEffect(() => {
+    onCompleteChange?.(false)
+  }, [onCompleteChange])
 
   // 배치 업데이트 (세션 종료 시 또는 일정 간격으로)
   useEffect(() => {
@@ -218,8 +226,8 @@ export function StudySession({
   // 학습 완료 화면
   if (isCompleted && completedStats) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-4">
-        <div className="w-full max-w-md bg-surface rounded-card shadow-soft p-8 text-center">
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="w-full max-w-md  text-center">
           <div className="mb-6">
             <div className="text-display-l text-primary mb-2">🎉</div>
             <h1 className="text-title text-text-main font-bold mb-2">학습 완료!</h1>
@@ -305,8 +313,12 @@ export function StudySession({
   return (
     <div className="w-full pb-24">
       {/* 진행도 바 */}
-      <div className="mb-6 px-4">
-        <div className="h-2 bg-divider rounded-full overflow-hidden">
+      <div className="flex gap-2 items-center my-2 px-4">
+        <div className="text-label text-text-sub text-center">
+          {displayIndex} / {totalCount}
+        </div>
+
+        <div className="flex-1 h-2 bg-divider rounded-full overflow-hidden">
           <div
             className="h-full transition-all duration-300 rounded-full"
             style={{
@@ -316,9 +328,7 @@ export function StudySession({
             }}
           />
         </div>
-        <div className="mt-2 text-body text-text-sub text-center">
-          {displayIndex} / {totalCount}
-        </div>
+        
       </div>
 
       {/* 카드 표시 */}

@@ -22,6 +22,7 @@ function LearnContent() {
   const { user, loading } = useAuth()
   const [mode, setMode] = useState<'example' | 'quiz'>('example')
   const [studyTime, setStudyTime] = useState(0)
+  const [completed, setCompleted] = useState(false)
 
   const level = useMemo(() => {
     return levelParam.toUpperCase() as Level
@@ -83,28 +84,29 @@ function LearnContent() {
 
   return (
     <div className="w-full">
-      <AppBar 
-        title={`${level} ${typeParam === 'word' ? '단어' : '한자'} 학습`} 
-        onBack={() => router.back()}
-        rightAction={
-          <div className="text-body text-text-main font-medium">
-            {formatTime(studyTime)}
-          </div>
-        }
-      />
-      
-      <div className="p-4">
-        {/* 학습 세션 */}
-        <StudySession
-          level={level}
-          words={words}
-          kanjis={kanjis}
-          mode={mode}
-          dailyNewLimit={remainingDailyLimit}
-          initialCompleted={initialCompleted}
-          onTimeUpdate={setStudyTime}
+      {!completed && (
+        <AppBar 
+          title={`${level} ${typeParam === 'word' ? '단어' : '한자'} 학습`} 
+          onBack={() => router.back()}
+          rightAction={
+            <div className="text-body text-text-main font-medium">
+              {formatTime(studyTime)}
+            </div>
+          }
         />
-      </div>
+      )}
+      
+      {/* 학습 세션 */}
+      <StudySession
+        level={level}
+        words={words}
+        kanjis={kanjis}
+        mode={mode}
+        dailyNewLimit={remainingDailyLimit}
+        initialCompleted={initialCompleted}
+        onTimeUpdate={setStudyTime}
+        onCompleteChange={setCompleted}
+      />
     </div>
   )
 }

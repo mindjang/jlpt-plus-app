@@ -15,7 +15,7 @@ export interface StudyCard {
 export interface StudyQueue {
   reviewCards: StudyCard[]
   newCards: StudyCard[]
-  mixedQueue: StudyCard[] // 복습 2개, 새 카드 1개 비율로 섞인 큐
+  mixedQueue: StudyCard[] // Anki 기본 순서: 복습(기한순) → 새 카드
 }
 
 /**
@@ -30,7 +30,7 @@ export async function getTodayQueues(
 ): Promise<StudyQueue> {
   console.log('[getTodayQueues] 시작:', { uid, level, wordsCount: words.length, kanjisCount: kanjis.length, dailyNewLimit })
   
-  // 1. 복습 카드 큐
+  // 1. 복습 카드 큐 (Anki 기본: due 순서 처리)
   const reviewCardStates = await getReviewCards(uid, 100)
   console.log('[getTodayQueues] 복습 카드 수:', reviewCardStates.length)
   const reviewCards: StudyCard[] = []
@@ -69,6 +69,13 @@ export async function getTodayQueues(
   }
 
   console.log('[getTodayQueues] 매칭된 복습 카드 수:', reviewCards.length)
+
+  // due 오름차순 정렬 (가장 시급한 카드부터)
+  reviewCards.sort((a, b) => {
+    const aDue = a.cardState?.due ?? 0
+    const bDue = b.cardState?.due ?? 0
+    return aDue - bDue
+  })
 
   // 2. 새 카드 큐
   const allCardIds = await getAllCardIds(uid)
@@ -117,38 +124,22 @@ export async function getTodayQueues(
 
   console.log('[getTodayQueues] 최종 새 카드 수:', newCards.length)
 
-  // 3. 섞인 큐 생성 (복습 2개, 새 카드 1개 비율)
-  const mixedQueue: StudyCard[] = []
-  let reviewIndex = 0
-  let newIndex = 0
+  // 3. 오늘 목표량(dailyNewLimit)만큼 선택: 복습 우선, 남은 슬롯은 새 카드로 채움
+  const TARGET = dailyNewLimit
 
-  while (reviewIndex < reviewCards.length || newIndex < newCards.length) {
-    // 복습 카드 2개 추가
-    if (reviewIndex < reviewCards.length) {
-      mixedQueue.push(reviewCards[reviewIndex])
-      reviewIndex++
-    }
-    if (reviewIndex < reviewCards.length) {
-      mixedQueue.push(reviewCards[reviewIndex])
-      reviewIndex++
-    }
+  // 복습 선택 (due 오름차순으로 TARGET까지)
+  const selectedReview = reviewCards.slice(0, TARGET)
+  const remainingSlots = Math.max(TARGET - selectedReview.length, 0)
 
-    // 새 카드 1개 추가
-    if (newIndex < newCards.length) {
-      mixedQueue.push(newCards[newIndex])
-      newIndex++
-    }
-  }
+  // 새 카드 선택: 남은 슬롯만큼, 부족하면 있는 만큼만
+  const selectedNew = newCards.slice(0, remainingSlots)
 
-  // 4. 랜덤으로 섞기
-  for (let i = mixedQueue.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [mixedQueue[i], mixedQueue[j]] = [mixedQueue[j], mixedQueue[i]]
-  }
+  // 순서 유지: 복습 → 새 카드
+  const mixedQueue: StudyCard[] = [...selectedReview, ...selectedNew]
 
   return {
-    reviewCards,
-    newCards: newCards.slice(0, dailyNewLimit),
+    reviewCards: selectedReview,
+    newCards: selectedNew,
     mixedQueue,
   }
 }

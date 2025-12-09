@@ -76,8 +76,21 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
   const [showReadings, setShowReadings] = useState(false) // 음독/훈독 표시 여부
   const [examplePage, setExamplePage] = useState(0) // 예문 페이지네이션
   const [activeLevel, setActiveLevel] = useState<Level>('N5')
+  
+  // 레벨별 관련 단어 데이터 (초기 로딩 시 조회)
+  const [levelWordsMap, setLevelWordsMap] = useState<Record<Level, Word[]>>({
+    N5: [],
+    N4: [],
+    N3: [],
+    N2: [],
+    N1: [],
+  })
+  
+  // 레벨별 단어 존재 여부 (버튼 표시용)
+  const [availableLevels, setAvailableLevels] = useState<Set<Level>>(new Set())
 
-  const isReadingsVisible = showReadings || (showMeaning && showFurigana)
+  // 모든 내용이 보이는지 확인 (눈 아이콘 상태용)
+  const isAllVisible = showMeaning && showFurigana && showReadings
 
   const handleGrade = (grade: Grade) => {
     // 다음 복습 간격 계산 (실제 SRS 로직 사용)
@@ -88,14 +101,12 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
       grade,
     })
     
-    // 상태 변경 콜백 호출
+    // 상태 변경 콜백 호출 (UI 업데이트용)
     onGradeStateChange?.(grade, updatedState.interval)
     
+    // 부모 컴포넌트의 handleGrade 호출 (저장 및 다음 카드 이동은 부모에서 처리)
     onGrade(grade)
-    // 평가 후 자동으로 다음으로 이동
-    setTimeout(() => {
-      onNext()
-    }, 300)
+    // Note: 다음 카드로 이동은 StudySession의 handleGrade에서 처리됨
   }
 
   const handleReset = () => {
@@ -104,26 +115,67 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
     setShowReadings(false)
   }
 
+  // 눈 아이콘 클릭: 모든 것을 한 번에 보이기/숨기기
+  const handleToggleAll = () => {
+    if (isAllVisible) {
+      // 모두 보이면 모두 숨기기
+      setShowMeaning(false)
+      setShowFurigana(false)
+      setShowReadings(false)
+    } else {
+      // 하나라도 숨겨져 있으면 모두 보이기
+      setShowMeaning(true)
+      setShowFurigana(true)
+      setShowReadings(true)
+    }
+  }
+
   const isWord = type === 'word'
   const word = isWord ? (item as Word) : null
   const kanji = !isWord ? (item as Kanji) : null
 
-  // 카드 변경 시 레벨 탭 초기화
+  // 초기 로딩 시 모든 레벨의 관련 단어 조회
   useEffect(() => {
-    if (kanji?.level) {
+    if (!kanji) return
+
+    const allLevels: Level[] = ['N5', 'N4', 'N3', 'N2', 'N1']
+    const newLevelWordsMap: Record<Level, Word[]> = {
+      N5: [],
+      N4: [],
+      N3: [],
+      N2: [],
+      N1: [],
+    }
+    const newAvailableLevels = new Set<Level>()
+
+    // 모든 레벨에 대해 관련 단어 조회
+    allLevels.forEach((level) => {
+      const words = getCachedRelatedWords(kanji.character, level)
+      newLevelWordsMap[level] = words
+      if (words.length > 0) {
+        newAvailableLevels.add(level)
+      }
+    })
+
+    setLevelWordsMap(newLevelWordsMap)
+    setAvailableLevels(newAvailableLevels)
+
+    // 첫 번째 사용 가능한 레벨로 초기화 (또는 한자의 레벨)
+    if (kanji.level && newAvailableLevels.has(kanji.level as Level)) {
       setActiveLevel(kanji.level as Level)
+    } else if (newAvailableLevels.size > 0) {
+      // 사용 가능한 첫 번째 레벨 선택
+      const firstAvailable = Array.from(newAvailableLevels)[0]
+      setActiveLevel(firstAvailable)
     }
   }, [kanji?.character, kanji?.level])
 
-  // 한자가 포함된 단어 찾기 (레벨 탭 + 캐시)
+  // 현재 선택된 레벨의 단어 가져오기 (미리 조회한 데이터 사용)
   const exampleWords = useMemo(() => {
     if (!kanji) return []
-    const wordsWithKanji = getCachedRelatedWords(
-      kanji.character,
-      activeLevel
-    )
-    return wordsWithKanji.slice(0, 9) // 최대 9개 (3개씩 3페이지)
-  }, [kanji, activeLevel])
+    const words = levelWordsMap[activeLevel] || []
+    return words.slice(0, 9) // 최대 9개 (3개씩 3페이지)
+  }, [kanji, activeLevel, levelWordsMap])
 
   const wordsPerPage = 3
   const totalPages = Math.ceil(exampleWords.length / wordsPerPage)
@@ -158,13 +210,13 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
             <button className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors">
               <FontAwesomeIcon icon={faPencil} className="text-text-sub text-sm" />
             </button>
-            {/* 눈 아이콘 (가리기/보이기 토글) */}
+            {/* 눈 아이콘 (모든 내용 보이기/숨기기 토글) */}
             <button
-              onClick={() => setShowReadings(!showReadings)}
+              onClick={handleToggleAll}
               className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors"
             >
               <FontAwesomeIcon 
-                icon={isReadingsVisible ? faEye : faEyeSlash} 
+                icon={isAllVisible ? faEye : faEyeSlash} 
                 className="text-text-sub text-sm" 
               />
             </button>
@@ -197,7 +249,7 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
                 {kanji.onyomi && kanji.onyomi.length > 0 && (
                   <div className="flex items-center">
                     <span className="text-label text-text-sub mr-2">음독</span>
-                    {showReadings || showFurigana ? (
+                    {showReadings ? (
                       <span className="text-label text-jp font-medium text-text-main">
                         {kanji.onyomi.join('・')}
                       </span>
@@ -209,7 +261,7 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
                 {kanji.kunyomi && kanji.kunyomi.length > 0 && (
                   <div className="flex items-center">
                     <span className="text-label text-text-sub mr-2">훈독</span>
-                    {showReadings || showFurigana ? (
+                    {showReadings ? (
                       <span className="text-label text-jp font-medium text-text-main">
                         {kanji.kunyomi.join('・')}
                       </span>
@@ -220,25 +272,30 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
                 )}
               </div>
 
-                {/* 레벨 탭 (N5~N1) */}
-                <div className="mb-4 flex justify-center gap-2">
-                  {(['N5', 'N4', 'N3', 'N2', 'N1'] as Level[]).map((lv) => (
-                    <button
-                      key={lv}
-                      onClick={() => {
-                        setActiveLevel(lv)
-                        setExamplePage(0)
-                      }}
-                      className={`px-3 py-1 rounded-full text-label font-medium transition-colors ${
-                        activeLevel === lv
-                          ? 'bg-primary text-white'
-                          : 'bg-page text-text-sub'
-                      }`}
-                    >
-                      {lv}
-                    </button>
-                  ))}
-                </div>
+                {/* 레벨 탭 (N5~N1) - 단어가 있는 레벨만 표시 */}
+                {availableLevels.size > 0 && (
+                  <div className="mb-4 flex justify-center gap-2">
+                    {(['N5', 'N4', 'N3', 'N2', 'N1'] as Level[]).map((lv) => {
+                      if (!availableLevels.has(lv)) return null
+                      return (
+                        <button
+                          key={lv}
+                          onClick={() => {
+                            setActiveLevel(lv)
+                            setExamplePage(0)
+                          }}
+                          className={`px-3 py-1 rounded-full text-label font-medium transition-colors ${
+                            activeLevel === lv
+                              ? 'bg-primary text-white'
+                              : 'bg-page text-text-sub'
+                          }`}
+                        >
+                          {lv}
+                        </button>
+                      )
+                    })}
+                  </div>
+                )}
             </div>
 
             {/* 예문 단어 리스트 (3개씩 페이지네이션) */}
@@ -274,15 +331,17 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
                       key={word.id || index}
                       className="flex items-center gap-2 px-3 py-2 rounded-card bg-page"
                     >
-                      <LevelChip level={level as any} />
-                      <span className="text-subtitle text-jp font-medium text-text-main flex-1">
-                        {word.kanji || word.kana}
-                      </span>
-                      {showFurigana && word.kanji && (
-                        <span className="text-label text-jp text-text-sub">
-                          {word.kana}
+                      <LevelChip level={word.level as any} />
+                      <div className="flex items-center gap-2 flex-1">
+                        <span className="text-subtitle text-jp font-medium text-text-main">
+                          {word.kanji || word.kana}
                         </span>
-                      )}
+                        {showFurigana && word.kanji && (
+                          <span className="text-label text-jp text-text-sub">
+                            {word.kana}
+                          </span>
+                        )}
+                      </div>
                       {showMeaning && (
                         <span className="text-body text-text-sub">
                           {word.meaningKo}
@@ -314,7 +373,13 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
               의미
             </button>
             <button
-              onClick={() => setShowFurigana(!showFurigana)}
+              onClick={() => {
+                setShowFurigana(!showFurigana)
+                // 히라가나를 보이면 음독/훈독도 함께 보이기
+                if (!showFurigana) {
+                  setShowReadings(true)
+                }
+              }}
               className={`button-press flex-1 py-3 px-4 rounded-card text-body font-medium ${
                 showFurigana
                   ? 'bg-primary text-white'
@@ -375,7 +440,7 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
 
           {/* 의미 표시 */}
           <AnimatePresence>
-            {showMeaning && (
+            {showMeaning && word && (
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -383,9 +448,9 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
                 className="mb-4 text-center"
               >
                 <p className="text-title text-text-main font-semibold mb-2">
-                  {word ? word.meaningKo : kanji?.meaningKo}
+                  {word.meaningKo}
                 </p>
-                {word && word.examples && word.examples[0] && (
+                {word.examples && word.examples[0] && (
                   <div className="text-body text-text-sub">
                     <p className="text-kr">{word.examples[0].ko}</p>
                   </div>

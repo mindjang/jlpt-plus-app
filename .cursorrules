@@ -1,0 +1,105 @@
+# Cursor Rules for JLPT Plus App
+
+## Anki 스타일 SRS 구현 규칙
+
+### 데이터 구조 원칙
+
+1. **콘텐츠와 상태 분리**
+   - 콘텐츠(단어/한자 데이터)는 `.ts` 파일로 관리, Firestore에 저장하지 않음
+   - 사용자별 학습 상태(`UserCardState`)만 Firestore에 저장
+   - 경로: `/users/{uid}/cards/{cardId}`
+
+2. **UserCardState 구조 준수**
+   ```typescript
+   interface UserCardState {
+     itemId: string;        // 콘텐츠 고유 ID
+     type: CardType;       // "word" | "kanji"
+     level: JlptLevel;     // "N5" | "N4" | "N3" | "N2" | "N1" | null
+     reps: number;         // 복습 횟수
+     lapses: number;       // 틀린 횟수
+     interval: number;     // 복습 간격 (일 단위)
+     ease: number;        // 난이도 계수 (기본 2.5, 최소 1.3)
+     due: number;         // 다음 복습 예정일 (일 단위 정수)
+     lastReviewed: number; // 마지막 복습일 (일 단위 정수)
+     suspended?: boolean;  // leech 처리 여부
+   }
+   ```
+
+### SRS 로직 규칙
+
+1. **reviewCard 함수 사용**
+   - 모든 학습 모드(예제, 퀴즈, 한자 등)에서 동일한 `reviewCard` 함수 사용
+   - Grade: `"again" | "hard" | "good" | "easy"`
+   - 반환값을 Firestore에 저장
+
+2. **카드 상태 판정**
+   - 새 카드: `cardState === null`
+   - 복습 카드: `cardState.due <= today && !cardState.suspended`
+   - 장기 기억: `cardState.interval >= 21 || cardState.reps >= 8`
+   - Leech: `cardState.lapses >= 5` → `suspended = true`
+
+3. **날짜 처리**
+   - `todayAsDayNumber()` 함수 사용 (일 단위 정수)
+   - epoch ms 대신 일 단위 정수로 통일
+
+### DB 최적화 규칙
+
+1. **배치 업데이트 필수**
+   - 카드 평가 시 즉시 Firestore에 쓰지 않음
+   - 로컬 상태(`pendingUpdates`)에 저장
+   - 세션 종료 시 또는 N개 단위로 `saveCardStatesBatch` 사용
+
+2. **상태 기반 계산**
+   - 새/복습/장기기억 카드를 별도 리스트로 저장하지 않음
+   - `UserCardState`를 기반으로 필요 시 계산
+
+3. **콘텐츠는 Firestore에 저장하지 않음**
+   - 단어/한자 데이터는 `.ts` 파일로 관리
+   - Firestore에는 `UserCardState`만 저장
+
+### 학습 큐 생성 규칙
+
+1. **getTodayQueues 함수 사용**
+   - 복습 카드와 새 카드를 분리하여 가져오기
+   - 복습 2개, 새 카드 1개 비율로 섞기
+   - 랜덤 셔플 적용
+
+2. **레벨 필터링**
+   - 학습 세션은 특정 레벨(`N5`, `N4` 등)로 제한
+   - 큐 생성 시 레벨 필터 적용
+
+### 코드 작성 규칙
+
+1. **타입 안정성**
+   - `UserCardState`, `Grade`, `CardType` 등 타입 명시
+   - `null` 체크 필수 (새 카드 처리)
+
+2. **에러 처리**
+   - Firestore 작업 시 try-catch 사용
+   - 사용자 친화적 에러 메시지
+
+3. **성능 고려**
+   - 대량 데이터 처리 시 배치 작업 사용
+   - 불필요한 Firestore 읽기 최소화
+
+### 파일 구조
+
+- `lib/srs/reviewCard.ts`: SRS 업데이트 로직
+- `lib/srs/studyQueue.ts`: 학습 큐 생성 로직
+- `lib/types/srs.ts`: SRS 타입 정의
+- `lib/firebase/firestore.ts`: Firestore CRUD 함수
+
+### 주의사항
+
+1. **lastReviewed 필드**
+   - 일 단위 정수로 저장됨 (`todayAsDayNumber()` 사용)
+   - `due` 필드와 동일한 형식
+
+2. **CardType 확장**
+   - 현재 `"word" | "kanji"`만 지원
+   - 카나 학습 추가 시 `"kana"` 타입 추가 필요
+
+3. **학습 모드 통합**
+   - 모든 학습 모드에서 동일한 `reviewCard` 함수 사용
+   - 모드별 Grade 변환 로직 구현
+

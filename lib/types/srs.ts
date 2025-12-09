@@ -13,10 +13,10 @@ export interface UserCardState {
   reps: number // 지금까지 복습 횟수
   lapses: number // 틀려서 리셋된 횟수
 
-  interval: number // 다음 복습까지의 간격 (일 단위)
+  interval: number // 다음 복습까지의 간격 (분 단위)
   ease: number // 난이도 계수 (기본 2.5, 최소 1.3 정도)
-  due: number // 다음 복습 일자 (일 단위 정수)
-  lastReviewed: number // 마지막 복습 시각 (epoch ms)
+  due: number // 다음 복습 예정 시각 (분 단위 정수, epoch 분)
+  lastReviewed: number // 마지막 복습 시각 (분 단위 정수, epoch 분)
 
   suspended?: boolean // leech일 때 숨김 여부
 }

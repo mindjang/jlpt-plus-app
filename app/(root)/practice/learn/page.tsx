@@ -18,6 +18,7 @@ function LearnContent() {
   const levelParam = searchParams.get('level') || 'n5'
   const typeParam = searchParams.get('type') || 'word'
   const limitParam = searchParams.get('limit')
+  const doneParam = searchParams.get('done')
   const { user, loading } = useAuth()
   const [mode, setMode] = useState<'example' | 'quiz'>('example')
   const [studyTime, setStudyTime] = useState(0)
@@ -27,6 +28,9 @@ function LearnContent() {
   }, [levelParam])
 
   const dailyNewLimit = limitParam ? parseInt(limitParam, 10) : 20
+  const initialCompleted = doneParam ? parseInt(doneParam, 10) || 0 : 0
+  // 남은 카드만 큐에 담기도록 목표량 조정 (분모는 initialCompleted + remaining으로 유지)
+  const remainingDailyLimit = Math.max(dailyNewLimit - initialCompleted, 0)
 
   // 실제 데이터를 Word/Kanji 타입으로 변환
   const words: Word[] = useMemo(() => {
@@ -96,7 +100,8 @@ function LearnContent() {
           words={words}
           kanjis={kanjis}
           mode={mode}
-          dailyNewLimit={dailyNewLimit}
+          dailyNewLimit={remainingDailyLimit}
+          initialCompleted={initialCompleted}
           onTimeUpdate={setStudyTime}
         />
       </div>

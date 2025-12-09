@@ -1,81 +1,115 @@
 'use client'
 
-import React, { useState, Suspense, useEffect, useMemo } from 'react'
+import React, { useState, Suspense, useEffect, useMemo, useCallback, useRef } from 'react'
 import { useRouter, useParams, useSearchParams } from 'next/navigation'
+import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
 import { Modal } from '@/components/ui/Modal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisVertical, faBook, faLanguage } from '@fortawesome/free-solid-svg-icons'
 import { Level, levelData, getLevelGradient } from '@/data'
+import { getLevelProgress } from '@/lib/srs/studyQueue'
+import { getTodayQueues } from '@/lib/srs/studyQueue'
+import { getWordsByLevel } from '@/data/words/index'
+import { getKanjiByLevel } from '@/data/kanji/index'
+import { convertSearchResultToWord, convertWordDataToKanji } from '@/lib/utils/dataConverter'
+import {
+  calculateProgressStats,
+  calculateRoundProgress,
+  calculateChapterProgress,
+} from '@/lib/srs/progressCalculation'
+import { nowAsMinutes, dayNumberToMinutes, minutesToDays } from '@/lib/srs/reviewCard'
+import type { Word, Kanji } from '@/lib/types/content'
+import type { Chart as ChartType, ChartData, ChartOptions } from 'chart.js'
 
 type StudyMode = 'auto' | 'chapter'
 
-// 반원형 진행률 차트 컴포넌트
-function SemicircleProgress({ value, progress, total }: { value: number; progress: number; total: number }) {
-  const radius = 80
-  const centerX = 100
-  const centerY = 100
-  const strokeWidth = 32
-  
-  // 반원 경로 계산 (왼쪽에서 오른쪽으로)
-  const startAngle = Math.PI // 180도 (왼쪽)
-  const endAngle = 0 // 0도 (오른쪽)
-  const currentAngle = startAngle - (value / 100) * (startAngle - endAngle)
-  
-  // 시작점과 끝점 좌표
-  const startX = centerX - radius
-  const startY = centerY
-  const endX = centerX + radius
-  const endY = centerY
-  
-  // 현재 진행률에 따른 끝점
-  const currentX = centerX + radius * Math.cos(currentAngle)
-  const currentY = centerY - radius * Math.sin(currentAngle)
-  
-  // 큰 호인지 작은 호인지 결정 (50% 이상이면 큰 호)
-  const largeArcFlag = value >= 50 ? 1 : 0
-  
-  // 진행률 경로
-  const progressPath = value > 0 
-    ? `M ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} 0 ${currentX} ${currentY}`
-    : ''
-  
+const hexToRgba = (hex: string, alpha: number) => {
+  const trimmed = hex.replace('#', '')
+  const normalized = trimmed.length === 3
+    ? trimmed.split('').map((c) => c + c).join('')
+    : trimmed
+  const num = parseInt(normalized, 16)
+  const r = (num >> 16) & 255
+  const g = (num >> 8) & 255
+  const b = num & 255
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`
+}
+
+// Chart.js 반원형 진행률 차트 컴포넌트
+function SemicircleProgress({ value, progress, total, color }: { value: number; progress: number; total: number; color: string }) {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null)
+  const chartRef = useRef<ChartType<'doughnut'> | null>(null)
+
+  const safePercent = Math.min(Math.max(value, 0), 100)
+  const completedCount = Math.max(Math.min(progress, total), 0)
+  const remainingCount = Math.max(total - completedCount, 0)
+
+  useEffect(() => {
+    let isMounted = true
+
+    const renderChart = async () => {
+      const { Chart } = await import('chart.js/auto')
+      if (!canvasRef.current || !isMounted) return
+
+      // 난이도 컬러 사용 (채우기) + 20% 투명도의 테두리
+      const primaryColor = hexToRgba(color, 0.3)
+      const primaryBorder = "#FF8A00"
+      const restBorder = hexToRgba('#E5E7EB', 0)
+
+      const data: ChartData<'doughnut'> = {
+        labels: ['완료', '남음'],
+        datasets: [
+          {
+            data: [completedCount, remainingCount],
+            backgroundColor: [primaryColor, '#E5E7EB'],
+            borderColor: [primaryBorder, restBorder],
+            borderWidth: 1,
+            hoverOffset: 0,
+          },
+        ],
+      }
+
+      const options: ChartOptions<'doughnut'> = {
+        cutout: '60%',
+        rotation: -90,
+        circumference: 180,
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { enabled: false },
+        },
+        animation: {
+          duration: 400,
+        },
+      }
+
+      chartRef.current?.destroy()
+      chartRef.current = new Chart(canvasRef.current, {
+        type: 'doughnut',
+        data,
+        options,
+      })
+    }
+
+    renderChart()
+
+    return () => {
+      isMounted = false
+      chartRef.current?.destroy()
+    }
+  }, [completedCount, remainingCount, total, color])
+
   return (
-    <div className="relative w-full flex-shrink-0" style={{ height: '7rem' }}>
-      <svg 
-        className="w-full h-full" 
-        viewBox="0 0 200 100" 
-        preserveAspectRatio="xMidYMid meet"
-        style={{ overflow: 'visible' }}
-      >
-        {/* 배경 반원 (회색) */}
-        <path
-          d={`M ${startX} ${startY} A ${radius} ${radius} 0 0 1 ${endX} ${endY}`}
-          fill="none"
-          stroke="#F3F3F3"
-          strokeWidth={strokeWidth}
-          strokeLinecap="round"
-        />
-        {/* 진행률 반원 (주황색) */}
-        {progressPath && (
-          <path
-            d={progressPath}
-            fill="none"
-            stroke="#FF8A00"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-          />
-        )}
-      </svg>
-      {/* 텍스트 오버레이 */}
-      <div 
-        className="absolute inset-0 flex flex-col items-center justify-end pointer-events-none z-10 pb-2"
-      >
+    <div className="relative w-full h-36">
+      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
+      <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end pointer-events-none z-10 pb-7">
         <span className="text-subtitle font-semibold text-text-main leading-tight">
-          {Math.round(value)}%
+          {Math.round(safePercent)}%
         </span>
         <span className="text-label text-text-sub leading-tight">
-          {progress}/{total}
+          {completedCount}/{total}
         </span>
       </div>
     </div>
@@ -86,45 +120,220 @@ function AutoStudyContent() {
   const router = useRouter()
   const params = useParams()
   const searchParams = useSearchParams()
+  const { user } = useAuth()
   const level = (params.level as string)?.toUpperCase() as Level || 'N5'
   const gradient = getLevelGradient(params.level as string)
   const data = levelData[level]
   
-  const [studyMode, setStudyMode] = useState<StudyMode>('auto')
   const [showModeModal, setShowModeModal] = useState(false)
   const [targetAmount, setTargetAmount] = useState(20)
   const typeParam = searchParams.get('type')
+  const modeParam = searchParams.get('mode')
   
-  // URL 파라미터로 탭 초기화 (useMemo로 동기화)
+  // 진행률 데이터 상태
+  const [currentProgress, setCurrentProgress] = useState(0)
+  const [newWords, setNewWords] = useState(0)
+  const [reviewWords, setReviewWords] = useState(0)
+  const [longTermMemory, setLongTermMemory] = useState(0)
+  const [sessionProgress, setSessionProgress] = useState(0) // 오늘 학습한 카드 수
+  const [studyRound, setStudyRound] = useState(1) // 학습 회차
+  const [nextReviewDays, setNextReviewDays] = useState<number | null>(null) // 가장 가까운 미래 복습일까지
+  const [sessionTotalFixed, setSessionTotalFixed] = useState<number>(targetAmount) // 세션 분모 고정값
+  const [loading, setLoading] = useState(true)
+  const studyRoundRef = useRef(1) // studyRound의 최신 값을 추적
+  const [chaptersData, setChaptersData] = useState<Array<{
+    number: number
+    totalWords: number
+    longTermMemory: number
+    learned: number
+  }>>([])
+  
+  // URL 파라미터로 탭 및 모드 초기화 (useMemo로 동기화)
   const activeTab = useMemo(() => {
     return typeParam === 'kanji' ? 'kanji' : 'word'
   }, [typeParam])
   
+  const studyMode = useMemo(() => {
+    return modeParam === 'chapter' ? 'chapter' : 'auto'
+  }, [modeParam])
+  
   const handleTabChange = (tab: 'word' | 'kanji') => {
-    // 탭 변경 시 URL 업데이트
-    router.push(`/acquire/auto-study/${params.level}?type=${tab}`)
+    // 탭 변경 시 URL 업데이트 (기존 mode 파라미터 유지)
+    const mode = modeParam || 'auto'
+    router.push(`/acquire/auto-study/${params.level}?type=${tab}&mode=${mode}`)
   }
 
-  // 임시 데이터 (나중에 실제 학습 데이터로 교체)
-  const currentProgress = 0 // 초기 상태: 0
   const totalWords = activeTab === 'word' ? data.words : data.kanji
-  const newWords = targetAmount
-  const reviewWords = 0
-  const sessionProgress = 0 // 초기 상태: 0
-  const sessionTotal = targetAmount
+  // 세션 분모: 세션 시작 시 계산된 값 사용, 없으면 목표량
+  const sessionTotal = sessionTotalFixed ?? targetAmount
 
-  // 챕터 계산 (각 챕터당 targetAmount개)
+  // 목표량 / 탭 변경 시 분모 초기화
+  useEffect(() => {
+    setSessionTotalFixed(targetAmount)
+  }, [targetAmount, activeTab])
+
+  // 단어/한자 데이터 변환
+  const words: Word[] = useMemo(() => {
+    if (activeTab !== 'word') return []
+    const searchResults = getWordsByLevel(level)
+    return searchResults.map((result, index) => 
+      convertSearchResultToWord(result, `${level}_W_${String(index + 1).padStart(4, '0')}`, 1)
+    )
+  }, [level, activeTab])
+
+  const kanjis: Kanji[] = useMemo(() => {
+    if (activeTab !== 'kanji') return []
+    const wordDataList = getKanjiByLevel(level)
+    return wordDataList.map((data, index) => 
+      convertWordDataToKanji(data, `${level}_K_${String(index + 1).padStart(4, '0')}`)
+    )
+  }, [level, activeTab])
+
+  // 진행률 데이터 로드 함수
+  const loadProgress = useCallback(async () => {
+      if (!user) {
+        setLoading(false)
+        return
+      }
+
+      try {
+        setLoading(true)
+        
+        // 1. 학습한 카드 수 가져오기
+        const progress = await getLevelProgress(
+          user.uid,
+          level,
+          data.words,
+          data.kanji
+        )
+        
+        const learned = activeTab === 'word' ? progress.learnedWords : progress.learnedKanjis
+        setCurrentProgress(learned)
+
+        // 2. 장기 기억 카드 수 및 오늘 새로 학습한 카드 수 계산
+        const { getCardsByLevel } = await import('@/lib/firebase/firestore')
+        const levelCardsMap = await getCardsByLevel(user.uid, level)
+        const levelCards = Array.from(levelCardsMap.values())
+        
+        // 진행률 통계 계산
+        const progressStats = calculateProgressStats(levelCards, activeTab)
+        setLongTermMemory(progressStats.longTermMemory)
+        
+        // 회차 진행률 계산
+        const roundProgress = calculateRoundProgress(
+          progressStats.todayNewStudied,
+          targetAmount,
+          studyRoundRef.current
+        )
+        
+        // 학습 회차 업데이트
+        setStudyRound((prev) => {
+          const newRound = Math.max(prev, roundProgress.currentRound)
+          studyRoundRef.current = newRound
+          return newRound
+        })
+        
+        // 현재 회차 진행률 설정
+        setSessionProgress(roundProgress.currentRoundProgress)
+
+        // 3. 새 카드/복습 카드 수 가져오기 (현재 회차를 구성하는 카드 수)
+        const items = activeTab === 'word' ? words : kanjis
+        let availableToday = 0
+        if (items.length > 0) {
+          const queues = await getTodayQueues(
+            user.uid,
+            level,
+            words,
+            kanjis,
+            targetAmount // dailyNewLimit으로 사용
+          )
+          // 현재 회차를 구성하는 새 카드와 복습 카드 수
+          setNewWords(queues.newCards.filter(c => c.type === activeTab).length)
+          setReviewWords(queues.reviewCards.filter(c => c.type === activeTab).length)
+          availableToday = queues.mixedQueue.length
+        }
+
+        // 세션 분모 고정 (최초 1회만 설정; 이후 감소하지 않도록 prev 유지)
+        const remainingCards = Math.max(totalWords - learned, 0)
+        const fallbackTotal = remainingCards > 0 ? Math.min(targetAmount, remainingCards) : targetAmount
+        const initialFixed = availableToday > 0 ? Math.min(targetAmount, availableToday) : fallbackTotal
+        setSessionTotalFixed((prev) => (prev === null ? initialFixed : prev))
+
+        // 4. 미래 복습까지 남은 일수 계산 (오늘 due 제외)
+        const nowMinutesLocal = nowAsMinutes()
+        let minFutureDays: number | null = null
+        levelCards.forEach((card) => {
+          if (card.type === activeTab) {
+            const dueMinutes = card.due < 10000 ? dayNumberToMinutes(card.due) : card.due
+            const diff = dueMinutes - nowMinutesLocal
+            if (diff > 0) {
+              const days = minutesToDays(diff)
+              if (minFutureDays === null || days < minFutureDays) {
+                minFutureDays = days
+              }
+            }
+          }
+        })
+        setNextReviewDays(minFutureDays)
+
+        // 5. 챕터별 진행률 계산
+        const totalChapters = Math.ceil(totalWords / targetAmount)
+        const chaptersProgress: Array<{
+          number: number
+          totalWords: number
+          longTermMemory: number
+          learned: number
+        }> = []
+
+        for (let i = 0; i < totalChapters; i++) {
+          const startIndex = i * targetAmount
+          const endIndex = Math.min(startIndex + targetAmount, items.length)
+          const chapterItems = items.slice(startIndex, endIndex)
+          const chapterCardIds = new Set(chapterItems.map(item => item.id))
+
+          const chapterProgress = calculateChapterProgress(
+            levelCards,
+            chapterCardIds,
+            activeTab
+          )
+
+          chaptersProgress.push({
+            number: i + 1,
+            totalWords: chapterItems.length,
+            longTermMemory: chapterProgress.longTermMemory,
+            learned: chapterProgress.learned,
+          })
+        }
+
+        setChaptersData(chaptersProgress)
+      } catch (error) {
+        console.error('진행률 로드 실패:', error)
+      } finally {
+        setLoading(false)
+      }
+    }, [user, level, activeTab, targetAmount, words, kanjis, data.words, data.kanji, studyRound])
+
+  // 진행률 데이터 로드
+  useEffect(() => {
+    loadProgress()
+  }, [loadProgress])
+
+  // 챕터 계산 (각 챕터당 targetAmount개) - chaptersData가 있으면 사용, 없으면 기본값
   const totalChapters = Math.ceil(totalWords / targetAmount)
-  const chapters = Array.from({ length: totalChapters }, (_, i) => ({
-    number: i + 1,
-    totalWords: i === totalChapters - 1 ? totalWords % targetAmount || targetAmount : targetAmount,
-    longTermMemory: 0,
-    learned: 0,
-  }))
+  const chapters = chaptersData.length > 0 
+    ? chaptersData 
+    : Array.from({ length: totalChapters }, (_, i) => ({
+        number: i + 1,
+        totalWords: i === totalChapters - 1 ? totalWords % targetAmount || targetAmount : targetAmount,
+        longTermMemory: 0,
+        learned: 0,
+      }))
 
   const handleModeSelect = (mode: StudyMode) => {
-    setStudyMode(mode)
     setShowModeModal(false)
+    // 모드 변경 시 URL 업데이트 (기존 type 파라미터 유지)
+    const type = activeTab
+    router.push(`/acquire/auto-study/${params.level}?type=${type}&mode=${mode}`)
   }
 
   const handleAllWordsClick = () => {
@@ -135,6 +344,19 @@ function AutoStudyContent() {
     }
   }
 
+  const handleNextRound = () => {
+    // 다음 회차로 넘어가기
+    setStudyRound((prev) => {
+      const newRound = prev + 1
+      studyRoundRef.current = newRound
+      return newRound
+    })
+    // 현재 회차 진행률 리셋
+    setSessionProgress(0)
+    // 데이터 다시 로드
+    loadProgress()
+  }
+
   return (
     <div className="min-h-screen relative bg-white">
       {/* 그라데이션 배경 (상단부터 40vh까지) */}
@@ -142,13 +364,13 @@ function AutoStudyContent() {
         className="absolute top-0 left-0 right-0"
         style={{
           height: '40vh',
-          background: `linear-gradient(to bottom, ${gradient.to} 0%, ${gradient.from} 40%, #ffffff 60%)`,
+          background: `linear-gradient(to bottom, ${gradient.to} 0%, ${gradient.from} 80%, #ffffff 90%)`,
         }}
       />
 
       <AppBar
         title={`${level} ${activeTab === 'word' ? '단어' : '한자'}`}
-        onBack={() => router.back()}
+        onBack={() => window.location.href = `/acquire`}
         rightAction={
           <button
             onClick={() => setShowModeModal(true)}
@@ -165,15 +387,20 @@ function AutoStudyContent() {
           // 자동 학습 모드
           <div className="px-4 pt-4 space-y-4">
             {/* 자동 학습 카드 */}
-            <div className="bg-surface rounded-card p-4 shadow-soft">
-              <div className="flex items-center justify-between mb-4">
+            <div className="bg-surface rounded-card p-4 shadow-soft flex flex-col gap-2">
+              <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <h2 className="text-subtitle font-semibold text-text-main">자동 학습</h2>
                   <span className="px-2 py-0.5 rounded-full bg-orange-100 text-orange-600 text-label font-medium">
-                    1회차
+                    {studyRound}회차
                   </span>
                 </div>
-                <button className="text-body text-text-sub">기록 &gt;</button>
+                <button 
+                  onClick={() => router.push('/stats')}
+                  className="text-body text-text-sub hover:text-text-main transition-colors"
+                >
+                  기록 &gt;
+                </button>
               </div>
 
               {/* 목표 학습량과 진행률 차트 */}
@@ -191,23 +418,23 @@ function AutoStudyContent() {
                       paddingRight: '2.5rem',
                     }}
                   >
-                    <option value={10}>10개</option>
-                    <option value={20}>20개</option>
-                    <option value={30}>30개</option>
-                    <option value={50}>50개</option>
+                    {[5, 10, 15, 20, 25, 30, 35, 40].map((val) => (
+                      <option key={val} value={val}>{val}개</option>
+                    ))}
                   </select>
                 </div>
 
                 {/* 진행률 반원형 차트 */}
                 <SemicircleProgress 
-                  value={(sessionProgress / sessionTotal) * 100}
-                  progress={sessionProgress}
-                  total={sessionTotal}
+                  value={loading ? 0 : sessionTotal === 0 ? 0 : Math.min((sessionProgress / sessionTotal) * 100, 100)}
+                  progress={loading ? 0 : Math.min(sessionProgress, sessionTotal || targetAmount)}
+                  total={sessionTotal || targetAmount}
+                  color={gradient.to}
                 />
               </div>
 
               {/* 새 단어 / 복습 단어 */}
-              <div className="space-y-2 mb-4">
+              <div className="flex flex-col gap-3">
                 <div className="flex items-center justify-between">
                   <span className="text-body text-text-sub">
                     새 {activeTab === 'word' ? '단어' : '한자'}
@@ -216,7 +443,7 @@ function AutoStudyContent() {
                     onClick={() => router.push(`/acquire/auto-study/${params.level}/new-words?type=${activeTab}&limit=${targetAmount}`)}
                     className="text-body text-text-main font-medium"
                   >
-                    {newWords} &gt;
+                    {loading ? '...' : newWords} &gt;
                   </button>
                 </div>
                 <div className="flex items-center justify-between">
@@ -224,73 +451,119 @@ function AutoStudyContent() {
                     복습 {activeTab === 'word' ? '단어' : '한자'}
                   </span>
                   <button className="text-body text-text-main font-medium">
-                    {reviewWords} &gt;
+                    {loading ? '...' : reviewWords} &gt;
                   </button>
                 </div>
-              </div>
-
-              {/* 학습하기 버튼 */}
-              <button
-                onClick={() => router.push(`/practice/learn?level=${params.level}&type=${activeTab}&limit=${targetAmount}`)}
-                className="w-full py-3 rounded-card bg-primary text-surface text-subtitle font-semibold"
-              >
-                {sessionProgress === 0 ? '학습하기' : '이어서 학습하기'}
-              </button>
-            </div>
-
-            {/* 학습 정보 */}
-            <div className="bg-surface rounded-card p-4 shadow-soft">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-subtitle font-semibold text-text-main">
-                  {level} 학습 정보
-                </h2>
-                <button 
-                  onClick={handleAllWordsClick}
-                  className="text-body text-text-sub"
+                
+                {/* 학습하기 버튼 */}
+                <button
+                  onClick={() =>
+                    router.push(
+                      `/practice/learn?level=${params.level}&type=${activeTab}&limit=${targetAmount}&done=${sessionProgress}`
+                    )
+                  }
+                  className="w-full py-3 rounded-card bg-primary text-surface text-subtitle font-semibold"
+                  disabled={sessionTotal === 0}
                 >
-                  모든 {activeTab === 'word' ? '단어' : '한자'} &gt;
+                  {sessionTotal === 0
+                    ? '학습할 카드가 없습니다'
+                    : sessionProgress === 0
+                      ? '학습하기'
+                      : sessionProgress >= (sessionTotal || targetAmount)
+                        ? `학습하기 (${Math.min(sessionProgress, sessionTotal || targetAmount)}/${sessionTotal || targetAmount})`
+                        : `이어서 학습하기 (${Math.min(sessionProgress, sessionTotal || targetAmount)}/${sessionTotal || targetAmount})`}
                 </button>
               </div>
 
+
+              {/* 미래 복습 안내 */}
+              {sessionTotal === 0 && nextReviewDays !== null && (
+                <div className="text-body text-text-sub text-center mt-2">
+                  다음 복습까지 약 {nextReviewDays}일 남았습니다.
+                </div>
+              )}
+            </div>
+
+            {/* 학습 정보 */}
+            <div className="flex items-center justify-between">
+              <h2 className="text-subtitle font-semibold text-text-main pl-2 pt-4">
+                {level} 학습 정보
+              </h2>
+              <button 
+                onClick={handleAllWordsClick}
+                className="text-label text-text-sub"
+              >
+                모든 {activeTab === 'word' ? '단어' : '한자'} &gt;
+              </button>
+            </div>
+
+            <div className="bg-surface rounded-card p-4 shadow-soft">
               {/* 장기 기억 단어/한자 */}
               <div className="mb-3">
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-body text-text-sub">
+                <div className="grid grid-cols-2 gap-2 items-center justify-between mb-1">
+                  <span className="text-label text-text-sub">
                     장기 기억 {activeTab === 'word' ? '단어' : '한자'}
                   </span>
-                  <span className="text-body text-text-main font-medium">
-                    {currentProgress}/{totalWords}
-                  </span>
+                  
+                  <div className="flex items-center gap-2">
+                    <span className="text-label text-text-sub font-medium">
+                      {loading ? '...' : `${longTermMemory}/${totalWords}`}
+                    </span>
+
+                    <div className="flex-1 h-2 bg-divider rounded-full overflow-hidden relative">
+                      <div
+                        className="h-full rounded-full"
+                        style={{
+                          width: `${Math.max((longTermMemory / totalWords) * 100, 0.5)}%`,
+                          backgroundColor: hexToRgba(gradient.to, 0.3),
+                          border: '1px solid #FF8A00',
+                        }}
+                      />
+                      {longTermMemory === 0 && (
+                        <div
+                          className="absolute left-0 top-0 w-1 h-full rounded-full"
+                          style={{
+                            backgroundColor: hexToRgba(gradient.to, 0.3),
+                            border: '1px solid #FF8A00',
+                          }}
+                        />
+                      )}
+                    </div>
+                  </div>
                 </div>
-                <div className="h-2 bg-divider rounded-full overflow-hidden relative">
-                  <div
-                    className="h-full bg-orange-500 rounded-full"
-                    style={{ width: `${Math.max((currentProgress / totalWords) * 100, 0.5)}%` }}
-                  />
-                  {currentProgress === 0 && (
-                    <div className="absolute left-0 top-0 w-1 h-full bg-orange-500 rounded-full" />
-                  )}
-                </div>
+                
               </div>
 
               {/* 학습한 단어/한자 */}
               <div>
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-body text-text-sub">
+                <div className="grid grid-cols-2 gap-2 items-center justify-between mb-1">
+                  <span className="text-label text-text-sub">
                     학습한 {activeTab === 'word' ? '단어' : '한자'}
                   </span>
-                  <span className="text-body text-text-main font-medium">
-                    {currentProgress}/{totalWords}
-                  </span>
-                </div>
-                <div className="h-2 bg-divider rounded-full overflow-hidden relative">
-                  <div
-                    className="h-full bg-orange-500 rounded-full"
-                    style={{ width: `${Math.max((currentProgress / totalWords) * 100, 0.5)}%` }}
-                  />
-                  {currentProgress === 0 && (
-                    <div className="absolute left-0 top-0 w-1 h-full bg-orange-500 rounded-full" />
-                  )}
+                  <div className="flex items-center gap-2">
+                    <span className="text-label text-text-sub font-medium">
+                      {loading ? '...' : `${currentProgress}/${totalWords}`}
+                    </span>
+                    <div className="flex-1 h-2 bg-divider rounded-full overflow-hidden relative">
+                      <div
+                        className="h-full rounded-full"
+                        style={{
+                          width: `${Math.max((currentProgress / totalWords) * 100, 0.5)}%`,
+                          backgroundColor: hexToRgba(gradient.to, 0.3),
+                          border: '1px solid #FF8A00',
+                        }}
+                      />
+                      {currentProgress === 0 && (
+                        <div
+                          className="absolute left-0 top-0 w-1 h-full rounded-full"
+                          style={{
+                            backgroundColor: hexToRgba(gradient.to, 0.3),
+                            border: '1px solid #FF8A00',
+                          }}
+                        />
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

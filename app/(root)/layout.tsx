@@ -13,7 +13,9 @@ export default function RootLayout({
   // 하단 네비게이션을 숨겨야 하는 경로들
   const hideBottomNav = 
     pathname?.startsWith('/acquire/auto-study/') ||
-    pathname?.startsWith('/practice/learn')
+    pathname?.startsWith('/practice/learn') ||
+    pathname?.startsWith('/acquire/word') ||
+    pathname?.startsWith('/acquire/kanji')
 
   return (
     <div className="min-h-screen bg-page w-full overflow-x-hidden">

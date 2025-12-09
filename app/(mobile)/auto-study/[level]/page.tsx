@@ -10,8 +10,30 @@ import { Level, levelData, getLevelGradient } from '@/data'
 
 type StudyMode = 'auto' | 'chapter'
 
+const hexToRgba = (hex: string, alpha: number) => {
+  const trimmed = hex.replace('#', '')
+  const normalized = trimmed.length === 3
+    ? trimmed.split('').map((c) => c + c).join('')
+    : trimmed
+  const num = parseInt(normalized, 16)
+  const r = (num >> 16) & 255
+  const g = (num >> 8) & 255
+  const b = num & 255
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`
+}
+
 // 반원형 진행률 차트 컴포넌트
-function SemicircleProgress({ value, progress, total }: { value: number; progress: number; total: number }) {
+function SemicircleProgress({
+  value,
+  progress,
+  total,
+  color,
+}: {
+  value: number
+  progress: number
+  total: number
+  color: string
+}) {
   const radius = 80
   const centerX = 100
   const centerY = 100
@@ -39,7 +61,7 @@ function SemicircleProgress({ value, progress, total }: { value: number; progres
   const progressPath = value > 0 
     ? `M ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} 0 ${currentX} ${currentY}`
     : ''
-  
+
   return (
     <div className="relative w-full flex-shrink-0" style={{ height: '7rem' }}>
       <svg 
@@ -56,12 +78,13 @@ function SemicircleProgress({ value, progress, total }: { value: number; progres
           strokeWidth={strokeWidth}
           strokeLinecap="round"
         />
-        {/* 진행률 반원 (주황색) */}
+        {/* 진행률 반원 (레벨 컬러 30% opacity) */}
         {progressPath && (
           <path
             d={progressPath}
             fill="none"
-            stroke="#FF8A00"
+            stroke={color}
+            strokeOpacity={0.3}
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
@@ -184,6 +207,7 @@ export default function AutoStudyPage() {
                   value={(sessionProgress / sessionTotal) * 100}
                   progress={sessionProgress}
                   total={sessionTotal}
+                  color={gradient.from}
                 />
               </div>
 
@@ -193,23 +217,30 @@ export default function AutoStudyPage() {
                   <span className="text-body text-text-sub">
                     새 {activeTab === 'word' ? '단어' : '한자'}
                   </span>
-                  <button className="text-body text-text-main font-medium">
-                    {newWords} &gt;
-                  </button>
+              <button 
+                onClick={() => router.push(`/acquire/auto-study/${params.level}/new-words?type=${activeTab}&limit=${targetAmount}`)}
+                className="text-body text-text-main font-medium"
+              >
+                {newWords} &gt;
+              </button>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-body text-text-sub">
                     복습 {activeTab === 'word' ? '단어' : '한자'}
                   </span>
-                  <button className="text-body text-text-main font-medium">
-                    {reviewWords} &gt;
-                  </button>
+              <button className="text-body text-text-main font-medium">
+                {reviewWords} &gt;
+              </button>
                 </div>
               </div>
 
               {/* 학습하기 버튼 */}
               <button
-                onClick={() => router.push(`/flashcard/${params.level}`)}
+                onClick={() =>
+                  router.push(
+                    `/practice/learn?level=${params.level}&type=${activeTab}&limit=${targetAmount}&done=${sessionProgress}`
+                  )
+                }
                 className="w-full py-3 rounded-card bg-primary text-surface text-subtitle font-semibold"
               >
                 {sessionProgress === 0 ? '학습하기' : '이어서 학습하기'}
@@ -222,9 +253,18 @@ export default function AutoStudyPage() {
                 <h2 className="text-subtitle font-semibold text-text-main">
                   {level} 학습 정보
                 </h2>
-                <button className="text-body text-text-sub">
-                  모든 {activeTab === 'word' ? '단어' : '한자'} &gt;
-                </button>
+              <button
+                onClick={() => {
+                  if (activeTab === 'word') {
+                    router.push(`/acquire/word?level=${level.toLowerCase()}`)
+                  } else {
+                    router.push(`/acquire/kanji?level=${level.toLowerCase()}`)
+                  }
+                }}
+                className="text-label text-text-sub"
+              >
+                모든 {activeTab === 'word' ? '단어' : '한자'} &gt;
+              </button>
               </div>
 
               {/* 장기 기억 단어/한자 */}
@@ -239,11 +279,21 @@ export default function AutoStudyPage() {
                 </div>
                 <div className="h-2 bg-divider rounded-full overflow-hidden relative">
                   <div
-                    className="h-full bg-orange-500 rounded-full"
-                    style={{ width: `${Math.max((currentProgress / totalWords) * 100, 0.5)}%` }}
+                    className="h-full rounded-full"
+                    style={{
+                      width: `${Math.max((currentProgress / totalWords) * 100, 0.5)}%`,
+                      backgroundColor: hexToRgba(gradient.to, 0.3),
+                      border: '1px solid #FF8A00',
+                    }}
                   />
                   {currentProgress === 0 && (
-                    <div className="absolute left-0 top-0 w-1 h-full bg-orange-500 rounded-full" />
+                    <div
+                      className="absolute left-0 top-0 w-1 h-full rounded-full"
+                      style={{
+                        backgroundColor: hexToRgba(gradient.to, 0.3),
+                        border: '1px solid #FF8A00',
+                      }}
+                    />
                   )}
                 </div>
               </div>
@@ -260,11 +310,21 @@ export default function AutoStudyPage() {
                 </div>
                 <div className="h-2 bg-divider rounded-full overflow-hidden relative">
                   <div
-                    className="h-full bg-orange-500 rounded-full"
-                    style={{ width: `${Math.max((currentProgress / totalWords) * 100, 0.5)}%` }}
+                    className="h-full rounded-full"
+                    style={{
+                      width: `${Math.max((currentProgress / totalWords) * 100, 0.5)}%`,
+                      backgroundColor: hexToRgba(gradient.to, 0.3),
+                      border: '1px solid #FF8A00',
+                    }}
                   />
                   {currentProgress === 0 && (
-                    <div className="absolute left-0 top-0 w-1 h-full bg-orange-500 rounded-full" />
+                    <div
+                      className="absolute left-0 top-0 w-1 h-full rounded-full"
+                      style={{
+                        backgroundColor: hexToRgba(gradient.to, 0.3),
+                        border: '1px solid #FF8A00',
+                      }}
+                    />
                   )}
                 </div>
               </div>

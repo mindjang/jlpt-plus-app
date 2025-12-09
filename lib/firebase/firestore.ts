@@ -147,16 +147,16 @@ export async function saveCardStatesBatch(uid: string, cardStates: UserCardState
 }
 
 /**
- * 오늘 복습해야 할 카드들 가져오기
+ * 현재 복습해야 할 카드들 가져오기 (분 단위)
  */
 export async function getReviewCards(uid: string, maxCards: number = 100) {
   const dbInstance = getDbInstance()
-  const today = Math.floor(Date.now() / (1000 * 60 * 60 * 24))
+  const nowMinutes = Math.floor(Date.now() / (1000 * 60))
   const cardsRef = collection(dbInstance, 'users', uid, 'cards')
   
   const q = query(
     cardsRef,
-    where('due', '<=', today),
+    where('due', '<=', nowMinutes),
     where('suspended', '==', false),
     orderBy('due', 'asc'),
     limit(maxCards)
@@ -166,7 +166,10 @@ export async function getReviewCards(uid: string, maxCards: number = 100) {
   const cards: UserCardState[] = []
 
   querySnapshot.forEach((doc) => {
-    cards.push(doc.data() as UserCardState)
+    const card = doc.data() as UserCardState
+    // 기존 일 단위 데이터 마이그레이션은 reviewCard 함수에서 처리
+    // 여기서는 그대로 반환 (reviewCard 호출 시 자동 마이그레이션됨)
+    cards.push(card)
   })
 
   return cards

@@ -35,7 +35,7 @@ function WordListContent() {
     <div className="w-full">
       <AppBar 
         title={`${level} 단어`} 
-        onBack={() => router.back()} 
+        onBack={() => window.location.href = `/acquire`} 
       />
       
       <div className="p-4">

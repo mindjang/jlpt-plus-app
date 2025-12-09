@@ -59,9 +59,8 @@ export const QuizCard: React.FC<QuizCardProps> = ({
 
     // 정답 여부에 따라 grade 결정
     const grade: Grade = isCorrect ? 'good' : 'again'
-    setTimeout(() => {
-      onGrade(grade)
-    }, 500)
+    // 평가는 즉시 수행하지만, 다음으로 이동은 사용자가 "다음" 버튼을 클릭할 때
+    onGrade(grade)
   }
 
   const correctAnswer = word ? word.meaningKo : kanji?.meaningKo || ''
@@ -173,7 +172,9 @@ export const QuizCard: React.FC<QuizCardProps> = ({
         {/* 다음 버튼 */}
         {showResult && (
           <button
-            onClick={onNext}
+            onClick={() => {
+              onNext()
+            }}
             className="button-press w-full py-3 px-4 rounded-card bg-primary text-surface text-body font-medium"
           >
             다음

@@ -4,6 +4,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* FontAwesome 아이콘 기본 크기 제한 (CSS 로딩 지연 방지) */
+svg[data-icon],
+svg[data-icon] path {
+  width: 1em !important;
+  height: 1em !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+  font-size: inherit !important;
+}
+
+/* FontAwesome 아이콘 컨테이너 크기 제한 */
+.fa-icon,
+[class*="fa-"] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  max-width: 24px;
+  max-height: 24px;
+}
+
 :root {
   --font-noto-sans-jp: 'Noto Sans JP', sans-serif;
   --font-pretendard: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;

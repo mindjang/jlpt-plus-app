@@ -9,8 +9,8 @@ export const n5Kanji: WordData[] = [
     kunYomi: ['ひと-', 'ひと.つ'],
     strokeCount: 1,
     relatedWords: [
-      { word: '一', furigana: 'イチ', meaning: 'one' },
-      { word: '一', furigana: 'イチ', meaning: 'one radical (no.1)' },
+      { word: '一', furigana: 'イチ', meaningEn: 'one', meaning: '하나' },
+      { word: '一', furigana: 'イチ', meaningEn: 'one radical (no.1)', meaning: '부수 1번 "한 일"' },
     ],
   },
   {
@@ -23,7 +23,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '七',
         furigana: 'シチ',
-        meaning: 'seven'
+        meaningEn: 'seven', meaning: '일곱'
       },
     ],
   },
@@ -37,12 +37,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '万',
         furigana: 'バン',
-        meaning: '10,000'
+        meaningEn: '10,000', meaning: '만'
       },
       {
         word: '万',
         furigana: 'バン',
-        meaning: 'ten thousand'
+        meaningEn: 'ten thousand', meaning: '만'
       },
     ],
   },
@@ -56,7 +56,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '三',
         furigana: 'サン',
-        meaning: 'three'
+        meaningEn: 'three', meaning: '셋'
       },
     ],
   },
@@ -70,12 +70,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '上',
         furigana: 'シャン',
-        meaning: 'above'
+        meaningEn: 'above', meaning: '위'
       },
       {
         word: '上',
         furigana: 'シャン',
-        meaning: 'up'
+        meaningEn: 'up', meaning: '위'
       },
     ],
   },
@@ -89,17 +89,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '下',
         furigana: 'カ',
-        meaning: 'below'
+        meaningEn: 'below', meaning: '아래'
       },
       {
         word: '下',
         furigana: 'カ',
-        meaning: 'descend'
+        meaningEn: 'descend', meaning: '내려가다'
       },
       {
         word: '下',
         furigana: 'カ',
-        meaning: 'down'
+        meaningEn: 'down', meaning: '아래'
       },
     ],
   },
@@ -113,17 +113,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '中',
         furigana: 'チュウ',
-        meaning: 'center'
+        meaningEn: 'center', meaning: '중심'
       },
       {
         word: '中',
         furigana: 'チュウ',
-        meaning: 'in'
+        meaningEn: 'in', meaning: '안에'
       },
       {
         word: '中',
         furigana: 'チュウ',
-        meaning: 'inside'
+        meaningEn: 'inside', meaning: '안쪽'
       },
     ],
   },
@@ -137,7 +137,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '九',
         furigana: 'キュウ',
-        meaning: 'nine'
+        meaningEn: 'nine', meaning: '아홉'
       },
     ],
   },
@@ -151,12 +151,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '二',
         furigana: 'ジ',
-        meaning: 'two'
+        meaningEn: 'two', meaning: '둘'
       },
       {
         word: '二',
         furigana: 'ジ',
-        meaning: 'two radical (no. 7)'
+        meaningEn: 'two radical (no. 7)', meaning: '부수 7번 "두 이"'
       },
     ],
   },
@@ -170,7 +170,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '五',
         furigana: 'ゴ',
-        meaning: 'five'
+        meaningEn: 'five', meaning: '다섯'
       },
     ],
   },
@@ -184,7 +184,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '人',
         furigana: 'ジン',
-        meaning: 'person'
+        meaningEn: 'person', meaning: '사람'
       },
     ],
   },
@@ -198,7 +198,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '今',
         furigana: 'キン',
-        meaning: 'now'
+        meaningEn: 'now', meaning: '지금'
       },
     ],
   },
@@ -212,17 +212,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '休',
         furigana: 'キュウ',
-        meaning: 'day off'
+        meaningEn: 'day off', meaning: '휴일'
       },
       {
         word: '休',
         furigana: 'キュウ',
-        meaning: 'rest'
+        meaningEn: 'rest', meaning: '휴식'
       },
       {
         word: '休',
         furigana: 'キュウ',
-        meaning: 'retire'
+        meaningEn: 'retire', meaning: '은퇴하다'
       },
     ],
   },
@@ -236,7 +236,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '何',
         furigana: 'カ',
-        meaning: 'what'
+        meaningEn: 'what', meaning: '무엇'
       },
     ],
   },
@@ -250,17 +250,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '先',
         furigana: 'セン',
-        meaning: 'ahead'
+        meaningEn: 'ahead', meaning: '앞쪽'
       },
       {
         word: '先',
         furigana: 'セン',
-        meaning: 'before'
+        meaningEn: 'before', meaning: '이전'
       },
       {
         word: '先',
         furigana: 'セン',
-        meaning: 'future'
+        meaningEn: 'future', meaning: '미래'
       },
     ],
   },
@@ -274,12 +274,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '入',
         furigana: 'ジュ',
-        meaning: 'enter'
+        meaningEn: 'enter', meaning: '들어가다'
       },
       {
         word: '入',
         furigana: 'ジュ',
-        meaning: 'insert'
+        meaningEn: 'insert', meaning: '삽입하다'
       },
     ],
   },
@@ -293,12 +293,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '八',
         furigana: 'ハチ',
-        meaning: 'eight'
+        meaningEn: 'eight', meaning: '여덟'
       },
       {
         word: '八',
         furigana: 'ハチ',
-        meaning: 'eight radical (no. 12)'
+        meaningEn: 'eight radical (no. 12)', meaning: '부수 12번 "여덟"'
       },
     ],
   },
@@ -312,7 +312,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '六',
         furigana: 'リク',
-        meaning: 'six'
+        meaningEn: 'six', meaning: '여섯'
       },
     ],
   },
@@ -326,17 +326,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '円',
         furigana: 'エン',
-        meaning: 'circle'
+        meaningEn: 'circle', meaning: '원'
       },
       {
         word: '円',
         furigana: 'エン',
-        meaning: 'round'
+        meaningEn: 'round', meaning: '둥근'
       },
       {
         word: '円',
         furigana: 'エン',
-        meaning: 'yen'
+        meaningEn: 'yen', meaning: '엔화'
       },
     ],
   },
@@ -350,17 +350,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '出',
         furigana: 'シュツ',
-        meaning: 'come out'
+        meaningEn: 'come out', meaning: '나오다'
       },
       {
         word: '出',
         furigana: 'シュツ',
-        meaning: 'exit'
+        meaningEn: 'exit', meaning: '나가다'
       },
       {
         word: '出',
         furigana: 'シュツ',
-        meaning: 'go out'
+        meaningEn: 'go out', meaning: '나가다'
       },
     ],
   },
@@ -374,12 +374,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '前',
         furigana: 'ゼン',
-        meaning: 'before'
+        meaningEn: 'before', meaning: '이전'
       },
       {
         word: '前',
         furigana: 'ゼン',
-        meaning: 'in front'
+        meaningEn: 'in front', meaning: '앞에'
       },
     ],
   },
@@ -393,7 +393,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '北',
         furigana: 'ホク',
-        meaning: 'north'
+        meaningEn: 'north', meaning: '북쪽'
       },
     ],
   },
@@ -407,7 +407,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '十',
         furigana: 'ジッ',
-        meaning: 'ten'
+        meaningEn: 'ten', meaning: '열'
       },
     ],
   },
@@ -421,7 +421,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '千',
         furigana: 'セン',
-        meaning: 'thousand'
+        meaningEn: 'thousand', meaning: '천'
       },
     ],
   },
@@ -435,17 +435,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '午',
         furigana: 'ゴ',
-        meaning: '11AM-1PM'
+        meaningEn: '11AM-1PM', meaning: '오전 11시~오후 1시'
       },
       {
         word: '午',
         furigana: 'ゴ',
-        meaning: 'noon'
+        meaningEn: 'noon', meaning: '정오'
       },
       {
         word: '午',
         furigana: 'ゴ',
-        meaning: 'seventh sign of Chinese zodiac'
+        meaningEn: 'seventh sign of Chinese zodiac', meaning: '십이지 일곱째(말)'
       },
     ],
   },
@@ -459,17 +459,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '半',
         furigana: 'ハン',
-        meaning: 'half'
+        meaningEn: 'half', meaning: '절반'
       },
       {
         word: '半',
         furigana: 'ハン',
-        meaning: 'middle'
+        meaningEn: 'middle', meaning: '가운데'
       },
       {
         word: '半',
         furigana: 'ハン',
-        meaning: 'odd number'
+        meaningEn: 'odd number', meaning: '홀수'
       },
     ],
   },
@@ -483,7 +483,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '南',
         furigana: 'ナ',
-        meaning: 'south'
+        meaningEn: 'south', meaning: '남쪽'
       },
     ],
   },
@@ -497,7 +497,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '友',
         furigana: 'ユウ',
-        meaning: 'friend'
+        meaningEn: 'friend', meaning: '친구'
       },
     ],
   },
@@ -511,7 +511,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '右',
         furigana: 'ウ',
-        meaning: 'right'
+        meaningEn: 'right', meaning: '오른쪽'
       },
     ],
   },
@@ -525,17 +525,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '名',
         furigana: 'ミョウ',
-        meaning: 'distinguished'
+        meaningEn: 'distinguished', meaning: '뛰어난'
       },
       {
         word: '名',
         furigana: 'ミョウ',
-        meaning: 'name'
+        meaningEn: 'name', meaning: '이름'
       },
       {
         word: '名',
         furigana: 'ミョウ',
-        meaning: 'noted'
+        meaningEn: 'noted', meaning: '유명한'
       },
     ],
   },
@@ -549,7 +549,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '四',
         furigana: 'シ',
-        meaning: 'four'
+        meaningEn: 'four', meaning: '넷'
       },
     ],
   },
@@ -563,7 +563,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '国',
         furigana: 'コク',
-        meaning: 'country'
+        meaningEn: 'country', meaning: '나라'
       },
     ],
   },
@@ -577,17 +577,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '土',
         furigana: 'ト',
-        meaning: 'Turkey'
+        meaningEn: 'Turkey', meaning: '터키'
       },
       {
         word: '土',
         furigana: 'ト',
-        meaning: 'earth'
+        meaningEn: 'earth', meaning: '땅'
       },
       {
         word: '土',
         furigana: 'ト',
-        meaning: 'ground'
+        meaningEn: 'ground', meaning: '땅'
       },
     ],
   },
@@ -601,7 +601,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '外',
         furigana: 'ガイ',
-        meaning: 'outside'
+        meaningEn: 'outside', meaning: '밖'
       },
     ],
   },
@@ -615,12 +615,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '大',
         furigana: 'タイ',
-        meaning: 'big'
+        meaningEn: 'big', meaning: '크다'
       },
       {
         word: '大',
         furigana: 'タイ',
-        meaning: 'large'
+        meaningEn: 'large', meaning: '크다'
       },
     ],
   },
@@ -634,17 +634,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '天',
         furigana: 'テン',
-        meaning: 'heavens'
+        meaningEn: 'heavens', meaning: '하늘'
       },
       {
         word: '天',
         furigana: 'テン',
-        meaning: 'imperial'
+        meaningEn: 'imperial', meaning: '황실의'
       },
       {
         word: '天',
         furigana: 'テン',
-        meaning: 'sky'
+        meaningEn: 'sky', meaning: '하늘'
       },
     ],
   },
@@ -658,12 +658,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '女',
         furigana: 'ジョ',
-        meaning: 'female'
+        meaningEn: 'female', meaning: '여성'
       },
       {
         word: '女',
         furigana: 'ジョ',
-        meaning: 'woman'
+        meaningEn: 'woman', meaning: '여자'
       },
     ],
   },
@@ -677,17 +677,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '子',
         furigana: 'シ',
-        meaning: '11PM-1AM'
+        meaningEn: '11PM-1AM', meaning: '오후 11시~오전 1시'
       },
       {
         word: '子',
         furigana: 'シ',
-        meaning: 'child'
+        meaningEn: 'child', meaning: '아이'
       },
       {
         word: '子',
         furigana: 'シ',
-        meaning: 'first sign of Chinese zodiac'
+        meaningEn: 'first sign of Chinese zodiac', meaning: '십이지 첫 번째(쥐)'
       },
     ],
   },
@@ -701,17 +701,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '学',
         furigana: 'ガク',
-        meaning: 'learning'
+        meaningEn: 'learning', meaning: '학습'
       },
       {
         word: '学',
         furigana: 'ガク',
-        meaning: 'science'
+        meaningEn: 'science', meaning: '과학'
       },
       {
         word: '学',
         furigana: 'ガク',
-        meaning: 'study'
+        meaningEn: 'study', meaning: '공부'
       },
     ],
   },
@@ -725,12 +725,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '小',
         furigana: 'ショウ',
-        meaning: 'little'
+        meaningEn: 'little', meaning: '작다'
       },
       {
         word: '小',
         furigana: 'ショウ',
-        meaning: 'small'
+        meaningEn: 'small', meaning: '작다'
       },
     ],
   },
@@ -744,7 +744,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '山',
         furigana: 'サン',
-        meaning: 'mountain'
+        meaningEn: 'mountain', meaning: '산'
       },
     ],
   },
@@ -758,17 +758,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '川',
         furigana: 'セン',
-        meaning: 'river'
+        meaningEn: 'river', meaning: '강'
       },
       {
         word: '川',
         furigana: 'セン',
-        meaning: 'river or three-stroke river radical (no. 47)'
+        meaningEn: 'river or three-stroke river radical (no. 47)', meaning: '부수 47번 "내 천"'
       },
       {
         word: '川',
         furigana: 'セン',
-        meaning: 'stream'
+        meaningEn: 'stream', meaning: '개울'
       },
     ],
   },
@@ -782,7 +782,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '左',
         furigana: 'サ',
-        meaning: 'left'
+        meaningEn: 'left', meaning: '왼쪽'
       },
     ],
   },
@@ -796,12 +796,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '年',
         furigana: 'ネン',
-        meaning: 'counter for years'
+        meaningEn: 'counter for years', meaning: '연도 세는 단위'
       },
       {
         word: '年',
         furigana: 'ネン',
-        meaning: 'year'
+        meaningEn: 'year', meaning: '해'
       },
     ],
   },
@@ -815,17 +815,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '後',
         furigana: 'コウ',
-        meaning: 'back'
+        meaningEn: 'back', meaning: '뒤'
       },
       {
         word: '後',
         furigana: 'コウ',
-        meaning: 'behind'
+        meaningEn: 'behind', meaning: '뒤에'
       },
       {
         word: '後',
         furigana: 'コウ',
-        meaning: 'later'
+        meaningEn: 'later', meaning: '나중'
       },
     ],
   },
@@ -839,17 +839,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '日',
         furigana: 'ジツ',
-        meaning: 'Japan'
+        meaningEn: 'Japan', meaning: '일본'
       },
       {
         word: '日',
         furigana: 'ジツ',
-        meaning: 'counter for days'
+        meaningEn: 'counter for days', meaning: '날짜 세는 단위'
       },
       {
         word: '日',
         furigana: 'ジツ',
-        meaning: 'day'
+        meaningEn: 'day', meaning: '날'
       },
     ],
   },
@@ -863,12 +863,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '時',
         furigana: 'ジ',
-        meaning: 'hour'
+        meaningEn: 'hour', meaning: '시간'
       },
       {
         word: '時',
         furigana: 'ジ',
-        meaning: 'time'
+        meaningEn: 'time', meaning: '시간'
       },
     ],
   },
@@ -882,7 +882,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '書',
         furigana: 'ショ',
-        meaning: 'write'
+        meaningEn: 'write', meaning: '쓰다'
       },
     ],
   },
@@ -896,12 +896,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '月',
         furigana: 'ガツ',
-        meaning: 'month'
+        meaningEn: 'month', meaning: '달'
       },
       {
         word: '月',
         furigana: 'ガツ',
-        meaning: 'moon'
+        meaningEn: 'moon', meaning: '달'
       },
     ],
   },
@@ -915,12 +915,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '木',
         furigana: 'ボク',
-        meaning: 'tree'
+        meaningEn: 'tree', meaning: '나무'
       },
       {
         word: '木',
         furigana: 'ボク',
-        meaning: 'wood'
+        meaningEn: 'wood', meaning: '나무'
       },
     ],
   },
@@ -934,17 +934,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '本',
         furigana: 'ホン',
-        meaning: 'book'
+        meaningEn: 'book', meaning: '책'
       },
       {
         word: '本',
         furigana: 'ホン',
-        meaning: 'counter for long cylindrical things'
+        meaningEn: 'counter for long cylindrical things', meaning: '긴 막대 모양을 세는 단위'
       },
       {
         word: '本',
         furigana: 'ホン',
-        meaning: 'main'
+        meaningEn: 'main', meaning: '주요한'
       },
     ],
   },
@@ -958,17 +958,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '来',
         furigana: 'タイ',
-        meaning: 'become'
+        meaningEn: 'become', meaning: '되다'
       },
       {
         word: '来',
         furigana: 'タイ',
-        meaning: 'cause'
+        meaningEn: 'cause', meaning: '원인'
       },
       {
         word: '来',
         furigana: 'タイ',
-        meaning: 'come'
+        meaningEn: 'come', meaning: '오다'
       },
     ],
   },
@@ -982,7 +982,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '東',
         furigana: 'トウ',
-        meaning: 'east'
+        meaningEn: 'east', meaning: '동쪽'
       },
     ],
   },
@@ -995,17 +995,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '校',
         furigana: 'キョウ',
-        meaning: 'correction'
+        meaningEn: 'correction', meaning: '수정'
       },
       {
         word: '校',
         furigana: 'キョウ',
-        meaning: 'exam'
+        meaningEn: 'exam', meaning: '시험'
       },
       {
         word: '校',
         furigana: 'キョウ',
-        meaning: 'printing'
+        meaningEn: 'printing', meaning: '인쇄'
       },
     ],
   },
@@ -1019,7 +1019,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '母',
         furigana: 'ボ',
-        meaning: 'mother'
+        meaningEn: 'mother', meaning: '어머니'
       },
     ],
   },
@@ -1033,7 +1033,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '毎',
         furigana: 'マイ',
-        meaning: 'every'
+        meaningEn: 'every', meaning: '모든'
       },
     ],
   },
@@ -1047,17 +1047,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '気',
         furigana: 'キ',
-        meaning: 'air'
+        meaningEn: 'air', meaning: '공기'
       },
       {
         word: '気',
         furigana: 'キ',
-        meaning: 'atmosphere'
+        meaningEn: 'atmosphere', meaning: '대기'
       },
       {
         word: '気',
         furigana: 'キ',
-        meaning: 'mind'
+        meaningEn: 'mind', meaning: '마음'
       },
     ],
   },
@@ -1071,7 +1071,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '水',
         furigana: 'スイ',
-        meaning: 'water'
+        meaningEn: 'water', meaning: '물'
       },
     ],
   },
@@ -1085,7 +1085,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '火',
         furigana: 'カ',
-        meaning: 'fire'
+        meaningEn: 'fire', meaning: '불'
       },
     ],
   },
@@ -1099,7 +1099,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '父',
         furigana: 'フ',
-        meaning: 'father'
+        meaningEn: 'father', meaning: '아버지'
       },
     ],
   },
@@ -1113,17 +1113,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '生',
         furigana: 'ショウ',
-        meaning: 'birth'
+        meaningEn: 'birth', meaning: '탄생'
       },
       {
         word: '生',
         furigana: 'ショウ',
-        meaning: 'genuine'
+        meaningEn: 'genuine', meaning: '진짜의'
       },
       {
         word: '生',
         furigana: 'ショウ',
-        meaning: 'life'
+        meaningEn: 'life', meaning: '삶'
       },
     ],
   },
@@ -1137,7 +1137,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '男',
         furigana: 'ダン',
-        meaning: 'male'
+        meaningEn: 'male', meaning: '남성'
       },
     ],
   },
@@ -1151,7 +1151,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '白',
         furigana: 'ハク',
-        meaning: 'white'
+        meaningEn: 'white', meaning: '하얀'
       },
     ],
   },
@@ -1165,7 +1165,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '百',
         furigana: 'ヒャク',
-        meaning: 'hundred'
+        meaningEn: 'hundred', meaning: '백'
       },
     ],
   },
@@ -1179,17 +1179,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '聞',
         furigana: 'ブン',
-        meaning: 'ask'
+        meaningEn: 'ask', meaning: '묻다'
       },
       {
         word: '聞',
         furigana: 'ブン',
-        meaning: 'hear'
+        meaningEn: 'hear', meaning: '듣다'
       },
       {
         word: '聞',
         furigana: 'ブン',
-        meaning: 'listen'
+        meaningEn: 'listen', meaning: '듣다'
       },
     ],
   },
@@ -1203,17 +1203,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '行',
         furigana: 'アン',
-        meaning: 'act'
+        meaningEn: 'act', meaning: '행동'
       },
       {
         word: '行',
         furigana: 'アン',
-        meaning: 'bank'
+        meaningEn: 'bank', meaning: '은행'
       },
       {
         word: '行',
         furigana: 'アン',
-        meaning: 'carry out'
+        meaningEn: 'carry out', meaning: '수행하다'
       },
     ],
   },
@@ -1227,12 +1227,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '西',
         furigana: 'サイ',
-        meaning: 'Spain'
+        meaningEn: 'Spain', meaning: '스페인'
       },
       {
         word: '西',
         furigana: 'サイ',
-        meaning: 'west'
+        meaningEn: 'west', meaning: '서쪽'
       },
     ],
   },
@@ -1246,17 +1246,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '見',
         furigana: 'ケン',
-        meaning: 'chances'
+        meaningEn: 'chances', meaning: '기회'
       },
       {
         word: '見',
         furigana: 'ケン',
-        meaning: 'hopes'
+        meaningEn: 'hopes', meaning: '희망'
       },
       {
         word: '見',
         furigana: 'ケン',
-        meaning: 'idea'
+        meaningEn: 'idea', meaning: '생각'
       },
     ],
   },
@@ -1270,12 +1270,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '話',
         furigana: 'ワ',
-        meaning: 'tale'
+        meaningEn: 'tale', meaning: '이야기'
       },
       {
         word: '話',
         furigana: 'ワ',
-        meaning: 'talk'
+        meaningEn: 'talk', meaning: '말하다'
       },
     ],
   },
@@ -1289,17 +1289,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '語',
         furigana: 'ゴ',
-        meaning: 'language'
+        meaningEn: 'language', meaning: '언어'
       },
       {
         word: '語',
         furigana: 'ゴ',
-        meaning: 'speech'
+        meaningEn: 'speech', meaning: '말'
       },
       {
         word: '語',
         furigana: 'ゴ',
-        meaning: 'word'
+        meaningEn: 'word', meaning: '단어'
       },
     ],
   },
@@ -1313,7 +1313,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '読',
         furigana: 'トウ',
-        meaning: 'read'
+        meaningEn: 'read', meaning: '읽다'
       },
     ],
   },
@@ -1327,7 +1327,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '車',
         furigana: 'シャ',
-        meaning: 'car'
+        meaningEn: 'car', meaning: '자동차'
       },
     ],
   },
@@ -1341,7 +1341,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '金',
         furigana: 'キン',
-        meaning: 'gold'
+        meaningEn: 'gold', meaning: '금'
       },
     ],
   },
@@ -1355,17 +1355,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '長',
         furigana: 'チョウ',
-        meaning: 'leader'
+        meaningEn: 'leader', meaning: '지도자'
       },
       {
         word: '長',
         furigana: 'チョウ',
-        meaning: 'long'
+        meaningEn: 'long', meaning: '길다'
       },
       {
         word: '長',
         furigana: 'チョウ',
-        meaning: 'senior'
+        meaningEn: 'senior', meaning: '선배'
       },
     ],
   },
@@ -1379,12 +1379,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '間',
         furigana: 'カン',
-        meaning: 'interval'
+        meaningEn: 'interval', meaning: '간격'
       },
       {
         word: '間',
         furigana: 'カン',
-        meaning: 'space'
+        meaningEn: 'space', meaning: '공간'
       },
     ],
   },
@@ -1398,7 +1398,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '雨',
         furigana: 'ウ',
-        meaning: 'rain'
+        meaningEn: 'rain', meaning: '비'
       },
     ],
   },
@@ -1411,7 +1411,7 @@ export const n5Kanji: WordData[] = [
       {
         word: '電',
         furigana: 'デン',
-        meaning: 'electricity'
+        meaningEn: 'electricity', meaning: '전기'
       },
     ],
   },
@@ -1425,12 +1425,12 @@ export const n5Kanji: WordData[] = [
       {
         word: '食',
         furigana: 'ショク',
-        meaning: 'eat'
+        meaningEn: 'eat', meaning: '먹다'
       },
       {
         word: '食',
         furigana: 'ショク',
-        meaning: 'food'
+        meaningEn: 'food', meaning: '음식'
       },
     ],
   },
@@ -1444,17 +1444,17 @@ export const n5Kanji: WordData[] = [
       {
         word: '高',
         furigana: 'コウ',
-        meaning: 'expensive'
+        meaningEn: 'expensive', meaning: '비싸다'
       },
       {
         word: '高',
         furigana: 'コウ',
-        meaning: 'high'
+        meaningEn: 'high', meaning: '높다'
       },
       {
         word: '高',
         furigana: 'コウ',
-        meaning: 'tall'
+        meaningEn: 'tall', meaning: '키가 크다'
       },
     ],
   }

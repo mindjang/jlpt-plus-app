@@ -12,17 +12,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '丁',
         furigana: 'チ',
-        meaningEn: '4th calendar sign', meaning: '4th calendar sign'
+        meaning: '4th calendar sign'
       },
       {
         word: '丁',
         furigana: 'チ',
-        meaningEn: 'counter for guns, tools, leaves or cakes of something', meaning: 'counter for guns, tools, leaves or cakes of something'
+        meaning: 'counter for guns, tools, leaves or cakes of something'
       },
       {
         word: '丁',
         furigana: 'チ',
-        meaningEn: 'even number', meaning: 'even number'
+        meaning: 'even number'
       },
     ],
   },
@@ -36,17 +36,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '丑',
         furigana: 'チュウ',
-        meaningEn: '1-3AM', meaning: '1-3AM'
+        meaning: '1-3AM'
       },
       {
         word: '丑',
         furigana: 'チュウ',
-        meaningEn: 'second sign of Chinese zodiac', meaning: 'second sign of Chinese zodiac'
+        meaning: 'second sign of Chinese zodiac'
       },
       {
         word: '丑',
         furigana: 'チュウ',
-        meaningEn: 'sign of the ox or cow', meaning: 'sign of the ox or cow'
+        meaning: 'sign of the ox or cow'
       },
     ],
   },
@@ -60,17 +60,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '且',
         furigana: 'ショ',
-        meaningEn: 'also', meaning: 'also'
+        meaning: 'also'
       },
       {
         word: '且',
         furigana: 'ショ',
-        meaningEn: 'furthermore', meaning: 'furthermore'
+        meaning: 'furthermore'
       },
       {
         word: '且',
         furigana: 'ショ',
-        meaningEn: 'moreover', meaning: 'moreover'
+        meaning: 'moreover'
       },
     ],
   },
@@ -84,12 +84,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '丘',
         furigana: 'キュウ',
-        meaningEn: 'hill', meaning: 'hill'
+        meaning: 'hill'
       },
       {
         word: '丘',
         furigana: 'キュウ',
-        meaningEn: 'knoll', meaning: 'knoll'
+        meaning: 'knoll'
       },
     ],
   },
@@ -103,17 +103,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '丙',
         furigana: 'ヘイ',
-        meaningEn: '3rd', meaning: '3rd'
+        meaning: '3rd'
       },
       {
         word: '丙',
         furigana: 'ヘイ',
-        meaningEn: '3rd calendar sign', meaning: '3rd calendar sign'
+        meaning: '3rd calendar sign'
       },
       {
         word: '丙',
         furigana: 'ヘイ',
-        meaningEn: 'third class', meaning: 'third class'
+        meaning: 'third class'
       },
     ],
   },
@@ -127,7 +127,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '丞',
         furigana: 'ショウ',
-        meaningEn: 'help', meaning: 'help'
+        meaning: 'help'
       },
     ],
   },
@@ -141,17 +141,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '丹',
         furigana: 'タン',
-        meaningEn: 'pills', meaning: 'pills'
+        meaning: 'pills'
       },
       {
         word: '丹',
         furigana: 'タン',
-        meaningEn: 'red', meaning: 'red'
+        meaning: 'red'
       },
       {
         word: '丹',
         furigana: 'タン',
-        meaningEn: 'red lead', meaning: 'red lead'
+        meaning: 'red lead'
       },
     ],
   },
@@ -165,17 +165,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '乃',
         furigana: 'アイ',
-        meaningEn: 'accordingly', meaning: 'accordingly'
+        meaning: 'accordingly'
       },
       {
         word: '乃',
         furigana: 'アイ',
-        meaningEn: 'from', meaning: 'from'
+        meaning: 'from'
       },
       {
         word: '乃',
         furigana: 'アイ',
-        meaningEn: 'possessive particle', meaning: 'possessive particle'
+        meaning: 'possessive particle'
       },
     ],
   },
@@ -189,12 +189,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '之',
         furigana: 'シ',
-        meaningEn: 'of', meaning: 'of'
+        meaning: 'of'
       },
       {
         word: '之',
         furigana: 'シ',
-        meaningEn: 'this', meaning: 'this'
+        meaning: 'this'
       },
     ],
   },
@@ -208,17 +208,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '乏',
         furigana: 'ボウ',
-        meaningEn: 'destitution', meaning: 'destitution'
+        meaning: 'destitution'
       },
       {
         word: '乏',
         furigana: 'ボウ',
-        meaningEn: 'limited', meaning: 'limited'
+        meaning: 'limited'
       },
       {
         word: '乏',
         furigana: 'ボウ',
-        meaningEn: 'scarce', meaning: 'scarce'
+        meaning: 'scarce'
       },
     ],
   },
@@ -232,17 +232,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '乙',
         furigana: 'イツ',
-        meaningEn: 'duplicate', meaning: 'duplicate'
+        meaning: 'duplicate'
       },
       {
         word: '乙',
         furigana: 'イツ',
-        meaningEn: 'fishhook radical (no. 5)', meaning: 'fishhook radical (no. 5)'
+        meaning: 'fishhook radical (no. 5)'
       },
       {
         word: '乙',
         furigana: 'イツ',
-        meaningEn: 'strange', meaning: 'strange'
+        meaning: 'strange'
       },
     ],
   },
@@ -256,7 +256,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '也',
         furigana: 'エ',
-        meaningEn: 'to be (classical)', meaning: 'to be (classical)'
+        meaning: 'to be (classical)'
       },
     ],
   },
@@ -270,12 +270,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '亀',
         furigana: 'キ',
-        meaningEn: 'tortoise', meaning: 'tortoise'
+        meaning: 'tortoise'
       },
       {
         word: '亀',
         furigana: 'キ',
-        meaningEn: 'turtle', meaning: 'turtle'
+        meaning: 'turtle'
       },
     ],
   },
@@ -289,17 +289,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '井',
         furigana: 'ショウ',
-        meaningEn: 'community', meaning: 'community'
+        meaning: 'community'
       },
       {
         word: '井',
         furigana: 'ショウ',
-        meaningEn: 'town', meaning: 'town'
+        meaning: 'town'
       },
       {
         word: '井',
         furigana: 'ショウ',
-        meaningEn: 'well', meaning: 'well'
+        meaning: 'well'
       },
     ],
   },
@@ -313,17 +313,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '亘',
         furigana: 'カン',
-        meaningEn: 'extend over', meaning: 'extend over'
+        meaning: 'extend over'
       },
       {
         word: '亘',
         furigana: 'カン',
-        meaningEn: 'range', meaning: 'range'
+        meaning: 'range'
       },
       {
         word: '亘',
         furigana: 'カン',
-        meaningEn: 'span', meaning: 'span'
+        meaning: 'span'
       },
     ],
   },
@@ -337,17 +337,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '亜',
         furigana: 'ア',
-        meaningEn: '-ous', meaning: '-ous'
+        meaning: '-ous'
       },
       {
         word: '亜',
         furigana: 'ア',
-        meaningEn: 'Asia', meaning: 'Asia'
+        meaning: 'Asia'
       },
       {
         word: '亜',
         furigana: 'ア',
-        meaningEn: 'come after', meaning: 'come after'
+        meaning: 'come after'
       },
     ],
   },
@@ -361,17 +361,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '亥',
         furigana: 'カイ',
-        meaningEn: '9-11PM', meaning: '9-11PM'
+        meaning: '9-11PM'
       },
       {
         word: '亥',
         furigana: 'カイ',
-        meaningEn: 'sign of the hog', meaning: 'sign of the hog'
+        meaning: 'sign of the hog'
       },
       {
         word: '亥',
         furigana: 'カイ',
-        meaningEn: 'twelfth sign of the Chinese zodiac', meaning: 'twelfth sign of the Chinese zodiac'
+        meaning: 'twelfth sign of the Chinese zodiac'
       },
     ],
   },
@@ -385,12 +385,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '亦',
         furigana: 'エキ',
-        meaningEn: 'again', meaning: 'again'
+        meaning: 'again'
       },
       {
         word: '亦',
         furigana: 'エキ',
-        meaningEn: 'also', meaning: 'also'
+        meaning: 'also'
       },
     ],
   },
@@ -404,12 +404,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '亨',
         furigana: 'キョウ',
-        meaningEn: 'go smoothly', meaning: 'go smoothly'
+        meaning: 'go smoothly'
       },
       {
         word: '亨',
         furigana: 'キョウ',
-        meaningEn: 'pass through', meaning: 'pass through'
+        meaning: 'pass through'
       },
     ],
   },
@@ -423,17 +423,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '享',
         furigana: 'キョウ',
-        meaningEn: 'answer (phone)', meaning: 'answer (phone)'
+        meaning: 'answer (phone)'
       },
       {
         word: '享',
         furigana: 'キョウ',
-        meaningEn: 'catch', meaning: 'catch'
+        meaning: 'catch'
       },
       {
         word: '享',
         furigana: 'キョウ',
-        meaningEn: 'enjoy', meaning: 'enjoy'
+        meaning: 'enjoy'
       },
     ],
   },
@@ -446,17 +446,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '亭',
         furigana: 'チン',
-        meaningEn: 'arbor', meaning: 'arbor'
+        meaning: 'arbor'
       },
       {
         word: '亭',
         furigana: 'チン',
-        meaningEn: 'cottage', meaning: 'cottage'
+        meaning: 'cottage'
       },
       {
         word: '亭',
         furigana: 'チン',
-        meaningEn: 'mansion', meaning: 'mansion'
+        meaning: 'mansion'
       },
     ],
   },
@@ -470,12 +470,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '亮',
         furigana: 'リョウ',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
       {
         word: '亮',
         furigana: 'リョウ',
-        meaningEn: 'help', meaning: 'help'
+        meaning: 'help'
       },
     ],
   },
@@ -488,17 +488,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '仁',
         furigana: 'ジン',
-        meaningEn: 'benevolence', meaning: 'benevolence'
+        meaning: 'benevolence'
       },
       {
         word: '仁',
         furigana: 'ジン',
-        meaningEn: 'charity', meaning: 'charity'
+        meaning: 'charity'
       },
       {
         word: '仁',
         furigana: 'ジン',
-        meaningEn: 'humanity', meaning: 'humanity'
+        meaning: 'humanity'
       },
     ],
   },
@@ -511,17 +511,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '仙',
         furigana: 'セン',
-        meaningEn: 'cent', meaning: 'cent'
+        meaning: 'cent'
       },
       {
         word: '仙',
         furigana: 'セン',
-        meaningEn: 'hermit', meaning: 'hermit'
+        meaning: 'hermit'
       },
       {
         word: '仙',
         furigana: 'セン',
-        meaningEn: 'wizard', meaning: 'wizard'
+        meaning: 'wizard'
       },
     ],
   },
@@ -535,17 +535,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '仮',
         furigana: 'カ',
-        meaningEn: 'assumed (name)', meaning: 'assumed (name)'
+        meaning: 'assumed (name)'
       },
       {
         word: '仮',
         furigana: 'カ',
-        meaningEn: 'informal', meaning: 'informal'
+        meaning: 'informal'
       },
       {
         word: '仮',
         furigana: 'カ',
-        meaningEn: 'interim', meaning: 'interim'
+        meaning: 'interim'
       },
     ],
   },
@@ -559,17 +559,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '仰',
         furigana: 'ギョウ',
-        meaningEn: 'depend', meaning: 'depend'
+        meaning: 'depend'
       },
       {
         word: '仰',
         furigana: 'ギョウ',
-        meaningEn: 'drink', meaning: 'drink'
+        meaning: 'drink'
       },
       {
         word: '仰',
         furigana: 'ギョウ',
-        meaningEn: 'face-up', meaning: 'face-up'
+        meaning: 'face-up'
       },
     ],
   },
@@ -583,17 +583,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '企',
         furigana: 'キ',
-        meaningEn: 'attempt', meaning: 'attempt'
+        meaning: 'attempt'
       },
       {
         word: '企',
         furigana: 'キ',
-        meaningEn: 'design', meaning: 'design'
+        meaning: 'design'
       },
       {
         word: '企',
         furigana: 'キ',
-        meaningEn: 'plan', meaning: 'plan'
+        meaning: 'plan'
       },
     ],
   },
@@ -607,12 +607,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '伊',
         furigana: 'イ',
-        meaningEn: 'Italy', meaning: 'Italy'
+        meaning: 'Italy'
       },
       {
         word: '伊',
         furigana: 'イ',
-        meaningEn: 'that one', meaning: 'that one'
+        meaning: 'that one'
       },
     ],
   },
@@ -626,17 +626,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '伍',
         furigana: 'ゴ',
-        meaningEn: 'file', meaning: 'file'
+        meaning: 'file'
       },
       {
         word: '伍',
         furigana: 'ゴ',
-        meaningEn: 'five', meaning: 'five'
+        meaning: 'five'
       },
       {
         word: '伍',
         furigana: 'ゴ',
-        meaningEn: 'five-man squad', meaning: 'five-man squad'
+        meaning: 'five-man squad'
       },
     ],
   },
@@ -650,12 +650,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '伎',
         furigana: 'キ',
-        meaningEn: 'deed', meaning: 'deed'
+        meaning: 'deed'
       },
       {
         word: '伎',
         furigana: 'キ',
-        meaningEn: 'skill', meaning: 'skill'
+        meaning: 'skill'
       },
     ],
   },
@@ -669,17 +669,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '伏',
         furigana: 'フク',
-        meaningEn: 'bend down', meaning: 'bend down'
+        meaning: 'bend down'
       },
       {
         word: '伏',
         furigana: 'フク',
-        meaningEn: 'bow', meaning: 'bow'
+        meaning: 'bow'
       },
       {
         word: '伏',
         furigana: 'フク',
-        meaningEn: 'cover', meaning: 'cover'
+        meaning: 'cover'
       },
     ],
   },
@@ -693,17 +693,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '伐',
         furigana: 'カ',
-        meaningEn: 'attack', meaning: 'attack'
+        meaning: 'attack'
       },
       {
         word: '伐',
         furigana: 'カ',
-        meaningEn: 'fell', meaning: 'fell'
+        meaning: 'fell'
       },
       {
         word: '伐',
         furigana: 'カ',
-        meaningEn: 'punish', meaning: 'punish'
+        meaning: 'punish'
       },
     ],
   },
@@ -716,17 +716,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '伯',
         furigana: 'ハク',
-        meaningEn: 'Brazil', meaning: 'Brazil'
+        meaning: 'Brazil'
       },
       {
         word: '伯',
         furigana: 'ハク',
-        meaningEn: 'chief', meaning: 'chief'
+        meaning: 'chief'
       },
       {
         word: '伯',
         furigana: 'ハク',
-        meaningEn: 'count', meaning: 'count'
+        meaning: 'count'
       },
     ],
   },
@@ -740,17 +740,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '伴',
         furigana: 'ハン',
-        meaningEn: 'accompany', meaning: 'accompany'
+        meaning: 'accompany'
       },
       {
         word: '伴',
         furigana: 'ハン',
-        meaningEn: 'bring with', meaning: 'bring with'
+        meaning: 'bring with'
       },
       {
         word: '伴',
         furigana: 'ハン',
-        meaningEn: 'companion', meaning: 'companion'
+        meaning: 'companion'
       },
     ],
   },
@@ -764,7 +764,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '伶',
         furigana: 'リョウ',
-        meaningEn: 'actor', meaning: 'actor'
+        meaning: 'actor'
       },
     ],
   },
@@ -778,17 +778,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '伽',
         furigana: 'カ',
-        meaningEn: 'attending', meaning: 'attending'
+        meaning: 'attending'
       },
       {
         word: '伽',
         furigana: 'カ',
-        meaningEn: 'entertainer', meaning: 'entertainer'
+        meaning: 'entertainer'
       },
       {
         word: '伽',
         furigana: 'カ',
-        meaningEn: 'nursing', meaning: 'nursing'
+        meaning: 'nursing'
       },
     ],
   },
@@ -802,12 +802,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '但',
         furigana: 'タン',
-        meaningEn: 'but', meaning: 'but'
+        meaning: 'but'
       },
       {
         word: '但',
         furigana: 'タン',
-        meaningEn: 'however', meaning: 'however'
+        meaning: 'however'
       },
     ],
   },
@@ -820,12 +820,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '佐',
         furigana: 'サ',
-        meaningEn: 'assistant', meaning: 'assistant'
+        meaning: 'assistant'
       },
       {
         word: '佐',
         furigana: 'サ',
-        meaningEn: 'help', meaning: 'help'
+        meaning: 'help'
       },
     ],
   },
@@ -839,12 +839,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '佑',
         furigana: 'ウ',
-        meaningEn: 'assist', meaning: 'assist'
+        meaning: 'assist'
       },
       {
         word: '佑',
         furigana: 'ウ',
-        meaningEn: 'help', meaning: 'help'
+        meaning: 'help'
       },
     ],
   },
@@ -857,17 +857,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '佳',
         furigana: 'カ',
-        meaningEn: 'beautiful', meaning: 'beautiful'
+        meaning: 'beautiful'
       },
       {
         word: '佳',
         furigana: 'カ',
-        meaningEn: 'excellent', meaning: 'excellent'
+        meaning: 'excellent'
       },
       {
         word: '佳',
         furigana: 'カ',
-        meaningEn: 'good', meaning: 'good'
+        meaning: 'good'
       },
     ],
   },
@@ -881,17 +881,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '併',
         furigana: 'ヘイ',
-        meaningEn: 'collective', meaning: 'collective'
+        meaning: 'collective'
       },
       {
         word: '併',
         furigana: 'ヘイ',
-        meaningEn: 'get together', meaning: 'get together'
+        meaning: 'get together'
       },
       {
         word: '併',
         furigana: 'ヘイ',
-        meaningEn: 'join', meaning: 'join'
+        meaning: 'join'
       },
     ],
   },
@@ -905,17 +905,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '侃',
         furigana: 'カン',
-        meaningEn: 'just', meaning: 'just'
+        meaning: 'just'
       },
       {
         word: '侃',
         furigana: 'カン',
-        meaningEn: 'peace-loving', meaning: 'peace-loving'
+        meaning: 'peace-loving'
       },
       {
         word: '侃',
         furigana: 'カン',
-        meaningEn: 'righteous', meaning: 'righteous'
+        meaning: 'righteous'
       },
     ],
   },
@@ -929,17 +929,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '侍',
         furigana: 'シ',
-        meaningEn: 'samurai', meaning: 'samurai'
+        meaning: 'samurai'
       },
       {
         word: '侍',
         furigana: 'シ',
-        meaningEn: 'serve', meaning: 'serve'
+        meaning: 'serve'
       },
       {
         word: '侍',
         furigana: 'シ',
-        meaningEn: 'wait upon', meaning: 'wait upon'
+        meaning: 'wait upon'
       },
     ],
   },
@@ -953,7 +953,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '侑',
         furigana: 'ウ',
-        meaningEn: 'urge to eat', meaning: 'urge to eat'
+        meaning: 'urge to eat'
       },
     ],
   },
@@ -967,12 +967,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '価',
         furigana: 'カ',
-        meaningEn: 'price', meaning: 'price'
+        meaning: 'price'
       },
       {
         word: '価',
         furigana: 'カ',
-        meaningEn: 'value', meaning: 'value'
+        meaning: 'value'
       },
     ],
   },
@@ -986,17 +986,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '侮',
         furigana: 'ブ',
-        meaningEn: 'contempt', meaning: 'contempt'
+        meaning: 'contempt'
       },
       {
         word: '侮',
         furigana: 'ブ',
-        meaningEn: 'despise', meaning: 'despise'
+        meaning: 'despise'
       },
       {
         word: '侮',
         furigana: 'ブ',
-        meaningEn: 'make light of', meaning: 'make light of'
+        meaning: 'make light of'
       },
     ],
   },
@@ -1009,17 +1009,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '侯',
         furigana: 'コウ',
-        meaningEn: 'daimyo', meaning: 'daimyo'
+        meaning: 'daimyo'
       },
       {
         word: '侯',
         furigana: 'コウ',
-        meaningEn: 'lord', meaning: 'lord'
+        meaning: 'lord'
       },
       {
         word: '侯',
         furigana: 'コウ',
-        meaningEn: 'marquis', meaning: 'marquis'
+        meaning: 'marquis'
       },
     ],
   },
@@ -1033,17 +1033,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '侵',
         furigana: 'シン',
-        meaningEn: 'encroach', meaning: 'encroach'
+        meaning: 'encroach'
       },
       {
         word: '侵',
         furigana: 'シン',
-        meaningEn: 'invade', meaning: 'invade'
+        meaning: 'invade'
       },
       {
         word: '侵',
         furigana: 'シン',
-        meaningEn: 'raid', meaning: 'raid'
+        meaning: 'raid'
       },
     ],
   },
@@ -1057,17 +1057,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '促',
         furigana: 'ソク',
-        meaningEn: 'demand', meaning: 'demand'
+        meaning: 'demand'
       },
       {
         word: '促',
         furigana: 'ソク',
-        meaningEn: 'incite', meaning: 'incite'
+        meaning: 'incite'
       },
       {
         word: '促',
         furigana: 'ソク',
-        meaningEn: 'press', meaning: 'press'
+        meaning: 'press'
       },
     ],
   },
@@ -1080,17 +1080,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '俊',
         furigana: 'シュン',
-        meaningEn: 'excellence', meaning: 'excellence'
+        meaning: 'excellence'
       },
       {
         word: '俊',
         furigana: 'シュン',
-        meaningEn: 'genius', meaning: 'genius'
+        meaning: 'genius'
       },
       {
         word: '俊',
         furigana: 'シュン',
-        meaningEn: 'sagacious', meaning: 'sagacious'
+        meaning: 'sagacious'
       },
     ],
   },
@@ -1103,17 +1103,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '俗',
         furigana: 'ゾク',
-        meaningEn: 'customs', meaning: 'customs'
+        meaning: 'customs'
       },
       {
         word: '俗',
         furigana: 'ゾク',
-        meaningEn: 'manners', meaning: 'manners'
+        meaning: 'manners'
       },
       {
         word: '俗',
         furigana: 'ゾク',
-        meaningEn: 'mundane things', meaning: 'mundane things'
+        meaning: 'mundane things'
       },
     ],
   },
@@ -1127,17 +1127,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '保',
         furigana: 'ホ',
-        meaningEn: 'guarantee', meaning: 'guarantee'
+        meaning: 'guarantee'
       },
       {
         word: '保',
         furigana: 'ホ',
-        meaningEn: 'keep', meaning: 'keep'
+        meaning: 'keep'
       },
       {
         word: '保',
         furigana: 'ホ',
-        meaningEn: 'preserve', meaning: 'preserve'
+        meaning: 'preserve'
       },
     ],
   },
@@ -1151,17 +1151,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '修',
         furigana: 'シュ',
-        meaningEn: 'conduct oneself well', meaning: 'conduct oneself well'
+        meaning: 'conduct oneself well'
       },
       {
         word: '修',
         furigana: 'シュ',
-        meaningEn: 'discipline', meaning: 'discipline'
+        meaning: 'discipline'
       },
       {
         word: '修',
         furigana: 'シュ',
-        meaningEn: 'master', meaning: 'master'
+        meaning: 'master'
       },
     ],
   },
@@ -1174,12 +1174,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '俳',
         furigana: 'ハイ',
-        meaningEn: 'actor', meaning: 'actor'
+        meaning: 'actor'
       },
       {
         word: '俳',
         furigana: 'ハイ',
-        meaningEn: 'haiku', meaning: 'haiku'
+        meaning: 'haiku'
       },
     ],
   },
@@ -1193,17 +1193,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '俵',
         furigana: 'ヒョウ',
-        meaningEn: 'bag', meaning: 'bag'
+        meaning: 'bag'
       },
       {
         word: '俵',
         furigana: 'ヒョウ',
-        meaningEn: 'bale', meaning: 'bale'
+        meaning: 'bale'
       },
       {
         word: '俵',
         furigana: 'ヒョウ',
-        meaningEn: 'counter for bags', meaning: 'counter for bags'
+        meaning: 'counter for bags'
       },
     ],
   },
@@ -1216,12 +1216,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '俸',
         furigana: 'ホウ',
-        meaningEn: 'salary', meaning: 'salary'
+        meaning: 'salary'
       },
       {
         word: '俸',
         furigana: 'ホウ',
-        meaningEn: 'stipend', meaning: 'stipend'
+        meaning: 'stipend'
       },
     ],
   },
@@ -1235,17 +1235,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '倉',
         furigana: 'ソウ',
-        meaningEn: 'cellar', meaning: 'cellar'
+        meaning: 'cellar'
       },
       {
         word: '倉',
         furigana: 'ソウ',
-        meaningEn: 'godown', meaning: 'godown'
+        meaning: 'godown'
       },
       {
         word: '倉',
         furigana: 'ソウ',
-        meaningEn: 'storehouse', meaning: 'storehouse'
+        meaning: 'storehouse'
       },
     ],
   },
@@ -1259,12 +1259,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '倖',
         furigana: 'コウ',
-        meaningEn: 'happiness', meaning: 'happiness'
+        meaning: 'happiness'
       },
       {
         word: '倖',
         furigana: 'コウ',
-        meaningEn: 'luck', meaning: 'luck'
+        meaning: 'luck'
       },
     ],
   },
@@ -1278,12 +1278,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '倣',
         furigana: 'ホウ',
-        meaningEn: 'emulate', meaning: 'emulate'
+        meaning: 'emulate'
       },
       {
         word: '倣',
         furigana: 'ホウ',
-        meaningEn: 'imitate', meaning: 'imitate'
+        meaning: 'imitate'
       },
     ],
   },
@@ -1296,12 +1296,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '倫',
         furigana: 'リン',
-        meaningEn: 'companion', meaning: 'companion'
+        meaning: 'companion'
       },
       {
         word: '倫',
         furigana: 'リン',
-        meaningEn: 'ethics', meaning: 'ethics'
+        meaning: 'ethics'
       },
     ],
   },
@@ -1315,12 +1315,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '倭',
         furigana: 'イ',
-        meaningEn: 'Yamato', meaning: 'Yamato'
+        meaning: 'Yamato'
       },
       {
         word: '倭',
         furigana: 'イ',
-        meaningEn: 'ancient Japan', meaning: 'ancient Japan'
+        meaning: 'ancient Japan'
       },
     ],
   },
@@ -1334,17 +1334,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '倹',
         furigana: 'ケン',
-        meaningEn: 'economy', meaning: 'economy'
+        meaning: 'economy'
       },
       {
         word: '倹',
         furigana: 'ケン',
-        meaningEn: 'frugal', meaning: 'frugal'
+        meaning: 'frugal'
       },
       {
         word: '倹',
         furigana: 'ケン',
-        meaningEn: 'thrifty', meaning: 'thrifty'
+        meaning: 'thrifty'
       },
     ],
   },
@@ -1358,17 +1358,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '偏',
         furigana: 'ヘン',
-        meaningEn: 'biased', meaning: 'biased'
+        meaning: 'biased'
       },
       {
         word: '偏',
         furigana: 'ヘン',
-        meaningEn: 'inclining', meaning: 'inclining'
+        meaning: 'inclining'
       },
       {
         word: '偏',
         furigana: 'ヘン',
-        meaningEn: 'left-side radical', meaning: 'left-side radical'
+        meaning: 'left-side radical'
       },
     ],
   },
@@ -1382,17 +1382,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '健',
         furigana: 'ケン',
-        meaningEn: 'health', meaning: 'health'
+        meaning: 'health'
       },
       {
         word: '健',
         furigana: 'ケン',
-        meaningEn: 'healthy', meaning: 'healthy'
+        meaning: 'healthy'
       },
       {
         word: '健',
         furigana: 'ケン',
-        meaningEn: 'persistence', meaning: 'persistence'
+        meaning: 'persistence'
       },
     ],
   },
@@ -1406,12 +1406,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '偲',
         furigana: 'サイ',
-        meaningEn: 'recollect', meaning: 'recollect'
+        meaning: 'recollect'
       },
       {
         word: '偲',
         furigana: 'サイ',
-        meaningEn: 'remember', meaning: 'remember'
+        meaning: 'remember'
       },
     ],
   },
@@ -1424,7 +1424,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '偵',
         furigana: 'テイ',
-        meaningEn: 'spy', meaning: 'spy'
+        meaning: 'spy'
       },
     ],
   },
@@ -1438,17 +1438,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '偽',
         furigana: 'カ',
-        meaningEn: 'counterfeit', meaning: 'counterfeit'
+        meaning: 'counterfeit'
       },
       {
         word: '偽',
         furigana: 'カ',
-        meaningEn: 'deceive', meaning: 'deceive'
+        meaning: 'deceive'
       },
       {
         word: '偽',
         furigana: 'カ',
-        meaningEn: 'falsehood', meaning: 'falsehood'
+        meaning: 'falsehood'
       },
     ],
   },
@@ -1462,17 +1462,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '傍',
         furigana: 'ボウ',
-        meaningEn: 'besides', meaning: 'besides'
+        meaning: 'besides'
       },
       {
         word: '傍',
         furigana: 'ボウ',
-        meaningEn: 'bystander', meaning: 'bystander'
+        meaning: 'bystander'
       },
       {
         word: '傍',
         furigana: 'ボウ',
-        meaningEn: 'nearby', meaning: 'nearby'
+        meaning: 'nearby'
       },
     ],
   },
@@ -1486,12 +1486,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '傑',
         furigana: 'ケツ',
-        meaningEn: 'excellence', meaning: 'excellence'
+        meaning: 'excellence'
       },
       {
         word: '傑',
         furigana: 'ケツ',
-        meaningEn: 'greatness', meaning: 'greatness'
+        meaning: 'greatness'
       },
     ],
   },
@@ -1505,7 +1505,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '傘',
         furigana: 'サン',
-        meaningEn: 'umbrella', meaning: 'umbrella'
+        meaning: 'umbrella'
       },
     ],
   },
@@ -1519,17 +1519,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '催',
         furigana: 'サイ',
-        meaningEn: 'give (a dinner)', meaning: 'give (a dinner)'
+        meaning: 'give (a dinner)'
       },
       {
         word: '催',
         furigana: 'サイ',
-        meaningEn: 'hold (a meeting)', meaning: 'hold (a meeting)'
+        meaning: 'hold (a meeting)'
       },
       {
         word: '催',
         furigana: 'サイ',
-        meaningEn: 'sponsor', meaning: 'sponsor'
+        meaning: 'sponsor'
       },
     ],
   },
@@ -1542,17 +1542,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '債',
         furigana: 'サイ',
-        meaningEn: 'bond', meaning: 'bond'
+        meaning: 'bond'
       },
       {
         word: '債',
         furigana: 'サイ',
-        meaningEn: 'debt', meaning: 'debt'
+        meaning: 'debt'
       },
       {
         word: '債',
         furigana: 'サイ',
-        meaningEn: 'loan', meaning: 'loan'
+        meaning: 'loan'
       },
     ],
   },
@@ -1566,17 +1566,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '傷',
         furigana: 'ショウ',
-        meaningEn: 'cut', meaning: 'cut'
+        meaning: 'cut'
       },
       {
         word: '傷',
         furigana: 'ショウ',
-        meaningEn: 'gash', meaning: 'gash'
+        meaning: 'gash'
       },
       {
         word: '傷',
         furigana: 'ショウ',
-        meaningEn: 'hurt', meaning: 'hurt'
+        meaning: 'hurt'
       },
     ],
   },
@@ -1590,17 +1590,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '僕',
         furigana: 'ボク',
-        meaningEn: 'I (male)', meaning: 'I (male)'
+        meaning: 'I (male)'
       },
       {
         word: '僕',
         furigana: 'ボク',
-        meaningEn: 'manservant', meaning: 'manservant'
+        meaning: 'manservant'
       },
       {
         word: '僕',
         furigana: 'ボク',
-        meaningEn: 'me', meaning: 'me'
+        meaning: 'me'
       },
     ],
   },
@@ -1613,17 +1613,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '僚',
         furigana: 'リョウ',
-        meaningEn: 'colleague', meaning: 'colleague'
+        meaning: 'colleague'
       },
       {
         word: '僚',
         furigana: 'リョウ',
-        meaningEn: 'companion', meaning: 'companion'
+        meaning: 'companion'
       },
       {
         word: '僚',
         furigana: 'リョウ',
-        meaningEn: 'official', meaning: 'official'
+        meaning: 'official'
       },
     ],
   },
@@ -1636,12 +1636,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '僧',
         furigana: 'ソウ',
-        meaningEn: 'Buddhist priest', meaning: 'Buddhist priest'
+        meaning: 'Buddhist priest'
       },
       {
         word: '僧',
         furigana: 'ソウ',
-        meaningEn: 'monk', meaning: 'monk'
+        meaning: 'monk'
       },
     ],
   },
@@ -1654,17 +1654,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '儀',
         furigana: 'ギ',
-        meaningEn: 'a matter', meaning: 'a matter'
+        meaning: 'a matter'
       },
       {
         word: '儀',
         furigana: 'ギ',
-        meaningEn: 'affair', meaning: 'affair'
+        meaning: 'affair'
       },
       {
         word: '儀',
         furigana: 'ギ',
-        meaningEn: 'case', meaning: 'case'
+        meaning: 'case'
       },
     ],
   },
@@ -1677,7 +1677,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '儒',
         furigana: 'ジュ',
-        meaningEn: 'Confucian', meaning: 'Confucian'
+        meaning: 'Confucian'
       },
     ],
   },
@@ -1691,17 +1691,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '償',
         furigana: 'ショウ',
-        meaningEn: 'make up for', meaning: 'make up for'
+        meaning: 'make up for'
       },
       {
         word: '償',
         furigana: 'ショウ',
-        meaningEn: 'recompense', meaning: 'recompense'
+        meaning: 'recompense'
       },
       {
         word: '償',
         furigana: 'ショウ',
-        meaningEn: 'redeem', meaning: 'redeem'
+        meaning: 'redeem'
       },
     ],
   },
@@ -1715,17 +1715,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '允',
         furigana: 'イン',
-        meaningEn: 'license', meaning: 'license'
+        meaning: 'license'
       },
       {
         word: '允',
         furigana: 'イン',
-        meaningEn: 'permit', meaning: 'permit'
+        meaning: 'permit'
       },
       {
         word: '允',
         furigana: 'イン',
-        meaningEn: 'sincerity', meaning: 'sincerity'
+        meaning: 'sincerity'
       },
     ],
   },
@@ -1739,12 +1739,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '充',
         furigana: 'ジュウ',
-        meaningEn: 'allot', meaning: 'allot'
+        meaning: 'allot'
       },
       {
         word: '充',
         furigana: 'ジュウ',
-        meaningEn: 'fill', meaning: 'fill'
+        meaning: 'fill'
       },
     ],
   },
@@ -1758,17 +1758,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '克',
         furigana: 'コク',
-        meaningEn: 'kindly', meaning: 'kindly'
+        meaning: 'kindly'
       },
       {
         word: '克',
         furigana: 'コク',
-        meaningEn: 'overcome', meaning: 'overcome'
+        meaning: 'overcome'
       },
       {
         word: '克',
         furigana: 'コク',
-        meaningEn: 'skillfully', meaning: 'skillfully'
+        meaning: 'skillfully'
       },
     ],
   },
@@ -1782,12 +1782,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '免',
         furigana: 'メン',
-        meaningEn: 'dismissal', meaning: 'dismissal'
+        meaning: 'dismissal'
       },
       {
         word: '免',
         furigana: 'メン',
-        meaningEn: 'excuse', meaning: 'excuse'
+        meaning: 'excuse'
       },
     ],
   },
@@ -1801,17 +1801,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '典',
         furigana: 'テン',
-        meaningEn: 'ceremony', meaning: 'ceremony'
+        meaning: 'ceremony'
       },
       {
         word: '典',
         furigana: 'テン',
-        meaningEn: 'code', meaning: 'code'
+        meaning: 'code'
       },
       {
         word: '典',
         furigana: 'テン',
-        meaningEn: 'law', meaning: 'law'
+        meaning: 'law'
       },
     ],
   },
@@ -1825,17 +1825,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '兼',
         furigana: 'ケン',
-        meaningEn: 'and', meaning: 'and'
+        meaning: 'and'
       },
       {
         word: '兼',
         furigana: 'ケン',
-        meaningEn: 'beforehand', meaning: 'beforehand'
+        meaning: 'beforehand'
       },
       {
         word: '兼',
         furigana: 'ケン',
-        meaningEn: 'concurrently', meaning: 'concurrently'
+        meaning: 'concurrently'
       },
     ],
   },
@@ -1849,17 +1849,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '冒',
         furigana: 'ボウ',
-        meaningEn: 'assume (a name)', meaning: 'assume (a name)'
+        meaning: 'assume (a name)'
       },
       {
         word: '冒',
         furigana: 'ボウ',
-        meaningEn: 'damage', meaning: 'damage'
+        meaning: 'damage'
       },
       {
         word: '冒',
         furigana: 'ボウ',
-        meaningEn: 'dare', meaning: 'dare'
+        meaning: 'dare'
       },
     ],
   },
@@ -1872,12 +1872,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '冗',
         furigana: 'ジョウ',
-        meaningEn: 'superfluous', meaning: 'superfluous'
+        meaning: 'superfluous'
       },
       {
         word: '冗',
         furigana: 'ジョウ',
-        meaningEn: 'uselessness', meaning: 'uselessness'
+        meaning: 'uselessness'
       },
     ],
   },
@@ -1891,17 +1891,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '冠',
         furigana: 'カン',
-        meaningEn: 'best', meaning: 'best'
+        meaning: 'best'
       },
       {
         word: '冠',
         furigana: 'カン',
-        meaningEn: 'crown', meaning: 'crown'
+        meaning: 'crown'
       },
       {
         word: '冠',
         furigana: 'カン',
-        meaningEn: 'peerless', meaning: 'peerless'
+        meaning: 'peerless'
       },
     ],
   },
@@ -1915,17 +1915,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '冴',
         furigana: 'コ',
-        meaningEn: 'be clear', meaning: 'be clear'
+        meaning: 'be clear'
       },
       {
         word: '冴',
         furigana: 'コ',
-        meaningEn: 'cold', meaning: 'cold'
+        meaning: 'cold'
       },
       {
         word: '冴',
         furigana: 'コ',
-        meaningEn: 'serene', meaning: 'serene'
+        meaning: 'serene'
       },
     ],
   },
@@ -1939,12 +1939,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '冶',
         furigana: 'ヤ',
-        meaningEn: 'melting', meaning: 'melting'
+        meaning: 'melting'
       },
       {
         word: '冶',
         furigana: 'ヤ',
-        meaningEn: 'smelting', meaning: 'smelting'
+        meaning: 'smelting'
       },
     ],
   },
@@ -1957,17 +1957,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '准',
         furigana: 'ジュン',
-        meaningEn: 'associate', meaning: 'associate'
+        meaning: 'associate'
       },
       {
         word: '准',
         furigana: 'ジュン',
-        meaningEn: 'quasi-', meaning: 'quasi-'
+        meaning: 'quasi-'
       },
       {
         word: '准',
         furigana: 'ジュン',
-        meaningEn: 'semi-', meaning: 'semi-'
+        meaning: 'semi-'
       },
     ],
   },
@@ -1981,17 +1981,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '凌',
         furigana: 'リョウ',
-        meaningEn: 'defy', meaning: 'defy'
+        meaning: 'defy'
       },
       {
         word: '凌',
         furigana: 'リョウ',
-        meaningEn: 'endure', meaning: 'endure'
+        meaning: 'endure'
       },
       {
         word: '凌',
         furigana: 'リョウ',
-        meaningEn: 'keep (rain)out', meaning: 'keep (rain)out'
+        meaning: 'keep (rain)out'
       },
     ],
   },
@@ -2005,17 +2005,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '凜',
         furigana: 'リン',
-        meaningEn: 'cold', meaning: 'cold'
+        meaning: 'cold'
       },
       {
         word: '凜',
         furigana: 'リン',
-        meaningEn: 'severe', meaning: 'severe'
+        meaning: 'severe'
       },
       {
         word: '凜',
         furigana: 'リン',
-        meaningEn: 'strict', meaning: 'strict'
+        meaning: 'strict'
       },
     ],
   },
@@ -2029,17 +2029,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '凝',
         furigana: 'ギョウ',
-        meaningEn: 'be absorbed in', meaning: 'be absorbed in'
+        meaning: 'be absorbed in'
       },
       {
         word: '凝',
         furigana: 'ギョウ',
-        meaningEn: 'congeal', meaning: 'congeal'
+        meaning: 'congeal'
       },
       {
         word: '凝',
         furigana: 'ギョウ',
-        meaningEn: 'freeze', meaning: 'freeze'
+        meaning: 'freeze'
       },
     ],
   },
@@ -2053,17 +2053,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '凡',
         furigana: 'ハン',
-        meaningEn: 'commonplace', meaning: 'commonplace'
+        meaning: 'commonplace'
       },
       {
         word: '凡',
         furigana: 'ハン',
-        meaningEn: 'mediocre', meaning: 'mediocre'
+        meaning: 'mediocre'
       },
       {
         word: '凡',
         furigana: 'ハン',
-        meaningEn: 'ordinary', meaning: 'ordinary'
+        meaning: 'ordinary'
       },
     ],
   },
@@ -2076,17 +2076,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '凪',
         furigana: 'な.ぐ',
-        meaningEn: '(kokuji)', meaning: '(kokuji)'
+        meaning: '(kokuji)'
       },
       {
         word: '凪',
         furigana: 'な.ぐ',
-        meaningEn: 'calm', meaning: 'calm'
+        meaning: 'calm'
       },
       {
         word: '凪',
         furigana: 'な.ぐ',
-        meaningEn: 'lull', meaning: 'lull'
+        meaning: 'lull'
       },
     ],
   },
@@ -2100,7 +2100,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '凱',
         furigana: 'カイ',
-        meaningEn: 'victory song', meaning: 'victory song'
+        meaning: 'victory song'
       },
     ],
   },
@@ -2113,17 +2113,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '凶',
         furigana: 'キョウ',
-        meaningEn: 'bad luck', meaning: 'bad luck'
+        meaning: 'bad luck'
       },
       {
         word: '凶',
         furigana: 'キョウ',
-        meaningEn: 'disaster', meaning: 'disaster'
+        meaning: 'disaster'
       },
       {
         word: '凶',
         furigana: 'キョウ',
-        meaningEn: 'evil', meaning: 'evil'
+        meaning: 'evil'
       },
     ],
   },
@@ -2137,17 +2137,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '凸',
         furigana: 'トツ',
-        meaningEn: 'beetle brow', meaning: 'beetle brow'
+        meaning: 'beetle brow'
       },
       {
         word: '凸',
         furigana: 'トツ',
-        meaningEn: 'convex', meaning: 'convex'
+        meaning: 'convex'
       },
       {
         word: '凸',
         furigana: 'トツ',
-        meaningEn: 'uneven', meaning: 'uneven'
+        meaning: 'uneven'
       },
     ],
   },
@@ -2161,17 +2161,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '凹',
         furigana: 'オウ',
-        meaningEn: 'concave', meaning: 'concave'
+        meaning: 'concave'
       },
       {
         word: '凹',
         furigana: 'オウ',
-        meaningEn: 'hollow', meaning: 'hollow'
+        meaning: 'hollow'
       },
       {
         word: '凹',
         furigana: 'オウ',
-        meaningEn: 'sunken', meaning: 'sunken'
+        meaning: 'sunken'
       },
     ],
   },
@@ -2185,17 +2185,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '刀',
         furigana: 'トウ',
-        meaningEn: 'knife', meaning: 'knife'
+        meaning: 'knife'
       },
       {
         word: '刀',
         furigana: 'トウ',
-        meaningEn: 'saber', meaning: 'saber'
+        meaning: 'saber'
       },
       {
         word: '刀',
         furigana: 'トウ',
-        meaningEn: 'sword', meaning: 'sword'
+        meaning: 'sword'
       },
     ],
   },
@@ -2209,17 +2209,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '刃',
         furigana: 'ジン',
-        meaningEn: 'blade', meaning: 'blade'
+        meaning: 'blade'
       },
       {
         word: '刃',
         furigana: 'ジン',
-        meaningEn: 'edge', meaning: 'edge'
+        meaning: 'edge'
       },
       {
         word: '刃',
         furigana: 'ジン',
-        meaningEn: 'sword', meaning: 'sword'
+        meaning: 'sword'
       },
     ],
   },
@@ -2233,17 +2233,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '刈',
         furigana: 'カイ',
-        meaningEn: 'clip', meaning: 'clip'
+        meaning: 'clip'
       },
       {
         word: '刈',
         furigana: 'カイ',
-        meaningEn: 'cut', meaning: 'cut'
+        meaning: 'cut'
       },
       {
         word: '刈',
         furigana: 'カイ',
-        meaningEn: 'prune', meaning: 'prune'
+        meaning: 'prune'
       },
     ],
   },
@@ -2256,17 +2256,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '刑',
         furigana: 'ケイ',
-        meaningEn: 'penalty', meaning: 'penalty'
+        meaning: 'penalty'
       },
       {
         word: '刑',
         furigana: 'ケイ',
-        meaningEn: 'punish', meaning: 'punish'
+        meaning: 'punish'
       },
       {
         word: '刑',
         furigana: 'ケイ',
-        meaningEn: 'punishment', meaning: 'punishment'
+        meaning: 'punishment'
       },
     ],
   },
@@ -2280,17 +2280,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '削',
         furigana: 'サク',
-        meaningEn: 'pare', meaning: 'pare'
+        meaning: 'pare'
       },
       {
         word: '削',
         furigana: 'サク',
-        meaningEn: 'plane', meaning: 'plane'
+        meaning: 'plane'
       },
       {
         word: '削',
         furigana: 'サク',
-        meaningEn: 'sharpen', meaning: 'sharpen'
+        meaning: 'sharpen'
       },
     ],
   },
@@ -2303,7 +2303,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '剖',
         furigana: 'ボウ',
-        meaningEn: 'divide', meaning: 'divide'
+        meaning: 'divide'
       },
     ],
   },
@@ -2316,12 +2316,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '剛',
         furigana: 'ゴウ',
-        meaningEn: 'strength', meaning: 'strength'
+        meaning: 'strength'
       },
       {
         word: '剛',
         furigana: 'ゴウ',
-        meaningEn: 'sturdy', meaning: 'sturdy'
+        meaning: 'sturdy'
       },
     ],
   },
@@ -2335,17 +2335,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '剣',
         furigana: 'ケン',
-        meaningEn: 'blade', meaning: 'blade'
+        meaning: 'blade'
       },
       {
         word: '剣',
         furigana: 'ケン',
-        meaningEn: 'clock hand', meaning: 'clock hand'
+        meaning: 'clock hand'
       },
       {
         word: '剣',
         furigana: 'ケン',
-        meaningEn: 'sabre', meaning: 'sabre'
+        meaning: 'sabre'
       },
     ],
   },
@@ -2359,17 +2359,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '剤',
         furigana: 'ザイ',
-        meaningEn: 'dose', meaning: 'dose'
+        meaning: 'dose'
       },
       {
         word: '剤',
         furigana: 'ザイ',
-        meaningEn: 'drug', meaning: 'drug'
+        meaning: 'drug'
       },
       {
         word: '剤',
         furigana: 'ザイ',
-        meaningEn: 'medicine', meaning: 'medicine'
+        meaning: 'medicine'
       },
     ],
   },
@@ -2383,12 +2383,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '剰',
         furigana: 'ジョウ',
-        meaningEn: 'besides', meaning: 'besides'
+        meaning: 'besides'
       },
       {
         word: '剰',
         furigana: 'ジョウ',
-        meaningEn: 'surplus', meaning: 'surplus'
+        meaning: 'surplus'
       },
     ],
   },
@@ -2402,17 +2402,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '創',
         furigana: 'ショウ',
-        meaningEn: 'genesis', meaning: 'genesis'
+        meaning: 'genesis'
       },
       {
         word: '創',
         furigana: 'ショウ',
-        meaningEn: 'hurt', meaning: 'hurt'
+        meaning: 'hurt'
       },
       {
         word: '創',
         furigana: 'ショウ',
-        meaningEn: 'injury', meaning: 'injury'
+        meaning: 'injury'
       },
     ],
   },
@@ -2426,17 +2426,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '功',
         furigana: 'ク',
-        meaningEn: 'achievement', meaning: 'achievement'
+        meaning: 'achievement'
       },
       {
         word: '功',
         furigana: 'ク',
-        meaningEn: 'credit', meaning: 'credit'
+        meaning: 'credit'
       },
       {
         word: '功',
         furigana: 'ク',
-        meaningEn: 'honor', meaning: 'honor'
+        meaning: 'honor'
       },
     ],
   },
@@ -2450,17 +2450,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '劣',
         furigana: 'レツ',
-        meaningEn: 'be inferior to', meaning: 'be inferior to'
+        meaning: 'be inferior to'
       },
       {
         word: '劣',
         furigana: 'レツ',
-        meaningEn: 'be worse', meaning: 'be worse'
+        meaning: 'be worse'
       },
       {
         word: '劣',
         furigana: 'レツ',
-        meaningEn: 'inferiority', meaning: 'inferiority'
+        meaning: 'inferiority'
       },
     ],
   },
@@ -2474,17 +2474,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '励',
         furigana: 'レイ',
-        meaningEn: 'be diligent', meaning: 'be diligent'
+        meaning: 'be diligent'
       },
       {
         word: '励',
         furigana: 'レイ',
-        meaningEn: 'encourage', meaning: 'encourage'
+        meaning: 'encourage'
       },
       {
         word: '励',
         furigana: 'レイ',
-        meaningEn: 'inspire', meaning: 'inspire'
+        meaning: 'inspire'
       },
     ],
   },
@@ -2497,12 +2497,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '劾',
         furigana: 'ガイ',
-        meaningEn: 'censure', meaning: 'censure'
+        meaning: 'censure'
       },
       {
         word: '劾',
         furigana: 'ガイ',
-        meaningEn: 'criminal investigation', meaning: 'criminal investigation'
+        meaning: 'criminal investigation'
       },
     ],
   },
@@ -2516,7 +2516,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '勁',
         furigana: 'ケイ',
-        meaningEn: 'strong', meaning: 'strong'
+        meaning: 'strong'
       },
     ],
   },
@@ -2530,7 +2530,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '勅',
         furigana: 'チョク',
-        meaningEn: 'imperial order', meaning: 'imperial order'
+        meaning: 'imperial order'
       },
     ],
   },
@@ -2543,17 +2543,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '勘',
         furigana: 'カン',
-        meaningEn: 'check', meaning: 'check'
+        meaning: 'check'
       },
       {
         word: '勘',
         furigana: 'カン',
-        meaningEn: 'compare', meaning: 'compare'
+        meaning: 'compare'
       },
       {
         word: '勘',
         furigana: 'カン',
-        meaningEn: 'intuition', meaning: 'intuition'
+        meaning: 'intuition'
       },
     ],
   },
@@ -2567,17 +2567,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '勧',
         furigana: 'カン',
-        meaningEn: 'advise', meaning: 'advise'
+        meaning: 'advise'
       },
       {
         word: '勧',
         furigana: 'カン',
-        meaningEn: 'encourage', meaning: 'encourage'
+        meaning: 'encourage'
       },
       {
         word: '勧',
         furigana: 'カン',
-        meaningEn: 'offer', meaning: 'offer'
+        meaning: 'offer'
       },
     ],
   },
@@ -2591,12 +2591,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '勲',
         furigana: 'クン',
-        meaningEn: 'merit', meaning: 'merit'
+        meaning: 'merit'
       },
       {
         word: '勲',
         furigana: 'クン',
-        meaningEn: 'meritorious deed', meaning: 'meritorious deed'
+        meaning: 'meritorious deed'
       },
     ],
   },
@@ -2609,17 +2609,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '勺',
         furigana: 'シャク',
-        meaningEn: 'dip', meaning: 'dip'
+        meaning: 'dip'
       },
       {
         word: '勺',
         furigana: 'シャク',
-        meaningEn: 'ladle', meaning: 'ladle'
+        meaning: 'ladle'
       },
       {
         word: '勺',
         furigana: 'シャク',
-        meaningEn: 'one tenth of a go', meaning: 'one tenth of a go'
+        meaning: 'one tenth of a go'
       },
     ],
   },
@@ -2632,17 +2632,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '匁',
         furigana: 'め',
-        meaningEn: '(kokuji)', meaning: '(kokuji)'
+        meaning: '(kokuji)'
       },
       {
         word: '匁',
         furigana: 'め',
-        meaningEn: '3.75 grams', meaning: '3.75 grams'
+        meaning: '3.75 grams'
       },
       {
         word: '匁',
         furigana: 'め',
-        meaningEn: 'monme', meaning: 'monme'
+        meaning: 'monme'
       },
     ],
   },
@@ -2656,17 +2656,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '匠',
         furigana: 'ショウ',
-        meaningEn: 'artisan', meaning: 'artisan'
+        meaning: 'artisan'
       },
       {
         word: '匠',
         furigana: 'ショウ',
-        meaningEn: 'carpenter', meaning: 'carpenter'
+        meaning: 'carpenter'
       },
       {
         word: '匠',
         furigana: 'ショウ',
-        meaningEn: 'workman', meaning: 'workman'
+        meaning: 'workman'
       },
     ],
   },
@@ -2680,17 +2680,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '匡',
         furigana: 'オウ',
-        meaningEn: 'assist', meaning: 'assist'
+        meaning: 'assist'
       },
       {
         word: '匡',
         furigana: 'オウ',
-        meaningEn: 'correct', meaning: 'correct'
+        meaning: 'correct'
       },
       {
         word: '匡',
         furigana: 'オウ',
-        meaningEn: 'save', meaning: 'save'
+        meaning: 'save'
       },
     ],
   },
@@ -2704,17 +2704,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '匿',
         furigana: 'トク',
-        meaningEn: 'hide', meaning: 'hide'
+        meaning: 'hide'
       },
       {
         word: '匿',
         furigana: 'トク',
-        meaningEn: 'shelter', meaning: 'shelter'
+        meaning: 'shelter'
       },
       {
         word: '匿',
         furigana: 'トク',
-        meaningEn: 'shield', meaning: 'shield'
+        meaning: 'shield'
       },
     ],
   },
@@ -2728,12 +2728,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '升',
         furigana: 'ショウ',
-        meaningEn: '1.8 liter', meaning: '1.8 liter'
+        meaning: '1.8 liter'
       },
       {
         word: '升',
         furigana: 'ショウ',
-        meaningEn: 'measuring box', meaning: 'measuring box'
+        meaning: 'measuring box'
       },
     ],
   },
@@ -2747,17 +2747,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '卑',
         furigana: 'ヒ',
-        meaningEn: 'base', meaning: 'base'
+        meaning: 'base'
       },
       {
         word: '卑',
         furigana: 'ヒ',
-        meaningEn: 'despise', meaning: 'despise'
+        meaning: 'despise'
       },
       {
         word: '卑',
         furigana: 'ヒ',
-        meaningEn: 'lowly', meaning: 'lowly'
+        meaning: 'lowly'
       },
     ],
   },
@@ -2770,17 +2770,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '卓',
         furigana: 'タク',
-        meaningEn: 'desk', meaning: 'desk'
+        meaning: 'desk'
       },
       {
         word: '卓',
         furigana: 'タク',
-        meaningEn: 'eminent', meaning: 'eminent'
+        meaning: 'eminent'
       },
       {
         word: '卓',
         furigana: 'タク',
-        meaningEn: 'high', meaning: 'high'
+        meaning: 'high'
       },
     ],
   },
@@ -2793,17 +2793,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '博',
         furigana: 'ハク',
-        meaningEn: 'Dr.', meaning: 'Dr.'
+        meaning: 'Dr.'
       },
       {
         word: '博',
         furigana: 'ハク',
-        meaningEn: 'Ph.D.', meaning: 'Ph.D.'
+        meaning: 'Ph.D.'
       },
       {
         word: '博',
         furigana: 'ハク',
-        meaningEn: 'command', meaning: 'command'
+        meaning: 'command'
       },
     ],
   },
@@ -2817,17 +2817,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '卯',
         furigana: 'ボウ',
-        meaningEn: '5-7AM', meaning: '5-7AM'
+        meaning: '5-7AM'
       },
       {
         word: '卯',
         furigana: 'ボウ',
-        meaningEn: 'east', meaning: 'east'
+        meaning: 'east'
       },
       {
         word: '卯',
         furigana: 'ボウ',
-        meaningEn: 'fourth sign of Chinese zodiac', meaning: 'fourth sign of Chinese zodiac'
+        meaning: 'fourth sign of Chinese zodiac'
       },
     ],
   },
@@ -2841,17 +2841,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '即',
         furigana: 'ソク',
-        meaningEn: 'adapt', meaning: 'adapt'
+        meaning: 'adapt'
       },
       {
         word: '即',
         furigana: 'ソク',
-        meaningEn: 'agree', meaning: 'agree'
+        meaning: 'agree'
       },
       {
         word: '即',
         furigana: 'ソク',
-        meaningEn: 'as is', meaning: 'as is'
+        meaning: 'as is'
       },
     ],
   },
@@ -2865,17 +2865,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '却',
         furigana: 'キャク',
-        meaningEn: 'instead', meaning: 'instead'
+        meaning: 'instead'
       },
       {
         word: '却',
         furigana: 'キャク',
-        meaningEn: 'on the contrary', meaning: 'on the contrary'
+        meaning: 'on the contrary'
       },
       {
         word: '却',
         furigana: 'キャク',
-        meaningEn: 'rather', meaning: 'rather'
+        meaning: 'rather'
       },
     ],
   },
@@ -2889,7 +2889,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '卸',
         furigana: 'シャ',
-        meaningEn: 'wholesale', meaning: 'wholesale'
+        meaning: 'wholesale'
       },
     ],
   },
@@ -2902,17 +2902,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '厄',
         furigana: 'ヤク',
-        meaningEn: 'bad luck', meaning: 'bad luck'
+        meaning: 'bad luck'
       },
       {
         word: '厄',
         furigana: 'ヤク',
-        meaningEn: 'disaster', meaning: 'disaster'
+        meaning: 'disaster'
       },
       {
         word: '厄',
         furigana: 'ヤク',
-        meaningEn: 'misfortune', meaning: 'misfortune'
+        meaning: 'misfortune'
       },
     ],
   },
@@ -2925,17 +2925,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '厘',
         furigana: 'リン',
-        meaningEn: '1/10 bu', meaning: '1/10 bu'
+        meaning: '1/10 bu'
       },
       {
         word: '厘',
         furigana: 'リン',
-        meaningEn: '1/10 sen', meaning: '1/10 sen'
+        meaning: '1/10 sen'
       },
       {
         word: '厘',
         furigana: 'リン',
-        meaningEn: 'rin', meaning: 'rin'
+        meaning: 'rin'
       },
     ],
   },
@@ -2949,17 +2949,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '厳',
         furigana: 'ゲン',
-        meaningEn: 'rigidity', meaning: 'rigidity'
+        meaning: 'rigidity'
       },
       {
         word: '厳',
         furigana: 'ゲン',
-        meaningEn: 'severity', meaning: 'severity'
+        meaning: 'severity'
       },
       {
         word: '厳',
         furigana: 'ゲン',
-        meaningEn: 'stern', meaning: 'stern'
+        meaning: 'stern'
       },
     ],
   },
@@ -2973,17 +2973,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '又',
         furigana: 'ユウ',
-        meaningEn: 'furthermore', meaning: 'furthermore'
+        meaning: 'furthermore'
       },
       {
         word: '又',
         furigana: 'ユウ',
-        meaningEn: 'on the other hand', meaning: 'on the other hand'
+        meaning: 'on the other hand'
       },
       {
         word: '又',
         furigana: 'ユウ',
-        meaningEn: 'or again', meaning: 'or again'
+        meaning: 'or again'
       },
     ],
   },
@@ -2997,17 +2997,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '及',
         furigana: 'キュウ',
-        meaningEn: 'cause', meaning: 'cause'
+        meaning: 'cause'
       },
       {
         word: '及',
         furigana: 'キュウ',
-        meaningEn: 'exercise', meaning: 'exercise'
+        meaning: 'exercise'
       },
       {
         word: '及',
         furigana: 'キュウ',
-        meaningEn: 'exert', meaning: 'exert'
+        meaning: 'exert'
       },
     ],
   },
@@ -3020,12 +3020,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '叔',
         furigana: 'シュク',
-        meaningEn: 'uncle', meaning: 'uncle'
+        meaning: 'uncle'
       },
       {
         word: '叔',
         furigana: 'シュク',
-        meaningEn: 'youth', meaning: 'youth'
+        meaning: 'youth'
       },
     ],
   },
@@ -3039,17 +3039,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '叙',
         furigana: 'ジョ',
-        meaningEn: 'confer', meaning: 'confer'
+        meaning: 'confer'
       },
       {
         word: '叙',
         furigana: 'ジョ',
-        meaningEn: 'describe', meaning: 'describe'
+        meaning: 'describe'
       },
       {
         word: '叙',
         furigana: 'ジョ',
-        meaningEn: 'narrate', meaning: 'narrate'
+        meaning: 'narrate'
       },
     ],
   },
@@ -3063,12 +3063,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '叡',
         furigana: 'エイ',
-        meaningEn: 'imperial', meaning: 'imperial'
+        meaning: 'imperial'
       },
       {
         word: '叡',
         furigana: 'エイ',
-        meaningEn: 'intelligence', meaning: 'intelligence'
+        meaning: 'intelligence'
       },
     ],
   },
@@ -3081,17 +3081,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '句',
         furigana: 'ク',
-        meaningEn: 'clause', meaning: 'clause'
+        meaning: 'clause'
       },
       {
         word: '句',
         furigana: 'ク',
-        meaningEn: 'counter for haiku', meaning: 'counter for haiku'
+        meaning: 'counter for haiku'
       },
       {
         word: '句',
         furigana: 'ク',
-        meaningEn: 'paragraph', meaning: 'paragraph'
+        meaning: 'paragraph'
       },
     ],
   },
@@ -3105,17 +3105,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '只',
         furigana: 'シ',
-        meaningEn: 'free', meaning: 'free'
+        meaning: 'free'
       },
       {
         word: '只',
         furigana: 'シ',
-        meaningEn: 'in addition', meaning: 'in addition'
+        meaning: 'in addition'
       },
       {
         word: '只',
         furigana: 'シ',
-        meaningEn: 'only', meaning: 'only'
+        meaning: 'only'
       },
     ],
   },
@@ -3129,12 +3129,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '叶',
         furigana: 'キョウ',
-        meaningEn: 'answer', meaning: 'answer'
+        meaning: 'answer'
       },
       {
         word: '叶',
         furigana: 'キョウ',
-        meaningEn: 'grant', meaning: 'grant'
+        meaning: 'grant'
       },
     ],
   },
@@ -3148,17 +3148,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '司',
         furigana: 'シ',
-        meaningEn: 'administer', meaning: 'administer'
+        meaning: 'administer'
       },
       {
         word: '司',
         furigana: 'シ',
-        meaningEn: 'director', meaning: 'director'
+        meaning: 'director'
       },
       {
         word: '司',
         furigana: 'シ',
-        meaningEn: 'govt office', meaning: 'govt office'
+        meaning: 'govt office'
       },
     ],
   },
@@ -3172,17 +3172,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '吉',
         furigana: 'キチ',
-        meaningEn: 'congratulations', meaning: 'congratulations'
+        meaning: 'congratulations'
       },
       {
         word: '吉',
         furigana: 'キチ',
-        meaningEn: 'good luck', meaning: 'good luck'
+        meaning: 'good luck'
       },
       {
         word: '吉',
         furigana: 'キチ',
-        meaningEn: 'joy', meaning: 'joy'
+        meaning: 'joy'
       },
     ],
   },
@@ -3196,17 +3196,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '后',
         furigana: 'コウ',
-        meaningEn: 'after', meaning: 'after'
+        meaning: 'after'
       },
       {
         word: '后',
         furigana: 'コウ',
-        meaningEn: 'back', meaning: 'back'
+        meaning: 'back'
       },
       {
         word: '后',
         furigana: 'コウ',
-        meaningEn: 'behind', meaning: 'behind'
+        meaning: 'behind'
       },
     ],
   },
@@ -3219,12 +3219,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '吏',
         furigana: 'リ',
-        meaningEn: 'an official', meaning: 'an official'
+        meaning: 'an official'
       },
       {
         word: '吏',
         furigana: 'リ',
-        meaningEn: 'officer', meaning: 'officer'
+        meaning: 'officer'
       },
     ],
   },
@@ -3238,17 +3238,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '吐',
         furigana: 'ト',
-        meaningEn: 'belch', meaning: 'belch'
+        meaning: 'belch'
       },
       {
         word: '吐',
         furigana: 'ト',
-        meaningEn: 'confess', meaning: 'confess'
+        meaning: 'confess'
       },
       {
         word: '吐',
         furigana: 'ト',
-        meaningEn: 'spit', meaning: 'spit'
+        meaning: 'spit'
       },
     ],
   },
@@ -3261,17 +3261,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '吟',
         furigana: 'ギン',
-        meaningEn: 'recital', meaning: 'recital'
+        meaning: 'recital'
       },
       {
         word: '吟',
         furigana: 'ギン',
-        meaningEn: 'singing', meaning: 'singing'
+        meaning: 'singing'
       },
       {
         word: '吟',
         furigana: 'ギン',
-        meaningEn: 'versify', meaning: 'versify'
+        meaning: 'versify'
       },
     ],
   },
@@ -3285,12 +3285,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '呂',
         furigana: 'リョ',
-        meaningEn: 'backbone', meaning: 'backbone'
+        meaning: 'backbone'
       },
       {
         word: '呂',
         furigana: 'リョ',
-        meaningEn: 'spine', meaning: 'spine'
+        meaning: 'spine'
       },
     ],
   },
@@ -3303,17 +3303,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '呈',
         furigana: 'テイ',
-        meaningEn: 'display', meaning: 'display'
+        meaning: 'display'
       },
       {
         word: '呈',
         furigana: 'テイ',
-        meaningEn: 'exhibit', meaning: 'exhibit'
+        meaning: 'exhibit'
       },
       {
         word: '呈',
         furigana: 'テイ',
-        meaningEn: 'offer', meaning: 'offer'
+        meaning: 'offer'
       },
     ],
   },
@@ -3327,17 +3327,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '呉',
         furigana: 'ゴ',
-        meaningEn: 'do something for', meaning: 'do something for'
+        meaning: 'do something for'
       },
       {
         word: '呉',
         furigana: 'ゴ',
-        meaningEn: 'give', meaning: 'give'
+        meaning: 'give'
       },
       {
         word: '呉',
         furigana: 'ゴ',
-        meaningEn: 'kingdom of Wu', meaning: 'kingdom of Wu'
+        meaning: 'kingdom of Wu'
       },
     ],
   },
@@ -3351,17 +3351,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '哀',
         furigana: 'アイ',
-        meaningEn: 'grief', meaning: 'grief'
+        meaning: 'grief'
       },
       {
         word: '哀',
         furigana: 'アイ',
-        meaningEn: 'pathetic', meaning: 'pathetic'
+        meaning: 'pathetic'
       },
       {
         word: '哀',
         furigana: 'アイ',
-        meaningEn: 'pathos', meaning: 'pathos'
+        meaning: 'pathos'
       },
     ],
   },
@@ -3375,17 +3375,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '哉',
         furigana: 'サイ',
-        meaningEn: 'alas', meaning: 'alas'
+        meaning: 'alas'
       },
       {
         word: '哉',
         furigana: 'サイ',
-        meaningEn: 'exclamation mark', meaning: 'exclamation mark'
+        meaning: 'exclamation mark'
       },
       {
         word: '哉',
         furigana: 'サイ',
-        meaningEn: 'how', meaning: 'how'
+        meaning: 'how'
       },
     ],
   },
@@ -3399,12 +3399,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '哲',
         furigana: 'テツ',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
       {
         word: '哲',
         furigana: 'テツ',
-        meaningEn: 'philosophy', meaning: 'philosophy'
+        meaning: 'philosophy'
       },
     ],
   },
@@ -3418,12 +3418,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '唄',
         furigana: 'バイ',
-        meaningEn: 'ballad', meaning: 'ballad'
+        meaning: 'ballad'
       },
       {
         word: '唄',
         furigana: 'バイ',
-        meaningEn: 'song', meaning: 'song'
+        meaning: 'song'
       },
     ],
   },
@@ -3437,17 +3437,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '唆',
         furigana: 'サ',
-        meaningEn: 'instigate', meaning: 'instigate'
+        meaning: 'instigate'
       },
       {
         word: '唆',
         furigana: 'サ',
-        meaningEn: 'promote', meaning: 'promote'
+        meaning: 'promote'
       },
       {
         word: '唆',
         furigana: 'サ',
-        meaningEn: 'seduce', meaning: 'seduce'
+        meaning: 'seduce'
       },
     ],
   },
@@ -3461,7 +3461,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '唇',
         furigana: 'シン',
-        meaningEn: 'lips', meaning: 'lips'
+        meaning: 'lips'
       },
     ],
   },
@@ -3475,17 +3475,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '唯',
         furigana: 'イ',
-        meaningEn: 'merely', meaning: 'merely'
+        meaning: 'merely'
       },
       {
         word: '唯',
         furigana: 'イ',
-        meaningEn: 'only', meaning: 'only'
+        meaning: 'only'
       },
       {
         word: '唯',
         furigana: 'イ',
-        meaningEn: 'simply', meaning: 'simply'
+        meaning: 'simply'
       },
     ],
   },
@@ -3499,17 +3499,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '唱',
         furigana: 'ショウ',
-        meaningEn: 'call upon', meaning: 'call upon'
+        meaning: 'call upon'
       },
       {
         word: '唱',
         furigana: 'ショウ',
-        meaningEn: 'chant', meaning: 'chant'
+        meaning: 'chant'
       },
       {
         word: '唱',
         furigana: 'ショウ',
-        meaningEn: 'recite', meaning: 'recite'
+        meaning: 'recite'
       },
     ],
   },
@@ -3523,12 +3523,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '啄',
         furigana: 'タク',
-        meaningEn: 'peck', meaning: 'peck'
+        meaning: 'peck'
       },
       {
         word: '啄',
         furigana: 'タク',
-        meaningEn: 'pick up', meaning: 'pick up'
+        meaning: 'pick up'
       },
     ],
   },
@@ -3542,17 +3542,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '啓',
         furigana: 'ケイ',
-        meaningEn: 'disclose', meaning: 'disclose'
+        meaning: 'disclose'
       },
       {
         word: '啓',
         furigana: 'ケイ',
-        meaningEn: 'open', meaning: 'open'
+        meaning: 'open'
       },
       {
         word: '啓',
         furigana: 'ケイ',
-        meaningEn: 'say', meaning: 'say'
+        meaning: 'say'
       },
     ],
   },
@@ -3566,17 +3566,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '善',
         furigana: 'ゼン',
-        meaningEn: 'good', meaning: 'good'
+        meaning: 'good'
       },
       {
         word: '善',
         furigana: 'ゼン',
-        meaningEn: 'goodness', meaning: 'goodness'
+        meaning: 'goodness'
       },
       {
         word: '善',
         furigana: 'ゼン',
-        meaningEn: 'virtuous', meaning: 'virtuous'
+        meaning: 'virtuous'
       },
     ],
   },
@@ -3590,17 +3590,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '喚',
         furigana: 'カン',
-        meaningEn: 'call', meaning: 'call'
+        meaning: 'call'
       },
       {
         word: '喚',
         furigana: 'カン',
-        meaningEn: 'cry', meaning: 'cry'
+        meaning: 'cry'
       },
       {
         word: '喚',
         furigana: 'カン',
-        meaningEn: 'scream', meaning: 'scream'
+        meaning: 'scream'
       },
     ],
   },
@@ -3613,12 +3613,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '喝',
         furigana: 'カツ',
-        meaningEn: 'hoarse', meaning: 'hoarse'
+        meaning: 'hoarse'
       },
       {
         word: '喝',
         furigana: 'カツ',
-        meaningEn: 'scold', meaning: 'scold'
+        meaning: 'scold'
       },
     ],
   },
@@ -3632,12 +3632,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '喪',
         furigana: 'ソウ',
-        meaningEn: 'miss', meaning: 'miss'
+        meaning: 'miss'
       },
       {
         word: '喪',
         furigana: 'ソウ',
-        meaningEn: 'mourning', meaning: 'mourning'
+        meaning: 'mourning'
       },
     ],
   },
@@ -3651,12 +3651,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '喬',
         furigana: 'キョウ',
-        meaningEn: 'boasting', meaning: 'boasting'
+        meaning: 'boasting'
       },
       {
         word: '喬',
         furigana: 'キョウ',
-        meaningEn: 'high', meaning: 'high'
+        meaning: 'high'
       },
     ],
   },
@@ -3669,12 +3669,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '嗣',
         furigana: 'シ',
-        meaningEn: 'heir', meaning: 'heir'
+        meaning: 'heir'
       },
       {
         word: '嗣',
         furigana: 'シ',
-        meaningEn: 'succeed', meaning: 'succeed'
+        meaning: 'succeed'
       },
     ],
   },
@@ -3688,17 +3688,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '嘆',
         furigana: 'タン',
-        meaningEn: 'grieve', meaning: 'grieve'
+        meaning: 'grieve'
       },
       {
         word: '嘆',
         furigana: 'タン',
-        meaningEn: 'lament', meaning: 'lament'
+        meaning: 'lament'
       },
       {
         word: '嘆',
         furigana: 'タン',
-        meaningEn: 'moan', meaning: 'moan'
+        meaning: 'moan'
       },
     ],
   },
@@ -3712,17 +3712,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '嘉',
         furigana: 'カ',
-        meaningEn: 'applaud', meaning: 'applaud'
+        meaning: 'applaud'
       },
       {
         word: '嘉',
         furigana: 'カ',
-        meaningEn: 'auspicious', meaning: 'auspicious'
+        meaning: 'auspicious'
       },
       {
         word: '嘉',
         furigana: 'カ',
-        meaningEn: 'esteem', meaning: 'esteem'
+        meaning: 'esteem'
       },
     ],
   },
@@ -3736,17 +3736,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '嘱',
         furigana: 'ショク',
-        meaningEn: 'entrust', meaning: 'entrust'
+        meaning: 'entrust'
       },
       {
         word: '嘱',
         furigana: 'ショク',
-        meaningEn: 'request', meaning: 'request'
+        meaning: 'request'
       },
       {
         word: '嘱',
         furigana: 'ショク',
-        meaningEn: 'send a message', meaning: 'send a message'
+        meaning: 'send a message'
       },
     ],
   },
@@ -3760,17 +3760,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '器',
         furigana: 'キ',
-        meaningEn: 'ability', meaning: 'ability'
+        meaning: 'ability'
       },
       {
         word: '器',
         furigana: 'キ',
-        meaningEn: 'container', meaning: 'container'
+        meaning: 'container'
       },
       {
         word: '器',
         furigana: 'キ',
-        meaningEn: 'implement', meaning: 'implement'
+        meaning: 'implement'
       },
     ],
   },
@@ -3784,17 +3784,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '噴',
         furigana: 'フン',
-        meaningEn: 'emit', meaning: 'emit'
+        meaning: 'emit'
       },
       {
         word: '噴',
         furigana: 'フン',
-        meaningEn: 'erupt', meaning: 'erupt'
+        meaning: 'erupt'
       },
       {
         word: '噴',
         furigana: 'フン',
-        meaningEn: 'flush out', meaning: 'flush out'
+        meaning: 'flush out'
       },
     ],
   },
@@ -3808,17 +3808,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '嚇',
         furigana: 'カク',
-        meaningEn: 'dignity', meaning: 'dignity'
+        meaning: 'dignity'
       },
       {
         word: '嚇',
         furigana: 'カク',
-        meaningEn: 'majesty', meaning: 'majesty'
+        meaning: 'majesty'
       },
       {
         word: '嚇',
         furigana: 'カク',
-        meaningEn: 'menacing', meaning: 'menacing'
+        meaning: 'menacing'
       },
     ],
   },
@@ -3832,17 +3832,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '囚',
         furigana: 'シュウ',
-        meaningEn: 'arrest', meaning: 'arrest'
+        meaning: 'arrest'
       },
       {
         word: '囚',
         furigana: 'シュウ',
-        meaningEn: 'captured', meaning: 'captured'
+        meaning: 'captured'
       },
       {
         word: '囚',
         furigana: 'シュウ',
-        meaningEn: 'catch', meaning: 'catch'
+        meaning: 'catch'
       },
     ],
   },
@@ -3856,17 +3856,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '圏',
         furigana: 'ケン',
-        meaningEn: 'circle', meaning: 'circle'
+        meaning: 'circle'
       },
       {
         word: '圏',
         furigana: 'ケン',
-        meaningEn: 'radius', meaning: 'radius'
+        meaning: 'radius'
       },
       {
         word: '圏',
         furigana: 'ケン',
-        meaningEn: 'range', meaning: 'range'
+        meaning: 'range'
       },
     ],
   },
@@ -3879,17 +3879,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '圭',
         furigana: 'ケ',
-        meaningEn: 'angle', meaning: 'angle'
+        meaning: 'angle'
       },
       {
         word: '圭',
         furigana: 'ケ',
-        meaningEn: 'corner', meaning: 'corner'
+        meaning: 'corner'
       },
       {
         word: '圭',
         furigana: 'ケ',
-        meaningEn: 'edge', meaning: 'edge'
+        meaning: 'edge'
       },
     ],
   },
@@ -3902,12 +3902,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '坑',
         furigana: 'コウ',
-        meaningEn: 'hole', meaning: 'hole'
+        meaning: 'hole'
       },
       {
         word: '坑',
         furigana: 'コウ',
-        meaningEn: 'pit', meaning: 'pit'
+        meaning: 'pit'
       },
     ],
   },
@@ -3921,12 +3921,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '坪',
         furigana: 'ヘイ',
-        meaningEn: 'approx. thirty-six sq ft', meaning: 'approx. thirty-six sq ft'
+        meaning: 'approx. thirty-six sq ft'
       },
       {
         word: '坪',
         furigana: 'ヘイ',
-        meaningEn: 'two-mat area', meaning: 'two-mat area'
+        meaning: 'two-mat area'
       },
     ],
   },
@@ -3940,17 +3940,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '垂',
         furigana: 'スイ',
-        meaningEn: 'droop', meaning: 'droop'
+        meaning: 'droop'
       },
       {
         word: '垂',
         furigana: 'スイ',
-        meaningEn: 'hang', meaning: 'hang'
+        meaning: 'hang'
       },
       {
         word: '垂',
         furigana: 'スイ',
-        meaningEn: 'slouch', meaning: 'slouch'
+        meaning: 'slouch'
       },
     ],
   },
@@ -3964,17 +3964,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '垣',
         furigana: 'エン',
-        meaningEn: 'fence', meaning: 'fence'
+        meaning: 'fence'
       },
       {
         word: '垣',
         furigana: 'エン',
-        meaningEn: 'hedge', meaning: 'hedge'
+        meaning: 'hedge'
       },
       {
         word: '垣',
         furigana: 'エン',
-        meaningEn: 'wall', meaning: 'wall'
+        meaning: 'wall'
       },
     ],
   },
@@ -3988,17 +3988,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '執',
         furigana: 'シツ',
-        meaningEn: 'grasp', meaning: 'grasp'
+        meaning: 'grasp'
       },
       {
         word: '執',
         furigana: 'シツ',
-        meaningEn: 'take hold', meaning: 'take hold'
+        meaning: 'take hold'
       },
       {
         word: '執',
         furigana: 'シツ',
-        meaningEn: 'take to heart', meaning: 'take to heart'
+        meaning: 'take to heart'
       },
     ],
   },
@@ -4012,12 +4012,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '培',
         furigana: 'バイ',
-        meaningEn: 'cultivate', meaning: 'cultivate'
+        meaning: 'cultivate'
       },
       {
         word: '培',
         furigana: 'バイ',
-        meaningEn: 'foster', meaning: 'foster'
+        meaning: 'foster'
       },
     ],
   },
@@ -4031,17 +4031,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '基',
         furigana: 'キ',
-        meaningEn: 'counter for machines', meaning: 'counter for machines'
+        meaning: 'counter for machines'
       },
       {
         word: '基',
         furigana: 'キ',
-        meaningEn: 'foundation', meaning: 'foundation'
+        meaning: 'foundation'
       },
       {
         word: '基',
         furigana: 'キ',
-        meaningEn: 'fundamentals', meaning: 'fundamentals'
+        meaning: 'fundamentals'
       },
     ],
   },
@@ -4055,17 +4055,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '堀',
         furigana: 'クツ',
-        meaningEn: 'canal', meaning: 'canal'
+        meaning: 'canal'
       },
       {
         word: '堀',
         furigana: 'クツ',
-        meaningEn: 'ditch', meaning: 'ditch'
+        meaning: 'ditch'
       },
       {
         word: '堀',
         furigana: 'クツ',
-        meaningEn: 'moat', meaning: 'moat'
+        meaning: 'moat'
       },
     ],
   },
@@ -4079,17 +4079,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '堅',
         furigana: 'ケン',
-        meaningEn: 'hard', meaning: 'hard'
+        meaning: 'hard'
       },
       {
         word: '堅',
         furigana: 'ケン',
-        meaningEn: 'reliable', meaning: 'reliable'
+        meaning: 'reliable'
       },
       {
         word: '堅',
         furigana: 'ケン',
-        meaningEn: 'solid', meaning: 'solid'
+        meaning: 'solid'
       },
     ],
   },
@@ -4103,17 +4103,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '堕',
         furigana: 'ダ',
-        meaningEn: 'degenerate', meaning: 'degenerate'
+        meaning: 'degenerate'
       },
       {
         word: '堕',
         furigana: 'ダ',
-        meaningEn: 'descend to', meaning: 'descend to'
+        meaning: 'descend to'
       },
       {
         word: '堕',
         furigana: 'ダ',
-        meaningEn: 'lapse into', meaning: 'lapse into'
+        meaning: 'lapse into'
       },
     ],
   },
@@ -4127,17 +4127,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '堤',
         furigana: 'テイ',
-        meaningEn: 'bank', meaning: 'bank'
+        meaning: 'bank'
       },
       {
         word: '堤',
         furigana: 'テイ',
-        meaningEn: 'dike', meaning: 'dike'
+        meaning: 'dike'
       },
       {
         word: '堤',
         furigana: 'テイ',
-        meaningEn: 'embankment', meaning: 'embankment'
+        meaning: 'embankment'
       },
     ],
   },
@@ -4151,17 +4151,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '堪',
         furigana: 'カン',
-        meaningEn: 'endure', meaning: 'endure'
+        meaning: 'endure'
       },
       {
         word: '堪',
         furigana: 'カン',
-        meaningEn: 'resist', meaning: 'resist'
+        meaning: 'resist'
       },
       {
         word: '堪',
         furigana: 'カン',
-        meaningEn: 'support', meaning: 'support'
+        meaning: 'support'
       },
     ],
   },
@@ -4174,17 +4174,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '塀',
         furigana: 'ヘイ',
-        meaningEn: '(kokuji)', meaning: '(kokuji)'
+        meaning: '(kokuji)'
       },
       {
         word: '塀',
         furigana: 'ヘイ',
-        meaningEn: 'fence', meaning: 'fence'
+        meaning: 'fence'
       },
       {
         word: '塀',
         furigana: 'ヘイ',
-        meaningEn: 'wall', meaning: 'wall'
+        meaning: 'wall'
       },
     ],
   },
@@ -4198,17 +4198,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '塁',
         furigana: 'スイ',
-        meaningEn: 'base(ball)', meaning: 'base(ball)'
+        meaning: 'base(ball)'
       },
       {
         word: '塁',
         furigana: 'スイ',
-        meaningEn: 'bases', meaning: 'bases'
+        meaning: 'bases'
       },
       {
         word: '塁',
         furigana: 'スイ',
-        meaningEn: 'fort', meaning: 'fort'
+        meaning: 'fort'
       },
     ],
   },
@@ -4222,17 +4222,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '塊',
         furigana: 'カイ',
-        meaningEn: 'chunk', meaning: 'chunk'
+        meaning: 'chunk'
       },
       {
         word: '塊',
         furigana: 'カイ',
-        meaningEn: 'clod', meaning: 'clod'
+        meaning: 'clod'
       },
       {
         word: '塊',
         furigana: 'カイ',
-        meaningEn: 'clot', meaning: 'clot'
+        meaning: 'clot'
       },
     ],
   },
@@ -4246,12 +4246,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '塑',
         furigana: 'ソ',
-        meaningEn: 'model', meaning: 'model'
+        meaning: 'model'
       },
       {
         word: '塑',
         furigana: 'ソ',
-        meaningEn: 'molding', meaning: 'molding'
+        meaning: 'molding'
       },
     ],
   },
@@ -4265,12 +4265,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '塚',
         furigana: 'チョウ',
-        meaningEn: 'hillock', meaning: 'hillock'
+        meaning: 'hillock'
       },
       {
         word: '塚',
         furigana: 'チョウ',
-        meaningEn: 'mound', meaning: 'mound'
+        meaning: 'mound'
       },
     ],
   },
@@ -4283,12 +4283,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '塾',
         furigana: 'ジュク',
-        meaningEn: 'cram school', meaning: 'cram school'
+        meaning: 'cram school'
       },
       {
         word: '塾',
         furigana: 'ジュク',
-        meaningEn: 'private school', meaning: 'private school'
+        meaning: 'private school'
       },
     ],
   },
@@ -4302,12 +4302,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '墓',
         furigana: 'ボ',
-        meaningEn: 'grave', meaning: 'grave'
+        meaning: 'grave'
       },
       {
         word: '墓',
         furigana: 'ボ',
-        meaningEn: 'tomb', meaning: 'tomb'
+        meaning: 'tomb'
       },
     ],
   },
@@ -4321,12 +4321,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '墜',
         furigana: 'ツイ',
-        meaningEn: 'crash', meaning: 'crash'
+        meaning: 'crash'
       },
       {
         word: '墜',
         furigana: 'ツイ',
-        meaningEn: 'fall (down)', meaning: 'fall (down)'
+        meaning: 'fall (down)'
       },
     ],
   },
@@ -4340,17 +4340,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '墨',
         furigana: 'ボク',
-        meaningEn: 'India ink', meaning: 'India ink'
+        meaning: 'India ink'
       },
       {
         word: '墨',
         furigana: 'ボク',
-        meaningEn: 'Mexico', meaning: 'Mexico'
+        meaning: 'Mexico'
       },
       {
         word: '墨',
         furigana: 'ボク',
-        meaningEn: 'black ink', meaning: 'black ink'
+        meaning: 'black ink'
       },
     ],
   },
@@ -4363,12 +4363,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '墳',
         furigana: 'フン',
-        meaningEn: 'mound', meaning: 'mound'
+        meaning: 'mound'
       },
       {
         word: '墳',
         furigana: 'フン',
-        meaningEn: 'tomb', meaning: 'tomb'
+        meaning: 'tomb'
       },
     ],
   },
@@ -4382,12 +4382,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '墾',
         furigana: 'コン',
-        meaningEn: 'ground-breaking', meaning: 'ground-breaking'
+        meaning: 'ground-breaking'
       },
       {
         word: '墾',
         furigana: 'コン',
-        meaningEn: 'open up farmland', meaning: 'open up farmland'
+        meaning: 'open up farmland'
       },
     ],
   },
@@ -4401,17 +4401,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '壁',
         furigana: 'ヘキ',
-        meaningEn: 'fence', meaning: 'fence'
+        meaning: 'fence'
       },
       {
         word: '壁',
         furigana: 'ヘキ',
-        meaningEn: 'lining (stomach)', meaning: 'lining (stomach)'
+        meaning: 'lining (stomach)'
       },
       {
         word: '壁',
         furigana: 'ヘキ',
-        meaningEn: 'wall', meaning: 'wall'
+        meaning: 'wall'
       },
     ],
   },
@@ -4424,17 +4424,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '壇',
         furigana: 'タン',
-        meaningEn: 'podium', meaning: 'podium'
+        meaning: 'podium'
       },
       {
         word: '壇',
         furigana: 'タン',
-        meaningEn: 'rostrum', meaning: 'rostrum'
+        meaning: 'rostrum'
       },
       {
         word: '壇',
         furigana: 'タン',
-        meaningEn: 'stage', meaning: 'stage'
+        meaning: 'stage'
       },
     ],
   },
@@ -4448,17 +4448,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '壊',
         furigana: 'エ',
-        meaningEn: 'break', meaning: 'break'
+        meaning: 'break'
       },
       {
         word: '壊',
         furigana: 'エ',
-        meaningEn: 'demolition', meaning: 'demolition'
+        meaning: 'demolition'
       },
       {
         word: '壊',
         furigana: 'エ',
-        meaningEn: 'destroy', meaning: 'destroy'
+        meaning: 'destroy'
       },
     ],
   },
@@ -4472,17 +4472,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '壌',
         furigana: 'ジョウ',
-        meaningEn: 'earth', meaning: 'earth'
+        meaning: 'earth'
       },
       {
         word: '壌',
         furigana: 'ジョウ',
-        meaningEn: 'lot', meaning: 'lot'
+        meaning: 'lot'
       },
       {
         word: '壌',
         furigana: 'ジョウ',
-        meaningEn: 'soil', meaning: 'soil'
+        meaning: 'soil'
       },
     ],
   },
@@ -4496,17 +4496,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '士',
         furigana: 'シ',
-        meaningEn: 'gentleman', meaning: 'gentleman'
+        meaning: 'gentleman'
       },
       {
         word: '士',
         furigana: 'シ',
-        meaningEn: 'samurai', meaning: 'samurai'
+        meaning: 'samurai'
       },
       {
         word: '士',
         furigana: 'シ',
-        meaningEn: 'samurai radical (no. 33)', meaning: 'samurai radical (no. 33)'
+        meaning: 'samurai radical (no. 33)'
       },
     ],
   },
@@ -4520,17 +4520,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '壮',
         furigana: 'ソウ',
-        meaningEn: 'manhood', meaning: 'manhood'
+        meaning: 'manhood'
       },
       {
         word: '壮',
         furigana: 'ソウ',
-        meaningEn: 'prosperity', meaning: 'prosperity'
+        meaning: 'prosperity'
       },
       {
         word: '壮',
         furigana: 'ソウ',
-        meaningEn: 'robust', meaning: 'robust'
+        meaning: 'robust'
       },
     ],
   },
@@ -4544,7 +4544,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '壱',
         furigana: 'イチ',
-        meaningEn: 'one (in documents)', meaning: 'one (in documents)'
+        meaning: 'one (in documents)'
       },
     ],
   },
@@ -4558,17 +4558,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '奇',
         furigana: 'キ',
-        meaningEn: 'curiosity', meaning: 'curiosity'
+        meaning: 'curiosity'
       },
       {
         word: '奇',
         furigana: 'キ',
-        meaningEn: 'strange', meaning: 'strange'
+        meaning: 'strange'
       },
       {
         word: '奇',
         furigana: 'キ',
-        meaningEn: 'strangeness', meaning: 'strangeness'
+        meaning: 'strangeness'
       },
     ],
   },
@@ -4582,12 +4582,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '奈',
         furigana: 'ダイ',
-        meaningEn: 'Nara', meaning: 'Nara'
+        meaning: 'Nara'
       },
       {
         word: '奈',
         furigana: 'ダイ',
-        meaningEn: 'what?', meaning: 'what?'
+        meaning: 'what?'
       },
     ],
   },
@@ -4601,17 +4601,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '奉',
         furigana: 'ブ',
-        meaningEn: 'dedicate', meaning: 'dedicate'
+        meaning: 'dedicate'
       },
       {
         word: '奉',
         furigana: 'ブ',
-        meaningEn: 'observance', meaning: 'observance'
+        meaning: 'observance'
       },
       {
         word: '奉',
         furigana: 'ブ',
-        meaningEn: 'offer', meaning: 'offer'
+        meaning: 'offer'
       },
     ],
   },
@@ -4624,12 +4624,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '奎',
         furigana: 'キ',
-        meaningEn: 'god of literature', meaning: 'god of literature'
+        meaning: 'god of literature'
       },
       {
         word: '奎',
         furigana: 'キ',
-        meaningEn: 'star', meaning: 'star'
+        meaning: 'star'
       },
     ],
   },
@@ -4643,17 +4643,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '奏',
         furigana: 'ソウ',
-        meaningEn: 'complete', meaning: 'complete'
+        meaning: 'complete'
       },
       {
         word: '奏',
         furigana: 'ソウ',
-        meaningEn: 'play music', meaning: 'play music'
+        meaning: 'play music'
       },
       {
         word: '奏',
         furigana: 'ソウ',
-        meaningEn: 'speak to a ruler', meaning: 'speak to a ruler'
+        meaning: 'speak to a ruler'
       },
     ],
   },
@@ -4667,17 +4667,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '契',
         furigana: 'ケイ',
-        meaningEn: 'pledge', meaning: 'pledge'
+        meaning: 'pledge'
       },
       {
         word: '契',
         furigana: 'ケイ',
-        meaningEn: 'promise', meaning: 'promise'
+        meaning: 'promise'
       },
       {
         word: '契',
         furigana: 'ケイ',
-        meaningEn: 'vow', meaning: 'vow'
+        meaning: 'vow'
       },
     ],
   },
@@ -4691,12 +4691,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '奔',
         furigana: 'ホン',
-        meaningEn: 'bustle', meaning: 'bustle'
+        meaning: 'bustle'
       },
       {
         word: '奔',
         furigana: 'ホン',
-        meaningEn: 'run', meaning: 'run'
+        meaning: 'run'
       },
     ],
   },
@@ -4710,17 +4710,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '奨',
         furigana: 'ショウ',
-        meaningEn: 'encourage', meaning: 'encourage'
+        meaning: 'encourage'
       },
       {
         word: '奨',
         furigana: 'ショウ',
-        meaningEn: 'exhort', meaning: 'exhort'
+        meaning: 'exhort'
       },
       {
         word: '奨',
         furigana: 'ショウ',
-        meaningEn: 'urge', meaning: 'urge'
+        meaning: 'urge'
       },
     ],
   },
@@ -4734,17 +4734,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '奪',
         furigana: 'ダツ',
-        meaningEn: 'dispossess', meaning: 'dispossess'
+        meaning: 'dispossess'
       },
       {
         word: '奪',
         furigana: 'ダツ',
-        meaningEn: 'plunder', meaning: 'plunder'
+        meaning: 'plunder'
       },
       {
         word: '奪',
         furigana: 'ダツ',
-        meaningEn: 'rob', meaning: 'rob'
+        meaning: 'rob'
       },
     ],
   },
@@ -4758,17 +4758,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '奮',
         furigana: 'フン',
-        meaningEn: 'be invigorated', meaning: 'be invigorated'
+        meaning: 'be invigorated'
       },
       {
         word: '奮',
         furigana: 'フン',
-        meaningEn: 'flourish', meaning: 'flourish'
+        meaning: 'flourish'
       },
       {
         word: '奮',
         furigana: 'フン',
-        meaningEn: 'stirred up', meaning: 'stirred up'
+        meaning: 'stirred up'
       },
     ],
   },
@@ -4782,17 +4782,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '奴',
         furigana: 'ド',
-        meaningEn: 'fellow', meaning: 'fellow'
+        meaning: 'fellow'
       },
       {
         word: '奴',
         furigana: 'ド',
-        meaningEn: 'guy', meaning: 'guy'
+        meaning: 'guy'
       },
       {
         word: '奴',
         furigana: 'ド',
-        meaningEn: 'manservant', meaning: 'manservant'
+        meaning: 'manservant'
       },
     ],
   },
@@ -4806,17 +4806,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '如',
         furigana: 'ジョ',
-        meaningEn: 'as if', meaning: 'as if'
+        meaning: 'as if'
       },
       {
         word: '如',
         furigana: 'ジョ',
-        meaningEn: 'best', meaning: 'best'
+        meaning: 'best'
       },
       {
         word: '如',
         furigana: 'ジョ',
-        meaningEn: 'better', meaning: 'better'
+        meaning: 'better'
       },
     ],
   },
@@ -4830,12 +4830,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '妃',
         furigana: 'ヒ',
-        meaningEn: 'princess', meaning: 'princess'
+        meaning: 'princess'
       },
       {
         word: '妃',
         furigana: 'ヒ',
-        meaningEn: 'queen', meaning: 'queen'
+        meaning: 'queen'
       },
     ],
   },
@@ -4849,17 +4849,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '妄',
         furigana: 'ボウ',
-        meaningEn: 'delusion', meaning: 'delusion'
+        meaning: 'delusion'
       },
       {
         word: '妄',
         furigana: 'ボウ',
-        meaningEn: 'reckless', meaning: 'reckless'
+        meaning: 'reckless'
       },
       {
         word: '妄',
         furigana: 'ボウ',
-        meaningEn: 'unnecessarily', meaning: 'unnecessarily'
+        meaning: 'unnecessarily'
       },
     ],
   },
@@ -4873,7 +4873,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '妊',
         furigana: 'ジン',
-        meaningEn: 'pregnancy', meaning: 'pregnancy'
+        meaning: 'pregnancy'
       },
     ],
   },
@@ -4887,17 +4887,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '妙',
         furigana: 'ビョウ',
-        meaningEn: 'charming', meaning: 'charming'
+        meaning: 'charming'
       },
       {
         word: '妙',
         furigana: 'ビョウ',
-        meaningEn: 'delicate', meaning: 'delicate'
+        meaning: 'delicate'
       },
       {
         word: '妙',
         furigana: 'ビョウ',
-        meaningEn: 'excellent', meaning: 'excellent'
+        meaning: 'excellent'
       },
     ],
   },
@@ -4910,17 +4910,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '妥',
         furigana: 'ダ',
-        meaningEn: 'depravity', meaning: 'depravity'
+        meaning: 'depravity'
       },
       {
         word: '妥',
         furigana: 'ダ',
-        meaningEn: 'gentle', meaning: 'gentle'
+        meaning: 'gentle'
       },
       {
         word: '妥',
         furigana: 'ダ',
-        meaningEn: 'peace', meaning: 'peace'
+        meaning: 'peace'
       },
     ],
   },
@@ -4934,17 +4934,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '妨',
         furigana: 'ボウ',
-        meaningEn: 'disturb', meaning: 'disturb'
+        meaning: 'disturb'
       },
       {
         word: '妨',
         furigana: 'ボウ',
-        meaningEn: 'hamper', meaning: 'hamper'
+        meaning: 'hamper'
       },
       {
         word: '妨',
         furigana: 'ボウ',
-        meaningEn: 'obstruct', meaning: 'obstruct'
+        meaning: 'obstruct'
       },
     ],
   },
@@ -4958,7 +4958,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '姫',
         furigana: 'キ',
-        meaningEn: 'princess', meaning: 'princess'
+        meaning: 'princess'
       },
     ],
   },
@@ -4971,12 +4971,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '姻',
         furigana: 'イン',
-        meaningEn: 'marry', meaning: 'marry'
+        meaning: 'marry'
       },
       {
         word: '姻',
         furigana: 'イン',
-        meaningEn: 'matrimony', meaning: 'matrimony'
+        meaning: 'matrimony'
       },
     ],
   },
@@ -4990,17 +4990,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '姿',
         furigana: 'シ',
-        meaningEn: 'figure', meaning: 'figure'
+        meaning: 'figure'
       },
       {
         word: '姿',
         furigana: 'シ',
-        meaningEn: 'form', meaning: 'form'
+        meaning: 'form'
       },
       {
         word: '姿',
         furigana: 'シ',
-        meaningEn: 'shape', meaning: 'shape'
+        meaning: 'shape'
       },
     ],
   },
@@ -5014,17 +5014,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '威',
         furigana: 'イ',
-        meaningEn: 'dignity', meaning: 'dignity'
+        meaning: 'dignity'
       },
       {
         word: '威',
         furigana: 'イ',
-        meaningEn: 'intimidate', meaning: 'intimidate'
+        meaning: 'intimidate'
       },
       {
         word: '威',
         furigana: 'イ',
-        meaningEn: 'majesty', meaning: 'majesty'
+        meaning: 'majesty'
       },
     ],
   },
@@ -5037,12 +5037,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '娠',
         furigana: 'シン',
-        meaningEn: 'pregnancy', meaning: 'pregnancy'
+        meaning: 'pregnancy'
       },
       {
         word: '娠',
         furigana: 'シン',
-        meaningEn: 'with child', meaning: 'with child'
+        meaning: 'with child'
       },
     ],
   },
@@ -5055,12 +5055,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '娯',
         furigana: 'ゴ',
-        meaningEn: 'pleasure', meaning: 'pleasure'
+        meaning: 'pleasure'
       },
       {
         word: '娯',
         furigana: 'ゴ',
-        meaningEn: 'recreation', meaning: 'recreation'
+        meaning: 'recreation'
       },
     ],
   },
@@ -5074,17 +5074,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '婆',
         furigana: 'バ',
-        meaningEn: 'grandma', meaning: 'grandma'
+        meaning: 'grandma'
       },
       {
         word: '婆',
         furigana: 'バ',
-        meaningEn: 'old woman', meaning: 'old woman'
+        meaning: 'old woman'
       },
       {
         word: '婆',
         furigana: 'バ',
-        meaningEn: 'wet nurse', meaning: 'wet nurse'
+        meaning: 'wet nurse'
       },
     ],
   },
@@ -5098,12 +5098,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '婿',
         furigana: 'セイ',
-        meaningEn: 'bridegroom', meaning: 'bridegroom'
+        meaning: 'bridegroom'
       },
       {
         word: '婿',
         furigana: 'セイ',
-        meaningEn: 'son-in-law', meaning: 'son-in-law'
+        meaning: 'son-in-law'
       },
     ],
   },
@@ -5117,12 +5117,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '媒',
         furigana: 'バイ',
-        meaningEn: 'go-between', meaning: 'go-between'
+        meaning: 'go-between'
       },
       {
         word: '媒',
         furigana: 'バイ',
-        meaningEn: 'mediator', meaning: 'mediator'
+        meaning: 'mediator'
       },
     ],
   },
@@ -5136,12 +5136,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '媛',
         furigana: 'エン',
-        meaningEn: 'beautiful woman', meaning: 'beautiful woman'
+        meaning: 'beautiful woman'
       },
       {
         word: '媛',
         furigana: 'エン',
-        meaningEn: 'princess', meaning: 'princess'
+        meaning: 'princess'
       },
     ],
   },
@@ -5155,12 +5155,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '嫁',
         furigana: 'カ',
-        meaningEn: 'bride', meaning: 'bride'
+        meaning: 'bride'
       },
       {
         word: '嫁',
         furigana: 'カ',
-        meaningEn: 'marry into', meaning: 'marry into'
+        meaning: 'marry into'
       },
     ],
   },
@@ -5174,17 +5174,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '嫌',
         furigana: 'ケン',
-        meaningEn: 'detest', meaning: 'detest'
+        meaning: 'detest'
       },
       {
         word: '嫌',
         furigana: 'ケン',
-        meaningEn: 'dislike', meaning: 'dislike'
+        meaning: 'dislike'
       },
       {
         word: '嫌',
         furigana: 'ケン',
-        meaningEn: 'hate', meaning: 'hate'
+        meaning: 'hate'
       },
     ],
   },
@@ -5197,12 +5197,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '嫡',
         furigana: 'チャク',
-        meaningEn: 'direct descent (non-bastard)', meaning: 'direct descent (non-bastard)'
+        meaning: 'direct descent (non-bastard)'
       },
       {
         word: '嫡',
         furigana: 'チャク',
-        meaningEn: 'legitimate wife', meaning: 'legitimate wife'
+        meaning: 'legitimate wife'
       },
     ],
   },
@@ -5216,17 +5216,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '嬉',
         furigana: 'キ',
-        meaningEn: 'glad', meaning: 'glad'
+        meaning: 'glad'
       },
       {
         word: '嬉',
         furigana: 'キ',
-        meaningEn: 'pleased', meaning: 'pleased'
+        meaning: 'pleased'
       },
       {
         word: '嬉',
         furigana: 'キ',
-        meaningEn: 'rejoice', meaning: 'rejoice'
+        meaning: 'rejoice'
       },
     ],
   },
@@ -5240,17 +5240,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '嬢',
         furigana: 'ジョウ',
-        meaningEn: 'Miss', meaning: 'Miss'
+        meaning: 'Miss'
       },
       {
         word: '嬢',
         furigana: 'ジョウ',
-        meaningEn: 'daughter', meaning: 'daughter'
+        meaning: 'daughter'
       },
       {
         word: '嬢',
         furigana: 'ジョウ',
-        meaningEn: 'girl', meaning: 'girl'
+        meaning: 'girl'
       },
     ],
   },
@@ -5264,17 +5264,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '孔',
         furigana: 'ク',
-        meaningEn: 'cavity', meaning: 'cavity'
+        meaning: 'cavity'
       },
       {
         word: '孔',
         furigana: 'ク',
-        meaningEn: 'exceedingly', meaning: 'exceedingly'
+        meaning: 'exceedingly'
       },
       {
         word: '孔',
         furigana: 'ク',
-        meaningEn: 'great', meaning: 'great'
+        meaning: 'great'
       },
     ],
   },
@@ -5288,12 +5288,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '孟',
         furigana: 'ボウ',
-        meaningEn: 'beginning', meaning: 'beginning'
+        meaning: 'beginning'
       },
       {
         word: '孟',
         furigana: 'ボウ',
-        meaningEn: 'chief', meaning: 'chief'
+        meaning: 'chief'
       },
     ],
   },
@@ -5306,12 +5306,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '孤',
         furigana: 'コ',
-        meaningEn: 'alone', meaning: 'alone'
+        meaning: 'alone'
       },
       {
         word: '孤',
         furigana: 'コ',
-        meaningEn: 'orphan', meaning: 'orphan'
+        meaning: 'orphan'
       },
     ],
   },
@@ -5325,12 +5325,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '宏',
         furigana: 'コウ',
-        meaningEn: 'large', meaning: 'large'
+        meaning: 'large'
       },
       {
         word: '宏',
         furigana: 'コウ',
-        meaningEn: 'wide', meaning: 'wide'
+        meaning: 'wide'
       },
     ],
   },
@@ -5344,17 +5344,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '宗',
         furigana: 'シュウ',
-        meaningEn: 'denomination', meaning: 'denomination'
+        meaning: 'denomination'
       },
       {
         word: '宗',
         furigana: 'シュウ',
-        meaningEn: 'essence', meaning: 'essence'
+        meaning: 'essence'
       },
       {
         word: '宗',
         furigana: 'シュウ',
-        meaningEn: 'main point', meaning: 'main point'
+        meaning: 'main point'
       },
     ],
   },
@@ -5367,17 +5367,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '宙',
         furigana: 'チュウ',
-        meaningEn: 'air', meaning: 'air'
+        meaning: 'air'
       },
       {
         word: '宙',
         furigana: 'チュウ',
-        meaningEn: 'interval of time', meaning: 'interval of time'
+        meaning: 'interval of time'
       },
       {
         word: '宙',
         furigana: 'チュウ',
-        meaningEn: 'memorization', meaning: 'memorization'
+        meaning: 'memorization'
       },
     ],
   },
@@ -5391,12 +5391,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '宜',
         furigana: 'ギ',
-        meaningEn: 'best regards', meaning: 'best regards'
+        meaning: 'best regards'
       },
       {
         word: '宜',
         furigana: 'ギ',
-        meaningEn: 'good', meaning: 'good'
+        meaning: 'good'
       },
     ],
   },
@@ -5410,17 +5410,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '宣',
         furigana: 'セン',
-        meaningEn: 'announce', meaning: 'announce'
+        meaning: 'announce'
       },
       {
         word: '宣',
         furigana: 'セン',
-        meaningEn: 'proclaim', meaning: 'proclaim'
+        meaning: 'proclaim'
       },
       {
         word: '宣',
         furigana: 'セン',
-        meaningEn: 'say', meaning: 'say'
+        meaning: 'say'
       },
     ],
   },
@@ -5434,17 +5434,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '宥',
         furigana: 'ユウ',
-        meaningEn: 'calm', meaning: 'calm'
+        meaning: 'calm'
       },
       {
         word: '宥',
         furigana: 'ユウ',
-        meaningEn: 'pacify', meaning: 'pacify'
+        meaning: 'pacify'
       },
       {
         word: '宥',
         furigana: 'ユウ',
-        meaningEn: 'soothe', meaning: 'soothe'
+        meaning: 'soothe'
       },
     ],
   },
@@ -5458,17 +5458,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '宮',
         furigana: 'キュウ',
-        meaningEn: 'Shinto shrine', meaning: 'Shinto shrine'
+        meaning: 'Shinto shrine'
       },
       {
         word: '宮',
         furigana: 'キュウ',
-        meaningEn: 'constellations', meaning: 'constellations'
+        meaning: 'constellations'
       },
       {
         word: '宮',
         furigana: 'キュウ',
-        meaningEn: 'palace', meaning: 'palace'
+        meaning: 'palace'
       },
     ],
   },
@@ -5481,17 +5481,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '宰',
         furigana: 'サイ',
-        meaningEn: 'manager', meaning: 'manager'
+        meaning: 'manager'
       },
       {
         word: '宰',
         furigana: 'サイ',
-        meaningEn: 'rule', meaning: 'rule'
+        meaning: 'rule'
       },
       {
         word: '宰',
         furigana: 'サイ',
-        meaningEn: 'superintend', meaning: 'superintend'
+        meaning: 'superintend'
       },
     ],
   },
@@ -5505,17 +5505,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '宴',
         furigana: 'エン',
-        meaningEn: 'banquet', meaning: 'banquet'
+        meaning: 'banquet'
       },
       {
         word: '宴',
         furigana: 'エン',
-        meaningEn: 'feast', meaning: 'feast'
+        meaning: 'feast'
       },
       {
         word: '宴',
         furigana: 'エン',
-        meaningEn: 'party', meaning: 'party'
+        meaning: 'party'
       },
     ],
   },
@@ -5529,17 +5529,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '宵',
         furigana: 'ショウ',
-        meaningEn: 'early night', meaning: 'early night'
+        meaning: 'early night'
       },
       {
         word: '宵',
         furigana: 'ショウ',
-        meaningEn: 'evening', meaning: 'evening'
+        meaning: 'evening'
       },
       {
         word: '宵',
         furigana: 'ショウ',
-        meaningEn: 'wee hours', meaning: 'wee hours'
+        meaning: 'wee hours'
       },
     ],
   },
@@ -5553,17 +5553,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '寂',
         furigana: 'ジャク',
-        meaningEn: 'death of a priest', meaning: 'death of a priest'
+        meaning: 'death of a priest'
       },
       {
         word: '寂',
         furigana: 'ジャク',
-        meaningEn: 'loneliness', meaning: 'loneliness'
+        meaning: 'loneliness'
       },
       {
         word: '寂',
         furigana: 'ジャク',
-        meaningEn: 'mature', meaning: 'mature'
+        meaning: 'mature'
       },
     ],
   },
@@ -5577,17 +5577,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '寅',
         furigana: 'イン',
-        meaningEn: '3-5AM', meaning: '3-5AM'
+        meaning: '3-5AM'
       },
       {
         word: '寅',
         furigana: 'イン',
-        meaningEn: 'sign of the tiger', meaning: 'sign of the tiger'
+        meaning: 'sign of the tiger'
       },
       {
         word: '寅',
         furigana: 'イン',
-        meaningEn: 'third sign of Chinese zodiac', meaning: 'third sign of Chinese zodiac'
+        meaning: 'third sign of Chinese zodiac'
       },
     ],
   },
@@ -5601,17 +5601,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '密',
         furigana: 'ミツ',
-        meaningEn: 'carefulness', meaning: 'carefulness'
+        meaning: 'carefulness'
       },
       {
         word: '密',
         furigana: 'ミツ',
-        meaningEn: 'density (pop)', meaning: 'density (pop)'
+        meaning: 'density (pop)'
       },
       {
         word: '密',
         furigana: 'ミツ',
-        meaningEn: 'minuteness', meaning: 'minuteness'
+        meaning: 'minuteness'
       },
     ],
   },
@@ -5625,17 +5625,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '寛',
         furigana: 'カン',
-        meaningEn: 'be at ease', meaning: 'be at ease'
+        meaning: 'be at ease'
       },
       {
         word: '寛',
         furigana: 'カン',
-        meaningEn: 'broadminded', meaning: 'broadminded'
+        meaning: 'broadminded'
       },
       {
         word: '寛',
         furigana: 'カン',
-        meaningEn: 'feel at home', meaning: 'feel at home'
+        meaning: 'feel at home'
       },
     ],
   },
@@ -5648,17 +5648,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '寡',
         furigana: 'カ',
-        meaningEn: 'few', meaning: 'few'
+        meaning: 'few'
       },
       {
         word: '寡',
         furigana: 'カ',
-        meaningEn: 'minority', meaning: 'minority'
+        meaning: 'minority'
       },
       {
         word: '寡',
         furigana: 'カ',
-        meaningEn: 'widow', meaning: 'widow'
+        meaning: 'widow'
       },
     ],
   },
@@ -5672,17 +5672,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '寧',
         furigana: 'ネイ',
-        meaningEn: 'peaceful', meaning: 'peaceful'
+        meaning: 'peaceful'
       },
       {
         word: '寧',
         furigana: 'ネイ',
-        meaningEn: 'preferably', meaning: 'preferably'
+        meaning: 'preferably'
       },
       {
         word: '寧',
         furigana: 'ネイ',
-        meaningEn: 'quiet', meaning: 'quiet'
+        meaning: 'quiet'
       },
     ],
   },
@@ -5696,17 +5696,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '審',
         furigana: 'シン',
-        meaningEn: 'hearing', meaning: 'hearing'
+        meaning: 'hearing'
       },
       {
         word: '審',
         furigana: 'シン',
-        meaningEn: 'judge', meaning: 'judge'
+        meaning: 'judge'
       },
       {
         word: '審',
         furigana: 'シン',
-        meaningEn: 'trial', meaning: 'trial'
+        meaning: 'trial'
       },
     ],
   },
@@ -5719,17 +5719,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '寮',
         furigana: 'リョウ',
-        meaningEn: 'dormitory', meaning: 'dormitory'
+        meaning: 'dormitory'
       },
       {
         word: '寮',
         furigana: 'リョウ',
-        meaningEn: 'hostel', meaning: 'hostel'
+        meaning: 'hostel'
       },
       {
         word: '寮',
         furigana: 'リョウ',
-        meaningEn: 'tea pavillion', meaning: 'tea pavillion'
+        meaning: 'tea pavillion'
       },
     ],
   },
@@ -5742,17 +5742,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '寸',
         furigana: 'スン',
-        meaningEn: 'a little', meaning: 'a little'
+        meaning: 'a little'
       },
       {
         word: '寸',
         furigana: 'スン',
-        meaningEn: 'measurement', meaning: 'measurement'
+        meaning: 'measurement'
       },
       {
         word: '寸',
         furigana: 'スン',
-        meaningEn: 'small', meaning: 'small'
+        meaning: 'small'
       },
     ],
   },
@@ -5766,17 +5766,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '射',
         furigana: 'シャ',
-        meaningEn: 'archery', meaning: 'archery'
+        meaning: 'archery'
       },
       {
         word: '射',
         furigana: 'シャ',
-        meaningEn: 'onto', meaning: 'onto'
+        meaning: 'onto'
       },
       {
         word: '射',
         furigana: 'シャ',
-        meaningEn: 'shine into', meaning: 'shine into'
+        meaning: 'shine into'
       },
     ],
   },
@@ -5789,17 +5789,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '尉',
         furigana: 'イ',
-        meaningEn: 'jailer', meaning: 'jailer'
+        meaning: 'jailer'
       },
       {
         word: '尉',
         furigana: 'イ',
-        meaningEn: 'military officer', meaning: 'military officer'
+        meaning: 'military officer'
       },
       {
         word: '尉',
         furigana: 'イ',
-        meaningEn: 'old man', meaning: 'old man'
+        meaning: 'old man'
       },
     ],
   },
@@ -5813,17 +5813,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '尋',
         furigana: 'ジン',
-        meaningEn: 'fathom', meaning: 'fathom'
+        meaning: 'fathom'
       },
       {
         word: '尋',
         furigana: 'ジン',
-        meaningEn: 'inquire', meaning: 'inquire'
+        meaning: 'inquire'
       },
       {
         word: '尋',
         furigana: 'ジン',
-        meaningEn: 'look for', meaning: 'look for'
+        meaning: 'look for'
       },
     ],
   },
@@ -5837,17 +5837,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '尚',
         furigana: 'ショウ',
-        meaningEn: 'esteem', meaning: 'esteem'
+        meaning: 'esteem'
       },
       {
         word: '尚',
         furigana: 'ショウ',
-        meaningEn: 'furthermore', meaning: 'furthermore'
+        meaning: 'furthermore'
       },
       {
         word: '尚',
         furigana: 'ショウ',
-        meaningEn: 'still', meaning: 'still'
+        meaning: 'still'
       },
     ],
   },
@@ -5861,12 +5861,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '尭',
         furigana: 'ギョウ',
-        meaningEn: 'far', meaning: 'far'
+        meaning: 'far'
       },
       {
         word: '尭',
         furigana: 'ギョウ',
-        meaningEn: 'high', meaning: 'high'
+        meaning: 'high'
       },
     ],
   },
@@ -5880,17 +5880,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '就',
         furigana: 'シュウ',
-        meaningEn: 'concerning', meaning: 'concerning'
+        meaning: 'concerning'
       },
       {
         word: '就',
         furigana: 'シュウ',
-        meaningEn: 'depart', meaning: 'depart'
+        meaning: 'depart'
       },
       {
         word: '就',
         furigana: 'シュウ',
-        meaningEn: 'per', meaning: 'per'
+        meaning: 'per'
       },
     ],
   },
@@ -5904,17 +5904,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '尺',
         furigana: 'シャク',
-        meaningEn: 'Japanese foot', meaning: 'Japanese foot'
+        meaning: 'Japanese foot'
       },
       {
         word: '尺',
         furigana: 'シャク',
-        meaningEn: 'measure', meaning: 'measure'
+        meaning: 'measure'
       },
       {
         word: '尺',
         furigana: 'シャク',
-        meaningEn: 'rule', meaning: 'rule'
+        meaning: 'rule'
       },
     ],
   },
@@ -5928,7 +5928,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '尼',
         furigana: 'ニ',
-        meaningEn: 'nun', meaning: 'nun'
+        meaning: 'nun'
       },
     ],
   },
@@ -5942,17 +5942,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '尽',
         furigana: 'サン',
-        meaningEn: 'befriend', meaning: 'befriend'
+        meaning: 'befriend'
       },
       {
         word: '尽',
         furigana: 'サン',
-        meaningEn: 'deplete', meaning: 'deplete'
+        meaning: 'deplete'
       },
       {
         word: '尽',
         furigana: 'サン',
-        meaningEn: 'exhaust', meaning: 'exhaust'
+        meaning: 'exhaust'
       },
     ],
   },
@@ -5966,17 +5966,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '尾',
         furigana: 'ビ',
-        meaningEn: 'counter for fish', meaning: 'counter for fish'
+        meaning: 'counter for fish'
       },
       {
         word: '尾',
         furigana: 'ビ',
-        meaningEn: 'end', meaning: 'end'
+        meaning: 'end'
       },
       {
         word: '尾',
         furigana: 'ビ',
-        meaningEn: 'lower slope of mountain', meaning: 'lower slope of mountain'
+        meaning: 'lower slope of mountain'
       },
     ],
   },
@@ -5990,7 +5990,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '尿',
         furigana: 'ニョウ',
-        meaningEn: 'urine', meaning: 'urine'
+        meaning: 'urine'
       },
     ],
   },
@@ -6004,17 +6004,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '屈',
         furigana: 'クツ',
-        meaningEn: 'bend', meaning: 'bend'
+        meaning: 'bend'
       },
       {
         word: '屈',
         furigana: 'クツ',
-        meaningEn: 'flinch', meaning: 'flinch'
+        meaning: 'flinch'
       },
       {
         word: '屈',
         furigana: 'クツ',
-        meaningEn: 'submit', meaning: 'submit'
+        meaning: 'submit'
       },
     ],
   },
@@ -6027,12 +6027,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '展',
         furigana: 'テン',
-        meaningEn: 'expand', meaning: 'expand'
+        meaning: 'expand'
       },
       {
         word: '展',
         furigana: 'テン',
-        meaningEn: 'unfold', meaning: 'unfold'
+        meaning: 'unfold'
       },
     ],
   },
@@ -6046,17 +6046,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '属',
         furigana: 'ショク',
-        meaningEn: 'affiliated', meaning: 'affiliated'
+        meaning: 'affiliated'
       },
       {
         word: '属',
         furigana: 'ショク',
-        meaningEn: 'belong', meaning: 'belong'
+        meaning: 'belong'
       },
       {
         word: '属',
         furigana: 'ショク',
-        meaningEn: 'genus', meaning: 'genus'
+        meaning: 'genus'
       },
     ],
   },
@@ -6070,17 +6070,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '履',
         furigana: 'リ',
-        meaningEn: 'boots', meaning: 'boots'
+        meaning: 'boots'
       },
       {
         word: '履',
         furigana: 'リ',
-        meaningEn: 'complete', meaning: 'complete'
+        meaning: 'complete'
       },
       {
         word: '履',
         furigana: 'リ',
-        meaningEn: 'footgear', meaning: 'footgear'
+        meaning: 'footgear'
       },
     ],
   },
@@ -6094,17 +6094,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '屯',
         furigana: 'トン',
-        meaningEn: 'barracks', meaning: 'barracks'
+        meaning: 'barracks'
       },
       {
         word: '屯',
         furigana: 'トン',
-        meaningEn: 'camp', meaning: 'camp'
+        meaning: 'camp'
       },
       {
         word: '屯',
         furigana: 'トン',
-        meaningEn: 'police station', meaning: 'police station'
+        meaning: 'police station'
       },
     ],
   },
@@ -6117,17 +6117,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '岐',
         furigana: 'キ',
-        meaningEn: 'arena', meaning: 'arena'
+        meaning: 'arena'
       },
       {
         word: '岐',
         furigana: 'キ',
-        meaningEn: 'branch off', meaning: 'branch off'
+        meaning: 'branch off'
       },
       {
         word: '岐',
         furigana: 'キ',
-        meaningEn: 'fork in road', meaning: 'fork in road'
+        meaning: 'fork in road'
       },
     ],
   },
@@ -6141,17 +6141,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '岬',
         furigana: 'コウ',
-        meaningEn: 'cape', meaning: 'cape'
+        meaning: 'cape'
       },
       {
         word: '岬',
         furigana: 'コウ',
-        meaningEn: 'headland', meaning: 'headland'
+        meaning: 'headland'
       },
       {
         word: '岬',
         furigana: 'コウ',
-        meaningEn: 'promontory', meaning: 'promontory'
+        meaning: 'promontory'
       },
     ],
   },
@@ -6165,17 +6165,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '岳',
         furigana: 'ガク',
-        meaningEn: 'mountain', meaning: 'mountain'
+        meaning: 'mountain'
       },
       {
         word: '岳',
         furigana: 'ガク',
-        meaningEn: 'peak', meaning: 'peak'
+        meaning: 'peak'
       },
       {
         word: '岳',
         furigana: 'ガク',
-        meaningEn: 'point', meaning: 'point'
+        meaning: 'point'
       },
     ],
   },
@@ -6188,17 +6188,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '峠',
         furigana: 'とうげ',
-        meaningEn: '(kokuji)', meaning: '(kokuji)'
+        meaning: '(kokuji)'
       },
       {
         word: '峠',
         furigana: 'とうげ',
-        meaningEn: 'climax', meaning: 'climax'
+        meaning: 'climax'
       },
       {
         word: '峠',
         furigana: 'とうげ',
-        meaningEn: 'crest', meaning: 'crest'
+        meaning: 'crest'
       },
     ],
   },
@@ -6212,12 +6212,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '峡',
         furigana: 'キョウ',
-        meaningEn: 'gorge', meaning: 'gorge'
+        meaning: 'gorge'
       },
       {
         word: '峡',
         furigana: 'キョウ',
-        meaningEn: 'ravine', meaning: 'ravine'
+        meaning: 'ravine'
       },
     ],
   },
@@ -6231,12 +6231,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '峰',
         furigana: 'ホウ',
-        meaningEn: 'peak', meaning: 'peak'
+        meaning: 'peak'
       },
       {
         word: '峰',
         furigana: 'ホウ',
-        meaningEn: 'summit', meaning: 'summit'
+        meaning: 'summit'
       },
     ],
   },
@@ -6250,12 +6250,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '峻',
         furigana: 'シュン',
-        meaningEn: 'high', meaning: 'high'
+        meaning: 'high'
       },
       {
         word: '峻',
         furigana: 'シュン',
-        meaningEn: 'steep', meaning: 'steep'
+        meaning: 'steep'
       },
     ],
   },
@@ -6269,17 +6269,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '崇',
         furigana: 'スウ',
-        meaningEn: 'adore', meaning: 'adore'
+        meaning: 'adore'
       },
       {
         word: '崇',
         furigana: 'スウ',
-        meaningEn: 'respect', meaning: 'respect'
+        meaning: 'respect'
       },
       {
         word: '崇',
         furigana: 'スウ',
-        meaningEn: 'revere', meaning: 'revere'
+        meaning: 'revere'
       },
     ],
   },
@@ -6293,17 +6293,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '崎',
         furigana: 'キ',
-        meaningEn: 'cape', meaning: 'cape'
+        meaning: 'cape'
       },
       {
         word: '崎',
         furigana: 'キ',
-        meaningEn: 'promontory', meaning: 'promontory'
+        meaning: 'promontory'
       },
       {
         word: '崎',
         furigana: 'キ',
-        meaningEn: 'spit', meaning: 'spit'
+        meaning: 'spit'
       },
     ],
   },
@@ -6316,7 +6316,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '崚',
         furigana: 'リョウ',
-        meaningEn: 'mountains towering in a row', meaning: 'mountains towering in a row'
+        meaning: 'mountains towering in a row'
       },
     ],
   },
@@ -6330,17 +6330,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '崩',
         furigana: 'ホウ',
-        meaningEn: 'crumble', meaning: 'crumble'
+        meaning: 'crumble'
       },
       {
         word: '崩',
         furigana: 'ホウ',
-        meaningEn: 'demolish', meaning: 'demolish'
+        meaning: 'demolish'
       },
       {
         word: '崩',
         furigana: 'ホウ',
-        meaningEn: 'die', meaning: 'die'
+        meaning: 'die'
       },
     ],
   },
@@ -6354,12 +6354,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '嵐',
         furigana: 'ラン',
-        meaningEn: 'storm', meaning: 'storm'
+        meaning: 'storm'
       },
       {
         word: '嵐',
         furigana: 'ラン',
-        meaningEn: 'tempest', meaning: 'tempest'
+        meaning: 'tempest'
       },
     ],
   },
@@ -6373,17 +6373,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '嵩',
         furigana: 'シュウ',
-        meaningEn: 'be aggravated', meaning: 'be aggravated'
+        meaning: 'be aggravated'
       },
       {
         word: '嵩',
         furigana: 'シュウ',
-        meaningEn: 'grow bulky', meaning: 'grow bulky'
+        meaning: 'grow bulky'
       },
       {
         word: '嵩',
         furigana: 'シュウ',
-        meaningEn: 'grow worse', meaning: 'grow worse'
+        meaning: 'grow worse'
       },
     ],
   },
@@ -6396,17 +6396,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '嵯',
         furigana: 'サ',
-        meaningEn: 'craggy', meaning: 'craggy'
+        meaning: 'craggy'
       },
       {
         word: '嵯',
         furigana: 'サ',
-        meaningEn: 'rugged', meaning: 'rugged'
+        meaning: 'rugged'
       },
       {
         word: '嵯',
         furigana: 'サ',
-        meaningEn: 'steep', meaning: 'steep'
+        meaning: 'steep'
       },
     ],
   },
@@ -6420,12 +6420,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '嶺',
         furigana: 'リョウ',
-        meaningEn: 'peak', meaning: 'peak'
+        meaning: 'peak'
       },
       {
         word: '嶺',
         furigana: 'リョウ',
-        meaningEn: 'summit', meaning: 'summit'
+        meaning: 'summit'
       },
     ],
   },
@@ -6439,17 +6439,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '巌',
         furigana: 'ガン',
-        meaningEn: 'boulder', meaning: 'boulder'
+        meaning: 'boulder'
       },
       {
         word: '巌',
         furigana: 'ガン',
-        meaningEn: 'crag', meaning: 'crag'
+        meaning: 'crag'
       },
       {
         word: '巌',
         furigana: 'ガン',
-        meaningEn: 'rock', meaning: 'rock'
+        meaning: 'rock'
       },
     ],
   },
@@ -6463,17 +6463,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '巡',
         furigana: 'ジュン',
-        meaningEn: 'circumference', meaning: 'circumference'
+        meaning: 'circumference'
       },
       {
         word: '巡',
         furigana: 'ジュン',
-        meaningEn: 'go around', meaning: 'go around'
+        meaning: 'go around'
       },
       {
         word: '巡',
         furigana: 'ジュン',
-        meaningEn: 'patrol', meaning: 'patrol'
+        meaning: 'patrol'
       },
     ],
   },
@@ -6487,17 +6487,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '巣',
         furigana: 'ソウ',
-        meaningEn: 'cobweb', meaning: 'cobweb'
+        meaning: 'cobweb'
       },
       {
         word: '巣',
         furigana: 'ソウ',
-        meaningEn: 'den', meaning: 'den'
+        meaning: 'den'
       },
       {
         word: '巣',
         furigana: 'ソウ',
-        meaningEn: 'hive', meaning: 'hive'
+        meaning: 'hive'
       },
     ],
   },
@@ -6511,17 +6511,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '巧',
         furigana: 'コウ',
-        meaningEn: 'adroit', meaning: 'adroit'
+        meaning: 'adroit'
       },
       {
         word: '巧',
         furigana: 'コウ',
-        meaningEn: 'ingenuity', meaning: 'ingenuity'
+        meaning: 'ingenuity'
       },
       {
         word: '巧',
         furigana: 'コウ',
-        meaningEn: 'skilled', meaning: 'skilled'
+        meaning: 'skilled'
       },
     ],
   },
@@ -6535,7 +6535,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '己',
         furigana: 'キ',
-        meaningEn: 'self', meaning: 'self'
+        meaning: 'self'
       },
     ],
   },
@@ -6549,17 +6549,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '巳',
         furigana: 'シ',
-        meaningEn: '9-11AM', meaning: '9-11AM'
+        meaning: '9-11AM'
       },
       {
         word: '巳',
         furigana: 'シ',
-        meaningEn: 'sign of the snake or serpent', meaning: 'sign of the snake or serpent'
+        meaning: 'sign of the snake or serpent'
       },
       {
         word: '巳',
         furigana: 'シ',
-        meaningEn: 'sixth sign of Chinese zodiac', meaning: 'sixth sign of Chinese zodiac'
+        meaning: 'sixth sign of Chinese zodiac'
       },
     ],
   },
@@ -6573,7 +6573,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '巴',
         furigana: 'ハ',
-        meaningEn: 'comma-design', meaning: 'comma-design'
+        meaning: 'comma-design'
       },
     ],
   },
@@ -6587,7 +6587,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '巽',
         furigana: 'ソン',
-        meaningEn: 'southeast', meaning: 'southeast'
+        meaning: 'southeast'
       },
     ],
   },
@@ -6601,7 +6601,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '帆',
         furigana: 'ハン',
-        meaningEn: 'sail', meaning: 'sail'
+        meaning: 'sail'
       },
     ],
   },
@@ -6615,17 +6615,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '帝',
         furigana: 'テイ',
-        meaningEn: 'creator', meaning: 'creator'
+        meaning: 'creator'
       },
       {
         word: '帝',
         furigana: 'テイ',
-        meaningEn: 'god', meaning: 'god'
+        meaning: 'god'
       },
       {
         word: '帝',
         furigana: 'テイ',
-        meaningEn: 'sovereign', meaning: 'sovereign'
+        meaning: 'sovereign'
       },
     ],
   },
@@ -6638,17 +6638,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '帥',
         furigana: 'スイ',
-        meaningEn: 'commander', meaning: 'commander'
+        meaning: 'commander'
       },
       {
         word: '帥',
         furigana: 'スイ',
-        meaningEn: 'governor', meaning: 'governor'
+        meaning: 'governor'
       },
       {
         word: '帥',
         furigana: 'スイ',
-        meaningEn: 'leading troops', meaning: 'leading troops'
+        meaning: 'leading troops'
       },
     ],
   },
@@ -6662,17 +6662,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '帳',
         furigana: 'チョウ',
-        meaningEn: 'account book', meaning: 'account book'
+        meaning: 'account book'
       },
       {
         word: '帳',
         furigana: 'チョウ',
-        meaningEn: 'album', meaning: 'album'
+        meaning: 'album'
       },
       {
         word: '帳',
         furigana: 'チョウ',
-        meaningEn: 'curtain', meaning: 'curtain'
+        meaning: 'curtain'
       },
     ],
   },
@@ -6686,17 +6686,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '幕',
         furigana: 'バク',
-        meaningEn: 'act of play', meaning: 'act of play'
+        meaning: 'act of play'
       },
       {
         word: '幕',
         furigana: 'バク',
-        meaningEn: 'bunting', meaning: 'bunting'
+        meaning: 'bunting'
       },
       {
         word: '幕',
         furigana: 'バク',
-        meaningEn: 'curtain', meaning: 'curtain'
+        meaning: 'curtain'
       },
     ],
   },
@@ -6710,17 +6710,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '幣',
         furigana: 'ヘイ',
-        meaningEn: 'Shinto offerings of cloth', meaning: 'Shinto offerings of cloth'
+        meaning: 'Shinto offerings of cloth'
       },
       {
         word: '幣',
         furigana: 'ヘイ',
-        meaningEn: 'bad habit', meaning: 'bad habit'
+        meaning: 'bad habit'
       },
       {
         word: '幣',
         furigana: 'ヘイ',
-        meaningEn: 'cash', meaning: 'cash'
+        meaning: 'cash'
       },
     ],
   },
@@ -6734,17 +6734,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '幹',
         furigana: 'カン',
-        meaningEn: 'capability', meaning: 'capability'
+        meaning: 'capability'
       },
       {
         word: '幹',
         furigana: 'カン',
-        meaningEn: 'main part', meaning: 'main part'
+        meaning: 'main part'
       },
       {
         word: '幹',
         furigana: 'カン',
-        meaningEn: 'talent', meaning: 'talent'
+        meaning: 'talent'
       },
     ],
   },
@@ -6758,17 +6758,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '幻',
         furigana: 'ゲン',
-        meaningEn: 'apparition', meaning: 'apparition'
+        meaning: 'apparition'
       },
       {
         word: '幻',
         furigana: 'ゲン',
-        meaningEn: 'dream', meaning: 'dream'
+        meaning: 'dream'
       },
       {
         word: '幻',
         furigana: 'ゲン',
-        meaningEn: 'illusion', meaning: 'illusion'
+        meaning: 'illusion'
       },
     ],
   },
@@ -6782,17 +6782,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '幽',
         furigana: 'ユウ',
-        meaningEn: 'calm', meaning: 'calm'
+        meaning: 'calm'
       },
       {
         word: '幽',
         furigana: 'ユウ',
-        meaningEn: 'confine to a room', meaning: 'confine to a room'
+        meaning: 'confine to a room'
       },
       {
         word: '幽',
         furigana: 'ユウ',
-        meaningEn: 'dark', meaning: 'dark'
+        meaning: 'dark'
       },
     ],
   },
@@ -6805,17 +6805,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '庄',
         furigana: 'ショウ',
-        meaningEn: 'hamlet', meaning: 'hamlet'
+        meaning: 'hamlet'
       },
       {
         word: '庄',
         furigana: 'ショウ',
-        meaningEn: 'in the country', meaning: 'in the country'
+        meaning: 'in the country'
       },
       {
         word: '庄',
         furigana: 'ショウ',
-        meaningEn: 'level', meaning: 'level'
+        meaning: 'level'
       },
     ],
   },
@@ -6829,17 +6829,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '序',
         furigana: 'ジョ',
-        meaningEn: 'beginning', meaning: 'beginning'
+        meaning: 'beginning'
       },
       {
         word: '序',
         furigana: 'ジョ',
-        meaningEn: 'chance', meaning: 'chance'
+        meaning: 'chance'
       },
       {
         word: '序',
         furigana: 'ジョ',
-        meaningEn: 'incidentally', meaning: 'incidentally'
+        meaning: 'incidentally'
       },
     ],
   },
@@ -6852,17 +6852,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '庶',
         furigana: 'ショ',
-        meaningEn: 'all', meaning: 'all'
+        meaning: 'all'
       },
       {
         word: '庶',
         furigana: 'ショ',
-        meaningEn: 'bastard', meaning: 'bastard'
+        meaning: 'bastard'
       },
       {
         word: '庶',
         furigana: 'ショ',
-        meaningEn: 'commoner', meaning: 'commoner'
+        meaning: 'commoner'
       },
     ],
   },
@@ -6875,12 +6875,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '康',
         furigana: 'コウ',
-        meaningEn: 'ease', meaning: 'ease'
+        meaning: 'ease'
       },
       {
         word: '康',
         furigana: 'コウ',
-        meaningEn: 'peace', meaning: 'peace'
+        meaning: 'peace'
       },
     ],
   },
@@ -6893,17 +6893,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '庸',
         furigana: 'ヨウ',
-        meaningEn: 'commonplace', meaning: 'commonplace'
+        meaning: 'commonplace'
       },
       {
         word: '庸',
         furigana: 'ヨウ',
-        meaningEn: 'employment', meaning: 'employment'
+        meaning: 'employment'
       },
       {
         word: '庸',
         furigana: 'ヨウ',
-        meaningEn: 'ordinary', meaning: 'ordinary'
+        meaning: 'ordinary'
       },
     ],
   },
@@ -6917,17 +6917,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '廃',
         furigana: 'ハイ',
-        meaningEn: 'abandon', meaning: 'abandon'
+        meaning: 'abandon'
       },
       {
         word: '廃',
         furigana: 'ハイ',
-        meaningEn: 'abolish', meaning: 'abolish'
+        meaning: 'abolish'
       },
       {
         word: '廃',
         furigana: 'ハイ',
-        meaningEn: 'cessation', meaning: 'cessation'
+        meaning: 'cessation'
       },
     ],
   },
@@ -6940,17 +6940,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '廉',
         furigana: 'レン',
-        meaningEn: 'account', meaning: 'account'
+        meaning: 'account'
       },
       {
         word: '廉',
         furigana: 'レン',
-        meaningEn: 'bargain', meaning: 'bargain'
+        meaning: 'bargain'
       },
       {
         word: '廉',
         furigana: 'レン',
-        meaningEn: 'charge', meaning: 'charge'
+        meaning: 'charge'
       },
     ],
   },
@@ -6963,17 +6963,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '廊',
         furigana: 'ロウ',
-        meaningEn: 'corridor', meaning: 'corridor'
+        meaning: 'corridor'
       },
       {
         word: '廊',
         furigana: 'ロウ',
-        meaningEn: 'hall', meaning: 'hall'
+        meaning: 'hall'
       },
       {
         word: '廊',
         furigana: 'ロウ',
-        meaningEn: 'tower', meaning: 'tower'
+        meaning: 'tower'
       },
     ],
   },
@@ -6986,17 +6986,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '廷',
         furigana: 'テイ',
-        meaningEn: 'courts', meaning: 'courts'
+        meaning: 'courts'
       },
       {
         word: '廷',
         furigana: 'テイ',
-        meaningEn: 'government office', meaning: 'government office'
+        meaning: 'government office'
       },
       {
         word: '廷',
         furigana: 'テイ',
-        meaningEn: 'imperial court', meaning: 'imperial court'
+        meaning: 'imperial court'
       },
     ],
   },
@@ -7010,17 +7010,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '弁',
         furigana: 'ヘン',
-        meaningEn: 'braid', meaning: 'braid'
+        meaning: 'braid'
       },
       {
         word: '弁',
         furigana: 'ヘン',
-        meaningEn: 'conical cap', meaning: 'conical cap'
+        meaning: 'conical cap'
       },
       {
         word: '弁',
         furigana: 'ヘン',
-        meaningEn: 'dialect', meaning: 'dialect'
+        meaning: 'dialect'
       },
     ],
   },
@@ -7033,17 +7033,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '弊',
         furigana: 'ヘイ',
-        meaningEn: 'abuse', meaning: 'abuse'
+        meaning: 'abuse'
       },
       {
         word: '弊',
         furigana: 'ヘイ',
-        meaningEn: 'breakage', meaning: 'breakage'
+        meaning: 'breakage'
       },
       {
         word: '弊',
         furigana: 'ヘイ',
-        meaningEn: 'evil', meaning: 'evil'
+        meaning: 'evil'
       },
     ],
   },
@@ -7057,17 +7057,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '弐',
         furigana: 'ジ',
-        meaningEn: 'II', meaning: 'II'
+        meaning: 'II'
       },
       {
         word: '弐',
         furigana: 'ジ',
-        meaningEn: 'second', meaning: 'second'
+        meaning: 'second'
       },
       {
         word: '弐',
         furigana: 'ジ',
-        meaningEn: 'two', meaning: 'two'
+        meaning: 'two'
       },
     ],
   },
@@ -7081,12 +7081,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '弓',
         furigana: 'キュウ',
-        meaningEn: 'bow', meaning: 'bow'
+        meaning: 'bow'
       },
       {
         word: '弓',
         furigana: 'キュウ',
-        meaningEn: 'bow (archery, violin)', meaning: 'bow (archery, violin)'
+        meaning: 'bow (archery, violin)'
       },
     ],
   },
@@ -7100,17 +7100,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '弔',
         furigana: 'チョウ',
-        meaningEn: 'condolences', meaning: 'condolences'
+        meaning: 'condolences'
       },
       {
         word: '弔',
         furigana: 'チョウ',
-        meaningEn: 'funeral', meaning: 'funeral'
+        meaning: 'funeral'
       },
       {
         word: '弔',
         furigana: 'チョウ',
-        meaningEn: 'mourning', meaning: 'mourning'
+        meaning: 'mourning'
       },
     ],
   },
@@ -7124,17 +7124,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '弘',
         furigana: 'グ',
-        meaningEn: 'broad', meaning: 'broad'
+        meaning: 'broad'
       },
       {
         word: '弘',
         furigana: 'グ',
-        meaningEn: 'vast', meaning: 'vast'
+        meaning: 'vast'
       },
       {
         word: '弘',
         furigana: 'グ',
-        meaningEn: 'wide', meaning: 'wide'
+        meaning: 'wide'
       },
     ],
   },
@@ -7148,12 +7148,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '弥',
         furigana: 'ビ',
-        meaningEn: 'all the more', meaning: 'all the more'
+        meaning: 'all the more'
       },
       {
         word: '弥',
         furigana: 'ビ',
-        meaningEn: 'increasingly', meaning: 'increasingly'
+        meaning: 'increasingly'
       },
     ],
   },
@@ -7167,17 +7167,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '弦',
         furigana: 'ゲン',
-        meaningEn: 'bowstring', meaning: 'bowstring'
+        meaning: 'bowstring'
       },
       {
         word: '弦',
         furigana: 'ゲン',
-        meaningEn: 'chord', meaning: 'chord'
+        meaning: 'chord'
       },
       {
         word: '弦',
         furigana: 'ゲン',
-        meaningEn: 'hypotenuse', meaning: 'hypotenuse'
+        meaning: 'hypotenuse'
       },
     ],
   },
@@ -7190,17 +7190,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '弧',
         furigana: 'コ',
-        meaningEn: 'arc', meaning: 'arc'
+        meaning: 'arc'
       },
       {
         word: '弧',
         furigana: 'コ',
-        meaningEn: 'arch', meaning: 'arch'
+        meaning: 'arch'
       },
       {
         word: '弧',
         furigana: 'コ',
-        meaningEn: 'bow', meaning: 'bow'
+        meaning: 'bow'
       },
     ],
   },
@@ -7214,17 +7214,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '張',
         furigana: 'チョウ',
-        meaningEn: 'counter for bows & stringed instruments', meaning: 'counter for bows & stringed instruments'
+        meaning: 'counter for bows & stringed instruments'
       },
       {
         word: '張',
         furigana: 'チョウ',
-        meaningEn: 'put up (tent)', meaning: 'put up (tent)'
+        meaning: 'put up (tent)'
       },
       {
         word: '張',
         furigana: 'チョウ',
-        meaningEn: 'spread', meaning: 'spread'
+        meaning: 'spread'
       },
     ],
   },
@@ -7238,17 +7238,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '弾',
         furigana: 'タン',
-        meaningEn: 'bullet', meaning: 'bullet'
+        meaning: 'bullet'
       },
       {
         word: '弾',
         furigana: 'タン',
-        meaningEn: 'flip', meaning: 'flip'
+        meaning: 'flip'
       },
       {
         word: '弾',
         furigana: 'タン',
-        meaningEn: 'snap', meaning: 'snap'
+        meaning: 'snap'
       },
     ],
   },
@@ -7262,7 +7262,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '彗',
         furigana: 'エ',
-        meaningEn: 'comet', meaning: 'comet'
+        meaning: 'comet'
       },
     ],
   },
@@ -7276,12 +7276,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '彦',
         furigana: 'ゲン',
-        meaningEn: 'boy (ancient)', meaning: 'boy (ancient)'
+        meaning: 'boy (ancient)'
       },
       {
         word: '彦',
         furigana: 'ゲン',
-        meaningEn: 'lad', meaning: 'lad'
+        meaning: 'lad'
       },
     ],
   },
@@ -7295,17 +7295,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '彩',
         furigana: 'サイ',
-        meaningEn: 'coloring', meaning: 'coloring'
+        meaning: 'coloring'
       },
       {
         word: '彩',
         furigana: 'サイ',
-        meaningEn: 'makeup', meaning: 'makeup'
+        meaning: 'makeup'
       },
       {
         word: '彩',
         furigana: 'サイ',
-        meaningEn: 'paint', meaning: 'paint'
+        meaning: 'paint'
       },
     ],
   },
@@ -7319,17 +7319,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '彪',
         furigana: 'ヒュウ',
-        meaningEn: 'mottled', meaning: 'mottled'
+        meaning: 'mottled'
       },
       {
         word: '彪',
         furigana: 'ヒュウ',
-        meaningEn: 'patterned', meaning: 'patterned'
+        meaning: 'patterned'
       },
       {
         word: '彪',
         furigana: 'ヒュウ',
-        meaningEn: 'small tiger', meaning: 'small tiger'
+        meaning: 'small tiger'
       },
     ],
   },
@@ -7343,17 +7343,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '彫',
         furigana: 'チョウ',
-        meaningEn: 'carve', meaning: 'carve'
+        meaning: 'carve'
       },
       {
         word: '彫',
         furigana: 'チョウ',
-        meaningEn: 'chisel', meaning: 'chisel'
+        meaning: 'chisel'
       },
       {
         word: '彫',
         furigana: 'チョウ',
-        meaningEn: 'engrave', meaning: 'engrave'
+        meaning: 'engrave'
       },
     ],
   },
@@ -7367,12 +7367,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '彬',
         furigana: 'ヒン',
-        meaningEn: 'gentle', meaning: 'gentle'
+        meaning: 'gentle'
       },
       {
         word: '彬',
         furigana: 'ヒン',
-        meaningEn: 'refined', meaning: 'refined'
+        meaning: 'refined'
       },
     ],
   },
@@ -7385,12 +7385,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '彰',
         furigana: 'ショウ',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
       {
         word: '彰',
         furigana: 'ショウ',
-        meaningEn: 'patent', meaning: 'patent'
+        meaning: 'patent'
       },
     ],
   },
@@ -7404,17 +7404,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '影',
         furigana: 'エイ',
-        meaningEn: 'phantom', meaning: 'phantom'
+        meaning: 'phantom'
       },
       {
         word: '影',
         furigana: 'エイ',
-        meaningEn: 'shadow', meaning: 'shadow'
+        meaning: 'shadow'
       },
       {
         word: '影',
         furigana: 'エイ',
-        meaningEn: 'silhouette', meaning: 'silhouette'
+        meaning: 'silhouette'
       },
     ],
   },
@@ -7428,17 +7428,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '往',
         furigana: 'オウ',
-        meaningEn: 'before', meaning: 'before'
+        meaning: 'before'
       },
       {
         word: '往',
         furigana: 'オウ',
-        meaningEn: 'chase away', meaning: 'chase away'
+        meaning: 'chase away'
       },
       {
         word: '往',
         furigana: 'オウ',
-        meaningEn: 'formerly', meaning: 'formerly'
+        meaning: 'formerly'
       },
     ],
   },
@@ -7451,17 +7451,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '征',
         furigana: 'セイ',
-        meaningEn: 'attack the rebellious', meaning: 'attack the rebellious'
+        meaning: 'attack the rebellious'
       },
       {
         word: '征',
         furigana: 'セイ',
-        meaningEn: 'collect taxes', meaning: 'collect taxes'
+        meaning: 'collect taxes'
       },
       {
         word: '征',
         furigana: 'セイ',
-        meaningEn: 'subjugate', meaning: 'subjugate'
+        meaning: 'subjugate'
       },
     ],
   },
@@ -7475,17 +7475,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '径',
         furigana: 'ケイ',
-        meaningEn: 'diameter', meaning: 'diameter'
+        meaning: 'diameter'
       },
       {
         word: '径',
         furigana: 'ケイ',
-        meaningEn: 'method', meaning: 'method'
+        meaning: 'method'
       },
       {
         word: '径',
         furigana: 'ケイ',
-        meaningEn: 'path', meaning: 'path'
+        meaning: 'path'
       },
     ],
   },
@@ -7499,17 +7499,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '徐',
         furigana: 'ジョ',
-        meaningEn: 'deliberately', meaning: 'deliberately'
+        meaning: 'deliberately'
       },
       {
         word: '徐',
         furigana: 'ジョ',
-        meaningEn: 'gently', meaning: 'gently'
+        meaning: 'gently'
       },
       {
         word: '徐',
         furigana: 'ジョ',
-        meaningEn: 'gradually', meaning: 'gradually'
+        meaning: 'gradually'
       },
     ],
   },
@@ -7523,17 +7523,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '従',
         furigana: 'ショウ',
-        meaningEn: 'accompany', meaning: 'accompany'
+        meaning: 'accompany'
       },
       {
         word: '従',
         furigana: 'ショウ',
-        meaningEn: 'comply', meaning: 'comply'
+        meaning: 'comply'
       },
       {
         word: '従',
         furigana: 'ショウ',
-        meaningEn: 'follow', meaning: 'follow'
+        meaning: 'follow'
       },
     ],
   },
@@ -7546,12 +7546,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '循',
         furigana: 'ジュン',
-        meaningEn: 'follow', meaning: 'follow'
+        meaning: 'follow'
       },
       {
         word: '循',
         furigana: 'ジュン',
-        meaningEn: 'sequential', meaning: 'sequential'
+        meaning: 'sequential'
       },
     ],
   },
@@ -7565,17 +7565,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '微',
         furigana: 'ビ',
-        meaningEn: 'delicate', meaning: 'delicate'
+        meaning: 'delicate'
       },
       {
         word: '微',
         furigana: 'ビ',
-        meaningEn: 'insignificance', meaning: 'insignificance'
+        meaning: 'insignificance'
       },
       {
         word: '微',
         furigana: 'ビ',
-        meaningEn: 'minuteness', meaning: 'minuteness'
+        meaning: 'minuteness'
       },
     ],
   },
@@ -7588,17 +7588,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '徳',
         furigana: 'トク',
-        meaningEn: 'benevolence', meaning: 'benevolence'
+        meaning: 'benevolence'
       },
       {
         word: '徳',
         furigana: 'トク',
-        meaningEn: 'commanding respect', meaning: 'commanding respect'
+        meaning: 'commanding respect'
       },
       {
         word: '徳',
         furigana: 'トク',
-        meaningEn: 'goodness', meaning: 'goodness'
+        meaning: 'goodness'
       },
     ],
   },
@@ -7612,17 +7612,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '徴',
         furigana: 'チ',
-        meaningEn: 'collect', meaning: 'collect'
+        meaning: 'collect'
       },
       {
         word: '徴',
         furigana: 'チ',
-        meaningEn: 'indications', meaning: 'indications'
+        meaning: 'indications'
       },
       {
         word: '徴',
         furigana: 'チ',
-        meaningEn: 'omen', meaning: 'omen'
+        meaning: 'omen'
       },
     ],
   },
@@ -7635,17 +7635,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '徹',
         furigana: 'テツ',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
       {
         word: '徹',
         furigana: 'テツ',
-        meaningEn: 'penetrate', meaning: 'penetrate'
+        meaning: 'penetrate'
       },
       {
         word: '徹',
         furigana: 'テツ',
-        meaningEn: 'pierce', meaning: 'pierce'
+        meaning: 'pierce'
       },
     ],
   },
@@ -7659,17 +7659,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '忌',
         furigana: 'キ',
-        meaningEn: 'abhor', meaning: 'abhor'
+        meaning: 'abhor'
       },
       {
         word: '忌',
         furigana: 'キ',
-        meaningEn: 'death anniversary', meaning: 'death anniversary'
+        meaning: 'death anniversary'
       },
       {
         word: '忌',
         furigana: 'キ',
-        meaningEn: 'detestable', meaning: 'detestable'
+        meaning: 'detestable'
       },
     ],
   },
@@ -7683,17 +7683,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '忍',
         furigana: 'ニン',
-        meaningEn: 'bear', meaning: 'bear'
+        meaning: 'bear'
       },
       {
         word: '忍',
         furigana: 'ニン',
-        meaningEn: 'conceal', meaning: 'conceal'
+        meaning: 'conceal'
       },
       {
         word: '忍',
         furigana: 'ニン',
-        meaningEn: 'endure', meaning: 'endure'
+        meaning: 'endure'
       },
     ],
   },
@@ -7707,17 +7707,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '志',
         furigana: 'シ',
-        meaningEn: 'aspire', meaning: 'aspire'
+        meaning: 'aspire'
       },
       {
         word: '志',
         furigana: 'シ',
-        meaningEn: 'hopes', meaning: 'hopes'
+        meaning: 'hopes'
       },
       {
         word: '志',
         furigana: 'シ',
-        meaningEn: 'intention', meaning: 'intention'
+        meaning: 'intention'
       },
     ],
   },
@@ -7731,17 +7731,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '応',
         furigana: '-ノウ',
-        meaningEn: 'OK', meaning: 'OK'
+        meaning: 'OK'
       },
       {
         word: '応',
         furigana: '-ノウ',
-        meaningEn: 'accept', meaning: 'accept'
+        meaning: 'accept'
       },
       {
         word: '応',
         furigana: '-ノウ',
-        meaningEn: 'answer', meaning: 'answer'
+        meaning: 'answer'
       },
     ],
   },
@@ -7754,17 +7754,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '忠',
         furigana: 'チュウ',
-        meaningEn: 'faithfulness', meaning: 'faithfulness'
+        meaning: 'faithfulness'
       },
       {
         word: '忠',
         furigana: 'チュウ',
-        meaningEn: 'fidelity', meaning: 'fidelity'
+        meaning: 'fidelity'
       },
       {
         word: '忠',
         furigana: 'チュウ',
-        meaningEn: 'loyalty', meaning: 'loyalty'
+        meaning: 'loyalty'
       },
     ],
   },
@@ -7778,7 +7778,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '怜',
         furigana: 'リョウ',
-        meaningEn: 'wise', meaning: 'wise'
+        meaning: 'wise'
       },
     ],
   },
@@ -7792,12 +7792,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '怠',
         furigana: 'タイ',
-        meaningEn: 'laziness', meaning: 'laziness'
+        meaning: 'laziness'
       },
       {
         word: '怠',
         furigana: 'タイ',
-        meaningEn: 'neglect', meaning: 'neglect'
+        meaning: 'neglect'
       },
     ],
   },
@@ -7811,17 +7811,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '怪',
         furigana: 'カイ',
-        meaningEn: 'apparition', meaning: 'apparition'
+        meaning: 'apparition'
       },
       {
         word: '怪',
         furigana: 'カイ',
-        meaningEn: 'mystery', meaning: 'mystery'
+        meaning: 'mystery'
       },
       {
         word: '怪',
         furigana: 'カイ',
-        meaningEn: 'suspicious', meaning: 'suspicious'
+        meaning: 'suspicious'
       },
     ],
   },
@@ -7835,12 +7835,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '恒',
         furigana: 'コウ',
-        meaningEn: 'always', meaning: 'always'
+        meaning: 'always'
       },
       {
         word: '恒',
         furigana: 'コウ',
-        meaningEn: 'constancy', meaning: 'constancy'
+        meaning: 'constancy'
       },
     ],
   },
@@ -7854,17 +7854,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '恕',
         furigana: 'ショ',
-        meaningEn: 'excuse', meaning: 'excuse'
+        meaning: 'excuse'
       },
       {
         word: '恕',
         furigana: 'ショ',
-        meaningEn: 'forgive', meaning: 'forgive'
+        meaning: 'forgive'
       },
       {
         word: '恕',
         furigana: 'ショ',
-        meaningEn: 'tolerate', meaning: 'tolerate'
+        meaning: 'tolerate'
       },
     ],
   },
@@ -7878,17 +7878,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '恨',
         furigana: 'コン',
-        meaningEn: 'bear a grudge', meaning: 'bear a grudge'
+        meaning: 'bear a grudge'
       },
       {
         word: '恨',
         furigana: 'コン',
-        meaningEn: 'hatred', meaning: 'hatred'
+        meaning: 'hatred'
       },
       {
         word: '恨',
         furigana: 'コン',
-        meaningEn: 'malice', meaning: 'malice'
+        meaning: 'malice'
       },
     ],
   },
@@ -7901,17 +7901,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '恩',
         furigana: 'オン',
-        meaningEn: 'benefit', meaning: 'benefit'
+        meaning: 'benefit'
       },
       {
         word: '恩',
         furigana: 'オン',
-        meaningEn: 'blessing', meaning: 'blessing'
+        meaning: 'blessing'
       },
       {
         word: '恩',
         furigana: 'オン',
-        meaningEn: 'favor', meaning: 'favor'
+        meaning: 'favor'
       },
     ],
   },
@@ -7925,12 +7925,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '恭',
         furigana: 'キョウ',
-        meaningEn: 'respect', meaning: 'respect'
+        meaning: 'respect'
       },
       {
         word: '恭',
         furigana: 'キョウ',
-        meaningEn: 'reverent', meaning: 'reverent'
+        meaning: 'reverent'
       },
     ],
   },
@@ -7944,17 +7944,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '恵',
         furigana: 'エ',
-        meaningEn: 'blessing', meaning: 'blessing'
+        meaning: 'blessing'
       },
       {
         word: '恵',
         furigana: 'エ',
-        meaningEn: 'favor', meaning: 'favor'
+        meaning: 'favor'
       },
       {
         word: '恵',
         furigana: 'エ',
-        meaningEn: 'grace', meaning: 'grace'
+        meaning: 'grace'
       },
     ],
   },
@@ -7967,7 +7967,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '悌',
         furigana: 'ダイ',
-        meaningEn: 'serving our elders', meaning: 'serving our elders'
+        meaning: 'serving our elders'
       },
     ],
   },
@@ -7981,12 +7981,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '悔',
         furigana: 'カイ',
-        meaningEn: 'regret', meaning: 'regret'
+        meaning: 'regret'
       },
       {
         word: '悔',
         furigana: 'カイ',
-        meaningEn: 'repent', meaning: 'repent'
+        meaning: 'repent'
       },
     ],
   },
@@ -8000,17 +8000,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '悟',
         furigana: 'ゴ',
-        meaningEn: 'discern', meaning: 'discern'
+        meaning: 'discern'
       },
       {
         word: '悟',
         furigana: 'ゴ',
-        meaningEn: 'enlightenment', meaning: 'enlightenment'
+        meaning: 'enlightenment'
       },
       {
         word: '悟',
         furigana: 'ゴ',
-        meaningEn: 'perceive', meaning: 'perceive'
+        meaning: 'perceive'
       },
     ],
   },
@@ -8023,17 +8023,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '悠',
         furigana: 'ユウ',
-        meaningEn: 'distant', meaning: 'distant'
+        meaning: 'distant'
       },
       {
         word: '悠',
         furigana: 'ユウ',
-        meaningEn: 'leisure', meaning: 'leisure'
+        meaning: 'leisure'
       },
       {
         word: '悠',
         furigana: 'ユウ',
-        meaningEn: 'long time', meaning: 'long time'
+        meaning: 'long time'
       },
     ],
   },
@@ -8047,17 +8047,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '悦',
         furigana: 'エツ',
-        meaningEn: 'ecstasy', meaning: 'ecstasy'
+        meaning: 'ecstasy'
       },
       {
         word: '悦',
         furigana: 'エツ',
-        meaningEn: 'joy', meaning: 'joy'
+        meaning: 'joy'
       },
       {
         word: '悦',
         furigana: 'エツ',
-        meaningEn: 'rapture', meaning: 'rapture'
+        meaning: 'rapture'
       },
     ],
   },
@@ -8071,12 +8071,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '悼',
         furigana: 'トウ',
-        meaningEn: 'grieve over', meaning: 'grieve over'
+        meaning: 'grieve over'
       },
       {
         word: '悼',
         furigana: 'トウ',
-        meaningEn: 'lament', meaning: 'lament'
+        meaning: 'lament'
       },
     ],
   },
@@ -8090,17 +8090,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '惇',
         furigana: 'シュン',
-        meaningEn: 'considerate', meaning: 'considerate'
+        meaning: 'considerate'
       },
       {
         word: '惇',
         furigana: 'シュン',
-        meaningEn: 'kind', meaning: 'kind'
+        meaning: 'kind'
       },
       {
         word: '惇',
         furigana: 'シュン',
-        meaningEn: 'sincere', meaning: 'sincere'
+        meaning: 'sincere'
       },
     ],
   },
@@ -8114,17 +8114,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '惑',
         furigana: 'ワク',
-        meaningEn: 'beguile', meaning: 'beguile'
+        meaning: 'beguile'
       },
       {
         word: '惑',
         furigana: 'ワク',
-        meaningEn: 'delusion', meaning: 'delusion'
+        meaning: 'delusion'
       },
       {
         word: '惑',
         furigana: 'ワク',
-        meaningEn: 'perplexity', meaning: 'perplexity'
+        meaning: 'perplexity'
       },
     ],
   },
@@ -8138,17 +8138,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '惜',
         furigana: 'セキ',
-        meaningEn: 'be sparing of', meaning: 'be sparing of'
+        meaning: 'be sparing of'
       },
       {
         word: '惜',
         furigana: 'セキ',
-        meaningEn: 'frugal', meaning: 'frugal'
+        meaning: 'frugal'
       },
       {
         word: '惜',
         furigana: 'セキ',
-        meaningEn: 'pity', meaning: 'pity'
+        meaning: 'pity'
       },
     ],
   },
@@ -8162,17 +8162,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '惟',
         furigana: 'イ',
-        meaningEn: 'consider', meaning: 'consider'
+        meaning: 'consider'
       },
       {
         word: '惟',
         furigana: 'イ',
-        meaningEn: 'reflect', meaning: 'reflect'
+        meaning: 'reflect'
       },
       {
         word: '惟',
         furigana: 'イ',
-        meaningEn: 'think', meaning: 'think'
+        meaning: 'think'
       },
     ],
   },
@@ -8186,7 +8186,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '惣',
         furigana: 'ソウ',
-        meaningEn: 'all', meaning: 'all'
+        meaning: 'all'
       },
     ],
   },
@@ -8200,17 +8200,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '惨',
         furigana: 'サン',
-        meaningEn: 'cruelty', meaning: 'cruelty'
+        meaning: 'cruelty'
       },
       {
         word: '惨',
         furigana: 'サン',
-        meaningEn: 'disaster', meaning: 'disaster'
+        meaning: 'disaster'
       },
       {
         word: '惨',
         furigana: 'サン',
-        meaningEn: 'harsh', meaning: 'harsh'
+        meaning: 'harsh'
       },
     ],
   },
@@ -8223,12 +8223,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '惰',
         furigana: 'ダ',
-        meaningEn: 'laziness', meaning: 'laziness'
+        meaning: 'laziness'
       },
       {
         word: '惰',
         furigana: 'ダ',
-        meaningEn: 'lazy', meaning: 'lazy'
+        meaning: 'lazy'
       },
     ],
   },
@@ -8242,17 +8242,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '愁',
         furigana: 'シュウ',
-        meaningEn: 'be anxious', meaning: 'be anxious'
+        meaning: 'be anxious'
       },
       {
         word: '愁',
         furigana: 'シュウ',
-        meaningEn: 'distress', meaning: 'distress'
+        meaning: 'distress'
       },
       {
         word: '愁',
         furigana: 'シュウ',
-        meaningEn: 'grieve', meaning: 'grieve'
+        meaning: 'grieve'
       },
     ],
   },
@@ -8266,17 +8266,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '愉',
         furigana: 'ユ',
-        meaningEn: 'happy', meaning: 'happy'
+        meaning: 'happy'
       },
       {
         word: '愉',
         furigana: 'ユ',
-        meaningEn: 'pleasure', meaning: 'pleasure'
+        meaning: 'pleasure'
       },
       {
         word: '愉',
         furigana: 'ユ',
-        meaningEn: 'rejoice', meaning: 'rejoice'
+        meaning: 'rejoice'
       },
     ],
   },
@@ -8290,17 +8290,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '愚',
         furigana: 'グ',
-        meaningEn: 'absurdity', meaning: 'absurdity'
+        meaning: 'absurdity'
       },
       {
         word: '愚',
         furigana: 'グ',
-        meaningEn: 'folly', meaning: 'folly'
+        meaning: 'folly'
       },
       {
         word: '愚',
         furigana: 'グ',
-        meaningEn: 'foolish', meaning: 'foolish'
+        meaning: 'foolish'
       },
     ],
   },
@@ -8314,7 +8314,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '慈',
         furigana: 'ジ',
-        meaningEn: 'mercy', meaning: 'mercy'
+        meaning: 'mercy'
       },
     ],
   },
@@ -8328,17 +8328,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '態',
         furigana: 'タイ',
-        meaningEn: 'appearance', meaning: 'appearance'
+        meaning: 'appearance'
       },
       {
         word: '態',
         furigana: 'タイ',
-        meaningEn: 'attitude', meaning: 'attitude'
+        meaning: 'attitude'
       },
       {
         word: '態',
         furigana: 'タイ',
-        meaningEn: 'condition', meaning: 'condition'
+        meaning: 'condition'
       },
     ],
   },
@@ -8352,17 +8352,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '慎',
         furigana: 'シン',
-        meaningEn: 'be careful', meaning: 'be careful'
+        meaning: 'be careful'
       },
       {
         word: '慎',
         furigana: 'シン',
-        meaningEn: 'discreet', meaning: 'discreet'
+        meaning: 'discreet'
       },
       {
         word: '慎',
         furigana: 'シン',
-        meaningEn: 'humility', meaning: 'humility'
+        meaning: 'humility'
       },
     ],
   },
@@ -8376,17 +8376,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '慕',
         furigana: 'ボ',
-        meaningEn: 'adore', meaning: 'adore'
+        meaning: 'adore'
       },
       {
         word: '慕',
         furigana: 'ボ',
-        meaningEn: 'love dearly', meaning: 'love dearly'
+        meaning: 'love dearly'
       },
       {
         word: '慕',
         furigana: 'ボ',
-        meaningEn: 'pining', meaning: 'pining'
+        meaning: 'pining'
       },
     ],
   },
@@ -8399,12 +8399,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '慢',
         furigana: 'マン',
-        meaningEn: 'laziness', meaning: 'laziness'
+        meaning: 'laziness'
       },
       {
         word: '慢',
         furigana: 'マン',
-        meaningEn: 'ridicule', meaning: 'ridicule'
+        meaning: 'ridicule'
       },
     ],
   },
@@ -8418,7 +8418,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '慧',
         furigana: 'エ',
-        meaningEn: 'wise', meaning: 'wise'
+        meaning: 'wise'
       },
     ],
   },
@@ -8432,17 +8432,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '慨',
         furigana: 'ガイ',
-        meaningEn: 'be sad', meaning: 'be sad'
+        meaning: 'be sad'
       },
       {
         word: '慨',
         furigana: 'ガイ',
-        meaningEn: 'lament', meaning: 'lament'
+        meaning: 'lament'
       },
       {
         word: '慨',
         furigana: 'ガイ',
-        meaningEn: 'rue', meaning: 'rue'
+        meaning: 'rue'
       },
     ],
   },
@@ -8456,17 +8456,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '慮',
         furigana: 'リョ',
-        meaningEn: 'concern', meaning: 'concern'
+        meaning: 'concern'
       },
       {
         word: '慮',
         furigana: 'リョ',
-        meaningEn: 'consider', meaning: 'consider'
+        meaning: 'consider'
       },
       {
         word: '慮',
         furigana: 'リョ',
-        meaningEn: 'deliberate', meaning: 'deliberate'
+        meaning: 'deliberate'
       },
     ],
   },
@@ -8480,17 +8480,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '慰',
         furigana: 'イ',
-        meaningEn: 'amusement', meaning: 'amusement'
+        meaning: 'amusement'
       },
       {
         word: '慰',
         furigana: 'イ',
-        meaningEn: 'cheer', meaning: 'cheer'
+        meaning: 'cheer'
       },
       {
         word: '慰',
         furigana: 'イ',
-        meaningEn: 'comfort', meaning: 'comfort'
+        meaning: 'comfort'
       },
     ],
   },
@@ -8504,17 +8504,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '慶',
         furigana: 'ケイ',
-        meaningEn: 'be happy', meaning: 'be happy'
+        meaning: 'be happy'
       },
       {
         word: '慶',
         furigana: 'ケイ',
-        meaningEn: 'congratulate', meaning: 'congratulate'
+        meaning: 'congratulate'
       },
       {
         word: '慶',
         furigana: 'ケイ',
-        meaningEn: 'jubilation', meaning: 'jubilation'
+        meaning: 'jubilation'
       },
     ],
   },
@@ -8528,17 +8528,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '憂',
         furigana: 'ユウ',
-        meaningEn: 'be anxious', meaning: 'be anxious'
+        meaning: 'be anxious'
       },
       {
         word: '憂',
         furigana: 'ユウ',
-        meaningEn: 'grieve', meaning: 'grieve'
+        meaning: 'grieve'
       },
       {
         word: '憂',
         furigana: 'ユウ',
-        meaningEn: 'lament', meaning: 'lament'
+        meaning: 'lament'
       },
     ],
   },
@@ -8552,17 +8552,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '憤',
         furigana: 'フン',
-        meaningEn: 'anger', meaning: 'anger'
+        meaning: 'anger'
       },
       {
         word: '憤',
         furigana: 'フン',
-        meaningEn: 'aroused', meaning: 'aroused'
+        meaning: 'aroused'
       },
       {
         word: '憤',
         furigana: 'フン',
-        meaningEn: 'be indignant', meaning: 'be indignant'
+        meaning: 'be indignant'
       },
     ],
   },
@@ -8576,17 +8576,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '憧',
         furigana: 'ショウ',
-        meaningEn: 'admire', meaning: 'admire'
+        meaning: 'admire'
       },
       {
         word: '憧',
         furigana: 'ショウ',
-        meaningEn: 'adore', meaning: 'adore'
+        meaning: 'adore'
       },
       {
         word: '憧',
         furigana: 'ショウ',
-        meaningEn: 'aspire to', meaning: 'aspire to'
+        meaning: 'aspire to'
       },
     ],
   },
@@ -8600,17 +8600,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '憩',
         furigana: 'ケイ',
-        meaningEn: 'recess', meaning: 'recess'
+        meaning: 'recess'
       },
       {
         word: '憩',
         furigana: 'ケイ',
-        meaningEn: 'relax', meaning: 'relax'
+        meaning: 'relax'
       },
       {
         word: '憩',
         furigana: 'ケイ',
-        meaningEn: 'repose', meaning: 'repose'
+        meaning: 'repose'
       },
     ],
   },
@@ -8623,12 +8623,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '憲',
         furigana: 'ケン',
-        meaningEn: 'constitution', meaning: 'constitution'
+        meaning: 'constitution'
       },
       {
         word: '憲',
         furigana: 'ケン',
-        meaningEn: 'law', meaning: 'law'
+        meaning: 'law'
       },
     ],
   },
@@ -8641,17 +8641,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '憶',
         furigana: 'オク',
-        meaningEn: 'recollection', meaning: 'recollection'
+        meaning: 'recollection'
       },
       {
         word: '憶',
         furigana: 'オク',
-        meaningEn: 'remember', meaning: 'remember'
+        meaning: 'remember'
       },
       {
         word: '憶',
         furigana: 'オク',
-        meaningEn: 'think', meaning: 'think'
+        meaning: 'think'
       },
     ],
   },
@@ -8665,17 +8665,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '憾',
         furigana: 'カン',
-        meaningEn: 'be sorry', meaning: 'be sorry'
+        meaning: 'be sorry'
       },
       {
         word: '憾',
         furigana: 'カン',
-        meaningEn: 'regret', meaning: 'regret'
+        meaning: 'regret'
       },
       {
         word: '憾',
         furigana: 'カン',
-        meaningEn: 'remorse', meaning: 'remorse'
+        meaning: 'remorse'
       },
     ],
   },
@@ -8689,17 +8689,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '懇',
         furigana: 'コン',
-        meaningEn: 'cordial', meaning: 'cordial'
+        meaning: 'cordial'
       },
       {
         word: '懇',
         furigana: 'コン',
-        meaningEn: 'courteous', meaning: 'courteous'
+        meaning: 'courteous'
       },
       {
         word: '懇',
         furigana: 'コン',
-        meaningEn: 'hospitable', meaning: 'hospitable'
+        meaning: 'hospitable'
       },
     ],
   },
@@ -8713,17 +8713,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '懐',
         furigana: 'エ',
-        meaningEn: 'become attached to', meaning: 'become attached to'
+        meaning: 'become attached to'
       },
       {
         word: '懐',
         furigana: 'エ',
-        meaningEn: 'bosom', meaning: 'bosom'
+        meaning: 'bosom'
       },
       {
         word: '懐',
         furigana: 'エ',
-        meaningEn: 'breast', meaning: 'breast'
+        meaning: 'breast'
       },
     ],
   },
@@ -8737,17 +8737,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '懲',
         furigana: 'チョウ',
-        meaningEn: 'chastise', meaning: 'chastise'
+        meaning: 'chastise'
       },
       {
         word: '懲',
         furigana: 'チョウ',
-        meaningEn: 'discipline', meaning: 'discipline'
+        meaning: 'discipline'
       },
       {
         word: '懲',
         furigana: 'チョウ',
-        meaningEn: 'penal', meaning: 'penal'
+        meaning: 'penal'
       },
     ],
   },
@@ -8761,17 +8761,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '懸',
         furigana: 'ケ',
-        meaningEn: 'consult', meaning: 'consult'
+        meaning: 'consult'
       },
       {
         word: '懸',
         furigana: 'ケ',
-        meaningEn: 'depend', meaning: 'depend'
+        meaning: 'depend'
       },
       {
         word: '懸',
         furigana: 'ケ',
-        meaningEn: 'distant', meaning: 'distant'
+        meaning: 'distant'
       },
     ],
   },
@@ -8785,17 +8785,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '我',
         furigana: 'ガ',
-        meaningEn: 'I', meaning: 'I'
+        meaning: 'I'
       },
       {
         word: '我',
         furigana: 'ガ',
-        meaningEn: 'ego', meaning: 'ego'
+        meaning: 'ego'
       },
       {
         word: '我',
         furigana: 'ガ',
-        meaningEn: 'oneself', meaning: 'oneself'
+        meaning: 'oneself'
       },
     ],
   },
@@ -8809,7 +8809,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '戒',
         furigana: 'カイ',
-        meaningEn: 'commandment', meaning: 'commandment'
+        meaning: 'commandment'
       },
     ],
   },
@@ -8823,17 +8823,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '戯',
         furigana: 'ギ',
-        meaningEn: 'frolic', meaning: 'frolic'
+        meaning: 'frolic'
       },
       {
         word: '戯',
         furigana: 'ギ',
-        meaningEn: 'play', meaning: 'play'
+        meaning: 'play'
       },
       {
         word: '戯',
         furigana: 'ギ',
-        meaningEn: 'sport', meaning: 'sport'
+        meaning: 'sport'
       },
     ],
   },
@@ -8847,17 +8847,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '房',
         furigana: 'ボウ',
-        meaningEn: 'bunch', meaning: 'bunch'
+        meaning: 'bunch'
       },
       {
         word: '房',
         furigana: 'ボウ',
-        meaningEn: 'fringe', meaning: 'fringe'
+        meaning: 'fringe'
       },
       {
         word: '房',
         furigana: 'ボウ',
-        meaningEn: 'house', meaning: 'house'
+        meaning: 'house'
       },
     ],
   },
@@ -8871,12 +8871,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '扇',
         furigana: 'セン',
-        meaningEn: 'fan', meaning: 'fan'
+        meaning: 'fan'
       },
       {
         word: '扇',
         furigana: 'セン',
-        meaningEn: 'folding fan', meaning: 'folding fan'
+        meaning: 'folding fan'
       },
     ],
   },
@@ -8890,17 +8890,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '扉',
         furigana: 'ヒ',
-        meaningEn: 'front door', meaning: 'front door'
+        meaning: 'front door'
       },
       {
         word: '扉',
         furigana: 'ヒ',
-        meaningEn: 'front page', meaning: 'front page'
+        meaning: 'front page'
       },
       {
         word: '扉',
         furigana: 'ヒ',
-        meaningEn: 'title page', meaning: 'title page'
+        meaning: 'title page'
       },
     ],
   },
@@ -8914,17 +8914,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '扱',
         furigana: 'キュウ',
-        meaningEn: 'entertain', meaning: 'entertain'
+        meaning: 'entertain'
       },
       {
         word: '扱',
         furigana: 'キュウ',
-        meaningEn: 'handle', meaning: 'handle'
+        meaning: 'handle'
       },
       {
         word: '扱',
         furigana: 'キュウ',
-        meaningEn: 'strip', meaning: 'strip'
+        meaning: 'strip'
       },
     ],
   },
@@ -8938,17 +8938,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '扶',
         furigana: 'フ',
-        meaningEn: 'aid', meaning: 'aid'
+        meaning: 'aid'
       },
       {
         word: '扶',
         furigana: 'フ',
-        meaningEn: 'assist', meaning: 'assist'
+        meaning: 'assist'
       },
       {
         word: '扶',
         furigana: 'フ',
-        meaningEn: 'help', meaning: 'help'
+        meaning: 'help'
       },
     ],
   },
@@ -8961,12 +8961,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '批',
         furigana: 'ヒ',
-        meaningEn: 'criticism', meaning: 'criticism'
+        meaning: 'criticism'
       },
       {
         word: '批',
         furigana: 'ヒ',
-        meaningEn: 'strike', meaning: 'strike'
+        meaning: 'strike'
       },
     ],
   },
@@ -8979,17 +8979,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '抄',
         furigana: 'ショウ',
-        meaningEn: 'copy', meaning: 'copy'
+        meaning: 'copy'
       },
       {
         word: '抄',
         furigana: 'ショウ',
-        meaningEn: 'extract', meaning: 'extract'
+        meaning: 'extract'
       },
       {
         word: '抄',
         furigana: 'ショウ',
-        meaningEn: 'selection', meaning: 'selection'
+        meaning: 'selection'
       },
     ],
   },
@@ -9002,17 +9002,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '把',
         furigana: 'ハ',
-        meaningEn: 'bunch', meaning: 'bunch'
+        meaning: 'bunch'
       },
       {
         word: '把',
         furigana: 'ハ',
-        meaningEn: 'counter for bundles', meaning: 'counter for bundles'
+        meaning: 'counter for bundles'
       },
       {
         word: '把',
         furigana: 'ハ',
-        meaningEn: 'faggot', meaning: 'faggot'
+        meaning: 'faggot'
       },
     ],
   },
@@ -9026,17 +9026,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '抑',
         furigana: 'ヨク',
-        meaningEn: 'do in spite of', meaning: 'do in spite of'
+        meaning: 'do in spite of'
       },
       {
         word: '抑',
         furigana: 'ヨク',
-        meaningEn: 'in the first place', meaning: 'in the first place'
+        meaning: 'in the first place'
       },
       {
         word: '抑',
         furigana: 'ヨク',
-        meaningEn: 'now', meaning: 'now'
+        meaning: 'now'
       },
     ],
   },
@@ -9050,17 +9050,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '抗',
         furigana: 'コウ',
-        meaningEn: 'confront', meaning: 'confront'
+        meaning: 'confront'
       },
       {
         word: '抗',
         furigana: 'コウ',
-        meaningEn: 'defy', meaning: 'defy'
+        meaning: 'defy'
       },
       {
         word: '抗',
         furigana: 'コウ',
-        meaningEn: 'oppose', meaning: 'oppose'
+        meaning: 'oppose'
       },
     ],
   },
@@ -9074,17 +9074,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '択',
         furigana: 'タク',
-        meaningEn: 'choose', meaning: 'choose'
+        meaning: 'choose'
       },
       {
         word: '択',
         furigana: 'タク',
-        meaningEn: 'elect', meaning: 'elect'
+        meaning: 'elect'
       },
       {
         word: '択',
         furigana: 'タク',
-        meaningEn: 'prefer', meaning: 'prefer'
+        meaning: 'prefer'
       },
     ],
   },
@@ -9097,12 +9097,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '披',
         furigana: 'ヒ',
-        meaningEn: 'expose', meaning: 'expose'
+        meaning: 'expose'
       },
       {
         word: '披',
         furigana: 'ヒ',
-        meaningEn: 'open', meaning: 'open'
+        meaning: 'open'
       },
     ],
   },
@@ -9115,17 +9115,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '抵',
         furigana: 'テイ',
-        meaningEn: 'reach', meaning: 'reach'
+        meaning: 'reach'
       },
       {
         word: '抵',
         furigana: 'テイ',
-        meaningEn: 'resist', meaning: 'resist'
+        meaning: 'resist'
       },
       {
         word: '抵',
         furigana: 'テイ',
-        meaningEn: 'touch', meaning: 'touch'
+        meaning: 'touch'
       },
     ],
   },
@@ -9138,17 +9138,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '抹',
         furigana: 'マツ',
-        meaningEn: 'erase', meaning: 'erase'
+        meaning: 'erase'
       },
       {
         word: '抹',
         furigana: 'マツ',
-        meaningEn: 'paint', meaning: 'paint'
+        meaning: 'paint'
       },
       {
         word: '抹',
         furigana: 'マツ',
-        meaningEn: 'rub', meaning: 'rub'
+        meaning: 'rub'
       },
     ],
   },
@@ -9162,17 +9162,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '抽',
         furigana: 'チュウ',
-        meaningEn: 'excel', meaning: 'excel'
+        meaning: 'excel'
       },
       {
         word: '抽',
         furigana: 'チュウ',
-        meaningEn: 'extract', meaning: 'extract'
+        meaning: 'extract'
       },
       {
         word: '抽',
         furigana: 'チュウ',
-        meaningEn: 'pluck', meaning: 'pluck'
+        meaning: 'pluck'
       },
     ],
   },
@@ -9185,12 +9185,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '拍',
         furigana: 'ハク',
-        meaningEn: 'beat (music)', meaning: 'beat (music)'
+        meaning: 'beat (music)'
       },
       {
         word: '拍',
         furigana: 'ハク',
-        meaningEn: 'clap', meaning: 'clap'
+        meaning: 'clap'
       },
     ],
   },
@@ -9203,12 +9203,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '拐',
         furigana: 'カイ',
-        meaningEn: 'falsify', meaning: 'falsify'
+        meaning: 'falsify'
       },
       {
         word: '拐',
         furigana: 'カイ',
-        meaningEn: 'kidnap', meaning: 'kidnap'
+        meaning: 'kidnap'
       },
     ],
   },
@@ -9222,17 +9222,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '拒',
         furigana: 'キョ',
-        meaningEn: 'decline', meaning: 'decline'
+        meaning: 'decline'
       },
       {
         word: '拒',
         furigana: 'キョ',
-        meaningEn: 'refuse', meaning: 'refuse'
+        meaning: 'refuse'
       },
       {
         word: '拒',
         furigana: 'キョ',
-        meaningEn: 'reject', meaning: 'reject'
+        meaning: 'reject'
       },
     ],
   },
@@ -9246,17 +9246,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '拓',
         furigana: 'タク',
-        meaningEn: 'break up (land)', meaning: 'break up (land)'
+        meaning: 'break up (land)'
       },
       {
         word: '拓',
         furigana: 'タク',
-        meaningEn: 'clear (the land)', meaning: 'clear (the land)'
+        meaning: 'clear (the land)'
       },
       {
         word: '拓',
         furigana: 'タク',
-        meaningEn: 'open', meaning: 'open'
+        meaning: 'open'
       },
     ],
   },
@@ -9270,17 +9270,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '拘',
         furigana: 'コウ',
-        meaningEn: 'adhere to', meaning: 'adhere to'
+        meaning: 'adhere to'
       },
       {
         word: '拘',
         furigana: 'コウ',
-        meaningEn: 'arrest', meaning: 'arrest'
+        meaning: 'arrest'
       },
       {
         word: '拘',
         furigana: 'コウ',
-        meaningEn: 'concerned', meaning: 'concerned'
+        meaning: 'concerned'
       },
     ],
   },
@@ -9294,17 +9294,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '拙',
         furigana: 'セツ',
-        meaningEn: 'bungling', meaning: 'bungling'
+        meaning: 'bungling'
       },
       {
         word: '拙',
         furigana: 'セツ',
-        meaningEn: 'clumsy', meaning: 'clumsy'
+        meaning: 'clumsy'
       },
       {
         word: '拙',
         furigana: 'セツ',
-        meaningEn: 'unskillful', meaning: 'unskillful'
+        meaning: 'unskillful'
       },
     ],
   },
@@ -9318,17 +9318,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '拠',
         furigana: 'キョ',
-        meaningEn: 'based on', meaning: 'based on'
+        meaning: 'based on'
       },
       {
         word: '拠',
         furigana: 'キョ',
-        meaningEn: 'follow', meaning: 'follow'
+        meaning: 'follow'
       },
       {
         word: '拠',
         furigana: 'キョ',
-        meaningEn: 'foothold', meaning: 'foothold'
+        meaning: 'foothold'
       },
     ],
   },
@@ -9342,17 +9342,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '拡',
         furigana: 'カク',
-        meaningEn: 'broaden', meaning: 'broaden'
+        meaning: 'broaden'
       },
       {
         word: '拡',
         furigana: 'カク',
-        meaningEn: 'enlarge', meaning: 'enlarge'
+        meaning: 'enlarge'
       },
       {
         word: '拡',
         furigana: 'カク',
-        meaningEn: 'expand', meaning: 'expand'
+        meaning: 'expand'
       },
     ],
   },
@@ -9366,17 +9366,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '括',
         furigana: 'カツ',
-        meaningEn: 'arrest', meaning: 'arrest'
+        meaning: 'arrest'
       },
       {
         word: '括',
         furigana: 'カツ',
-        meaningEn: 'constrict', meaning: 'constrict'
+        meaning: 'constrict'
       },
       {
         word: '括',
         furigana: 'カツ',
-        meaningEn: 'fasten', meaning: 'fasten'
+        meaning: 'fasten'
       },
     ],
   },
@@ -9390,7 +9390,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '拳',
         furigana: 'ケン',
-        meaningEn: 'fist', meaning: 'fist'
+        meaning: 'fist'
       },
     ],
   },
@@ -9403,12 +9403,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '拷',
         furigana: 'ゴウ',
-        meaningEn: 'beat', meaning: 'beat'
+        meaning: 'beat'
       },
       {
         word: '拷',
         furigana: 'ゴウ',
-        meaningEn: 'torture', meaning: 'torture'
+        meaning: 'torture'
       },
     ],
   },
@@ -9422,17 +9422,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '挑',
         furigana: 'チョウ',
-        meaningEn: 'challenge', meaning: 'challenge'
+        meaning: 'challenge'
       },
       {
         word: '挑',
         furigana: 'チョウ',
-        meaningEn: 'contend for', meaning: 'contend for'
+        meaning: 'contend for'
       },
       {
         word: '挑',
         furigana: 'チョウ',
-        meaningEn: 'make love to', meaning: 'make love to'
+        meaning: 'make love to'
       },
     ],
   },
@@ -9446,17 +9446,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '挙',
         furigana: 'キョ',
-        meaningEn: 'actions', meaning: 'actions'
+        meaning: 'actions'
       },
       {
         word: '挙',
         furigana: 'キョ',
-        meaningEn: 'behavior', meaning: 'behavior'
+        meaning: 'behavior'
       },
       {
         word: '挙',
         furigana: 'キョ',
-        meaningEn: 'plan', meaning: 'plan'
+        meaning: 'plan'
       },
     ],
   },
@@ -9470,17 +9470,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '振',
         furigana: 'シン',
-        meaningEn: 'shake', meaning: 'shake'
+        meaning: 'shake'
       },
       {
         word: '振',
         furigana: 'シン',
-        meaningEn: 'swing', meaning: 'swing'
+        meaning: 'swing'
       },
       {
         word: '振',
         furigana: 'シン',
-        meaningEn: 'wag', meaning: 'wag'
+        meaning: 'wag'
       },
     ],
   },
@@ -9494,17 +9494,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '挿',
         furigana: 'ソウ',
-        meaningEn: 'graft', meaning: 'graft'
+        meaning: 'graft'
       },
       {
         word: '挿',
         furigana: 'ソウ',
-        meaningEn: 'insert', meaning: 'insert'
+        meaning: 'insert'
       },
       {
         word: '挿',
         furigana: 'ソウ',
-        meaningEn: 'put in', meaning: 'put in'
+        meaning: 'put in'
       },
     ],
   },
@@ -9518,17 +9518,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '据',
         furigana: 'キョ',
-        meaningEn: 'equip', meaning: 'equip'
+        meaning: 'equip'
       },
       {
         word: '据',
         furigana: 'キョ',
-        meaningEn: 'install', meaning: 'install'
+        meaning: 'install'
       },
       {
         word: '据',
         furigana: 'キョ',
-        meaningEn: 'lay a foundation', meaning: 'lay a foundation'
+        meaning: 'lay a foundation'
       },
     ],
   },
@@ -9542,12 +9542,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '捷',
         furigana: 'ショウ',
-        meaningEn: 'fast', meaning: 'fast'
+        meaning: 'fast'
       },
       {
         word: '捷',
         furigana: 'ショウ',
-        meaningEn: 'victory', meaning: 'victory'
+        meaning: 'victory'
       },
     ],
   },
@@ -9561,17 +9561,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '捺',
         furigana: 'ダツ',
-        meaningEn: 'affix a seal', meaning: 'affix a seal'
+        meaning: 'affix a seal'
       },
       {
         word: '捺',
         furigana: 'ダツ',
-        meaningEn: 'press', meaning: 'press'
+        meaning: 'press'
       },
       {
         word: '捺',
         furigana: 'ダツ',
-        meaningEn: 'print', meaning: 'print'
+        meaning: 'print'
       },
     ],
   },
@@ -9585,17 +9585,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '授',
         furigana: 'ジュ',
-        meaningEn: 'confer', meaning: 'confer'
+        meaning: 'confer'
       },
       {
         word: '授',
         furigana: 'ジュ',
-        meaningEn: 'grant', meaning: 'grant'
+        meaning: 'grant'
       },
       {
         word: '授',
         furigana: 'ジュ',
-        meaningEn: 'impart', meaning: 'impart'
+        meaning: 'impart'
       },
     ],
   },
@@ -9609,17 +9609,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '掌',
         furigana: 'ショウ',
-        meaningEn: 'administer', meaning: 'administer'
+        meaning: 'administer'
       },
       {
         word: '掌',
         furigana: 'ショウ',
-        meaningEn: 'conduct', meaning: 'conduct'
+        meaning: 'conduct'
       },
       {
         word: '掌',
         furigana: 'ショウ',
-        meaningEn: 'manipulate', meaning: 'manipulate'
+        meaning: 'manipulate'
       },
     ],
   },
@@ -9632,17 +9632,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '排',
         furigana: 'ハイ',
-        meaningEn: 'arrange', meaning: 'arrange'
+        meaning: 'arrange'
       },
       {
         word: '排',
         furigana: 'ハイ',
-        meaningEn: 'exclude', meaning: 'exclude'
+        meaning: 'exclude'
       },
       {
         word: '排',
         furigana: 'ハイ',
-        meaningEn: 'expel', meaning: 'expel'
+        meaning: 'expel'
       },
     ],
   },
@@ -9656,17 +9656,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '控',
         furigana: 'コウ',
-        meaningEn: 'be moderate', meaning: 'be moderate'
+        meaning: 'be moderate'
       },
       {
         word: '控',
         furigana: 'コウ',
-        meaningEn: 'draw in', meaning: 'draw in'
+        meaning: 'draw in'
       },
       {
         word: '控',
         furigana: 'コウ',
-        meaningEn: 'hold back', meaning: 'hold back'
+        meaning: 'hold back'
       },
     ],
   },
@@ -9680,17 +9680,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '推',
         furigana: 'スイ',
-        meaningEn: 'conjecture', meaning: 'conjecture'
+        meaning: 'conjecture'
       },
       {
         word: '推',
         furigana: 'スイ',
-        meaningEn: 'guess', meaning: 'guess'
+        meaning: 'guess'
       },
       {
         word: '推',
         furigana: 'スイ',
-        meaningEn: 'infer', meaning: 'infer'
+        meaning: 'infer'
       },
     ],
   },
@@ -9704,17 +9704,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '措',
         furigana: 'ソ',
-        meaningEn: 'discontinue', meaning: 'discontinue'
+        meaning: 'discontinue'
       },
       {
         word: '措',
         furigana: 'ソ',
-        meaningEn: 'except', meaning: 'except'
+        meaning: 'except'
       },
       {
         word: '措',
         furigana: 'ソ',
-        meaningEn: 'give up', meaning: 'give up'
+        meaning: 'give up'
       },
     ],
   },
@@ -9728,17 +9728,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '掲',
         furigana: 'ケイ',
-        meaningEn: 'describe', meaning: 'describe'
+        meaning: 'describe'
       },
       {
         word: '掲',
         furigana: 'ケイ',
-        meaningEn: 'display', meaning: 'display'
+        meaning: 'display'
       },
       {
         word: '掲',
         furigana: 'ケイ',
-        meaningEn: 'hang out', meaning: 'hang out'
+        meaning: 'hang out'
       },
     ],
   },
@@ -9752,17 +9752,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '描',
         furigana: 'ビョウ',
-        meaningEn: 'compose', meaning: 'compose'
+        meaning: 'compose'
       },
       {
         word: '描',
         furigana: 'ビョウ',
-        meaningEn: 'draw', meaning: 'draw'
+        meaning: 'draw'
       },
       {
         word: '描',
         furigana: 'ビョウ',
-        meaningEn: 'paint', meaning: 'paint'
+        meaning: 'paint'
       },
     ],
   },
@@ -9776,17 +9776,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '提',
         furigana: 'ダイ',
-        meaningEn: 'carry in hand', meaning: 'carry in hand'
+        meaning: 'carry in hand'
       },
       {
         word: '提',
         furigana: 'ダイ',
-        meaningEn: 'propose', meaning: 'propose'
+        meaning: 'propose'
       },
       {
         word: '提',
         furigana: 'ダイ',
-        meaningEn: 'take along', meaning: 'take along'
+        meaning: 'take along'
       },
     ],
   },
@@ -9800,17 +9800,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '揚',
         furigana: 'ヨウ',
-        meaningEn: 'elevate', meaning: 'elevate'
+        meaning: 'elevate'
       },
       {
         word: '揚',
         furigana: 'ヨウ',
-        meaningEn: 'extol', meaning: 'extol'
+        meaning: 'extol'
       },
       {
         word: '揚',
         furigana: 'ヨウ',
-        meaningEn: 'fry in deep fat', meaning: 'fry in deep fat'
+        meaning: 'fry in deep fat'
       },
     ],
   },
@@ -9824,17 +9824,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '握',
         furigana: 'アク',
-        meaningEn: 'bribe', meaning: 'bribe'
+        meaning: 'bribe'
       },
       {
         word: '握',
         furigana: 'アク',
-        meaningEn: 'grip', meaning: 'grip'
+        meaning: 'grip'
       },
       {
         word: '握',
         furigana: 'アク',
-        meaningEn: 'hold', meaning: 'hold'
+        meaning: 'hold'
       },
     ],
   },
@@ -9848,17 +9848,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '揮',
         furigana: 'キ',
-        meaningEn: 'brandish', meaning: 'brandish'
+        meaning: 'brandish'
       },
       {
         word: '揮',
         furigana: 'キ',
-        meaningEn: 'shake', meaning: 'shake'
+        meaning: 'shake'
       },
       {
         word: '揮',
         furigana: 'キ',
-        meaningEn: 'swing', meaning: 'swing'
+        meaning: 'swing'
       },
     ],
   },
@@ -9871,17 +9871,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '援',
         furigana: 'エン',
-        meaningEn: 'abet', meaning: 'abet'
+        meaning: 'abet'
       },
       {
         word: '援',
         furigana: 'エン',
-        meaningEn: 'help', meaning: 'help'
+        meaning: 'help'
       },
       {
         word: '援',
         furigana: 'エン',
-        meaningEn: 'save', meaning: 'save'
+        meaning: 'save'
       },
     ],
   },
@@ -9895,17 +9895,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '揺',
         furigana: 'ヨウ',
-        meaningEn: 'rock', meaning: 'rock'
+        meaning: 'rock'
       },
       {
         word: '揺',
         furigana: 'ヨウ',
-        meaningEn: 'shake', meaning: 'shake'
+        meaning: 'shake'
       },
       {
         word: '揺',
         furigana: 'ヨウ',
-        meaningEn: 'sway', meaning: 'sway'
+        meaning: 'sway'
       },
     ],
   },
@@ -9918,17 +9918,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '搬',
         furigana: 'ハン',
-        meaningEn: 'carry', meaning: 'carry'
+        meaning: 'carry'
       },
       {
         word: '搬',
         furigana: 'ハン',
-        meaningEn: 'conveyor', meaning: 'conveyor'
+        meaning: 'conveyor'
       },
       {
         word: '搬',
         furigana: 'ハン',
-        meaningEn: 'transport', meaning: 'transport'
+        meaning: 'transport'
       },
     ],
   },
@@ -9941,17 +9941,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '搭',
         furigana: 'トウ',
-        meaningEn: 'board', meaning: 'board'
+        meaning: 'board'
       },
       {
         word: '搭',
         furigana: 'トウ',
-        meaningEn: 'load (a vehicle)', meaning: 'load (a vehicle)'
+        meaning: 'load (a vehicle)'
       },
       {
         word: '搭',
         furigana: 'トウ',
-        meaningEn: 'ride', meaning: 'ride'
+        meaning: 'ride'
       },
     ],
   },
@@ -9965,17 +9965,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '携',
         furigana: 'ケイ',
-        meaningEn: 'armed with', meaning: 'armed with'
+        meaning: 'armed with'
       },
       {
         word: '携',
         furigana: 'ケイ',
-        meaningEn: 'bring along', meaning: 'bring along'
+        meaning: 'bring along'
       },
       {
         word: '携',
         furigana: 'ケイ',
-        meaningEn: 'carry (in hand)', meaning: 'carry (in hand)'
+        meaning: 'carry (in hand)'
       },
     ],
   },
@@ -9989,7 +9989,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '搾',
         furigana: 'サク',
-        meaningEn: 'squeeze', meaning: 'squeeze'
+        meaning: 'squeeze'
       },
     ],
   },
@@ -10003,17 +10003,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '摂',
         furigana: 'ショウ',
-        meaningEn: 'absorb', meaning: 'absorb'
+        meaning: 'absorb'
       },
       {
         word: '摂',
         furigana: 'ショウ',
-        meaningEn: 'act in addition to', meaning: 'act in addition to'
+        meaning: 'act in addition to'
       },
       {
         word: '摂',
         furigana: 'ショウ',
-        meaningEn: 'surrogate', meaning: 'surrogate'
+        meaning: 'surrogate'
       },
     ],
   },
@@ -10027,17 +10027,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '摘',
         furigana: 'テキ',
-        meaningEn: 'clip', meaning: 'clip'
+        meaning: 'clip'
       },
       {
         word: '摘',
         furigana: 'テキ',
-        meaningEn: 'pick', meaning: 'pick'
+        meaning: 'pick'
       },
       {
         word: '摘',
         furigana: 'テキ',
-        meaningEn: 'pinch', meaning: 'pinch'
+        meaning: 'pinch'
       },
     ],
   },
@@ -10051,17 +10051,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '摩',
         furigana: 'マ',
-        meaningEn: 'chafe', meaning: 'chafe'
+        meaning: 'chafe'
       },
       {
         word: '摩',
         furigana: 'マ',
-        meaningEn: 'grind', meaning: 'grind'
+        meaning: 'grind'
       },
       {
         word: '摩',
         furigana: 'マ',
-        meaningEn: 'polish', meaning: 'polish'
+        meaning: 'polish'
       },
     ],
   },
@@ -10075,17 +10075,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '撃',
         furigana: 'ゲキ',
-        meaningEn: 'attack', meaning: 'attack'
+        meaning: 'attack'
       },
       {
         word: '撃',
         furigana: 'ゲキ',
-        meaningEn: 'beat', meaning: 'beat'
+        meaning: 'beat'
       },
       {
         word: '撃',
         furigana: 'ゲキ',
-        meaningEn: 'conquer', meaning: 'conquer'
+        meaning: 'conquer'
       },
     ],
   },
@@ -10098,17 +10098,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '撤',
         furigana: 'テツ',
-        meaningEn: 'disarm', meaning: 'disarm'
+        meaning: 'disarm'
       },
       {
         word: '撤',
         furigana: 'テツ',
-        meaningEn: 'dismantle', meaning: 'dismantle'
+        meaning: 'dismantle'
       },
       {
         word: '撤',
         furigana: 'テツ',
-        meaningEn: 'exclude', meaning: 'exclude'
+        meaning: 'exclude'
       },
     ],
   },
@@ -10122,12 +10122,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '撮',
         furigana: 'サツ',
-        meaningEn: 'snapshot', meaning: 'snapshot'
+        meaning: 'snapshot'
       },
       {
         word: '撮',
         furigana: 'サツ',
-        meaningEn: 'take pictures', meaning: 'take pictures'
+        meaning: 'take pictures'
       },
     ],
   },
@@ -10140,17 +10140,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '撲',
         furigana: 'ボク',
-        meaningEn: 'beat', meaning: 'beat'
+        meaning: 'beat'
       },
       {
         word: '撲',
         furigana: 'ボク',
-        meaningEn: 'hit', meaning: 'hit'
+        meaning: 'hit'
       },
       {
         word: '撲',
         furigana: 'ボク',
-        meaningEn: 'slap', meaning: 'slap'
+        meaning: 'slap'
       },
     ],
   },
@@ -10163,17 +10163,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '擁',
         furigana: 'ヨウ',
-        meaningEn: 'embrace', meaning: 'embrace'
+        meaning: 'embrace'
       },
       {
         word: '擁',
         furigana: 'ヨウ',
-        meaningEn: 'hug', meaning: 'hug'
+        meaning: 'hug'
       },
       {
         word: '擁',
         furigana: 'ヨウ',
-        meaningEn: 'lead', meaning: 'lead'
+        meaning: 'lead'
       },
     ],
   },
@@ -10187,17 +10187,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '操',
         furigana: 'サン',
-        meaningEn: 'chastity', meaning: 'chastity'
+        meaning: 'chastity'
       },
       {
         word: '操',
         furigana: 'サン',
-        meaningEn: 'fidelity', meaning: 'fidelity'
+        meaning: 'fidelity'
       },
       {
         word: '操',
         furigana: 'サン',
-        meaningEn: 'maneuver', meaning: 'maneuver'
+        meaning: 'maneuver'
       },
     ],
   },
@@ -10211,17 +10211,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '擦',
         furigana: 'サツ',
-        meaningEn: 'chafe', meaning: 'chafe'
+        meaning: 'chafe'
       },
       {
         word: '擦',
         furigana: 'サツ',
-        meaningEn: 'grate', meaning: 'grate'
+        meaning: 'grate'
       },
       {
         word: '擦',
         furigana: 'サツ',
-        meaningEn: 'rub', meaning: 'rub'
+        meaning: 'rub'
       },
     ],
   },
@@ -10235,17 +10235,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '擬',
         furigana: 'ギ',
-        meaningEn: 'aim (a gun) at', meaning: 'aim (a gun) at'
+        meaning: 'aim (a gun) at'
       },
       {
         word: '擬',
         furigana: 'ギ',
-        meaningEn: 'imitate', meaning: 'imitate'
+        meaning: 'imitate'
       },
       {
         word: '擬',
         furigana: 'ギ',
-        meaningEn: 'mimic', meaning: 'mimic'
+        meaning: 'mimic'
       },
     ],
   },
@@ -10259,17 +10259,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '攻',
         furigana: 'コウ',
-        meaningEn: 'aggression', meaning: 'aggression'
+        meaning: 'aggression'
       },
       {
         word: '攻',
         furigana: 'コウ',
-        meaningEn: 'attack', meaning: 'attack'
+        meaning: 'attack'
       },
       {
         word: '攻',
         furigana: 'コウ',
-        meaningEn: 'criticize', meaning: 'criticize'
+        meaning: 'criticize'
       },
     ],
   },
@@ -10283,17 +10283,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '故',
         furigana: 'コ',
-        meaningEn: 'cause', meaning: 'cause'
+        meaning: 'cause'
       },
       {
         word: '故',
         furigana: 'コ',
-        meaningEn: 'circumstances', meaning: 'circumstances'
+        meaning: 'circumstances'
       },
       {
         word: '故',
         furigana: 'コ',
-        meaningEn: 'consequently', meaning: 'consequently'
+        meaning: 'consequently'
       },
     ],
   },
@@ -10307,17 +10307,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '敏',
         furigana: 'ビン',
-        meaningEn: 'agile', meaning: 'agile'
+        meaning: 'agile'
       },
       {
         word: '敏',
         furigana: 'ビン',
-        meaningEn: 'alert', meaning: 'alert'
+        meaning: 'alert'
       },
       {
         word: '敏',
         furigana: 'ビン',
-        meaningEn: 'cleverness', meaning: 'cleverness'
+        meaning: 'cleverness'
       },
     ],
   },
@@ -10331,17 +10331,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '救',
         furigana: 'キュウ',
-        meaningEn: 'help', meaning: 'help'
+        meaning: 'help'
       },
       {
         word: '救',
         furigana: 'キュウ',
-        meaningEn: 'reclaim', meaning: 'reclaim'
+        meaning: 'reclaim'
       },
       {
         word: '救',
         furigana: 'キュウ',
-        meaningEn: 'rescue', meaning: 'rescue'
+        meaning: 'rescue'
       },
     ],
   },
@@ -10355,17 +10355,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '敢',
         furigana: 'カン',
-        meaningEn: 'bold', meaning: 'bold'
+        meaning: 'bold'
       },
       {
         word: '敢',
         furigana: 'カン',
-        meaningEn: 'brave', meaning: 'brave'
+        meaning: 'brave'
       },
       {
         word: '敢',
         furigana: 'カン',
-        meaningEn: 'daring', meaning: 'daring'
+        meaning: 'daring'
       },
     ],
   },
@@ -10379,12 +10379,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '敦',
         furigana: 'タイ',
-        meaningEn: 'industry', meaning: 'industry'
+        meaning: 'industry'
       },
       {
         word: '敦',
         furigana: 'タイ',
-        meaningEn: 'kindliness', meaning: 'kindliness'
+        meaning: 'kindliness'
       },
     ],
   },
@@ -10398,17 +10398,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '整',
         furigana: 'セイ',
-        meaningEn: 'arranging', meaning: 'arranging'
+        meaning: 'arranging'
       },
       {
         word: '整',
         furigana: 'セイ',
-        meaningEn: 'key (music)', meaning: 'key (music)'
+        meaning: 'key (music)'
       },
       {
         word: '整',
         furigana: 'セイ',
-        meaningEn: 'meter', meaning: 'meter'
+        meaning: 'meter'
       },
     ],
   },
@@ -10422,17 +10422,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '敵',
         furigana: 'テキ',
-        meaningEn: 'enemy', meaning: 'enemy'
+        meaning: 'enemy'
       },
       {
         word: '敵',
         furigana: 'テキ',
-        meaningEn: 'foe', meaning: 'foe'
+        meaning: 'foe'
       },
       {
         word: '敵',
         furigana: 'テキ',
-        meaningEn: 'opponent', meaning: 'opponent'
+        meaning: 'opponent'
       },
     ],
   },
@@ -10446,17 +10446,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '敷',
         furigana: 'フ',
-        meaningEn: 'pave', meaning: 'pave'
+        meaning: 'pave'
       },
       {
         word: '敷',
         furigana: 'フ',
-        meaningEn: 'promulgate', meaning: 'promulgate'
+        meaning: 'promulgate'
       },
       {
         word: '敷',
         furigana: 'フ',
-        meaningEn: 'sit', meaning: 'sit'
+        meaning: 'sit'
       },
     ],
   },
@@ -10470,17 +10470,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '斉',
         furigana: 'サイ',
-        meaningEn: 'adjusted', meaning: 'adjusted'
+        meaning: 'adjusted'
       },
       {
         word: '斉',
         furigana: 'サイ',
-        meaningEn: 'alike', meaning: 'alike'
+        meaning: 'alike'
       },
       {
         word: '斉',
         furigana: 'サイ',
-        meaningEn: 'equal', meaning: 'equal'
+        meaning: 'equal'
       },
     ],
   },
@@ -10494,17 +10494,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '斎',
         furigana: 'サイ',
-        meaningEn: 'Buddhist food', meaning: 'Buddhist food'
+        meaning: 'Buddhist food'
       },
       {
         word: '斎',
         furigana: 'サイ',
-        meaningEn: 'alike', meaning: 'alike'
+        meaning: 'alike'
       },
       {
         word: '斎',
         furigana: 'サイ',
-        meaningEn: 'avoid', meaning: 'avoid'
+        meaning: 'avoid'
       },
     ],
   },
@@ -10517,12 +10517,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '斐',
         furigana: 'イ',
-        meaningEn: 'beautiful', meaning: 'beautiful'
+        meaning: 'beautiful'
       },
       {
         word: '斐',
         furigana: 'イ',
-        meaningEn: 'patterned', meaning: 'patterned'
+        meaning: 'patterned'
       },
     ],
   },
@@ -10535,17 +10535,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '斗',
         furigana: 'ト',
-        meaningEn: 'Big Dipper', meaning: 'Big Dipper'
+        meaning: 'Big Dipper'
       },
       {
         word: '斗',
         furigana: 'ト',
-        meaningEn: 'dots and cross radical (no. 68)', meaning: 'dots and cross radical (no. 68)'
+        meaning: 'dots and cross radical (no. 68)'
       },
       {
         word: '斗',
         furigana: 'ト',
-        meaningEn: 'sake dipper', meaning: 'sake dipper'
+        meaning: 'sake dipper'
       },
     ],
   },
@@ -10559,17 +10559,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '斜',
         furigana: 'シャ',
-        meaningEn: 'diagonal', meaning: 'diagonal'
+        meaning: 'diagonal'
       },
       {
         word: '斜',
         furigana: 'シャ',
-        meaningEn: 'oblique', meaning: 'oblique'
+        meaning: 'oblique'
       },
       {
         word: '斜',
         furigana: 'シャ',
-        meaningEn: 'slanting', meaning: 'slanting'
+        meaning: 'slanting'
       },
     ],
   },
@@ -10582,17 +10582,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '斤',
         furigana: 'キン',
-        meaningEn: '1.32 lb', meaning: '1.32 lb'
+        meaning: '1.32 lb'
       },
       {
         word: '斤',
         furigana: 'キン',
-        meaningEn: 'axe', meaning: 'axe'
+        meaning: 'axe'
       },
       {
         word: '斤',
         furigana: 'キン',
-        meaningEn: 'axe radical (no. 69)', meaning: 'axe radical (no. 69)'
+        meaning: 'axe radical (no. 69)'
       },
     ],
   },
@@ -10606,17 +10606,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '斥',
         furigana: 'セキ',
-        meaningEn: 'recede', meaning: 'recede'
+        meaning: 'recede'
       },
       {
         word: '斥',
         furigana: 'セキ',
-        meaningEn: 'reject', meaning: 'reject'
+        meaning: 'reject'
       },
       {
         word: '斥',
         furigana: 'セキ',
-        meaningEn: 'repel', meaning: 'repel'
+        meaning: 'repel'
       },
     ],
   },
@@ -10630,17 +10630,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '於',
         furigana: 'オ',
-        meaningEn: 'as for', meaning: 'as for'
+        meaning: 'as for'
       },
       {
         word: '於',
         furigana: 'オ',
-        meaningEn: 'at', meaning: 'at'
+        meaning: 'at'
       },
       {
         word: '於',
         furigana: 'オ',
-        meaningEn: 'in', meaning: 'in'
+        meaning: 'in'
       },
     ],
   },
@@ -10654,17 +10654,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '施',
         furigana: 'シ',
-        meaningEn: 'alms', meaning: 'alms'
+        meaning: 'alms'
       },
       {
         word: '施',
         furigana: 'シ',
-        meaningEn: 'bestow', meaning: 'bestow'
+        meaning: 'bestow'
       },
       {
         word: '施',
         furigana: 'シ',
-        meaningEn: 'give', meaning: 'give'
+        meaning: 'give'
       },
     ],
   },
@@ -10678,12 +10678,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '旋',
         furigana: 'セン',
-        meaningEn: 'go around', meaning: 'go around'
+        meaning: 'go around'
       },
       {
         word: '旋',
         furigana: 'セン',
-        meaningEn: 'rotation', meaning: 'rotation'
+        meaning: 'rotation'
       },
     ],
   },
@@ -10697,17 +10697,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '旗',
         furigana: 'キ',
-        meaningEn: 'banner', meaning: 'banner'
+        meaning: 'banner'
       },
       {
         word: '旗',
         furigana: 'キ',
-        meaningEn: 'national flag', meaning: 'national flag'
+        meaning: 'national flag'
       },
       {
         word: '旗',
         furigana: 'キ',
-        meaningEn: 'standard', meaning: 'standard'
+        meaning: 'standard'
       },
     ],
   },
@@ -10721,17 +10721,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '既',
         furigana: 'キ',
-        meaningEn: 'already', meaning: 'already'
+        meaning: 'already'
       },
       {
         word: '既',
         furigana: 'キ',
-        meaningEn: 'long ago', meaning: 'long ago'
+        meaning: 'long ago'
       },
       {
         word: '既',
         furigana: 'キ',
-        meaningEn: 'previously', meaning: 'previously'
+        meaning: 'previously'
       },
     ],
   },
@@ -10745,17 +10745,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '旦',
         furigana: 'タン',
-        meaningEn: 'dawn', meaning: 'dawn'
+        meaning: 'dawn'
       },
       {
         word: '旦',
         furigana: 'タン',
-        meaningEn: 'daybreak', meaning: 'daybreak'
+        meaning: 'daybreak'
       },
       {
         word: '旦',
         furigana: 'タン',
-        meaningEn: 'morning', meaning: 'morning'
+        meaning: 'morning'
       },
     ],
   },
@@ -10769,17 +10769,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '旨',
         furigana: 'シ',
-        meaningEn: 'clever', meaning: 'clever'
+        meaning: 'clever'
       },
       {
         word: '旨',
         furigana: 'シ',
-        meaningEn: 'delicious', meaning: 'delicious'
+        meaning: 'delicious'
       },
       {
         word: '旨',
         furigana: 'シ',
-        meaningEn: 'expert', meaning: 'expert'
+        meaning: 'expert'
       },
     ],
   },
@@ -10792,17 +10792,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '旬',
         furigana: 'シュン',
-        meaningEn: 'decameron', meaning: 'decameron'
+        meaning: 'decameron'
       },
       {
         word: '旬',
         furigana: 'シュン',
-        meaningEn: 'season (for specific products)', meaning: 'season (for specific products)'
+        meaning: 'season (for specific products)'
       },
       {
         word: '旬',
         furigana: 'シュン',
-        meaningEn: 'ten-day period', meaning: 'ten-day period'
+        meaning: 'ten-day period'
       },
     ],
   },
@@ -10816,12 +10816,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '旭',
         furigana: 'キョク',
-        meaningEn: 'morning sun', meaning: 'morning sun'
+        meaning: 'morning sun'
       },
       {
         word: '旭',
         furigana: 'キョク',
-        meaningEn: 'rising sun', meaning: 'rising sun'
+        meaning: 'rising sun'
       },
     ],
   },
@@ -10835,17 +10835,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '旺',
         furigana: 'オウ',
-        meaningEn: 'beautiful', meaning: 'beautiful'
+        meaning: 'beautiful'
       },
       {
         word: '旺',
         furigana: 'オウ',
-        meaningEn: 'flourishing', meaning: 'flourishing'
+        meaning: 'flourishing'
       },
       {
         word: '旺',
         furigana: 'オウ',
-        meaningEn: 'successful', meaning: 'successful'
+        meaning: 'successful'
       },
     ],
   },
@@ -10859,7 +10859,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '昂',
         furigana: 'コウ',
-        meaningEn: 'rise', meaning: 'rise'
+        meaning: 'rise'
       },
     ],
   },
@@ -10872,17 +10872,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '昆',
         furigana: 'コン',
-        meaningEn: 'descendants', meaning: 'descendants'
+        meaning: 'descendants'
       },
       {
         word: '昆',
         furigana: 'コン',
-        meaningEn: 'elder brother', meaning: 'elder brother'
+        meaning: 'elder brother'
       },
       {
         word: '昆',
         furigana: 'コン',
-        meaningEn: 'insect', meaning: 'insect'
+        meaning: 'insect'
       },
     ],
   },
@@ -10896,17 +10896,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '昌',
         furigana: 'ショウ',
-        meaningEn: 'bright', meaning: 'bright'
+        meaning: 'bright'
       },
       {
         word: '昌',
         furigana: 'ショウ',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
       {
         word: '昌',
         furigana: 'ショウ',
-        meaningEn: 'prosperous', meaning: 'prosperous'
+        meaning: 'prosperous'
       },
     ],
   },
@@ -10919,12 +10919,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '昭',
         furigana: 'ショウ',
-        meaningEn: 'bright', meaning: 'bright'
+        meaning: 'bright'
       },
       {
         word: '昭',
         furigana: 'ショウ',
-        meaningEn: 'shining', meaning: 'shining'
+        meaning: 'shining'
       },
     ],
   },
@@ -10938,17 +10938,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '是',
         furigana: 'シ',
-        meaningEn: 'just so', meaning: 'just so'
+        meaning: 'just so'
       },
       {
         word: '是',
         furigana: 'シ',
-        meaningEn: 'justice', meaning: 'justice'
+        meaning: 'justice'
       },
       {
         word: '是',
         furigana: 'シ',
-        meaningEn: 'right', meaning: 'right'
+        meaning: 'right'
       },
     ],
   },
@@ -10962,7 +10962,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '昴',
         furigana: 'コウ',
-        meaningEn: 'the Pleiades', meaning: 'the Pleiades'
+        meaning: 'the Pleiades'
       },
     ],
   },
@@ -10976,7 +10976,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '晃',
         furigana: 'コウ',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
     ],
   },
@@ -10990,7 +10990,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '晋',
         furigana: 'シン',
-        meaningEn: 'advance', meaning: 'advance'
+        meaning: 'advance'
       },
     ],
   },
@@ -11004,17 +11004,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '晏',
         furigana: 'アン',
-        meaningEn: 'late', meaning: 'late'
+        meaning: 'late'
       },
       {
         word: '晏',
         furigana: 'アン',
-        meaningEn: 'quiet', meaning: 'quiet'
+        meaning: 'quiet'
       },
       {
         word: '晏',
         furigana: 'アン',
-        meaningEn: 'sets (sun)', meaning: 'sets (sun)'
+        meaning: 'sets (sun)'
       },
     ],
   },
@@ -11028,7 +11028,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '晟',
         furigana: 'ジョウ',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
     ],
   },
@@ -11042,12 +11042,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '晨',
         furigana: 'シン',
-        meaningEn: 'early', meaning: 'early'
+        meaning: 'early'
       },
       {
         word: '晨',
         furigana: 'シン',
-        meaningEn: 'morning', meaning: 'morning'
+        meaning: 'morning'
       },
     ],
   },
@@ -11060,17 +11060,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '晶',
         furigana: 'ショウ',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
       {
         word: '晶',
         furigana: 'ショウ',
-        meaningEn: 'crystal', meaning: 'crystal'
+        meaning: 'crystal'
       },
       {
         word: '晶',
         furigana: 'ショウ',
-        meaningEn: 'sparkle', meaning: 'sparkle'
+        meaning: 'sparkle'
       },
     ],
   },
@@ -11083,17 +11083,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '智',
         furigana: 'チ',
-        meaningEn: 'intellect', meaning: 'intellect'
+        meaning: 'intellect'
       },
       {
         word: '智',
         furigana: 'チ',
-        meaningEn: 'reason', meaning: 'reason'
+        meaning: 'reason'
       },
       {
         word: '智',
         furigana: 'チ',
-        meaningEn: 'wisdom', meaning: 'wisdom'
+        meaning: 'wisdom'
       },
     ],
   },
@@ -11107,17 +11107,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '暁',
         furigana: 'キョウ',
-        meaningEn: 'dawn', meaning: 'dawn'
+        meaning: 'dawn'
       },
       {
         word: '暁',
         furigana: 'キョウ',
-        meaningEn: 'daybreak', meaning: 'daybreak'
+        meaning: 'daybreak'
       },
       {
         word: '暁',
         furigana: 'キョウ',
-        meaningEn: 'in the event', meaning: 'in the event'
+        meaning: 'in the event'
       },
     ],
   },
@@ -11131,17 +11131,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '暇',
         furigana: 'カ',
-        meaningEn: 'leave of absence', meaning: 'leave of absence'
+        meaning: 'leave of absence'
       },
       {
         word: '暇',
         furigana: 'カ',
-        meaningEn: 'leisure', meaning: 'leisure'
+        meaning: 'leisure'
       },
       {
         word: '暇',
         furigana: 'カ',
-        meaningEn: 'rest', meaning: 'rest'
+        meaning: 'rest'
       },
     ],
   },
@@ -11155,12 +11155,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '暉',
         furigana: 'キ',
-        meaningEn: 'light', meaning: 'light'
+        meaning: 'light'
       },
       {
         word: '暉',
         furigana: 'キ',
-        meaningEn: 'shine', meaning: 'shine'
+        meaning: 'shine'
       },
     ],
   },
@@ -11174,17 +11174,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '暑',
         furigana: 'ショ',
-        meaningEn: 'hot', meaning: 'hot'
+        meaning: 'hot'
       },
       {
         word: '暑',
         furigana: 'ショ',
-        meaningEn: 'sultry', meaning: 'sultry'
+        meaning: 'sultry'
       },
       {
         word: '暑',
         furigana: 'ショ',
-        meaningEn: 'summer heat', meaning: 'summer heat'
+        meaning: 'summer heat'
       },
     ],
   },
@@ -11198,7 +11198,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '暖',
         furigana: 'ダン',
-        meaningEn: 'warmth', meaning: 'warmth'
+        meaning: 'warmth'
       },
     ],
   },
@@ -11212,7 +11212,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '暢',
         furigana: 'チョウ',
-        meaningEn: 'stretch', meaning: 'stretch'
+        meaning: 'stretch'
       },
     ],
   },
@@ -11226,12 +11226,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '暦',
         furigana: 'リャク',
-        meaningEn: 'almanac', meaning: 'almanac'
+        meaning: 'almanac'
       },
       {
         word: '暦',
         furigana: 'リャク',
-        meaningEn: 'calendar', meaning: 'calendar'
+        meaning: 'calendar'
       },
     ],
   },
@@ -11245,17 +11245,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '暫',
         furigana: 'ザン',
-        meaningEn: 'a while', meaning: 'a while'
+        meaning: 'a while'
       },
       {
         word: '暫',
         furigana: 'ザン',
-        meaningEn: 'long time', meaning: 'long time'
+        meaning: 'long time'
       },
       {
         word: '暫',
         furigana: 'ザン',
-        meaningEn: 'moment', meaning: 'moment'
+        meaning: 'moment'
       },
     ],
   },
@@ -11269,12 +11269,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '曙',
         furigana: 'ショ',
-        meaningEn: 'dawn', meaning: 'dawn'
+        meaning: 'dawn'
       },
       {
         word: '曙',
         furigana: 'ショ',
-        meaningEn: 'daybreak', meaning: 'daybreak'
+        meaning: 'daybreak'
       },
     ],
   },
@@ -11287,17 +11287,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '曹',
         furigana: 'ソウ',
-        meaningEn: 'comrade', meaning: 'comrade'
+        meaning: 'comrade'
       },
       {
         word: '曹',
         furigana: 'ソウ',
-        meaningEn: 'fellow', meaning: 'fellow'
+        meaning: 'fellow'
       },
       {
         word: '曹',
         furigana: 'ソウ',
-        meaningEn: 'office', meaning: 'office'
+        meaning: 'office'
       },
     ],
   },
@@ -11311,12 +11311,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '朋',
         furigana: 'ホウ',
-        meaningEn: 'companion', meaning: 'companion'
+        meaning: 'companion'
       },
       {
         word: '朋',
         furigana: 'ホウ',
-        meaningEn: 'friend', meaning: 'friend'
+        meaning: 'friend'
       },
     ],
   },
@@ -11330,17 +11330,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '朔',
         furigana: 'サク',
-        meaningEn: 'conjunction (astronomy)', meaning: 'conjunction (astronomy)'
+        meaning: 'conjunction (astronomy)'
       },
       {
         word: '朔',
         furigana: 'サク',
-        meaningEn: 'first day of month', meaning: 'first day of month'
+        meaning: 'first day of month'
       },
       {
         word: '朔',
         furigana: 'サク',
-        meaningEn: 'north', meaning: 'north'
+        meaning: 'north'
       },
     ],
   },
@@ -11353,12 +11353,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '朕',
         furigana: 'チン',
-        meaningEn: 'imperial we', meaning: 'imperial we'
+        meaning: 'imperial we'
       },
       {
         word: '朕',
         furigana: 'チン',
-        meaningEn: 'majestic plural', meaning: 'majestic plural'
+        meaning: 'majestic plural'
       },
     ],
   },
@@ -11372,17 +11372,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '朗',
         furigana: 'ロウ',
-        meaningEn: 'bright', meaning: 'bright'
+        meaning: 'bright'
       },
       {
         word: '朗',
         furigana: 'ロウ',
-        meaningEn: 'cheerful', meaning: 'cheerful'
+        meaning: 'cheerful'
       },
       {
         word: '朗',
         furigana: 'ロウ',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
     ],
   },
@@ -11396,17 +11396,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '朱',
         furigana: 'シュ',
-        meaningEn: 'bloody', meaning: 'bloody'
+        meaning: 'bloody'
       },
       {
         word: '朱',
         furigana: 'シュ',
-        meaningEn: 'cinnabar', meaning: 'cinnabar'
+        meaning: 'cinnabar'
       },
       {
         word: '朱',
         furigana: 'シュ',
-        meaningEn: 'red', meaning: 'red'
+        meaning: 'red'
       },
     ],
   },
@@ -11420,17 +11420,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '朴',
         furigana: 'ボク',
-        meaningEn: 'crude', meaning: 'crude'
+        meaning: 'crude'
       },
       {
         word: '朴',
         furigana: 'ボク',
-        meaningEn: 'docile', meaning: 'docile'
+        meaning: 'docile'
       },
       {
         word: '朴',
         furigana: 'ボク',
-        meaningEn: 'plain', meaning: 'plain'
+        meaning: 'plain'
       },
     ],
   },
@@ -11444,17 +11444,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '朽',
         furigana: 'キュウ',
-        meaningEn: 'decay', meaning: 'decay'
+        meaning: 'decay'
       },
       {
         word: '朽',
         furigana: 'キュウ',
-        meaningEn: 'remain in seclusion', meaning: 'remain in seclusion'
+        meaning: 'remain in seclusion'
       },
       {
         word: '朽',
         furigana: 'キュウ',
-        meaningEn: 'rot', meaning: 'rot'
+        meaning: 'rot'
       },
     ],
   },
@@ -11468,12 +11468,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '杉',
         furigana: 'サン',
-        meaningEn: 'cedar', meaning: 'cedar'
+        meaning: 'cedar'
       },
       {
         word: '杉',
         furigana: 'サン',
-        meaningEn: 'cryptomeria', meaning: 'cryptomeria'
+        meaning: 'cryptomeria'
       },
     ],
   },
@@ -11487,7 +11487,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '李',
         furigana: 'リ',
-        meaningEn: 'plum', meaning: 'plum'
+        meaning: 'plum'
       },
     ],
   },
@@ -11501,7 +11501,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '杏',
         furigana: 'アン',
-        meaningEn: 'apricot', meaning: 'apricot'
+        meaning: 'apricot'
       },
     ],
   },
@@ -11515,12 +11515,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '杜',
         furigana: 'ズ',
-        meaningEn: 'grove', meaning: 'grove'
+        meaning: 'grove'
       },
       {
         word: '杜',
         furigana: 'ズ',
-        meaningEn: 'woods', meaning: 'woods'
+        meaning: 'woods'
       },
     ],
   },
@@ -11534,17 +11534,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '条',
         furigana: 'ジョウ',
-        meaningEn: 'article', meaning: 'article'
+        meaning: 'article'
       },
       {
         word: '条',
         furigana: 'ジョウ',
-        meaningEn: 'clause', meaning: 'clause'
+        meaning: 'clause'
       },
       {
         word: '条',
         furigana: 'ジョウ',
-        meaningEn: 'counter for articles, clauses, paragraphs, etc.', meaning: 'counter for articles, clauses, paragraphs, etc.'
+        meaning: 'counter for articles, clauses, paragraphs, etc.'
       },
     ],
   },
@@ -11558,7 +11558,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '松',
         furigana: 'ショウ',
-        meaningEn: 'pine tree', meaning: 'pine tree'
+        meaning: 'pine tree'
       },
     ],
   },
@@ -11571,17 +11571,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '析',
         furigana: 'セキ',
-        meaningEn: 'analyze', meaning: 'analyze'
+        meaning: 'analyze'
       },
       {
         word: '析',
         furigana: 'セキ',
-        meaningEn: 'chop', meaning: 'chop'
+        meaning: 'chop'
       },
       {
         word: '析',
         furigana: 'セキ',
-        meaningEn: 'divide', meaning: 'divide'
+        meaning: 'divide'
       },
     ],
   },
@@ -11594,17 +11594,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '枠',
         furigana: 'わく',
-        meaningEn: '(kokuji)', meaning: '(kokuji)'
+        meaning: '(kokuji)'
       },
       {
         word: '枠',
         furigana: 'わく',
-        meaningEn: 'bounding-box', meaning: 'bounding-box'
+        meaning: 'bounding-box'
       },
       {
         word: '枠',
         furigana: 'わく',
-        meaningEn: 'frame', meaning: 'frame'
+        meaning: 'frame'
       },
     ],
   },
@@ -11618,17 +11618,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '枢',
         furigana: 'シュ',
-        meaningEn: 'center of things', meaning: 'center of things'
+        meaning: 'center of things'
       },
       {
         word: '枢',
         furigana: 'シュ',
-        meaningEn: 'door', meaning: 'door'
+        meaning: 'door'
       },
       {
         word: '枢',
         furigana: 'シュ',
-        meaningEn: 'hinge', meaning: 'hinge'
+        meaning: 'hinge'
       },
     ],
   },
@@ -11642,17 +11642,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '架',
         furigana: 'カ',
-        meaningEn: 'construct', meaning: 'construct'
+        meaning: 'construct'
       },
       {
         word: '架',
         furigana: 'カ',
-        meaningEn: 'erect', meaning: 'erect'
+        meaning: 'erect'
       },
       {
         word: '架',
         furigana: 'カ',
-        meaningEn: 'frame', meaning: 'frame'
+        meaning: 'frame'
       },
     ],
   },
@@ -11666,17 +11666,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '柄',
         furigana: 'ヘイ',
-        meaningEn: 'build', meaning: 'build'
+        meaning: 'build'
       },
       {
         word: '柄',
         furigana: 'ヘイ',
-        meaningEn: 'character', meaning: 'character'
+        meaning: 'character'
       },
       {
         word: '柄',
         furigana: 'ヘイ',
-        meaningEn: 'crank', meaning: 'crank'
+        meaning: 'crank'
       },
     ],
   },
@@ -11690,7 +11690,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '柊',
         furigana: 'シュ',
-        meaningEn: 'holly', meaning: 'holly'
+        meaning: 'holly'
       },
     ],
   },
@@ -11704,17 +11704,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '某',
         furigana: 'ボウ',
-        meaningEn: 'a certain', meaning: 'a certain'
+        meaning: 'a certain'
       },
       {
         word: '某',
         furigana: 'ボウ',
-        meaningEn: 'one', meaning: 'one'
+        meaning: 'one'
       },
       {
         word: '某',
         furigana: 'ボウ',
-        meaningEn: 'so-and-so', meaning: 'so-and-so'
+        meaning: 'so-and-so'
       },
     ],
   },
@@ -11728,17 +11728,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '染',
         furigana: 'セン',
-        meaningEn: 'color', meaning: 'color'
+        meaning: 'color'
       },
       {
         word: '染',
         furigana: 'セン',
-        meaningEn: 'dye', meaning: 'dye'
+        meaning: 'dye'
       },
       {
         word: '染',
         furigana: 'セン',
-        meaningEn: 'paint', meaning: 'paint'
+        meaning: 'paint'
       },
     ],
   },
@@ -11752,7 +11752,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '柚',
         furigana: 'ジク',
-        meaningEn: 'citron', meaning: 'citron'
+        meaning: 'citron'
       },
     ],
   },
@@ -11766,7 +11766,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '柳',
         furigana: 'リュウ',
-        meaningEn: 'willow', meaning: 'willow'
+        meaning: 'willow'
       },
     ],
   },
@@ -11779,17 +11779,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '柾',
         furigana: 'まさ',
-        meaningEn: '(kokuji)', meaning: '(kokuji)'
+        meaning: '(kokuji)'
       },
       {
         word: '柾',
         furigana: 'まさ',
-        meaningEn: 'spindle tree', meaning: 'spindle tree'
+        meaning: 'spindle tree'
       },
       {
         word: '柾',
         furigana: 'まさ',
-        meaningEn: 'straight grain', meaning: 'straight grain'
+        meaning: 'straight grain'
       },
     ],
   },
@@ -11802,17 +11802,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '栓',
         furigana: 'セン',
-        meaningEn: 'bolt', meaning: 'bolt'
+        meaning: 'bolt'
       },
       {
         word: '栓',
         furigana: 'セン',
-        meaningEn: 'bung', meaning: 'bung'
+        meaning: 'bung'
       },
       {
         word: '栓',
         furigana: 'セン',
-        meaningEn: 'cork', meaning: 'cork'
+        meaning: 'cork'
       },
     ],
   },
@@ -11826,7 +11826,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '栗',
         furigana: 'リ',
-        meaningEn: 'chestnut', meaning: 'chestnut'
+        meaning: 'chestnut'
       },
     ],
   },
@@ -11840,12 +11840,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '栞',
         furigana: 'カン',
-        meaningEn: 'bookmark', meaning: 'bookmark'
+        meaning: 'bookmark'
       },
       {
         word: '栞',
         furigana: 'カン',
-        meaningEn: 'guidebook', meaning: 'guidebook'
+        meaning: 'guidebook'
       },
     ],
   },
@@ -11859,17 +11859,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '株',
         furigana: 'シュ',
-        meaningEn: 'counter for small plants', meaning: 'counter for small plants'
+        meaning: 'counter for small plants'
       },
       {
         word: '株',
         furigana: 'シュ',
-        meaningEn: 'shares', meaning: 'shares'
+        meaning: 'shares'
       },
       {
         word: '株',
         furigana: 'シュ',
-        meaningEn: 'stock', meaning: 'stock'
+        meaning: 'stock'
       },
     ],
   },
@@ -11882,17 +11882,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '核',
         furigana: 'カク',
-        meaningEn: 'core', meaning: 'core'
+        meaning: 'core'
       },
       {
         word: '核',
         furigana: 'カク',
-        meaningEn: 'kernel', meaning: 'kernel'
+        meaning: 'kernel'
       },
       {
         word: '核',
         furigana: 'カク',
-        meaningEn: 'nucleus', meaning: 'nucleus'
+        meaning: 'nucleus'
       },
     ],
   },
@@ -11905,12 +11905,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '栽',
         furigana: 'サイ',
-        meaningEn: 'plantation', meaning: 'plantation'
+        meaning: 'plantation'
       },
       {
         word: '栽',
         furigana: 'サイ',
-        meaningEn: 'planting', meaning: 'planting'
+        meaning: 'planting'
       },
     ],
   },
@@ -11924,12 +11924,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '桂',
         furigana: 'ケイ',
-        meaningEn: 'Japanese Judas-tree', meaning: 'Japanese Judas-tree'
+        meaning: 'Japanese Judas-tree'
       },
       {
         word: '桂',
         furigana: 'ケイ',
-        meaningEn: 'cinnamon tree', meaning: 'cinnamon tree'
+        meaning: 'cinnamon tree'
       },
     ],
   },
@@ -11943,7 +11943,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '桃',
         furigana: 'トウ',
-        meaningEn: 'peach', meaning: 'peach'
+        meaning: 'peach'
       },
     ],
   },
@@ -11957,17 +11957,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '案',
         furigana: 'アン',
-        meaningEn: 'bench', meaning: 'bench'
+        meaning: 'bench'
       },
       {
         word: '案',
         furigana: 'アン',
-        meaningEn: 'draft', meaning: 'draft'
+        meaning: 'draft'
       },
       {
         word: '案',
         furigana: 'アン',
-        meaningEn: 'expectation', meaning: 'expectation'
+        meaning: 'expectation'
       },
     ],
   },
@@ -11981,7 +11981,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '桐',
         furigana: 'トウ',
-        meaningEn: 'paulownia', meaning: 'paulownia'
+        meaning: 'paulownia'
       },
     ],
   },
@@ -11995,7 +11995,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '桑',
         furigana: 'ソウ',
-        meaningEn: 'mulberry', meaning: 'mulberry'
+        meaning: 'mulberry'
       },
     ],
   },
@@ -12009,7 +12009,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '桜',
         furigana: 'オウ',
-        meaningEn: 'cherry', meaning: 'cherry'
+        meaning: 'cherry'
       },
     ],
   },
@@ -12023,17 +12023,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '桟',
         furigana: 'サン',
-        meaningEn: 'bolt (door)', meaning: 'bolt (door)'
+        meaning: 'bolt (door)'
       },
       {
         word: '桟',
         furigana: 'サン',
-        meaningEn: 'cleat', meaning: 'cleat'
+        meaning: 'cleat'
       },
       {
         word: '桟',
         furigana: 'サン',
-        meaningEn: 'frame', meaning: 'frame'
+        meaning: 'frame'
       },
     ],
   },
@@ -12047,7 +12047,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '梅',
         furigana: 'バイ',
-        meaningEn: 'plum', meaning: 'plum'
+        meaning: 'plum'
       },
     ],
   },
@@ -12061,12 +12061,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '梓',
         furigana: 'シ',
-        meaningEn: 'catalpa tree', meaning: 'catalpa tree'
+        meaning: 'catalpa tree'
       },
       {
         word: '梓',
         furigana: 'シ',
-        meaningEn: 'woodblock printing', meaning: 'woodblock printing'
+        meaning: 'woodblock printing'
       },
     ],
   },
@@ -12080,12 +12080,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '梢',
         furigana: 'ショウ',
-        meaningEn: 'treetops', meaning: 'treetops'
+        meaning: 'treetops'
       },
       {
         word: '梢',
         furigana: 'ショウ',
-        meaningEn: 'twig', meaning: 'twig'
+        meaning: 'twig'
       },
     ],
   },
@@ -12099,12 +12099,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '梧',
         furigana: 'ゴ',
-        meaningEn: 'Chinese parasol tree', meaning: 'Chinese parasol tree'
+        meaning: 'Chinese parasol tree'
       },
       {
         word: '梧',
         furigana: 'ゴ',
-        meaningEn: 'phoenix tree', meaning: 'phoenix tree'
+        meaning: 'phoenix tree'
       },
     ],
   },
@@ -12118,7 +12118,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '梨',
         furigana: 'リ',
-        meaningEn: 'pear tree', meaning: 'pear tree'
+        meaning: 'pear tree'
       },
     ],
   },
@@ -12132,17 +12132,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '棄',
         furigana: 'キ',
-        meaningEn: 'abandon', meaning: 'abandon'
+        meaning: 'abandon'
       },
       {
         word: '棄',
         furigana: 'キ',
-        meaningEn: 'discard', meaning: 'discard'
+        meaning: 'discard'
       },
       {
         word: '棄',
         furigana: 'キ',
-        meaningEn: 'reject', meaning: 'reject'
+        meaning: 'reject'
       },
     ],
   },
@@ -12156,17 +12156,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '棋',
         furigana: 'キ',
-        meaningEn: 'Japanese chess', meaning: 'Japanese chess'
+        meaning: 'Japanese chess'
       },
       {
         word: '棋',
         furigana: 'キ',
-        meaningEn: 'chess piece', meaning: 'chess piece'
+        meaning: 'chess piece'
       },
       {
         word: '棋',
         furigana: 'キ',
-        meaningEn: 'shogi', meaning: 'shogi'
+        meaning: 'shogi'
       },
     ],
   },
@@ -12180,17 +12180,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '棚',
         furigana: 'ホウ',
-        meaningEn: 'ledge', meaning: 'ledge'
+        meaning: 'ledge'
       },
       {
         word: '棚',
         furigana: 'ホウ',
-        meaningEn: 'mantle', meaning: 'mantle'
+        meaning: 'mantle'
       },
       {
         word: '棚',
         furigana: 'ホウ',
-        meaningEn: 'mount', meaning: 'mount'
+        meaning: 'mount'
       },
     ],
   },
@@ -12204,12 +12204,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '棟',
         furigana: 'トウ',
-        meaningEn: 'ridge', meaning: 'ridge'
+        meaning: 'ridge'
       },
       {
         word: '棟',
         furigana: 'トウ',
-        meaningEn: 'ridgepole', meaning: 'ridgepole'
+        meaning: 'ridgepole'
       },
     ],
   },
@@ -12222,12 +12222,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '棺',
         furigana: 'カン',
-        meaningEn: 'casket', meaning: 'casket'
+        meaning: 'casket'
       },
       {
         word: '棺',
         furigana: 'カン',
-        meaningEn: 'coffin', meaning: 'coffin'
+        meaning: 'coffin'
       },
     ],
   },
@@ -12241,12 +12241,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '椋',
         furigana: 'リョウ',
-        meaningEn: 'grey starling', meaning: 'grey starling'
+        meaning: 'grey starling'
       },
       {
         word: '椋',
         furigana: 'リョウ',
-        meaningEn: 'type of deciduous tree', meaning: 'type of deciduous tree'
+        meaning: 'type of deciduous tree'
       },
     ],
   },
@@ -12260,17 +12260,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '椎',
         furigana: 'スイ',
-        meaningEn: 'chinquapin', meaning: 'chinquapin'
+        meaning: 'chinquapin'
       },
       {
         word: '椎',
         furigana: 'スイ',
-        meaningEn: 'mallet', meaning: 'mallet'
+        meaning: 'mallet'
       },
       {
         word: '椎',
         furigana: 'スイ',
-        meaningEn: 'spine', meaning: 'spine'
+        meaning: 'spine'
       },
     ],
   },
@@ -12284,12 +12284,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '検',
         furigana: 'ケン',
-        meaningEn: 'examination', meaning: 'examination'
+        meaning: 'examination'
       },
       {
         word: '検',
         furigana: 'ケン',
-        meaningEn: 'investigate', meaning: 'investigate'
+        meaning: 'investigate'
       },
     ],
   },
@@ -12303,7 +12303,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '椰',
         furigana: 'ヤ',
-        meaningEn: 'coconut tree', meaning: 'coconut tree'
+        meaning: 'coconut tree'
       },
     ],
   },
@@ -12317,7 +12317,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '椿',
         furigana: 'チュン',
-        meaningEn: 'camellia', meaning: 'camellia'
+        meaning: 'camellia'
       },
     ],
   },
@@ -12331,7 +12331,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '楊',
         furigana: 'ヨウ',
-        meaningEn: 'willow', meaning: 'willow'
+        meaning: 'willow'
       },
     ],
   },
@@ -12345,7 +12345,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '楓',
         furigana: 'フウ',
-        meaningEn: 'maple', meaning: 'maple'
+        meaning: 'maple'
       },
     ],
   },
@@ -12359,7 +12359,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '楠',
         furigana: 'ゼン',
-        meaningEn: 'camphor tree', meaning: 'camphor tree'
+        meaning: 'camphor tree'
       },
     ],
   },
@@ -12373,17 +12373,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '楼',
         furigana: 'ロウ',
-        meaningEn: 'high building', meaning: 'high building'
+        meaning: 'high building'
       },
       {
         word: '楼',
         furigana: 'ロウ',
-        meaningEn: 'lookout', meaning: 'lookout'
+        meaning: 'lookout'
       },
       {
         word: '楼',
         furigana: 'ロウ',
-        meaningEn: 'watchtower', meaning: 'watchtower'
+        meaning: 'watchtower'
       },
     ],
   },
@@ -12397,17 +12397,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '概',
         furigana: 'ガイ',
-        meaningEn: 'approximation', meaning: 'approximation'
+        meaning: 'approximation'
       },
       {
         word: '概',
         furigana: 'ガイ',
-        meaningEn: 'condition', meaning: 'condition'
+        meaning: 'condition'
       },
       {
         word: '概',
         furigana: 'ガイ',
-        meaningEn: 'generally', meaning: 'generally'
+        meaning: 'generally'
       },
     ],
   },
@@ -12421,12 +12421,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '榛',
         furigana: 'シン',
-        meaningEn: 'filbert', meaning: 'filbert'
+        meaning: 'filbert'
       },
       {
         word: '榛',
         furigana: 'シン',
-        meaningEn: 'hazelnut', meaning: 'hazelnut'
+        meaning: 'hazelnut'
       },
     ],
   },
@@ -12440,12 +12440,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '槙',
         furigana: 'シン',
-        meaningEn: 'ornamental evergreen', meaning: 'ornamental evergreen'
+        meaning: 'ornamental evergreen'
       },
       {
         word: '槙',
         furigana: 'シン',
-        meaningEn: 'twig', meaning: 'twig'
+        meaning: 'twig'
       },
     ],
   },
@@ -12459,7 +12459,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '槻',
         furigana: 'キ',
-        meaningEn: 'Zelkova tree', meaning: 'Zelkova tree'
+        meaning: 'Zelkova tree'
       },
     ],
   },
@@ -12473,17 +12473,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '槽',
         furigana: 'ソウ',
-        meaningEn: 'tank', meaning: 'tank'
+        meaning: 'tank'
       },
       {
         word: '槽',
         furigana: 'ソウ',
-        meaningEn: 'tub', meaning: 'tub'
+        meaning: 'tub'
       },
       {
         word: '槽',
         furigana: 'ソウ',
-        meaningEn: 'vat', meaning: 'vat'
+        meaning: 'vat'
       },
     ],
   },
@@ -12497,17 +12497,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '標',
         furigana: 'ヒョウ',
-        meaningEn: 'emblem', meaning: 'emblem'
+        meaning: 'emblem'
       },
       {
         word: '標',
         furigana: 'ヒョウ',
-        meaningEn: 'evidence', meaning: 'evidence'
+        meaning: 'evidence'
       },
       {
         word: '標',
         furigana: 'ヒョウ',
-        meaningEn: 'imprint', meaning: 'imprint'
+        meaning: 'imprint'
       },
     ],
   },
@@ -12520,17 +12520,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '模',
         furigana: 'ボ',
-        meaningEn: 'copy', meaning: 'copy'
+        meaning: 'copy'
       },
       {
         word: '模',
         furigana: 'ボ',
-        meaningEn: 'imitation', meaning: 'imitation'
+        meaning: 'imitation'
       },
       {
         word: '模',
         furigana: 'ボ',
-        meaningEn: 'mock', meaning: 'mock'
+        meaning: 'mock'
       },
     ],
   },
@@ -12544,17 +12544,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '樹',
         furigana: 'ジュ',
-        meaningEn: 'establish', meaning: 'establish'
+        meaning: 'establish'
       },
       {
         word: '樹',
         furigana: 'ジュ',
-        meaningEn: 'set up', meaning: 'set up'
+        meaning: 'set up'
       },
       {
         word: '樹',
         furigana: 'ジュ',
-        meaningEn: 'timber', meaning: 'timber'
+        meaning: 'timber'
       },
     ],
   },
@@ -12568,12 +12568,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '樺',
         furigana: 'カ',
-        meaningEn: 'birch', meaning: 'birch'
+        meaning: 'birch'
       },
       {
         word: '樺',
         furigana: 'カ',
-        meaningEn: 'dark red', meaning: 'dark red'
+        meaning: 'dark red'
       },
     ],
   },
@@ -12587,7 +12587,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '橘',
         furigana: 'キツ',
-        meaningEn: 'mandarin orange', meaning: 'mandarin orange'
+        meaning: 'mandarin orange'
       },
     ],
   },
@@ -12601,17 +12601,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '檀',
         furigana: 'タン',
-        meaningEn: 'cedar', meaning: 'cedar'
+        meaning: 'cedar'
       },
       {
         word: '檀',
         furigana: 'タン',
-        meaningEn: 'sandalwood', meaning: 'sandalwood'
+        meaning: 'sandalwood'
       },
       {
         word: '檀',
         furigana: 'タン',
-        meaningEn: 'spindle tree', meaning: 'spindle tree'
+        meaning: 'spindle tree'
       },
     ],
   },
@@ -12625,17 +12625,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '欄',
         furigana: 'ラン',
-        meaningEn: 'blank', meaning: 'blank'
+        meaning: 'blank'
       },
       {
         word: '欄',
         furigana: 'ラン',
-        meaningEn: 'column', meaning: 'column'
+        meaning: 'column'
       },
       {
         word: '欄',
         furigana: 'ラン',
-        meaningEn: 'handrail', meaning: 'handrail'
+        meaning: 'handrail'
       },
     ],
   },
@@ -12649,12 +12649,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '欣',
         furigana: 'キン',
-        meaningEn: 'rejoice', meaning: 'rejoice'
+        meaning: 'rejoice'
       },
       {
         word: '欣',
         furigana: 'キン',
-        meaningEn: 'take pleasure in', meaning: 'take pleasure in'
+        meaning: 'take pleasure in'
       },
     ],
   },
@@ -12668,17 +12668,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '欺',
         furigana: 'ギ',
-        meaningEn: 'cheat', meaning: 'cheat'
+        meaning: 'cheat'
       },
       {
         word: '欺',
         furigana: 'ギ',
-        meaningEn: 'deceit', meaning: 'deceit'
+        meaning: 'deceit'
       },
       {
         word: '欺',
         furigana: 'ギ',
-        meaningEn: 'delude', meaning: 'delude'
+        meaning: 'delude'
       },
     ],
   },
@@ -12692,17 +12692,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '欽',
         furigana: 'キン',
-        meaningEn: 'long for', meaning: 'long for'
+        meaning: 'long for'
       },
       {
         word: '欽',
         furigana: 'キン',
-        meaningEn: 'respect', meaning: 'respect'
+        meaning: 'respect'
       },
       {
         word: '欽',
         furigana: 'キン',
-        meaningEn: 'revere', meaning: 'revere'
+        meaning: 'revere'
       },
     ],
   },
@@ -12715,17 +12715,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '款',
         furigana: 'カン',
-        meaningEn: 'article', meaning: 'article'
+        meaning: 'article'
       },
       {
         word: '款',
         furigana: 'カン',
-        meaningEn: 'collusion', meaning: 'collusion'
+        meaning: 'collusion'
       },
       {
         word: '款',
         furigana: 'カン',
-        meaningEn: 'friendship', meaning: 'friendship'
+        meaning: 'friendship'
       },
     ],
   },
@@ -12739,12 +12739,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '歓',
         furigana: 'カン',
-        meaningEn: 'delight', meaning: 'delight'
+        meaning: 'delight'
       },
       {
         word: '歓',
         furigana: 'カン',
-        meaningEn: 'joy', meaning: 'joy'
+        meaning: 'joy'
       },
     ],
   },
@@ -12757,12 +12757,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '殉',
         furigana: 'ジュン',
-        meaningEn: 'follow by resigning', meaning: 'follow by resigning'
+        meaning: 'follow by resigning'
       },
       {
         word: '殉',
         furigana: 'ジュン',
-        meaningEn: 'martyrdom', meaning: 'martyrdom'
+        meaning: 'martyrdom'
       },
     ],
   },
@@ -12776,17 +12776,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '殊',
         furigana: 'シュ',
-        meaningEn: 'especially', meaning: 'especially'
+        meaning: 'especially'
       },
       {
         word: '殊',
         furigana: 'シュ',
-        meaningEn: 'exceptionally', meaning: 'exceptionally'
+        meaning: 'exceptionally'
       },
       {
         word: '殊',
         furigana: 'シュ',
-        meaningEn: 'particularly', meaning: 'particularly'
+        meaning: 'particularly'
       },
     ],
   },
@@ -12800,17 +12800,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '殖',
         furigana: 'ショク',
-        meaningEn: 'augment', meaning: 'augment'
+        meaning: 'augment'
       },
       {
         word: '殖',
         furigana: 'ショク',
-        meaningEn: 'increase', meaning: 'increase'
+        meaning: 'increase'
       },
       {
         word: '殖',
         furigana: 'ショク',
-        meaningEn: 'multiply', meaning: 'multiply'
+        meaning: 'multiply'
       },
     ],
   },
@@ -12824,17 +12824,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '殴',
         furigana: 'オウ',
-        meaningEn: 'assault', meaning: 'assault'
+        meaning: 'assault'
       },
       {
         word: '殴',
         furigana: 'オウ',
-        meaningEn: 'beat', meaning: 'beat'
+        meaning: 'beat'
       },
       {
         word: '殴',
         furigana: 'オウ',
-        meaningEn: 'hit', meaning: 'hit'
+        meaning: 'hit'
       },
     ],
   },
@@ -12848,12 +12848,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '殻',
         furigana: 'カク',
-        meaningEn: 'husk', meaning: 'husk'
+        meaning: 'husk'
       },
       {
         word: '殻',
         furigana: 'カク',
-        meaningEn: 'nut shell', meaning: 'nut shell'
+        meaning: 'nut shell'
       },
     ],
   },
@@ -12867,7 +12867,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '毅',
         furigana: 'キ',
-        meaningEn: 'strong', meaning: 'strong'
+        meaning: 'strong'
       },
     ],
   },
@@ -12881,12 +12881,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '毬',
         furigana: 'キュウ',
-        meaningEn: 'ball', meaning: 'ball'
+        meaning: 'ball'
       },
       {
         word: '毬',
         furigana: 'キュウ',
-        meaningEn: 'burr', meaning: 'burr'
+        meaning: 'burr'
       },
     ],
   },
@@ -12900,17 +12900,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '氏',
         furigana: 'シ',
-        meaningEn: 'clan', meaning: 'clan'
+        meaning: 'clan'
       },
       {
         word: '氏',
         furigana: 'シ',
-        meaningEn: 'family name', meaning: 'family name'
+        meaning: 'family name'
       },
       {
         word: '氏',
         furigana: 'シ',
-        meaningEn: 'surname', meaning: 'surname'
+        meaning: 'surname'
       },
     ],
   },
@@ -12924,17 +12924,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '汁',
         furigana: 'ジュウ',
-        meaningEn: 'broth', meaning: 'broth'
+        meaning: 'broth'
       },
       {
         word: '汁',
         furigana: 'ジュウ',
-        meaningEn: 'gravy', meaning: 'gravy'
+        meaning: 'gravy'
       },
       {
         word: '汁',
         furigana: 'ジュウ',
-        meaningEn: 'juice', meaning: 'juice'
+        meaning: 'juice'
       },
     ],
   },
@@ -12948,17 +12948,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '汐',
         furigana: 'セキ',
-        meaningEn: 'eventide', meaning: 'eventide'
+        meaning: 'eventide'
       },
       {
         word: '汐',
         furigana: 'セキ',
-        meaningEn: 'opportunity', meaning: 'opportunity'
+        meaning: 'opportunity'
       },
       {
         word: '汐',
         furigana: 'セキ',
-        meaningEn: 'salt water', meaning: 'salt water'
+        meaning: 'salt water'
       },
     ],
   },
@@ -12972,17 +12972,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '江',
         furigana: 'コウ',
-        meaningEn: 'bay', meaning: 'bay'
+        meaning: 'bay'
       },
       {
         word: '江',
         furigana: 'コウ',
-        meaningEn: 'creek', meaning: 'creek'
+        meaning: 'creek'
       },
       {
         word: '江',
         furigana: 'コウ',
-        meaningEn: 'inlet', meaning: 'inlet'
+        meaning: 'inlet'
       },
     ],
   },
@@ -12996,17 +12996,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '汰',
         furigana: 'タ',
-        meaningEn: 'filtering', meaning: 'filtering'
+        meaning: 'filtering'
       },
       {
         word: '汰',
         furigana: 'タ',
-        meaningEn: 'luxury', meaning: 'luxury'
+        meaning: 'luxury'
       },
       {
         word: '汰',
         furigana: 'タ',
-        meaningEn: 'sieving', meaning: 'sieving'
+        meaning: 'sieving'
       },
     ],
   },
@@ -13019,12 +13019,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '汽',
         furigana: 'キ',
-        meaningEn: 'steam', meaning: 'steam'
+        meaning: 'steam'
       },
       {
         word: '汽',
         furigana: 'キ',
-        meaningEn: 'vapor', meaning: 'vapor'
+        meaning: 'vapor'
       },
     ],
   },
@@ -13038,17 +13038,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '沖',
         furigana: 'チュウ',
-        meaningEn: 'offing', meaning: 'offing'
+        meaning: 'offing'
       },
       {
         word: '沖',
         furigana: 'チュウ',
-        meaningEn: 'open sea', meaning: 'open sea'
+        meaning: 'open sea'
       },
       {
         word: '沖',
         furigana: 'チュウ',
-        meaningEn: 'rise high into sky', meaning: 'rise high into sky'
+        meaning: 'rise high into sky'
       },
     ],
   },
@@ -13062,7 +13062,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '沙',
         furigana: 'サ',
-        meaningEn: 'sand', meaning: 'sand'
+        meaning: 'sand'
       },
     ],
   },
@@ -13076,17 +13076,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '没',
         furigana: 'ボツ',
-        meaningEn: 'die', meaning: 'die'
+        meaning: 'die'
       },
       {
         word: '没',
         furigana: 'ボツ',
-        meaningEn: 'disappear', meaning: 'disappear'
+        meaning: 'disappear'
       },
       {
         word: '没',
         furigana: 'ボツ',
-        meaningEn: 'drown', meaning: 'drown'
+        meaning: 'drown'
       },
     ],
   },
@@ -13100,17 +13100,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '沢',
         furigana: 'タク',
-        meaningEn: 'brilliance', meaning: 'brilliance'
+        meaning: 'brilliance'
       },
       {
         word: '沢',
         furigana: 'タク',
-        meaningEn: 'grace', meaning: 'grace'
+        meaning: 'grace'
       },
       {
         word: '沢',
         furigana: 'タク',
-        meaningEn: 'marsh', meaning: 'marsh'
+        meaning: 'marsh'
       },
     ],
   },
@@ -13124,17 +13124,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '沼',
         furigana: 'ショウ',
-        meaningEn: 'bog', meaning: 'bog'
+        meaning: 'bog'
       },
       {
         word: '沼',
         furigana: 'ショウ',
-        meaningEn: 'lake', meaning: 'lake'
+        meaning: 'lake'
       },
       {
         word: '沼',
         furigana: 'ショウ',
-        meaningEn: 'marsh', meaning: 'marsh'
+        meaning: 'marsh'
       },
     ],
   },
@@ -13148,17 +13148,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '沿',
         furigana: 'エン',
-        meaningEn: 'follow along', meaning: 'follow along'
+        meaning: 'follow along'
       },
       {
         word: '沿',
         furigana: 'エン',
-        meaningEn: 'lie along', meaning: 'lie along'
+        meaning: 'lie along'
       },
       {
         word: '沿',
         furigana: 'エン',
-        meaningEn: 'run along', meaning: 'run along'
+        meaning: 'run along'
       },
     ],
   },
@@ -13171,17 +13171,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '泌',
         furigana: 'ヒ',
-        meaningEn: 'flow', meaning: 'flow'
+        meaning: 'flow'
       },
       {
         word: '泌',
         furigana: 'ヒ',
-        meaningEn: 'ooze', meaning: 'ooze'
+        meaning: 'ooze'
       },
       {
         word: '泌',
         furigana: 'ヒ',
-        meaningEn: 'penetrate', meaning: 'penetrate'
+        meaning: 'penetrate'
       },
     ],
   },
@@ -13195,17 +13195,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '泡',
         furigana: 'ホウ',
-        meaningEn: 'bubbles', meaning: 'bubbles'
+        meaning: 'bubbles'
       },
       {
         word: '泡',
         furigana: 'ホウ',
-        meaningEn: 'foam', meaning: 'foam'
+        meaning: 'foam'
       },
       {
         word: '泡',
         furigana: 'ホウ',
-        meaningEn: 'froth', meaning: 'froth'
+        meaning: 'froth'
       },
     ],
   },
@@ -13219,17 +13219,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '泣',
         furigana: 'キュウ',
-        meaningEn: 'cry', meaning: 'cry'
+        meaning: 'cry'
       },
       {
         word: '泣',
         furigana: 'キュウ',
-        meaningEn: 'moan', meaning: 'moan'
+        meaning: 'moan'
       },
       {
         word: '泣',
         furigana: 'キュウ',
-        meaningEn: 'weep', meaning: 'weep'
+        meaning: 'weep'
       },
     ],
   },
@@ -13242,17 +13242,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '泰',
         furigana: 'タイ',
-        meaningEn: 'Thailand', meaning: 'Thailand'
+        meaning: 'Thailand'
       },
       {
         word: '泰',
         furigana: 'タイ',
-        meaningEn: 'calm', meaning: 'calm'
+        meaning: 'calm'
       },
       {
         word: '泰',
         furigana: 'タイ',
-        meaningEn: 'easy', meaning: 'easy'
+        meaning: 'easy'
       },
     ],
   },
@@ -13266,17 +13266,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '洞',
         furigana: 'ドウ',
-        meaningEn: 'cave', meaning: 'cave'
+        meaning: 'cave'
       },
       {
         word: '洞',
         furigana: 'ドウ',
-        meaningEn: 'den', meaning: 'den'
+        meaning: 'den'
       },
       {
         word: '洞',
         furigana: 'ドウ',
-        meaningEn: 'excavation', meaning: 'excavation'
+        meaning: 'excavation'
       },
     ],
   },
@@ -13290,17 +13290,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '津',
         furigana: 'シン',
-        meaningEn: 'ferry', meaning: 'ferry'
+        meaning: 'ferry'
       },
       {
         word: '津',
         furigana: 'シン',
-        meaningEn: 'harbor', meaning: 'harbor'
+        meaning: 'harbor'
       },
       {
         word: '津',
         furigana: 'シン',
-        meaningEn: 'haven', meaning: 'haven'
+        meaning: 'haven'
       },
     ],
   },
@@ -13313,17 +13313,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '洪',
         furigana: 'コウ',
-        meaningEn: 'deluge', meaning: 'deluge'
+        meaning: 'deluge'
       },
       {
         word: '洪',
         furigana: 'コウ',
-        meaningEn: 'flood', meaning: 'flood'
+        meaning: 'flood'
       },
       {
         word: '洪',
         furigana: 'コウ',
-        meaningEn: 'vast', meaning: 'vast'
+        meaning: 'vast'
       },
     ],
   },
@@ -13337,17 +13337,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '洲',
         furigana: 'シュウ',
-        meaningEn: 'continent', meaning: 'continent'
+        meaning: 'continent'
       },
       {
         word: '洲',
         furigana: 'シュウ',
-        meaningEn: 'country', meaning: 'country'
+        meaning: 'country'
       },
       {
         word: '洲',
         furigana: 'シュウ',
-        meaningEn: 'island', meaning: 'island'
+        meaning: 'island'
       },
     ],
   },
@@ -13361,12 +13361,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '洵',
         furigana: 'シュン',
-        meaningEn: 'alike', meaning: 'alike'
+        meaning: 'alike'
       },
       {
         word: '洵',
         furigana: 'シュン',
-        meaningEn: 'truth', meaning: 'truth'
+        meaning: 'truth'
       },
     ],
   },
@@ -13379,7 +13379,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '洸',
         furigana: 'コウ',
-        meaningEn: 'sparkling water', meaning: 'sparkling water'
+        meaning: 'sparkling water'
       },
     ],
   },
@@ -13392,17 +13392,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '派',
         furigana: 'ハ',
-        meaningEn: 'clique', meaning: 'clique'
+        meaning: 'clique'
       },
       {
         word: '派',
         furigana: 'ハ',
-        meaningEn: 'faction', meaning: 'faction'
+        meaning: 'faction'
       },
       {
         word: '派',
         furigana: 'ハ',
-        meaningEn: 'group', meaning: 'group'
+        meaning: 'group'
       },
     ],
   },
@@ -13416,17 +13416,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '浄',
         furigana: 'ジョウ',
-        meaningEn: 'Manchu Dynasty', meaning: 'Manchu Dynasty'
+        meaning: 'Manchu Dynasty'
       },
       {
         word: '浄',
         furigana: 'ジョウ',
-        meaningEn: 'clean', meaning: 'clean'
+        meaning: 'clean'
       },
       {
         word: '浄',
         furigana: 'ジョウ',
-        meaningEn: 'cleanse', meaning: 'cleanse'
+        meaning: 'cleanse'
       },
     ],
   },
@@ -13440,17 +13440,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '浜',
         furigana: 'ヒン',
-        meaningEn: 'beach', meaning: 'beach'
+        meaning: 'beach'
       },
       {
         word: '浜',
         furigana: 'ヒン',
-        meaningEn: 'seacoast', meaning: 'seacoast'
+        meaning: 'seacoast'
       },
       {
         word: '浜',
         furigana: 'ヒン',
-        meaningEn: 'seashore', meaning: 'seashore'
+        meaning: 'seashore'
       },
     ],
   },
@@ -13464,17 +13464,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '浦',
         furigana: 'ホ',
-        meaningEn: 'bay', meaning: 'bay'
+        meaning: 'bay'
       },
       {
         word: '浦',
         furigana: 'ホ',
-        meaningEn: 'beach', meaning: 'beach'
+        meaning: 'beach'
       },
       {
         word: '浦',
         furigana: 'ホ',
-        meaningEn: 'creek', meaning: 'creek'
+        meaning: 'creek'
       },
     ],
   },
@@ -13488,17 +13488,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '浩',
         furigana: 'コウ',
-        meaningEn: 'abundance', meaning: 'abundance'
+        meaning: 'abundance'
       },
       {
         word: '浩',
         furigana: 'コウ',
-        meaningEn: 'vigorous', meaning: 'vigorous'
+        meaning: 'vigorous'
       },
       {
         word: '浩',
         furigana: 'コウ',
-        meaningEn: 'wide expanse', meaning: 'wide expanse'
+        meaning: 'wide expanse'
       },
     ],
   },
@@ -13511,17 +13511,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '浪',
         furigana: 'ロウ',
-        meaningEn: 'billows', meaning: 'billows'
+        meaning: 'billows'
       },
       {
         word: '浪',
         furigana: 'ロウ',
-        meaningEn: 'reckless', meaning: 'reckless'
+        meaning: 'reckless'
       },
       {
         word: '浪',
         furigana: 'ロウ',
-        meaningEn: 'unrestrained', meaning: 'unrestrained'
+        meaning: 'unrestrained'
       },
     ],
   },
@@ -13535,17 +13535,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '浸',
         furigana: 'シン',
-        meaningEn: 'dip', meaning: 'dip'
+        meaning: 'dip'
       },
       {
         word: '浸',
         furigana: 'シン',
-        meaningEn: 'dunk', meaning: 'dunk'
+        meaning: 'dunk'
       },
       {
         word: '浸',
         furigana: 'シン',
-        meaningEn: 'immersed', meaning: 'immersed'
+        meaning: 'immersed'
       },
     ],
   },
@@ -13559,17 +13559,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '涯',
         furigana: 'ガイ',
-        meaningEn: 'bound', meaning: 'bound'
+        meaning: 'bound'
       },
       {
         word: '涯',
         furigana: 'ガイ',
-        meaningEn: 'horizon', meaning: 'horizon'
+        meaning: 'horizon'
       },
       {
         word: '涯',
         furigana: 'ガイ',
-        meaningEn: 'limit', meaning: 'limit'
+        meaning: 'limit'
       },
     ],
   },
@@ -13583,17 +13583,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '淑',
         furigana: 'シュク',
-        meaningEn: 'gentle', meaning: 'gentle'
+        meaning: 'gentle'
       },
       {
         word: '淑',
         furigana: 'シュク',
-        meaningEn: 'graceful', meaning: 'graceful'
+        meaning: 'graceful'
       },
       {
         word: '淑',
         furigana: 'シュク',
-        meaningEn: 'pure', meaning: 'pure'
+        meaning: 'pure'
       },
     ],
   },
@@ -13607,17 +13607,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '淡',
         furigana: 'タン',
-        meaningEn: 'faint', meaning: 'faint'
+        meaning: 'faint'
       },
       {
         word: '淡',
         furigana: 'タン',
-        meaningEn: 'fleeting', meaning: 'fleeting'
+        meaning: 'fleeting'
       },
       {
         word: '淡',
         furigana: 'タン',
-        meaningEn: 'pale', meaning: 'pale'
+        meaning: 'pale'
       },
     ],
   },
@@ -13631,7 +13631,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '淳',
         furigana: 'シュン',
-        meaningEn: 'pure', meaning: 'pure'
+        meaning: 'pure'
       },
     ],
   },
@@ -13645,17 +13645,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '添',
         furigana: 'テン',
-        meaningEn: 'accompany', meaning: 'accompany'
+        meaning: 'accompany'
       },
       {
         word: '添',
         furigana: 'テン',
-        meaningEn: 'annexed', meaning: 'annexed'
+        meaning: 'annexed'
       },
       {
         word: '添',
         furigana: 'テン',
-        meaningEn: 'append', meaning: 'append'
+        meaning: 'append'
       },
     ],
   },
@@ -13669,17 +13669,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '渇',
         furigana: 'カツ',
-        meaningEn: 'dry up', meaning: 'dry up'
+        meaning: 'dry up'
       },
       {
         word: '渇',
         furigana: 'カツ',
-        meaningEn: 'parch', meaning: 'parch'
+        meaning: 'parch'
       },
       {
         word: '渇',
         furigana: 'カツ',
-        meaningEn: 'thirst', meaning: 'thirst'
+        meaning: 'thirst'
       },
     ],
   },
@@ -13693,17 +13693,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '渉',
         furigana: 'ショウ',
-        meaningEn: 'ferry', meaning: 'ferry'
+        meaning: 'ferry'
       },
       {
         word: '渉',
         furigana: 'ショウ',
-        meaningEn: 'ford', meaning: 'ford'
+        meaning: 'ford'
       },
       {
         word: '渉',
         furigana: 'ショウ',
-        meaningEn: 'go cross', meaning: 'go cross'
+        meaning: 'go cross'
       },
     ],
   },
@@ -13717,17 +13717,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '渋',
         furigana: 'シュウ',
-        meaningEn: 'astringent', meaning: 'astringent'
+        meaning: 'astringent'
       },
       {
         word: '渋',
         furigana: 'シュウ',
-        meaningEn: 'have diarrhea', meaning: 'have diarrhea'
+        meaning: 'have diarrhea'
       },
       {
         word: '渋',
         furigana: 'シュウ',
-        meaningEn: 'hesitate', meaning: 'hesitate'
+        meaning: 'hesitate'
       },
     ],
   },
@@ -13741,12 +13741,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '渓',
         furigana: 'ケイ',
-        meaningEn: 'mountain stream', meaning: 'mountain stream'
+        meaning: 'mountain stream'
       },
       {
         word: '渓',
         furigana: 'ケイ',
-        meaningEn: 'valley', meaning: 'valley'
+        meaning: 'valley'
       },
     ],
   },
@@ -13760,17 +13760,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '渚',
         furigana: 'ショ',
-        meaningEn: 'beach', meaning: 'beach'
+        meaning: 'beach'
       },
       {
         word: '渚',
         furigana: 'ショ',
-        meaningEn: 'shore', meaning: 'shore'
+        meaning: 'shore'
       },
       {
         word: '渚',
         furigana: 'ショ',
-        meaningEn: 'strand', meaning: 'strand'
+        meaning: 'strand'
       },
     ],
   },
@@ -13784,12 +13784,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '渥',
         furigana: 'アク',
-        meaningEn: 'kindness', meaning: 'kindness'
+        meaning: 'kindness'
       },
       {
         word: '渥',
         furigana: 'アク',
-        meaningEn: 'moisten', meaning: 'moisten'
+        meaning: 'moisten'
       },
     ],
   },
@@ -13803,17 +13803,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '渦',
         furigana: 'カ',
-        meaningEn: 'eddy', meaning: 'eddy'
+        meaning: 'eddy'
       },
       {
         word: '渦',
         furigana: 'カ',
-        meaningEn: 'vortex', meaning: 'vortex'
+        meaning: 'vortex'
       },
       {
         word: '渦',
         furigana: 'カ',
-        meaningEn: 'whirlpool', meaning: 'whirlpool'
+        meaning: 'whirlpool'
       },
     ],
   },
@@ -13827,17 +13827,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '湧',
         furigana: 'ユ',
-        meaningEn: 'boil', meaning: 'boil'
+        meaning: 'boil'
       },
       {
         word: '湧',
         furigana: 'ユ',
-        meaningEn: 'breed', meaning: 'breed'
+        meaning: 'breed'
       },
       {
         word: '湧',
         furigana: 'ユ',
-        meaningEn: 'ferment', meaning: 'ferment'
+        meaning: 'ferment'
       },
     ],
   },
@@ -13851,12 +13851,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '源',
         furigana: 'ゲン',
-        meaningEn: 'origin', meaning: 'origin'
+        meaning: 'origin'
       },
       {
         word: '源',
         furigana: 'ゲン',
-        meaningEn: 'source', meaning: 'source'
+        meaning: 'source'
       },
     ],
   },
@@ -13870,17 +13870,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '溝',
         furigana: 'コウ',
-        meaningEn: '10**32', meaning: '10**32'
+        meaning: '10**32'
       },
       {
         word: '溝',
         furigana: 'コウ',
-        meaningEn: 'ditch', meaning: 'ditch'
+        meaning: 'ditch'
       },
       {
         word: '溝',
         furigana: 'コウ',
-        meaningEn: 'drain', meaning: 'drain'
+        meaning: 'drain'
       },
     ],
   },
@@ -13894,17 +13894,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '滅',
         furigana: 'メツ',
-        meaningEn: 'destroy', meaning: 'destroy'
+        meaning: 'destroy'
       },
       {
         word: '滅',
         furigana: 'メツ',
-        meaningEn: 'overthrow', meaning: 'overthrow'
+        meaning: 'overthrow'
       },
       {
         word: '滅',
         furigana: 'メツ',
-        meaningEn: 'perish', meaning: 'perish'
+        meaning: 'perish'
       },
     ],
   },
@@ -13918,7 +13918,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '滉',
         furigana: 'コウ',
-        meaningEn: 'deep and broad (water)', meaning: 'deep and broad (water)'
+        meaning: 'deep and broad (water)'
       },
     ],
   },
@@ -13931,17 +13931,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '滋',
         furigana: 'シ',
-        meaningEn: 'be luxuriant', meaning: 'be luxuriant'
+        meaning: 'be luxuriant'
       },
       {
         word: '滋',
         furigana: 'シ',
-        meaningEn: 'more & more', meaning: 'more & more'
+        meaning: 'more & more'
       },
       {
         word: '滋',
         furigana: 'シ',
-        meaningEn: 'nourishing', meaning: 'nourishing'
+        meaning: 'nourishing'
       },
     ],
   },
@@ -13955,17 +13955,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '滑',
         furigana: 'カツ',
-        meaningEn: 'fail exam', meaning: 'fail exam'
+        meaning: 'fail exam'
       },
       {
         word: '滑',
         furigana: 'カツ',
-        meaningEn: 'slide', meaning: 'slide'
+        meaning: 'slide'
       },
       {
         word: '滑',
         furigana: 'カツ',
-        meaningEn: 'slip', meaning: 'slip'
+        meaning: 'slip'
       },
     ],
   },
@@ -13979,17 +13979,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '滝',
         furigana: 'ソウ',
-        meaningEn: 'cascade', meaning: 'cascade'
+        meaning: 'cascade'
       },
       {
         word: '滝',
         furigana: 'ソウ',
-        meaningEn: 'rapids', meaning: 'rapids'
+        meaning: 'rapids'
       },
       {
         word: '滝',
         furigana: 'ソウ',
-        meaningEn: 'waterfall', meaning: 'waterfall'
+        meaning: 'waterfall'
       },
     ],
   },
@@ -14003,17 +14003,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '滞',
         furigana: 'タイ',
-        meaningEn: 'arrears', meaning: 'arrears'
+        meaning: 'arrears'
       },
       {
         word: '滞',
         furigana: 'タイ',
-        meaningEn: 'be delayed', meaning: 'be delayed'
+        meaning: 'be delayed'
       },
       {
         word: '滞',
         furigana: 'タイ',
-        meaningEn: 'overdue', meaning: 'overdue'
+        meaning: 'overdue'
       },
     ],
   },
@@ -14027,12 +14027,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '漂',
         furigana: 'ヒョウ',
-        meaningEn: 'drift', meaning: 'drift'
+        meaning: 'drift'
       },
       {
         word: '漂',
         furigana: 'ヒョウ',
-        meaningEn: 'float (on liquid)', meaning: 'float (on liquid)'
+        meaning: 'float (on liquid)'
       },
     ],
   },
@@ -14046,17 +14046,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '漆',
         furigana: 'シツ',
-        meaningEn: 'lacquer', meaning: 'lacquer'
+        meaning: 'lacquer'
       },
       {
         word: '漆',
         furigana: 'シツ',
-        meaningEn: 'seven', meaning: 'seven'
+        meaning: 'seven'
       },
       {
         word: '漆',
         furigana: 'シツ',
-        meaningEn: 'varnish', meaning: 'varnish'
+        meaning: 'varnish'
       },
     ],
   },
@@ -14070,17 +14070,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '漏',
         furigana: 'ロウ',
-        meaningEn: 'escape', meaning: 'escape'
+        meaning: 'escape'
       },
       {
         word: '漏',
         furigana: 'ロウ',
-        meaningEn: 'leak', meaning: 'leak'
+        meaning: 'leak'
       },
       {
         word: '漏',
         furigana: 'ロウ',
-        meaningEn: 'time', meaning: 'time'
+        meaning: 'time'
       },
     ],
   },
@@ -14093,17 +14093,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '漠',
         furigana: 'バク',
-        meaningEn: 'desert', meaning: 'desert'
+        meaning: 'desert'
       },
       {
         word: '漠',
         furigana: 'バク',
-        meaningEn: 'obscure', meaning: 'obscure'
+        meaning: 'obscure'
       },
       {
         word: '漠',
         furigana: 'バク',
-        meaningEn: 'vague', meaning: 'vague'
+        meaning: 'vague'
       },
     ],
   },
@@ -14117,17 +14117,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '漫',
         furigana: 'マン',
-        meaningEn: 'cartoon', meaning: 'cartoon'
+        meaning: 'cartoon'
       },
       {
         word: '漫',
         furigana: 'マン',
-        meaningEn: 'corrupt', meaning: 'corrupt'
+        meaning: 'corrupt'
       },
       {
         word: '漫',
         furigana: 'マン',
-        meaningEn: 'in spite of oneself', meaning: 'in spite of oneself'
+        meaning: 'in spite of oneself'
       },
     ],
   },
@@ -14141,17 +14141,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '漬',
         furigana: 'シ',
-        meaningEn: 'moisten', meaning: 'moisten'
+        meaning: 'moisten'
       },
       {
         word: '漬',
         furigana: 'シ',
-        meaningEn: 'pickling', meaning: 'pickling'
+        meaning: 'pickling'
       },
       {
         word: '漬',
         furigana: 'シ',
-        meaningEn: 'soak', meaning: 'soak'
+        meaning: 'soak'
       },
     ],
   },
@@ -14165,12 +14165,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '漱',
         furigana: 'シュウ',
-        meaningEn: 'gargle', meaning: 'gargle'
+        meaning: 'gargle'
       },
       {
         word: '漱',
         furigana: 'シュウ',
-        meaningEn: 'rinse mouth', meaning: 'rinse mouth'
+        meaning: 'rinse mouth'
       },
     ],
   },
@@ -14184,17 +14184,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '漸',
         furigana: 'ゼン',
-        meaningEn: 'barely', meaning: 'barely'
+        meaning: 'barely'
       },
       {
         word: '漸',
         furigana: 'ゼン',
-        meaningEn: 'finally', meaning: 'finally'
+        meaning: 'finally'
       },
       {
         word: '漸',
         furigana: 'ゼン',
-        meaningEn: 'gradually advancing', meaning: 'gradually advancing'
+        meaning: 'gradually advancing'
       },
     ],
   },
@@ -14208,17 +14208,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '潔',
         furigana: 'ケツ',
-        meaningEn: 'clean', meaning: 'clean'
+        meaning: 'clean'
       },
       {
         word: '潔',
         furigana: 'ケツ',
-        meaningEn: 'gallant', meaning: 'gallant'
+        meaning: 'gallant'
       },
       {
         word: '潔',
         furigana: 'ケツ',
-        meaningEn: 'pure', meaning: 'pure'
+        meaning: 'pure'
       },
     ],
   },
@@ -14232,17 +14232,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '潜',
         furigana: 'セン',
-        meaningEn: 'conceal', meaning: 'conceal'
+        meaning: 'conceal'
       },
       {
         word: '潜',
         furigana: 'セン',
-        meaningEn: 'hide', meaning: 'hide'
+        meaning: 'hide'
       },
       {
         word: '潜',
         furigana: 'セン',
-        meaningEn: 'hush', meaning: 'hush'
+        meaning: 'hush'
       },
     ],
   },
@@ -14256,7 +14256,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '潟',
         furigana: 'セキ',
-        meaningEn: 'lagoon', meaning: 'lagoon'
+        meaning: 'lagoon'
       },
     ],
   },
@@ -14270,17 +14270,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '潤',
         furigana: 'ジュン',
-        meaningEn: 'be watered', meaning: 'be watered'
+        meaning: 'be watered'
       },
       {
         word: '潤',
         furigana: 'ジュン',
-        meaningEn: 'charm', meaning: 'charm'
+        meaning: 'charm'
       },
       {
         word: '潤',
         furigana: 'ジュン',
-        meaningEn: 'favor', meaning: 'favor'
+        meaning: 'favor'
       },
     ],
   },
@@ -14294,17 +14294,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '潮',
         furigana: 'チョウ',
-        meaningEn: 'opportunity', meaning: 'opportunity'
+        meaning: 'opportunity'
       },
       {
         word: '潮',
         furigana: 'チョウ',
-        meaningEn: 'salt water', meaning: 'salt water'
+        meaning: 'salt water'
       },
       {
         word: '潮',
         furigana: 'チョウ',
-        meaningEn: 'tide', meaning: 'tide'
+        meaning: 'tide'
       },
     ],
   },
@@ -14318,17 +14318,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '澄',
         furigana: 'チョウ',
-        meaningEn: 'be clear', meaning: 'be clear'
+        meaning: 'be clear'
       },
       {
         word: '澄',
         furigana: 'チョウ',
-        meaningEn: 'clarify', meaning: 'clarify'
+        meaning: 'clarify'
       },
       {
         word: '澄',
         furigana: 'チョウ',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
     ],
   },
@@ -14342,12 +14342,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '澪',
         furigana: 'レイ',
-        meaningEn: 'shipping channel', meaning: 'shipping channel'
+        meaning: 'shipping channel'
       },
       {
         word: '澪',
         furigana: 'レイ',
-        meaningEn: 'water route', meaning: 'water route'
+        meaning: 'water route'
       },
     ],
   },
@@ -14361,17 +14361,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '激',
         furigana: 'ゲキ',
-        meaningEn: 'chafe', meaning: 'chafe'
+        meaning: 'chafe'
       },
       {
         word: '激',
         furigana: 'ゲキ',
-        meaningEn: 'enraged', meaning: 'enraged'
+        meaning: 'enraged'
       },
       {
         word: '激',
         furigana: 'ゲキ',
-        meaningEn: 'get excited', meaning: 'get excited'
+        meaning: 'get excited'
       },
     ],
   },
@@ -14385,17 +14385,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '濁',
         furigana: 'ジョク',
-        meaningEn: 'impurity', meaning: 'impurity'
+        meaning: 'impurity'
       },
       {
         word: '濁',
         furigana: 'ジョク',
-        meaningEn: 'nigori', meaning: 'nigori'
+        meaning: 'nigori'
       },
       {
         word: '濁',
         furigana: 'ジョク',
-        meaningEn: 'uncleanness', meaning: 'uncleanness'
+        meaning: 'uncleanness'
       },
     ],
   },
@@ -14409,17 +14409,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '濫',
         furigana: 'ラン',
-        meaningEn: 'excessive', meaning: 'excessive'
+        meaning: 'excessive'
       },
       {
         word: '濫',
         furigana: 'ラン',
-        meaningEn: 'overflow', meaning: 'overflow'
+        meaning: 'overflow'
       },
       {
         word: '濫',
         furigana: 'ラン',
-        meaningEn: 'spread out', meaning: 'spread out'
+        meaning: 'spread out'
       },
     ],
   },
@@ -14433,17 +14433,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '瀬',
         furigana: 'ライ',
-        meaningEn: 'current', meaning: 'current'
+        meaning: 'current'
       },
       {
         word: '瀬',
         furigana: 'ライ',
-        meaningEn: 'rapids', meaning: 'rapids'
+        meaning: 'rapids'
       },
       {
         word: '瀬',
         furigana: 'ライ',
-        meaningEn: 'shallows', meaning: 'shallows'
+        meaning: 'shallows'
       },
     ],
   },
@@ -14457,17 +14457,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '災',
         furigana: 'サイ',
-        meaningEn: 'calamity', meaning: 'calamity'
+        meaning: 'calamity'
       },
       {
         word: '災',
         furigana: 'サイ',
-        meaningEn: 'curse', meaning: 'curse'
+        meaning: 'curse'
       },
       {
         word: '災',
         furigana: 'サイ',
-        meaningEn: 'disaster', meaning: 'disaster'
+        meaning: 'disaster'
       },
     ],
   },
@@ -14481,17 +14481,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '炉',
         furigana: 'ロ',
-        meaningEn: 'furnace', meaning: 'furnace'
+        meaning: 'furnace'
       },
       {
         word: '炉',
         furigana: 'ロ',
-        meaningEn: 'hearth', meaning: 'hearth'
+        meaning: 'hearth'
       },
       {
         word: '炉',
         furigana: 'ロ',
-        meaningEn: 'kiln', meaning: 'kiln'
+        meaning: 'kiln'
       },
     ],
   },
@@ -14505,12 +14505,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '炊',
         furigana: 'スイ',
-        meaningEn: 'boil', meaning: 'boil'
+        meaning: 'boil'
       },
       {
         word: '炊',
         furigana: 'スイ',
-        meaningEn: 'cook', meaning: 'cook'
+        meaning: 'cook'
       },
     ],
   },
@@ -14524,17 +14524,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '炎',
         furigana: 'エン',
-        meaningEn: 'blaze', meaning: 'blaze'
+        meaning: 'blaze'
       },
       {
         word: '炎',
         furigana: 'エン',
-        meaningEn: 'flame', meaning: 'flame'
+        meaning: 'flame'
       },
       {
         word: '炎',
         furigana: 'エン',
-        meaningEn: 'inflammation', meaning: 'inflammation'
+        meaning: 'inflammation'
       },
     ],
   },
@@ -14548,17 +14548,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '為',
         furigana: 'イ',
-        meaningEn: 'advantage', meaning: 'advantage'
+        meaning: 'advantage'
       },
       {
         word: '為',
         furigana: 'イ',
-        meaningEn: 'as a result of', meaning: 'as a result of'
+        meaning: 'as a result of'
       },
       {
         word: '為',
         furigana: 'イ',
-        meaningEn: 'be of use', meaning: 'be of use'
+        meaning: 'be of use'
       },
     ],
   },
@@ -14572,17 +14572,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '烈',
         furigana: 'レツ',
-        meaningEn: 'ardent', meaning: 'ardent'
+        meaning: 'ardent'
       },
       {
         word: '烈',
         furigana: 'レツ',
-        meaningEn: 'extreme', meaning: 'extreme'
+        meaning: 'extreme'
       },
       {
         word: '烈',
         furigana: 'レツ',
-        meaningEn: 'furious', meaning: 'furious'
+        meaning: 'furious'
       },
     ],
   },
@@ -14596,17 +14596,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '焦',
         furigana: 'ショウ',
-        meaningEn: 'burn', meaning: 'burn'
+        meaning: 'burn'
       },
       {
         word: '焦',
         furigana: 'ショウ',
-        meaningEn: 'char', meaning: 'char'
+        meaning: 'char'
       },
       {
         word: '焦',
         furigana: 'ショウ',
-        meaningEn: 'hurry', meaning: 'hurry'
+        meaning: 'hurry'
       },
     ],
   },
@@ -14620,17 +14620,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '煩',
         furigana: 'ハン',
-        meaningEn: 'annoy', meaning: 'annoy'
+        meaning: 'annoy'
       },
       {
         word: '煩',
         furigana: 'ハン',
-        meaningEn: 'anxiety', meaning: 'anxiety'
+        meaning: 'anxiety'
       },
       {
         word: '煩',
         furigana: 'ハン',
-        meaningEn: 'ill', meaning: 'ill'
+        meaning: 'ill'
       },
     ],
   },
@@ -14644,12 +14644,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '煮',
         furigana: 'シャ',
-        meaningEn: 'boil', meaning: 'boil'
+        meaning: 'boil'
       },
       {
         word: '煮',
         furigana: 'シャ',
-        meaningEn: 'cook', meaning: 'cook'
+        meaning: 'cook'
       },
     ],
   },
@@ -14663,7 +14663,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '熊',
         furigana: 'ユウ',
-        meaningEn: 'bear', meaning: 'bear'
+        meaning: 'bear'
       },
     ],
   },
@@ -14677,17 +14677,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '熙',
         furigana: 'キ',
-        meaningEn: 'bright', meaning: 'bright'
+        meaning: 'bright'
       },
       {
         word: '熙',
         furigana: 'キ',
-        meaningEn: 'merry', meaning: 'merry'
+        meaning: 'merry'
       },
       {
         word: '熙',
         furigana: 'キ',
-        meaningEn: 'prosperous', meaning: 'prosperous'
+        meaning: 'prosperous'
       },
     ],
   },
@@ -14701,17 +14701,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '熟',
         furigana: 'ジュク',
-        meaningEn: 'acquire skill', meaning: 'acquire skill'
+        meaning: 'acquire skill'
       },
       {
         word: '熟',
         furigana: 'ジュク',
-        meaningEn: 'mature', meaning: 'mature'
+        meaning: 'mature'
       },
       {
         word: '熟',
         furigana: 'ジュク',
-        meaningEn: 'mellow', meaning: 'mellow'
+        meaning: 'mellow'
       },
     ],
   },
@@ -14725,12 +14725,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '燎',
         furigana: 'リョウ',
-        meaningEn: 'bonfire', meaning: 'bonfire'
+        meaning: 'bonfire'
       },
       {
         word: '燎',
         furigana: 'リョウ',
-        meaningEn: 'burn', meaning: 'burn'
+        meaning: 'burn'
       },
     ],
   },
@@ -14744,7 +14744,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '燦',
         furigana: 'サン',
-        meaningEn: 'brilliant', meaning: 'brilliant'
+        meaning: 'brilliant'
       },
     ],
   },
@@ -14758,7 +14758,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '燿',
         furigana: 'ヨウ',
-        meaningEn: 'shine', meaning: 'shine'
+        meaning: 'shine'
       },
     ],
   },
@@ -14771,17 +14771,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '爵',
         furigana: 'シャク',
-        meaningEn: 'baron', meaning: 'baron'
+        meaning: 'baron'
       },
       {
         word: '爵',
         furigana: 'シャク',
-        meaningEn: 'court rank', meaning: 'court rank'
+        meaning: 'court rank'
       },
       {
         word: '爵',
         furigana: 'シャク',
-        meaningEn: 'peerage', meaning: 'peerage'
+        meaning: 'peerage'
       },
     ],
   },
@@ -14795,17 +14795,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '爽',
         furigana: 'ソウ',
-        meaningEn: 'bracing', meaning: 'bracing'
+        meaning: 'bracing'
       },
       {
         word: '爽',
         furigana: 'ソウ',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
       {
         word: '爽',
         furigana: 'ソウ',
-        meaningEn: 'refreshing', meaning: 'refreshing'
+        meaning: 'refreshing'
       },
     ],
   },
@@ -14819,17 +14819,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '爾',
         furigana: 'ジ',
-        meaningEn: 'second person', meaning: 'second person'
+        meaning: 'second person'
       },
       {
         word: '爾',
         furigana: 'ジ',
-        meaningEn: 'thou', meaning: 'thou'
+        meaning: 'thou'
       },
       {
         word: '爾',
         furigana: 'ジ',
-        meaningEn: 'you', meaning: 'you'
+        meaning: 'you'
       },
     ],
   },
@@ -14843,17 +14843,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '牧',
         furigana: 'ボク',
-        meaningEn: 'breed', meaning: 'breed'
+        meaning: 'breed'
       },
       {
         word: '牧',
         furigana: 'ボク',
-        meaningEn: 'care for', meaning: 'care for'
+        meaning: 'care for'
       },
       {
         word: '牧',
         furigana: 'ボク',
-        meaningEn: 'feed', meaning: 'feed'
+        meaning: 'feed'
       },
     ],
   },
@@ -14866,12 +14866,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '牲',
         furigana: 'セイ',
-        meaningEn: 'animal sacrifice', meaning: 'animal sacrifice'
+        meaning: 'animal sacrifice'
       },
       {
         word: '牲',
         furigana: 'セイ',
-        meaningEn: 'offering', meaning: 'offering'
+        meaning: 'offering'
       },
     ],
   },
@@ -14885,7 +14885,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '犠',
         furigana: 'キ',
-        meaningEn: 'sacrifice', meaning: 'sacrifice'
+        meaning: 'sacrifice'
       },
     ],
   },
@@ -14899,17 +14899,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '狂',
         furigana: 'キョウ',
-        meaningEn: 'confuse', meaning: 'confuse'
+        meaning: 'confuse'
       },
       {
         word: '狂',
         furigana: 'キョウ',
-        meaningEn: 'crazy', meaning: 'crazy'
+        meaning: 'crazy'
       },
       {
         word: '狂',
         furigana: 'キョウ',
-        meaningEn: 'insane', meaning: 'insane'
+        meaning: 'insane'
       },
     ],
   },
@@ -14923,17 +14923,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '狩',
         furigana: 'シュ',
-        meaningEn: 'gather', meaning: 'gather'
+        meaning: 'gather'
       },
       {
         word: '狩',
         furigana: 'シュ',
-        meaningEn: 'hunt', meaning: 'hunt'
+        meaning: 'hunt'
       },
       {
         word: '狩',
         furigana: 'シュ',
-        meaningEn: 'raid', meaning: 'raid'
+        meaning: 'raid'
       },
     ],
   },
@@ -14947,17 +14947,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '独',
         furigana: 'トク',
-        meaningEn: 'Germany', meaning: 'Germany'
+        meaning: 'Germany'
       },
       {
         word: '独',
         furigana: 'トク',
-        meaningEn: 'alone', meaning: 'alone'
+        meaning: 'alone'
       },
       {
         word: '独',
         furigana: 'トク',
-        meaningEn: 'single', meaning: 'single'
+        meaning: 'single'
       },
     ],
   },
@@ -14971,17 +14971,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '狭',
         furigana: 'キョウ',
-        meaningEn: 'contract', meaning: 'contract'
+        meaning: 'contract'
       },
       {
         word: '狭',
         furigana: 'キョウ',
-        meaningEn: 'cramped', meaning: 'cramped'
+        meaning: 'cramped'
       },
       {
         word: '狭',
         furigana: 'キョウ',
-        meaningEn: 'narrow', meaning: 'narrow'
+        meaning: 'narrow'
       },
     ],
   },
@@ -14994,17 +14994,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '猛',
         furigana: 'モウ',
-        meaningEn: 'become furious', meaning: 'become furious'
+        meaning: 'become furious'
       },
       {
         word: '猛',
         furigana: 'モウ',
-        meaningEn: 'fierce', meaning: 'fierce'
+        meaning: 'fierce'
       },
       {
         word: '猛',
         furigana: 'モウ',
-        meaningEn: 'rave', meaning: 'rave'
+        meaning: 'rave'
       },
     ],
   },
@@ -15018,17 +15018,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '猟',
         furigana: 'リョウ',
-        meaningEn: 'bag', meaning: 'bag'
+        meaning: 'bag'
       },
       {
         word: '猟',
         furigana: 'リョウ',
-        meaningEn: 'game', meaning: 'game'
+        meaning: 'game'
       },
       {
         word: '猟',
         furigana: 'リョウ',
-        meaningEn: 'game-hunting', meaning: 'game-hunting'
+        meaning: 'game-hunting'
       },
     ],
   },
@@ -15042,7 +15042,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '猪',
         furigana: 'チョ',
-        meaningEn: 'boar', meaning: 'boar'
+        meaning: 'boar'
       },
     ],
   },
@@ -15056,17 +15056,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '献',
         furigana: 'ケン',
-        meaningEn: 'counter for drinks', meaning: 'counter for drinks'
+        meaning: 'counter for drinks'
       },
       {
         word: '献',
         furigana: 'ケン',
-        meaningEn: 'offer', meaning: 'offer'
+        meaning: 'offer'
       },
       {
         word: '献',
         furigana: 'ケン',
-        meaningEn: 'offering', meaning: 'offering'
+        meaning: 'offering'
       },
     ],
   },
@@ -15080,17 +15080,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '猶',
         furigana: 'ユ',
-        meaningEn: 'furthermore', meaning: 'furthermore'
+        meaning: 'furthermore'
       },
       {
         word: '猶',
         furigana: 'ユ',
-        meaningEn: 'still', meaning: 'still'
+        meaning: 'still'
       },
       {
         word: '猶',
         furigana: 'ユ',
-        meaningEn: 'yet', meaning: 'yet'
+        meaning: 'yet'
       },
     ],
   },
@@ -15104,7 +15104,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '猿',
         furigana: 'エン',
-        meaningEn: 'monkey', meaning: 'monkey'
+        meaning: 'monkey'
       },
     ],
   },
@@ -15117,12 +15117,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '獄',
         furigana: 'ゴク',
-        meaningEn: 'jail', meaning: 'jail'
+        meaning: 'jail'
       },
       {
         word: '獄',
         furigana: 'ゴク',
-        meaningEn: 'prison', meaning: 'prison'
+        meaning: 'prison'
       },
     ],
   },
@@ -15136,12 +15136,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '獣',
         furigana: 'ジュウ',
-        meaningEn: 'animal', meaning: 'animal'
+        meaning: 'animal'
       },
       {
         word: '獣',
         furigana: 'ジュウ',
-        meaningEn: 'beast', meaning: 'beast'
+        meaning: 'beast'
       },
     ],
   },
@@ -15155,17 +15155,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '獲',
         furigana: 'カク',
-        meaningEn: 'able to', meaning: 'able to'
+        meaning: 'able to'
       },
       {
         word: '獲',
         furigana: 'カク',
-        meaningEn: 'acquire', meaning: 'acquire'
+        meaning: 'acquire'
       },
       {
         word: '獲',
         furigana: 'カク',
-        meaningEn: 'can', meaning: 'can'
+        meaning: 'can'
       },
     ],
   },
@@ -15179,17 +15179,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '玄',
         furigana: 'ゲン',
-        meaningEn: 'black', meaning: 'black'
+        meaning: 'black'
       },
       {
         word: '玄',
         furigana: 'ゲン',
-        meaningEn: 'deep', meaning: 'deep'
+        meaning: 'deep'
       },
       {
         word: '玄',
         furigana: 'ゲン',
-        meaningEn: 'mysterious', meaning: 'mysterious'
+        meaning: 'mysterious'
       },
     ],
   },
@@ -15203,17 +15203,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '率',
         furigana: 'シュツ',
-        meaningEn: '%', meaning: '%'
+        meaning: '%'
       },
       {
         word: '率',
         furigana: 'シュツ',
-        meaningEn: 'command', meaning: 'command'
+        meaning: 'command'
       },
       {
         word: '率',
         furigana: 'シュツ',
-        meaningEn: 'factor', meaning: 'factor'
+        meaning: 'factor'
       },
     ],
   },
@@ -15226,12 +15226,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '玖',
         furigana: 'キュウ',
-        meaningEn: 'beautiful black jewel', meaning: 'beautiful black jewel'
+        meaning: 'beautiful black jewel'
       },
       {
         word: '玖',
         furigana: 'キュウ',
-        meaningEn: 'nine', meaning: 'nine'
+        meaning: 'nine'
       },
     ],
   },
@@ -15244,7 +15244,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '玲',
         furigana: 'レイ',
-        meaningEn: 'sound of jewels', meaning: 'sound of jewels'
+        meaning: 'sound of jewels'
       },
     ],
   },
@@ -15258,17 +15258,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '珠',
         furigana: 'シュ',
-        meaningEn: 'gem', meaning: 'gem'
+        meaning: 'gem'
       },
       {
         word: '珠',
         furigana: 'シュ',
-        meaningEn: 'jewel', meaning: 'jewel'
+        meaning: 'jewel'
       },
       {
         word: '珠',
         furigana: 'シュ',
-        meaningEn: 'pearl', meaning: 'pearl'
+        meaning: 'pearl'
       },
     ],
   },
@@ -15281,17 +15281,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '班',
         furigana: 'ハン',
-        meaningEn: 'corps', meaning: 'corps'
+        meaning: 'corps'
       },
       {
         word: '班',
         furigana: 'ハン',
-        meaningEn: 'group', meaning: 'group'
+        meaning: 'group'
       },
       {
         word: '班',
         furigana: 'ハン',
-        meaningEn: 'squad', meaning: 'squad'
+        meaning: 'squad'
       },
     ],
   },
@@ -15304,17 +15304,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '琉',
         furigana: 'リュウ',
-        meaningEn: 'gem', meaning: 'gem'
+        meaning: 'gem'
       },
       {
         word: '琉',
         furigana: 'リュウ',
-        meaningEn: 'lapis lazuli', meaning: 'lapis lazuli'
+        meaning: 'lapis lazuli'
       },
       {
         word: '琉',
         furigana: 'リュウ',
-        meaningEn: 'precious stone', meaning: 'precious stone'
+        meaning: 'precious stone'
       },
     ],
   },
@@ -15328,7 +15328,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '琢',
         furigana: 'タク',
-        meaningEn: 'polish', meaning: 'polish'
+        meaning: 'polish'
       },
     ],
   },
@@ -15341,12 +15341,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '琳',
         furigana: 'リン',
-        meaningEn: 'jewel', meaning: 'jewel'
+        meaning: 'jewel'
       },
       {
         word: '琳',
         furigana: 'リン',
-        meaningEn: 'tinkling of jewelry', meaning: 'tinkling of jewelry'
+        meaning: 'tinkling of jewelry'
       },
     ],
   },
@@ -15360,12 +15360,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '琴',
         furigana: 'キン',
-        meaningEn: 'harp', meaning: 'harp'
+        meaning: 'harp'
       },
       {
         word: '琴',
         furigana: 'キン',
-        meaningEn: 'koto', meaning: 'koto'
+        meaning: 'koto'
       },
     ],
   },
@@ -15378,12 +15378,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '瑚',
         furigana: 'コ',
-        meaningEn: 'ancestral offering receptacle', meaning: 'ancestral offering receptacle'
+        meaning: 'ancestral offering receptacle'
       },
       {
         word: '瑚',
         furigana: 'コ',
-        meaningEn: 'coral', meaning: 'coral'
+        meaning: 'coral'
       },
     ],
   },
@@ -15396,12 +15396,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '瑛',
         furigana: 'エイ',
-        meaningEn: 'crystal', meaning: 'crystal'
+        meaning: 'crystal'
       },
       {
         word: '瑛',
         furigana: 'エイ',
-        meaningEn: 'sparkle of jewelry', meaning: 'sparkle of jewelry'
+        meaning: 'sparkle of jewelry'
       },
     ],
   },
@@ -15415,7 +15415,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '瑞',
         furigana: 'スイ',
-        meaningEn: 'congratulations', meaning: 'congratulations'
+        meaning: 'congratulations'
       },
     ],
   },
@@ -15428,7 +15428,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '瑠',
         furigana: 'リュウ',
-        meaningEn: 'lapis lazuli', meaning: 'lapis lazuli'
+        meaning: 'lapis lazuli'
       },
     ],
   },
@@ -15442,17 +15442,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '瑳',
         furigana: 'サ',
-        meaningEn: 'artful smile', meaning: 'artful smile'
+        meaning: 'artful smile'
       },
       {
         word: '瑳',
         furigana: 'サ',
-        meaningEn: 'brilliant white luster of a gem', meaning: 'brilliant white luster of a gem'
+        meaning: 'brilliant white luster of a gem'
       },
       {
         word: '瑳',
         furigana: 'サ',
-        meaningEn: 'polish', meaning: 'polish'
+        meaning: 'polish'
       },
     ],
   },
@@ -15466,7 +15466,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '瑶',
         furigana: 'ヨウ',
-        meaningEn: 'beautiful as a jewel', meaning: 'beautiful as a jewel'
+        meaning: 'beautiful as a jewel'
       },
     ],
   },
@@ -15479,12 +15479,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '璃',
         furigana: 'リ',
-        meaningEn: 'glassy', meaning: 'glassy'
+        meaning: 'glassy'
       },
       {
         word: '璃',
         furigana: 'リ',
-        meaningEn: 'lapis lazuli', meaning: 'lapis lazuli'
+        meaning: 'lapis lazuli'
       },
     ],
   },
@@ -15498,17 +15498,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '環',
         furigana: 'カン',
-        meaningEn: 'circle', meaning: 'circle'
+        meaning: 'circle'
       },
       {
         word: '環',
         furigana: 'カン',
-        meaningEn: 'loop', meaning: 'loop'
+        meaning: 'loop'
       },
       {
         word: '環',
         furigana: 'カン',
-        meaningEn: 'ring', meaning: 'ring'
+        meaning: 'ring'
       },
     ],
   },
@@ -15522,17 +15522,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '甚',
         furigana: 'ジン',
-        meaningEn: 'exceedingly', meaning: 'exceedingly'
+        meaning: 'exceedingly'
       },
       {
         word: '甚',
         furigana: 'ジン',
-        meaningEn: 'great', meaning: 'great'
+        meaning: 'great'
       },
       {
         word: '甚',
         furigana: 'ジン',
-        meaningEn: 'tremendously', meaning: 'tremendously'
+        meaning: 'tremendously'
       },
     ],
   },
@@ -15546,12 +15546,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '甫',
         furigana: 'フ',
-        meaningEn: 'for the first time', meaning: 'for the first time'
+        meaning: 'for the first time'
       },
       {
         word: '甫',
         furigana: 'フ',
-        meaningEn: 'not until', meaning: 'not until'
+        meaning: 'not until'
       },
     ],
   },
@@ -15565,17 +15565,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '甲',
         furigana: 'カン',
-        meaningEn: 'A grade', meaning: 'A grade'
+        meaning: 'A grade'
       },
       {
         word: '甲',
         furigana: 'カン',
-        meaningEn: 'armor', meaning: 'armor'
+        meaning: 'armor'
       },
       {
         word: '甲',
         furigana: 'カン',
-        meaningEn: 'carapace', meaning: 'carapace'
+        meaning: 'carapace'
       },
     ],
   },
@@ -15589,12 +15589,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '畔',
         furigana: 'ハン',
-        meaningEn: 'levee', meaning: 'levee'
+        meaning: 'levee'
       },
       {
         word: '畔',
         furigana: 'ハン',
-        meaningEn: 'paddy ridge', meaning: 'paddy ridge'
+        meaning: 'paddy ridge'
       },
     ],
   },
@@ -15608,17 +15608,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '畝',
         furigana: 'ホ',
-        meaningEn: 'furrow', meaning: 'furrow'
+        meaning: 'furrow'
       },
       {
         word: '畝',
         furigana: 'ホ',
-        meaningEn: 'rib', meaning: 'rib'
+        meaning: 'rib'
       },
       {
         word: '畝',
         furigana: 'ホ',
-        meaningEn: 'ridge', meaning: 'ridge'
+        meaning: 'ridge'
       },
     ],
   },
@@ -15632,17 +15632,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '異',
         furigana: 'イ',
-        meaningEn: 'curious', meaning: 'curious'
+        meaning: 'curious'
       },
       {
         word: '異',
         furigana: 'イ',
-        meaningEn: 'different', meaning: 'different'
+        meaning: 'different'
       },
       {
         word: '異',
         furigana: 'イ',
-        meaningEn: 'queerness', meaning: 'queerness'
+        meaning: 'queerness'
       },
     ],
   },
@@ -15656,17 +15656,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '疎',
         furigana: 'ショ',
-        meaningEn: 'alienate', meaning: 'alienate'
+        meaning: 'alienate'
       },
       {
         word: '疎',
         furigana: 'ショ',
-        meaningEn: 'neglect', meaning: 'neglect'
+        meaning: 'neglect'
       },
       {
         word: '疎',
         furigana: 'ショ',
-        meaningEn: 'penetrate', meaning: 'penetrate'
+        meaning: 'penetrate'
       },
     ],
   },
@@ -15679,7 +15679,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '疫',
         furigana: 'エキ',
-        meaningEn: 'epidemic', meaning: 'epidemic'
+        meaning: 'epidemic'
       },
     ],
   },
@@ -15693,7 +15693,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '疾',
         furigana: 'シツ',
-        meaningEn: 'rapidly', meaning: 'rapidly'
+        meaning: 'rapidly'
       },
     ],
   },
@@ -15706,12 +15706,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '症',
         furigana: 'ショウ',
-        meaningEn: 'illness', meaning: 'illness'
+        meaning: 'illness'
       },
       {
         word: '症',
         furigana: 'ショウ',
-        meaningEn: 'symptoms', meaning: 'symptoms'
+        meaning: 'symptoms'
       },
     ],
   },
@@ -15724,12 +15724,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '痘',
         furigana: 'トウ',
-        meaningEn: 'pox', meaning: 'pox'
+        meaning: 'pox'
       },
       {
         word: '痘',
         furigana: 'トウ',
-        meaningEn: 'smallpox', meaning: 'smallpox'
+        meaning: 'smallpox'
       },
     ],
   },
@@ -15742,7 +15742,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '痢',
         furigana: 'リ',
-        meaningEn: 'diarrhea', meaning: 'diarrhea'
+        meaning: 'diarrhea'
       },
     ],
   },
@@ -15756,12 +15756,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '痴',
         furigana: 'チ',
-        meaningEn: 'foolish', meaning: 'foolish'
+        meaning: 'foolish'
       },
       {
         word: '痴',
         furigana: 'チ',
-        meaningEn: 'stupid', meaning: 'stupid'
+        meaning: 'stupid'
       },
     ],
   },
@@ -15775,17 +15775,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '癒',
         furigana: 'ユ',
-        meaningEn: 'cure', meaning: 'cure'
+        meaning: 'cure'
       },
       {
         word: '癒',
         furigana: 'ユ',
-        meaningEn: 'healing', meaning: 'healing'
+        meaning: 'healing'
       },
       {
         word: '癒',
         furigana: 'ユ',
-        meaningEn: 'quench (thirst)', meaning: 'quench (thirst)'
+        meaning: 'quench (thirst)'
       },
     ],
   },
@@ -15799,17 +15799,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '癖',
         furigana: 'ヘキ',
-        meaningEn: 'fault', meaning: 'fault'
+        meaning: 'fault'
       },
       {
         word: '癖',
         furigana: 'ヘキ',
-        meaningEn: 'habit', meaning: 'habit'
+        meaning: 'habit'
       },
       {
         word: '癖',
         furigana: 'ヘキ',
-        meaningEn: 'kink', meaning: 'kink'
+        meaning: 'kink'
       },
     ],
   },
@@ -15822,7 +15822,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '皇',
         furigana: 'オウ',
-        meaningEn: 'emperor', meaning: 'emperor'
+        meaning: 'emperor'
       },
     ],
   },
@@ -15836,12 +15836,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '皐',
         furigana: 'コウ',
-        meaningEn: 'shore', meaning: 'shore'
+        meaning: 'shore'
       },
       {
         word: '皐',
         furigana: 'コウ',
-        meaningEn: 'swamp', meaning: 'swamp'
+        meaning: 'swamp'
       },
     ],
   },
@@ -15855,12 +15855,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '皓',
         furigana: 'コウ',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
       {
         word: '皓',
         furigana: 'コウ',
-        meaningEn: 'white', meaning: 'white'
+        meaning: 'white'
       },
     ],
   },
@@ -15873,17 +15873,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '盆',
         furigana: 'ボン',
-        meaningEn: 'basin', meaning: 'basin'
+        meaning: 'basin'
       },
       {
         word: '盆',
         furigana: 'ボン',
-        meaningEn: 'lantern festival', meaning: 'lantern festival'
+        meaning: 'lantern festival'
       },
       {
         word: '盆',
         furigana: 'ボン',
-        meaningEn: 'tray', meaning: 'tray'
+        meaning: 'tray'
       },
     ],
   },
@@ -15897,17 +15897,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '益',
         furigana: 'エキ',
-        meaningEn: 'advantage', meaning: 'advantage'
+        meaning: 'advantage'
       },
       {
         word: '益',
         furigana: 'エキ',
-        meaningEn: 'benefit', meaning: 'benefit'
+        meaning: 'benefit'
       },
       {
         word: '益',
         furigana: 'エキ',
-        meaningEn: 'gain', meaning: 'gain'
+        meaning: 'gain'
       },
     ],
   },
@@ -15921,17 +15921,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '盛',
         furigana: 'ジョウ',
-        meaningEn: 'boom', meaning: 'boom'
+        meaning: 'boom'
       },
       {
         word: '盛',
         furigana: 'ジョウ',
-        meaningEn: 'copulate', meaning: 'copulate'
+        meaning: 'copulate'
       },
       {
         word: '盛',
         furigana: 'ジョウ',
-        meaningEn: 'prosper', meaning: 'prosper'
+        meaning: 'prosper'
       },
     ],
   },
@@ -15944,12 +15944,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '盟',
         furigana: 'メイ',
-        meaningEn: 'alliance', meaning: 'alliance'
+        meaning: 'alliance'
       },
       {
         word: '盟',
         furigana: 'メイ',
-        meaningEn: 'oath', meaning: 'oath'
+        meaning: 'oath'
       },
     ],
   },
@@ -15962,17 +15962,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '監',
         furigana: 'カン',
-        meaningEn: 'administer', meaning: 'administer'
+        meaning: 'administer'
       },
       {
         word: '監',
         furigana: 'カン',
-        meaningEn: 'govt office', meaning: 'govt office'
+        meaning: 'govt office'
       },
       {
         word: '監',
         furigana: 'カン',
-        meaningEn: 'official', meaning: 'official'
+        meaning: 'official'
       },
     ],
   },
@@ -15985,17 +15985,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '盤',
         furigana: 'バン',
-        meaningEn: 'board', meaning: 'board'
+        meaning: 'board'
       },
       {
         word: '盤',
         furigana: 'バン',
-        meaningEn: 'phonograph record', meaning: 'phonograph record'
+        meaning: 'phonograph record'
       },
       {
         word: '盤',
         furigana: 'バン',
-        meaningEn: 'platter', meaning: 'platter'
+        meaning: 'platter'
       },
     ],
   },
@@ -16009,17 +16009,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '盲',
         furigana: 'モウ',
-        meaningEn: 'blind', meaning: 'blind'
+        meaning: 'blind'
       },
       {
         word: '盲',
         furigana: 'モウ',
-        meaningEn: 'blind man', meaning: 'blind man'
+        meaning: 'blind man'
       },
       {
         word: '盲',
         furigana: 'モウ',
-        meaningEn: 'ignoramus', meaning: 'ignoramus'
+        meaning: 'ignoramus'
       },
     ],
   },
@@ -16033,17 +16033,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '盾',
         furigana: 'ジュン',
-        meaningEn: 'escutcheon', meaning: 'escutcheon'
+        meaning: 'escutcheon'
       },
       {
         word: '盾',
         furigana: 'ジュン',
-        meaningEn: 'pretext', meaning: 'pretext'
+        meaning: 'pretext'
       },
       {
         word: '盾',
         furigana: 'ジュン',
-        meaningEn: 'shield', meaning: 'shield'
+        meaning: 'shield'
       },
     ],
   },
@@ -16057,7 +16057,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '眉',
         furigana: 'ビ',
-        meaningEn: 'eyebrow', meaning: 'eyebrow'
+        meaning: 'eyebrow'
       },
     ],
   },
@@ -16071,12 +16071,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '看',
         furigana: 'カン',
-        meaningEn: 'see', meaning: 'see'
+        meaning: 'see'
       },
       {
         word: '看',
         furigana: 'カン',
-        meaningEn: 'watch over', meaning: 'watch over'
+        meaning: 'watch over'
       },
     ],
   },
@@ -16090,7 +16090,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '眸',
         furigana: 'ボウ',
-        meaningEn: 'pupil of the eye', meaning: 'pupil of the eye'
+        meaning: 'pupil of the eye'
       },
     ],
   },
@@ -16104,17 +16104,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '眺',
         furigana: 'チョウ',
-        meaningEn: 'look at', meaning: 'look at'
+        meaning: 'look at'
       },
       {
         word: '眺',
         furigana: 'チョウ',
-        meaningEn: 'scrutinize', meaning: 'scrutinize'
+        meaning: 'scrutinize'
       },
       {
         word: '眺',
         furigana: 'チョウ',
-        meaningEn: 'see', meaning: 'see'
+        meaning: 'see'
       },
     ],
   },
@@ -16128,7 +16128,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '眼',
         furigana: 'ガン',
-        meaningEn: 'eyeball', meaning: 'eyeball'
+        meaning: 'eyeball'
       },
     ],
   },
@@ -16142,17 +16142,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '睡',
         furigana: 'スイ',
-        meaningEn: 'die', meaning: 'die'
+        meaning: 'die'
       },
       {
         word: '睡',
         furigana: 'スイ',
-        meaningEn: 'drowsy', meaning: 'drowsy'
+        meaning: 'drowsy'
       },
       {
         word: '睡',
         furigana: 'スイ',
-        meaningEn: 'sleep', meaning: 'sleep'
+        meaning: 'sleep'
       },
     ],
   },
@@ -16165,17 +16165,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '督',
         furigana: 'トク',
-        meaningEn: 'coach', meaning: 'coach'
+        meaning: 'coach'
       },
       {
         word: '督',
         furigana: 'トク',
-        meaningEn: 'command', meaning: 'command'
+        meaning: 'command'
       },
       {
         word: '督',
         furigana: 'トク',
-        meaningEn: 'lead', meaning: 'lead'
+        meaning: 'lead'
       },
     ],
   },
@@ -16189,17 +16189,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '睦',
         furigana: 'ボク',
-        meaningEn: 'friendly', meaning: 'friendly'
+        meaning: 'friendly'
       },
       {
         word: '睦',
         furigana: 'ボク',
-        meaningEn: 'harmonious', meaning: 'harmonious'
+        meaning: 'harmonious'
       },
       {
         word: '睦',
         furigana: 'ボク',
-        meaningEn: 'intimate', meaning: 'intimate'
+        meaning: 'intimate'
       },
     ],
   },
@@ -16213,17 +16213,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '瞬',
         furigana: 'シュン',
-        meaningEn: 'blink', meaning: 'blink'
+        meaning: 'blink'
       },
       {
         word: '瞬',
         furigana: 'シュン',
-        meaningEn: 'twinkle', meaning: 'twinkle'
+        meaning: 'twinkle'
       },
       {
         word: '瞬',
         furigana: 'シュン',
-        meaningEn: 'wink', meaning: 'wink'
+        meaning: 'wink'
       },
     ],
   },
@@ -16237,7 +16237,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '瞭',
         furigana: 'リョウ',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
     ],
   },
@@ -16251,7 +16251,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '瞳',
         furigana: 'トウ',
-        meaningEn: 'pupil (of eye)', meaning: 'pupil (of eye)'
+        meaning: 'pupil (of eye)'
       },
     ],
   },
@@ -16265,17 +16265,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '矛',
         furigana: 'ボウ',
-        meaningEn: 'arms', meaning: 'arms'
+        meaning: 'arms'
       },
       {
         word: '矛',
         furigana: 'ボウ',
-        meaningEn: 'festival float', meaning: 'festival float'
+        meaning: 'festival float'
       },
       {
         word: '矛',
         furigana: 'ボウ',
-        meaningEn: 'halberd', meaning: 'halberd'
+        meaning: 'halberd'
       },
     ],
   },
@@ -16289,12 +16289,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '矢',
         furigana: 'シ',
-        meaningEn: 'arrow', meaning: 'arrow'
+        meaning: 'arrow'
       },
       {
         word: '矢',
         furigana: 'シ',
-        meaningEn: 'dart', meaning: 'dart'
+        meaning: 'dart'
       },
     ],
   },
@@ -16308,17 +16308,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '矯',
         furigana: 'キョウ',
-        meaningEn: 'control', meaning: 'control'
+        meaning: 'control'
       },
       {
         word: '矯',
         furigana: 'キョウ',
-        meaningEn: 'correct', meaning: 'correct'
+        meaning: 'correct'
       },
       {
         word: '矯',
         furigana: 'キョウ',
-        meaningEn: 'cure', meaning: 'cure'
+        meaning: 'cure'
       },
     ],
   },
@@ -16332,17 +16332,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '砕',
         furigana: 'サイ',
-        meaningEn: 'break', meaning: 'break'
+        meaning: 'break'
       },
       {
         word: '砕',
         furigana: 'サイ',
-        meaningEn: 'crush', meaning: 'crush'
+        meaning: 'crush'
       },
       {
         word: '砕',
         furigana: 'サイ',
-        meaningEn: 'familiar', meaning: 'familiar'
+        meaning: 'familiar'
       },
     ],
   },
@@ -16355,12 +16355,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '砲',
         furigana: 'ホウ',
-        meaningEn: 'cannon', meaning: 'cannon'
+        meaning: 'cannon'
       },
       {
         word: '砲',
         furigana: 'ホウ',
-        meaningEn: 'gun', meaning: 'gun'
+        meaning: 'gun'
       },
     ],
   },
@@ -16373,12 +16373,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '硝',
         furigana: 'ショウ',
-        meaningEn: 'nitrate', meaning: 'nitrate'
+        meaning: 'nitrate'
       },
       {
         word: '硝',
         furigana: 'ショウ',
-        meaningEn: 'saltpeter', meaning: 'saltpeter'
+        meaning: 'saltpeter'
       },
     ],
   },
@@ -16391,7 +16391,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '硫',
         furigana: 'リュウ',
-        meaningEn: 'sulphur', meaning: 'sulphur'
+        meaning: 'sulphur'
       },
     ],
   },
@@ -16404,7 +16404,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '碁',
         furigana: 'ゴ',
-        meaningEn: 'Go', meaning: 'Go'
+        meaning: 'Go'
       },
     ],
   },
@@ -16418,12 +16418,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '碑',
         furigana: 'ヒ',
-        meaningEn: 'monument', meaning: 'monument'
+        meaning: 'monument'
       },
       {
         word: '碑',
         furigana: 'ヒ',
-        meaningEn: 'tombstone', meaning: 'tombstone'
+        meaning: 'tombstone'
       },
     ],
   },
@@ -16436,12 +16436,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '碧',
         furigana: 'ヒャク',
-        meaningEn: 'blue', meaning: 'blue'
+        meaning: 'blue'
       },
       {
         word: '碧',
         furigana: 'ヒャク',
-        meaningEn: 'green', meaning: 'green'
+        meaning: 'green'
       },
     ],
   },
@@ -16455,17 +16455,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '碩',
         furigana: 'セキ',
-        meaningEn: 'eminent', meaning: 'eminent'
+        meaning: 'eminent'
       },
       {
         word: '碩',
         furigana: 'セキ',
-        meaningEn: 'great', meaning: 'great'
+        meaning: 'great'
       },
       {
         word: '碩',
         furigana: 'セキ',
-        meaningEn: 'large', meaning: 'large'
+        meaning: 'large'
       },
     ],
   },
@@ -16478,12 +16478,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '磁',
         furigana: 'ジ',
-        meaningEn: 'magnet', meaning: 'magnet'
+        meaning: 'magnet'
       },
       {
         word: '磁',
         furigana: 'ジ',
-        meaningEn: 'porcelain', meaning: 'porcelain'
+        meaning: 'porcelain'
       },
     ],
   },
@@ -16497,12 +16497,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '磯',
         furigana: 'キ',
-        meaningEn: 'beach', meaning: 'beach'
+        meaning: 'beach'
       },
       {
         word: '磯',
         furigana: 'キ',
-        meaningEn: 'seashore', meaning: 'seashore'
+        meaning: 'seashore'
       },
     ],
   },
@@ -16515,12 +16515,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '礁',
         furigana: 'ショウ',
-        meaningEn: 'reef', meaning: 'reef'
+        meaning: 'reef'
       },
       {
         word: '礁',
         furigana: 'ショウ',
-        meaningEn: 'sunken rock', meaning: 'sunken rock'
+        meaning: 'sunken rock'
       },
     ],
   },
@@ -16534,12 +16534,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '礎',
         furigana: 'ソ',
-        meaningEn: 'cornerstone', meaning: 'cornerstone'
+        meaning: 'cornerstone'
       },
       {
         word: '礎',
         furigana: 'ソ',
-        meaningEn: 'foundation stone', meaning: 'foundation stone'
+        meaning: 'foundation stone'
       },
     ],
   },
@@ -16552,12 +16552,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '祉',
         furigana: 'シ',
-        meaningEn: 'happiness', meaning: 'happiness'
+        meaning: 'happiness'
       },
       {
         word: '祉',
         furigana: 'シ',
-        meaningEn: 'welfare', meaning: 'welfare'
+        meaning: 'welfare'
       },
     ],
   },
@@ -16571,7 +16571,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '祐',
         furigana: 'ウ',
-        meaningEn: 'help', meaning: 'help'
+        meaning: 'help'
       },
     ],
   },
@@ -16585,17 +16585,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '祥',
         furigana: 'ショウ',
-        meaningEn: 'auspicious', meaning: 'auspicious'
+        meaning: 'auspicious'
       },
       {
         word: '祥',
         furigana: 'ショウ',
-        meaningEn: 'blessedness', meaning: 'blessedness'
+        meaning: 'blessedness'
       },
       {
         word: '祥',
         furigana: 'ショウ',
-        meaningEn: 'good fortune', meaning: 'good fortune'
+        meaning: 'good fortune'
       },
     ],
   },
@@ -16608,17 +16608,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '票',
         furigana: 'ヒョウ',
-        meaningEn: 'ballot', meaning: 'ballot'
+        meaning: 'ballot'
       },
       {
         word: '票',
         furigana: 'ヒョウ',
-        meaningEn: 'label', meaning: 'label'
+        meaning: 'label'
       },
       {
         word: '票',
         furigana: 'ヒョウ',
-        meaningEn: 'sign', meaning: 'sign'
+        meaning: 'sign'
       },
     ],
   },
@@ -16632,17 +16632,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '禄',
         furigana: 'ロク',
-        meaningEn: 'allowance', meaning: 'allowance'
+        meaning: 'allowance'
       },
       {
         word: '禄',
         furigana: 'ロク',
-        meaningEn: 'fief', meaning: 'fief'
+        meaning: 'fief'
       },
       {
         word: '禄',
         furigana: 'ロク',
-        meaningEn: 'grant', meaning: 'grant'
+        meaning: 'grant'
       },
     ],
   },
@@ -16656,12 +16656,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '禅',
         furigana: 'セン',
-        meaningEn: 'Zen', meaning: 'Zen'
+        meaning: 'Zen'
       },
       {
         word: '禅',
         furigana: 'セン',
-        meaningEn: 'silent meditation', meaning: 'silent meditation'
+        meaning: 'silent meditation'
       },
     ],
   },
@@ -16675,17 +16675,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '禍',
         furigana: 'カ',
-        meaningEn: 'calamity', meaning: 'calamity'
+        meaning: 'calamity'
       },
       {
         word: '禍',
         furigana: 'カ',
-        meaningEn: 'curse', meaning: 'curse'
+        meaning: 'curse'
       },
       {
         word: '禍',
         furigana: 'カ',
-        meaningEn: 'evil', meaning: 'evil'
+        meaning: 'evil'
       },
     ],
   },
@@ -16699,17 +16699,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '禎',
         furigana: 'テイ',
-        meaningEn: 'auspicious', meaning: 'auspicious'
+        meaning: 'auspicious'
       },
       {
         word: '禎',
         furigana: 'テイ',
-        meaningEn: 'blessed', meaning: 'blessed'
+        meaning: 'blessed'
       },
       {
         word: '禎',
         furigana: 'テイ',
-        meaningEn: 'good fortune', meaning: 'good fortune'
+        meaning: 'good fortune'
       },
     ],
   },
@@ -16723,17 +16723,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '秀',
         furigana: 'シュウ',
-        meaningEn: 'beauty', meaning: 'beauty'
+        meaning: 'beauty'
       },
       {
         word: '秀',
         furigana: 'シュウ',
-        meaningEn: 'excel', meaning: 'excel'
+        meaning: 'excel'
       },
       {
         word: '秀',
         furigana: 'シュウ',
-        meaningEn: 'excellence', meaning: 'excellence'
+        meaning: 'excellence'
       },
     ],
   },
@@ -16747,12 +16747,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '秘',
         furigana: 'ヒ',
-        meaningEn: 'conceal', meaning: 'conceal'
+        meaning: 'conceal'
       },
       {
         word: '秘',
         furigana: 'ヒ',
-        meaningEn: 'secret', meaning: 'secret'
+        meaning: 'secret'
       },
     ],
   },
@@ -16765,17 +16765,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '租',
         furigana: 'ソ',
-        meaningEn: 'borrowing', meaning: 'borrowing'
+        meaning: 'borrowing'
       },
       {
         word: '租',
         furigana: 'ソ',
-        meaningEn: 'crop tax', meaning: 'crop tax'
+        meaning: 'crop tax'
       },
       {
         word: '租',
         furigana: 'ソ',
-        meaningEn: 'tariff', meaning: 'tariff'
+        meaning: 'tariff'
       },
     ],
   },
@@ -16789,12 +16789,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '秦',
         furigana: 'シン',
-        meaningEn: 'Manchu dynasty', meaning: 'Manchu dynasty'
+        meaning: 'Manchu dynasty'
       },
       {
         word: '秦',
         furigana: 'シン',
-        meaningEn: 'name given to naturalized foreigners', meaning: 'name given to naturalized foreigners'
+        meaning: 'name given to naturalized foreigners'
       },
     ],
   },
@@ -16807,17 +16807,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '秩',
         furigana: 'チツ',
-        meaningEn: 'order', meaning: 'order'
+        meaning: 'order'
       },
       {
         word: '秩',
         furigana: 'チツ',
-        meaningEn: 'regularity', meaning: 'regularity'
+        meaning: 'regularity'
       },
       {
         word: '秩',
         furigana: 'チツ',
-        meaningEn: 'salary', meaning: 'salary'
+        meaning: 'salary'
       },
     ],
   },
@@ -16831,17 +16831,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '称',
         furigana: 'ショウ',
-        meaningEn: 'admire', meaning: 'admire'
+        meaning: 'admire'
       },
       {
         word: '称',
         furigana: 'ショウ',
-        meaningEn: 'appellation', meaning: 'appellation'
+        meaning: 'appellation'
       },
       {
         word: '称',
         furigana: 'ショウ',
-        meaningEn: 'fame', meaning: 'fame'
+        meaning: 'fame'
       },
     ],
   },
@@ -16855,17 +16855,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '稀',
         furigana: 'キ',
-        meaningEn: 'dilute (acid)', meaning: 'dilute (acid)'
+        meaning: 'dilute (acid)'
       },
       {
         word: '稀',
         furigana: 'キ',
-        meaningEn: 'phenomenal', meaning: 'phenomenal'
+        meaning: 'phenomenal'
       },
       {
         word: '稀',
         furigana: 'キ',
-        meaningEn: 'rare', meaning: 'rare'
+        meaning: 'rare'
       },
     ],
   },
@@ -16879,12 +16879,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '稔',
         furigana: 'ジン',
-        meaningEn: 'harvest', meaning: 'harvest'
+        meaning: 'harvest'
       },
       {
         word: '稔',
         furigana: 'ジン',
-        meaningEn: 'ripen', meaning: 'ripen'
+        meaning: 'ripen'
       },
     ],
   },
@@ -16898,12 +16898,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '稚',
         furigana: 'ジ',
-        meaningEn: 'immature', meaning: 'immature'
+        meaning: 'immature'
       },
       {
         word: '稚',
         furigana: 'ジ',
-        meaningEn: 'young', meaning: 'young'
+        meaning: 'young'
       },
     ],
   },
@@ -16917,17 +16917,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '稜',
         furigana: 'リョウ',
-        meaningEn: 'angle', meaning: 'angle'
+        meaning: 'angle'
       },
       {
         word: '稜',
         furigana: 'リョウ',
-        meaningEn: 'corner', meaning: 'corner'
+        meaning: 'corner'
       },
       {
         word: '稜',
         furigana: 'リョウ',
-        meaningEn: 'edge', meaning: 'edge'
+        meaning: 'edge'
       },
     ],
   },
@@ -16941,7 +16941,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '稲',
         furigana: 'テ',
-        meaningEn: 'rice plant', meaning: 'rice plant'
+        meaning: 'rice plant'
       },
     ],
   },
@@ -16955,17 +16955,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '稼',
         furigana: 'カ',
-        meaningEn: 'earn money', meaning: 'earn money'
+        meaning: 'earn money'
       },
       {
         word: '稼',
         furigana: 'カ',
-        meaningEn: 'earnings', meaning: 'earnings'
+        meaning: 'earnings'
       },
       {
         word: '稼',
         furigana: 'カ',
-        meaningEn: 'work', meaning: 'work'
+        meaning: 'work'
       },
     ],
   },
@@ -16979,17 +16979,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '稿',
         furigana: 'コウ',
-        meaningEn: 'copy', meaning: 'copy'
+        meaning: 'copy'
       },
       {
         word: '稿',
         furigana: 'コウ',
-        meaningEn: 'draft', meaning: 'draft'
+        meaning: 'draft'
       },
       {
         word: '稿',
         furigana: 'コウ',
-        meaningEn: 'manuscript', meaning: 'manuscript'
+        meaning: 'manuscript'
       },
     ],
   },
@@ -17002,12 +17002,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '穀',
         furigana: 'コク',
-        meaningEn: 'cereals', meaning: 'cereals'
+        meaning: 'cereals'
       },
       {
         word: '穀',
         furigana: 'コク',
-        meaningEn: 'grain', meaning: 'grain'
+        meaning: 'grain'
       },
     ],
   },
@@ -17021,17 +17021,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '穂',
         furigana: 'スイ',
-        meaningEn: 'crest (wave)', meaning: 'crest (wave)'
+        meaning: 'crest (wave)'
       },
       {
         word: '穂',
         furigana: 'スイ',
-        meaningEn: 'ear', meaning: 'ear'
+        meaning: 'ear'
       },
       {
         word: '穂',
         furigana: 'スイ',
-        meaningEn: 'ear (grain)', meaning: 'ear (grain)'
+        meaning: 'ear (grain)'
       },
     ],
   },
@@ -17045,17 +17045,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '穏',
         furigana: 'オン',
-        meaningEn: 'calm', meaning: 'calm'
+        meaning: 'calm'
       },
       {
         word: '穏',
         furigana: 'オン',
-        meaningEn: 'moderation', meaning: 'moderation'
+        meaning: 'moderation'
       },
       {
         word: '穏',
         furigana: 'オン',
-        meaningEn: 'quiet', meaning: 'quiet'
+        meaning: 'quiet'
       },
     ],
   },
@@ -17069,17 +17069,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '穣',
         furigana: 'ジョウ',
-        meaningEn: '10**28', meaning: '10**28'
+        meaning: '10**28'
       },
       {
         word: '穣',
         furigana: 'ジョウ',
-        meaningEn: 'good crops', meaning: 'good crops'
+        meaning: 'good crops'
       },
       {
         word: '穣',
         furigana: 'ジョウ',
-        meaningEn: 'prosperity', meaning: 'prosperity'
+        meaning: 'prosperity'
       },
     ],
   },
@@ -17092,12 +17092,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '穫',
         furigana: 'カク',
-        meaningEn: 'harvest', meaning: 'harvest'
+        meaning: 'harvest'
       },
       {
         word: '穫',
         furigana: 'カク',
-        meaningEn: 'reap', meaning: 'reap'
+        meaning: 'reap'
       },
     ],
   },
@@ -17111,17 +17111,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '穴',
         furigana: 'ケツ',
-        meaningEn: 'aperture', meaning: 'aperture'
+        meaning: 'aperture'
       },
       {
         word: '穴',
         furigana: 'ケツ',
-        meaningEn: 'cave', meaning: 'cave'
+        meaning: 'cave'
       },
       {
         word: '穴',
         furigana: 'ケツ',
-        meaningEn: 'den', meaning: 'den'
+        meaning: 'den'
       },
     ],
   },
@@ -17135,17 +17135,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '窃',
         furigana: 'セツ',
-        meaningEn: 'hushed', meaning: 'hushed'
+        meaning: 'hushed'
       },
       {
         word: '窃',
         furigana: 'セツ',
-        meaningEn: 'private', meaning: 'private'
+        meaning: 'private'
       },
       {
         word: '窃',
         furigana: 'セツ',
-        meaningEn: 'secret', meaning: 'secret'
+        meaning: 'secret'
       },
     ],
   },
@@ -17158,12 +17158,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '窒',
         furigana: 'チツ',
-        meaningEn: 'obstruct', meaning: 'obstruct'
+        meaning: 'obstruct'
       },
       {
         word: '窒',
         furigana: 'チツ',
-        meaningEn: 'plug up', meaning: 'plug up'
+        meaning: 'plug up'
       },
     ],
   },
@@ -17177,17 +17177,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '窮',
         furigana: 'キュウ',
-        meaningEn: 'cornered', meaning: 'cornered'
+        meaning: 'cornered'
       },
       {
         word: '窮',
         furigana: 'キュウ',
-        meaningEn: 'destitute', meaning: 'destitute'
+        meaning: 'destitute'
       },
       {
         word: '窮',
         furigana: 'キュウ',
-        meaningEn: 'hard up', meaning: 'hard up'
+        meaning: 'hard up'
       },
     ],
   },
@@ -17201,17 +17201,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '窯',
         furigana: 'ヨウ',
-        meaningEn: 'furnace', meaning: 'furnace'
+        meaning: 'furnace'
       },
       {
         word: '窯',
         furigana: 'ヨウ',
-        meaningEn: 'kiln', meaning: 'kiln'
+        meaning: 'kiln'
       },
       {
         word: '窯',
         furigana: 'ヨウ',
-        meaningEn: 'oven', meaning: 'oven'
+        meaning: 'oven'
       },
     ],
   },
@@ -17225,12 +17225,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '竜',
         furigana: 'リュウ',
-        meaningEn: 'dragon', meaning: 'dragon'
+        meaning: 'dragon'
       },
       {
         word: '竜',
         furigana: 'リュウ',
-        meaningEn: 'imperial', meaning: 'imperial'
+        meaning: 'imperial'
       },
     ],
   },
@@ -17244,12 +17244,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '竣',
         furigana: 'シュン',
-        meaningEn: 'end', meaning: 'end'
+        meaning: 'end'
       },
       {
         word: '竣',
         furigana: 'シュン',
-        meaningEn: 'finish', meaning: 'finish'
+        meaning: 'finish'
       },
     ],
   },
@@ -17263,17 +17263,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '端',
         furigana: 'タン',
-        meaningEn: 'border', meaning: 'border'
+        meaning: 'border'
       },
       {
         word: '端',
         furigana: 'タン',
-        meaningEn: 'cape', meaning: 'cape'
+        meaning: 'cape'
       },
       {
         word: '端',
         furigana: 'タン',
-        meaningEn: 'edge', meaning: 'edge'
+        meaning: 'edge'
       },
     ],
   },
@@ -17287,7 +17287,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '笙',
         furigana: 'ショウ',
-        meaningEn: 'a reed instrument', meaning: 'a reed instrument'
+        meaning: 'a reed instrument'
       },
     ],
   },
@@ -17301,17 +17301,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '笛',
         furigana: 'テキ',
-        meaningEn: 'bagpipe', meaning: 'bagpipe'
+        meaning: 'bagpipe'
       },
       {
         word: '笛',
         furigana: 'テキ',
-        meaningEn: 'clarinet', meaning: 'clarinet'
+        meaning: 'clarinet'
       },
       {
         word: '笛',
         furigana: 'テキ',
-        meaningEn: 'flute', meaning: 'flute'
+        meaning: 'flute'
       },
     ],
   },
@@ -17324,12 +17324,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '第',
         furigana: 'ダイ',
-        meaningEn: 'No.', meaning: 'No.'
+        meaning: 'No.'
       },
       {
         word: '第',
         furigana: 'ダイ',
-        meaningEn: 'residence', meaning: 'residence'
+        meaning: 'residence'
       },
     ],
   },
@@ -17342,12 +17342,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '笹',
         furigana: 'ささ',
-        meaningEn: '(kokuji)', meaning: '(kokuji)'
+        meaning: '(kokuji)'
       },
       {
         word: '笹',
         furigana: 'ささ',
-        meaningEn: 'bamboo grass', meaning: 'bamboo grass'
+        meaning: 'bamboo grass'
       },
     ],
   },
@@ -17361,17 +17361,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '筋',
         furigana: 'キン',
-        meaningEn: 'descent', meaning: 'descent'
+        meaning: 'descent'
       },
       {
         word: '筋',
         furigana: 'キン',
-        meaningEn: 'fiber', meaning: 'fiber'
+        meaning: 'fiber'
       },
       {
         word: '筋',
         furigana: 'キン',
-        meaningEn: 'muscle', meaning: 'muscle'
+        meaning: 'muscle'
       },
     ],
   },
@@ -17384,17 +17384,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '策',
         furigana: 'サク',
-        meaningEn: 'means', meaning: 'means'
+        meaning: 'means'
       },
       {
         word: '策',
         furigana: 'サク',
-        meaningEn: 'plan', meaning: 'plan'
+        meaning: 'plan'
       },
       {
         word: '策',
         furigana: 'サク',
-        meaningEn: 'policy', meaning: 'policy'
+        meaning: 'policy'
       },
     ],
   },
@@ -17407,7 +17407,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '箇',
         furigana: 'カ',
-        meaningEn: 'counter for articles', meaning: 'counter for articles'
+        meaning: 'counter for articles'
       },
     ],
   },
@@ -17421,17 +17421,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '節',
         furigana: 'セチ',
-        meaningEn: 'clause', meaning: 'clause'
+        meaning: 'clause'
       },
       {
         word: '節',
         furigana: 'セチ',
-        meaningEn: 'honor', meaning: 'honor'
+        meaning: 'honor'
       },
       {
         word: '節',
         furigana: 'セチ',
-        meaningEn: 'joint', meaning: 'joint'
+        meaning: 'joint'
       },
     ],
   },
@@ -17444,17 +17444,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '範',
         furigana: 'ハン',
-        meaningEn: 'example', meaning: 'example'
+        meaning: 'example'
       },
       {
         word: '範',
         furigana: 'ハン',
-        meaningEn: 'model', meaning: 'model'
+        meaning: 'model'
       },
       {
         word: '範',
         furigana: 'ハン',
-        meaningEn: 'pattern', meaning: 'pattern'
+        meaning: 'pattern'
       },
     ],
   },
@@ -17468,17 +17468,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '篤',
         furigana: 'トク',
-        meaningEn: 'cordial', meaning: 'cordial'
+        meaning: 'cordial'
       },
       {
         word: '篤',
         furigana: 'トク',
-        meaningEn: 'deliberate', meaning: 'deliberate'
+        meaning: 'deliberate'
       },
       {
         word: '篤',
         furigana: 'トク',
-        meaningEn: 'fervent', meaning: 'fervent'
+        meaning: 'fervent'
       },
     ],
   },
@@ -17491,12 +17491,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '簿',
         furigana: 'ボ',
-        meaningEn: 'record book', meaning: 'record book'
+        meaning: 'record book'
       },
       {
         word: '簿',
         furigana: 'ボ',
-        meaningEn: 'register', meaning: 'register'
+        meaning: 'register'
       },
     ],
   },
@@ -17510,17 +17510,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '粋',
         furigana: 'スイ',
-        meaningEn: 'chic', meaning: 'chic'
+        meaning: 'chic'
       },
       {
         word: '粋',
         furigana: 'スイ',
-        meaningEn: 'choice', meaning: 'choice'
+        meaning: 'choice'
       },
       {
         word: '粋',
         furigana: 'スイ',
-        meaningEn: 'cream', meaning: 'cream'
+        meaning: 'cream'
       },
     ],
   },
@@ -17534,17 +17534,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '粗',
         furigana: 'ソ',
-        meaningEn: 'coarse', meaning: 'coarse'
+        meaning: 'coarse'
       },
       {
         word: '粗',
         furigana: 'ソ',
-        meaningEn: 'rough', meaning: 'rough'
+        meaning: 'rough'
       },
       {
         word: '粗',
         furigana: 'ソ',
-        meaningEn: 'rugged', meaning: 'rugged'
+        meaning: 'rugged'
       },
     ],
   },
@@ -17558,17 +17558,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '粘',
         furigana: 'ネン',
-        meaningEn: 'glutinous', meaning: 'glutinous'
+        meaning: 'glutinous'
       },
       {
         word: '粘',
         furigana: 'ネン',
-        meaningEn: 'greasy', meaning: 'greasy'
+        meaning: 'greasy'
       },
       {
         word: '粘',
         furigana: 'ネン',
-        meaningEn: 'persevere', meaning: 'persevere'
+        meaning: 'persevere'
       },
     ],
   },
@@ -17582,17 +17582,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '粛',
         furigana: 'シュク',
-        meaningEn: 'quietly', meaning: 'quietly'
+        meaning: 'quietly'
       },
       {
         word: '粛',
         furigana: 'シュク',
-        meaningEn: 'softly', meaning: 'softly'
+        meaning: 'softly'
       },
       {
         word: '粛',
         furigana: 'シュク',
-        meaningEn: 'solemn', meaning: 'solemn'
+        meaning: 'solemn'
       },
     ],
   },
@@ -17605,7 +17605,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '糖',
         furigana: 'トウ',
-        meaningEn: 'sugar', meaning: 'sugar'
+        meaning: 'sugar'
       },
     ],
   },
@@ -17619,17 +17619,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '糧',
         furigana: 'リョウ',
-        meaningEn: 'bread', meaning: 'bread'
+        meaning: 'bread'
       },
       {
         word: '糧',
         furigana: 'リョウ',
-        meaningEn: 'food', meaning: 'food'
+        meaning: 'food'
       },
       {
         word: '糧',
         furigana: 'リョウ',
-        meaningEn: 'provisions', meaning: 'provisions'
+        meaning: 'provisions'
       },
     ],
   },
@@ -17642,12 +17642,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '系',
         furigana: 'ケイ',
-        meaningEn: 'lineage', meaning: 'lineage'
+        meaning: 'lineage'
       },
       {
         word: '系',
         furigana: 'ケイ',
-        meaningEn: 'system', meaning: 'system'
+        meaning: 'system'
       },
     ],
   },
@@ -17661,17 +17661,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '糾',
         furigana: 'キュウ',
-        meaningEn: 'ask', meaning: 'ask'
+        meaning: 'ask'
       },
       {
         word: '糾',
         furigana: 'キュウ',
-        meaningEn: 'investigate', meaning: 'investigate'
+        meaning: 'investigate'
       },
       {
         word: '糾',
         furigana: 'キュウ',
-        meaningEn: 'twist', meaning: 'twist'
+        meaning: 'twist'
       },
     ],
   },
@@ -17684,17 +17684,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '紀',
         furigana: 'キ',
-        meaningEn: 'account', meaning: 'account'
+        meaning: 'account'
       },
       {
         word: '紀',
         furigana: 'キ',
-        meaningEn: 'annals', meaning: 'annals'
+        meaning: 'annals'
       },
       {
         word: '紀',
         furigana: 'キ',
-        meaningEn: 'chronicle', meaning: 'chronicle'
+        meaning: 'chronicle'
       },
     ],
   },
@@ -17707,12 +17707,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '紋',
         furigana: 'モン',
-        meaningEn: 'family crest', meaning: 'family crest'
+        meaning: 'family crest'
       },
       {
         word: '紋',
         furigana: 'モン',
-        meaningEn: 'figures', meaning: 'figures'
+        meaning: 'figures'
       },
     ],
   },
@@ -17726,17 +17726,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '納',
         furigana: 'トウ',
-        meaningEn: 'obtain', meaning: 'obtain'
+        meaning: 'obtain'
       },
       {
         word: '納',
         furigana: 'トウ',
-        meaningEn: 'pay', meaning: 'pay'
+        meaning: 'pay'
       },
       {
         word: '納',
         furigana: 'トウ',
-        meaningEn: 'reap', meaning: 'reap'
+        meaning: 'reap'
       },
     ],
   },
@@ -17750,12 +17750,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '紗',
         furigana: 'サ',
-        meaningEn: 'gauze', meaning: 'gauze'
+        meaning: 'gauze'
       },
       {
         word: '紗',
         furigana: 'サ',
-        meaningEn: 'gossamer', meaning: 'gossamer'
+        meaning: 'gossamer'
       },
     ],
   },
@@ -17769,7 +17769,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '紘',
         furigana: 'コウ',
-        meaningEn: 'large', meaning: 'large'
+        meaning: 'large'
       },
     ],
   },
@@ -17782,17 +17782,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '級',
         furigana: 'キュウ',
-        meaningEn: 'class', meaning: 'class'
+        meaning: 'class'
       },
       {
         word: '級',
         furigana: 'キュウ',
-        meaningEn: 'grade', meaning: 'grade'
+        meaning: 'grade'
       },
       {
         word: '級',
         furigana: 'キュウ',
-        meaningEn: 'rank', meaning: 'rank'
+        meaning: 'rank'
       },
     ],
   },
@@ -17806,17 +17806,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '紛',
         furigana: 'フン',
-        meaningEn: 'be mistaken for', meaning: 'be mistaken for'
+        meaning: 'be mistaken for'
       },
       {
         word: '紛',
         furigana: 'フン',
-        meaningEn: 'distract', meaning: 'distract'
+        meaning: 'distract'
       },
       {
         word: '紛',
         furigana: 'フン',
-        meaningEn: 'divert', meaning: 'divert'
+        meaning: 'divert'
       },
     ],
   },
@@ -17830,17 +17830,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '素',
         furigana: 'ス',
-        meaningEn: 'elementary', meaning: 'elementary'
+        meaning: 'elementary'
       },
       {
         word: '素',
         furigana: 'ス',
-        meaningEn: 'naked', meaning: 'naked'
+        meaning: 'naked'
       },
       {
         word: '素',
         furigana: 'ス',
-        meaningEn: 'principle', meaning: 'principle'
+        meaning: 'principle'
       },
     ],
   },
@@ -17854,7 +17854,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '紡',
         furigana: 'ボウ',
-        meaningEn: 'spinning', meaning: 'spinning'
+        meaning: 'spinning'
       },
     ],
   },
@@ -17867,17 +17867,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '索',
         furigana: 'サク',
-        meaningEn: 'cord', meaning: 'cord'
+        meaning: 'cord'
       },
       {
         word: '索',
         furigana: 'サク',
-        meaningEn: 'inquiring', meaning: 'inquiring'
+        meaning: 'inquiring'
       },
       {
         word: '索',
         furigana: 'サク',
-        meaningEn: 'rope', meaning: 'rope'
+        meaning: 'rope'
       },
     ],
   },
@@ -17891,12 +17891,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '紫',
         furigana: 'シ',
-        meaningEn: 'purple', meaning: 'purple'
+        meaning: 'purple'
       },
       {
         word: '紫',
         furigana: 'シ',
-        meaningEn: 'violet', meaning: 'violet'
+        meaning: 'violet'
       },
     ],
   },
@@ -17910,7 +17910,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '紬',
         furigana: 'チュウ',
-        meaningEn: 'pongee (a knotted silk cloth)', meaning: 'pongee (a knotted silk cloth)'
+        meaning: 'pongee (a knotted silk cloth)'
       },
     ],
   },
@@ -17923,17 +17923,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '累',
         furigana: 'ルイ',
-        meaningEn: 'accumulate', meaning: 'accumulate'
+        meaning: 'accumulate'
       },
       {
         word: '累',
         furigana: 'ルイ',
-        meaningEn: 'continually', meaning: 'continually'
+        meaning: 'continually'
       },
       {
         word: '累',
         furigana: 'ルイ',
-        meaningEn: 'involvement', meaning: 'involvement'
+        meaning: 'involvement'
       },
     ],
   },
@@ -17946,17 +17946,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '紳',
         furigana: 'シン',
-        meaningEn: 'gentleman', meaning: 'gentleman'
+        meaning: 'gentleman'
       },
       {
         word: '紳',
         furigana: 'シン',
-        meaningEn: 'good belt', meaning: 'good belt'
+        meaning: 'good belt'
       },
       {
         word: '紳',
         furigana: 'シン',
-        meaningEn: 'sire', meaning: 'sire'
+        meaning: 'sire'
       },
     ],
   },
@@ -17969,12 +17969,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '紺',
         furigana: 'コン',
-        meaningEn: 'dark blue', meaning: 'dark blue'
+        meaning: 'dark blue'
       },
       {
         word: '紺',
         furigana: 'コン',
-        meaningEn: 'navy', meaning: 'navy'
+        meaning: 'navy'
       },
     ],
   },
@@ -17988,17 +17988,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '絃',
         furigana: 'ゲン',
-        meaningEn: 'cord', meaning: 'cord'
+        meaning: 'cord'
       },
       {
         word: '絃',
         furigana: 'ゲン',
-        meaningEn: 'samisen music', meaning: 'samisen music'
+        meaning: 'samisen music'
       },
       {
         word: '絃',
         furigana: 'ゲン',
-        meaningEn: 'string', meaning: 'string'
+        meaning: 'string'
       },
     ],
   },
@@ -18012,17 +18012,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '結',
         furigana: 'ケチ',
-        meaningEn: 'bind', meaning: 'bind'
+        meaning: 'bind'
       },
       {
         word: '結',
         furigana: 'ケチ',
-        meaningEn: 'contract', meaning: 'contract'
+        meaning: 'contract'
       },
       {
         word: '結',
         furigana: 'ケチ',
-        meaningEn: 'do up hair', meaning: 'do up hair'
+        meaning: 'do up hair'
       },
     ],
   },
@@ -18036,17 +18036,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '絞',
         furigana: 'コウ',
-        meaningEn: 'constrict', meaning: 'constrict'
+        meaning: 'constrict'
       },
       {
         word: '絞',
         furigana: 'コウ',
-        meaningEn: 'strangle', meaning: 'strangle'
+        meaning: 'strangle'
       },
       {
         word: '絞',
         furigana: 'コウ',
-        meaningEn: 'wring', meaning: 'wring'
+        meaning: 'wring'
       },
     ],
   },
@@ -18059,7 +18059,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '絢',
         furigana: 'ケン',
-        meaningEn: 'brilliant fabric design', meaning: 'brilliant fabric design'
+        meaning: 'brilliant fabric design'
       },
     ],
   },
@@ -18073,17 +18073,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '統',
         furigana: 'トウ',
-        meaningEn: 'governing', meaning: 'governing'
+        meaning: 'governing'
       },
       {
         word: '統',
         furigana: 'トウ',
-        meaningEn: 'overall', meaning: 'overall'
+        meaning: 'overall'
       },
       {
         word: '統',
         furigana: 'トウ',
-        meaningEn: 'relationship', meaning: 'relationship'
+        meaning: 'relationship'
       },
     ],
   },
@@ -18097,7 +18097,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '絹',
         furigana: 'ケン',
-        meaningEn: 'silk', meaning: 'silk'
+        meaning: 'silk'
       },
     ],
   },
@@ -18111,17 +18111,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '継',
         furigana: 'ケイ',
-        meaningEn: 'continue', meaning: 'continue'
+        meaning: 'continue'
       },
       {
         word: '継',
         furigana: 'ケイ',
-        meaningEn: 'graft (tree)', meaning: 'graft (tree)'
+        meaning: 'graft (tree)'
       },
       {
         word: '継',
         furigana: 'ケイ',
-        meaningEn: 'inherit', meaning: 'inherit'
+        meaning: 'inherit'
       },
     ],
   },
@@ -18135,12 +18135,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '綜',
         furigana: 'ソウ',
-        meaningEn: 'rule', meaning: 'rule'
+        meaning: 'rule'
       },
       {
         word: '綜',
         furigana: 'ソウ',
-        meaningEn: 'synthesize', meaning: 'synthesize'
+        meaning: 'synthesize'
       },
     ],
   },
@@ -18153,17 +18153,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '維',
         furigana: 'イ',
-        meaningEn: 'fiber', meaning: 'fiber'
+        meaning: 'fiber'
       },
       {
         word: '維',
         furigana: 'イ',
-        meaningEn: 'rope', meaning: 'rope'
+        meaning: 'rope'
       },
       {
         word: '維',
         furigana: 'イ',
-        meaningEn: 'tie', meaning: 'tie'
+        meaning: 'tie'
       },
     ],
   },
@@ -18177,17 +18177,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '綱',
         furigana: 'コウ',
-        meaningEn: 'cable', meaning: 'cable'
+        meaning: 'cable'
       },
       {
         word: '綱',
         furigana: 'コウ',
-        meaningEn: 'class (genus)', meaning: 'class (genus)'
+        meaning: 'class (genus)'
       },
       {
         word: '綱',
         furigana: 'コウ',
-        meaningEn: 'cord', meaning: 'cord'
+        meaning: 'cord'
       },
     ],
   },
@@ -18201,12 +18201,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '網',
         furigana: 'モウ',
-        meaningEn: 'netting', meaning: 'netting'
+        meaning: 'netting'
       },
       {
         word: '網',
         furigana: 'モウ',
-        meaningEn: 'network', meaning: 'network'
+        meaning: 'network'
       },
     ],
   },
@@ -18220,12 +18220,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '綸',
         furigana: 'カン',
-        meaningEn: 'silk cloth', meaning: 'silk cloth'
+        meaning: 'silk cloth'
       },
       {
         word: '綸',
         furigana: 'カン',
-        meaningEn: 'thread', meaning: 'thread'
+        meaning: 'thread'
       },
     ],
   },
@@ -18239,12 +18239,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '綺',
         furigana: 'キ',
-        meaningEn: 'beautiful', meaning: 'beautiful'
+        meaning: 'beautiful'
       },
       {
         word: '綺',
         furigana: 'キ',
-        meaningEn: 'figured cloth', meaning: 'figured cloth'
+        meaning: 'figured cloth'
       },
     ],
   },
@@ -18258,17 +18258,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '綾',
         furigana: 'リン',
-        meaningEn: 'design', meaning: 'design'
+        meaning: 'design'
       },
       {
         word: '綾',
         furigana: 'リン',
-        meaningEn: 'figured cloth', meaning: 'figured cloth'
+        meaning: 'figured cloth'
       },
       {
         word: '綾',
         furigana: 'リン',
-        meaningEn: 'twill', meaning: 'twill'
+        meaning: 'twill'
       },
     ],
   },
@@ -18282,17 +18282,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '緊',
         furigana: 'キン',
-        meaningEn: 'hard', meaning: 'hard'
+        meaning: 'hard'
       },
       {
         word: '緊',
         furigana: 'キン',
-        meaningEn: 'reliable', meaning: 'reliable'
+        meaning: 'reliable'
       },
       {
         word: '緊',
         furigana: 'キン',
-        meaningEn: 'solid', meaning: 'solid'
+        meaning: 'solid'
       },
     ],
   },
@@ -18306,12 +18306,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '緋',
         furigana: 'ヒ',
-        meaningEn: 'cardinal', meaning: 'cardinal'
+        meaning: 'cardinal'
       },
       {
         word: '緋',
         furigana: 'ヒ',
-        meaningEn: 'scarlet', meaning: 'scarlet'
+        meaning: 'scarlet'
       },
     ],
   },
@@ -18325,17 +18325,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '締',
         furigana: 'テイ',
-        meaningEn: 'fasten', meaning: 'fasten'
+        meaning: 'fasten'
       },
       {
         word: '締',
         furigana: 'テイ',
-        meaningEn: 'lock', meaning: 'lock'
+        meaning: 'lock'
       },
       {
         word: '締',
         furigana: 'テイ',
-        meaningEn: 'shut', meaning: 'shut'
+        meaning: 'shut'
       },
     ],
   },
@@ -18349,17 +18349,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '緩',
         furigana: 'カン',
-        meaningEn: 'be moderate', meaning: 'be moderate'
+        meaning: 'be moderate'
       },
       {
         word: '緩',
         furigana: 'カン',
-        meaningEn: 'ease', meaning: 'ease'
+        meaning: 'ease'
       },
       {
         word: '緩',
         furigana: 'カン',
-        meaningEn: 'lessen', meaning: 'lessen'
+        meaning: 'lessen'
       },
     ],
   },
@@ -18373,17 +18373,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '緯',
         furigana: 'イ',
-        meaningEn: '(parallels of) latitude', meaning: '(parallels of) latitude'
+        meaning: '(parallels of) latitude'
       },
       {
         word: '緯',
         furigana: 'イ',
-        meaningEn: 'horizontal', meaning: 'horizontal'
+        meaning: 'horizontal'
       },
       {
         word: '緯',
         furigana: 'イ',
-        meaningEn: 'left & right', meaning: 'left & right'
+        meaning: 'left & right'
       },
     ],
   },
@@ -18397,17 +18397,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '縁',
         furigana: '-ネン',
-        meaningEn: 'affinity', meaning: 'affinity'
+        meaning: 'affinity'
       },
       {
         word: '縁',
         furigana: '-ネン',
-        meaningEn: 'border', meaning: 'border'
+        meaning: 'border'
       },
       {
         word: '縁',
         furigana: '-ネン',
-        meaningEn: 'brink', meaning: 'brink'
+        meaning: 'brink'
       },
     ],
   },
@@ -18421,12 +18421,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '縄',
         furigana: 'ジョウ',
-        meaningEn: 'cord', meaning: 'cord'
+        meaning: 'cord'
       },
       {
         word: '縄',
         furigana: 'ジョウ',
-        meaningEn: 'straw rope', meaning: 'straw rope'
+        meaning: 'straw rope'
       },
     ],
   },
@@ -18440,17 +18440,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '縛',
         furigana: 'バク',
-        meaningEn: 'arrest', meaning: 'arrest'
+        meaning: 'arrest'
       },
       {
         word: '縛',
         furigana: 'バク',
-        meaningEn: 'bind', meaning: 'bind'
+        meaning: 'bind'
       },
       {
         word: '縛',
         furigana: 'バク',
-        meaningEn: 'restrain', meaning: 'restrain'
+        meaning: 'restrain'
       },
     ],
   },
@@ -18464,17 +18464,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '縦',
         furigana: 'ジュウ',
-        meaningEn: 'height', meaning: 'height'
+        meaning: 'height'
       },
       {
         word: '縦',
         furigana: 'ジュウ',
-        meaningEn: 'length', meaning: 'length'
+        meaning: 'length'
       },
       {
         word: '縦',
         furigana: 'ジュウ',
-        meaningEn: 'self-indulgent', meaning: 'self-indulgent'
+        meaning: 'self-indulgent'
       },
     ],
   },
@@ -18488,17 +18488,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '縫',
         furigana: 'ホウ',
-        meaningEn: 'embroider', meaning: 'embroider'
+        meaning: 'embroider'
       },
       {
         word: '縫',
         furigana: 'ホウ',
-        meaningEn: 'sew', meaning: 'sew'
+        meaning: 'sew'
       },
       {
         word: '縫',
         furigana: 'ホウ',
-        meaningEn: 'stitch', meaning: 'stitch'
+        meaning: 'stitch'
       },
     ],
   },
@@ -18512,17 +18512,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '縮',
         furigana: 'シュク',
-        meaningEn: 'contract', meaning: 'contract'
+        meaning: 'contract'
       },
       {
         word: '縮',
         furigana: 'シュク',
-        meaningEn: 'reduce', meaning: 'reduce'
+        meaning: 'reduce'
       },
       {
         word: '縮',
         furigana: 'シュク',
-        meaningEn: 'shrink', meaning: 'shrink'
+        meaning: 'shrink'
       },
     ],
   },
@@ -18536,17 +18536,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '繁',
         furigana: 'ハン',
-        meaningEn: 'complexity', meaning: 'complexity'
+        meaning: 'complexity'
       },
       {
         word: '繁',
         furigana: 'ハン',
-        meaningEn: 'frequency', meaning: 'frequency'
+        meaning: 'frequency'
       },
       {
         word: '繁',
         furigana: 'ハン',
-        meaningEn: 'luxuriant', meaning: 'luxuriant'
+        meaning: 'luxuriant'
       },
     ],
   },
@@ -18559,17 +18559,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '繊',
         furigana: 'セン',
-        meaningEn: 'fine', meaning: 'fine'
+        meaning: 'fine'
       },
       {
         word: '繊',
         furigana: 'セン',
-        meaningEn: 'slender', meaning: 'slender'
+        meaning: 'slender'
       },
       {
         word: '繊',
         furigana: 'セン',
-        meaningEn: 'thin kimono', meaning: 'thin kimono'
+        meaning: 'thin kimono'
       },
     ],
   },
@@ -18583,12 +18583,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '織',
         furigana: 'シキ',
-        meaningEn: 'fabric', meaning: 'fabric'
+        meaning: 'fabric'
       },
       {
         word: '織',
         furigana: 'シキ',
-        meaningEn: 'weave', meaning: 'weave'
+        meaning: 'weave'
       },
     ],
   },
@@ -18602,17 +18602,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '繕',
         furigana: 'ゼン',
-        meaningEn: 'adjust', meaning: 'adjust'
+        meaning: 'adjust'
       },
       {
         word: '繕',
         furigana: 'ゼン',
-        meaningEn: 'darning', meaning: 'darning'
+        meaning: 'darning'
       },
       {
         word: '繕',
         furigana: 'ゼン',
-        meaningEn: 'mend', meaning: 'mend'
+        meaning: 'mend'
       },
     ],
   },
@@ -18626,7 +18626,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '繭',
         furigana: 'ケン',
-        meaningEn: 'cocoon', meaning: 'cocoon'
+        meaning: 'cocoon'
       },
     ],
   },
@@ -18640,17 +18640,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '繰',
         furigana: 'ソウ',
-        meaningEn: 'look up', meaning: 'look up'
+        meaning: 'look up'
       },
       {
         word: '繰',
         furigana: 'ソウ',
-        meaningEn: 'reel', meaning: 'reel'
+        meaning: 'reel'
       },
       {
         word: '繰',
         furigana: 'ソウ',
-        meaningEn: 'refer to', meaning: 'refer to'
+        meaning: 'refer to'
       },
     ],
   },
@@ -18664,12 +18664,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '罰',
         furigana: 'ハツ',
-        meaningEn: 'penalty', meaning: 'penalty'
+        meaning: 'penalty'
       },
       {
         word: '罰',
         furigana: 'ハツ',
-        meaningEn: 'punishment', meaning: 'punishment'
+        meaning: 'punishment'
       },
     ],
   },
@@ -18683,17 +18683,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '罷',
         furigana: 'ヒ',
-        meaningEn: 'go', meaning: 'go'
+        meaning: 'go'
       },
       {
         word: '罷',
         furigana: 'ヒ',
-        meaningEn: 'leave', meaning: 'leave'
+        meaning: 'leave'
       },
       {
         word: '罷',
         furigana: 'ヒ',
-        meaningEn: 'quit', meaning: 'quit'
+        meaning: 'quit'
       },
     ],
   },
@@ -18707,17 +18707,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '羅',
         furigana: 'ラ',
-        meaningEn: 'Rome', meaning: 'Rome'
+        meaning: 'Rome'
       },
       {
         word: '羅',
         furigana: 'ラ',
-        meaningEn: 'arrange', meaning: 'arrange'
+        meaning: 'arrange'
       },
       {
         word: '羅',
         furigana: 'ラ',
-        meaningEn: 'gauze', meaning: 'gauze'
+        meaning: 'gauze'
       },
     ],
   },
@@ -18731,7 +18731,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '羊',
         furigana: 'ヨウ',
-        meaningEn: 'sheep', meaning: 'sheep'
+        meaning: 'sheep'
       },
     ],
   },
@@ -18744,17 +18744,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '義',
         furigana: 'ギ',
-        meaningEn: 'honor', meaning: 'honor'
+        meaning: 'honor'
       },
       {
         word: '義',
         furigana: 'ギ',
-        meaningEn: 'justice', meaning: 'justice'
+        meaning: 'justice'
       },
       {
         word: '義',
         furigana: 'ギ',
-        meaningEn: 'loyalty', meaning: 'loyalty'
+        meaning: 'loyalty'
       },
     ],
   },
@@ -18768,7 +18768,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '翁',
         furigana: 'オウ',
-        meaningEn: 'venerable old man', meaning: 'venerable old man'
+        meaning: 'venerable old man'
       },
     ],
   },
@@ -18782,12 +18782,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '翔',
         furigana: 'ショウ',
-        meaningEn: 'fly', meaning: 'fly'
+        meaning: 'fly'
       },
       {
         word: '翔',
         furigana: 'ショウ',
-        meaningEn: 'soar', meaning: 'soar'
+        meaning: 'soar'
       },
     ],
   },
@@ -18801,12 +18801,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '翠',
         furigana: 'スイ',
-        meaningEn: 'green', meaning: 'green'
+        meaning: 'green'
       },
       {
         word: '翠',
         furigana: 'スイ',
-        meaningEn: 'kingfisher', meaning: 'kingfisher'
+        meaning: 'kingfisher'
       },
     ],
   },
@@ -18820,17 +18820,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '翻',
         furigana: 'ハン',
-        meaningEn: 'change (mind)', meaning: 'change (mind)'
+        meaning: 'change (mind)'
       },
       {
         word: '翻',
         furigana: 'ハン',
-        meaningEn: 'flip', meaning: 'flip'
+        meaning: 'flip'
       },
       {
         word: '翻',
         furigana: 'ハン',
-        meaningEn: 'flutter', meaning: 'flutter'
+        meaning: 'flutter'
       },
     ],
   },
@@ -18844,17 +18844,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '翼',
         furigana: 'ヨク',
-        meaningEn: 'flank', meaning: 'flank'
+        meaning: 'flank'
       },
       {
         word: '翼',
         furigana: 'ヨク',
-        meaningEn: 'plane', meaning: 'plane'
+        meaning: 'plane'
       },
       {
         word: '翼',
         furigana: 'ヨク',
-        meaningEn: 'wing', meaning: 'wing'
+        meaning: 'wing'
       },
     ],
   },
@@ -18868,17 +18868,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '耀',
         furigana: 'ヨウ',
-        meaningEn: 'gleam', meaning: 'gleam'
+        meaning: 'gleam'
       },
       {
         word: '耀',
         furigana: 'ヨウ',
-        meaningEn: 'shine', meaning: 'shine'
+        meaning: 'shine'
       },
       {
         word: '耀',
         furigana: 'ヨウ',
-        meaningEn: 'sparkle', meaning: 'sparkle'
+        meaning: 'sparkle'
       },
     ],
   },
@@ -18892,12 +18892,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '耐',
         furigana: 'タイ',
-        meaningEn: '-proof', meaning: '-proof'
+        meaning: '-proof'
       },
       {
         word: '耐',
         furigana: 'タイ',
-        meaningEn: 'enduring', meaning: 'enduring'
+        meaning: 'enduring'
       },
     ],
   },
@@ -18910,7 +18910,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '耗',
         furigana: 'コウ',
-        meaningEn: 'decrease', meaning: 'decrease'
+        meaning: 'decrease'
       },
     ],
   },
@@ -18924,7 +18924,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '耶',
         furigana: 'ジャ',
-        meaningEn: 'question mark', meaning: 'question mark'
+        meaning: 'question mark'
       },
     ],
   },
@@ -18938,17 +18938,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '聖',
         furigana: 'ショウ',
-        meaningEn: 'holy', meaning: 'holy'
+        meaning: 'holy'
       },
       {
         word: '聖',
         furigana: 'ショウ',
-        meaningEn: 'master', meaning: 'master'
+        meaning: 'master'
       },
       {
         word: '聖',
         furigana: 'ショウ',
-        meaningEn: 'priest', meaning: 'priest'
+        meaning: 'priest'
       },
     ],
   },
@@ -18962,12 +18962,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '聡',
         furigana: 'ソウ',
-        meaningEn: 'fast learner', meaning: 'fast learner'
+        meaning: 'fast learner'
       },
       {
         word: '聡',
         furigana: 'ソウ',
-        meaningEn: 'wise', meaning: 'wise'
+        meaning: 'wise'
       },
     ],
   },
@@ -18981,17 +18981,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '聴',
         furigana: 'チョウ',
-        meaningEn: 'careful inquiry', meaning: 'careful inquiry'
+        meaning: 'careful inquiry'
       },
       {
         word: '聴',
         furigana: 'チョウ',
-        meaningEn: 'headstrong', meaning: 'headstrong'
+        meaning: 'headstrong'
       },
       {
         word: '聴',
         furigana: 'チョウ',
-        meaningEn: 'listen', meaning: 'listen'
+        meaning: 'listen'
       },
     ],
   },
@@ -19005,7 +19005,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '肇',
         furigana: 'ジョウ',
-        meaningEn: 'beginning', meaning: 'beginning'
+        meaning: 'beginning'
       },
     ],
   },
@@ -19019,7 +19019,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '肖',
         furigana: 'ショウ',
-        meaningEn: 'resemblance', meaning: 'resemblance'
+        meaning: 'resemblance'
       },
     ],
   },
@@ -19033,17 +19033,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '肝',
         furigana: 'カン',
-        meaningEn: 'chutzpah', meaning: 'chutzpah'
+        meaning: 'chutzpah'
       },
       {
         word: '肝',
         furigana: 'カン',
-        meaningEn: 'liver', meaning: 'liver'
+        meaning: 'liver'
       },
       {
         word: '肝',
         furigana: 'カン',
-        meaningEn: 'nerve', meaning: 'nerve'
+        meaning: 'nerve'
       },
     ],
   },
@@ -19056,12 +19056,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '肢',
         furigana: 'シ',
-        meaningEn: 'arms & legs', meaning: 'arms & legs'
+        meaning: 'arms & legs'
       },
       {
         word: '肢',
         furigana: 'シ',
-        meaningEn: 'limb', meaning: 'limb'
+        meaning: 'limb'
       },
     ],
   },
@@ -19075,17 +19075,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '肥',
         furigana: 'ヒ',
-        meaningEn: 'fertile', meaning: 'fertile'
+        meaning: 'fertile'
       },
       {
         word: '肥',
         furigana: 'ヒ',
-        meaningEn: 'fertilizer', meaning: 'fertilizer'
+        meaning: 'fertilizer'
       },
       {
         word: '肥',
         furigana: 'ヒ',
-        meaningEn: 'get fat', meaning: 'get fat'
+        meaning: 'get fat'
       },
     ],
   },
@@ -19098,12 +19098,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '肪',
         furigana: 'ボウ',
-        meaningEn: 'fat', meaning: 'fat'
+        meaning: 'fat'
       },
       {
         word: '肪',
         furigana: 'ボウ',
-        meaningEn: 'obese', meaning: 'obese'
+        meaning: 'obese'
       },
     ],
   },
@@ -19116,7 +19116,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '肺',
         furigana: 'ハイ',
-        meaningEn: 'lungs', meaning: 'lungs'
+        meaning: 'lungs'
       },
     ],
   },
@@ -19130,17 +19130,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '胆',
         furigana: 'タン',
-        meaningEn: 'courage', meaning: 'courage'
+        meaning: 'courage'
       },
       {
         word: '胆',
         furigana: 'タン',
-        meaningEn: 'gall bladder', meaning: 'gall bladder'
+        meaning: 'gall bladder'
       },
       {
         word: '胆',
         furigana: 'タン',
-        meaningEn: 'nerve', meaning: 'nerve'
+        meaning: 'nerve'
       },
     ],
   },
@@ -19153,12 +19153,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '胎',
         furigana: 'タイ',
-        meaningEn: 'uterus', meaning: 'uterus'
+        meaning: 'uterus'
       },
       {
         word: '胎',
         furigana: 'タイ',
-        meaningEn: 'womb', meaning: 'womb'
+        meaning: 'womb'
       },
     ],
   },
@@ -19171,17 +19171,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '胞',
         furigana: 'ホウ',
-        meaningEn: 'placenta', meaning: 'placenta'
+        meaning: 'placenta'
       },
       {
         word: '胞',
         furigana: 'ホウ',
-        meaningEn: 'sac', meaning: 'sac'
+        meaning: 'sac'
       },
       {
         word: '胞',
         furigana: 'ホウ',
-        meaningEn: 'sheath', meaning: 'sheath'
+        meaning: 'sheath'
       },
     ],
   },
@@ -19195,12 +19195,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '胡',
         furigana: 'ウ',
-        meaningEn: 'barbarian', meaning: 'barbarian'
+        meaning: 'barbarian'
       },
       {
         word: '胡',
         furigana: 'ウ',
-        meaningEn: 'foreign', meaning: 'foreign'
+        meaning: 'foreign'
       },
     ],
   },
@@ -19214,17 +19214,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '胤',
         furigana: 'イン',
-        meaningEn: 'descendent', meaning: 'descendent'
+        meaning: 'descendent'
       },
       {
         word: '胤',
         furigana: 'イン',
-        meaningEn: 'issue', meaning: 'issue'
+        meaning: 'issue'
       },
       {
         word: '胤',
         furigana: 'イン',
-        meaningEn: 'offspring', meaning: 'offspring'
+        meaning: 'offspring'
       },
     ],
   },
@@ -19237,17 +19237,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '胴',
         furigana: 'ドウ',
-        meaningEn: 'hub of wheel', meaning: 'hub of wheel'
+        meaning: 'hub of wheel'
       },
       {
         word: '胴',
         furigana: 'ドウ',
-        meaningEn: 'hull (ship)', meaning: 'hull (ship)'
+        meaning: 'hull (ship)'
       },
       {
         word: '胴',
         furigana: 'ドウ',
-        meaningEn: 'torso', meaning: 'torso'
+        meaning: 'torso'
       },
     ],
   },
@@ -19261,12 +19261,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '脅',
         furigana: 'キョウ',
-        meaningEn: 'coerce', meaning: 'coerce'
+        meaning: 'coerce'
       },
       {
         word: '脅',
         furigana: 'キョウ',
-        meaningEn: 'threaten', meaning: 'threaten'
+        meaning: 'threaten'
       },
     ],
   },
@@ -19280,17 +19280,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '脈',
         furigana: 'ミャク',
-        meaningEn: 'hope', meaning: 'hope'
+        meaning: 'hope'
       },
       {
         word: '脈',
         furigana: 'ミャク',
-        meaningEn: 'pulse', meaning: 'pulse'
+        meaning: 'pulse'
       },
       {
         word: '脈',
         furigana: 'ミャク',
-        meaningEn: 'vein', meaning: 'vein'
+        meaning: 'vein'
       },
     ],
   },
@@ -19304,17 +19304,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '脚',
         furigana: 'カク',
-        meaningEn: 'base', meaning: 'base'
+        meaning: 'base'
       },
       {
         word: '脚',
         furigana: 'カク',
-        meaningEn: 'leg', meaning: 'leg'
+        meaning: 'leg'
       },
       {
         word: '脚',
         furigana: 'カク',
-        meaningEn: 'lower part', meaning: 'lower part'
+        meaning: 'lower part'
       },
     ],
   },
@@ -19328,7 +19328,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '脩',
         furigana: 'シュウ',
-        meaningEn: 'dried meat', meaning: 'dried meat'
+        meaning: 'dried meat'
       },
     ],
   },
@@ -19342,17 +19342,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '脱',
         furigana: 'ダツ',
-        meaningEn: 'be left out', meaning: 'be left out'
+        meaning: 'be left out'
       },
       {
         word: '脱',
         furigana: 'ダツ',
-        meaningEn: 'escape from', meaning: 'escape from'
+        meaning: 'escape from'
       },
       {
         word: '脱',
         furigana: 'ダツ',
-        meaningEn: 'get rid of', meaning: 'get rid of'
+        meaning: 'get rid of'
       },
     ],
   },
@@ -19366,17 +19366,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '脹',
         furigana: 'チョウ',
-        meaningEn: 'bulge', meaning: 'bulge'
+        meaning: 'bulge'
       },
       {
         word: '脹',
         furigana: 'チョウ',
-        meaningEn: 'dilate', meaning: 'dilate'
+        meaning: 'dilate'
       },
       {
         word: '脹',
         furigana: 'チョウ',
-        meaningEn: 'distend', meaning: 'distend'
+        meaning: 'distend'
       },
     ],
   },
@@ -19390,17 +19390,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '腐',
         furigana: 'フ',
-        meaningEn: 'decay', meaning: 'decay'
+        meaning: 'decay'
       },
       {
         word: '腐',
         furigana: 'フ',
-        meaningEn: 'rot', meaning: 'rot'
+        meaning: 'rot'
       },
       {
         word: '腐',
         furigana: 'フ',
-        meaningEn: 'sour', meaning: 'sour'
+        meaning: 'sour'
       },
     ],
   },
@@ -19414,17 +19414,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '腸',
         furigana: 'チョウ',
-        meaningEn: 'bowels', meaning: 'bowels'
+        meaning: 'bowels'
       },
       {
         word: '腸',
         furigana: 'チョウ',
-        meaningEn: 'guts', meaning: 'guts'
+        meaning: 'guts'
       },
       {
         word: '腸',
         furigana: 'チョウ',
-        meaningEn: 'intestines', meaning: 'intestines'
+        meaning: 'intestines'
       },
     ],
   },
@@ -19437,7 +19437,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '膜',
         furigana: 'マク',
-        meaningEn: 'membrane', meaning: 'membrane'
+        meaning: 'membrane'
       },
     ],
   },
@@ -19451,17 +19451,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '膨',
         furigana: 'ボウ',
-        meaningEn: 'get fat', meaning: 'get fat'
+        meaning: 'get fat'
       },
       {
         word: '膨',
         furigana: 'ボウ',
-        meaningEn: 'swell', meaning: 'swell'
+        meaning: 'swell'
       },
       {
         word: '膨',
         furigana: 'ボウ',
-        meaningEn: 'thick', meaning: 'thick'
+        meaning: 'thick'
       },
     ],
   },
@@ -19475,17 +19475,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '臨',
         furigana: 'リン',
-        meaningEn: 'attend', meaning: 'attend'
+        meaning: 'attend'
       },
       {
         word: '臨',
         furigana: 'リン',
-        meaningEn: 'call on', meaning: 'call on'
+        meaning: 'call on'
       },
       {
         word: '臨',
         furigana: 'リン',
-        meaningEn: 'confront', meaning: 'confront'
+        meaning: 'confront'
       },
     ],
   },
@@ -19499,17 +19499,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '臭',
         furigana: 'シュウ',
-        meaningEn: 'be bright', meaning: 'be bright'
+        meaning: 'be bright'
       },
       {
         word: '臭',
         furigana: 'シュウ',
-        meaningEn: 'be fragrant', meaning: 'be fragrant'
+        meaning: 'be fragrant'
       },
       {
         word: '臭',
         furigana: 'シュウ',
-        meaningEn: 'fragrance', meaning: 'fragrance'
+        meaning: 'fragrance'
       },
     ],
   },
@@ -19523,17 +19523,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '至',
         furigana: 'シ',
-        meaningEn: 'arrive', meaning: 'arrive'
+        meaning: 'arrive'
       },
       {
         word: '至',
         furigana: 'シ',
-        meaningEn: 'attain', meaning: 'attain'
+        meaning: 'attain'
       },
       {
         word: '至',
         furigana: 'シ',
-        meaningEn: 'climax', meaning: 'climax'
+        meaning: 'climax'
       },
     ],
   },
@@ -19547,17 +19547,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '致',
         furigana: 'チ',
-        meaningEn: 'cause', meaning: 'cause'
+        meaning: 'cause'
       },
       {
         word: '致',
         furigana: 'チ',
-        meaningEn: 'do', meaning: 'do'
+        meaning: 'do'
       },
       {
         word: '致',
         furigana: 'チ',
-        meaningEn: 'doth', meaning: 'doth'
+        meaning: 'doth'
       },
     ],
   },
@@ -19571,17 +19571,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '興',
         furigana: 'キョウ',
-        meaningEn: 'entertain', meaning: 'entertain'
+        meaning: 'entertain'
       },
       {
         word: '興',
         furigana: 'キョウ',
-        meaningEn: 'interest', meaning: 'interest'
+        meaning: 'interest'
       },
       {
         word: '興',
         furigana: 'キョウ',
-        meaningEn: 'pleasure', meaning: 'pleasure'
+        meaning: 'pleasure'
       },
     ],
   },
@@ -19595,17 +19595,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '舌',
         furigana: 'ゼツ',
-        meaningEn: 'clapper', meaning: 'clapper'
+        meaning: 'clapper'
       },
       {
         word: '舌',
         furigana: 'ゼツ',
-        meaningEn: 'reed', meaning: 'reed'
+        meaning: 'reed'
       },
       {
         word: '舌',
         furigana: 'ゼツ',
-        meaningEn: 'tongue', meaning: 'tongue'
+        meaning: 'tongue'
       },
     ],
   },
@@ -19619,17 +19619,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '舎',
         furigana: 'シャ',
-        meaningEn: 'cottage', meaning: 'cottage'
+        meaning: 'cottage'
       },
       {
         word: '舎',
         furigana: 'シャ',
-        meaningEn: 'house', meaning: 'house'
+        meaning: 'house'
       },
       {
         word: '舎',
         furigana: 'シャ',
-        meaningEn: 'hut', meaning: 'hut'
+        meaning: 'hut'
       },
     ],
   },
@@ -19642,17 +19642,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '舗',
         furigana: 'ホ',
-        meaningEn: 'pave', meaning: 'pave'
+        meaning: 'pave'
       },
       {
         word: '舗',
         furigana: 'ホ',
-        meaningEn: 'shop', meaning: 'shop'
+        meaning: 'shop'
       },
       {
         word: '舗',
         furigana: 'ホ',
-        meaningEn: 'store', meaning: 'store'
+        meaning: 'store'
       },
     ],
   },
@@ -19665,17 +19665,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '舜',
         furigana: 'シュン',
-        meaningEn: 'althea', meaning: 'althea'
+        meaning: 'althea'
       },
       {
         word: '舜',
         furigana: 'シュン',
-        meaningEn: 'rose of Sharon', meaning: 'rose of Sharon'
+        meaning: 'rose of Sharon'
       },
       {
         word: '舜',
         furigana: 'シュン',
-        meaningEn: 'type of morning glory', meaning: 'type of morning glory'
+        meaning: 'type of morning glory'
       },
     ],
   },
@@ -19688,12 +19688,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '舶',
         furigana: 'ハク',
-        meaningEn: 'liner', meaning: 'liner'
+        meaning: 'liner'
       },
       {
         word: '舶',
         furigana: 'ハク',
-        meaningEn: 'ship', meaning: 'ship'
+        meaning: 'ship'
       },
     ],
   },
@@ -19706,12 +19706,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '艇',
         furigana: 'テイ',
-        meaningEn: 'rowboat', meaning: 'rowboat'
+        meaning: 'rowboat'
       },
       {
         word: '艇',
         furigana: 'テイ',
-        meaningEn: 'small boat', meaning: 'small boat'
+        meaning: 'small boat'
       },
     ],
   },
@@ -19724,7 +19724,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '艦',
         furigana: 'カン',
-        meaningEn: 'warship', meaning: 'warship'
+        meaning: 'warship'
       },
     ],
   },
@@ -19738,17 +19738,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '艶',
         furigana: 'エン',
-        meaningEn: 'captivating', meaning: 'captivating'
+        meaning: 'captivating'
       },
       {
         word: '艶',
         furigana: 'エン',
-        meaningEn: 'charm', meaning: 'charm'
+        meaning: 'charm'
       },
       {
         word: '艶',
         furigana: 'エン',
-        meaningEn: 'colorful', meaning: 'colorful'
+        meaning: 'colorful'
       },
     ],
   },
@@ -19762,7 +19762,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '芋',
         furigana: 'ウ',
-        meaningEn: 'potato', meaning: 'potato'
+        meaning: 'potato'
       },
     ],
   },
@@ -19775,12 +19775,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '芙',
         furigana: 'フ',
-        meaningEn: 'Mt Fuji', meaning: 'Mt Fuji'
+        meaning: 'Mt Fuji'
       },
       {
         word: '芙',
         furigana: 'フ',
-        meaningEn: 'lotus', meaning: 'lotus'
+        meaning: 'lotus'
       },
     ],
   },
@@ -19794,12 +19794,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '芝',
         furigana: 'シ',
-        meaningEn: 'lawn', meaning: 'lawn'
+        meaning: 'lawn'
       },
       {
         word: '芝',
         furigana: 'シ',
-        meaningEn: 'turf', meaning: 'turf'
+        meaning: 'turf'
       },
     ],
   },
@@ -19813,17 +19813,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '芳',
         furigana: 'ホウ',
-        meaningEn: 'balmy', meaning: 'balmy'
+        meaning: 'balmy'
       },
       {
         word: '芳',
         furigana: 'ホウ',
-        meaningEn: 'favorable', meaning: 'favorable'
+        meaning: 'favorable'
       },
       {
         word: '芳',
         furigana: 'ホウ',
-        meaningEn: 'fragrant', meaning: 'fragrant'
+        meaning: 'fragrant'
       },
     ],
   },
@@ -19837,7 +19837,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '芹',
         furigana: 'キン',
-        meaningEn: 'parsley', meaning: 'parsley'
+        meaning: 'parsley'
       },
     ],
   },
@@ -19851,17 +19851,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '芽',
         furigana: 'ガ',
-        meaningEn: 'bud', meaning: 'bud'
+        meaning: 'bud'
       },
       {
         word: '芽',
         furigana: 'ガ',
-        meaningEn: 'germ', meaning: 'germ'
+        meaning: 'germ'
       },
       {
         word: '芽',
         furigana: 'ガ',
-        meaningEn: 'spear', meaning: 'spear'
+        meaning: 'spear'
       },
     ],
   },
@@ -19875,17 +19875,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '苑',
         furigana: 'エン',
-        meaningEn: 'farm', meaning: 'farm'
+        meaning: 'farm'
       },
       {
         word: '苑',
         furigana: 'エン',
-        meaningEn: 'garden', meaning: 'garden'
+        meaning: 'garden'
       },
       {
         word: '苑',
         furigana: 'エン',
-        meaningEn: 'park', meaning: 'park'
+        meaning: 'park'
       },
     ],
   },
@@ -19899,17 +19899,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '苗',
         furigana: 'ビョウ',
-        meaningEn: 'sapling', meaning: 'sapling'
+        meaning: 'sapling'
       },
       {
         word: '苗',
         furigana: 'ビョウ',
-        meaningEn: 'seedling', meaning: 'seedling'
+        meaning: 'seedling'
       },
       {
         word: '苗',
         furigana: 'ビョウ',
-        meaningEn: 'shoot', meaning: 'shoot'
+        meaning: 'shoot'
       },
     ],
   },
@@ -19923,17 +19923,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '茂',
         furigana: 'モ',
-        meaningEn: 'be luxuriant', meaning: 'be luxuriant'
+        meaning: 'be luxuriant'
       },
       {
         word: '茂',
         furigana: 'モ',
-        meaningEn: 'grow thick', meaning: 'grow thick'
+        meaning: 'grow thick'
       },
       {
         word: '茂',
         furigana: 'モ',
-        meaningEn: 'overgrown', meaning: 'overgrown'
+        meaning: 'overgrown'
       },
     ],
   },
@@ -19946,7 +19946,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '茄',
         furigana: 'カ',
-        meaningEn: 'eggplant', meaning: 'eggplant'
+        meaning: 'eggplant'
       },
     ],
   },
@@ -19960,7 +19960,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '茅',
         furigana: 'ボウ',
-        meaningEn: 'miscanthus reed', meaning: 'miscanthus reed'
+        meaning: 'miscanthus reed'
       },
     ],
   },
@@ -19973,7 +19973,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '茉',
         furigana: 'バツ',
-        meaningEn: 'jasmine', meaning: 'jasmine'
+        meaning: 'jasmine'
       },
     ],
   },
@@ -19987,12 +19987,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '茎',
         furigana: 'キョウ',
-        meaningEn: 'stalk', meaning: 'stalk'
+        meaning: 'stalk'
       },
       {
         word: '茎',
         furigana: 'キョウ',
-        meaningEn: 'stem', meaning: 'stem'
+        meaning: 'stem'
       },
     ],
   },
@@ -20006,17 +20006,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '茜',
         furigana: 'セン',
-        meaningEn: 'Turkey red', meaning: 'Turkey red'
+        meaning: 'Turkey red'
       },
       {
         word: '茜',
         furigana: 'セン',
-        meaningEn: 'madder', meaning: 'madder'
+        meaning: 'madder'
       },
       {
         word: '茜',
         furigana: 'セン',
-        meaningEn: 'red dye', meaning: 'red dye'
+        meaning: 'red dye'
       },
     ],
   },
@@ -20030,17 +20030,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '荘',
         furigana: 'ショウ',
-        meaningEn: 'cottage', meaning: 'cottage'
+        meaning: 'cottage'
       },
       {
         word: '荘',
         furigana: 'ショウ',
-        meaningEn: 'dignified', meaning: 'dignified'
+        meaning: 'dignified'
       },
       {
         word: '荘',
         furigana: 'ショウ',
-        meaningEn: 'feudal manor', meaning: 'feudal manor'
+        meaning: 'feudal manor'
       },
     ],
   },
@@ -20053,7 +20053,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '莉',
         furigana: 'ライ',
-        meaningEn: 'jasmine', meaning: 'jasmine'
+        meaning: 'jasmine'
       },
     ],
   },
@@ -20067,12 +20067,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '莞',
         furigana: 'カン',
-        meaningEn: 'reed used to cover tatami', meaning: 'reed used to cover tatami'
+        meaning: 'reed used to cover tatami'
       },
       {
         word: '莞',
         furigana: 'カン',
-        meaningEn: 'smiling', meaning: 'smiling'
+        meaning: 'smiling'
       },
     ],
   },
@@ -20085,7 +20085,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '菊',
         furigana: 'キク',
-        meaningEn: 'chrysanthemum', meaning: 'chrysanthemum'
+        meaning: 'chrysanthemum'
       },
     ],
   },
@@ -20098,17 +20098,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '菌',
         furigana: 'キン',
-        meaningEn: 'bacteria', meaning: 'bacteria'
+        meaning: 'bacteria'
       },
       {
         word: '菌',
         furigana: 'キン',
-        meaningEn: 'fungus', meaning: 'fungus'
+        meaning: 'fungus'
       },
       {
         word: '菌',
         furigana: 'キン',
-        meaningEn: 'germ', meaning: 'germ'
+        meaning: 'germ'
       },
     ],
   },
@@ -20121,7 +20121,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '菖',
         furigana: 'ショウ',
-        meaningEn: 'iris', meaning: 'iris'
+        meaning: 'iris'
       },
     ],
   },
@@ -20135,7 +20135,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '菫',
         furigana: 'キン',
-        meaningEn: 'the violet', meaning: 'the violet'
+        meaning: 'the violet'
       },
     ],
   },
@@ -20149,17 +20149,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '華',
         furigana: 'カ',
-        meaningEn: 'flower', meaning: 'flower'
+        meaning: 'flower'
       },
       {
         word: '華',
         furigana: 'カ',
-        meaningEn: 'gay', meaning: 'gay'
+        meaning: 'gay'
       },
       {
         word: '華',
         furigana: 'カ',
-        meaningEn: 'gorgeous', meaning: 'gorgeous'
+        meaning: 'gorgeous'
       },
     ],
   },
@@ -20173,17 +20173,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '萌',
         furigana: 'ホウ',
-        meaningEn: 'bud', meaning: 'bud'
+        meaning: 'bud'
       },
       {
         word: '萌',
         furigana: 'ホウ',
-        meaningEn: 'malt', meaning: 'malt'
+        meaning: 'malt'
       },
       {
         word: '萌',
         furigana: 'ホウ',
-        meaningEn: 'show symptoms of', meaning: 'show symptoms of'
+        meaning: 'show symptoms of'
       },
     ],
   },
@@ -20197,7 +20197,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '萩',
         furigana: 'シュウ',
-        meaningEn: 'bush clover', meaning: 'bush clover'
+        meaning: 'bush clover'
       },
     ],
   },
@@ -20211,17 +20211,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '葬',
         furigana: 'ソウ',
-        meaningEn: 'bury', meaning: 'bury'
+        meaning: 'bury'
       },
       {
         word: '葬',
         furigana: 'ソウ',
-        meaningEn: 'interment', meaning: 'interment'
+        meaning: 'interment'
       },
       {
         word: '葬',
         furigana: 'ソウ',
-        meaningEn: 'shelve', meaning: 'shelve'
+        meaning: 'shelve'
       },
     ],
   },
@@ -20235,7 +20235,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '葵',
         furigana: 'キ',
-        meaningEn: 'hollyhock', meaning: 'hollyhock'
+        meaning: 'hollyhock'
       },
     ],
   },
@@ -20249,7 +20249,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '蒔',
         furigana: 'シ',
-        meaningEn: 'sow (seeds)', meaning: 'sow (seeds)'
+        meaning: 'sow (seeds)'
       },
     ],
   },
@@ -20263,12 +20263,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '蒼',
         furigana: 'ソウ',
-        meaningEn: 'blue', meaning: 'blue'
+        meaning: 'blue'
       },
       {
         word: '蒼',
         furigana: 'ソウ',
-        meaningEn: 'pale', meaning: 'pale'
+        meaning: 'pale'
       },
     ],
   },
@@ -20282,17 +20282,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '蓄',
         furigana: 'チク',
-        meaningEn: 'amass', meaning: 'amass'
+        meaning: 'amass'
       },
       {
         word: '蓄',
         furigana: 'チク',
-        meaningEn: 'hoard', meaning: 'hoard'
+        meaning: 'hoard'
       },
       {
         word: '蓄',
         furigana: 'チク',
-        meaningEn: 'raise', meaning: 'raise'
+        meaning: 'raise'
       },
     ],
   },
@@ -20305,7 +20305,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '蓉',
         furigana: 'ヨウ',
-        meaningEn: 'lotus', meaning: 'lotus'
+        meaning: 'lotus'
       },
     ],
   },
@@ -20319,7 +20319,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '蓮',
         furigana: 'レン',
-        meaningEn: 'lotus', meaning: 'lotus'
+        meaning: 'lotus'
       },
     ],
   },
@@ -20333,12 +20333,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '蔦',
         furigana: 'チョウ',
-        meaningEn: 'ivy', meaning: 'ivy'
+        meaning: 'ivy'
       },
       {
         word: '蔦',
         furigana: 'チョウ',
-        meaningEn: 'vine', meaning: 'vine'
+        meaning: 'vine'
       },
     ],
   },
@@ -20351,12 +20351,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '蕉',
         furigana: 'ショウ',
-        meaningEn: 'banana', meaning: 'banana'
+        meaning: 'banana'
       },
       {
         word: '蕉',
         furigana: 'ショウ',
-        meaningEn: 'plantain', meaning: 'plantain'
+        meaning: 'plantain'
       },
     ],
   },
@@ -20370,12 +20370,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '蕗',
         furigana: 'ル',
-        meaningEn: 'bog rhubarb', meaning: 'bog rhubarb'
+        meaning: 'bog rhubarb'
       },
       {
         word: '蕗',
         furigana: 'ル',
-        meaningEn: 'butterbur', meaning: 'butterbur'
+        meaning: 'butterbur'
       },
     ],
   },
@@ -20389,17 +20389,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '薦',
         furigana: 'セン',
-        meaningEn: 'advise', meaning: 'advise'
+        meaning: 'advise'
       },
       {
         word: '薦',
         furigana: 'セン',
-        meaningEn: 'encourage', meaning: 'encourage'
+        meaning: 'encourage'
       },
       {
         word: '薦',
         furigana: 'セン',
-        meaningEn: 'mat', meaning: 'mat'
+        meaning: 'mat'
       },
     ],
   },
@@ -20413,17 +20413,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '薪',
         furigana: 'シン',
-        meaningEn: 'firewood', meaning: 'firewood'
+        meaning: 'firewood'
       },
       {
         word: '薪',
         furigana: 'シン',
-        meaningEn: 'fuel', meaning: 'fuel'
+        meaning: 'fuel'
       },
       {
         word: '薪',
         furigana: 'シン',
-        meaningEn: 'kindling', meaning: 'kindling'
+        meaning: 'kindling'
       },
     ],
   },
@@ -20437,17 +20437,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '薫',
         furigana: 'クン',
-        meaningEn: 'be scented', meaning: 'be scented'
+        meaning: 'be scented'
       },
       {
         word: '薫',
         furigana: 'クン',
-        meaningEn: 'fragrant', meaning: 'fragrant'
+        meaning: 'fragrant'
       },
       {
         word: '薫',
         furigana: 'クン',
-        meaningEn: 'send forth fragrance', meaning: 'send forth fragrance'
+        meaning: 'send forth fragrance'
       },
     ],
   },
@@ -20461,7 +20461,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '藍',
         furigana: 'ラン',
-        meaningEn: 'indigo', meaning: 'indigo'
+        meaning: 'indigo'
       },
     ],
   },
@@ -20475,7 +20475,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '藤',
         furigana: 'トウ',
-        meaningEn: 'wisteria', meaning: 'wisteria'
+        meaning: 'wisteria'
       },
     ],
   },
@@ -20488,12 +20488,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '藩',
         furigana: 'ハン',
-        meaningEn: 'clan', meaning: 'clan'
+        meaning: 'clan'
       },
       {
         word: '藩',
         furigana: 'ハン',
-        meaningEn: 'enclosure', meaning: 'enclosure'
+        meaning: 'enclosure'
       },
     ],
   },
@@ -20507,12 +20507,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '藻',
         furigana: 'ソウ',
-        meaningEn: 'duckweed', meaning: 'duckweed'
+        meaning: 'duckweed'
       },
       {
         word: '藻',
         furigana: 'ソウ',
-        meaningEn: 'seaweed', meaning: 'seaweed'
+        meaning: 'seaweed'
       },
     ],
   },
@@ -20525,12 +20525,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '蘭',
         furigana: 'ラ',
-        meaningEn: 'Holland', meaning: 'Holland'
+        meaning: 'Holland'
       },
       {
         word: '蘭',
         furigana: 'ラ',
-        meaningEn: 'orchid', meaning: 'orchid'
+        meaning: 'orchid'
       },
     ],
   },
@@ -20544,12 +20544,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '虎',
         furigana: 'コ',
-        meaningEn: 'drunkard', meaning: 'drunkard'
+        meaning: 'drunkard'
       },
       {
         word: '虎',
         furigana: 'コ',
-        meaningEn: 'tiger', meaning: 'tiger'
+        meaning: 'tiger'
       },
     ],
   },
@@ -20563,12 +20563,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '虐',
         furigana: 'ギャク',
-        meaningEn: 'oppress', meaning: 'oppress'
+        meaning: 'oppress'
       },
       {
         word: '虐',
         furigana: 'ギャク',
-        meaningEn: 'tyrannize', meaning: 'tyrannize'
+        meaning: 'tyrannize'
       },
     ],
   },
@@ -20582,17 +20582,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '虚',
         furigana: 'キョ',
-        meaningEn: 'crack', meaning: 'crack'
+        meaning: 'crack'
       },
       {
         word: '虚',
         furigana: 'キョ',
-        meaningEn: 'emptiness', meaning: 'emptiness'
+        meaning: 'emptiness'
       },
       {
         word: '虚',
         furigana: 'キョ',
-        meaningEn: 'fissure', meaning: 'fissure'
+        meaning: 'fissure'
       },
     ],
   },
@@ -20606,17 +20606,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '虜',
         furigana: 'リョ',
-        meaningEn: 'barbarian', meaning: 'barbarian'
+        meaning: 'barbarian'
       },
       {
         word: '虜',
         furigana: 'リョ',
-        meaningEn: 'captive', meaning: 'captive'
+        meaning: 'captive'
       },
       {
         word: '虜',
         furigana: 'リョ',
-        meaningEn: 'low epithet for the enemy', meaning: 'low epithet for the enemy'
+        meaning: 'low epithet for the enemy'
       },
     ],
   },
@@ -20630,17 +20630,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '虞',
         furigana: 'グ',
-        meaningEn: 'anxiety', meaning: 'anxiety'
+        meaning: 'anxiety'
       },
       {
         word: '虞',
         furigana: 'グ',
-        meaningEn: 'concern', meaning: 'concern'
+        meaning: 'concern'
       },
       {
         word: '虞',
         furigana: 'グ',
-        meaningEn: 'consideration', meaning: 'consideration'
+        meaning: 'consideration'
       },
     ],
   },
@@ -20654,7 +20654,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '虹',
         furigana: 'コウ',
-        meaningEn: 'rainbow', meaning: 'rainbow'
+        meaning: 'rainbow'
       },
     ],
   },
@@ -20668,7 +20668,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '蚊',
         furigana: 'ブン',
-        meaningEn: 'mosquito', meaning: 'mosquito'
+        meaning: 'mosquito'
       },
     ],
   },
@@ -20682,7 +20682,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '蚕',
         furigana: 'サン',
-        meaningEn: 'silkworm', meaning: 'silkworm'
+        meaning: 'silkworm'
       },
     ],
   },
@@ -20696,17 +20696,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '蛇',
         furigana: 'イ',
-        meaningEn: 'hard drinker', meaning: 'hard drinker'
+        meaning: 'hard drinker'
       },
       {
         word: '蛇',
         furigana: 'イ',
-        meaningEn: 'serpent', meaning: 'serpent'
+        meaning: 'serpent'
       },
       {
         word: '蛇',
         furigana: 'イ',
-        meaningEn: 'snake', meaning: 'snake'
+        meaning: 'snake'
       },
     ],
   },
@@ -20720,12 +20720,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '蛍',
         furigana: 'ケイ',
-        meaningEn: 'firefly', meaning: 'firefly'
+        meaning: 'firefly'
       },
       {
         word: '蛍',
         furigana: 'ケイ',
-        meaningEn: 'lightning-bug', meaning: 'lightning-bug'
+        meaning: 'lightning-bug'
       },
     ],
   },
@@ -20739,7 +20739,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '蛮',
         furigana: 'バン',
-        meaningEn: 'barbarian', meaning: 'barbarian'
+        meaning: 'barbarian'
       },
     ],
   },
@@ -20752,7 +20752,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '蝶',
         furigana: 'チョウ',
-        meaningEn: 'butterfly', meaning: 'butterfly'
+        meaning: 'butterfly'
       },
     ],
   },
@@ -20766,12 +20766,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '融',
         furigana: 'ユウ',
-        meaningEn: 'dissolve', meaning: 'dissolve'
+        meaning: 'dissolve'
       },
       {
         word: '融',
         furigana: 'ユウ',
-        meaningEn: 'melt', meaning: 'melt'
+        meaning: 'melt'
       },
     ],
   },
@@ -20785,17 +20785,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '衆',
         furigana: 'シュ',
-        meaningEn: 'great numbers', meaning: 'great numbers'
+        meaning: 'great numbers'
       },
       {
         word: '衆',
         furigana: 'シュ',
-        meaningEn: 'masses', meaning: 'masses'
+        meaning: 'masses'
       },
       {
         word: '衆',
         furigana: 'シュ',
-        meaningEn: 'multitude', meaning: 'multitude'
+        meaning: 'multitude'
       },
     ],
   },
@@ -20809,17 +20809,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '街',
         furigana: 'カイ',
-        meaningEn: 'boulevard', meaning: 'boulevard'
+        meaning: 'boulevard'
       },
       {
         word: '街',
         furigana: 'カイ',
-        meaningEn: 'street', meaning: 'street'
+        meaning: 'street'
       },
       {
         word: '街',
         furigana: 'カイ',
-        meaningEn: 'town', meaning: 'town'
+        meaning: 'town'
       },
     ],
   },
@@ -20832,12 +20832,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '衛',
         furigana: 'エ',
-        meaningEn: 'defense', meaning: 'defense'
+        meaning: 'defense'
       },
       {
         word: '衛',
         furigana: 'エ',
-        meaningEn: 'protection', meaning: 'protection'
+        meaning: 'protection'
       },
     ],
   },
@@ -20851,17 +20851,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '衝',
         furigana: 'ショウ',
-        meaningEn: 'brunt', meaning: 'brunt'
+        meaning: 'brunt'
       },
       {
         word: '衝',
         furigana: 'ショウ',
-        meaningEn: 'collide', meaning: 'collide'
+        meaning: 'collide'
       },
       {
         word: '衝',
         furigana: 'ショウ',
-        meaningEn: 'highway', meaning: 'highway'
+        meaning: 'highway'
       },
     ],
   },
@@ -20874,17 +20874,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '衡',
         furigana: 'コウ',
-        meaningEn: 'equilibrium', meaning: 'equilibrium'
+        meaning: 'equilibrium'
       },
       {
         word: '衡',
         furigana: 'コウ',
-        meaningEn: 'measuring rod', meaning: 'measuring rod'
+        meaning: 'measuring rod'
       },
       {
         word: '衡',
         furigana: 'コウ',
-        meaningEn: 'scale', meaning: 'scale'
+        meaning: 'scale'
       },
     ],
   },
@@ -20898,17 +20898,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '衰',
         furigana: 'スイ',
-        meaningEn: 'decline', meaning: 'decline'
+        meaning: 'decline'
       },
       {
         word: '衰',
         furigana: 'スイ',
-        meaningEn: 'wane', meaning: 'wane'
+        meaning: 'wane'
       },
       {
         word: '衰',
         furigana: 'スイ',
-        meaningEn: 'weaken', meaning: 'weaken'
+        meaning: 'weaken'
       },
     ],
   },
@@ -20921,17 +20921,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '衷',
         furigana: 'チュウ',
-        meaningEn: 'heart', meaning: 'heart'
+        meaning: 'heart'
       },
       {
         word: '衷',
         furigana: 'チュウ',
-        meaningEn: 'inmost', meaning: 'inmost'
+        meaning: 'inmost'
       },
       {
         word: '衷',
         furigana: 'チュウ',
-        meaningEn: 'inside', meaning: 'inside'
+        meaning: 'inside'
       },
     ],
   },
@@ -20945,17 +20945,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '衿',
         furigana: 'キン',
-        meaningEn: 'collar', meaning: 'collar'
+        meaning: 'collar'
       },
       {
         word: '衿',
         furigana: 'キン',
-        meaningEn: 'lapel', meaning: 'lapel'
+        meaning: 'lapel'
       },
       {
         word: '衿',
         furigana: 'キン',
-        meaningEn: 'neck', meaning: 'neck'
+        meaning: 'neck'
       },
     ],
   },
@@ -20968,7 +20968,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '袈',
         furigana: 'カ',
-        meaningEn: 'a coarse camlet', meaning: 'a coarse camlet'
+        meaning: 'a coarse camlet'
       },
     ],
   },
@@ -20982,17 +20982,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '裁',
         furigana: 'サイ',
-        meaningEn: 'cut out (pattern)', meaning: 'cut out (pattern)'
+        meaning: 'cut out (pattern)'
       },
       {
         word: '裁',
         furigana: 'サイ',
-        meaningEn: 'decision', meaning: 'decision'
+        meaning: 'decision'
       },
       {
         word: '裁',
         furigana: 'サイ',
-        meaningEn: 'judge', meaning: 'judge'
+        meaning: 'judge'
       },
     ],
   },
@@ -21006,17 +21006,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '裂',
         furigana: 'レツ',
-        meaningEn: 'rend', meaning: 'rend'
+        meaning: 'rend'
       },
       {
         word: '裂',
         furigana: 'レツ',
-        meaningEn: 'split', meaning: 'split'
+        meaning: 'split'
       },
       {
         word: '裂',
         furigana: 'レツ',
-        meaningEn: 'tear', meaning: 'tear'
+        meaning: 'tear'
       },
     ],
   },
@@ -21029,17 +21029,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '裕',
         furigana: 'ユウ',
-        meaningEn: 'abundant', meaning: 'abundant'
+        meaning: 'abundant'
       },
       {
         word: '裕',
         furigana: 'ユウ',
-        meaningEn: 'fertile', meaning: 'fertile'
+        meaning: 'fertile'
       },
       {
         word: '裕',
         furigana: 'ユウ',
-        meaningEn: 'rich', meaning: 'rich'
+        meaning: 'rich'
       },
     ],
   },
@@ -21052,7 +21052,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '裟',
         furigana: 'サ',
-        meaningEn: 'Buddhist surplice', meaning: 'Buddhist surplice'
+        meaning: 'Buddhist surplice'
       },
     ],
   },
@@ -21066,17 +21066,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '裸',
         furigana: 'ラ',
-        meaningEn: 'naked', meaning: 'naked'
+        meaning: 'naked'
       },
       {
         word: '裸',
         furigana: 'ラ',
-        meaningEn: 'nude', meaning: 'nude'
+        meaning: 'nude'
       },
       {
         word: '裸',
         furigana: 'ラ',
-        meaningEn: 'partially clothed', meaning: 'partially clothed'
+        meaning: 'partially clothed'
       },
     ],
   },
@@ -21089,12 +21089,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '製',
         furigana: 'セイ',
-        meaningEn: 'made in...', meaning: 'made in...'
+        meaning: 'made in...'
       },
       {
         word: '製',
         furigana: 'セイ',
-        meaningEn: 'manufacture', meaning: 'manufacture'
+        meaning: 'manufacture'
       },
     ],
   },
@@ -21107,12 +21107,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '褐',
         furigana: 'カツ',
-        meaningEn: 'brown', meaning: 'brown'
+        meaning: 'brown'
       },
       {
         word: '褐',
         furigana: 'カツ',
-        meaningEn: 'woollen kimono', meaning: 'woollen kimono'
+        meaning: 'woollen kimono'
       },
     ],
   },
@@ -21126,12 +21126,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '褒',
         furigana: 'ホウ',
-        meaningEn: 'extol', meaning: 'extol'
+        meaning: 'extol'
       },
       {
         word: '褒',
         furigana: 'ホウ',
-        meaningEn: 'praise', meaning: 'praise'
+        meaning: 'praise'
       },
     ],
   },
@@ -21145,17 +21145,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '襟',
         furigana: 'キン',
-        meaningEn: 'collar', meaning: 'collar'
+        meaning: 'collar'
       },
       {
         word: '襟',
         furigana: 'キン',
-        meaningEn: 'lapel', meaning: 'lapel'
+        meaning: 'lapel'
       },
       {
         word: '襟',
         furigana: 'キン',
-        meaningEn: 'neck', meaning: 'neck'
+        meaning: 'neck'
       },
     ],
   },
@@ -21169,17 +21169,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '襲',
         furigana: 'シュウ',
-        meaningEn: 'advance on', meaning: 'advance on'
+        meaning: 'advance on'
       },
       {
         word: '襲',
         furigana: 'シュウ',
-        meaningEn: 'attack', meaning: 'attack'
+        meaning: 'attack'
       },
       {
         word: '襲',
         furigana: 'シュウ',
-        meaningEn: 'heap', meaning: 'heap'
+        meaning: 'heap'
       },
     ],
   },
@@ -21193,17 +21193,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '覆',
         furigana: 'フク',
-        meaningEn: 'be ruined', meaning: 'be ruined'
+        meaning: 'be ruined'
       },
       {
         word: '覆',
         furigana: 'フク',
-        meaningEn: 'capsize', meaning: 'capsize'
+        meaning: 'capsize'
       },
       {
         word: '覆',
         furigana: 'フク',
-        meaningEn: 'cover', meaning: 'cover'
+        meaning: 'cover'
       },
     ],
   },
@@ -21217,17 +21217,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '覇',
         furigana: 'ハ',
-        meaningEn: 'champion', meaning: 'champion'
+        meaning: 'champion'
       },
       {
         word: '覇',
         furigana: 'ハ',
-        meaningEn: 'hegemony', meaning: 'hegemony'
+        meaning: 'hegemony'
       },
       {
         word: '覇',
         furigana: 'ハ',
-        meaningEn: 'leadership', meaning: 'leadership'
+        meaning: 'leadership'
       },
     ],
   },
@@ -21241,17 +21241,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '視',
         furigana: 'シ',
-        meaningEn: 'inspection', meaning: 'inspection'
+        meaning: 'inspection'
       },
       {
         word: '視',
         furigana: 'シ',
-        meaningEn: 'look at', meaning: 'look at'
+        meaning: 'look at'
       },
       {
         word: '視',
         furigana: 'シ',
-        meaningEn: 'regard as', meaning: 'regard as'
+        meaning: 'regard as'
       },
     ],
   },
@@ -21265,12 +21265,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '覧',
         furigana: 'ラン',
-        meaningEn: 'perusal', meaning: 'perusal'
+        meaning: 'perusal'
       },
       {
         word: '覧',
         furigana: 'ラン',
-        meaningEn: 'see', meaning: 'see'
+        meaning: 'see'
       },
     ],
   },
@@ -21284,17 +21284,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '訂',
         furigana: 'テイ',
-        meaningEn: 'correct', meaning: 'correct'
+        meaning: 'correct'
       },
       {
         word: '訂',
         furigana: 'テイ',
-        meaningEn: 'decide', meaning: 'decide'
+        meaning: 'decide'
       },
       {
         word: '訂',
         furigana: 'テイ',
-        meaningEn: 'revise', meaning: 'revise'
+        meaning: 'revise'
       },
     ],
   },
@@ -21308,17 +21308,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '討',
         furigana: 'トウ',
-        meaningEn: 'attack', meaning: 'attack'
+        meaning: 'attack'
       },
       {
         word: '討',
         furigana: 'トウ',
-        meaningEn: 'chastise', meaning: 'chastise'
+        meaning: 'chastise'
       },
       {
         word: '討',
         furigana: 'トウ',
-        meaningEn: 'conquer', meaning: 'conquer'
+        meaning: 'conquer'
       },
     ],
   },
@@ -21332,17 +21332,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '託',
         furigana: 'タク',
-        meaningEn: 'consign', meaning: 'consign'
+        meaning: 'consign'
       },
       {
         word: '託',
         furigana: 'タク',
-        meaningEn: 'entrusting with', meaning: 'entrusting with'
+        meaning: 'entrusting with'
       },
       {
         word: '託',
         furigana: 'タク',
-        meaningEn: 'hint', meaning: 'hint'
+        meaning: 'hint'
       },
     ],
   },
@@ -21355,12 +21355,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '訟',
         furigana: 'ショウ',
-        meaningEn: 'accuse', meaning: 'accuse'
+        meaning: 'accuse'
       },
       {
         word: '訟',
         furigana: 'ショウ',
-        meaningEn: 'sue', meaning: 'sue'
+        meaning: 'sue'
       },
     ],
   },
@@ -21374,17 +21374,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '訳',
         furigana: 'ヤク',
-        meaningEn: 'case', meaning: 'case'
+        meaning: 'case'
       },
       {
         word: '訳',
         furigana: 'ヤク',
-        meaningEn: 'circumstance', meaning: 'circumstance'
+        meaning: 'circumstance'
       },
       {
         word: '訳',
         furigana: 'ヤク',
-        meaningEn: 'reason', meaning: 'reason'
+        meaning: 'reason'
       },
     ],
   },
@@ -21398,17 +21398,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '訴',
         furigana: 'ソ',
-        meaningEn: 'accusation', meaning: 'accusation'
+        meaning: 'accusation'
       },
       {
         word: '訴',
         furigana: 'ソ',
-        meaningEn: 'appeal to', meaning: 'appeal to'
+        meaning: 'appeal to'
       },
       {
         word: '訴',
         furigana: 'ソ',
-        meaningEn: 'complain of pain', meaning: 'complain of pain'
+        meaning: 'complain of pain'
       },
     ],
   },
@@ -21422,17 +21422,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '診',
         furigana: 'シン',
-        meaningEn: 'checkup', meaning: 'checkup'
+        meaning: 'checkup'
       },
       {
         word: '診',
         furigana: 'シン',
-        meaningEn: 'diagnose', meaning: 'diagnose'
+        meaning: 'diagnose'
       },
       {
         word: '診',
         furigana: 'シン',
-        meaningEn: 'examine', meaning: 'examine'
+        meaning: 'examine'
       },
     ],
   },
@@ -21446,17 +21446,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '証',
         furigana: 'ショウ',
-        meaningEn: 'certificate', meaning: 'certificate'
+        meaning: 'certificate'
       },
       {
         word: '証',
         furigana: 'ショウ',
-        meaningEn: 'evidence', meaning: 'evidence'
+        meaning: 'evidence'
       },
       {
         word: '証',
         furigana: 'ショウ',
-        meaningEn: 'proof', meaning: 'proof'
+        meaning: 'proof'
       },
     ],
   },
@@ -21470,17 +21470,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '詐',
         furigana: 'サ',
-        meaningEn: 'deceive', meaning: 'deceive'
+        meaning: 'deceive'
       },
       {
         word: '詐',
         furigana: 'サ',
-        meaningEn: 'falsehood', meaning: 'falsehood'
+        meaning: 'falsehood'
       },
       {
         word: '詐',
         furigana: 'サ',
-        meaningEn: 'lie', meaning: 'lie'
+        meaning: 'lie'
       },
     ],
   },
@@ -21494,7 +21494,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '詔',
         furigana: 'ショウ',
-        meaningEn: 'imperial edict', meaning: 'imperial edict'
+        meaning: 'imperial edict'
       },
     ],
   },
@@ -21507,17 +21507,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '評',
         furigana: 'ヒョウ',
-        meaningEn: 'comment', meaning: 'comment'
+        meaning: 'comment'
       },
       {
         word: '評',
         furigana: 'ヒョウ',
-        meaningEn: 'criticism', meaning: 'criticism'
+        meaning: 'criticism'
       },
       {
         word: '評',
         furigana: 'ヒョウ',
-        meaningEn: 'evaluate', meaning: 'evaluate'
+        meaning: 'evaluate'
       },
     ],
   },
@@ -21531,17 +21531,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '詠',
         furigana: 'エイ',
-        meaningEn: 'composing', meaning: 'composing'
+        meaning: 'composing'
       },
       {
         word: '詠',
         furigana: 'エイ',
-        meaningEn: 'poem', meaning: 'poem'
+        meaning: 'poem'
       },
       {
         word: '詠',
         furigana: 'エイ',
-        meaningEn: 'recitation', meaning: 'recitation'
+        meaning: 'recitation'
       },
     ],
   },
@@ -21555,7 +21555,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '詢',
         furigana: 'シュン',
-        meaningEn: 'consult with', meaning: 'consult with'
+        meaning: 'consult with'
       },
     ],
   },
@@ -21569,12 +21569,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '詩',
         furigana: 'シ',
-        meaningEn: 'poem', meaning: 'poem'
+        meaning: 'poem'
       },
       {
         word: '詩',
         furigana: 'シ',
-        meaningEn: 'poetry', meaning: 'poetry'
+        meaning: 'poetry'
       },
     ],
   },
@@ -21587,17 +21587,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '該',
         furigana: 'ガイ',
-        meaningEn: 'above-stated', meaning: 'above-stated'
+        meaning: 'above-stated'
       },
       {
         word: '該',
         furigana: 'ガイ',
-        meaningEn: 'that specific', meaning: 'that specific'
+        meaning: 'that specific'
       },
       {
         word: '該',
         furigana: 'ガイ',
-        meaningEn: 'the said', meaning: 'the said'
+        meaning: 'the said'
       },
     ],
   },
@@ -21611,17 +21611,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '詳',
         furigana: 'ショウ',
-        meaningEn: 'accurate', meaning: 'accurate'
+        meaning: 'accurate'
       },
       {
         word: '詳',
         furigana: 'ショウ',
-        meaningEn: 'detailed', meaning: 'detailed'
+        meaning: 'detailed'
       },
       {
         word: '詳',
         furigana: 'ショウ',
-        meaningEn: 'full', meaning: 'full'
+        meaning: 'full'
       },
     ],
   },
@@ -21635,17 +21635,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '誇',
         furigana: 'コ',
-        meaningEn: 'be proud', meaning: 'be proud'
+        meaning: 'be proud'
       },
       {
         word: '誇',
         furigana: 'コ',
-        meaningEn: 'boast', meaning: 'boast'
+        meaning: 'boast'
       },
       {
         word: '誇',
         furigana: 'コ',
-        meaningEn: 'pride', meaning: 'pride'
+        meaning: 'pride'
       },
     ],
   },
@@ -21659,17 +21659,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '誉',
         furigana: 'ヨ',
-        meaningEn: 'glory', meaning: 'glory'
+        meaning: 'glory'
       },
       {
         word: '誉',
         furigana: 'ヨ',
-        meaningEn: 'honor', meaning: 'honor'
+        meaning: 'honor'
       },
       {
         word: '誉',
         furigana: 'ヨ',
-        meaningEn: 'praise', meaning: 'praise'
+        meaning: 'praise'
       },
     ],
   },
@@ -21683,17 +21683,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '誓',
         furigana: 'セイ',
-        meaningEn: 'pledge', meaning: 'pledge'
+        meaning: 'pledge'
       },
       {
         word: '誓',
         furigana: 'セイ',
-        meaningEn: 'swear', meaning: 'swear'
+        meaning: 'swear'
       },
       {
         word: '誓',
         furigana: 'セイ',
-        meaningEn: 'vow', meaning: 'vow'
+        meaning: 'vow'
       },
     ],
   },
@@ -21706,17 +21706,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '誕',
         furigana: 'タン',
-        meaningEn: 'be arbitrary', meaning: 'be arbitrary'
+        meaning: 'be arbitrary'
       },
       {
         word: '誕',
         furigana: 'タン',
-        meaningEn: 'be born', meaning: 'be born'
+        meaning: 'be born'
       },
       {
         word: '誕',
         furigana: 'タン',
-        meaningEn: 'declension', meaning: 'declension'
+        meaning: 'declension'
       },
     ],
   },
@@ -21730,17 +21730,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '誘',
         furigana: 'ユウ',
-        meaningEn: 'allure', meaning: 'allure'
+        meaning: 'allure'
       },
       {
         word: '誘',
         furigana: 'ユウ',
-        meaningEn: 'ask', meaning: 'ask'
+        meaning: 'ask'
       },
       {
         word: '誘',
         furigana: 'ユウ',
-        meaningEn: 'call for', meaning: 'call for'
+        meaning: 'call for'
       },
     ],
   },
@@ -21754,17 +21754,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '誠',
         furigana: 'セイ',
-        meaningEn: 'admonish', meaning: 'admonish'
+        meaning: 'admonish'
       },
       {
         word: '誠',
         furigana: 'セイ',
-        meaningEn: 'fidelity', meaning: 'fidelity'
+        meaning: 'fidelity'
       },
       {
         word: '誠',
         furigana: 'セイ',
-        meaningEn: 'prohibit', meaning: 'prohibit'
+        meaning: 'prohibit'
       },
     ],
   },
@@ -21778,12 +21778,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '誼',
         furigana: 'ギ',
-        meaningEn: 'friendship', meaning: 'friendship'
+        meaning: 'friendship'
       },
       {
         word: '誼',
         furigana: 'ギ',
-        meaningEn: 'intimacy', meaning: 'intimacy'
+        meaning: 'intimacy'
       },
     ],
   },
@@ -21797,7 +21797,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '諄',
         furigana: 'シュン',
-        meaningEn: 'tedious', meaning: 'tedious'
+        meaning: 'tedious'
       },
     ],
   },
@@ -21811,17 +21811,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '請',
         furigana: 'ショウ',
-        meaningEn: 'ask', meaning: 'ask'
+        meaning: 'ask'
       },
       {
         word: '請',
         furigana: 'ショウ',
-        meaningEn: 'invite', meaning: 'invite'
+        meaning: 'invite'
       },
       {
         word: '請',
         furigana: 'ショウ',
-        meaningEn: 'solicit', meaning: 'solicit'
+        meaning: 'solicit'
       },
     ],
   },
@@ -21835,17 +21835,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '諒',
         furigana: 'リョウ',
-        meaningEn: 'appreciate', meaning: 'appreciate'
+        meaning: 'appreciate'
       },
       {
         word: '諒',
         furigana: 'リョウ',
-        meaningEn: 'fact', meaning: 'fact'
+        meaning: 'fact'
       },
       {
         word: '諒',
         furigana: 'リョウ',
-        meaningEn: 'reality', meaning: 'reality'
+        meaning: 'reality'
       },
     ],
   },
@@ -21859,17 +21859,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '諭',
         furigana: 'ユ',
-        meaningEn: 'admonish', meaning: 'admonish'
+        meaning: 'admonish'
       },
       {
         word: '諭',
         furigana: 'ユ',
-        meaningEn: 'charge', meaning: 'charge'
+        meaning: 'charge'
       },
       {
         word: '諭',
         furigana: 'ユ',
-        meaningEn: 'persuade', meaning: 'persuade'
+        meaning: 'persuade'
       },
     ],
   },
@@ -21883,7 +21883,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '諮',
         furigana: 'シ',
-        meaningEn: 'consult with', meaning: 'consult with'
+        meaning: 'consult with'
       },
     ],
   },
@@ -21896,17 +21896,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '諾',
         furigana: 'ダク',
-        meaningEn: 'agreement', meaning: 'agreement'
+        meaning: 'agreement'
       },
       {
         word: '諾',
         furigana: 'ダク',
-        meaningEn: 'assent', meaning: 'assent'
+        meaning: 'assent'
       },
       {
         word: '諾',
         furigana: 'ダク',
-        meaningEn: 'consent', meaning: 'consent'
+        meaning: 'consent'
       },
     ],
   },
@@ -21920,17 +21920,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '謀',
         furigana: 'ボウ',
-        meaningEn: 'cheat', meaning: 'cheat'
+        meaning: 'cheat'
       },
       {
         word: '謀',
         furigana: 'ボウ',
-        meaningEn: 'conspire', meaning: 'conspire'
+        meaning: 'conspire'
       },
       {
         word: '謀',
         furigana: 'ボウ',
-        meaningEn: 'deceive', meaning: 'deceive'
+        meaning: 'deceive'
       },
     ],
   },
@@ -21943,12 +21943,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '謁',
         furigana: 'エツ',
-        meaningEn: 'audience', meaning: 'audience'
+        meaning: 'audience'
       },
       {
         word: '謁',
         furigana: 'エツ',
-        meaningEn: 'audience (with king)', meaning: 'audience (with king)'
+        meaning: 'audience (with king)'
       },
     ],
   },
@@ -21961,12 +21961,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '謄',
         furigana: 'トウ',
-        meaningEn: 'copy', meaning: 'copy'
+        meaning: 'copy'
       },
       {
         word: '謄',
         furigana: 'トウ',
-        meaningEn: 'mimeograph', meaning: 'mimeograph'
+        meaning: 'mimeograph'
       },
     ],
   },
@@ -21980,17 +21980,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '謙',
         furigana: 'ケン',
-        meaningEn: 'be modest', meaning: 'be modest'
+        meaning: 'be modest'
       },
       {
         word: '謙',
         furigana: 'ケン',
-        meaningEn: 'condescend', meaning: 'condescend'
+        meaning: 'condescend'
       },
       {
         word: '謙',
         furigana: 'ケン',
-        meaningEn: 'humble oneself', meaning: 'humble oneself'
+        meaning: 'humble oneself'
       },
     ],
   },
@@ -22004,17 +22004,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '謝',
         furigana: 'シャ',
-        meaningEn: 'apologize', meaning: 'apologize'
+        meaning: 'apologize'
       },
       {
         word: '謝',
         furigana: 'シャ',
-        meaningEn: 'refuse', meaning: 'refuse'
+        meaning: 'refuse'
       },
       {
         word: '謝',
         furigana: 'シャ',
-        meaningEn: 'thank', meaning: 'thank'
+        meaning: 'thank'
       },
     ],
   },
@@ -22028,17 +22028,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '謡',
         furigana: 'ヨウ',
-        meaningEn: 'ballad', meaning: 'ballad'
+        meaning: 'ballad'
       },
       {
         word: '謡',
         furigana: 'ヨウ',
-        meaningEn: 'noh chanting', meaning: 'noh chanting'
+        meaning: 'noh chanting'
       },
       {
         word: '謡',
         furigana: 'ヨウ',
-        meaningEn: 'sing', meaning: 'sing'
+        meaning: 'sing'
       },
     ],
   },
@@ -22052,17 +22052,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '謹',
         furigana: 'キン',
-        meaningEn: 'discreet', meaning: 'discreet'
+        meaning: 'discreet'
       },
       {
         word: '謹',
         furigana: 'キン',
-        meaningEn: 'humbly', meaning: 'humbly'
+        meaning: 'humbly'
       },
       {
         word: '謹',
         furigana: 'キン',
-        meaningEn: 'reverently', meaning: 'reverently'
+        meaning: 'reverently'
       },
     ],
   },
@@ -22075,17 +22075,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '譜',
         furigana: 'フ',
-        meaningEn: 'genealogy', meaning: 'genealogy'
+        meaning: 'genealogy'
       },
       {
         word: '譜',
         furigana: 'フ',
-        meaningEn: 'music', meaning: 'music'
+        meaning: 'music'
       },
       {
         word: '譜',
         furigana: 'フ',
-        meaningEn: 'musical score', meaning: 'musical score'
+        meaning: 'musical score'
       },
     ],
   },
@@ -22099,17 +22099,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '譲',
         furigana: 'ジョウ',
-        meaningEn: 'convey', meaning: 'convey'
+        meaning: 'convey'
       },
       {
         word: '譲',
         furigana: 'ジョウ',
-        meaningEn: 'defer', meaning: 'defer'
+        meaning: 'defer'
       },
       {
         word: '譲',
         furigana: 'ジョウ',
-        meaningEn: 'transfer', meaning: 'transfer'
+        meaning: 'transfer'
       },
     ],
   },
@@ -22123,12 +22123,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '護',
         furigana: 'ゴ',
-        meaningEn: 'protect', meaning: 'protect'
+        meaning: 'protect'
       },
       {
         word: '護',
         furigana: 'ゴ',
-        meaningEn: 'safeguard', meaning: 'safeguard'
+        meaning: 'safeguard'
       },
     ],
   },
@@ -22142,17 +22142,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '豆',
         furigana: 'ズ',
-        meaningEn: 'beans', meaning: 'beans'
+        meaning: 'beans'
       },
       {
         word: '豆',
         furigana: 'ズ',
-        meaningEn: 'midget', meaning: 'midget'
+        meaning: 'midget'
       },
       {
         word: '豆',
         furigana: 'ズ',
-        meaningEn: 'pea', meaning: 'pea'
+        meaning: 'pea'
       },
     ],
   },
@@ -22166,12 +22166,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '豚',
         furigana: 'トン',
-        meaningEn: 'pig', meaning: 'pig'
+        meaning: 'pig'
       },
       {
         word: '豚',
         furigana: 'トン',
-        meaningEn: 'pork', meaning: 'pork'
+        meaning: 'pork'
       },
     ],
   },
@@ -22185,17 +22185,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '豪',
         furigana: 'ゴウ',
-        meaningEn: 'Australia', meaning: 'Australia'
+        meaning: 'Australia'
       },
       {
         word: '豪',
         furigana: 'ゴウ',
-        meaningEn: 'excelling', meaning: 'excelling'
+        meaning: 'excelling'
       },
       {
         word: '豪',
         furigana: 'ゴウ',
-        meaningEn: 'great', meaning: 'great'
+        meaning: 'great'
       },
     ],
   },
@@ -22209,17 +22209,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '貞',
         furigana: 'ジョウ',
-        meaningEn: 'chastity', meaning: 'chastity'
+        meaning: 'chastity'
       },
       {
         word: '貞',
         furigana: 'ジョウ',
-        meaningEn: 'constancy', meaning: 'constancy'
+        meaning: 'constancy'
       },
       {
         word: '貞',
         furigana: 'ジョウ',
-        meaningEn: 'righteousness', meaning: 'righteousness'
+        meaning: 'righteousness'
       },
     ],
   },
@@ -22233,17 +22233,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '貢',
         furigana: 'ク',
-        meaningEn: 'finance', meaning: 'finance'
+        meaning: 'finance'
       },
       {
         word: '貢',
         furigana: 'ク',
-        meaningEn: 'support', meaning: 'support'
+        meaning: 'support'
       },
       {
         word: '貢',
         furigana: 'ク',
-        meaningEn: 'tribute', meaning: 'tribute'
+        meaning: 'tribute'
       },
     ],
   },
@@ -22257,17 +22257,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '貫',
         furigana: 'カン',
-        meaningEn: '8 1/3lbs', meaning: '8 1/3lbs'
+        meaning: '8 1/3lbs'
       },
       {
         word: '貫',
         furigana: 'カン',
-        meaningEn: 'brace', meaning: 'brace'
+        meaning: 'brace'
       },
       {
         word: '貫',
         furigana: 'カン',
-        meaningEn: 'penetrate', meaning: 'penetrate'
+        meaning: 'penetrate'
       },
     ],
   },
@@ -22281,17 +22281,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '貴',
         furigana: 'キ',
-        meaningEn: 'esteem', meaning: 'esteem'
+        meaning: 'esteem'
       },
       {
         word: '貴',
         furigana: 'キ',
-        meaningEn: 'honor', meaning: 'honor'
+        meaning: 'honor'
       },
       {
         word: '貴',
         furigana: 'キ',
-        meaningEn: 'precious', meaning: 'precious'
+        meaning: 'precious'
       },
     ],
   },
@@ -22304,12 +22304,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '賀',
         furigana: 'ガ',
-        meaningEn: 'congratulations', meaning: 'congratulations'
+        meaning: 'congratulations'
       },
       {
         word: '賀',
         furigana: 'ガ',
-        meaningEn: 'joy', meaning: 'joy'
+        meaning: 'joy'
       },
     ],
   },
@@ -22322,17 +22322,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '賃',
         furigana: 'チン',
-        meaningEn: 'charge', meaning: 'charge'
+        meaning: 'charge'
       },
       {
         word: '賃',
         furigana: 'チン',
-        meaningEn: 'fare', meaning: 'fare'
+        meaning: 'fare'
       },
       {
         word: '賃',
         furigana: 'チン',
-        meaningEn: 'fee', meaning: 'fee'
+        meaning: 'fee'
       },
     ],
   },
@@ -22346,17 +22346,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '賄',
         furigana: 'ワイ',
-        meaningEn: 'board', meaning: 'board'
+        meaning: 'board'
       },
       {
         word: '賄',
         furigana: 'ワイ',
-        meaningEn: 'bribe', meaning: 'bribe'
+        meaning: 'bribe'
       },
       {
         word: '賄',
         furigana: 'ワイ',
-        meaningEn: 'finance', meaning: 'finance'
+        meaning: 'finance'
       },
     ],
   },
@@ -22369,17 +22369,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '賊',
         furigana: 'ゾク',
-        meaningEn: 'burglar', meaning: 'burglar'
+        meaning: 'burglar'
       },
       {
         word: '賊',
         furigana: 'ゾク',
-        meaningEn: 'rebel', meaning: 'rebel'
+        meaning: 'rebel'
       },
       {
         word: '賊',
         furigana: 'ゾク',
-        meaningEn: 'robber', meaning: 'robber'
+        meaning: 'robber'
       },
     ],
   },
@@ -22392,12 +22392,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '賓',
         furigana: 'ヒン',
-        meaningEn: 'V.I.P.', meaning: 'V.I.P.'
+        meaning: 'V.I.P.'
       },
       {
         word: '賓',
         furigana: 'ヒン',
-        meaningEn: 'guest', meaning: 'guest'
+        meaning: 'guest'
       },
     ],
   },
@@ -22411,17 +22411,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '賜',
         furigana: 'シ',
-        meaningEn: 'boon', meaning: 'boon'
+        meaning: 'boon'
       },
       {
         word: '賜',
         furigana: 'シ',
-        meaningEn: 'gift', meaning: 'gift'
+        meaning: 'gift'
       },
       {
         word: '賜',
         furigana: 'シ',
-        meaningEn: 'grant', meaning: 'grant'
+        meaning: 'grant'
       },
     ],
   },
@@ -22434,12 +22434,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '賠',
         furigana: 'バイ',
-        meaningEn: 'compensation', meaning: 'compensation'
+        meaning: 'compensation'
       },
       {
         word: '賠',
         furigana: 'バイ',
-        meaningEn: 'indemnify', meaning: 'indemnify'
+        meaning: 'indemnify'
       },
     ],
   },
@@ -22452,17 +22452,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '賦',
         furigana: 'フ',
-        meaningEn: 'installment', meaning: 'installment'
+        meaning: 'installment'
       },
       {
         word: '賦',
         furigana: 'フ',
-        meaningEn: 'levy', meaning: 'levy'
+        meaning: 'levy'
       },
       {
         word: '賦',
         furigana: 'フ',
-        meaningEn: 'ode', meaning: 'ode'
+        meaning: 'ode'
       },
     ],
   },
@@ -22475,12 +22475,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '購',
         furigana: 'コウ',
-        meaningEn: 'buy', meaning: 'buy'
+        meaning: 'buy'
       },
       {
         word: '購',
         furigana: 'コウ',
-        meaningEn: 'subscription', meaning: 'subscription'
+        meaning: 'subscription'
       },
     ],
   },
@@ -22493,12 +22493,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '赦',
         furigana: 'シャ',
-        meaningEn: 'forgiveness', meaning: 'forgiveness'
+        meaning: 'forgiveness'
       },
       {
         word: '赦',
         furigana: 'シャ',
-        meaningEn: 'pardon', meaning: 'pardon'
+        meaning: 'pardon'
       },
     ],
   },
@@ -22511,7 +22511,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '赳',
         furigana: 'キュウ',
-        meaningEn: 'strong and brave', meaning: 'strong and brave'
+        meaning: 'strong and brave'
       },
     ],
   },
@@ -22525,17 +22525,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '赴',
         furigana: 'フ',
-        meaningEn: 'become', meaning: 'become'
+        meaning: 'become'
       },
       {
         word: '赴',
         furigana: 'フ',
-        meaningEn: 'get', meaning: 'get'
+        meaning: 'get'
       },
       {
         word: '赴',
         furigana: 'フ',
-        meaningEn: 'proceed', meaning: 'proceed'
+        meaning: 'proceed'
       },
     ],
   },
@@ -22549,17 +22549,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '趣',
         furigana: 'シュ',
-        meaningEn: 'become', meaning: 'become'
+        meaning: 'become'
       },
       {
         word: '趣',
         furigana: 'シュ',
-        meaningEn: 'elegance', meaning: 'elegance'
+        meaning: 'elegance'
       },
       {
         word: '趣',
         furigana: 'シュ',
-        meaningEn: 'gist', meaning: 'gist'
+        meaning: 'gist'
       },
     ],
   },
@@ -22573,17 +22573,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '距',
         furigana: 'キョ',
-        meaningEn: 'fetlock', meaning: 'fetlock'
+        meaning: 'fetlock'
       },
       {
         word: '距',
         furigana: 'キョ',
-        meaningEn: 'long-distance', meaning: 'long-distance'
+        meaning: 'long-distance'
       },
       {
         word: '距',
         furigana: 'キョ',
-        meaningEn: 'spur', meaning: 'spur'
+        meaning: 'spur'
       },
     ],
   },
@@ -22597,17 +22597,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '跳',
         furigana: 'チョウ',
-        meaningEn: 'buck', meaning: 'buck'
+        meaning: 'buck'
       },
       {
         word: '跳',
         furigana: 'チョウ',
-        meaningEn: 'hop', meaning: 'hop'
+        meaning: 'hop'
       },
       {
         word: '跳',
         furigana: 'チョウ',
-        meaningEn: 'jerk', meaning: 'jerk'
+        meaning: 'jerk'
       },
     ],
   },
@@ -22621,17 +22621,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '践',
         furigana: 'セン',
-        meaningEn: 'carry through', meaning: 'carry through'
+        meaning: 'carry through'
       },
       {
         word: '践',
         furigana: 'セン',
-        meaningEn: 'practice', meaning: 'practice'
+        meaning: 'practice'
       },
       {
         word: '践',
         furigana: 'セン',
-        meaningEn: 'step on', meaning: 'step on'
+        meaning: 'step on'
       },
     ],
   },
@@ -22645,17 +22645,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '踏',
         furigana: 'トウ',
-        meaningEn: 'appraise', meaning: 'appraise'
+        meaning: 'appraise'
       },
       {
         word: '踏',
         furigana: 'トウ',
-        meaningEn: 'carry through', meaning: 'carry through'
+        meaning: 'carry through'
       },
       {
         word: '踏',
         furigana: 'トウ',
-        meaningEn: 'evade payment', meaning: 'evade payment'
+        meaning: 'evade payment'
       },
     ],
   },
@@ -22669,17 +22669,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '躍',
         furigana: 'ヤク',
-        meaningEn: 'dance', meaning: 'dance'
+        meaning: 'dance'
       },
       {
         word: '躍',
         furigana: 'ヤク',
-        meaningEn: 'leap', meaning: 'leap'
+        meaning: 'leap'
       },
       {
         word: '躍',
         furigana: 'ヤク',
-        meaningEn: 'skip', meaning: 'skip'
+        meaning: 'skip'
       },
     ],
   },
@@ -22692,17 +22692,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '軌',
         furigana: 'キ',
-        meaningEn: 'model', meaning: 'model'
+        meaning: 'model'
       },
       {
         word: '軌',
         furigana: 'キ',
-        meaningEn: 'rut', meaning: 'rut'
+        meaning: 'rut'
       },
       {
         word: '軌',
         furigana: 'キ',
-        meaningEn: 'track', meaning: 'track'
+        meaning: 'track'
       },
     ],
   },
@@ -22715,17 +22715,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '軸',
         furigana: 'ジク',
-        meaningEn: 'axis', meaning: 'axis'
+        meaning: 'axis'
       },
       {
         word: '軸',
         furigana: 'ジク',
-        meaningEn: 'counter for book scrolls', meaning: 'counter for book scrolls'
+        meaning: 'counter for book scrolls'
       },
       {
         word: '軸',
         furigana: 'ジク',
-        meaningEn: 'pivot', meaning: 'pivot'
+        meaning: 'pivot'
       },
     ],
   },
@@ -22739,12 +22739,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '較',
         furigana: 'カク',
-        meaningEn: 'compare', meaning: 'compare'
+        meaning: 'compare'
       },
       {
         word: '較',
         furigana: 'カク',
-        meaningEn: 'contrast', meaning: 'contrast'
+        meaning: 'contrast'
       },
     ],
   },
@@ -22758,17 +22758,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '載',
         furigana: 'サイ',
-        meaningEn: '10**44', meaning: '10**44'
+        meaning: '10**44'
       },
       {
         word: '載',
         furigana: 'サイ',
-        meaningEn: 'board', meaning: 'board'
+        meaning: 'board'
       },
       {
         word: '載',
         furigana: 'サイ',
-        meaningEn: 'get on', meaning: 'get on'
+        meaning: 'get on'
       },
     ],
   },
@@ -22782,7 +22782,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '輔',
         furigana: 'フ',
-        meaningEn: 'help', meaning: 'help'
+        meaning: 'help'
       },
     ],
   },
@@ -22796,17 +22796,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '輝',
         furigana: 'キ',
-        meaningEn: 'gleam', meaning: 'gleam'
+        meaning: 'gleam'
       },
       {
         word: '輝',
         furigana: 'キ',
-        meaningEn: 'radiance', meaning: 'radiance'
+        meaning: 'radiance'
       },
       {
         word: '輝',
         furigana: 'キ',
-        meaningEn: 'shine', meaning: 'shine'
+        meaning: 'shine'
       },
     ],
   },
@@ -22820,17 +22820,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '輩',
         furigana: 'ハイ',
-        meaningEn: 'companions', meaning: 'companions'
+        meaning: 'companions'
       },
       {
         word: '輩',
         furigana: 'ハイ',
-        meaningEn: 'comrade', meaning: 'comrade'
+        meaning: 'comrade'
       },
       {
         word: '輩',
         furigana: 'ハイ',
-        meaningEn: 'fellow', meaning: 'fellow'
+        meaning: 'fellow'
       },
     ],
   },
@@ -22844,12 +22844,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '轄',
         furigana: 'カツ',
-        meaningEn: 'control', meaning: 'control'
+        meaning: 'control'
       },
       {
         word: '轄',
         furigana: 'カツ',
-        meaningEn: 'wedge', meaning: 'wedge'
+        meaning: 'wedge'
       },
     ],
   },
@@ -22863,17 +22863,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '辰',
         furigana: 'シン',
-        meaningEn: '7-9AM', meaning: '7-9AM'
+        meaning: '7-9AM'
       },
       {
         word: '辰',
         furigana: 'シン',
-        meaningEn: 'fifth sign of Chinese zodiac', meaning: 'fifth sign of Chinese zodiac'
+        meaning: 'fifth sign of Chinese zodiac'
       },
       {
         word: '辰',
         furigana: 'シン',
-        meaningEn: 'shin dragon radical (no. 161)', meaning: 'shin dragon radical (no. 161)'
+        meaning: 'shin dragon radical (no. 161)'
       },
     ],
   },
@@ -22887,17 +22887,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '辱',
         furigana: 'ジョク',
-        meaningEn: 'embarrass', meaning: 'embarrass'
+        meaning: 'embarrass'
       },
       {
         word: '辱',
         furigana: 'ジョク',
-        meaningEn: 'humiliate', meaning: 'humiliate'
+        meaning: 'humiliate'
       },
       {
         word: '辱',
         furigana: 'ジョク',
-        meaningEn: 'shame', meaning: 'shame'
+        meaning: 'shame'
       },
     ],
   },
@@ -22910,12 +22910,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '迅',
         furigana: 'ジン',
-        meaningEn: 'fast', meaning: 'fast'
+        meaning: 'fast'
       },
       {
         word: '迅',
         furigana: 'ジン',
-        meaningEn: 'swift', meaning: 'swift'
+        meaning: 'swift'
       },
     ],
   },
@@ -22929,17 +22929,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '迪',
         furigana: 'テキ',
-        meaningEn: 'edify', meaning: 'edify'
+        meaning: 'edify'
       },
       {
         word: '迪',
         furigana: 'テキ',
-        meaningEn: 'path', meaning: 'path'
+        meaning: 'path'
       },
       {
         word: '迪',
         furigana: 'テキ',
-        meaningEn: 'way', meaning: 'way'
+        meaning: 'way'
       },
     ],
   },
@@ -22953,17 +22953,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '迫',
         furigana: 'ハク',
-        meaningEn: 'force', meaning: 'force'
+        meaning: 'force'
       },
       {
         word: '迫',
         furigana: 'ハク',
-        meaningEn: 'imminent', meaning: 'imminent'
+        meaning: 'imminent'
       },
       {
         word: '迫',
         furigana: 'ハク',
-        meaningEn: 'spur on', meaning: 'spur on'
+        meaning: 'spur on'
       },
     ],
   },
@@ -22976,12 +22976,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '迭',
         furigana: 'テツ',
-        meaningEn: 'alternation', meaning: 'alternation'
+        meaning: 'alternation'
       },
       {
         word: '迭',
         furigana: 'テツ',
-        meaningEn: 'transfer', meaning: 'transfer'
+        meaning: 'transfer'
       },
     ],
   },
@@ -22995,17 +22995,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '透',
         furigana: 'トウ',
-        meaningEn: 'filter', meaning: 'filter'
+        meaning: 'filter'
       },
       {
         word: '透',
         furigana: 'トウ',
-        meaningEn: 'penetrate', meaning: 'penetrate'
+        meaning: 'penetrate'
       },
       {
         word: '透',
         furigana: 'トウ',
-        meaningEn: 'permeate', meaning: 'permeate'
+        meaning: 'permeate'
       },
     ],
   },
@@ -23018,17 +23018,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '逐',
         furigana: 'チク',
-        meaningEn: 'accomplish', meaning: 'accomplish'
+        meaning: 'accomplish'
       },
       {
         word: '逐',
         furigana: 'チク',
-        meaningEn: 'attain', meaning: 'attain'
+        meaning: 'attain'
       },
       {
         word: '逐',
         furigana: 'チク',
-        meaningEn: 'chase', meaning: 'chase'
+        meaning: 'chase'
       },
     ],
   },
@@ -23042,17 +23042,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '逓',
         furigana: 'テイ',
-        meaningEn: 'in turn', meaning: 'in turn'
+        meaning: 'in turn'
       },
       {
         word: '逓',
         furigana: 'テイ',
-        meaningEn: 'relay', meaning: 'relay'
+        meaning: 'relay'
       },
       {
         word: '逓',
         furigana: 'テイ',
-        meaningEn: 'sending', meaning: 'sending'
+        meaning: 'sending'
       },
     ],
   },
@@ -23066,12 +23066,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '逝',
         furigana: 'セイ',
-        meaningEn: 'departed', meaning: 'departed'
+        meaning: 'departed'
       },
       {
         word: '逝',
         furigana: 'セイ',
-        meaningEn: 'die', meaning: 'die'
+        meaning: 'die'
       },
     ],
   },
@@ -23084,12 +23084,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '逮',
         furigana: 'タイ',
-        meaningEn: 'apprehend', meaning: 'apprehend'
+        meaning: 'apprehend'
       },
       {
         word: '逮',
         furigana: 'タイ',
-        meaningEn: 'chase', meaning: 'chase'
+        meaning: 'chase'
       },
     ],
   },
@@ -23103,17 +23103,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '逸',
         furigana: 'イツ',
-        meaningEn: 'deviate', meaning: 'deviate'
+        meaning: 'deviate'
       },
       {
         word: '逸',
         furigana: 'イツ',
-        meaningEn: 'diverge', meaning: 'diverge'
+        meaning: 'diverge'
       },
       {
         word: '逸',
         furigana: 'イツ',
-        meaningEn: 'elude', meaning: 'elude'
+        meaning: 'elude'
       },
     ],
   },
@@ -23127,17 +23127,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '遂',
         furigana: 'スイ',
-        meaningEn: 'accomplish', meaning: 'accomplish'
+        meaning: 'accomplish'
       },
       {
         word: '遂',
         furigana: 'スイ',
-        meaningEn: 'attain', meaning: 'attain'
+        meaning: 'attain'
       },
       {
         word: '遂',
         furigana: 'スイ',
-        meaningEn: 'commit (suicide)', meaning: 'commit (suicide)'
+        meaning: 'commit (suicide)'
       },
     ],
   },
@@ -23151,17 +23151,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '遇',
         furigana: 'グウ',
-        meaningEn: 'deal with', meaning: 'deal with'
+        meaning: 'deal with'
       },
       {
         word: '遇',
         furigana: 'グウ',
-        meaningEn: 'encounter', meaning: 'encounter'
+        meaning: 'encounter'
       },
       {
         word: '遇',
         furigana: 'グウ',
-        meaningEn: 'entertain', meaning: 'entertain'
+        meaning: 'entertain'
       },
     ],
   },
@@ -23175,17 +23175,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '遍',
         furigana: 'ヘン',
-        meaningEn: 'everywhere', meaning: 'everywhere'
+        meaning: 'everywhere'
       },
       {
         word: '遍',
         furigana: 'ヘン',
-        meaningEn: 'generally', meaning: 'generally'
+        meaning: 'generally'
       },
       {
         word: '遍',
         furigana: 'ヘン',
-        meaningEn: 'times', meaning: 'times'
+        meaning: 'times'
       },
     ],
   },
@@ -23199,17 +23199,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '遣',
         furigana: 'ケン',
-        meaningEn: 'despatch', meaning: 'despatch'
+        meaning: 'despatch'
       },
       {
         word: '遣',
         furigana: 'ケン',
-        meaningEn: 'dispatch', meaning: 'dispatch'
+        meaning: 'dispatch'
       },
       {
         word: '遣',
         furigana: 'ケン',
-        meaningEn: 'do', meaning: 'do'
+        meaning: 'do'
       },
     ],
   },
@@ -23223,17 +23223,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '遥',
         furigana: 'ヨウ',
-        meaningEn: 'distant', meaning: 'distant'
+        meaning: 'distant'
       },
       {
         word: '遥',
         furigana: 'ヨウ',
-        meaningEn: 'far off', meaning: 'far off'
+        meaning: 'far off'
       },
       {
         word: '遥',
         furigana: 'ヨウ',
-        meaningEn: 'long ago', meaning: 'long ago'
+        meaning: 'long ago'
       },
     ],
   },
@@ -23247,17 +23247,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '遭',
         furigana: 'ソウ',
-        meaningEn: 'association', meaning: 'association'
+        meaning: 'association'
       },
       {
         word: '遭',
         furigana: 'ソウ',
-        meaningEn: 'encounter', meaning: 'encounter'
+        meaning: 'encounter'
       },
       {
         word: '遭',
         furigana: 'ソウ',
-        meaningEn: 'interview', meaning: 'interview'
+        meaning: 'interview'
       },
     ],
   },
@@ -23271,17 +23271,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '遮',
         furigana: 'シャ',
-        meaningEn: 'intercept', meaning: 'intercept'
+        meaning: 'intercept'
       },
       {
         word: '遮',
         furigana: 'シャ',
-        meaningEn: 'interrupt', meaning: 'interrupt'
+        meaning: 'interrupt'
       },
       {
         word: '遮',
         furigana: 'シャ',
-        meaningEn: 'obstruct', meaning: 'obstruct'
+        meaning: 'obstruct'
       },
     ],
   },
@@ -23294,17 +23294,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '遵',
         furigana: 'ジュン',
-        meaningEn: 'abide by', meaning: 'abide by'
+        meaning: 'abide by'
       },
       {
         word: '遵',
         furigana: 'ジュン',
-        meaningEn: 'follow', meaning: 'follow'
+        meaning: 'follow'
       },
       {
         word: '遵',
         furigana: 'ジュン',
-        meaningEn: 'learn', meaning: 'learn'
+        meaning: 'learn'
       },
     ],
   },
@@ -23318,17 +23318,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '遷',
         furigana: 'セン',
-        meaningEn: 'change', meaning: 'change'
+        meaning: 'change'
       },
       {
         word: '遷',
         furigana: 'セン',
-        meaningEn: 'move', meaning: 'move'
+        meaning: 'move'
       },
       {
         word: '遷',
         furigana: 'セン',
-        meaningEn: 'transition', meaning: 'transition'
+        meaning: 'transition'
       },
     ],
   },
@@ -23342,17 +23342,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '遺',
         furigana: 'イ',
-        meaningEn: 'bequeath', meaning: 'bequeath'
+        meaning: 'bequeath'
       },
       {
         word: '遺',
         furigana: 'イ',
-        meaningEn: 'leave behind', meaning: 'leave behind'
+        meaning: 'leave behind'
       },
       {
         word: '遺',
         furigana: 'イ',
-        meaningEn: 'reserve', meaning: 'reserve'
+        meaning: 'reserve'
       },
     ],
   },
@@ -23365,7 +23365,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '遼',
         furigana: 'リョウ',
-        meaningEn: 'distant', meaning: 'distant'
+        meaning: 'distant'
       },
     ],
   },
@@ -23379,17 +23379,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '避',
         furigana: 'ヒ',
-        meaningEn: 'avert', meaning: 'avert'
+        meaning: 'avert'
       },
       {
         word: '避',
         furigana: 'ヒ',
-        meaningEn: 'avoid', meaning: 'avoid'
+        meaning: 'avoid'
       },
       {
         word: '避',
         furigana: 'ヒ',
-        meaningEn: 'evade', meaning: 'evade'
+        meaning: 'evade'
       },
     ],
   },
@@ -23403,12 +23403,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '還',
         furigana: 'カン',
-        meaningEn: 'return', meaning: 'return'
+        meaning: 'return'
       },
       {
         word: '還',
         furigana: 'カン',
-        meaningEn: 'send back', meaning: 'send back'
+        meaning: 'send back'
       },
     ],
   },
@@ -23422,17 +23422,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '邑',
         furigana: 'ユウ',
-        meaningEn: 'right village radical (no. 163)', meaning: 'right village radical (no. 163)'
+        meaning: 'right village radical (no. 163)'
       },
       {
         word: '邑',
         furigana: 'ユウ',
-        meaningEn: 'rural community', meaning: 'rural community'
+        meaning: 'rural community'
       },
       {
         word: '邑',
         furigana: 'ユウ',
-        meaningEn: 'village', meaning: 'village'
+        meaning: 'village'
       },
     ],
   },
@@ -23446,7 +23446,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '那',
         furigana: 'ダ',
-        meaningEn: 'what?', meaning: 'what?'
+        meaning: 'what?'
       },
     ],
   },
@@ -23460,17 +23460,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '邦',
         furigana: 'ホウ',
-        meaningEn: 'Japan', meaning: 'Japan'
+        meaning: 'Japan'
       },
       {
         word: '邦',
         furigana: 'ホウ',
-        meaningEn: 'country', meaning: 'country'
+        meaning: 'country'
       },
       {
         word: '邦',
         furigana: 'ホウ',
-        meaningEn: 'home country', meaning: 'home country'
+        meaning: 'home country'
       },
     ],
   },
@@ -23484,17 +23484,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '邪',
         furigana: 'ジャ',
-        meaningEn: 'injustice', meaning: 'injustice'
+        meaning: 'injustice'
       },
       {
         word: '邪',
         furigana: 'ジャ',
-        meaningEn: 'wicked', meaning: 'wicked'
+        meaning: 'wicked'
       },
       {
         word: '邪',
         furigana: 'ジャ',
-        meaningEn: 'wrong', meaning: 'wrong'
+        meaning: 'wrong'
       },
     ],
   },
@@ -23508,12 +23508,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '邸',
         furigana: 'テイ',
-        meaningEn: 'mansion', meaning: 'mansion'
+        meaning: 'mansion'
       },
       {
         word: '邸',
         furigana: 'テイ',
-        meaningEn: 'residence', meaning: 'residence'
+        meaning: 'residence'
       },
     ],
   },
@@ -23526,12 +23526,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '郁',
         furigana: 'イク',
-        meaningEn: 'cultural progress', meaning: 'cultural progress'
+        meaning: 'cultural progress'
       },
       {
         word: '郁',
         furigana: 'イク',
-        meaningEn: 'perfume', meaning: 'perfume'
+        meaning: 'perfume'
       },
     ],
   },
@@ -23545,12 +23545,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '郎',
         furigana: 'リョウ',
-        meaningEn: 'counter for sons', meaning: 'counter for sons'
+        meaning: 'counter for sons'
       },
       {
         word: '郎',
         furigana: 'リョウ',
-        meaningEn: 'son', meaning: 'son'
+        meaning: 'son'
       },
     ],
   },
@@ -23564,12 +23564,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '郡',
         furigana: 'グン',
-        meaningEn: 'county', meaning: 'county'
+        meaning: 'county'
       },
       {
         word: '郡',
         furigana: 'グン',
-        meaningEn: 'district', meaning: 'district'
+        meaning: 'district'
       },
     ],
   },
@@ -23583,17 +23583,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '郭',
         furigana: 'カク',
-        meaningEn: 'enclosure', meaning: 'enclosure'
+        meaning: 'enclosure'
       },
       {
         word: '郭',
         furigana: 'カク',
-        meaningEn: 'fortification', meaning: 'fortification'
+        meaning: 'fortification'
       },
       {
         word: '郭',
         furigana: 'カク',
-        meaningEn: 'quarters', meaning: 'quarters'
+        meaning: 'quarters'
       },
     ],
   },
@@ -23607,17 +23607,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '郷',
         furigana: 'キョウ',
-        meaningEn: 'district', meaning: 'district'
+        meaning: 'district'
       },
       {
         word: '郷',
         furigana: 'キョウ',
-        meaningEn: 'home town', meaning: 'home town'
+        meaning: 'home town'
       },
       {
         word: '郷',
         furigana: 'キョウ',
-        meaningEn: 'native place', meaning: 'native place'
+        meaning: 'native place'
       },
     ],
   },
@@ -23631,17 +23631,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '酉',
         furigana: 'ユウ',
-        meaningEn: '5-7PM', meaning: '5-7PM'
+        meaning: '5-7PM'
       },
       {
         word: '酉',
         furigana: 'ユウ',
-        meaningEn: 'bird', meaning: 'bird'
+        meaning: 'bird'
       },
       {
         word: '酉',
         furigana: 'ユウ',
-        meaningEn: 'sake radical (no. 164)', meaning: 'sake radical (no. 164)'
+        meaning: 'sake radical (no. 164)'
       },
     ],
   },
@@ -23655,17 +23655,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '酌',
         furigana: 'シャク',
-        meaningEn: 'bar-tending', meaning: 'bar-tending'
+        meaning: 'bar-tending'
       },
       {
         word: '酌',
         furigana: 'シャク',
-        meaningEn: 'draw (water)', meaning: 'draw (water)'
+        meaning: 'draw (water)'
       },
       {
         word: '酌',
         furigana: 'シャク',
-        meaningEn: 'ladle', meaning: 'ladle'
+        meaning: 'ladle'
       },
     ],
   },
@@ -23679,17 +23679,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '酔',
         furigana: 'スイ',
-        meaningEn: 'drunk', meaning: 'drunk'
+        meaning: 'drunk'
       },
       {
         word: '酔',
         furigana: 'スイ',
-        meaningEn: 'elated', meaning: 'elated'
+        meaning: 'elated'
       },
       {
         word: '酔',
         furigana: 'スイ',
-        meaningEn: 'feel sick', meaning: 'feel sick'
+        meaning: 'feel sick'
       },
     ],
   },
@@ -23703,17 +23703,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '酢',
         furigana: 'サク',
-        meaningEn: 'acid', meaning: 'acid'
+        meaning: 'acid'
       },
       {
         word: '酢',
         furigana: 'サク',
-        meaningEn: 'sour', meaning: 'sour'
+        meaning: 'sour'
       },
       {
         word: '酢',
         furigana: 'サク',
-        meaningEn: 'tart', meaning: 'tart'
+        meaning: 'tart'
       },
     ],
   },
@@ -23726,17 +23726,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '酪',
         furigana: 'ラク',
-        meaningEn: 'broth', meaning: 'broth'
+        meaning: 'broth'
       },
       {
         word: '酪',
         furigana: 'ラク',
-        meaningEn: 'dairy products', meaning: 'dairy products'
+        meaning: 'dairy products'
       },
       {
         word: '酪',
         furigana: 'ラク',
-        meaningEn: 'fruit juice', meaning: 'fruit juice'
+        meaning: 'fruit juice'
       },
     ],
   },
@@ -23750,17 +23750,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '酬',
         furigana: 'シュ',
-        meaningEn: 'repay', meaning: 'repay'
+        meaning: 'repay'
       },
       {
         word: '酬',
         furigana: 'シュ',
-        meaningEn: 'retribution', meaning: 'retribution'
+        meaning: 'retribution'
       },
       {
         word: '酬',
         furigana: 'シュ',
-        meaningEn: 'reward', meaning: 'reward'
+        meaning: 'reward'
       },
     ],
   },
@@ -23773,7 +23773,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '酵',
         furigana: 'コウ',
-        meaningEn: 'fermentation', meaning: 'fermentation'
+        meaning: 'fermentation'
       },
     ],
   },
@@ -23787,17 +23787,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '酷',
         furigana: 'コク',
-        meaningEn: 'atrocious', meaning: 'atrocious'
+        meaning: 'atrocious'
       },
       {
         word: '酷',
         furigana: 'コク',
-        meaningEn: 'cruel', meaning: 'cruel'
+        meaning: 'cruel'
       },
       {
         word: '酷',
         furigana: 'コク',
-        meaningEn: 'severe', meaning: 'severe'
+        meaning: 'severe'
       },
     ],
   },
@@ -23811,17 +23811,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '酸',
         furigana: 'サン',
-        meaningEn: 'acid', meaning: 'acid'
+        meaning: 'acid'
       },
       {
         word: '酸',
         furigana: 'サン',
-        meaningEn: 'bitterness', meaning: 'bitterness'
+        meaning: 'bitterness'
       },
       {
         word: '酸',
         furigana: 'サン',
-        meaningEn: 'sour', meaning: 'sour'
+        meaning: 'sour'
       },
     ],
   },
@@ -23835,17 +23835,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '醜',
         furigana: 'シュウ',
-        meaningEn: 'bad looking', meaning: 'bad looking'
+        meaning: 'bad looking'
       },
       {
         word: '醜',
         furigana: 'シュウ',
-        meaningEn: 'shame', meaning: 'shame'
+        meaning: 'shame'
       },
       {
         word: '醜',
         furigana: 'シュウ',
-        meaningEn: 'ugly', meaning: 'ugly'
+        meaning: 'ugly'
       },
     ],
   },
@@ -23859,12 +23859,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '醸',
         furigana: 'ジョウ',
-        meaningEn: 'brew', meaning: 'brew'
+        meaning: 'brew'
       },
       {
         word: '醸',
         furigana: 'ジョウ',
-        meaningEn: 'cause', meaning: 'cause'
+        meaning: 'cause'
       },
     ],
   },
@@ -23878,17 +23878,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '采',
         furigana: 'サイ',
-        meaningEn: 'appearance', meaning: 'appearance'
+        meaning: 'appearance'
       },
       {
         word: '采',
         furigana: 'サイ',
-        meaningEn: 'coloring', meaning: 'coloring'
+        meaning: 'coloring'
       },
       {
         word: '采',
         furigana: 'サイ',
-        meaningEn: 'dice', meaning: 'dice'
+        meaning: 'dice'
       },
     ],
   },
@@ -23902,7 +23902,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '釈',
         furigana: 'シャク',
-        meaningEn: 'explanation', meaning: 'explanation'
+        meaning: 'explanation'
       },
     ],
   },
@@ -23916,17 +23916,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '釣',
         furigana: 'チョウ',
-        meaningEn: 'allure', meaning: 'allure'
+        meaning: 'allure'
       },
       {
         word: '釣',
         furigana: 'チョウ',
-        meaningEn: 'angling', meaning: 'angling'
+        meaning: 'angling'
       },
       {
         word: '釣',
         furigana: 'チョウ',
-        meaningEn: 'catch', meaning: 'catch'
+        meaning: 'catch'
       },
     ],
   },
@@ -23940,12 +23940,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '鈴',
         furigana: 'リン',
-        meaningEn: 'buzzer', meaning: 'buzzer'
+        meaning: 'buzzer'
       },
       {
         word: '鈴',
         furigana: 'リン',
-        meaningEn: 'small bell', meaning: 'small bell'
+        meaning: 'small bell'
       },
     ],
   },
@@ -23959,7 +23959,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '鉛',
         furigana: 'エン',
-        meaningEn: 'lead', meaning: 'lead'
+        meaning: 'lead'
       },
     ],
   },
@@ -23972,17 +23972,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '鉢',
         furigana: 'ハチ',
-        meaningEn: 'bowl', meaning: 'bowl'
+        meaning: 'bowl'
       },
       {
         word: '鉢',
         furigana: 'ハチ',
-        meaningEn: 'crown', meaning: 'crown'
+        meaning: 'crown'
       },
       {
         word: '鉢',
         furigana: 'ハチ',
-        meaningEn: 'pot', meaning: 'pot'
+        meaning: 'pot'
       },
     ],
   },
@@ -23996,12 +23996,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '銃',
         furigana: 'ジュウ',
-        meaningEn: 'arms', meaning: 'arms'
+        meaning: 'arms'
       },
       {
         word: '銃',
         furigana: 'ジュウ',
-        meaningEn: 'gun', meaning: 'gun'
+        meaning: 'gun'
       },
     ],
   },
@@ -24014,7 +24014,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '銑',
         furigana: 'セン',
-        meaningEn: 'pig iron', meaning: 'pig iron'
+        meaning: 'pig iron'
       },
     ],
   },
@@ -24027,12 +24027,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '銘',
         furigana: 'メイ',
-        meaningEn: 'inscription', meaning: 'inscription'
+        meaning: 'inscription'
       },
       {
         word: '銘',
         furigana: 'メイ',
-        meaningEn: 'signature (of artisan)', meaning: 'signature (of artisan)'
+        meaning: 'signature (of artisan)'
       },
     ],
   },
@@ -24046,17 +24046,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '銭',
         furigana: 'セン',
-        meaningEn: '.01 yen', meaning: '.01 yen'
+        meaning: '.01 yen'
       },
       {
         word: '銭',
         furigana: 'セン',
-        meaningEn: 'coin', meaning: 'coin'
+        meaning: 'coin'
       },
       {
         word: '銭',
         furigana: 'セン',
-        meaningEn: 'money', meaning: 'money'
+        meaning: 'money'
       },
     ],
   },
@@ -24070,12 +24070,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '鋳',
         furigana: 'イ',
-        meaningEn: 'casting', meaning: 'casting'
+        meaning: 'casting'
       },
       {
         word: '鋳',
         furigana: 'イ',
-        meaningEn: 'mint', meaning: 'mint'
+        meaning: 'mint'
       },
     ],
   },
@@ -24089,7 +24089,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '鋼',
         furigana: 'コウ',
-        meaningEn: 'steel', meaning: 'steel'
+        meaning: 'steel'
       },
     ],
   },
@@ -24103,17 +24103,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '錘',
         furigana: 'スイ',
-        meaningEn: 'plumb bob', meaning: 'plumb bob'
+        meaning: 'plumb bob'
       },
       {
         word: '錘',
         furigana: 'スイ',
-        meaningEn: 'sinker', meaning: 'sinker'
+        meaning: 'sinker'
       },
       {
         word: '錘',
         furigana: 'スイ',
-        meaningEn: 'spindle', meaning: 'spindle'
+        meaning: 'spindle'
       },
     ],
   },
@@ -24126,17 +24126,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '錠',
         furigana: 'ジョウ',
-        meaningEn: 'fetters', meaning: 'fetters'
+        meaning: 'fetters'
       },
       {
         word: '錠',
         furigana: 'ジョウ',
-        meaningEn: 'lock', meaning: 'lock'
+        meaning: 'lock'
       },
       {
         word: '錠',
         furigana: 'ジョウ',
-        meaningEn: 'shackles', meaning: 'shackles'
+        meaning: 'shackles'
       },
     ],
   },
@@ -24150,17 +24150,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '錦',
         furigana: 'キン',
-        meaningEn: 'brocade', meaning: 'brocade'
+        meaning: 'brocade'
       },
       {
         word: '錦',
         furigana: 'キン',
-        meaningEn: 'fine dress', meaning: 'fine dress'
+        meaning: 'fine dress'
       },
       {
         word: '錦',
         furigana: 'キン',
-        meaningEn: 'honors', meaning: 'honors'
+        meaning: 'honors'
       },
     ],
   },
@@ -24174,17 +24174,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '錬',
         furigana: 'レン',
-        meaningEn: 'drill', meaning: 'drill'
+        meaning: 'drill'
       },
       {
         word: '錬',
         furigana: 'レン',
-        meaningEn: 'polish', meaning: 'polish'
+        meaning: 'polish'
       },
       {
         word: '錬',
         furigana: 'レン',
-        meaningEn: 'refine', meaning: 'refine'
+        meaning: 'refine'
       },
     ],
   },
@@ -24197,17 +24197,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '錯',
         furigana: 'サク',
-        meaningEn: 'be in disorder', meaning: 'be in disorder'
+        meaning: 'be in disorder'
       },
       {
         word: '錯',
         furigana: 'サク',
-        meaningEn: 'confused', meaning: 'confused'
+        meaning: 'confused'
       },
       {
         word: '錯',
         furigana: 'サク',
-        meaningEn: 'mix', meaning: 'mix'
+        meaning: 'mix'
       },
     ],
   },
@@ -24221,17 +24221,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '鍛',
         furigana: 'タン',
-        meaningEn: 'discipline', meaning: 'discipline'
+        meaning: 'discipline'
       },
       {
         word: '鍛',
         furigana: 'タン',
-        meaningEn: 'forge', meaning: 'forge'
+        meaning: 'forge'
       },
       {
         word: '鍛',
         furigana: 'タン',
-        meaningEn: 'train', meaning: 'train'
+        meaning: 'train'
       },
     ],
   },
@@ -24245,17 +24245,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '鎌',
         furigana: 'ケン',
-        meaningEn: 'scythe', meaning: 'scythe'
+        meaning: 'scythe'
       },
       {
         word: '鎌',
         furigana: 'ケン',
-        meaningEn: 'sickle', meaning: 'sickle'
+        meaning: 'sickle'
       },
       {
         word: '鎌',
         furigana: 'ケン',
-        meaningEn: 'trick', meaning: 'trick'
+        meaning: 'trick'
       },
     ],
   },
@@ -24269,17 +24269,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '鎖',
         furigana: 'サ',
-        meaningEn: 'chain', meaning: 'chain'
+        meaning: 'chain'
       },
       {
         word: '鎖',
         furigana: 'サ',
-        meaningEn: 'connection', meaning: 'connection'
+        meaning: 'connection'
       },
       {
         word: '鎖',
         furigana: 'サ',
-        meaningEn: 'irons', meaning: 'irons'
+        meaning: 'irons'
       },
     ],
   },
@@ -24293,12 +24293,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '鎮',
         furigana: 'チン',
-        meaningEn: 'ancient peace-preservation centers', meaning: 'ancient peace-preservation centers'
+        meaning: 'ancient peace-preservation centers'
       },
       {
         word: '鎮',
         furigana: 'チン',
-        meaningEn: 'tranquilize', meaning: 'tranquilize'
+        meaning: 'tranquilize'
       },
     ],
   },
@@ -24312,17 +24312,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '鏡',
         furigana: 'キョウ',
-        meaningEn: 'barrel-head', meaning: 'barrel-head'
+        meaning: 'barrel-head'
       },
       {
         word: '鏡',
         furigana: 'キョウ',
-        meaningEn: 'mirror', meaning: 'mirror'
+        meaning: 'mirror'
       },
       {
         word: '鏡',
         furigana: 'キョウ',
-        meaningEn: 'round rice-cake offering', meaning: 'round rice-cake offering'
+        meaning: 'round rice-cake offering'
       },
     ],
   },
@@ -24336,17 +24336,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '鐘',
         furigana: 'ショウ',
-        meaningEn: 'bell', meaning: 'bell'
+        meaning: 'bell'
       },
       {
         word: '鐘',
         furigana: 'ショウ',
-        meaningEn: 'chimes', meaning: 'chimes'
+        meaning: 'chimes'
       },
       {
         word: '鐘',
         furigana: 'ショウ',
-        meaningEn: 'gong', meaning: 'gong'
+        meaning: 'gong'
       },
     ],
   },
@@ -24360,17 +24360,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '鑑',
         furigana: 'カン',
-        meaningEn: 'learn from', meaning: 'learn from'
+        meaning: 'learn from'
       },
       {
         word: '鑑',
         furigana: 'カン',
-        meaningEn: 'specimen', meaning: 'specimen'
+        meaning: 'specimen'
       },
       {
         word: '鑑',
         furigana: 'カン',
-        meaningEn: 'take warning from', meaning: 'take warning from'
+        meaning: 'take warning from'
       },
     ],
   },
@@ -24383,7 +24383,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '閑',
         furigana: 'カン',
-        meaningEn: 'leisure', meaning: 'leisure'
+        meaning: 'leisure'
       },
     ],
   },
@@ -24396,17 +24396,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '閣',
         furigana: 'カク',
-        meaningEn: 'palace', meaning: 'palace'
+        meaning: 'palace'
       },
       {
         word: '閣',
         furigana: 'カク',
-        meaningEn: 'tall building', meaning: 'tall building'
+        meaning: 'tall building'
       },
       {
         word: '閣',
         furigana: 'カク',
-        meaningEn: 'tower', meaning: 'tower'
+        meaning: 'tower'
       },
     ],
   },
@@ -24419,17 +24419,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '閥',
         furigana: 'バツ',
-        meaningEn: 'clan', meaning: 'clan'
+        meaning: 'clan'
       },
       {
         word: '閥',
         furigana: 'バツ',
-        meaningEn: 'clique', meaning: 'clique'
+        meaning: 'clique'
       },
       {
         word: '閥',
         furigana: 'バツ',
-        meaningEn: 'faction', meaning: 'faction'
+        meaning: 'faction'
       },
     ],
   },
@@ -24443,17 +24443,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '閲',
         furigana: 'エツ',
-        meaningEn: 'inspection', meaning: 'inspection'
+        meaning: 'inspection'
       },
       {
         word: '閲',
         furigana: 'エツ',
-        meaningEn: 'review', meaning: 'review'
+        meaning: 'review'
       },
       {
         word: '閲',
         furigana: 'エツ',
-        meaningEn: 'revision', meaning: 'revision'
+        meaning: 'revision'
       },
     ],
   },
@@ -24467,12 +24467,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '闘',
         furigana: 'トウ',
-        meaningEn: 'fight', meaning: 'fight'
+        meaning: 'fight'
       },
       {
         word: '闘',
         furigana: 'トウ',
-        meaningEn: 'war', meaning: 'war'
+        meaning: 'war'
       },
     ],
   },
@@ -24486,17 +24486,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '阻',
         furigana: 'ソ',
-        meaningEn: 'deter', meaning: 'deter'
+        meaning: 'deter'
       },
       {
         word: '阻',
         furigana: 'ソ',
-        meaningEn: 'impede', meaning: 'impede'
+        meaning: 'impede'
       },
       {
         word: '阻',
         furigana: 'ソ',
-        meaningEn: 'obstruct', meaning: 'obstruct'
+        meaning: 'obstruct'
       },
     ],
   },
@@ -24510,17 +24510,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '阿',
         furigana: 'ア',
-        meaningEn: 'Africa', meaning: 'Africa'
+        meaning: 'Africa'
       },
       {
         word: '阿',
         furigana: 'ア',
-        meaningEn: 'corner', meaning: 'corner'
+        meaning: 'corner'
       },
       {
         word: '阿',
         furigana: 'ア',
-        meaningEn: 'fawn upon', meaning: 'fawn upon'
+        meaning: 'fawn upon'
       },
     ],
   },
@@ -24534,17 +24534,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '附',
         furigana: 'フ',
-        meaningEn: 'affixed', meaning: 'affixed'
+        meaning: 'affixed'
       },
       {
         word: '附',
         furigana: 'フ',
-        meaningEn: 'append', meaning: 'append'
+        meaning: 'append'
       },
       {
         word: '附',
         furigana: 'フ',
-        meaningEn: 'attach', meaning: 'attach'
+        meaning: 'attach'
       },
     ],
   },
@@ -24557,12 +24557,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '陛',
         furigana: 'ヘイ',
-        meaningEn: 'highness', meaning: 'highness'
+        meaning: 'highness'
       },
       {
         word: '陛',
         furigana: 'ヘイ',
-        meaningEn: 'steps (of throne)', meaning: 'steps (of throne)'
+        meaning: 'steps (of throne)'
       },
     ],
   },
@@ -24575,17 +24575,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '陣',
         furigana: 'ジン',
-        meaningEn: 'battle array', meaning: 'battle array'
+        meaning: 'battle array'
       },
       {
         word: '陣',
         furigana: 'ジン',
-        meaningEn: 'brief time', meaning: 'brief time'
+        meaning: 'brief time'
       },
       {
         word: '陣',
         furigana: 'ジン',
-        meaningEn: 'camp', meaning: 'camp'
+        meaning: 'camp'
       },
     ],
   },
@@ -24599,17 +24599,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '陥',
         furigana: 'カン',
-        meaningEn: 'cave in', meaning: 'cave in'
+        meaning: 'cave in'
       },
       {
         word: '陥',
         furigana: 'カン',
-        meaningEn: 'collapse', meaning: 'collapse'
+        meaning: 'collapse'
       },
       {
         word: '陥',
         furigana: 'カン',
-        meaningEn: 'fall (castle)', meaning: 'fall (castle)'
+        meaning: 'fall (castle)'
       },
     ],
   },
@@ -24622,17 +24622,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '陪',
         furigana: 'バイ',
-        meaningEn: 'accompany', meaning: 'accompany'
+        meaning: 'accompany'
       },
       {
         word: '陪',
         furigana: 'バイ',
-        meaningEn: 'attend on', meaning: 'attend on'
+        meaning: 'attend on'
       },
       {
         word: '陪',
         furigana: 'バイ',
-        meaningEn: 'follow', meaning: 'follow'
+        meaning: 'follow'
       },
     ],
   },
@@ -24646,17 +24646,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '陰',
         furigana: 'イン',
-        meaningEn: 'negative', meaning: 'negative'
+        meaning: 'negative'
       },
       {
         word: '陰',
         furigana: 'イン',
-        meaningEn: 'secret', meaning: 'secret'
+        meaning: 'secret'
       },
       {
         word: '陰',
         furigana: 'イン',
-        meaningEn: 'sex organs', meaning: 'sex organs'
+        meaning: 'sex organs'
       },
     ],
   },
@@ -24670,17 +24670,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '陳',
         furigana: 'チン',
-        meaningEn: 'exhibit', meaning: 'exhibit'
+        meaning: 'exhibit'
       },
       {
         word: '陳',
         furigana: 'チン',
-        meaningEn: 'explain', meaning: 'explain'
+        meaning: 'explain'
       },
       {
         word: '陳',
         furigana: 'チン',
-        meaningEn: 'relate', meaning: 'relate'
+        meaning: 'relate'
       },
     ],
   },
@@ -24694,17 +24694,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '陵',
         furigana: 'リョウ',
-        meaningEn: 'hill', meaning: 'hill'
+        meaning: 'hill'
       },
       {
         word: '陵',
         furigana: 'リョウ',
-        meaningEn: 'imperial tomb', meaning: 'imperial tomb'
+        meaning: 'imperial tomb'
       },
       {
         word: '陵',
         furigana: 'リョウ',
-        meaningEn: 'mausoleum', meaning: 'mausoleum'
+        meaning: 'mausoleum'
       },
     ],
   },
@@ -24718,12 +24718,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '陶',
         furigana: 'トウ',
-        meaningEn: 'porcelain', meaning: 'porcelain'
+        meaning: 'porcelain'
       },
       {
         word: '陶',
         furigana: 'トウ',
-        meaningEn: 'pottery', meaning: 'pottery'
+        meaning: 'pottery'
       },
     ],
   },
@@ -24736,17 +24736,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '隆',
         furigana: 'リュウ',
-        meaningEn: 'high', meaning: 'high'
+        meaning: 'high'
       },
       {
         word: '隆',
         furigana: 'リュウ',
-        meaningEn: 'hump', meaning: 'hump'
+        meaning: 'hump'
       },
       {
         word: '隆',
         furigana: 'リュウ',
-        meaningEn: 'noble', meaning: 'noble'
+        meaning: 'noble'
       },
     ],
   },
@@ -24759,17 +24759,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '隊',
         furigana: 'タイ',
-        meaningEn: 'company', meaning: 'company'
+        meaning: 'company'
       },
       {
         word: '隊',
         furigana: 'タイ',
-        meaningEn: 'party', meaning: 'party'
+        meaning: 'party'
       },
       {
         word: '隊',
         furigana: 'タイ',
-        meaningEn: 'regiment', meaning: 'regiment'
+        meaning: 'regiment'
       },
     ],
   },
@@ -24783,17 +24783,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '随',
         furigana: 'ズイ',
-        meaningEn: 'all', meaning: 'all'
+        meaning: 'all'
       },
       {
         word: '随',
         furigana: 'ズイ',
-        meaningEn: 'at the mercy of (the waves)', meaning: 'at the mercy of (the waves)'
+        meaning: 'at the mercy of (the waves)'
       },
       {
         word: '随',
         furigana: 'ズイ',
-        meaningEn: 'both', meaning: 'both'
+        meaning: 'both'
       },
     ],
   },
@@ -24807,17 +24807,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '隔',
         furigana: 'カク',
-        meaningEn: 'alternate', meaning: 'alternate'
+        meaning: 'alternate'
       },
       {
         word: '隔',
         furigana: 'カク',
-        meaningEn: 'distance', meaning: 'distance'
+        meaning: 'distance'
       },
       {
         word: '隔',
         furigana: 'カク',
-        meaningEn: 'gulf', meaning: 'gulf'
+        meaning: 'gulf'
       },
     ],
   },
@@ -24831,17 +24831,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '障',
         furigana: 'ショウ',
-        meaningEn: 'harm', meaning: 'harm'
+        meaning: 'harm'
       },
       {
         word: '障',
         furigana: 'ショウ',
-        meaningEn: 'hinder', meaning: 'hinder'
+        meaning: 'hinder'
       },
       {
         word: '障',
         furigana: 'ショウ',
-        meaningEn: 'hurt', meaning: 'hurt'
+        meaning: 'hurt'
       },
     ],
   },
@@ -24855,17 +24855,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '隠',
         furigana: 'イン',
-        meaningEn: 'conceal', meaning: 'conceal'
+        meaning: 'conceal'
       },
       {
         word: '隠',
         furigana: 'イン',
-        meaningEn: 'cover', meaning: 'cover'
+        meaning: 'cover'
       },
       {
         word: '隠',
         furigana: 'イン',
-        meaningEn: 'hide', meaning: 'hide'
+        meaning: 'hide'
       },
     ],
   },
@@ -24879,7 +24879,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '隣',
         furigana: 'リン',
-        meaningEn: 'neighboring', meaning: 'neighboring'
+        meaning: 'neighboring'
       },
     ],
   },
@@ -24893,17 +24893,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '隷',
         furigana: 'レイ',
-        meaningEn: 'criminal', meaning: 'criminal'
+        meaning: 'criminal'
       },
       {
         word: '隷',
         furigana: 'レイ',
-        meaningEn: 'follower', meaning: 'follower'
+        meaning: 'follower'
       },
       {
         word: '隷',
         furigana: 'レイ',
-        meaningEn: 'prisoner', meaning: 'prisoner'
+        meaning: 'prisoner'
       },
     ],
   },
@@ -24917,7 +24917,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '隼',
         furigana: 'シュン',
-        meaningEn: 'falcon', meaning: 'falcon'
+        meaning: 'falcon'
       },
     ],
   },
@@ -24931,17 +24931,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '雄',
         furigana: 'ユウ',
-        meaningEn: 'excellence', meaning: 'excellence'
+        meaning: 'excellence'
       },
       {
         word: '雄',
         furigana: 'ユウ',
-        meaningEn: 'hero', meaning: 'hero'
+        meaning: 'hero'
       },
       {
         word: '雄',
         furigana: 'ユウ',
-        meaningEn: 'leader', meaning: 'leader'
+        meaning: 'leader'
       },
     ],
   },
@@ -24955,17 +24955,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '雅',
         furigana: 'ガ',
-        meaningEn: 'elegant', meaning: 'elegant'
+        meaning: 'elegant'
       },
       {
         word: '雅',
         furigana: 'ガ',
-        meaningEn: 'graceful', meaning: 'graceful'
+        meaning: 'graceful'
       },
       {
         word: '雅',
         furigana: 'ガ',
-        meaningEn: 'gracious', meaning: 'gracious'
+        meaning: 'gracious'
       },
     ],
   },
@@ -24979,12 +24979,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '雌',
         furigana: 'シ',
-        meaningEn: 'female', meaning: 'female'
+        meaning: 'female'
       },
       {
         word: '雌',
         furigana: 'シ',
-        meaningEn: 'feminine', meaning: 'feminine'
+        meaning: 'feminine'
       },
     ],
   },
@@ -24998,17 +24998,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '雛',
         furigana: 'ジュ',
-        meaningEn: 'chick', meaning: 'chick'
+        meaning: 'chick'
       },
       {
         word: '雛',
         furigana: 'ジュ',
-        meaningEn: 'doll', meaning: 'doll'
+        meaning: 'doll'
       },
       {
         word: '雛',
         furigana: 'ジュ',
-        meaningEn: 'duckling', meaning: 'duckling'
+        meaning: 'duckling'
       },
     ],
   },
@@ -25022,17 +25022,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '離',
         furigana: 'リ',
-        meaningEn: 'detach', meaning: 'detach'
+        meaning: 'detach'
       },
       {
         word: '離',
         furigana: 'リ',
-        meaningEn: 'digress', meaning: 'digress'
+        meaning: 'digress'
       },
       {
         word: '離',
         furigana: 'リ',
-        meaningEn: 'disjoin', meaning: 'disjoin'
+        meaning: 'disjoin'
       },
     ],
   },
@@ -25045,12 +25045,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '雰',
         furigana: 'フン',
-        meaningEn: 'atmosphere', meaning: 'atmosphere'
+        meaning: 'atmosphere'
       },
       {
         word: '雰',
         furigana: 'フン',
-        meaningEn: 'fog', meaning: 'fog'
+        meaning: 'fog'
       },
     ],
   },
@@ -25064,12 +25064,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '雷',
         furigana: 'ライ',
-        meaningEn: 'lightning bolt', meaning: 'lightning bolt'
+        meaning: 'lightning bolt'
       },
       {
         word: '雷',
         furigana: 'ライ',
-        meaningEn: 'thunder', meaning: 'thunder'
+        meaning: 'thunder'
       },
     ],
   },
@@ -25082,17 +25082,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '需',
         furigana: 'ジュ',
-        meaningEn: 'demand', meaning: 'demand'
+        meaning: 'demand'
       },
       {
         word: '需',
         furigana: 'ジュ',
-        meaningEn: 'need', meaning: 'need'
+        meaning: 'need'
       },
       {
         word: '需',
         furigana: 'ジュ',
-        meaningEn: 'request', meaning: 'request'
+        meaning: 'request'
       },
     ],
   },
@@ -25106,12 +25106,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '霊',
         furigana: 'リョウ',
-        meaningEn: 'soul', meaning: 'soul'
+        meaning: 'soul'
       },
       {
         word: '霊',
         furigana: 'リョウ',
-        meaningEn: 'spirits', meaning: 'spirits'
+        meaning: 'spirits'
       },
     ],
   },
@@ -25125,7 +25125,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '霜',
         furigana: 'ソウ',
-        meaningEn: 'frost', meaning: 'frost'
+        meaning: 'frost'
       },
     ],
   },
@@ -25139,17 +25139,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '霞',
         furigana: 'カ',
-        meaningEn: 'be hazy', meaning: 'be hazy'
+        meaning: 'be hazy'
       },
       {
         word: '霞',
         furigana: 'カ',
-        meaningEn: 'blurred', meaning: 'blurred'
+        meaning: 'blurred'
       },
       {
         word: '霞',
         furigana: 'カ',
-        meaningEn: 'grow dim', meaning: 'grow dim'
+        meaning: 'grow dim'
       },
     ],
   },
@@ -25163,12 +25163,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '霧',
         furigana: 'ブ',
-        meaningEn: 'fog', meaning: 'fog'
+        meaning: 'fog'
       },
       {
         word: '霧',
         furigana: 'ブ',
-        meaningEn: 'mist', meaning: 'mist'
+        meaning: 'mist'
       },
     ],
   },
@@ -25182,17 +25182,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '露',
         furigana: 'ロ',
-        meaningEn: 'Russia', meaning: 'Russia'
+        meaning: 'Russia'
       },
       {
         word: '露',
         furigana: 'ロ',
-        meaningEn: 'dew', meaning: 'dew'
+        meaning: 'dew'
       },
       {
         word: '露',
         furigana: 'ロ',
-        meaningEn: 'expose', meaning: 'expose'
+        meaning: 'expose'
       },
     ],
   },
@@ -25206,7 +25206,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '靖',
         furigana: 'ジョウ',
-        meaningEn: 'peaceful', meaning: 'peaceful'
+        meaning: 'peaceful'
       },
     ],
   },
@@ -25220,7 +25220,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '鞠',
         furigana: 'キク',
-        meaningEn: 'ball', meaning: 'ball'
+        meaning: 'ball'
       },
     ],
   },
@@ -25233,17 +25233,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '韻',
         furigana: 'イン',
-        meaningEn: 'elegance', meaning: 'elegance'
+        meaning: 'elegance'
       },
       {
         word: '韻',
         furigana: 'イン',
-        meaningEn: 'rhyme', meaning: 'rhyme'
+        meaning: 'rhyme'
       },
       {
         word: '韻',
         furigana: 'イン',
-        meaningEn: 'tone', meaning: 'tone'
+        meaning: 'tone'
       },
     ],
   },
@@ -25257,17 +25257,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '響',
         furigana: 'キョウ',
-        meaningEn: 'echo', meaning: 'echo'
+        meaning: 'echo'
       },
       {
         word: '響',
         furigana: 'キョウ',
-        meaningEn: 'resound', meaning: 'resound'
+        meaning: 'resound'
       },
       {
         word: '響',
         furigana: 'キョウ',
-        meaningEn: 'ring', meaning: 'ring'
+        meaning: 'ring'
       },
     ],
   },
@@ -25281,17 +25281,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '項',
         furigana: 'コウ',
-        meaningEn: 'clause', meaning: 'clause'
+        meaning: 'clause'
       },
       {
         word: '項',
         furigana: 'コウ',
-        meaningEn: 'item', meaning: 'item'
+        meaning: 'item'
       },
       {
         word: '項',
         furigana: 'コウ',
-        meaningEn: 'nape of neck', meaning: 'nape of neck'
+        meaning: 'nape of neck'
       },
     ],
   },
@@ -25305,17 +25305,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '須',
         furigana: 'シュ',
-        meaningEn: 'by all means', meaning: 'by all means'
+        meaning: 'by all means'
       },
       {
         word: '須',
         furigana: 'シュ',
-        meaningEn: 'necessarily', meaning: 'necessarily'
+        meaning: 'necessarily'
       },
       {
         word: '須',
         furigana: 'シュ',
-        meaningEn: 'ought', meaning: 'ought'
+        meaning: 'ought'
       },
     ],
   },
@@ -25329,7 +25329,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '頌',
         furigana: 'ショウ',
-        meaningEn: 'eulogy', meaning: 'eulogy'
+        meaning: 'eulogy'
       },
     ],
   },
@@ -25343,17 +25343,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '頑',
         furigana: 'ガン',
-        meaningEn: 'firmly', meaning: 'firmly'
+        meaning: 'firmly'
       },
       {
         word: '頑',
         furigana: 'ガン',
-        meaningEn: 'foolish', meaning: 'foolish'
+        meaning: 'foolish'
       },
       {
         word: '頑',
         furigana: 'ガン',
-        meaningEn: 'stubborn', meaning: 'stubborn'
+        meaning: 'stubborn'
       },
     ],
   },
@@ -25367,17 +25367,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '頒',
         furigana: 'ハン',
-        meaningEn: 'disseminate', meaning: 'disseminate'
+        meaning: 'disseminate'
       },
       {
         word: '頒',
         furigana: 'ハン',
-        meaningEn: 'distribute', meaning: 'distribute'
+        meaning: 'distribute'
       },
       {
         word: '頒',
         furigana: 'ハン',
-        meaningEn: 'partition', meaning: 'partition'
+        meaning: 'partition'
       },
     ],
   },
@@ -25391,12 +25391,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '頻',
         furigana: 'ヒン',
-        meaningEn: 'recur', meaning: 'recur'
+        meaning: 'recur'
       },
       {
         word: '頻',
         furigana: 'ヒン',
-        meaningEn: 'repeatedly', meaning: 'repeatedly'
+        meaning: 'repeatedly'
       },
     ],
   },
@@ -25410,12 +25410,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '顕',
         furigana: 'ケン',
-        meaningEn: 'appear', meaning: 'appear'
+        meaning: 'appear'
       },
       {
         word: '顕',
         furigana: 'ケン',
-        meaningEn: 'existing', meaning: 'existing'
+        meaning: 'existing'
       },
     ],
   },
@@ -25429,17 +25429,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '顧',
         furigana: 'コ',
-        meaningEn: 'examine oneself', meaning: 'examine oneself'
+        meaning: 'examine oneself'
       },
       {
         word: '顧',
         furigana: 'コ',
-        meaningEn: 'look back', meaning: 'look back'
+        meaning: 'look back'
       },
       {
         word: '顧',
         furigana: 'コ',
-        meaningEn: 'review', meaning: 'review'
+        meaning: 'review'
       },
     ],
   },
@@ -25453,17 +25453,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '颯',
         furigana: 'サツ',
-        meaningEn: 'quick', meaning: 'quick'
+        meaning: 'quick'
       },
       {
         word: '颯',
         furigana: 'サツ',
-        meaningEn: 'sound of the wind', meaning: 'sound of the wind'
+        meaning: 'sound of the wind'
       },
       {
         word: '颯',
         furigana: 'サツ',
-        meaningEn: 'sudden', meaning: 'sudden'
+        meaning: 'sudden'
       },
     ],
   },
@@ -25477,12 +25477,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '飢',
         furigana: 'キ',
-        meaningEn: 'hungry', meaning: 'hungry'
+        meaning: 'hungry'
       },
       {
         word: '飢',
         furigana: 'キ',
-        meaningEn: 'starve', meaning: 'starve'
+        meaning: 'starve'
       },
     ],
   },
@@ -25496,17 +25496,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '飼',
         furigana: 'シ',
-        meaningEn: 'domesticate', meaning: 'domesticate'
+        meaning: 'domesticate'
       },
       {
         word: '飼',
         furigana: 'シ',
-        meaningEn: 'feed', meaning: 'feed'
+        meaning: 'feed'
       },
       {
         word: '飼',
         furigana: 'シ',
-        meaningEn: 'keep', meaning: 'keep'
+        meaning: 'keep'
       },
     ],
   },
@@ -25520,17 +25520,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '飽',
         furigana: 'ホウ',
-        meaningEn: 'bored', meaning: 'bored'
+        meaning: 'bored'
       },
       {
         word: '飽',
         furigana: 'ホウ',
-        meaningEn: 'sated', meaning: 'sated'
+        meaning: 'sated'
       },
       {
         word: '飽',
         furigana: 'ホウ',
-        meaningEn: 'satiate', meaning: 'satiate'
+        meaning: 'satiate'
       },
     ],
   },
@@ -25544,17 +25544,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '飾',
         furigana: 'ショク',
-        meaningEn: 'adorn', meaning: 'adorn'
+        meaning: 'adorn'
       },
       {
         word: '飾',
         furigana: 'ショク',
-        meaningEn: 'decorate', meaning: 'decorate'
+        meaning: 'decorate'
       },
       {
         word: '飾',
         furigana: 'ショク',
-        meaningEn: 'embellish', meaning: 'embellish'
+        meaning: 'embellish'
       },
     ],
   },
@@ -25568,17 +25568,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '養',
         furigana: 'ヨウ',
-        meaningEn: 'bring up', meaning: 'bring up'
+        meaning: 'bring up'
       },
       {
         word: '養',
         furigana: 'ヨウ',
-        meaningEn: 'develop', meaning: 'develop'
+        meaning: 'develop'
       },
       {
         word: '養',
         furigana: 'ヨウ',
-        meaningEn: 'foster', meaning: 'foster'
+        meaning: 'foster'
       },
     ],
   },
@@ -25592,17 +25592,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '餓',
         furigana: 'ガ',
-        meaningEn: 'hungry', meaning: 'hungry'
+        meaning: 'hungry'
       },
       {
         word: '餓',
         furigana: 'ガ',
-        meaningEn: 'starve', meaning: 'starve'
+        meaning: 'starve'
       },
       {
         word: '餓',
         furigana: 'ガ',
-        meaningEn: 'thirst', meaning: 'thirst'
+        meaning: 'thirst'
       },
     ],
   },
@@ -25616,17 +25616,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '馨',
         furigana: 'キョウ',
-        meaningEn: 'balmy', meaning: 'balmy'
+        meaning: 'balmy'
       },
       {
         word: '馨',
         furigana: 'キョウ',
-        meaningEn: 'favourable', meaning: 'favourable'
+        meaning: 'favourable'
       },
       {
         word: '馨',
         furigana: 'キョウ',
-        meaningEn: 'fragrant', meaning: 'fragrant'
+        meaning: 'fragrant'
       },
     ],
   },
@@ -25639,17 +25639,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '駄',
         furigana: 'タ',
-        meaningEn: 'burdensome', meaning: 'burdensome'
+        meaning: 'burdensome'
       },
       {
         word: '駄',
         furigana: 'タ',
-        meaningEn: 'horse load', meaning: 'horse load'
+        meaning: 'horse load'
       },
       {
         word: '駄',
         furigana: 'タ',
-        meaningEn: 'pack horse', meaning: 'pack horse'
+        meaning: 'pack horse'
       },
     ],
   },
@@ -25663,17 +25663,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '駆',
         furigana: 'ク',
-        meaningEn: 'advance', meaning: 'advance'
+        meaning: 'advance'
       },
       {
         word: '駆',
         furigana: 'ク',
-        meaningEn: 'drive', meaning: 'drive'
+        meaning: 'drive'
       },
       {
         word: '駆',
         furigana: 'ク',
-        meaningEn: 'gallop', meaning: 'gallop'
+        meaning: 'gallop'
       },
     ],
   },
@@ -25687,17 +25687,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '駒',
         furigana: 'ク',
-        meaningEn: 'colt', meaning: 'colt'
+        meaning: 'colt'
       },
       {
         word: '駒',
         furigana: 'ク',
-        meaningEn: 'horse', meaning: 'horse'
+        meaning: 'horse'
       },
       {
         word: '駒',
         furigana: 'ク',
-        meaningEn: 'pony', meaning: 'pony'
+        meaning: 'pony'
       },
     ],
   },
@@ -25711,17 +25711,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '駿',
         furigana: 'シュン',
-        meaningEn: 'a fast person', meaning: 'a fast person'
+        meaning: 'a fast person'
       },
       {
         word: '駿',
         furigana: 'シュン',
-        meaningEn: 'a good horse', meaning: 'a good horse'
+        meaning: 'a good horse'
       },
       {
         word: '駿',
         furigana: 'シュン',
-        meaningEn: 'speed', meaning: 'speed'
+        meaning: 'speed'
       },
     ],
   },
@@ -25734,17 +25734,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '騎',
         furigana: 'キ',
-        meaningEn: 'counter for equestrians', meaning: 'counter for equestrians'
+        meaning: 'counter for equestrians'
       },
       {
         word: '騎',
         furigana: 'キ',
-        meaningEn: 'equestrian', meaning: 'equestrian'
+        meaning: 'equestrian'
       },
       {
         word: '騎',
         furigana: 'キ',
-        meaningEn: 'riding on horses', meaning: 'riding on horses'
+        meaning: 'riding on horses'
       },
     ],
   },
@@ -25758,17 +25758,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '騒',
         furigana: 'ソウ',
-        meaningEn: 'boisterous', meaning: 'boisterous'
+        meaning: 'boisterous'
       },
       {
         word: '騒',
         furigana: 'ソウ',
-        meaningEn: 'clamor', meaning: 'clamor'
+        meaning: 'clamor'
       },
       {
         word: '騒',
         furigana: 'ソウ',
-        meaningEn: 'disturb', meaning: 'disturb'
+        meaning: 'disturb'
       },
     ],
   },
@@ -25782,17 +25782,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '騰',
         furigana: 'トウ',
-        meaningEn: 'advancing', meaning: 'advancing'
+        meaning: 'advancing'
       },
       {
         word: '騰',
         furigana: 'トウ',
-        meaningEn: 'going', meaning: 'going'
+        meaning: 'going'
       },
       {
         word: '騰',
         furigana: 'トウ',
-        meaningEn: 'jumping up', meaning: 'jumping up'
+        meaning: 'jumping up'
       },
     ],
   },
@@ -25806,17 +25806,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '驚',
         furigana: 'キョウ',
-        meaningEn: 'amazed', meaning: 'amazed'
+        meaning: 'amazed'
       },
       {
         word: '驚',
         furigana: 'キョウ',
-        meaningEn: 'be surprised', meaning: 'be surprised'
+        meaning: 'be surprised'
       },
       {
         word: '驚',
         furigana: 'キョウ',
-        meaningEn: 'frightened', meaning: 'frightened'
+        meaning: 'frightened'
       },
     ],
   },
@@ -25829,17 +25829,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '髄',
         furigana: 'ズイ',
-        meaningEn: 'essence', meaning: 'essence'
+        meaning: 'essence'
       },
       {
         word: '髄',
         furigana: 'ズイ',
-        meaningEn: 'marrow', meaning: 'marrow'
+        meaning: 'marrow'
       },
       {
         word: '髄',
         furigana: 'ズイ',
-        meaningEn: 'pith', meaning: 'pith'
+        meaning: 'pith'
       },
     ],
   },
@@ -25853,12 +25853,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '鬼',
         furigana: 'キ',
-        meaningEn: 'devil', meaning: 'devil'
+        meaning: 'devil'
       },
       {
         word: '鬼',
         furigana: 'キ',
-        meaningEn: 'ghost', meaning: 'ghost'
+        meaning: 'ghost'
       },
     ],
   },
@@ -25872,7 +25872,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '魁',
         furigana: 'カイ',
-        meaningEn: 'charging ahead of others', meaning: 'charging ahead of others'
+        meaning: 'charging ahead of others'
       },
     ],
   },
@@ -25886,12 +25886,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '魂',
         furigana: 'コン',
-        meaningEn: 'soul', meaning: 'soul'
+        meaning: 'soul'
       },
       {
         word: '魂',
         furigana: 'コン',
-        meaningEn: 'spirit', meaning: 'spirit'
+        meaning: 'spirit'
       },
     ],
   },
@@ -25904,17 +25904,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '魅',
         furigana: 'ミ',
-        meaningEn: 'bewitch', meaning: 'bewitch'
+        meaning: 'bewitch'
       },
       {
         word: '魅',
         furigana: 'ミ',
-        meaningEn: 'charm', meaning: 'charm'
+        meaning: 'charm'
       },
       {
         word: '魅',
         furigana: 'ミ',
-        meaningEn: 'fascination', meaning: 'fascination'
+        meaning: 'fascination'
       },
     ],
   },
@@ -25927,17 +25927,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '魔',
         furigana: 'マ',
-        meaningEn: 'demon', meaning: 'demon'
+        meaning: 'demon'
       },
       {
         word: '魔',
         furigana: 'マ',
-        meaningEn: 'evil spirit', meaning: 'evil spirit'
+        meaning: 'evil spirit'
       },
       {
         word: '魔',
         furigana: 'マ',
-        meaningEn: 'witch', meaning: 'witch'
+        meaning: 'witch'
       },
     ],
   },
@@ -25951,12 +25951,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '鮎',
         furigana: 'デン',
-        meaningEn: 'freshwater trout', meaning: 'freshwater trout'
+        meaning: 'freshwater trout'
       },
       {
         word: '鮎',
         furigana: 'デン',
-        meaningEn: 'smelt', meaning: 'smelt'
+        meaning: 'smelt'
       },
     ],
   },
@@ -25970,17 +25970,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '鮮',
         furigana: 'セン',
-        meaningEn: 'Korea', meaning: 'Korea'
+        meaning: 'Korea'
       },
       {
         word: '鮮',
         furigana: 'セン',
-        meaningEn: 'brilliant', meaning: 'brilliant'
+        meaning: 'brilliant'
       },
       {
         word: '鮮',
         furigana: 'セン',
-        meaningEn: 'clear', meaning: 'clear'
+        meaning: 'clear'
       },
     ],
   },
@@ -25994,7 +25994,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '鯉',
         furigana: 'リ',
-        meaningEn: 'carp', meaning: 'carp'
+        meaning: 'carp'
       },
     ],
   },
@@ -26008,12 +26008,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '鯛',
         furigana: 'チョウ',
-        meaningEn: 'red snapper', meaning: 'red snapper'
+        meaning: 'red snapper'
       },
       {
         word: '鯛',
         furigana: 'チョウ',
-        meaningEn: 'sea bream', meaning: 'sea bream'
+        meaning: 'sea bream'
       },
     ],
   },
@@ -26027,7 +26027,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '鯨',
         furigana: 'ゲイ',
-        meaningEn: 'whale', meaning: 'whale'
+        meaning: 'whale'
       },
     ],
   },
@@ -26041,12 +26041,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '鳩',
         furigana: 'キュウ',
-        meaningEn: 'dove', meaning: 'dove'
+        meaning: 'dove'
       },
       {
         word: '鳩',
         furigana: 'キュウ',
-        meaningEn: 'pigeon', meaning: 'pigeon'
+        meaning: 'pigeon'
       },
     ],
   },
@@ -26059,7 +26059,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '鳳',
         furigana: 'フウ',
-        meaningEn: 'male mythical bird', meaning: 'male mythical bird'
+        meaning: 'male mythical bird'
       },
     ],
   },
@@ -26073,17 +26073,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '鴻',
         furigana: 'コウ',
-        meaningEn: 'great', meaning: 'great'
+        meaning: 'great'
       },
       {
         word: '鴻',
         furigana: 'コウ',
-        meaningEn: 'large', meaning: 'large'
+        meaning: 'large'
       },
       {
         word: '鴻',
         furigana: 'コウ',
-        meaningEn: 'large bird', meaning: 'large bird'
+        meaning: 'large bird'
       },
     ],
   },
@@ -26097,7 +26097,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '鵬',
         furigana: 'ホウ',
-        meaningEn: 'phoenix', meaning: 'phoenix'
+        meaning: 'phoenix'
       },
     ],
   },
@@ -26111,7 +26111,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '鶏',
         furigana: 'ケイ',
-        meaningEn: 'chicken', meaning: 'chicken'
+        meaning: 'chicken'
       },
     ],
   },
@@ -26125,12 +26125,12 @@ export const n1Kanji: WordData[] = [
       {
         word: '鶴',
         furigana: 'カク',
-        meaningEn: 'crane', meaning: 'crane'
+        meaning: 'crane'
       },
       {
         word: '鶴',
         furigana: 'カク',
-        meaningEn: 'stork', meaning: 'stork'
+        meaning: 'stork'
       },
     ],
   },
@@ -26144,7 +26144,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '鷹',
         furigana: 'オウ',
-        meaningEn: 'hawk', meaning: 'hawk'
+        meaning: 'hawk'
       },
     ],
   },
@@ -26158,7 +26158,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '鹿',
         furigana: 'ロク',
-        meaningEn: 'deer', meaning: 'deer'
+        meaning: 'deer'
       },
     ],
   },
@@ -26172,17 +26172,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '麗',
         furigana: 'レイ',
-        meaningEn: 'beautiful', meaning: 'beautiful'
+        meaning: 'beautiful'
       },
       {
         word: '麗',
         furigana: 'レイ',
-        meaningEn: 'graceful', meaning: 'graceful'
+        meaning: 'graceful'
       },
       {
         word: '麗',
         furigana: 'レイ',
-        meaningEn: 'lovely', meaning: 'lovely'
+        meaning: 'lovely'
       },
     ],
   },
@@ -26195,17 +26195,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '麟',
         furigana: 'リン',
-        meaningEn: 'Chinese unicorn', meaning: 'Chinese unicorn'
+        meaning: 'Chinese unicorn'
       },
       {
         word: '麟',
         furigana: 'リン',
-        meaningEn: 'bright', meaning: 'bright'
+        meaning: 'bright'
       },
       {
         word: '麟',
         furigana: 'リン',
-        meaningEn: 'genius', meaning: 'genius'
+        meaning: 'genius'
       },
     ],
   },
@@ -26219,17 +26219,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '麻',
         furigana: 'マ',
-        meaningEn: 'flax', meaning: 'flax'
+        meaning: 'flax'
       },
       {
         word: '麻',
         furigana: 'マ',
-        meaningEn: 'hemp', meaning: 'hemp'
+        meaning: 'hemp'
       },
       {
         word: '麻',
         furigana: 'マ',
-        meaningEn: 'numb', meaning: 'numb'
+        meaning: 'numb'
       },
     ],
   },
@@ -26242,17 +26242,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '麿',
         furigana: 'まろ',
-        meaningEn: '(kokuji)', meaning: '(kokuji)'
+        meaning: '(kokuji)'
       },
       {
         word: '麿',
         furigana: 'まろ',
-        meaningEn: 'I', meaning: 'I'
+        meaning: 'I'
       },
       {
         word: '麿',
         furigana: 'まろ',
-        meaningEn: 'you', meaning: 'you'
+        meaning: 'you'
       },
     ],
   },
@@ -26266,17 +26266,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '黎',
         furigana: 'リ',
-        meaningEn: 'black', meaning: 'black'
+        meaning: 'black'
       },
       {
         word: '黎',
         furigana: 'リ',
-        meaningEn: 'dark', meaning: 'dark'
+        meaning: 'dark'
       },
       {
         word: '黎',
         furigana: 'リ',
-        meaningEn: 'many', meaning: 'many'
+        meaning: 'many'
       },
     ],
   },
@@ -26290,17 +26290,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '黙',
         furigana: 'ボク',
-        meaningEn: 'become silent', meaning: 'become silent'
+        meaning: 'become silent'
       },
       {
         word: '黙',
         furigana: 'ボク',
-        meaningEn: 'leave as is', meaning: 'leave as is'
+        meaning: 'leave as is'
       },
       {
         word: '黙',
         furigana: 'ボク',
-        meaningEn: 'silence', meaning: 'silence'
+        meaning: 'silence'
       },
     ],
   },
@@ -26314,7 +26314,7 @@ export const n1Kanji: WordData[] = [
       {
         word: '黛',
         furigana: 'タイ',
-        meaningEn: 'blackened eyebrows', meaning: 'blackened eyebrows'
+        meaning: 'blackened eyebrows'
       },
     ],
   },
@@ -26328,17 +26328,17 @@ export const n1Kanji: WordData[] = [
       {
         word: '鼓',
         furigana: 'コ',
-        meaningEn: 'beat', meaning: 'beat'
+        meaning: 'beat'
       },
       {
         word: '鼓',
         furigana: 'コ',
-        meaningEn: 'drum', meaning: 'drum'
+        meaning: 'drum'
       },
       {
         word: '鼓',
         furigana: 'コ',
-        meaningEn: 'muster', meaning: 'muster'
+        meaning: 'muster'
       },
     ],
   },

@@ -79,50 +79,6 @@ export default function AcquirePage() {
             />
           ))}
         </div>
-
-        {/* 빠른 접근 */}
-        <div className="grid grid-cols-2 gap-3">
-          <button
-            onClick={() => router.push('/acquire/search')}
-            className="bg-surface rounded-card shadow-soft p-6 text-center button-press"
-          >
-            <div className="text-title font-semibold text-text-main mb-2">🔍 검색</div>
-            <div className="text-body text-text-sub">단어/한자 검색</div>
-          </button>
-          <button
-            onClick={() => router.push('/acquire')}
-            className="bg-surface rounded-card shadow-soft p-6 text-center button-press"
-          >
-            <div className="text-title font-semibold text-text-main mb-2">📚 카테고리</div>
-            <div className="text-body text-text-sub">주제별 탐색</div>
-          </button>
-        </div>
-
-        {/* 레벨별 단어/한자 목록 */}
-        <div className="space-y-4">
-          <h2 className="text-title font-semibold text-text-main">레벨별 콘텐츠</h2>
-          {levels.map((level) => (
-            <div key={level} className="bg-surface rounded-card shadow-soft p-4">
-              <div className="flex justify-between items-center mb-3">
-                <h3 className="text-subtitle font-semibold text-text-main">{level}</h3>
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <button
-                  onClick={() => router.push(`/acquire/auto-study/${level.toLowerCase()}?type=word`)}
-                  className="bg-page rounded-card p-3 text-center button-press"
-                >
-                  <div className="text-body font-medium text-text-main">단어</div>
-                </button>
-                <button
-                  onClick={() => router.push(`/acquire/auto-study/${level.toLowerCase()}?type=kanji`)}
-                  className="bg-page rounded-card p-3 text-center button-press"
-                >
-                  <div className="text-body font-medium text-text-main">한자</div>
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </div>
   )

@@ -38,6 +38,7 @@ export interface RelatedWord {
   word: string
   furigana?: string
   meaning: string
+  meaningEn?: string
 }
 
 export interface SearchResult {

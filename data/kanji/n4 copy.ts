@@ -11,17 +11,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '不',
         furigana: 'フ',
-        meaningEn: 'bad', meaning: '나쁜'
+        meaning: 'bad'
       },
       {
         word: '不',
         furigana: 'フ',
-        meaningEn: 'clumsy', meaning: '서투른'
+        meaning: 'clumsy'
       },
       {
         word: '不',
         furigana: 'フ',
-        meaningEn: 'negative', meaning: '부정적인'
+        meaning: 'negative'
       },
     ],
   },
@@ -35,17 +35,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '世',
         furigana: 'セ',
-        meaningEn: 'generation', meaning: '세대'
+        meaning: 'generation'
       },
       {
         word: '世',
         furigana: 'セ',
-        meaningEn: 'public', meaning: '공공의'
+        meaning: 'public'
       },
       {
         word: '世',
         furigana: 'セ',
-        meaningEn: 'society', meaning: '사회'
+        meaning: 'society'
       },
     ],
   },
@@ -59,17 +59,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '主',
         furigana: 'シュ',
-        meaningEn: 'chief', meaning: '수장'
+        meaning: 'chief'
       },
       {
         word: '主',
         furigana: 'シュ',
-        meaningEn: 'lord', meaning: '군주'
+        meaning: 'lord'
       },
       {
         word: '主',
         furigana: 'シュ',
-        meaningEn: 'main thing', meaning: '핵심'
+        meaning: 'main thing'
       },
     ],
   },
@@ -83,17 +83,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '事',
         furigana: 'ジ',
-        meaningEn: 'business', meaning: '사업'
+        meaning: 'business'
       },
       {
         word: '事',
         furigana: 'ジ',
-        meaningEn: 'fact', meaning: '사실'
+        meaning: 'fact'
       },
       {
         word: '事',
         furigana: 'ジ',
-        meaningEn: 'matter', meaning: '문제'
+        meaning: 'matter'
       },
     ],
   },
@@ -107,12 +107,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '京',
         furigana: 'キョウ',
-        meaningEn: '10**16', meaning: '십의 16제곱'
+        meaning: '10**16'
       },
       {
         word: '京',
         furigana: 'キョウ',
-        meaningEn: 'capital', meaning: '수도'
+        meaning: 'capital'
       },
     ],
   },
@@ -126,17 +126,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '仕',
         furigana: 'シ',
-        meaningEn: 'attend', meaning: '참석하다'
+        meaning: 'attend'
       },
       {
         word: '仕',
         furigana: 'シ',
-        meaningEn: 'doing', meaning: '행함'
+        meaning: 'doing'
       },
       {
         word: '仕',
         furigana: 'シ',
-        meaningEn: 'official', meaning: '공식적인'
+        meaning: 'official'
       },
     ],
   },
@@ -150,17 +150,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '代',
         furigana: 'タイ',
-        meaningEn: 'age', meaning: '시대'
+        meaning: 'age'
       },
       {
         word: '代',
         furigana: 'タイ',
-        meaningEn: 'change', meaning: '변화'
+        meaning: 'change'
       },
       {
         word: '代',
         furigana: 'タイ',
-        meaningEn: 'charge', meaning: '책임'
+        meaning: 'charge'
       },
     ],
   },
@@ -174,17 +174,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '以',
         furigana: 'イ',
-        meaningEn: 'because', meaning: '~때문에'
+        meaning: 'because'
       },
       {
         word: '以',
         furigana: 'イ',
-        meaningEn: 'by means of', meaning: '~을 통해'
+        meaning: 'by means of'
       },
       {
         word: '以',
         furigana: 'イ',
-        meaningEn: 'compared with', meaning: '~와 비교하여'
+        meaning: 'compared with'
       },
     ],
   },
@@ -198,17 +198,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '会',
         furigana: 'エ',
-        meaningEn: 'association', meaning: '협회'
+        meaning: 'association'
       },
       {
         word: '会',
         furigana: 'エ',
-        meaningEn: 'interview', meaning: '면담'
+        meaning: 'interview'
       },
       {
         word: '会',
         furigana: 'エ',
-        meaningEn: 'join', meaning: '합류하다'
+        meaning: 'join'
       },
     ],
   },
@@ -222,17 +222,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '住',
         furigana: 'ジュウ',
-        meaningEn: 'dwell', meaning: '거주하다'
+        meaning: 'dwell'
       },
       {
         word: '住',
         furigana: 'ジュウ',
-        meaningEn: 'inhabit', meaning: '살다'
+        meaning: 'inhabit'
       },
       {
         word: '住',
         furigana: 'ジュウ',
-        meaningEn: 'live', meaning: '살다'
+        meaning: 'live'
       },
     ],
   },
@@ -246,17 +246,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '体',
         furigana: 'タイ',
-        meaningEn: 'body', meaning: '몸'
+        meaning: 'body'
       },
       {
         word: '体',
         furigana: 'タイ',
-        meaningEn: 'counter for images', meaning: '사진 세는 단위'
+        meaning: 'counter for images'
       },
       {
         word: '体',
         furigana: 'タイ',
-        meaningEn: 'object', meaning: '물체'
+        meaning: 'object'
       },
     ],
   },
@@ -270,17 +270,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '作',
         furigana: 'サ',
-        meaningEn: 'build', meaning: '짓다'
+        meaning: 'build'
       },
       {
         word: '作',
         furigana: 'サ',
-        meaningEn: 'make', meaning: '만들다'
+        meaning: 'make'
       },
       {
         word: '作',
         furigana: 'サ',
-        meaningEn: 'prepare', meaning: '준비하다'
+        meaning: 'prepare'
       },
     ],
   },
@@ -294,17 +294,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '使',
         furigana: 'シ',
-        meaningEn: 'ambassador', meaning: '대사'
+        meaning: 'ambassador'
       },
       {
         word: '使',
         furigana: 'シ',
-        meaningEn: 'cause', meaning: '원인'
+        meaning: 'cause'
       },
       {
         word: '使',
         furigana: 'シ',
-        meaningEn: 'envoy', meaning: '특사'
+        meaning: 'envoy'
       },
     ],
   },
@@ -318,12 +318,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '借',
         furigana: 'シャク',
-        meaningEn: 'borrow', meaning: '빌리다'
+        meaning: 'borrow'
       },
       {
         word: '借',
         furigana: 'シャク',
-        meaningEn: 'rent', meaning: '빌리다'
+        meaning: 'rent'
       },
     ],
   },
@@ -337,17 +337,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '元',
         furigana: 'ガン',
-        meaningEn: 'beginning', meaning: '시작'
+        meaning: 'beginning'
       },
       {
         word: '元',
         furigana: 'ガン',
-        meaningEn: 'former time', meaning: '이전 시절'
+        meaning: 'former time'
       },
       {
         word: '元',
         furigana: 'ガン',
-        meaningEn: 'origin', meaning: '기원'
+        meaning: 'origin'
       },
     ],
   },
@@ -361,12 +361,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '兄',
         furigana: 'キョウ',
-        meaningEn: 'big brother', meaning: '형'
+        meaning: 'big brother'
       },
       {
         word: '兄',
         furigana: 'キョウ',
-        meaningEn: 'elder brother', meaning: '형'
+        meaning: 'elder brother'
       },
     ],
   },
@@ -380,17 +380,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '公',
         furigana: 'ク',
-        meaningEn: 'governmental', meaning: '정부의'
+        meaning: 'governmental'
       },
       {
         word: '公',
         furigana: 'ク',
-        meaningEn: 'official', meaning: '공무원'
+        meaning: 'official'
       },
       {
         word: '公',
         furigana: 'ク',
-        meaningEn: 'prince', meaning: '왕자'
+        meaning: 'prince'
       },
     ],
   },
@@ -404,17 +404,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '写',
         furigana: 'シャ',
-        meaningEn: 'be photographed', meaning: '찍히다'
+        meaning: 'be photographed'
       },
       {
         word: '写',
         furigana: 'シャ',
-        meaningEn: 'copy', meaning: '복사하다'
+        meaning: 'copy'
       },
       {
         word: '写',
         furigana: 'シャ',
-        meaningEn: 'describe', meaning: '묘사하다'
+        meaning: 'describe'
       },
     ],
   },
@@ -428,7 +428,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '冬',
         furigana: 'トウ',
-        meaningEn: 'winter', meaning: '겨울'
+        meaning: 'winter'
       },
     ],
   },
@@ -442,17 +442,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '切',
         furigana: 'サイ',
-        meaningEn: 'be sharp', meaning: '날카롭다'
+        meaning: 'be sharp'
       },
       {
         word: '切',
         furigana: 'サイ',
-        meaningEn: 'cut', meaning: '자르다'
+        meaning: 'cut'
       },
       {
         word: '切',
         furigana: 'サイ',
-        meaningEn: 'cutoff', meaning: '절단'
+        meaning: 'cutoff'
       },
     ],
   },
@@ -466,17 +466,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '別',
         furigana: 'ベツ',
-        meaningEn: 'another', meaning: '또 다른'
+        meaning: 'another'
       },
       {
         word: '別',
         furigana: 'ベツ',
-        meaningEn: 'branch off', meaning: '갈라지다'
+        meaning: 'branch off'
       },
       {
         word: '別',
         furigana: 'ベツ',
-        meaningEn: 'diverge', meaning: '분기하다'
+        meaning: 'diverge'
       },
     ],
   },
@@ -490,17 +490,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '力',
         furigana: 'リイ',
-        meaningEn: 'bear up', meaning: '견디다'
+        meaning: 'bear up'
       },
       {
         word: '力',
         furigana: 'リイ',
-        meaningEn: 'exert', meaning: '발휘하다'
+        meaning: 'exert'
       },
       {
         word: '力',
         furigana: 'リイ',
-        meaningEn: 'power', meaning: '힘'
+        meaning: 'power'
       },
     ],
   },
@@ -514,17 +514,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '勉',
         furigana: 'ベン',
-        meaningEn: 'diligent', meaning: '부지런한'
+        meaning: 'diligent'
       },
       {
         word: '勉',
         furigana: 'ベン',
-        meaningEn: 'encourage', meaning: '격려하다'
+        meaning: 'encourage'
       },
       {
         word: '勉',
         furigana: 'ベン',
-        meaningEn: 'endeavour', meaning: '노력하다'
+        meaning: 'endeavour'
       },
     ],
   },
@@ -538,17 +538,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '動',
         furigana: 'ドウ',
-        meaningEn: 'change', meaning: '변화하다'
+        meaning: 'change'
       },
       {
         word: '動',
         furigana: 'ドウ',
-        meaningEn: 'confusion', meaning: '혼란'
+        meaning: 'confusion'
       },
       {
         word: '動',
         furigana: 'ドウ',
-        meaningEn: 'motion', meaning: '움직임'
+        meaning: 'motion'
       },
     ],
   },
@@ -562,12 +562,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '医',
         furigana: 'イ',
-        meaningEn: 'doctor', meaning: '의사'
+        meaning: 'doctor'
       },
       {
         word: '医',
         furigana: 'イ',
-        meaningEn: 'medicine', meaning: '약'
+        meaning: 'medicine'
       },
     ],
   },
@@ -581,17 +581,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '去',
         furigana: 'キョ',
-        meaningEn: 'divorce', meaning: '이혼'
+        meaning: 'divorce'
       },
       {
         word: '去',
         furigana: 'キョ',
-        meaningEn: 'elapse', meaning: '경과하다'
+        meaning: 'elapse'
       },
       {
         word: '去',
         furigana: 'キョ',
-        meaningEn: 'eliminate', meaning: '제거하다'
+        meaning: 'eliminate'
       },
     ],
   },
@@ -605,7 +605,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '口',
         furigana: 'ク',
-        meaningEn: 'mouth', meaning: '입'
+        meaning: 'mouth'
       },
     ],
   },
@@ -619,7 +619,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '古',
         furigana: 'コ',
-        meaningEn: 'old', meaning: '오래된'
+        meaning: 'old'
       },
     ],
   },
@@ -633,17 +633,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '台',
         furigana: 'タイ',
-        meaningEn: 'a stand', meaning: '거치대'
+        meaning: 'a stand'
       },
       {
         word: '台',
         furigana: 'タイ',
-        meaningEn: 'counter for machines and vehicles', meaning: '기계·차량 세는 단위'
+        meaning: 'counter for machines and vehicles'
       },
       {
         word: '台',
         furigana: 'タイ',
-        meaningEn: 'pedestal', meaning: '받침대'
+        meaning: 'pedestal'
       },
     ],
   },
@@ -657,17 +657,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '同',
         furigana: 'ドウ',
-        meaningEn: 'agree', meaning: '동의하다'
+        meaning: 'agree'
       },
       {
         word: '同',
         furigana: 'ドウ',
-        meaningEn: 'equal', meaning: '동등한'
+        meaning: 'equal'
       },
       {
         word: '同',
         furigana: 'ドウ',
-        meaningEn: 'same', meaning: '같은'
+        meaning: 'same'
       },
     ],
   },
@@ -681,12 +681,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '味',
         furigana: 'ミ',
-        meaningEn: 'flavor', meaning: '맛'
+        meaning: 'flavor'
       },
       {
         word: '味',
         furigana: 'ミ',
-        meaningEn: 'taste', meaning: '맛보다'
+        meaning: 'taste'
       },
     ],
   },
@@ -700,17 +700,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '品',
         furigana: 'ヒン',
-        meaningEn: 'article', meaning: '기사'
+        meaning: 'article'
       },
       {
         word: '品',
         furigana: 'ヒン',
-        meaningEn: 'counter for meal courses', meaning: '코스 요리 세는 단위'
+        meaning: 'counter for meal courses'
       },
       {
         word: '品',
         furigana: 'ヒン',
-        meaningEn: 'dignity', meaning: '위엄'
+        meaning: 'dignity'
       },
     ],
   },
@@ -723,17 +723,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '員',
         furigana: 'イン',
-        meaningEn: 'employee', meaning: '직원'
+        meaning: 'employee'
       },
       {
         word: '員',
         furigana: 'イン',
-        meaningEn: 'member', meaning: '구성원'
+        meaning: 'member'
       },
       {
         word: '員',
         furigana: 'イン',
-        meaningEn: 'number', meaning: '숫자'
+        meaning: 'number'
       },
     ],
   },
@@ -747,17 +747,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '問',
         furigana: 'モン',
-        meaningEn: 'ask', meaning: '묻다'
+        meaning: 'ask'
       },
       {
         word: '問',
         furigana: 'モン',
-        meaningEn: 'problem', meaning: '문제'
+        meaning: 'problem'
       },
       {
         word: '問',
         furigana: 'モン',
-        meaningEn: 'question', meaning: '질문'
+        meaning: 'question'
       },
     ],
   },
@@ -771,17 +771,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '図',
         furigana: 'ズ',
-        meaningEn: 'audacious', meaning: '대담한'
+        meaning: 'audacious'
       },
       {
         word: '図',
         furigana: 'ズ',
-        meaningEn: 'drawing', meaning: '그림'
+        meaning: 'drawing'
       },
       {
         word: '図',
         furigana: 'ズ',
-        meaningEn: 'extraordinary', meaning: '비범한'
+        meaning: 'extraordinary'
       },
     ],
   },
@@ -794,12 +794,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '地',
         furigana: 'ジ',
-        meaningEn: 'earth', meaning: '땅'
+        meaning: 'earth'
       },
       {
         word: '地',
         furigana: 'ジ',
-        meaningEn: 'ground', meaning: '지면'
+        meaning: 'ground'
       },
     ],
   },
@@ -812,12 +812,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '堂',
         furigana: 'ドウ',
-        meaningEn: 'hall', meaning: '홀'
+        meaning: 'hall'
       },
       {
         word: '堂',
         furigana: 'ドウ',
-        meaningEn: 'public chamber', meaning: '공공 회의실'
+        meaning: 'public chamber'
       },
     ],
   },
@@ -831,12 +831,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '場',
         furigana: 'ジョウ',
-        meaningEn: 'location', meaning: '위치'
+        meaning: 'location'
       },
       {
         word: '場',
         furigana: 'ジョウ',
-        meaningEn: 'place', meaning: '장소'
+        meaning: 'place'
       },
     ],
   },
@@ -850,7 +850,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '売',
         furigana: 'バイ',
-        meaningEn: 'sell', meaning: 'sell'
+        meaning: 'sell'
       },
     ],
   },
@@ -864,7 +864,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '夏',
         furigana: 'カ',
-        meaningEn: 'summer', meaning: 'summer'
+        meaning: 'summer'
       },
     ],
   },
@@ -878,7 +878,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '夕',
         furigana: 'セキ',
-        meaningEn: 'evening', meaning: 'evening'
+        meaning: 'evening'
       },
     ],
   },
@@ -892,17 +892,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '多',
         furigana: 'タ',
-        meaningEn: 'frequent', meaning: 'frequent'
+        meaning: 'frequent'
       },
       {
         word: '多',
         furigana: 'タ',
-        meaningEn: 'many', meaning: 'many'
+        meaning: 'many'
       },
       {
         word: '多',
         furigana: 'タ',
-        meaningEn: 'much', meaning: 'much'
+        meaning: 'much'
       },
     ],
   },
@@ -916,12 +916,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '夜',
         furigana: 'ヤ',
-        meaningEn: 'evening', meaning: 'evening'
+        meaning: 'evening'
       },
       {
         word: '夜',
         furigana: 'ヤ',
-        meaningEn: 'night', meaning: 'night'
+        meaning: 'night'
       },
     ],
   },
@@ -935,7 +935,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '妹',
         furigana: 'マイ',
-        meaningEn: 'younger sister', meaning: 'younger sister'
+        meaning: 'younger sister'
       },
     ],
   },
@@ -949,7 +949,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '姉',
         furigana: 'シ',
-        meaningEn: 'elder sister', meaning: 'elder sister'
+        meaning: 'elder sister'
       },
     ],
   },
@@ -963,12 +963,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '始',
         furigana: 'シ',
-        meaningEn: 'begin', meaning: 'begin'
+        meaning: 'begin'
       },
       {
         word: '始',
         furigana: 'シ',
-        meaningEn: 'commence', meaning: 'commence'
+        meaning: 'commence'
       },
     ],
   },
@@ -982,17 +982,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '字',
         furigana: 'ジ',
-        meaningEn: 'character', meaning: 'character'
+        meaning: 'character'
       },
       {
         word: '字',
         furigana: 'ジ',
-        meaningEn: 'letter', meaning: 'letter'
+        meaning: 'letter'
       },
       {
         word: '字',
         furigana: 'ジ',
-        meaningEn: 'section of village', meaning: 'section of village'
+        meaning: 'section of village'
       },
     ],
   },
@@ -1006,17 +1006,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '安',
         furigana: 'アン',
-        meaningEn: 'cheap', meaning: 'cheap'
+        meaning: 'cheap'
       },
       {
         word: '安',
         furigana: 'アン',
-        meaningEn: 'contented', meaning: 'contented'
+        meaning: 'contented'
       },
       {
         word: '安',
         furigana: 'アン',
-        meaningEn: 'low', meaning: 'low'
+        meaning: 'low'
       },
     ],
   },
@@ -1030,17 +1030,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '室',
         furigana: 'シツ',
-        meaningEn: 'apartment', meaning: 'apartment'
+        meaning: 'apartment'
       },
       {
         word: '室',
         furigana: 'シツ',
-        meaningEn: 'cellar', meaning: 'cellar'
+        meaning: 'cellar'
       },
       {
         word: '室',
         furigana: 'シツ',
-        meaningEn: 'chamber', meaning: 'chamber'
+        meaning: 'chamber'
       },
     ],
   },
@@ -1054,17 +1054,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '家',
         furigana: 'カ',
-        meaningEn: 'expert', meaning: 'expert'
+        meaning: 'expert'
       },
       {
         word: '家',
         furigana: 'カ',
-        meaningEn: 'family', meaning: 'family'
+        meaning: 'family'
       },
       {
         word: '家',
         furigana: 'カ',
-        meaningEn: 'home', meaning: 'home'
+        meaning: 'home'
       },
     ],
   },
@@ -1078,12 +1078,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '少',
         furigana: 'ショウ',
-        meaningEn: 'few', meaning: 'few'
+        meaning: 'few'
       },
       {
         word: '少',
         furigana: 'ショウ',
-        meaningEn: 'little', meaning: 'little'
+        meaning: 'little'
       },
     ],
   },
@@ -1097,17 +1097,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '屋',
         furigana: 'オク',
-        meaningEn: 'dealer', meaning: 'dealer'
+        meaning: 'dealer'
       },
       {
         word: '屋',
         furigana: 'オク',
-        meaningEn: 'house', meaning: 'house'
+        meaning: 'house'
       },
       {
         word: '屋',
         furigana: 'オク',
-        meaningEn: 'roof', meaning: 'roof'
+        meaning: 'roof'
       },
     ],
   },
@@ -1120,17 +1120,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '工',
         furigana: 'ク',
-        meaningEn: 'construction', meaning: 'construction'
+        meaning: 'construction'
       },
       {
         word: '工',
         furigana: 'ク',
-        meaningEn: 'craft', meaning: 'craft'
+        meaning: 'craft'
       },
       {
         word: '工',
         furigana: 'ク',
-        meaningEn: 'katakana e radical (no. 48)', meaning: 'katakana e radical (no. 48)'
+        meaning: 'katakana e radical (no. 48)'
       },
     ],
   },
@@ -1144,17 +1144,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '帰',
         furigana: 'キ',
-        meaningEn: 'arrive at', meaning: 'arrive at'
+        meaning: 'arrive at'
       },
       {
         word: '帰',
         furigana: 'キ',
-        meaningEn: 'homecoming', meaning: 'homecoming'
+        meaning: 'homecoming'
       },
       {
         word: '帰',
         furigana: 'キ',
-        meaningEn: 'lead to', meaning: 'lead to'
+        meaning: 'lead to'
       },
     ],
   },
@@ -1168,17 +1168,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '広',
         furigana: 'コウ',
-        meaningEn: 'broad', meaning: 'broad'
+        meaning: 'broad'
       },
       {
         word: '広',
         furigana: 'コウ',
-        meaningEn: 'spacious', meaning: 'spacious'
+        meaning: 'spacious'
       },
       {
         word: '広',
         furigana: 'コウ',
-        meaningEn: 'wide', meaning: 'wide'
+        meaning: 'wide'
       },
     ],
   },
@@ -1192,12 +1192,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '店',
         furigana: 'テン',
-        meaningEn: 'shop', meaning: 'shop'
+        meaning: 'shop'
       },
       {
         word: '店',
         furigana: 'テン',
-        meaningEn: 'store', meaning: 'store'
+        meaning: 'store'
       },
     ],
   },
@@ -1211,17 +1211,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '度',
         furigana: 'タク',
-        meaningEn: 'attitude', meaning: 'attitude'
+        meaning: 'attitude'
       },
       {
         word: '度',
         furigana: 'タク',
-        meaningEn: 'consider', meaning: 'consider'
+        meaning: 'consider'
       },
       {
         word: '度',
         furigana: 'タク',
-        meaningEn: 'counter for occurrences', meaning: 'counter for occurrences'
+        meaning: 'counter for occurrences'
       },
     ],
   },
@@ -1235,7 +1235,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '建',
         furigana: 'ケン',
-        meaningEn: 'build', meaning: 'build'
+        meaning: 'build'
       },
     ],
   },
@@ -1249,12 +1249,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '弟',
         furigana: 'ダイ',
-        meaningEn: 'faithful service to elders', meaning: 'faithful service to elders'
+        meaning: 'faithful service to elders'
       },
       {
         word: '弟',
         furigana: 'ダイ',
-        meaningEn: 'younger brother', meaning: 'younger brother'
+        meaning: 'younger brother'
       },
     ],
   },
@@ -1268,7 +1268,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '強',
         furigana: 'キョウ',
-        meaningEn: 'strong', meaning: 'strong'
+        meaning: 'strong'
       },
     ],
   },
@@ -1282,12 +1282,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '待',
         furigana: 'タイ',
-        meaningEn: 'depend on', meaning: 'depend on'
+        meaning: 'depend on'
       },
       {
         word: '待',
         furigana: 'タイ',
-        meaningEn: 'wait', meaning: 'wait'
+        meaning: 'wait'
       },
     ],
   },
@@ -1301,17 +1301,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '心',
         furigana: 'シン',
-        meaningEn: 'heart', meaning: 'heart'
+        meaning: 'heart'
       },
       {
         word: '心',
         furigana: 'シン',
-        meaningEn: 'heart radical (no. 61)', meaning: 'heart radical (no. 61)'
+        meaning: 'heart radical (no. 61)'
       },
       {
         word: '心',
         furigana: 'シン',
-        meaningEn: 'mind', meaning: 'mind'
+        meaning: 'mind'
       },
     ],
   },
@@ -1325,7 +1325,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '思',
         furigana: 'シ',
-        meaningEn: 'think', meaning: 'think'
+        meaning: 'think'
       },
     ],
   },
@@ -1339,17 +1339,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '急',
         furigana: 'キュウ',
-        meaningEn: 'emergency', meaning: 'emergency'
+        meaning: 'emergency'
       },
       {
         word: '急',
         furigana: 'キュウ',
-        meaningEn: 'hurry', meaning: 'hurry'
+        meaning: 'hurry'
       },
       {
         word: '急',
         furigana: 'キュウ',
-        meaningEn: 'steep', meaning: 'steep'
+        meaning: 'steep'
       },
     ],
   },
@@ -1363,17 +1363,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '悪',
         furigana: 'アク',
-        meaningEn: 'bad', meaning: 'bad'
+        meaning: 'bad'
       },
       {
         word: '悪',
         furigana: 'アク',
-        meaningEn: 'evil', meaning: 'evil'
+        meaning: 'evil'
       },
       {
         word: '悪',
         furigana: 'アク',
-        meaningEn: 'false', meaning: 'false'
+        meaning: 'false'
       },
     ],
   },
@@ -1386,17 +1386,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '意',
         furigana: 'イ',
-        meaningEn: 'care', meaning: 'care'
+        meaning: 'care'
       },
       {
         word: '意',
         furigana: 'イ',
-        meaningEn: 'desire', meaning: 'desire'
+        meaning: 'desire'
       },
       {
         word: '意',
         furigana: 'イ',
-        meaningEn: 'heart', meaning: 'heart'
+        meaning: 'heart'
       },
     ],
   },
@@ -1410,7 +1410,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '手',
         furigana: 'シュ',
-        meaningEn: 'hand', meaning: 'hand'
+        meaning: 'hand'
       },
     ],
   },
@@ -1424,12 +1424,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '持',
         furigana: 'ジ',
-        meaningEn: 'have', meaning: 'have'
+        meaning: 'have'
       },
       {
         word: '持',
         furigana: 'ジ',
-        meaningEn: 'hold', meaning: 'hold'
+        meaning: 'hold'
       },
     ],
   },
@@ -1443,17 +1443,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '教',
         furigana: 'キョウ',
-        meaningEn: 'doctrine', meaning: 'doctrine'
+        meaning: 'doctrine'
       },
       {
         word: '教',
         furigana: 'キョウ',
-        meaningEn: 'faith', meaning: 'faith'
+        meaning: 'faith'
       },
       {
         word: '教',
         furigana: 'キョウ',
-        meaningEn: 'teach', meaning: 'teach'
+        meaning: 'teach'
       },
     ],
   },
@@ -1467,17 +1467,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '文',
         furigana: 'ブン',
-        meaningEn: 'art', meaning: 'art'
+        meaning: 'art'
       },
       {
         word: '文',
         furigana: 'ブン',
-        meaningEn: 'decoration', meaning: 'decoration'
+        meaning: 'decoration'
       },
       {
         word: '文',
         furigana: 'ブン',
-        meaningEn: 'figures', meaning: 'figures'
+        meaning: 'figures'
       },
     ],
   },
@@ -1490,12 +1490,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '料',
         furigana: 'リョウ',
-        meaningEn: 'fee', meaning: 'fee'
+        meaning: 'fee'
       },
       {
         word: '料',
         furigana: 'リョウ',
-        meaningEn: 'materials', meaning: 'materials'
+        meaning: 'materials'
       },
     ],
   },
@@ -1509,7 +1509,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '新',
         furigana: 'シン',
-        meaningEn: 'new', meaning: 'new'
+        meaning: 'new'
       },
     ],
   },
@@ -1523,17 +1523,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '方',
         furigana: 'ホウ',
-        meaningEn: 'alternative', meaning: 'alternative'
+        meaning: 'alternative'
       },
       {
         word: '方',
         furigana: 'ホウ',
-        meaningEn: 'direction', meaning: 'direction'
+        meaning: 'direction'
       },
       {
         word: '方',
         furigana: 'ホウ',
-        meaningEn: 'person', meaning: 'person'
+        meaning: 'person'
       },
     ],
   },
@@ -1547,12 +1547,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '旅',
         furigana: 'リョ',
-        meaningEn: 'travel', meaning: 'travel'
+        meaning: 'travel'
       },
       {
         word: '旅',
         furigana: 'リョ',
-        meaningEn: 'trip', meaning: 'trip'
+        meaning: 'trip'
       },
     ],
   },
@@ -1565,12 +1565,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '族',
         furigana: 'ゾク',
-        meaningEn: 'family', meaning: 'family'
+        meaning: 'family'
       },
       {
         word: '族',
         furigana: 'ゾク',
-        meaningEn: 'tribe', meaning: 'tribe'
+        meaning: 'tribe'
       },
     ],
   },
@@ -1584,12 +1584,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '早',
         furigana: 'サッ',
-        meaningEn: 'early', meaning: 'early'
+        meaning: 'early'
       },
       {
         word: '早',
         furigana: 'サッ',
-        meaningEn: 'fast', meaning: 'fast'
+        meaning: 'fast'
       },
     ],
   },
@@ -1603,12 +1603,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '明',
         furigana: 'ミョウ',
-        meaningEn: 'bright', meaning: 'bright'
+        meaning: 'bright'
       },
       {
         word: '明',
         furigana: 'ミョウ',
-        meaningEn: 'light', meaning: 'light'
+        meaning: 'light'
       },
     ],
   },
@@ -1622,17 +1622,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '映',
         furigana: 'エイ',
-        meaningEn: 'projection', meaning: 'projection'
+        meaning: 'projection'
       },
       {
         word: '映',
         furigana: 'エイ',
-        meaningEn: 'reflect', meaning: 'reflect'
+        meaning: 'reflect'
       },
       {
         word: '映',
         furigana: 'エイ',
-        meaningEn: 'reflection', meaning: 'reflection'
+        meaning: 'reflection'
       },
     ],
   },
@@ -1646,12 +1646,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '春',
         furigana: 'シュン',
-        meaningEn: 'spring (season)', meaning: 'spring (season)'
+        meaning: 'spring (season)'
       },
       {
         word: '春',
         furigana: 'シュン',
-        meaningEn: 'springtime', meaning: 'springtime'
+        meaning: 'springtime'
       },
     ],
   },
@@ -1665,12 +1665,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '昼',
         furigana: 'チュウ',
-        meaningEn: 'daytime', meaning: 'daytime'
+        meaning: 'daytime'
       },
       {
         word: '昼',
         furigana: 'チュウ',
-        meaningEn: 'noon', meaning: 'noon'
+        meaning: 'noon'
       },
     ],
   },
@@ -1683,7 +1683,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '曜',
         furigana: 'ヨウ',
-        meaningEn: 'weekday', meaning: 'weekday'
+        meaning: 'weekday'
       },
     ],
   },
@@ -1697,17 +1697,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '有',
         furigana: 'ウ',
-        meaningEn: 'approx', meaning: 'approx'
+        meaning: 'approx'
       },
       {
         word: '有',
         furigana: 'ウ',
-        meaningEn: 'exist', meaning: 'exist'
+        meaning: 'exist'
       },
       {
         word: '有',
         furigana: 'ウ',
-        meaningEn: 'happen', meaning: 'happen'
+        meaning: 'happen'
       },
     ],
   },
@@ -1720,17 +1720,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '服',
         furigana: 'フク',
-        meaningEn: 'admit', meaning: 'admit'
+        meaning: 'admit'
       },
       {
         word: '服',
         furigana: 'フク',
-        meaningEn: 'clothing', meaning: 'clothing'
+        meaning: 'clothing'
       },
       {
         word: '服',
         furigana: 'フク',
-        meaningEn: 'discharge', meaning: 'discharge'
+        meaning: 'discharge'
       },
     ],
   },
@@ -1744,17 +1744,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '朝',
         furigana: 'チョウ',
-        meaningEn: '(North) Korea', meaning: '(North) Korea'
+        meaning: '(North) Korea'
       },
       {
         word: '朝',
         furigana: 'チョウ',
-        meaningEn: 'dynasty', meaning: 'dynasty'
+        meaning: 'dynasty'
       },
       {
         word: '朝',
         furigana: 'チョウ',
-        meaningEn: 'epoch', meaning: 'epoch'
+        meaning: 'epoch'
       },
     ],
   },
@@ -1768,17 +1768,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '業',
         furigana: 'ギョウ',
-        meaningEn: 'arts', meaning: 'arts'
+        meaning: 'arts'
       },
       {
         word: '業',
         furigana: 'ギョウ',
-        meaningEn: 'business', meaning: 'business'
+        meaning: 'business'
       },
       {
         word: '業',
         furigana: 'ギョウ',
-        meaningEn: 'performance', meaning: 'performance'
+        meaning: 'performance'
       },
     ],
   },
@@ -1792,17 +1792,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '楽',
         furigana: 'ガク',
-        meaningEn: 'comfort', meaning: 'comfort'
+        meaning: 'comfort'
       },
       {
         word: '楽',
         furigana: 'ガク',
-        meaningEn: 'ease', meaning: 'ease'
+        meaning: 'ease'
       },
       {
         word: '楽',
         furigana: 'ガク',
-        meaningEn: 'music', meaning: 'music'
+        meaning: 'music'
       },
     ],
   },
@@ -1816,12 +1816,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '歌',
         furigana: 'カ',
-        meaningEn: 'sing', meaning: 'sing'
+        meaning: 'sing'
       },
       {
         word: '歌',
         furigana: 'カ',
-        meaningEn: 'song', meaning: 'song'
+        meaning: 'song'
       },
     ],
   },
@@ -1835,12 +1835,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '止',
         furigana: 'シ',
-        meaningEn: 'halt', meaning: 'halt'
+        meaning: 'halt'
       },
       {
         word: '止',
         furigana: 'シ',
-        meaningEn: 'stop', meaning: 'stop'
+        meaning: 'stop'
       },
     ],
   },
@@ -1854,17 +1854,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '正',
         furigana: 'ショウ',
-        meaningEn: '10**40', meaning: '10**40'
+        meaning: '10**40'
       },
       {
         word: '正',
         furigana: 'ショウ',
-        meaningEn: 'correct', meaning: 'correct'
+        meaning: 'correct'
       },
       {
         word: '正',
         furigana: 'ショウ',
-        meaningEn: 'justice', meaning: 'justice'
+        meaning: 'justice'
       },
     ],
   },
@@ -1878,12 +1878,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '歩',
         furigana: 'フ',
-        meaningEn: 'counter for steps', meaning: 'counter for steps'
+        meaning: 'counter for steps'
       },
       {
         word: '歩',
         furigana: 'フ',
-        meaningEn: 'walk', meaning: 'walk'
+        meaning: 'walk'
       },
     ],
   },
@@ -1897,12 +1897,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '死',
         furigana: 'シ',
-        meaningEn: 'death', meaning: 'death'
+        meaning: 'death'
       },
       {
         word: '死',
         furigana: 'シ',
-        meaningEn: 'die', meaning: 'die'
+        meaning: 'die'
       },
     ],
   },
@@ -1916,17 +1916,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '注',
         furigana: 'チュウ',
-        meaningEn: 'annotate', meaning: 'annotate'
+        meaning: 'annotate'
       },
       {
         word: '注',
         furigana: 'チュウ',
-        meaningEn: 'comment', meaning: 'comment'
+        meaning: 'comment'
       },
       {
         word: '注',
         furigana: 'チュウ',
-        meaningEn: 'concentrate on', meaning: 'concentrate on'
+        meaning: 'concentrate on'
       },
     ],
   },
@@ -1939,17 +1939,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '洋',
         furigana: 'ヨウ',
-        meaningEn: 'Western style', meaning: 'Western style'
+        meaning: 'Western style'
       },
       {
         word: '洋',
         furigana: 'ヨウ',
-        meaningEn: 'foreign', meaning: 'foreign'
+        meaning: 'foreign'
       },
       {
         word: '洋',
         furigana: 'ヨウ',
-        meaningEn: 'ocean', meaning: 'ocean'
+        meaning: 'ocean'
       },
     ],
   },
@@ -1963,12 +1963,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '海',
         furigana: 'カイ',
-        meaningEn: 'ocean', meaning: 'ocean'
+        meaning: 'ocean'
       },
       {
         word: '海',
         furigana: 'カイ',
-        meaningEn: 'sea', meaning: 'sea'
+        meaning: 'sea'
       },
     ],
   },
@@ -1981,12 +1981,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '漢',
         furigana: 'カン',
-        meaningEn: 'China', meaning: 'China'
+        meaning: 'China'
       },
       {
         word: '漢',
         furigana: 'カン',
-        meaningEn: 'Sino-', meaning: 'Sino-'
+        meaning: 'Sino-'
       },
     ],
   },
@@ -2000,7 +2000,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '牛',
         furigana: 'ギュウ',
-        meaningEn: 'cow', meaning: 'cow'
+        meaning: 'cow'
       },
     ],
   },
@@ -2014,17 +2014,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '物',
         furigana: 'ブツ',
-        meaningEn: 'matter', meaning: 'matter'
+        meaning: 'matter'
       },
       {
         word: '物',
         furigana: 'ブツ',
-        meaningEn: 'object', meaning: 'object'
+        meaning: 'object'
       },
       {
         word: '物',
         furigana: 'ブツ',
-        meaningEn: 'thing', meaning: 'thing'
+        meaning: 'thing'
       },
     ],
   },
@@ -2037,7 +2037,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '特',
         furigana: 'トク',
-        meaningEn: 'special', meaning: 'special'
+        meaning: 'special'
       },
     ],
   },
@@ -2051,7 +2051,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '犬',
         furigana: 'ケン',
-        meaningEn: 'dog', meaning: 'dog'
+        meaning: 'dog'
       },
     ],
   },
@@ -2065,17 +2065,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '理',
         furigana: 'リ',
-        meaningEn: 'arrangement', meaning: 'arrangement'
+        meaning: 'arrangement'
       },
       {
         word: '理',
         furigana: 'リ',
-        meaningEn: 'justice', meaning: 'justice'
+        meaning: 'justice'
       },
       {
         word: '理',
         furigana: 'リ',
-        meaningEn: 'logic', meaning: 'logic'
+        meaning: 'logic'
       },
     ],
   },
@@ -2089,17 +2089,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '用',
         furigana: 'ヨウ',
-        meaningEn: 'business', meaning: 'business'
+        meaning: 'business'
       },
       {
         word: '用',
         furigana: 'ヨウ',
-        meaningEn: 'employ', meaning: 'employ'
+        meaning: 'employ'
       },
       {
         word: '用',
         furigana: 'ヨウ',
-        meaningEn: 'service', meaning: 'service'
+        meaning: 'service'
       },
     ],
   },
@@ -2113,12 +2113,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '田',
         furigana: 'デン',
-        meaningEn: 'rice field', meaning: 'rice field'
+        meaning: 'rice field'
       },
       {
         word: '田',
         furigana: 'デン',
-        meaningEn: 'rice paddy', meaning: 'rice paddy'
+        meaning: 'rice paddy'
       },
     ],
   },
@@ -2132,17 +2132,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '町',
         furigana: 'チョウ',
-        meaningEn: 'block', meaning: 'block'
+        meaning: 'block'
       },
       {
         word: '町',
         furigana: 'チョウ',
-        meaningEn: 'street', meaning: 'street'
+        meaning: 'street'
       },
       {
         word: '町',
         furigana: 'チョウ',
-        meaningEn: 'town', meaning: 'town'
+        meaning: 'town'
       },
     ],
   },
@@ -2156,12 +2156,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '画',
         furigana: 'エ',
-        meaningEn: 'brush-stroke', meaning: 'brush-stroke'
+        meaning: 'brush-stroke'
       },
       {
         word: '画',
         furigana: 'エ',
-        meaningEn: 'picture', meaning: 'picture'
+        meaning: 'picture'
       },
     ],
   },
@@ -2174,12 +2174,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '界',
         furigana: 'カイ',
-        meaningEn: 'boundary', meaning: 'boundary'
+        meaning: 'boundary'
       },
       {
         word: '界',
         furigana: 'カイ',
-        meaningEn: 'world', meaning: 'world'
+        meaning: 'world'
       },
     ],
   },
@@ -2193,12 +2193,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '病',
         furigana: 'ビョウ',
-        meaningEn: 'ill', meaning: 'ill'
+        meaning: 'ill'
       },
       {
         word: '病',
         furigana: 'ビョウ',
-        meaningEn: 'sick', meaning: 'sick'
+        meaning: 'sick'
       },
     ],
   },
@@ -2212,17 +2212,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '発',
         furigana: 'ハツ',
-        meaningEn: 'counter for gunshots', meaning: 'counter for gunshots'
+        meaning: 'counter for gunshots'
       },
       {
         word: '発',
         furigana: 'ハツ',
-        meaningEn: 'departure', meaning: 'departure'
+        meaning: 'departure'
       },
       {
         word: '発',
         furigana: 'ハツ',
-        meaningEn: 'discharge', meaning: 'discharge'
+        meaning: 'discharge'
       },
     ],
   },
@@ -2236,17 +2236,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '目',
         furigana: 'ボク',
-        meaningEn: 'care', meaning: 'care'
+        meaning: 'care'
       },
       {
         word: '目',
         furigana: 'ボク',
-        meaningEn: 'class', meaning: 'class'
+        meaning: 'class'
       },
       {
         word: '目',
         furigana: 'ボク',
-        meaningEn: 'experience', meaning: 'experience'
+        meaning: 'experience'
       },
     ],
   },
@@ -2260,17 +2260,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '真',
         furigana: 'シン',
-        meaningEn: 'Buddhist sect', meaning: 'Buddhist sect'
+        meaning: 'Buddhist sect'
       },
       {
         word: '真',
         furigana: 'シン',
-        meaningEn: 'reality', meaning: 'reality'
+        meaning: 'reality'
       },
       {
         word: '真',
         furigana: 'シン',
-        meaningEn: 'true', meaning: 'true'
+        meaning: 'true'
       },
     ],
   },
@@ -2284,17 +2284,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '着',
         furigana: 'ジャク',
-        meaningEn: 'arrive', meaning: 'arrive'
+        meaning: 'arrive'
       },
       {
         word: '着',
         furigana: 'ジャク',
-        meaningEn: 'counter for suits of clothing', meaning: 'counter for suits of clothing'
+        meaning: 'counter for suits of clothing'
       },
       {
         word: '着',
         furigana: 'ジャク',
-        meaningEn: 'don', meaning: 'don'
+        meaning: 'don'
       },
     ],
   },
@@ -2308,12 +2308,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '知',
         furigana: 'チ',
-        meaningEn: 'know', meaning: 'know'
+        meaning: 'know'
       },
       {
         word: '知',
         furigana: 'チ',
-        meaningEn: 'wisdom', meaning: 'wisdom'
+        meaning: 'wisdom'
       },
     ],
   },
@@ -2327,17 +2327,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '研',
         furigana: 'ケン',
-        meaningEn: 'polish', meaning: 'polish'
+        meaning: 'polish'
       },
       {
         word: '研',
         furigana: 'ケン',
-        meaningEn: 'sharpen', meaning: 'sharpen'
+        meaning: 'sharpen'
       },
       {
         word: '研',
         furigana: 'ケン',
-        meaningEn: 'study of', meaning: 'study of'
+        meaning: 'study of'
       },
     ],
   },
@@ -2351,17 +2351,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '社',
         furigana: 'シャ',
-        meaningEn: 'association', meaning: 'association'
+        meaning: 'association'
       },
       {
         word: '社',
         furigana: 'シャ',
-        meaningEn: 'company', meaning: 'company'
+        meaning: 'company'
       },
       {
         word: '社',
         furigana: 'シャ',
-        meaningEn: 'firm', meaning: 'firm'
+        meaning: 'firm'
       },
     ],
   },
@@ -2375,17 +2375,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '私',
         furigana: 'シ',
-        meaningEn: 'I', meaning: 'I'
+        meaning: 'I'
       },
       {
         word: '私',
         furigana: 'シ',
-        meaningEn: 'me', meaning: 'me'
+        meaning: 'me'
       },
       {
         word: '私',
         furigana: 'シ',
-        meaningEn: 'private', meaning: 'private'
+        meaning: 'private'
       },
     ],
   },
@@ -2399,7 +2399,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '秋',
         furigana: 'シュウ',
-        meaningEn: 'autumn', meaning: 'autumn'
+        meaning: 'autumn'
       },
     ],
   },
@@ -2413,12 +2413,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '究',
         furigana: 'キュウ',
-        meaningEn: 'research', meaning: 'research'
+        meaning: 'research'
       },
       {
         word: '究',
         furigana: 'キュウ',
-        meaningEn: 'study', meaning: 'study'
+        meaning: 'study'
       },
     ],
   },
@@ -2432,17 +2432,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '空',
         furigana: 'クウ',
-        meaningEn: 'empty', meaning: 'empty'
+        meaning: 'empty'
       },
       {
         word: '空',
         furigana: 'クウ',
-        meaningEn: 'sky', meaning: 'sky'
+        meaning: 'sky'
       },
       {
         word: '空',
         furigana: 'クウ',
-        meaningEn: 'vacant', meaning: 'vacant'
+        meaning: 'vacant'
       },
     ],
   },
@@ -2456,17 +2456,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '立',
         furigana: 'リットル',
-        meaningEn: 'erect', meaning: 'erect'
+        meaning: 'erect'
       },
       {
         word: '立',
         furigana: 'リットル',
-        meaningEn: 'rise', meaning: 'rise'
+        meaning: 'rise'
       },
       {
         word: '立',
         furigana: 'リットル',
-        meaningEn: 'set up', meaning: 'set up'
+        meaning: 'set up'
       },
     ],
   },
@@ -2480,12 +2480,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '答',
         furigana: 'トウ',
-        meaningEn: 'answer', meaning: 'answer'
+        meaning: 'answer'
       },
       {
         word: '答',
         furigana: 'トウ',
-        meaningEn: 'solution', meaning: 'solution'
+        meaning: 'solution'
       },
     ],
   },
@@ -2499,7 +2499,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '紙',
         furigana: 'シ',
-        meaningEn: 'paper', meaning: 'paper'
+        meaning: 'paper'
       },
     ],
   },
@@ -2513,12 +2513,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '終',
         furigana: 'シュウ',
-        meaningEn: 'end', meaning: 'end'
+        meaning: 'end'
       },
       {
         word: '終',
         furigana: 'シュウ',
-        meaningEn: 'finish', meaning: 'finish'
+        meaning: 'finish'
       },
     ],
   },
@@ -2532,7 +2532,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '習',
         furigana: 'シュウ',
-        meaningEn: 'learn', meaning: 'learn'
+        meaning: 'learn'
       },
     ],
   },
@@ -2546,12 +2546,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '考',
         furigana: 'コウ',
-        meaningEn: 'consider', meaning: 'consider'
+        meaning: 'consider'
       },
       {
         word: '考',
         furigana: 'コウ',
-        meaningEn: 'think over', meaning: 'think over'
+        meaning: 'think over'
       },
     ],
   },
@@ -2565,12 +2565,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '者',
         furigana: 'シャ',
-        meaningEn: 'person', meaning: 'person'
+        meaning: 'person'
       },
       {
         word: '者',
         furigana: 'シャ',
-        meaningEn: 'someone', meaning: 'someone'
+        meaning: 'someone'
       },
     ],
   },
@@ -2584,7 +2584,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '肉',
         furigana: 'ニク',
-        meaningEn: 'meat', meaning: 'meat'
+        meaning: 'meat'
       },
     ],
   },
@@ -2598,7 +2598,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '自',
         furigana: 'シ',
-        meaningEn: 'oneself', meaning: 'oneself'
+        meaning: 'oneself'
       },
     ],
   },
@@ -2612,7 +2612,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '色',
         furigana: 'シキ',
-        meaningEn: 'color', meaning: 'color'
+        meaning: 'color'
       },
     ],
   },
@@ -2626,7 +2626,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '花',
         furigana: 'カ',
-        meaningEn: 'flower', meaning: 'flower'
+        meaning: 'flower'
       },
     ],
   },
@@ -2640,17 +2640,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '英',
         furigana: 'エイ',
-        meaningEn: 'England', meaning: 'England'
+        meaning: 'England'
       },
       {
         word: '英',
         furigana: 'エイ',
-        meaningEn: 'English', meaning: 'English'
+        meaning: 'English'
       },
       {
         word: '英',
         furigana: 'エイ',
-        meaningEn: 'calyx', meaning: 'calyx'
+        meaning: 'calyx'
       },
     ],
   },
@@ -2663,7 +2663,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '茶',
         furigana: 'サ',
-        meaningEn: 'tea', meaning: 'tea'
+        meaning: 'tea'
       },
     ],
   },
@@ -2677,17 +2677,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '親',
         furigana: 'シン',
-        meaningEn: 'dealer (cards)', meaning: 'dealer (cards)'
+        meaning: 'dealer (cards)'
       },
       {
         word: '親',
         furigana: 'シン',
-        meaningEn: 'familiarity', meaning: 'familiarity'
+        meaning: 'familiarity'
       },
       {
         word: '親',
         furigana: 'シン',
-        meaningEn: 'intimacy', meaning: 'intimacy'
+        meaning: 'intimacy'
       },
     ],
   },
@@ -2701,12 +2701,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '言',
         furigana: 'ゲン',
-        meaningEn: 'say', meaning: 'say'
+        meaning: 'say'
       },
       {
         word: '言',
         furigana: 'ゲン',
-        meaningEn: 'word', meaning: 'word'
+        meaning: 'word'
       },
     ],
   },
@@ -2720,17 +2720,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '計',
         furigana: 'ケイ',
-        meaningEn: 'measure', meaning: 'measure'
+        meaning: 'measure'
       },
       {
         word: '計',
         furigana: 'ケイ',
-        meaningEn: 'plan', meaning: 'plan'
+        meaning: 'plan'
       },
       {
         word: '計',
         furigana: 'ケイ',
-        meaningEn: 'plot', meaning: 'plot'
+        meaning: 'plot'
       },
     ],
   },
@@ -2744,17 +2744,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '試',
         furigana: 'シ',
-        meaningEn: 'attempt', meaning: 'attempt'
+        meaning: 'attempt'
       },
       {
         word: '試',
         furigana: 'シ',
-        meaningEn: 'experiment', meaning: 'experiment'
+        meaning: 'experiment'
       },
       {
         word: '試',
         furigana: 'シ',
-        meaningEn: 'ordeal', meaning: 'ordeal'
+        meaning: 'ordeal'
       },
     ],
   },
@@ -2768,7 +2768,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '買',
         furigana: 'バイ',
-        meaningEn: 'buy', meaning: 'buy'
+        meaning: 'buy'
       },
     ],
   },
@@ -2782,7 +2782,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '貸',
         furigana: 'タイ',
-        meaningEn: 'lend', meaning: 'lend'
+        meaning: 'lend'
       },
     ],
   },
@@ -2796,17 +2796,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '質',
         furigana: 'シチ',
-        meaningEn: 'matter', meaning: 'matter'
+        meaning: 'matter'
       },
       {
         word: '質',
         furigana: 'シチ',
-        meaningEn: 'quality', meaning: 'quality'
+        meaning: 'quality'
       },
       {
         word: '質',
         furigana: 'シチ',
-        meaningEn: 'substance', meaning: 'substance'
+        meaning: 'substance'
       },
     ],
   },
@@ -2820,7 +2820,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '赤',
         furigana: 'シャク',
-        meaningEn: 'red', meaning: 'red'
+        meaning: 'red'
       },
     ],
   },
@@ -2834,7 +2834,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '走',
         furigana: 'ソウ',
-        meaningEn: 'run', meaning: 'run'
+        meaning: 'run'
       },
     ],
   },
@@ -2848,17 +2848,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '起',
         furigana: 'キ',
-        meaningEn: 'get up', meaning: 'get up'
+        meaning: 'get up'
       },
       {
         word: '起',
         furigana: 'キ',
-        meaningEn: 'rouse', meaning: 'rouse'
+        meaning: 'rouse'
       },
       {
         word: '起',
         furigana: 'キ',
-        meaningEn: 'wake up', meaning: 'wake up'
+        meaning: 'wake up'
       },
     ],
   },
@@ -2872,17 +2872,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '足',
         furigana: 'ソク',
-        meaningEn: 'be sufficient', meaning: 'be sufficient'
+        meaning: 'be sufficient'
       },
       {
         word: '足',
         furigana: 'ソク',
-        meaningEn: 'counter for pairs of footwear', meaning: 'counter for pairs of footwear'
+        meaning: 'counter for pairs of footwear'
       },
       {
         word: '足',
         furigana: 'ソク',
-        meaningEn: 'foot', meaning: 'foot'
+        meaning: 'foot'
       },
     ],
   },
@@ -2896,17 +2896,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '転',
         furigana: 'テン',
-        meaningEn: 'change', meaning: 'change'
+        meaning: 'change'
       },
       {
         word: '転',
         furigana: 'テン',
-        meaningEn: 'revolve', meaning: 'revolve'
+        meaning: 'revolve'
       },
       {
         word: '転',
         furigana: 'テン',
-        meaningEn: 'turn around', meaning: 'turn around'
+        meaning: 'turn around'
       },
     ],
   },
@@ -2920,17 +2920,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '近',
         furigana: 'キン',
-        meaningEn: 'akin', meaning: 'akin'
+        meaning: 'akin'
       },
       {
         word: '近',
         furigana: 'キン',
-        meaningEn: 'early', meaning: 'early'
+        meaning: 'early'
       },
       {
         word: '近',
         furigana: 'キン',
-        meaningEn: 'near', meaning: 'near'
+        meaning: 'near'
       },
     ],
   },
@@ -2944,12 +2944,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '送',
         furigana: 'ソウ',
-        meaningEn: 'escort', meaning: 'escort'
+        meaning: 'escort'
       },
       {
         word: '送',
         furigana: 'ソウ',
-        meaningEn: 'send', meaning: 'send'
+        meaning: 'send'
       },
     ],
   },
@@ -2963,17 +2963,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '通',
         furigana: 'ツ',
-        meaningEn: 'avenue', meaning: 'avenue'
+        meaning: 'avenue'
       },
       {
         word: '通',
         furigana: 'ツ',
-        meaningEn: 'commute', meaning: 'commute'
+        meaning: 'commute'
       },
       {
         word: '通',
         furigana: 'ツ',
-        meaningEn: 'counter for letters, notes, documents, etc.', meaning: 'counter for letters, notes, documents, etc.'
+        meaning: 'counter for letters, notes, documents, etc.'
       },
     ],
   },
@@ -2986,7 +2986,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '週',
         furigana: 'シュウ',
-        meaningEn: 'week', meaning: 'week'
+        meaning: 'week'
       },
     ],
   },
@@ -3000,17 +3000,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '運',
         furigana: 'ウン',
-        meaningEn: 'advance', meaning: 'advance'
+        meaning: 'advance'
       },
       {
         word: '運',
         furigana: 'ウン',
-        meaningEn: 'carry', meaning: 'carry'
+        meaning: 'carry'
       },
       {
         word: '運',
         furigana: 'ウン',
-        meaningEn: 'destiny', meaning: 'destiny'
+        meaning: 'destiny'
       },
     ],
   },
@@ -3024,17 +3024,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '道',
         furigana: 'トウ',
-        meaningEn: 'course', meaning: 'course'
+        meaning: 'course'
       },
       {
         word: '道',
         furigana: 'トウ',
-        meaningEn: 'district', meaning: 'district'
+        meaning: 'district'
       },
       {
         word: '道',
         furigana: 'トウ',
-        meaningEn: 'journey', meaning: 'journey'
+        meaning: 'journey'
       },
     ],
   },
@@ -3048,17 +3048,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '重',
         furigana: 'ジュウ',
-        meaningEn: '-fold', meaning: '-fold'
+        meaning: '-fold'
       },
       {
         word: '重',
         furigana: 'ジュウ',
-        meaningEn: 'esteem', meaning: 'esteem'
+        meaning: 'esteem'
       },
       {
         word: '重',
         furigana: 'ジュウ',
-        meaningEn: 'heap up', meaning: 'heap up'
+        meaning: 'heap up'
       },
     ],
   },
@@ -3072,17 +3072,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '野',
         furigana: 'ショ',
-        meaningEn: 'civilian life', meaning: 'civilian life'
+        meaning: 'civilian life'
       },
       {
         word: '野',
         furigana: 'ショ',
-        meaningEn: 'field', meaning: 'field'
+        meaning: 'field'
       },
       {
         word: '野',
         furigana: 'ショ',
-        meaningEn: 'plains', meaning: 'plains'
+        meaning: 'plains'
       },
     ],
   },
@@ -3096,7 +3096,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '銀',
         furigana: 'ギン',
-        meaningEn: 'silver', meaning: 'silver'
+        meaning: 'silver'
       },
     ],
   },
@@ -3110,17 +3110,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '開',
         furigana: 'カイ',
-        meaningEn: 'open', meaning: 'open'
+        meaning: 'open'
       },
       {
         word: '開',
         furigana: 'カイ',
-        meaningEn: 'unfold', meaning: 'unfold'
+        meaning: 'unfold'
       },
       {
         word: '開',
         furigana: 'カイ',
-        meaningEn: 'unseal', meaning: 'unseal'
+        meaning: 'unseal'
       },
     ],
   },
@@ -3133,17 +3133,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '院',
         furigana: 'イン',
-        meaningEn: 'Inst.', meaning: 'Inst.'
+        meaning: 'Inst.'
       },
       {
         word: '院',
         furigana: 'イン',
-        meaningEn: 'institution', meaning: 'institution'
+        meaning: 'institution'
       },
       {
         word: '院',
         furigana: 'イン',
-        meaningEn: 'mansion', meaning: 'mansion'
+        meaning: 'mansion'
       },
     ],
   },
@@ -3157,17 +3157,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '集',
         furigana: 'シュウ',
-        meaningEn: 'congregate', meaning: 'congregate'
+        meaning: 'congregate'
       },
       {
         word: '集',
         furigana: 'シュウ',
-        meaningEn: 'flock', meaning: 'flock'
+        meaning: 'flock'
       },
       {
         word: '集',
         furigana: 'シュウ',
-        meaningEn: 'gather', meaning: 'gather'
+        meaning: 'gather'
       },
     ],
   },
@@ -3181,12 +3181,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '青',
         furigana: 'ショウ',
-        meaningEn: 'blue', meaning: 'blue'
+        meaning: 'blue'
       },
       {
         word: '青',
         furigana: 'ショウ',
-        meaningEn: 'green', meaning: 'green'
+        meaning: 'green'
       },
     ],
   },
@@ -3200,12 +3200,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '音',
         furigana: '-ノン',
-        meaningEn: 'noise', meaning: 'noise'
+        meaning: 'noise'
       },
       {
         word: '音',
         furigana: '-ノン',
-        meaningEn: 'sound', meaning: 'sound'
+        meaning: 'sound'
       },
     ],
   },
@@ -3218,12 +3218,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '題',
         furigana: 'ダイ',
-        meaningEn: 'subject', meaning: 'subject'
+        meaning: 'subject'
       },
       {
         word: '題',
         furigana: 'ダイ',
-        meaningEn: 'topic', meaning: 'topic'
+        meaning: 'topic'
       },
     ],
   },
@@ -3237,17 +3237,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '風',
         furigana: 'フ',
-        meaningEn: 'air', meaning: 'air'
+        meaning: 'air'
       },
       {
         word: '風',
         furigana: 'フ',
-        meaningEn: 'manner', meaning: 'manner'
+        meaning: 'manner'
       },
       {
         word: '風',
         furigana: 'フ',
-        meaningEn: 'style', meaning: 'style'
+        meaning: 'style'
       },
     ],
   },
@@ -3261,12 +3261,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '飯',
         furigana: 'ハン',
-        meaningEn: 'boiled rice', meaning: 'boiled rice'
+        meaning: 'boiled rice'
       },
       {
         word: '飯',
         furigana: 'ハン',
-        meaningEn: 'meal', meaning: 'meal'
+        meaning: 'meal'
       },
     ],
   },
@@ -3280,17 +3280,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '飲',
         furigana: 'イン',
-        meaningEn: 'drink', meaning: 'drink'
+        meaning: 'drink'
       },
       {
         word: '飲',
         furigana: 'イン',
-        meaningEn: 'smoke', meaning: 'smoke'
+        meaning: 'smoke'
       },
       {
         word: '飲',
         furigana: 'イン',
-        meaningEn: 'take', meaning: 'take'
+        meaning: 'take'
       },
     ],
   },
@@ -3304,17 +3304,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '館',
         furigana: 'カン',
-        meaningEn: 'building', meaning: 'building'
+        meaning: 'building'
       },
       {
         word: '館',
         furigana: 'カン',
-        meaningEn: 'large building', meaning: 'large building'
+        meaning: 'large building'
       },
       {
         word: '館',
         furigana: 'カン',
-        meaningEn: 'mansion', meaning: 'mansion'
+        meaning: 'mansion'
       },
     ],
   },
@@ -3327,7 +3327,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '駅',
         furigana: 'エキ',
-        meaningEn: 'station', meaning: 'station'
+        meaning: 'station'
       },
     ],
   },
@@ -3341,17 +3341,17 @@ export const n4Kanji: WordData[] = [
       {
         word: '験',
         furigana: 'ケン',
-        meaningEn: 'effect', meaning: 'effect'
+        meaning: 'effect'
       },
       {
         word: '験',
         furigana: 'ケン',
-        meaningEn: 'testing', meaning: 'testing'
+        meaning: 'testing'
       },
       {
         word: '験',
         furigana: 'ケン',
-        meaningEn: 'verification', meaning: 'verification'
+        meaning: 'verification'
       },
     ],
   },
@@ -3365,7 +3365,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '魚',
         furigana: 'ギョ',
-        meaningEn: 'fish', meaning: 'fish'
+        meaning: 'fish'
       },
     ],
   },
@@ -3379,12 +3379,12 @@ export const n4Kanji: WordData[] = [
       {
         word: '鳥',
         furigana: 'チョウ',
-        meaningEn: 'bird', meaning: 'bird'
+        meaning: 'bird'
       },
       {
         word: '鳥',
         furigana: 'チョウ',
-        meaningEn: 'chicken', meaning: 'chicken'
+        meaning: 'chicken'
       },
     ],
   },
@@ -3398,7 +3398,7 @@ export const n4Kanji: WordData[] = [
       {
         word: '黒',
         furigana: 'コク',
-        meaningEn: 'black', meaning: 'black'
+        meaning: 'black'
       },
     ],
   }

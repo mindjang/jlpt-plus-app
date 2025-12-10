@@ -3,7 +3,6 @@ import {
   doc,
   getDoc,
   setDoc,
-  updateDoc,
   collection,
   query,
   where,
@@ -16,7 +15,7 @@ import {
 import { db } from './config'
 import type { UserCardState } from '../types/srs'
 import type { UserProfile, UserSettings, UserData } from '../types/user'
-import type { Membership, DailyUsage, GiftCode } from '../types/membership'
+import type { Membership, DailyUsage, GiftCode, BillingInfo } from '../types/membership'
 
 function getDbInstance() {
   if (!db) {
@@ -95,9 +94,13 @@ export async function getUserData(uid: string): Promise<UserData | null> {
 export async function updateUserProfile(uid: string, profile: Partial<UserProfile>) {
   const dbInstance = getDbInstance()
   const userRef = doc(dbInstance, 'users', uid)
-  await updateDoc(userRef, {
-    'profile': profile,
-  })
+  await setDoc(
+    userRef,
+    {
+      profile,
+    },
+    { merge: true }
+  )
 }
 
 /**
@@ -106,9 +109,13 @@ export async function updateUserProfile(uid: string, profile: Partial<UserProfil
 export async function updateUserSettings(uid: string, settings: Partial<UserSettings>) {
   const dbInstance = getDbInstance()
   const userRef = doc(dbInstance, 'users', uid)
-  await updateDoc(userRef, {
-    'settings': settings,
-  })
+  await setDoc(
+    userRef,
+    {
+      settings,
+    },
+    { merge: true }
+  )
 }
 
 // ========== 카드 상태 관리 ==========
@@ -231,6 +238,9 @@ const membershipDocRef = (dbInstance: any, uid: string) =>
 const usageDocRef = (dbInstance: any, uid: string, dateKey: string) =>
   doc(dbInstance, 'users', uid, 'usage', dateKey)
 
+const billingDocRef = (dbInstance: any, uid: string) =>
+  doc(dbInstance, 'users', uid, 'billing', 'info')
+
 const codeDocRef = (dbInstance: any, code: string) => doc(dbInstance, 'codes', code)
 
 export async function getMembership(uid: string): Promise<Membership | null> {
@@ -328,5 +338,19 @@ export async function redeemGiftCode(
   })
 
   return result
+}
+
+export async function saveBillingInfo(uid: string, billing: BillingInfo) {
+  const dbInstance = getDbInstance()
+  const ref = billingDocRef(dbInstance, uid)
+  await setDoc(ref, billing, { merge: true })
+}
+
+export async function getBillingInfo(uid: string): Promise<BillingInfo | null> {
+  const dbInstance = getDbInstance()
+  const ref = billingDocRef(dbInstance, uid)
+  const snap = await getDoc(ref)
+  if (!snap.exists()) return null
+  return snap.data() as BillingInfo
 }
 

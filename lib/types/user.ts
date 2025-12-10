@@ -7,6 +7,7 @@ export interface UserProfile {
   targetLevel?: JlptLevel
   email?: string
   photoURL?: string
+  phoneNumber?: string
 }
 
 export interface UserSettings {

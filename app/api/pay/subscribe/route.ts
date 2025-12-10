@@ -1,0 +1,106 @@
+'use server'
+
+import { NextResponse } from 'next/server'
+import { saveMembership, saveBillingInfo, getMembership } from '@/lib/firebase/firestore'
+import type { Membership } from '@/lib/types/membership'
+
+type Plan = 'monthly' | 'yearly'
+
+const PLAN_AMOUNTS: Record<Plan, number> = {
+  monthly: Number(process.env.PORTONE_MONTHLY_AMOUNT || 9900),
+  yearly: Number(process.env.PORTONE_YEARLY_AMOUNT || 99000),
+}
+
+function getDurationMs(plan: Plan) {
+  return plan === 'monthly'
+    ? 30 * 24 * 60 * 60 * 1000
+    : 365 * 24 * 60 * 60 * 1000
+}
+
+export async function POST(request: Request) {
+  try {
+    const body = await request.json()
+    const { billingKey, plan, customerId } = body as {
+      billingKey?: string
+      plan?: Plan
+      customerId?: string
+    }
+
+    if (!billingKey || !plan || !customerId) {
+      return NextResponse.json({ error: 'billingKey, plan, customerId are required' }, { status: 400 })
+    }
+
+    if (!['monthly', 'yearly'].includes(plan)) {
+      return NextResponse.json({ error: 'invalid plan' }, { status: 400 })
+    }
+
+    const apiSecret = process.env.PORTONE_API_SECRET
+    if (!apiSecret) {
+      return NextResponse.json({ error: 'PORTONE_API_SECRET is not configured' }, { status: 500 })
+    }
+
+    const paymentId = `sub-${plan}-${customerId}-${Date.now()}`
+    const amount = PLAN_AMOUNTS[plan]
+    const orderName = plan === 'monthly' ? '월간 이용권 정기결제' : '연간 이용권 정기결제'
+
+    const paymentResponse = await fetch(
+      `https://api.portone.io/payments/${encodeURIComponent(paymentId)}/billing-key`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `PortOne ${apiSecret}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          billingKey,
+          orderName,
+          customer: {
+            id: customerId,
+          },
+          amount: {
+            total: amount,
+          },
+          currency: 'CURRENCY_KRW',
+        }),
+      }
+    )
+
+    const paymentJson = await paymentResponse.json().catch(() => ({}))
+    if (!paymentResponse.ok) {
+      return NextResponse.json(
+        { error: paymentJson?.message || 'payment failed', detail: paymentJson },
+        { status: 400 }
+      )
+    }
+
+    // 구독 만료일 계산 (기존 만료일 이후로 연장)
+    const now = Date.now()
+    const current = await getMembership(customerId)
+    const baseTime = current?.expiresAt && current.expiresAt > now ? current.expiresAt : now
+    const newExpiry = baseTime + getDurationMs(plan)
+
+    const membership: Membership = {
+      type: plan,
+      source: 'subscription',
+      expiresAt: newExpiry,
+      createdAt: current?.createdAt || now,
+      updatedAt: now,
+      lastRedeemedCode: current?.lastRedeemedCode,
+    }
+
+    await saveMembership(customerId, membership)
+    await saveBillingInfo(customerId, {
+      billingKey,
+      plan,
+      lastPaymentId: paymentId,
+      lastPaidAt: now,
+      amount,
+      provider: 'portone',
+    })
+
+    return NextResponse.json({ ok: true, paymentId, membership })
+  } catch (error: any) {
+    console.error('[pay/subscribe] error', error)
+    return NextResponse.json({ error: error?.message || 'unknown error' }, { status: 500 })
+  }
+}

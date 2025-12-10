@@ -23,3 +23,12 @@ export interface DailyUsage {
   sessionsUsed: number
   updatedAt: number // epoch ms
 }
+
+export interface BillingInfo {
+  billingKey: string
+  plan: 'monthly' | 'yearly'
+  lastPaymentId?: string
+  lastPaidAt?: number
+  amount?: number
+  provider?: string
+}

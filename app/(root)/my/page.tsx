@@ -22,6 +22,7 @@ export default function MyPage() {
   const [redeemMessage, setRedeemMessage] = useState<string | null>(null)
   const [redeemCodeInput, setRedeemCodeInput] = useState('')
   const [payLoading, setPayLoading] = useState<'monthly' | 'yearly' | null>(null)
+  const [payLoadingKakao, setPayLoadingKakao] = useState<'monthly' | 'yearly' | null>(null)
   const [payMessage, setPayMessage] = useState<string | null>(null)
   const [showPhoneModal, setShowPhoneModal] = useState(false)
   const [phoneInput, setPhoneInput] = useState('')
@@ -218,6 +219,74 @@ export default function MyPage() {
     }
   }
 
+  const handleSubscribeKakao = async (plan: 'monthly' | 'yearly') => {
+    if (!user) return
+    if (!user.email) {
+      setPayMessage('이메일 정보가 필요합니다. 계정에 이메일이 있는지 확인해주세요.')
+      return
+    }
+    const fallbackName =
+      (displayName || nameInput || user.displayName || (user.email ? user.email.split('@')[0] : '') || '사용자').trim() ||
+      '사용자'
+    if (!phoneNumber || !fallbackName) {
+      setPendingPlan(plan)
+      setShowPhoneModal(true)
+      setPhoneError(null)
+      return
+    }
+    const channelKeyKakao = process.env.NEXT_PUBLIC_PORTONE_KAKAO_CHANNEL_KEY
+    const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
+    if (!storeId || !channelKeyKakao) {
+      setPayMessage('카카오 결제 설정이 준비되지 않았습니다. (storeId/channelKey)')
+      return
+    }
+    setPayLoadingKakao(plan)
+    setPayMessage(null)
+    try {
+      const PortOne = await import('@portone/browser-sdk/v2')
+      const uidShort = user.uid.replace(/[^A-Za-z0-9]/g, '').slice(0, 8) || 'user'
+      const ts = Date.now().toString(36)
+      const issueId = `kko-${plan}-${uidShort}-${ts}`.slice(0, 40)
+      const issueName = plan === 'monthly' ? '카카오페이 월 구독' : '카카오페이 연간 구독'
+      const customerPayload: any = {
+        fullName: fallbackName,
+        email: user.email || undefined,
+        phoneNumber: phoneNumber || undefined,
+      }
+      console.log('[Pay-Kakao] requestIssueBillingKey payload', { storeId, channelKeyKakao, customerPayload })
+      const issueResponse = await PortOne.requestIssueBillingKey({
+        storeId,
+        channelKey: channelKeyKakao,
+        billingKeyMethod: 'EASY_PAY',
+        issueId,
+        issueName,
+        customer: customerPayload,
+      })
+      if ((issueResponse as any).code !== undefined) {
+        setPayMessage((issueResponse as any).message || '카카오 빌링키 발급에 실패했습니다.')
+        return
+      }
+      const billingKey = (issueResponse as any).billingKey as string
+      const resp = await fetch('/api/pay/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ billingKey, plan, customerId: user.uid }),
+      })
+      const data = await resp.json()
+      if (!resp.ok) {
+        setPayMessage(data?.error || '구독 결제에 실패했습니다.')
+        return
+      }
+      setPayMessage('카카오 구독이 활성화되었습니다.')
+      await refresh()
+    } catch (error: any) {
+      console.error('[MyPage] kakao subscribe error', error)
+      setPayMessage(error?.message || '알 수 없는 오류가 발생했습니다.')
+    } finally {
+      setPayLoadingKakao(null)
+    }
+  }
+
   if (loading) {
     return (
       <div className="w-full">
@@ -298,6 +367,22 @@ export default function MyPage() {
               onClick={() => handleSubscribe('yearly')}
             >
               {payLoading === 'yearly' ? '결제중...' : '연 구독'}
+            </button>
+          </div>
+          <div className="grid grid-cols-2 gap-3 mt-3">
+            <button
+              className="w-full py-3 rounded-card bg-yellow-400 text-black text-body font-semibold button-press disabled:opacity-50"
+              disabled={payLoadingKakao === 'monthly'}
+              onClick={() => handleSubscribeKakao('monthly')}
+            >
+              {payLoadingKakao === 'monthly' ? '결제중...' : '월 결제(카카오)'}
+            </button>
+            <button
+              className="w-full py-3 rounded-card bg-yellow-500 text-black text-body font-semibold button-press disabled:opacity-50"
+              disabled={payLoadingKakao === 'yearly'}
+              onClick={() => handleSubscribeKakao('yearly')}
+            >
+              {payLoadingKakao === 'yearly' ? '결제중...' : '년 결제(카카오)'}
             </button>
           </div>
           {payMessage && <div className="text-label text-primary mt-2">{payMessage}</div>}

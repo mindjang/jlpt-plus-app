@@ -33,6 +33,14 @@ export const FlashCard: React.FC<FlashCardProps> = ({
 }) => {
   const [showFurigana, setShowFurigana] = useState(false)
   const [showMeaning, setShowMeaning] = useState(false)
+  const [actionLocked, setActionLocked] = useState(false)
+
+  // 카드가 바뀌면 액션 잠금 해제
+  React.useEffect(() => {
+    setActionLocked(false)
+    setShowMeaning(false)
+    setShowFurigana(false)
+  }, [kanji])
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -137,14 +145,24 @@ export const FlashCard: React.FC<FlashCardProps> = ({
               히라가나
             </button>
             <button
-              onClick={onReview}
+              onClick={() => {
+                if (actionLocked) return
+                setActionLocked(true)
+                onReview()
+              }}
               className="button-press flex-1 py-3 px-4 rounded-card bg-surface border border-divider text-text-main text-body font-medium"
+              disabled={actionLocked}
             >
               다시학습
             </button>
             <button
-              onClick={onKnow}
+              onClick={() => {
+                if (actionLocked) return
+                setActionLocked(true)
+                onKnow()
+              }}
               className="button-press flex-1 py-3 px-4 rounded-card bg-surface border border-divider text-text-main text-body font-medium"
+              disabled={actionLocked}
             >
               알고있음
             </button>

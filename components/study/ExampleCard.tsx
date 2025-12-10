@@ -115,6 +115,15 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
     setShowReadings(false)
   }
 
+  // 카드가 변경될 때 상태 초기화
+  useEffect(() => {
+    setShowMeaning(false)
+    setShowFurigana(false)
+    setShowReadings(false)
+    setExamplePage(0)
+    setActiveLevel('N5')
+  }, [item.id])
+
   // 눈 아이콘 클릭: 모든 것을 한 번에 보이기/숨기기
   const handleToggleAll = () => {
     if (isAllVisible) {
@@ -374,11 +383,10 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
             </button>
             <button
               onClick={() => {
-                setShowFurigana(!showFurigana)
-                // 히라가나를 보이면 음독/훈독도 함께 보이기
-                if (!showFurigana) {
-                  setShowReadings(true)
-                }
+                const newShowFurigana = !showFurigana
+                setShowFurigana(newShowFurigana)
+                // 히라가나를 보이면 음독/훈독도 함께 보이기, 숨기면 함께 숨기기
+                setShowReadings(newShowFurigana)
               }}
               className={`button-press flex-1 py-3 px-4 rounded-card text-body font-medium ${
                 showFurigana

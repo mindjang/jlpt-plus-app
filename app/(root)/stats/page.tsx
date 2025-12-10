@@ -8,6 +8,8 @@ import { getUserData, getAllCardIds, getCardsByLevel } from '@/lib/firebase/fire
 import { levels, Level, levelData } from '@/data'
 import { getCardStatus } from '@/lib/srs/cardStatus'
 import type { UserCardState } from '@/lib/types/srs'
+import { useMembership } from '@/components/membership/MembershipProvider'
+import { PaywallOverlay } from '@/components/membership/PaywallOverlay'
 
 // react-calendar-heatmap은 클라이언트 사이드에서만 렌더링
 const CalendarHeatmap = dynamic(
@@ -20,6 +22,7 @@ type ContentType = 'word' | 'kanji'
 
 export default function StatsPage() {
   const { user } = useAuth()
+  const { status: membershipStatus, loading: membershipLoading, redeemCode } = useMembership()
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState<TabType>('overall')
   const [contentType, setContentType] = useState<ContentType>('word')
@@ -163,7 +166,7 @@ export default function StatsPage() {
 
   const weekDates = getWeekDates(new Date(selectedWeek))
 
-  if (loading) {
+  if (loading || membershipLoading) {
     return (
       <div className="w-full">
         <AppBar title="통계" />
@@ -175,7 +178,7 @@ export default function StatsPage() {
   }
 
   return (
-    <div className="w-full overflow-hidden pb-20">
+    <div className="w-full overflow-hidden pb-20 relative">
       <AppBar title="통계" />
 
       <div className="flex flex-col gap-6 p-4">
@@ -583,6 +586,17 @@ export default function StatsPage() {
           </>
         )}
       </div>
+
+      {membershipStatus !== 'member' && (
+        <PaywallOverlay
+          title="프리미엄에서 전체 통계를 확인하세요"
+          description="일별 요약만 볼 수 있고, 전체/레벨별 상세는 회원권이 필요합니다."
+          showRedeem={!!user}
+          onRedeem={async (code) => {
+            await redeemCode(code)
+          }}
+        />
+      )}
     </div>
   )
 }

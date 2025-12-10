@@ -11,7 +11,7 @@ interface KanjiDetailProps {
   kanji: string
   onYomi?: string[]
   kunYomi?: string[]
-  radical?: string
+  radical?: string | null
   strokeCount?: number
   relatedWords?: Array<{
     word: string
@@ -72,17 +72,15 @@ export const KanjiDetail: React.FC<KanjiDetailProps> = ({
         </div>
       )}
 
-      {/* 획순 버튼 */}
-      {strokeCount && (
-        <div className="mb-6">
+      {/* 획순 버튼 - 상단 */}
+      {strokeCount && onStrokeOrderClick && (
+        <div className="mb-6 flex justify-end">
           <button
-            onClick={() => {
-              setShowStrokeOrder(!showStrokeOrder)
-              onStrokeOrderClick?.()
-            }}
-            className="button-press px-4 py-2 rounded-card bg-surface border border-divider text-body text-text-main font-medium hover:bg-page transition-colors"
+            onClick={onStrokeOrderClick}
+            className="button-press px-4 py-2 rounded-card bg-surface border border-divider text-body text-text-main font-medium hover:bg-page transition-colors flex items-center gap-2"
           >
-            {showStrokeOrder ? '획순 숨기기' : '획순 보기'} ({strokeCount}획)
+            <span>{kanji} 획순</span>
+            <span>›</span>
           </button>
         </div>
       )}

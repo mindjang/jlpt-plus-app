@@ -10,6 +10,12 @@ import { getKanjiByLevel } from '@/data/kanji/index'
 import { levels, Level } from '@/data'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { getAllCardIds } from '@/lib/firebase/firestore'
+import {
+  getKanjiCharacter,
+  getOnYomi,
+  getKunYomi,
+  getFirstMeaning,
+} from '@/lib/utils/kanjiHelpers'
 
 function NewWordsContent() {
   const router = useRouter()
@@ -78,19 +84,22 @@ function NewWordsContent() {
       })
     } else {
       const kanjis = getKanjiByLevel(level)
-      // 한자 데이터를 SearchResult 형식으로 변환
+      // KanjiAliveEntry를 SearchResult 형식으로 변환
       allItems = kanjis
-        .filter((kanji) => !learnedIds.has(kanji.kanji))
-        .map((kanji) => {
-          const meaning = kanji.relatedWords && kanji.relatedWords.length > 0
-            ? kanji.relatedWords[0].meaning
-            : kanji.onYomi?.[0] || kanji.kunYomi?.[0] || ''
-          
-          const furigana = kanji.onYomi?.[0] || kanji.kunYomi?.[0] || undefined
+        .filter((entry) => {
+          const character = getKanjiCharacter(entry)
+          return !learnedIds.has(character)
+        })
+        .map((entry) => {
+          const character = getKanjiCharacter(entry)
+          const onYomi = getOnYomi(entry)
+          const kunYomi = getKunYomi(entry)
+          const meaning = getFirstMeaning(entry)
+          const furigana = onYomi[0] || kunYomi[0] || undefined
 
           return {
-            level: kanji.level,
-            word: kanji.kanji,
+            level,
+            word: character,
             furigana,
             meaning,
           }

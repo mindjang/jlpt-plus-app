@@ -8,7 +8,7 @@ import { LoginForm } from '@/components/auth/LoginForm'
 import { AppBar } from '@/components/ui/AppBar'
 import { getWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
-import { convertSearchResultToWord, convertWordDataToKanji } from '@/lib/utils/dataConverter'
+import { convertSearchResultToWord, convertKanjiAliveEntryToKanji } from '@/lib/utils/dataConverter'
 import type { Word, Kanji } from '@/lib/types/content'
 import { Level } from '@/data'
 
@@ -47,10 +47,10 @@ function LearnContent() {
 
   const kanjis: Kanji[] = useMemo(() => {
     if (typeParam !== 'kanji') return []
-    const wordDataList = getKanjiByLevel(level)
-    console.log('[LearnPage] 한자 데이터 로드:', { level, count: wordDataList.length })
-    const converted = wordDataList.map((data, index) => 
-      convertWordDataToKanji(data, `${level}_K_${String(index + 1).padStart(4, '0')}`)
+    const kanjiEntries = getKanjiByLevel(level)
+    console.log('[LearnPage] 한자 데이터 로드:', { level, count: kanjiEntries.length })
+    const converted = kanjiEntries.map((entry, index) => 
+      convertKanjiAliveEntryToKanji(entry, `${level}_K_${String(index + 1).padStart(4, '0')}`, level as JlptLevel)
     )
     console.log('[LearnPage] 변환된 한자 수:', converted.length)
     return converted

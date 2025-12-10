@@ -12,7 +12,7 @@ import { getLevelProgress } from '@/lib/srs/studyQueue'
 import { getTodayQueues } from '@/lib/srs/studyQueue'
 import { getWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
-import { convertSearchResultToWord, convertWordDataToKanji } from '@/lib/utils/dataConverter'
+import { convertSearchResultToWord, convertKanjiAliveEntryToKanji } from '@/lib/utils/dataConverter'
 import {
   calculateProgressStats,
   calculateRoundProgress,
@@ -20,101 +20,10 @@ import {
 } from '@/lib/srs/progressCalculation'
 import { nowAsMinutes, dayNumberToMinutes, minutesToDays } from '@/lib/srs/reviewCard'
 import type { Word, Kanji } from '@/lib/types/content'
-import type { Chart as ChartType, ChartData, ChartOptions } from 'chart.js'
+import { hexToRgba } from '@/lib/utils/colorUtils'
+import { SemicircleProgress } from '@/components/ui/SemicircleProgress'
 
 type StudyMode = 'auto' | 'chapter'
-
-const hexToRgba = (hex: string, alpha: number) => {
-  const trimmed = hex.replace('#', '')
-  const normalized = trimmed.length === 3
-    ? trimmed.split('').map((c) => c + c).join('')
-    : trimmed
-  const num = parseInt(normalized, 16)
-  const r = (num >> 16) & 255
-  const g = (num >> 8) & 255
-  const b = num & 255
-  return `rgba(${r}, ${g}, ${b}, ${alpha})`
-}
-
-// Chart.js 반원형 진행률 차트 컴포넌트
-function SemicircleProgress({ value, progress, total, color }: { value: number; progress: number; total: number; color: string }) {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null)
-  const chartRef = useRef<ChartType<'doughnut'> | null>(null)
-
-  const safePercent = Math.min(Math.max(value, 0), 100)
-  const completedCount = Math.max(Math.min(progress, total), 0)
-  const remainingCount = Math.max(total - completedCount, 0)
-
-  useEffect(() => {
-    let isMounted = true
-
-    const renderChart = async () => {
-      const { Chart } = await import('chart.js/auto')
-      if (!canvasRef.current || !isMounted) return
-
-      // 난이도 컬러 사용 (채우기) + 20% 투명도의 테두리
-      const primaryColor = hexToRgba(color, 0.3)
-      const primaryBorder = "#FF8A00"
-      const restBorder = hexToRgba('#E5E7EB', 0)
-
-      const data: ChartData<'doughnut'> = {
-        labels: ['완료', '남음'],
-        datasets: [
-          {
-            data: [completedCount, remainingCount],
-            backgroundColor: [primaryColor, '#E5E7EB'],
-            borderColor: [primaryBorder, restBorder],
-            borderWidth: 1,
-            hoverOffset: 0,
-          },
-        ],
-      }
-
-      const options: ChartOptions<'doughnut'> = {
-        cutout: '60%',
-        rotation: -90,
-        circumference: 180,
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { display: false },
-          tooltip: { enabled: false },
-        },
-        animation: {
-          duration: 400,
-        },
-      }
-
-      chartRef.current?.destroy()
-      chartRef.current = new Chart(canvasRef.current, {
-        type: 'doughnut',
-        data,
-        options,
-      })
-    }
-
-    renderChart()
-
-    return () => {
-      isMounted = false
-      chartRef.current?.destroy()
-    }
-  }, [completedCount, remainingCount, total, color])
-
-  return (
-    <div className="relative w-full h-36">
-      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
-      <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end pointer-events-none z-10 pb-7">
-        <span className="text-subtitle font-semibold text-text-main leading-tight">
-          {Math.round(safePercent)}%
-        </span>
-        <span className="text-label text-text-sub leading-tight">
-          {completedCount}/{total}
-        </span>
-      </div>
-    </div>
-  )
-}
 
 function AutoStudyContent() {
   const router = useRouter()
@@ -183,9 +92,9 @@ function AutoStudyContent() {
 
   const kanjis: Kanji[] = useMemo(() => {
     if (activeTab !== 'kanji') return []
-    const wordDataList = getKanjiByLevel(level)
-    return wordDataList.map((data, index) => 
-      convertWordDataToKanji(data, `${level}_K_${String(index + 1).padStart(4, '0')}`)
+    const kanjiEntries = getKanjiByLevel(level)
+    return kanjiEntries.map((entry, index) => 
+      convertKanjiAliveEntryToKanji(entry, `${level}_K_${String(index + 1).padStart(4, '0')}`, level as JlptLevel)
     )
   }, [level, activeTab])
 
@@ -425,11 +334,12 @@ function AutoStudyContent() {
                 </div>
 
                 {/* 진행률 반원형 차트 */}
-                <SemicircleProgress 
+                <SemicircleProgress
                   value={loading ? 0 : sessionTotal === 0 ? 0 : Math.min((sessionProgress / sessionTotal) * 100, 100)}
                   progress={loading ? 0 : Math.min(sessionProgress, sessionTotal || targetAmount)}
                   total={sessionTotal || targetAmount}
                   color={gradient.to}
+                  useChart={true}
                 />
               </div>
 

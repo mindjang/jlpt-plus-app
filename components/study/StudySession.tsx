@@ -18,6 +18,9 @@ import {
 import { calculateStudyStats, formatStudyTime } from '@/lib/srs/studyStats'
 import type { Word, Kanji } from '@/lib/types/content'
 import type { Grade } from '@/lib/types/srs'
+import { hexToRgba } from '@/lib/utils/colorUtils'
+import { useMembership } from '../membership/MembershipProvider'
+import { PaywallOverlay } from '../membership/PaywallOverlay'
 
 interface StudySessionProps {
   level: string
@@ -42,6 +45,13 @@ export function StudySession({
 }: StudySessionProps) {
   const router = useRouter()
   const { user } = useAuth()
+  const {
+    status: membershipStatus,
+    loading: membershipLoading,
+    canStartSession,
+    remainingSessions,
+    recordSession,
+  } = useMembership()
   const gradient = getLevelGradient(level.toLowerCase())
   const [queue, setQueue] = useState<StudyCard[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -59,6 +69,8 @@ export function StudySession({
     reviewCards: number
     studyTime: number
   } | null>(null)
+  const [sessionReserved, setSessionReserved] = useState(false)
+  const [paywallMessage, setPaywallMessage] = useState<string | null>(null)
 
   // 세션 종료 처리 (배치 저장 + 통계 계산)
   const finishSession = async (finalQueue: StudyCard[]) => {
@@ -75,7 +87,11 @@ export function StudySession({
 
   // 학습 큐 로드
   useEffect(() => {
-    if (!user) return
+    if (!user || membershipLoading) return
+    if (!canStartSession && !sessionReserved) {
+      setLoading(false)
+      return
+    }
 
     const loadQueue = async () => {
       setLoading(true)
@@ -101,7 +117,7 @@ export function StudySession({
     }
 
     loadQueue()
-  }, [user, level, words, kanjis, dailyNewLimit])
+  }, [user, level, words, kanjis, dailyNewLimit, membershipLoading, canStartSession])
 
   // 타이머 시작
   useEffect(() => {
@@ -143,6 +159,23 @@ export function StudySession({
 
     return () => clearInterval(interval)
   }, [pendingUpdates, user])
+
+  // 비회원/만료 회원의 하루 1회차 기록
+  useEffect(() => {
+    if (!user || membershipLoading) return
+    if (!canStartSession) {
+      setPaywallMessage('오늘의 무료 학습 회차를 모두 사용했어요. 회원권이 필요합니다.')
+      return
+    }
+    if (!sessionReserved && membershipStatus !== 'member') {
+      recordSession()
+        .then(() => setSessionReserved(true))
+        .catch((error) => {
+          console.error('[StudySession] recordSession failed:', error)
+          setPaywallMessage(error?.message || '학습을 시작할 수 없습니다.')
+        })
+    }
+  }, [user, membershipLoading, canStartSession, sessionReserved, membershipStatus, recordSession])
 
   const handleGrade = (grade: Grade) => {
     if (!user) return
@@ -215,7 +248,24 @@ export function StudySession({
     }
   }
 
-  if (loading) {
+  if (!user || (!canStartSession && !sessionReserved && !membershipLoading)) {
+    return (
+      <div className="w-full min-h-screen flex items-center justify-center p-4 relative">
+        <div className="text-body text-text-sub">학습을 시작하려면 로그인 및 회원권이 필요합니다.</div>
+        <PaywallOverlay
+          title={!user ? '로그인이 필요합니다' : '오늘의 무료 학습 회차가 모두 소진되었어요'}
+          description={
+            !user
+              ? '로그인 후 학습을 시작해주세요.'
+              : '비회원은 하루 1회차만 학습할 수 있어요. 회원권을 등록하면 무제한 학습이 가능합니다.'
+          }
+          showRedeem={!!user}
+        />
+      </div>
+    )
+  }
+
+  if (membershipLoading || loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-body text-text-sub">학습 큐를 불러오는 중...</div>
@@ -299,16 +349,6 @@ export function StudySession({
   // 분자: 완료 개수(현재 보고 있는 카드는 포함하지 않음)
   const displayIndex = totalCount === 0 ? 0 : Math.min(completedCount, totalCount)
   const progress = totalCount === 0 ? 0 : (displayIndex / totalCount) * 100
-
-  const hexToRgba = (hex: string, alpha: number) => {
-    const trimmed = hex.replace('#', '')
-    const normalized = trimmed.length === 3 ? trimmed.split('').map((c) => c + c).join('') : trimmed
-    const num = parseInt(normalized, 16)
-    const r = (num >> 16) & 255
-    const g = (num >> 8) & 255
-    const b = num & 255
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`
-  }
 
   return (
     <div className="w-full pb-24">

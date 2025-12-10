@@ -8,10 +8,19 @@ import {
   findWord as findWordInIndex
 } from './words/index'
 import { 
-  getWordData as getKanjiData,
+  getKanjiEntry,
   searchKanji,
   getTotalKanjiCount as getKanjiTotalCount
 } from './kanji/index'
+import {
+  getKanjiCharacter,
+  getOnYomi,
+  getKunYomi,
+  getRadical,
+  getStrokeCount,
+  getRelatedWords,
+  getFirstMeaning,
+} from '../lib/utils/kanjiHelpers'
 
 // 단어 검색 (레거시 호환)
 export const getSearchResults = (query: string): SearchResult[] => {
@@ -24,8 +33,24 @@ export const findWord = (word: string): SearchResult | null => {
 }
 
 // 한자 데이터 가져오기 (레거시 호환)
+// KanjiAliveEntry를 WordData로 변환하여 반환
 export const getWordData = (word: string): WordData | null => {
-  return getKanjiData(word)
+  const entry = getKanjiEntry(word)
+  if (!entry) return null
+
+  // 레벨 추정 (N5부터 확인)
+  const level = 'N5' // TODO: entry에서 레벨 정보 추출 필요
+
+  return {
+    level: level as any,
+    kanji: getKanjiCharacter(entry),
+    onYomi: getOnYomi(entry),
+    kunYomi: getKunYomi(entry),
+    radical: getRadical(entry),
+    strokeCount: getStrokeCount(entry),
+    relatedWords: getRelatedWords(entry, level),
+    meaning: [getFirstMeaning(entry)].filter(Boolean),
+  }
 }
 
 // 전체 단어 수 가져오기 (레거시 호환)
@@ -34,18 +59,16 @@ export const getTotalWordCount = (): number => {
 }
 
 // 한자 검색 결과를 SearchResult 형식으로 변환
-const convertKanjiToSearchResult = (kanji: WordData): SearchResult => {
-  // 한자의 의미는 relatedWords의 첫 번째 의미를 사용하거나, 
-  // onYomi/kunYomi를 조합하여 표시
-  const meaning = kanji.relatedWords && kanji.relatedWords.length > 0
-    ? kanji.relatedWords[0].meaning
-    : kanji.onYomi?.[0] || kanji.kunYomi?.[0] || ''
-  
-  const furigana = kanji.onYomi?.[0] || kanji.kunYomi?.[0] || undefined
+const convertKanjiToSearchResult = (entry: any, level: string): SearchResult => {
+  const character = getKanjiCharacter(entry)
+  const onYomi = getOnYomi(entry)
+  const kunYomi = getKunYomi(entry)
+  const meaning = getFirstMeaning(entry)
+  const furigana = onYomi[0] || kunYomi[0] || undefined
 
   return {
-    level: kanji.level,
-    word: kanji.kanji,
+    level: level as any,
+    word: character,
     furigana,
     meaning,
   }
@@ -54,7 +77,9 @@ const convertKanjiToSearchResult = (kanji: WordData): SearchResult => {
 // 한자 검색 (SearchResult 형식으로 반환)
 export const getKanjiSearchResults = (query: string): SearchResult[] => {
   const kanjiResults = searchKanji(query)
-  return kanjiResults.map(convertKanjiToSearchResult)
+  // 레벨 추정 (N5부터 확인)
+  const level = 'N5' // TODO: entry에서 레벨 정보 추출 필요
+  return kanjiResults.map((entry) => convertKanjiToSearchResult(entry, level))
 }
 
 // 전체 한자 수 가져오기 (레거시 호환)

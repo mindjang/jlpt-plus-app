@@ -6,658 +6,906 @@ export const n5Words: SearchResult[] = [
     level: 'N5',
     word: '毎朝',
     furigana: 'まいあさ',
-    meaning: 'every morning',
-    sentences: [
-      { ja: '毎朝六時に起きます。', furigana: '[毎朝|まい|あさ][六|ろく][時|じ]に[起|お]きます。', ko: '매일 아침 6시에 일어난다.' }, 
-      { ja: '毎朝、公園で犬を散歩させてるんだよ。', furigana: '[毎朝|まい|あさ]、[公園|こう|えん]で[犬|いぬ]を[散歩|さん|ぽ]させてるんだよ。', ko: '매일 아침 공원에 강아지를 산책시켜요.' }, 
-      { ja: 'トムは毎朝６時半に起きる。', furigana: 'トムは[毎朝|まい|あさ][６|][時半|じ|はん]に[起|お]きる。', ko: '톰은 아침마다 여섯 시 삼십 분에 일어나.' }, 
-      { ja: 'トムは毎朝犬の散歩をしている。', furigana: 'トムは[毎朝|まい|あさ][犬|いぬ]の[散歩|さん|ぽ]をしている。', ko: '톰은 매일 아침 개를 산책시킨다.' }, 
-      { ja: '私は毎朝六時に起きます。', furigana: '[私|わたし]は[毎朝|まい|あさ][六|ろく][時|じ]に[起|お]きます。', ko: '매일 아침 6시에 일어나요.' }, 
-      { ja: '彼は毎朝、新聞を読む。', furigana: '[彼|かれ]は[毎朝|まい|あさ]、[新聞|しん|ぶん]を[読|よ]む。', ko: '그는 매일 아침 신문을 본다.' }, 
-      { ja: '彼は毎朝入浴します。', furigana: '[彼|かれ]は[毎朝|まい|あさ][入浴|にゅう|よく]します。', ko: '그는 매일 아침 목욕을 한다.' }
-    ],
+    meaning: 'every morning'
+,
     kanjiDetails: [
-      { kanji: '毎', meanings: ['every'], onReadings: ['マイ'], kunReadings: ['-ごと.に', 'ごと'], strokeCount: 6, jlpt: 5 },
-      { kanji: '朝', meanings: ['(North) Korea', 'dynasty', 'epoch', 'morning', 'period', 'regime'], onReadings: ['チョウ'], kunReadings: ['あさ'], strokeCount: 12, jlpt: 4 }
+      {
+        kanji: '毎',
+        meanings: ['every'],
+        onReadings: ['マイ'],
+        kunReadings: ['-ごと.に', 'ごと'],
+        strokeCount: 6,
+        jlpt: 5
+      },
+      {
+        kanji: '朝',
+        meanings: ['(North) Korea', 'dynasty', 'epoch', 'morning', 'period', 'regime'],
+        onReadings: ['チョウ'],
+        kunReadings: ['あさ'],
+        strokeCount: 12,
+        jlpt: 4
+      }
     ]
   },
   {
     level: 'N5',
     word: '問題',
     furigana: 'もんだい',
-    meaning: 'problem',
-    sentences: [
-      { ja: '子供の目線で問題を考えたほうがいいですね。', furigana: '[子供|こ|ども]の[目線|め|せん]で[問題|もん|だい]を[考|かんが]えたほうがいいですね。', ko: '우린 어린이의 관점으로 문제를 고려해야 해.' }, 
-      { ja: 'これは深刻な問題ね。', furigana: 'これは[深刻|しん|こく]な[問題|もん|だい]ね。', ko: '이건 중대한 문제야.' }, 
-      { ja: 'これで問題ない？', furigana: 'これで[問題|もん|だい]ない？', ko: '이거 괜찮아?' }, 
-      { ja: 'それで問題ない？', furigana: 'それで[問題|もん|だい]ない？', ko: '괜찮은 거예요?' }
-    ],
+    meaning: 'problem'
+,
     kanjiDetails: [
-      {kanji: '問', meanings: ['ask', 'problem', 'question'], onReadings: ['モン'], kunReadings: ['と.い', 'と.う', 'とん'], strokeCount: 11, jlpt: 4},
-      {kanji: '題', meanings: ['subject', 'topic'], onReadings: ['ダイ'], kunReadings: [], strokeCount: 18, jlpt: 4}
+      {
+        kanji: '問',
+        meanings: ['ask', 'problem', 'question'],
+        onReadings: ['モン'],
+        kunReadings: ['と.い', 'と.う', 'とん'],
+        strokeCount: 11,
+        jlpt: 4
+      },
+      {
+        kanji: '題',
+        meanings: ['subject', 'topic'],
+        onReadings: ['ダイ'],
+        strokeCount: 18,
+        jlpt: 4
+      }
     ]
   },
   {
     level: 'N5',
     word: 'お茶',
     furigana: 'おちゃ',
-    meaning: 'green tea',
-    sentences: [
-      { ja: '母はお茶が本当に大好きです。', furigana: '[母|はは]はお[茶|ちゃ]が[本当|ほん|とう]に[大好|だい|す]きです。', ko: '우리 어머니는 차를 매우 즐겨 마십니다.' }, 
-      { ja: 'お茶をお願いします。', furigana: 'お[茶|ちゃ]をお[願|ねが]いします。', ko: '차 주세요.' }
-    ],
+    meaning: 'green tea'
+,
     kanjiDetails: [
-      {kanji: '茶', meanings: ['tea'], onReadings: ['サ', 'チャ'], kunReadings: [], strokeCount: 9, jlpt: 4}
+      {
+        kanji: '茶',
+        meanings: ['tea'],
+        onReadings: ['サ', 'チャ'],
+        strokeCount: 9,
+        jlpt: 4
+      }
     ]
   },
   {
     level: 'N5',
     word: '黒',
     furigana: 'くろ',
-    meaning: 'black',
-    sentences: [
-      { ja: 'うちの猫は、黒猫よ。', furigana: 'うちの[猫|ねこ]は、[黒|くろ][猫|ねこ]よ。', ko: '내 고양이는 검은색 고양이야.' }, 
-      { ja: 'その写真は白黒です。', furigana: 'その[写真|しゃ|しん]は[白黒|しろ|くろ]です。', ko: '이 사진은 흑백이다.' }, 
-      { ja: 'トムは黒い眼鏡をかけている。', furigana: 'トムは[黒|くろ]い[眼鏡|め|がね]をかけている。', ko: '톰은 검은 안경을 쓰고 있어.' }, 
-      { ja: '黒板を見なさい。', furigana: '[黒板|こく|ばん]を[見|み]なさい。', ko: '칠판을 보세요.' }, 
-      { ja: '彼女は色が黒い。', furigana: '[彼女|かの|じょ]は[色|いろ]が[黒|くろ]い。', ko: '그녀는 피부색이 검다.' }
-    ],
+    meaning: 'black'
+,
     kanjiDetails: [
-      { kanji: '黒', meanings: ['black'], onReadings: ['コク'], kunReadings: ['くろ', 'くろ.い', 'くろ.ずむ'], strokeCount: 11, jlpt: 4}
+      {
+        kanji: '黒',
+        meanings: ['black'],
+        onReadings: ['コク'],
+        kunReadings: ['くろ', 'くろ.い', 'くろ.ずむ'],
+        strokeCount: 11,
+        jlpt: 4
+      }
     ]
   },
   {
     level: 'N5',
     word: '台所',
     furigana: 'だいどころ',
-    meaning: 'kitchen',
-    sentences: [
-      { ja: '台所は階段の近くにあります。', furigana: '台所は[階段|かい|だん]の[近|ちか]くにあります。', ko: '주방은 계단 옆에 있어요.' }, 
-      { ja: '台所には冷蔵庫があります。', furigana: '台所には[冷蔵庫|れいぞう|こ]があります。', ko: '주방에 냉장고가 있어요.' }, 
-      { ja: '台所で食事をします。', furigana: '台所で[食|し|く]事をします。', ko: '주방에서 식사를 해요.' }, 
-      { ja: '台所で料理を作ります。', furigana: '台所で[料理|りょう|り]を[作|つく]ります。', ko: '주방에서 요리를 만들어요.' }, 
-      { ja: '台所で洗い物をします。', furigana: '台所で[洗|あら|い]物をします。', ko: '주방에서 설거지를 해요.' }, 
-      { ja: '台所で食器を洗います。', furigana: '台所で[食器|しょっ|き]を[洗|あら|い]ます。', ko: '주방에서 식기를 설거지해요.' }
-    ],
+    meaning: 'kitchen'
+,
     kanjiDetails: [
-      { kanji: '台', meanings: ['a stand', 'counter for machines and vehicles', 'pedestal'], onReadings: ['タイ', 'ダイ'], kunReadings: ['うてな', 'つかさ', 'われ'], strokeCount: 5, jlpt: 4},
-      { kanji: '所', meanings: ['extent', 'place'], onReadings: ['ショ'], kunReadings: ['-ところ', 'とこ', 'ところ', 'どころ'], strokeCount: 8, jlpt: 3}
+      {
+        kanji: '台',
+        meanings: ['a stand', 'counter for machines and vehicles', 'pedestal'],
+        onReadings: ['タイ', 'ダイ'],
+        kunReadings: ['うてな', 'つかさ', 'われ'],
+        strokeCount: 5,
+        jlpt: 4
+      },
+      {
+        kanji: '所',
+        meanings: ['extent', 'place'],
+        onReadings: ['ショ'],
+        kunReadings: ['-ところ', 'とこ', 'ところ', 'どころ'],
+        strokeCount: 8,
+        jlpt: 3
+      }
     ]
   },
   {
     level: 'N5',
     word: '葉書',
     furigana: 'はがき',
-    meaning: 'postcard',
-    sentences: [
-      { ja: '葉書を送ります。', furigana: '葉書を[送|おく]ります。', ko: '잎서를 보내요.' }, 
-      { ja: '葉書を書きます。', furigana: '葉書を[書|か|き]ます。', ko: '잎서를 쓰요.' }, 
-      { ja: '葉書を読みます。', furigana: '葉書を[読|よ|み]ます。', ko: '잎서를 읽어요.' }, 
-      { ja: '葉書を折ります。', furigana: '葉書を[折|お|り]ます。', ko: '잎서를 접어요.' }, 
-      { ja: '葉書を切ります。', furigana: '葉書を[切|き|り]ます。', ko: '잎서를 자르요.' }, 
-      { ja: '葉書を折ります。', furigana: '葉書を[折|お|り]ます。', ko: '잎서를 접어요.' }
-    ],
+    meaning: 'postcard'
+,
     kanjiDetails: [
-      { kanji: '葉', meanings: ['blade', 'fragment', 'leaf', 'lobe'], onReadings: ['ヨウ'], kunReadings: ['は'], strokeCount: 12, jlpt: 3},
-      { kanji: '書', meanings: ['write'], onReadings: ['ショ'], kunReadings: ['-が.き', '-がき', 'か.く'], strokeCount: 10, jlpt: 5}
+      {
+        kanji: '葉',
+        meanings: ['blade', 'counter for flat things', 'fragment', 'leaf', 'lobe', 'needle', 'piece', 'plane', 'spear'],
+        onReadings: ['ヨウ'],
+        kunReadings: ['は'],
+        strokeCount: 12,
+        jlpt: 3
+      },
+      {
+        kanji: '書',
+        meanings: ['write'],
+        onReadings: ['ショ'],
+        kunReadings: ['-が.き', '-がき', 'か.く'],
+        strokeCount: 10,
+        jlpt: 5
+      }
     ]
   },
   {
     level: 'N5',
     word: 'ペン',
-    meaning: 'pen',
-    sentences: [
-      { ja: 'ペン借りてもいい？', furigana: 'ペン[借|か]りてもいい？', ko: '네 펜 좀 빌려 줄래?' }, 
-      { ja: '君の誕生日プレゼントにペンを買ったよ。', furigana: '[君|きみ]の[誕生|たん|じょう][日|び]プレゼントにペンを[買|か]ったよ。', ko: '네 생일 선물로 펜 하나를 샀어.' }, 
-      { ja: '例えば、これはペンです。', furigana: '[例|たと]えば、これはペンです。', ko: '예를 들어서, 이게 펜이다.' }, 
-      { ja: 'このペンはいくらですか。', furigana: 'このペンはいくらですか。', ko: '이 펜은 얼마입니까?' }, 
-      { ja: 'シャンペンを下さい。', furigana: 'シャンペンを[下|くだ]さい。', ko: '샴폐인 좀.' }, 
-      { ja: 'ペンを貸していただけますか。', furigana: 'ペンを[貸|か]していただけますか。', ko: '네 펜 좀 빌려 줄래?' }, 
-      { ja: 'ペンを拝借できますか。', furigana: 'ペンを[拝借|はい|しゃく]できますか。', ko: '네 펜 좀 빌려 줄래?' }
-    ],
-    kanjiDetails: []
+    meaning: 'pen'
   },
   {
     level: 'N5',
     word: 'ニュース',
-    meaning: 'news',
-    sentences: [
-      { ja: 'けさテレビでニュースを見ました。', furigana: 'けさテレビでニュースを[見|み]ました。', ko: '오늘 아침 TV에서 뉴스를 봤어요.' }, 
-      { ja: '今朝テレビでニュースを見ました。', furigana: '[今朝|けさ]テレビでニュースを[見|み]ました。', ko: '오늘 아침 TV에서 뉴스를 봤어요.' }, 
-      { ja: 'そのニュースは日本中に広まった。', furigana: 'そのニュースは[日本|にっ|ぽん][中|ちゅう]に[広|ひろ]まった。', ko: '그 뉴스는 일본 전역으로 퍼져나갔다.' }
-    ],
-    kanjiDetails: []
+    meaning: 'news'
   },
   {
     level: 'N5',
     word: '花瓶',
     furigana: 'かびん',
-    meaning: 'a vase',
-    sentences: [
-      { ja: '花瓶を見せてください。', furigana: '花瓶を[見|み]せてください。', ko: '꽃병을 보여주세요.' }, 
-      { ja: '花瓶に花を入れます。', furigana: '花瓶に[花|はな]を[入|い|れ]ます。', ko: '꽃병에 꽃을 넣어요.' }, 
-      { ja: '花瓶に水を入れます。', furigana: '花瓶に[水|みず]を[入|い|れ]ます。', ko: '꽃병에 물을 넣어요.' }, 
-      { ja: '花瓶に花を入れます。', furigana: '花瓶に[花|はな]を[入|い|れ]ます。', ko: '꽃병에 꽃을 넣어요.' }, 
-    ],
+    meaning: 'a vase'
+,
     kanjiDetails: [
-      { kanji: '花', meanings: ['flower'], onReadings: ['カ', 'ケ'], kunReadings: ['はな'], strokeCount: 7, jlpt: 4},
-      { kanji: '瓶', meanings: ['bottle', 'jar', 'jug', 'urn', 'vat', 'vial'], onReadings: ['ビン'], kunReadings: ['かめ', 'へい'], strokeCount: 11, jlpt: 2}
+      {
+        kanji: '花',
+        meanings: ['flower'],
+        onReadings: ['カ', 'ケ'],
+        kunReadings: ['はな'],
+        strokeCount: 7,
+        jlpt: 4
+      },
+      {
+        kanji: '瓶',
+        meanings: ['bottle', 'jar', 'jug', 'urn', 'vat', 'vial'],
+        onReadings: ['ビン'],
+        kunReadings: ['かめ', 'へい'],
+        strokeCount: 11,
+        jlpt: 2
+      }
     ]
   },
   {
     level: 'N5',
     word: 'フォーク',
-    meaning: 'fork',
-    sentences: [
-      { ja: '私はFirefoxを使ってます。', furigana: '[私|わたし]は[Firefox|ファイアーフォックス]を[使|つか]ってます。', ko: '나는 파이어폭스를 사용해.' },
-      { ja: 'フォークを使って食事をします。', furigana: 'フォークを[使|つか]って[食|し|く]事をします。', ko: '포크를 사용해서 식사를 해요.' },
-    ],
-    kanjiDetails: []
+    meaning: 'fork'
   },
   {
     level: 'N5',
     word: '引く',
     furigana: 'ひく',
-    meaning: 'to pull',
-    sentences: [
-      { ja: '引く', furigana: '[引|ひ|く]', ko: '끌어당기다.' },
-    ],
+    meaning: 'to pull'
+,
     kanjiDetails: [
-      { kanji: '引', meanings: ['admit', 'install', 'jerk', 'pull', 'quote', 'refer to', 'tug'], onReadings: ['イン'], kunReadings: ['ひ.く', 'ひ.ける'], strokeCount: 4, jlpt: 3}
+      {
+        kanji: '引',
+        meanings: ['admit', 'install', 'jerk', 'pull', 'quote', 'refer to', 'tug'],
+        onReadings: ['イン'],
+        kunReadings: ['ひ.く', 'ひ.ける'],
+        strokeCount: 4,
+        jlpt: 3
+      }
     ]
   },
   {
     level: 'N5',
     word: 'フィルム',
-    meaning: 'roll of film',
-    sentences: [
-      { ja: 'フィルムを使って食事をします。', furigana: 'フィルムを[使|つか]って[食|し|く]事をします。', ko: '필름을 사용해서 식사를 해요.' },
-    ],
-    kanjiDetails: []
+    meaning: 'roll of film'
   },
   {
     level: 'N5',
     word: '磨く',
     furigana: 'みがく',
-    meaning: 'to brush teeth, to polish',
-    sentences: [
-      { ja: '磨く', furigana: '[磨|みが|く]', ko: '빠질 거예요.' },
-    ],
+    meaning: 'to brush teeth, to polish'
+,
     kanjiDetails: [
-      { kanji: '磨', meanings: ['brush (teeth)', 'grind', 'improve', 'polish', 'scour'], onReadings: ['マ'], kunReadings: ['す.る', 'みが.く'], strokeCount: 16, jlpt: 2}
+      {
+        kanji: '磨',
+        meanings: ['brush (teeth)', 'grind', 'improve', 'polish', 'scour'],
+        onReadings: ['マ'],
+        kunReadings: ['す.る', 'みが.く'],
+        strokeCount: 16,
+        jlpt: 2
+      }
     ]
   },
   {
     level: 'N5',
     word: '押す',
     furigana: 'おす',
-    meaning: 'to push, to stamp something',
-    sentences: [
-      { ja: '押す', furigana: '[押|お|す]', ko: '누르다.' },
-    ],
+    meaning: 'to push, to stamp something'
+,
     kanjiDetails: [
-      { kanji: '押', meanings: ['attach', 'check', 'do in spite of', 'press', 'push', 'seal', 'seize', 'shove', 'stop', 'subdue', 'weight'], onReadings: ['オウ'], kunReadings: ['お.さえる', 'お.し-', 'お.す', 'お.っ-', 'おさ.える'], strokeCount: 8, jlpt: 3}
+      {
+        kanji: '押',
+        meanings: ['attach', 'check', 'do in spite of', 'press', 'push', 'seal', 'seize', 'shove', 'stop', 'subdue', 'weight'],
+        onReadings: ['オウ'],
+        kunReadings: ['お.さえる', 'お.し-', 'お.す', 'お.っ-', 'おさ.える'],
+        strokeCount: 8,
+        jlpt: 3
+      }
     ]
   },
   {
     level: 'N5',
     word: '売る',
     furigana: 'うる',
-    meaning: 'to sell',
-    sentences: [
-      { ja: '売る', furigana: '[売|う|る]', ko: '팔다.' },
-    ],
+    meaning: 'to sell'
+,
     kanjiDetails: [
-      { kanji: '売', meanings: ['sell'], onReadings: ['バイ'], kunReadings: ['う.る', 'う.れる'], strokeCount: 7, jlpt: 4}
+      {
+        kanji: '売',
+        meanings: ['sell'],
+        onReadings: ['バイ'],
+        kunReadings: ['う.る', 'う.れる'],
+        strokeCount: 7,
+        jlpt: 4
+      }
     ]
   },
   {
     level: 'N5',
     word: '電気',
     furigana: 'でんき',
-    meaning: 'electricity, electric light',
-    sentences: [
-      { ja: '電気を使って食事をします。', furigana: '電気を[使|つか]って[食|し|く]事をします。', ko: '전기를 사용해서 식사를 해요.' },
-    ],
+    meaning: 'electricity, electric light'
+,
     kanjiDetails: [
-      { kanji: '電', meanings: ['electricity'], onReadings: ['デン'], kunReadings: [], strokeCount: 13, jlpt: 5}, 
-      { kanji: '気', meanings: ['air', 'atmosphere', 'mind', 'mood', 'spirit'], onReadings: ['キ', 'ケ'], kunReadings: ['き'], strokeCount: 6, jlpt: 5}
+      {
+        kanji: '電',
+        meanings: ['electricity'],
+        onReadings: ['デン'],
+        strokeCount: 13,
+        jlpt: 5
+      },
+      {
+        kanji: '気',
+        meanings: ['air', 'atmosphere', 'mind', 'mood', 'spirit'],
+        onReadings: ['キ', 'ケ'],
+        kunReadings: ['き'],
+        strokeCount: 6,
+        jlpt: 5
+      }
     ]
   },
   {
     level: 'N5',
     word: '並ぶ',
     furigana: 'ならぶ',
-    meaning: 'to line up, to stand in a line',
-    sentences: [
-      { ja: '並ぶ', furigana: '[並|なら|ぶ]', ko: '세우다.' },
-    ],
+    meaning: 'to line up, to stand in a line'
+,
     kanjiDetails: [
-      { kanji: '並', meanings: ['and', 'as well as', 'besides', 'equal', 'line up', 'rank with', 'rival', 'row'], onReadings: ['ヘイ', 'ホウ'], kunReadings: ['な.み', 'なみ', 'なら.びに', 'なら.ぶ', 'なら.べる'], strokeCount: 8, jlpt: 2}
+      {
+        kanji: '並',
+        meanings: ['and', 'as well as', 'besides', 'equal', 'line up', 'rank with', 'rival', 'row'],
+        onReadings: ['ヘイ', 'ホウ'],
+        kunReadings: ['な.み', 'なみ', 'なら.びに', 'なら.ぶ', 'なら.べる'],
+        strokeCount: 8,
+        jlpt: 2
+      }
     ]
   },
   {
     level: 'N5',
     word: '病気',
     furigana: 'びょうき',
-    meaning: 'illness',
-    sentences: [
-      { ja: '病気を治します。', furigana: '病気を[治|おく]します。', ko: '병을 치료해요.' },
-    ],
+    meaning: 'illness'
+,
     kanjiDetails: [
-      { kanji: '病', meanings: ['ill', 'sick'], onReadings: ['ビョウ', 'ヘイ'], kunReadings: ['-や.み', 'や.む', 'やまい'], strokeCount: 10, jlpt: 4},  
-      { kanji: '気', meanings: ['air', 'atmosphere', 'mind', 'mood', 'spirit'], onReadings: ['キ', 'ケ'], kunReadings: ['き'], strokeCount: 6, jlpt: 5}
+      {
+        kanji: '病',
+        meanings: ['ill', 'sick'],
+        onReadings: ['ビョウ', 'ヘイ'],
+        kunReadings: ['-や.み', 'や.む', 'やまい'],
+        strokeCount: 10,
+        jlpt: 4
+      },
+      {
+        kanji: '気',
+        meanings: ['air', 'atmosphere', 'mind', 'mood', 'spirit'],
+        onReadings: ['キ', 'ケ'],
+        kunReadings: ['き'],
+        strokeCount: 6,
+        jlpt: 5
+      }
     ]
   },
   {
     level: 'N5',
     word: 'ポケット',
-    meaning: 'pocket',
-    sentences: [
-      { ja: 'ポケットにお金を入れます。', furigana: 'ポケットに[お金|おき|な]を[入|い|れ]ます。', ko: '포켓에 돈을 넣어요.' },
-    ],
-    kanjiDetails: []
+    meaning: 'pocket'
   },
   {
     level: 'N5',
     word: '頭',
     furigana: 'あたま',
-    meaning: 'head',
-    sentences: [
-      { ja: '頭を洗います。', furigana: '[頭|あたま]を[洗|あら|い]ます。', ko: '머리를 씻어요.' },
-    ],
+    meaning: 'head'
+,
     kanjiDetails: [
-      { kanji: '頭', meanings: ['counter for large animals', 'head'], onReadings: ['ズ', 'ト', 'トウ'], kunReadings: ['-がしら', 'あたま', 'かしら', 'かぶり'], strokeCount: 16, jlpt: 3}
+      {
+        kanji: '頭',
+        meanings: ['counter for large animals', 'head'],
+        onReadings: ['ズ', 'ト', 'トウ'],
+        kunReadings: ['-がしら', 'あたま', 'かしら', 'かぶり'],
+        strokeCount: 16,
+        jlpt: 3
+      }
     ]
   },
   {
     level: 'N5',
     word: 'はし',
-    meaning: 'chopsticks',
-    sentences: [
-      { ja: 'はしを使って食事をします。', furigana: 'はしを[使|つか]って[食|し|く]事をします。', ko: '포크를 사용해서 식사를 해요.' },
-    ],
-    kanjiDetails: []
+    meaning: 'chopsticks'
   },
   {
     level: 'N5',
     word: '英語',
     furigana: 'えいご',
-    meaning: 'English language',
-    sentences: [
-      { ja: '英語を勉強します。', furigana: '英語を[勉強|べん|きょう]します。', ko: '영어를 공부해요.' },
-    ],
+    meaning: 'English language'
+,
     kanjiDetails: [
-      { kanji: '英', meanings: ['England', 'English', 'calyx', 'hero', 'outstanding'], onReadings: ['エイ'], kunReadings: ['はなぶさ'], strokeCount: 8, jlpt: 4},
-      { kanji: '語', meanings: ['language', 'speech', 'word'], onReadings: ['ゴ'], kunReadings: ['かた.らう', 'かた.る'], strokeCount: 14, jlpt: 5}
+      {
+        kanji: '英',
+        meanings: ['England', 'English', 'calyx', 'hero', 'outstanding'],
+        onReadings: ['エイ'],
+        kunReadings: ['はなぶさ'],
+        strokeCount: 8,
+        jlpt: 4
+      },
+      {
+        kanji: '語',
+        meanings: ['language', 'speech', 'word'],
+        onReadings: ['ゴ'],
+        kunReadings: ['かた.らう', 'かた.る'],
+        strokeCount: 14,
+        jlpt: 5
+      }
     ]
   },
   {
     level: 'N5',
     word: '家',
     furigana: 'いえ',
-    meaning: 'house',
-    sentences: [
-      { ja: '家に帰ります。', furigana: '[家|いえ]に[帰|かえ|り]ます。', ko: '집에 돌아가요.' },
-    ],
+    meaning: 'house'
+,
     kanjiDetails: [
-      { kanji: '家', meanings: ['expert', 'family', 'home', 'house', 'performer', 'professional'], onReadings: ['カ', 'ケ'], kunReadings: ['いえ', 'うち', 'や'], strokeCount: 10, jlpt: 4} 
+      {
+        kanji: '家',
+        meanings: ['expert', 'family', 'home', 'house', 'performer', 'professional'],
+        onReadings: ['カ', 'ケ'],
+        kunReadings: ['いえ', 'うち', 'や'],
+        strokeCount: 10,
+        jlpt: 4
+      }
     ]
   },
   {
     level: 'N5',
     word: '一月',
     furigana: 'ひとつき',
-    meaning: 'one month',
-    sentences: [
-      { ja: '一月を過ぎます。', furigana: '[一|いち]月を[過|す]ぎます。', ko: '한 달을 지나갑니다.' },
-    ],
+    meaning: 'one month'
+,
     kanjiDetails: [
-      { kanji: '一', meanings: ['one', 'one radical (no.1)'], onReadings: ['イチ', 'イツ'], kunReadings: ['ひと-', 'ひと.つ'], strokeCount: 1, jlpt: 5},
-      { kanji: '月', meanings: ['month', 'moon'], onReadings: ['ガツ', 'ゲツ'], kunReadings: ['つき'], strokeCount: 4, jlpt: 5}
+      {
+        kanji: '一',
+        meanings: ['one', 'one radical (no.1)'],
+        onReadings: ['イチ', 'イツ'],
+        kunReadings: ['ひと-', 'ひと.つ'],
+        strokeCount: 1,
+        jlpt: 5
+      },
+      {
+        kanji: '月',
+        meanings: ['month', 'moon'],
+        onReadings: ['ガツ', 'ゲツ'],
+        kunReadings: ['つき'],
+        strokeCount: 4,
+        jlpt: 5
+      }
     ]
   },
   {
     level: 'N5',
     word: '暑い',
     furigana: 'あつい',
-    meaning: 'hot',
-    sentences: [
-      { ja: '暑いです。', furigana: '[暑|あつ|い]です。', ko: '더워요.' },
-    ],
+    meaning: 'hot'
+,
     kanjiDetails: [
-      { kanji: '暑', meanings: ['hot', 'sultry', 'summer heat'], onReadings: ['ショ'], kunReadings: ['あつ.い'], strokeCount: 12, jlpt: 1}  
+      {
+        kanji: '暑',
+        meanings: ['hot', 'sultry', 'summer heat'],
+        onReadings: ['ショ'],
+        kunReadings: ['あつ.い'],
+        strokeCount: 12,
+        jlpt: 1
+      }
     ]
   },
   {
     level: 'N5',
     word: '遊ぶ',
     furigana: 'あそぶ',
-    meaning: 'to play, to make a visit',
-    sentences: [
-      { ja: '遊ぶ', furigana: '[遊|あそ|ぶ]', ko: '놀다.' },
-    ],
+    meaning: 'to play, to make a visit'
+,
     kanjiDetails: [
-      { kanji: '遊', meanings: ['play'], onReadings: ['ユ', 'ユウ'], kunReadings: ['あそ.ばす', 'あそ.ぶ'], strokeCount: 12, jlpt: 3}
+      {
+        kanji: '遊',
+        meanings: ['play'],
+        onReadings: ['ユ', 'ユウ'],
+        kunReadings: ['あそ.ばす', 'あそ.ぶ'],
+        strokeCount: 12,
+        jlpt: 3
+      }
     ]
   },
   {
     level: 'N5',
     word: '取る',
     furigana: 'とる',
-    meaning: 'to take something',
-    sentences: [
-      { ja: '取る', furigana: '[取|と|る]', ko: '가져오다.' },
-    ],
+    meaning: 'to take something'
+,
     kanjiDetails: [
-      { kanji: '取', meanings: ['fetch', 'take', 'take up'], onReadings: ['シュ'], kunReadings: ['-ど.り', 'と.り', 'と.り-', 'と.る', 'とり'], strokeCount: 8, jlpt: 3}
+      {
+        kanji: '取',
+        meanings: ['fetch', 'take', 'take up'],
+        onReadings: ['シュ'],
+        kunReadings: ['-ど.り', 'と.り', 'と.り-', 'と.る', 'とり'],
+        strokeCount: 8,
+        jlpt: 3
+      }
     ]
   },
   {
     level: 'N5',
     word: '九',
     furigana: 'きゅう / く',
-    meaning: 'nine',
-    sentences: [
-      { ja: '九', furigana: '[九|きゅう|く]', ko: '아홉.' },
-    ],
+    meaning: 'nine'
+,
     kanjiDetails: [
-      { kanji: '九', meanings: ['nine'], onReadings: ['キュウ', 'ク'], kunReadings: ['ここの', 'ここの.つ'], strokeCount: 2, jlpt: 5}
+      {
+        kanji: '九',
+        meanings: ['nine'],
+        onReadings: ['キュウ', 'ク'],
+        kunReadings: ['ここの', 'ここの.つ'],
+        strokeCount: 2,
+        jlpt: 5
+      }
     ]
   },
   {
     level: 'N5',
     word: '閉める',
     furigana: 'しめる',
-    meaning: 'to close something',
-    sentences: [
-      { ja: '閉める', furigana: '[閉|し|める]', ko: '닫다.' },
-    ],
+    meaning: 'to close something'
+,
     kanjiDetails: [
-      { kanji: '閉', meanings: ['closed', 'shut'], onReadings: ['ヘイ'], kunReadings: ['し.まる', 'し.める', 'た.てる', 'と.ざす', 'と.じる'], strokeCount: 11, jlpt: 3}
+      {
+        kanji: '閉',
+        meanings: ['closed', 'shut'],
+        onReadings: ['ヘイ'],
+        kunReadings: ['し.まる', 'し.める', 'た.てる', 'と.ざす', 'と.じる'],
+        strokeCount: 11,
+        jlpt: 3
+      }
     ]
   },
   {
     level: 'N5',
     word: 'たいへん',
-    meaning: 'very',
-    sentences: [
-      { ja: 'たいへん', furigana: '[たい|だい|へん]', ko: '매우.' },
-    ],
-    kanjiDetails: []
+    meaning: 'very'
   },
   {
     level: 'N5',
     word: '奥さん',
     furigana: 'おくさん',
-    meaning: '(honorable) wife',
-    sentences: [
-      { ja: '奥さん', furigana: '[奥|おく|さん]', ko: '아내.' },
-    ],
+    meaning: '(honorable) wife'
+,
     kanjiDetails: [
-      { kanji: '奥', meanings: ['heart', 'interior'], onReadings: ['オウ'], kunReadings: ['おく', 'おく.まる', 'くま'], strokeCount: 12, jlpt: 2}
+      {
+        kanji: '奥',
+        meanings: ['heart', 'interior'],
+        onReadings: ['オウ'],
+        kunReadings: ['おく', 'おく.まる', 'くま'],
+        strokeCount: 12,
+        jlpt: 2
+      }
     ]
   },
   {
     level: 'N5',
     word: '作文',
     furigana: 'さくぶん',
-    meaning: 'composition, writing',
-    sentences: [
-      { ja: '作文を書きます。', furigana: '[作文|さくぶん]を[書|か|き]ます。', ko: '쓰기를 해요.' },
-    ],
+    meaning: 'composition, writing'
+,
     kanjiDetails: [
-      { kanji: '作', meanings: ['build', 'make', 'prepare', 'production'], onReadings: ['サ', 'サク'], kunReadings: ['-づく.り', 'つく.り', 'つく.る'], strokeCount: 7, jlpt: 4},
-      { kanji: '文', meanings: ['art', 'decoration', 'figures', 'literary radical (no. 67)', 'literature', 'plan', 'sentence', 'style'], onReadings: ['ブン', 'モン'], kunReadings: ['あや', 'ふみ'], strokeCount: 4, jlpt: 4}
+      {
+        kanji: '作',
+        meanings: ['build', 'make', 'prepare', 'production'],
+        onReadings: ['サ', 'サク'],
+        kunReadings: ['-づく.り', 'つく.り', 'つく.る'],
+        strokeCount: 7,
+        jlpt: 4
+      },
+      {
+        kanji: '文',
+        meanings: ['art', 'decoration', 'figures', 'literary radical (no. 67)', 'literature', 'plan', 'sentence', 'style'],
+        onReadings: ['ブン', 'モン'],
+        kunReadings: ['あや', 'ふみ'],
+        strokeCount: 4,
+        jlpt: 4
+      }
     ]
   },
   {
     level: 'N5',
     word: '便利',
     furigana: 'べんり',
-    meaning: 'useful, convenient',
-    sentences: [
-      { ja: '便利な道具です。', furigana: '[便利|べんり]な[道具|どうぐ]です。', ko: '편리한 도구입니다.' },
-    ],
+    meaning: 'useful, convenient'
+,
     kanjiDetails: [
-      { kanji: '便', meanings: ['chance', 'convenience', 'excrement', 'facility', 'feces', 'letter'], onReadings: ['ビン', 'ベン'], kunReadings: ['たよ.り'], strokeCount: 9, jlpt: 3},
-      { kanji: '利', meanings: ['advantage', 'benefit', 'profit'], onReadings: ['リ'], kunReadings: ['き.く'], strokeCount: 7, jlpt: 3}
+      {
+        kanji: '便',
+        meanings: ['chance', 'convenience', 'excrement', 'facility', 'feces', 'letter'],
+        onReadings: ['ビン', 'ベン'],
+        kunReadings: ['たよ.り'],
+        strokeCount: 9,
+        jlpt: 3
+      },
+      {
+        kanji: '利',
+        meanings: ['advantage', 'benefit', 'profit'],
+        onReadings: ['リ'],
+        kunReadings: ['き.く'],
+        strokeCount: 7,
+        jlpt: 3
+      }
     ]
   },
   {
     level: 'N5',
     word: '右',
     furigana: 'みぎ',
-    meaning: 'right side',
-    sentences: [
-      { ja: '右を見ます。', furigana: '[右|みぎ]を[見|み|ます]', ko: '오른쪽을 보아요.' },
-    ],
+    meaning: 'right side'
+,
     kanjiDetails: [
-      { kanji: '右', meanings: ['right'], onReadings: ['ウ', 'ユウ'], kunReadings: ['みぎ'], strokeCount: 5, jlpt: 5}
+      {
+        kanji: '右',
+        meanings: ['right'],
+        onReadings: ['ウ', 'ユウ'],
+        kunReadings: ['みぎ'],
+        strokeCount: 5,
+        jlpt: 5
+      }
     ]
   },
   {
     level: 'N5',
     word: '寒い',
     furigana: 'さむい',
-    meaning: 'cold',
-    sentences: [
-      { ja: '寒いです。', furigana: '[寒|さむ|い]です。', ko: '추워요.' },
-    ],
+    meaning: 'cold'
+,
     kanjiDetails: [
-      { kanji: '寒', meanings: ['cold'], onReadings: ['カン'], kunReadings: ['さむ.い'], strokeCount: 12, jlpt: 3}
+      {
+        kanji: '寒',
+        meanings: ['cold'],
+        onReadings: ['カン'],
+        kunReadings: ['さむ.い'],
+        strokeCount: 12,
+        jlpt: 3
+      }
     ]
   },
   {
     level: 'N5',
     word: 'あびる',
-    meaning: 'to bathe, to shower',
-    sentences: [
-      { ja: 'あびる', furigana: '[あ|び|る]', ko: '목욕을 하다.' },
-    ],
-    kanjiDetails: []
+    meaning: 'to bathe, to shower'
   },
   {
     level: 'N5',
     word: '十',
     furigana: 'じゅう  とお',
-    meaning: 'ten',
-    sentences: [
-      { ja: '十', furigana: '[十|じゅう|とお]', ko: '십.' },
-    ],
+    meaning: 'ten'
+,
     kanjiDetails: [
-      { kanji: '十', meanings: ['ten'], onReadings: ['ジッ', 'ジュウ', 'ジュッ'], kunReadings: ['そ', 'と', 'とお'], strokeCount: 2, jlpt: 5}
+      {
+        kanji: '十',
+        meanings: ['ten'],
+        onReadings: ['ジッ', 'ジュウ', 'ジュッ'],
+        kunReadings: ['そ', 'と', 'とお'],
+        strokeCount: 2,
+        jlpt: 5
+      }
     ]
   },
   {
     level: 'N5',
     word: '中',
     furigana: 'なか',
-    meaning: 'middle',
-    sentences: [
-      { ja: '中を見ます。', furigana: '[中|なか]を[見|み|ます]', ko: '중간을 보아요.' },
-    ],
+    meaning: 'middle'
+,
     kanjiDetails: [
-      { kanji: '中', meanings: ['center', 'in', 'inside', 'mean', 'middle'], onReadings: ['チュウ'], kunReadings: ['あた.る', 'うち', 'なか'], strokeCount: 4, jlpt: 5}
+      {
+        kanji: '中',
+        meanings: ['center', 'in', 'inside', 'mean', 'middle'],
+        onReadings: ['チュウ'],
+        kunReadings: ['あた.る', 'うち', 'なか'],
+        strokeCount: 4,
+        jlpt: 5
+      }
     ]
   },
   {
     level: 'N5',
     word: '消す',
     furigana: 'けす',
-    meaning: 'to erase, to turn off power',
-    sentences: [
-      { ja: '消す', furigana: '[消|け|す]', ko: '지우다.' },
-    ],
+    meaning: 'to erase, to turn off power'
+,
     kanjiDetails: [
-      { kanji: '消', meanings: ['blow out', 'cancel', 'extinguish', 'neutralize', 'turn off'], onReadings: ['ショウ'], kunReadings: ['き.える', 'け.す'], strokeCount: 10, jlpt: 3}
+      {
+        kanji: '消',
+        meanings: ['blow out', 'cancel', 'extinguish', 'neutralize', 'turn off'],
+        onReadings: ['ショウ'],
+        kunReadings: ['き.える', 'け.す'],
+        strokeCount: 10,
+        jlpt: 3
+      }
     ]
   },
   {
     level: 'N5',
     word: '近く',
     furigana: 'ちかく',
-    meaning: 'near',
-    sentences: [
-      { ja: '近くを見ます。', furigana: '[近|ちかく]を[見|み|ます]', ko: '가까운 곳을 보아요.' },
-    ],
+    meaning: 'near'
+,
     kanjiDetails: [
-      { kanji: '近', meanings: ['akin', 'early', 'near', 'tantamount'], onReadings: ['キン', 'コン'], kunReadings: ['ちか.い'], strokeCount: 7, jlpt: 4}
+      {
+        kanji: '近',
+        meanings: ['akin', 'early', 'near', 'tantamount'],
+        onReadings: ['キン', 'コン'],
+        kunReadings: ['ちか.い'],
+        strokeCount: 7,
+        jlpt: 4
+      }
     ]
   },
   {
     level: 'N5',
     word: '七つ',
     furigana: 'ななつ',
-    meaning: 'seven',
-    sentences: [
-      { ja: '七つ', furigana: '[七|ななつ]', ko: '일곱.' },
-    ],
+    meaning: 'seven'
+,
     kanjiDetails: [
-      { kanji: '七', meanings: ['seven'], onReadings: ['シチ'], kunReadings: ['なな', 'なな.つ', 'なの'], strokeCount: 2, jlpt: 5}
+      {
+        kanji: '七',
+        meanings: ['seven'],
+        onReadings: ['シチ'],
+        kunReadings: ['なな', 'なな.つ', 'なの'],
+        strokeCount: 2,
+        jlpt: 5
+      }
     ]
   },
   {
     level: 'N5',
     word: 'テープレコーダー',
-    meaning: 'tape recorder',
-    sentences: [
-      { ja: 'テープレコーダー', furigana: '[テープ|テープレコーダー]', ko: '테이프 레코더.' },
-    ],
-    kanjiDetails: []
+    meaning: 'tape recorder'
   },
   {
     level: 'N5',
     word: '目',
     furigana: 'め',
-    meaning: 'eye',
-    sentences: [
-      { ja: '目を見ます。', furigana: '[目|め]を[見|み|ます]', ko: '눈을 보아요.' },
-    ],
+    meaning: 'eye'
+,
     kanjiDetails: [
-      { kanji: '目', meanings: ['care', 'class', 'experience', 'eye', 'favor', 'insight', 'look'], onReadings: ['ボク', 'モク'], kunReadings: ['-め', 'ま-', 'め'], strokeCount: 5, jlpt: 4}
+      {
+        kanji: '目',
+        meanings: ['care', 'class', 'experience', 'eye', 'favor', 'insight', 'look'],
+        onReadings: ['ボク', 'モク'],
+        kunReadings: ['-め', 'ま-', 'め'],
+        strokeCount: 5,
+        jlpt: 4
+      }
     ]
   },
   {
     level: 'N5',
     word: '空',
     furigana: 'そら',
-    meaning: 'sky',
-    sentences: [
-      { ja: '空を見ます。', furigana: '[空|そら]を[見|み|ます]', ko: '하늘을 보아요.' },
-    ],
+    meaning: 'sky'
+,
     kanjiDetails: [
-      { kanji: '空', meanings: ['empty', 'sky', 'vacant', 'vacuum', 'void'], onReadings: ['クウ'], kunReadings: ['あ.き', 'あ.く', 'あ.ける', 'から', 'す.かす', 'す.く', 'そら', 'むな.しい'], strokeCount: 8, jlpt: 4}
+      {
+        kanji: '空',
+        meanings: ['empty', 'sky', 'vacant', 'vacuum', 'void'],
+        onReadings: ['クウ'],
+        kunReadings: ['あ.き', 'あ.く', 'あ.ける', 'から', 'す.かす', 'す.く', 'そら', 'むな.しい'],
+        strokeCount: 8,
+        jlpt: 4
+      }
     ]
   },
   {
     level: 'N5',
     word: '六日',
     furigana: 'むいか',
-    meaning: 'six days, sixth day of the month',
-    sentences: [
-      { ja: '六日', furigana: '[六|むいか]', ko: '여섯 일.' },
-    ],
+    meaning: 'six days, sixth day of the month'
+,
     kanjiDetails: [
-      { kanji: '六', meanings: ['six'], onReadings: ['リク', 'ロク'], kunReadings: ['む', 'む.つ', 'むい', 'むっ.つ'], strokeCount: 4, jlpt: 5},
-      { kanji: '日', meanings: ['Japan', 'counter for days', 'day', 'sun'], onReadings: ['ジツ', 'ニチ'], kunReadings: ['-か', '-び', 'ひ'], strokeCount: 4, jlpt: 5}
+      {
+        kanji: '六',
+        meanings: ['six'],
+        onReadings: ['リク', 'ロク'],
+        kunReadings: ['む', 'む.つ', 'むい', 'むっ.つ'],
+        strokeCount: 4,
+        jlpt: 5
+      },
+      {
+        kanji: '日',
+        meanings: ['Japan', 'counter for days', 'day', 'sun'],
+        onReadings: ['ジツ', 'ニチ'],
+        kunReadings: ['-か', '-び', 'ひ'],
+        strokeCount: 4,
+        jlpt: 5
+      }
     ]
   },
   {
     level: 'N5',
     word: '座る',
     furigana: 'すわる',
-    meaning: 'to sit',
-    sentences: [
-      { ja: '座る', furigana: '[座|ざ|る]', ko: '앉다.' },
-    ],
+    meaning: 'to sit'
+,
     kanjiDetails: [
-      { kanji: '座', meanings: ['cushion', 'gathering', 'seat', 'sit', 'squat'], onReadings: ['ザ'], kunReadings: ['すわ.る'], strokeCount: 10, jlpt: 3}
+      {
+        kanji: '座',
+        meanings: ['cushion', 'gathering', 'seat', 'sit', 'squat'],
+        onReadings: ['ザ'],
+        kunReadings: ['すわ.る'],
+        strokeCount: 10,
+        jlpt: 3
+      }
     ]
   },
   {
     level: 'N5',
     word: '年',
     furigana: 'とし',
-    meaning: 'year',
-    sentences: [
-      { ja: '年', furigana: '[年|とし]', ko: '년.' },
-    ],
+    meaning: 'year'
+,
     kanjiDetails: [
-      { kanji: '年', meanings: ['counter for years', 'year'], onReadings: ['ネン'], kunReadings: ['とし'], strokeCount: 6, jlpt: 5}
+      {
+        kanji: '年',
+        meanings: ['counter for years', 'year'],
+        onReadings: ['ネン'],
+        kunReadings: ['とし'],
+        strokeCount: 6,
+        jlpt: 5
+      }
     ]
   },
   {
     level: 'N5',
     word: '男の子',
     furigana: 'おとこのこ',
-    meaning: 'boy',
-    sentences: [
-      { ja: '男の子', furigana: '[男|おとこ]の[子|こ]', ko: '남자 아이.' },
-    ],
+    meaning: 'boy'
+,
     kanjiDetails: [
-      { kanji: '男', meanings: ['male'], onReadings: ['ダン', 'ナン'], kunReadings: ['お', 'おとこ'], strokeCount: 7, jlpt: 5},
-      { kanji: '子', meanings: ['11PM-1AM', 'child', 'first sign of Chinese zodiac', 'sign of the rat'], onReadings: ['シ', 'ス', 'ツ'], kunReadings: ['-こ', 'こ', 'ね'], strokeCount: 3, jlpt: 5}
+      {
+        kanji: '男',
+        meanings: ['male'],
+        onReadings: ['ダン', 'ナン'],
+        kunReadings: ['お', 'おとこ'],
+        strokeCount: 7,
+        jlpt: 5
+      },
+      {
+        kanji: '子',
+        meanings: ['11PM-1AM', 'child', 'first sign of Chinese zodiac', 'sign of the rat'],
+        onReadings: ['シ', 'ス', 'ツ'],
+        kunReadings: ['-こ', 'こ', 'ね'],
+        strokeCount: 3,
+        jlpt: 5
+      }
     ]
   },
   {
     level: 'N5',
     word: '狭い',
     furigana: 'せまい',
-    meaning: 'narrow',
-    sentences: [
-      { ja: '狭い', furigana: '[狭|せまい]', ko: '좁아요.' },
-    ],
+    meaning: 'narrow'
+,
     kanjiDetails: [
-      { kanji: '狭', meanings: ['contract', 'cramped', 'narrow', 'tight'], onReadings: ['キョウ', 'コウ'], kunReadings: ['さ', 'せば.まる', 'せば.める', 'せま.い'], strokeCount: 9, jlpt: 1}
+      {
+        kanji: '狭',
+        meanings: ['contract', 'cramped', 'narrow', 'tight'],
+        onReadings: ['キョウ', 'コウ'],
+        kunReadings: ['さ', 'せば.まる', 'せば.める', 'せま.い'],
+        strokeCount: 9,
+        jlpt: 1
+      }
     ]
   },
   {
     level: 'N5',
     word: '冷蔵庫',
     furigana: 'れいぞうこ',
-    meaning: 'refrigerator',
-    sentences: [
-      { ja: '冷蔵庫', furigana: '[冷|れい]ぞう[庫|こ]', ko: '냉장고.' },
-    ],
+    meaning: 'refrigerator'
+,
     kanjiDetails: [
-      { kanji: '冷', meanings: ['chill', 'cold (beer, person)', 'cool'], onReadings: ['レイ'], kunReadings: ['さ.ます', 'さ.める', 'つめ.たい', 'ひ.える', 'ひ.や', 'ひ.やかす', 'ひ.やす', 'ひ.ややか'], strokeCount: 7, jlpt: 3},
-      { kanji: '蔵', meanings: ['have', 'hide', 'own', 'possess', 'storehouse'], onReadings: ['ソウ', 'ゾウ'], kunReadings: ['おさ.める', 'かく.れる', 'くら'], strokeCount: 15, jlpt: 2},
-      { kanji: '庫', meanings: ['storehouse', 'warehouse'], onReadings: ['ク', 'コ'], kunReadings: ['くら'], strokeCount: 10, jlpt: 2},
+      {
+        kanji: '冷',
+        meanings: ['chill', 'cold (beer, person)', 'cool'],
+        onReadings: ['レイ'],
+        kunReadings: ['さ.ます', 'さ.める', 'つめ.たい', 'ひ.える', 'ひ.や', 'ひ.やかす', 'ひ.やす', 'ひ.ややか'],
+        strokeCount: 7,
+        jlpt: 3
+      },
+      {
+        kanji: '蔵',
+        meanings: ['have', 'hide', 'own', 'possess', 'storehouse'],
+        onReadings: ['ソウ', 'ゾウ'],
+        kunReadings: ['おさ.める', 'かく.れる', 'くら'],
+        strokeCount: 15,
+        jlpt: 2
+      },
+      {
+        kanji: '庫',
+        meanings: ['storehouse', 'warehouse'],
+        onReadings: ['ク', 'コ'],
+        kunReadings: ['くら'],
+        strokeCount: 10,
+        jlpt: 2
+      }
     ]
   },
   {
     level: 'N5',
     word: 'カメラ',
-    meaning: 'camera',
-    sentences: [
-      { ja: 'カメラ', furigana: '[カメラ]', ko: '카메라.' },
-    ],
-    kanjiDetails: []
+    meaning: 'camera'
   },
   {
     level: 'N5',
     word: '玄関',
     furigana: 'げんかん',
-    meaning: 'entry hall',
-    sentences: [
-      { ja: '玄関', furigana: '[玄|げん]かん', ko: '입구.' },
-    ],
+    meaning: 'entry hall'
+,
     kanjiDetails: [
-      { kanji: '玄', meanings: ['black', 'deep', 'mysterious', 'occultness', 'profound'], onReadings: ['ゲン'], kunReadings: ['くろ', 'くろ.い'], strokeCount: 5, jlpt: 1},
-      { kanji: '関', meanings: ['barrier', 'concerning', 'connection', 'gateway', 'involve'], onReadings: ['カン'], kunReadings: ['-ぜき', 'かか.わる', 'からくり', 'かんぬき', 'せき'], strokeCount: 14, jlpt: 3}
+      {
+        kanji: '玄',
+        meanings: ['black', 'deep', 'mysterious', 'occultness', 'profound'],
+        onReadings: ['ゲン'],
+        kunReadings: ['くろ', 'くろ.い'],
+        strokeCount: 5,
+        jlpt: 1
+      },
+      {
+        kanji: '関',
+        meanings: ['barrier', 'concerning', 'connection', 'gateway', 'involve'],
+        onReadings: ['カン'],
+        kunReadings: ['-ぜき', 'かか.わる', 'からくり', 'かんぬき', 'せき'],
+        strokeCount: 14,
+        jlpt: 3
+      }
     ]
   },
   {
     level: 'N5',
     word: '違う',
     furigana: 'ちがう',
-    meaning: 'to differ',
-    sentences: [
-      { ja: '違う', furigana: '[違|ちがう]', ko: '다르다.' },
-    ],
+    meaning: 'to differ'
+,
     kanjiDetails: [
-      { kanji: '違', meanings: ['differ', 'difference'], onReadings: ['イ'], kunReadings: ['-ちが.える', 'たが.う', 'たが.える', 'ちが.い', 'ちが.う', 'ちが.える'], strokeCount: 13, jlpt: 3}
+      {
+        kanji: '違',
+        meanings: ['differ', 'difference'],
+        onReadings: ['イ'],
+        kunReadings: ['-ちが.える', 'たが.う', 'たが.える', 'ちが.い', 'ちが.う', 'ちが.える'],
+        strokeCount: 13,
+        jlpt: 3
+      }
     ]
   },
   {

@@ -2,7 +2,15 @@
 // 현재 데이터 구조를 Word/Kanji 타입으로 변환하는 헬퍼 함수들
 
 import type { Word, Kanji, JlptLevel } from '../types/content'
-import type { SearchResult } from '@/data/types'
+import type { SearchResult, KanjiAliveEntry } from '@/data/types'
+import {
+  getKanjiCharacter,
+  getOnYomi,
+  getKunYomi,
+  getRadical,
+  getStrokeCount,
+  getFirstMeaning,
+} from './kanjiHelpers'
 
 /**
  * SearchResult를 Word로 변환 (임시 변환 함수)
@@ -26,13 +34,40 @@ export function convertSearchResultToWord(
 }
 
 /**
- * WordData를 Kanji로 변환 (임시 변환 함수)
- * 실제 데이터 구조에 맞게 수정 필요
+ * KanjiAliveEntry를 Kanji로 변환
+ */
+export function convertKanjiAliveEntryToKanji(
+  entry: KanjiAliveEntry,
+  id: string,
+  level: JlptLevel
+): Kanji {
+  return {
+    id,
+    level,
+    character: getKanjiCharacter(entry),
+    strokeCount: getStrokeCount(entry) || 0,
+    onyomi: getOnYomi(entry),
+    kunyomi: getKunYomi(entry),
+    meaningKo: getFirstMeaning(entry),
+    radical: getRadical(entry) || undefined,
+    exampleWordIds: [],
+  }
+}
+
+/**
+ * WordData를 Kanji로 변환 (레거시 호환)
+ * @deprecated convertKanjiAliveEntryToKanji 사용 권장
  */
 export function convertWordDataToKanji(
   data: any,
   id: string
 ): Kanji {
+  // 의미는 relatedWords의 첫 번째 의미를 사용하거나, meaning 배열의 첫 번째를 사용
+  const meaningKo = data.relatedWords?.[0]?.meaning 
+    || data.meaning?.[0] 
+    || data.kanji 
+    || ''
+
   return {
     id,
     level: data.level as JlptLevel,
@@ -40,8 +75,8 @@ export function convertWordDataToKanji(
     strokeCount: data.strokeCount || 0,
     onyomi: data.onYomi || [],
     kunyomi: data.kunYomi || [],
-    meaningKo: data.relatedWords?.[0]?.meaning || '',
-    radical: data.radical,
+    meaningKo,
+    radical: data.radical || undefined,
     exampleWordIds: [],
   }
 }

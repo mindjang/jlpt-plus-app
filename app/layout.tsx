@@ -5,6 +5,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import './globals.css'
 import { AuthProvider } from '@/components/auth/AuthProvider'
+import { MembershipProvider } from '@/components/membership/MembershipProvider'
 
 // FontAwesome CSS 자동 주입 비활성화 (SVG만 사용)
 config.autoAddCss = false
@@ -60,7 +61,9 @@ export default function RootLayout({
   return (
     <html lang="ko" className={`${notoSansJP.variable} ${inter.variable}`}>
       <body>
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          <MembershipProvider>{children}</MembershipProvider>
+        </AuthProvider>
       </body>
     </html>
   )

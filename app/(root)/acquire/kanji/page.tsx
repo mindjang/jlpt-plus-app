@@ -6,6 +6,12 @@ import { AppBar } from '@/components/ui/AppBar'
 import { ListItem } from '@/components/ui/ListItem'
 import { getKanjiByLevel } from '@/data/kanji/index'
 import { levels, Level } from '@/data'
+import {
+  getKanjiCharacter,
+  getOnYomi,
+  getKunYomi,
+  getFirstMeaning,
+} from '@/lib/utils/kanjiHelpers'
 
 function KanjiListContent() {
   const router = useRouter()
@@ -31,23 +37,23 @@ function KanjiListContent() {
     router.push(`/acquire/kanji/${encodeURIComponent(kanji)}`)
   }
 
-  // WordData를 SearchResult 형식으로 변환
+  // KanjiAliveEntry를 SearchResult 형식으로 변환
   const kanjiResults = useMemo(() => {
-    return kanjiList.map((kanji) => {
-      const meaning = kanji.relatedWords && kanji.relatedWords.length > 0
-        ? kanji.relatedWords[0].meaning
-        : kanji.onYomi?.[0] || kanji.kunYomi?.[0] || ''
-      
-      const furigana = kanji.onYomi?.[0] || kanji.kunYomi?.[0] || undefined
+    return kanjiList.map((entry) => {
+      const character = getKanjiCharacter(entry)
+      const onYomi = getOnYomi(entry)
+      const kunYomi = getKunYomi(entry)
+      const meaning = getFirstMeaning(entry)
+      const furigana = onYomi[0] || kunYomi[0] || undefined
 
       return {
-        level: kanji.level,
-        word: kanji.kanji,
+        level,
+        word: character,
         furigana,
         meaning,
       }
     })
-  }, [kanjiList])
+  }, [kanjiList, level])
 
   return (
     <div className="w-full">

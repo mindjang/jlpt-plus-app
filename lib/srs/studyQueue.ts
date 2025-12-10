@@ -122,17 +122,23 @@ export async function getTodayQueues(
 
   console.log('[getTodayQueues] 최종 새 카드 수 (단어+한자):', newCards.length)
 
-  console.log('[getTodayQueues] 최종 새 카드 수:', newCards.length)
-
-  // 3. 오늘 목표량(dailyNewLimit)만큼 선택: 복습 우선, 남은 슬롯은 새 카드로 채움
+  // 3. 오늘 목표량(dailyNewLimit)만큼 선택: 복습:새 카드 비율 고정 (70:30)
   const TARGET = dailyNewLimit
+  const REVIEW_RATIO = 0.7  // 복습 카드 70%
+  const NEW_RATIO = 0.3     // 새 카드 30%
 
-  // 복습 선택 (due 오름차순으로 TARGET까지)
-  const selectedReview = reviewCards.slice(0, TARGET)
-  const remainingSlots = Math.max(TARGET - selectedReview.length, 0)
+  const reviewLimit = Math.floor(TARGET * REVIEW_RATIO)
+  const newLimit = Math.floor(TARGET * NEW_RATIO)
 
-  // 새 카드 선택: 남은 슬롯만큼, 부족하면 있는 만큼만
-  const selectedNew = newCards.slice(0, remainingSlots)
+  // 복습 선택 (due 오름차순으로 reviewLimit까지)
+  const selectedReview = reviewCards.slice(0, reviewLimit)
+
+  // 새 카드 선택: newLimit만큼, 부족하면 있는 만큼만
+  // - 기본은 newLimit만큼
+  // - 복습 카드가 모자라면 남는 슬롯을 새 카드로 채움
+  const remainingSlots = TARGET - selectedReview.length
+  const desiredNewCount = Math.max(newLimit, remainingSlots)
+  const selectedNew = newCards.slice(0, desiredNewCount)
 
   // 순서 유지: 복습 → 새 카드
   const mixedQueue: StudyCard[] = [...selectedReview, ...selectedNew]

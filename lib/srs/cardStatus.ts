@@ -10,8 +10,8 @@ export function getCardStatus(card: UserCardState | null): CardStatus {
     return 'new'
   }
 
-  // Leech: lapses >= 5
-  if (card.lapses >= 5) {
+  // Leech: lapses >= 8 (일본어 학습에 맞춘 기준)
+  if (card.lapses >= 8) {
     return 'leech'
   }
 
@@ -27,9 +27,9 @@ export function getCardStatus(card: UserCardState | null): CardStatus {
     intervalMinutes = card.interval < 365 ? daysToMin(card.interval) : card.interval
   }
 
-  // Mastered: interval >= 21일 (30240분) 또는 reps >= 8
-  const twentyOneDaysInMinutes = daysToMinutes(21)
-  if (intervalMinutes >= twentyOneDaysInMinutes || card.reps >= 8) {
+  // Mastered: interval >= 30일 (43200분) 또는 reps >= 12 (실제 장기 기억 기준)
+  const thirtyDaysInMinutes = daysToMinutes(30)
+  if (intervalMinutes >= thirtyDaysInMinutes || card.reps >= 12) {
     return 'mastered'
   }
 
@@ -38,9 +38,9 @@ export function getCardStatus(card: UserCardState | null): CardStatus {
     return 'review'
   }
 
-  // Learning: reps가 적고 interval이 작을 때 (7일 = 10080분 미만)
-  const sevenDaysInMinutes = daysToMinutes(7)
-  if (card.reps < 3 && intervalMinutes < sevenDaysInMinutes) {
+  // Learning: reps가 적고 interval이 작을 때 (3일 = 4320분 미만)
+  const threeDaysInMinutes = daysToMinutes(3)
+  if (card.reps < 3 && intervalMinutes < threeDaysInMinutes) {
     return 'learning'
   }
 

@@ -11,16 +11,25 @@ import {
   limit,
   getDocs,
   writeBatch,
+  runTransaction,
 } from 'firebase/firestore'
 import { db } from './config'
 import type { UserCardState } from '../types/srs'
 import type { UserProfile, UserSettings, UserData } from '../types/user'
+import type { Membership, DailyUsage, GiftCode } from '../types/membership'
 
 function getDbInstance() {
   if (!db) {
     throw new Error('Firestore is not initialized')
   }
   return db
+}
+
+function formatDateKey(date = new Date()): string {
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
 }
 
 // ========== 유저 문서 관리 ==========
@@ -212,5 +221,112 @@ export async function getAllCardIds(uid: string): Promise<Set<string>> {
   })
 
   return cardIds
+}
+
+// ========== 멤버십 관리 ==========
+
+const membershipDocRef = (dbInstance: any, uid: string) =>
+  doc(dbInstance, 'users', uid, 'membership', 'info')
+
+const usageDocRef = (dbInstance: any, uid: string, dateKey: string) =>
+  doc(dbInstance, 'users', uid, 'usage', dateKey)
+
+const codeDocRef = (dbInstance: any, code: string) => doc(dbInstance, 'codes', code)
+
+export async function getMembership(uid: string): Promise<Membership | null> {
+  const dbInstance = getDbInstance()
+  const ref = membershipDocRef(dbInstance, uid)
+  const snap = await getDoc(ref)
+  if (!snap.exists()) return null
+  return snap.data() as Membership
+}
+
+export async function saveMembership(uid: string, membership: Membership) {
+  const dbInstance = getDbInstance()
+  const ref = membershipDocRef(dbInstance, uid)
+  await setDoc(ref, membership, { merge: true })
+}
+
+export async function getDailyUsage(
+  uid: string,
+  dateKey: string = formatDateKey()
+): Promise<DailyUsage | null> {
+  const dbInstance = getDbInstance()
+  const ref = usageDocRef(dbInstance, uid, dateKey)
+  const snap = await getDoc(ref)
+  if (!snap.exists()) return null
+  return snap.data() as DailyUsage
+}
+
+export async function incrementDailySession(
+  uid: string,
+  dateKey: string = formatDateKey()
+): Promise<DailyUsage> {
+  const dbInstance = getDbInstance()
+  const ref = usageDocRef(dbInstance, uid, dateKey)
+  const now = Date.now()
+
+  const usage = await runTransaction(dbInstance, async (tx) => {
+    const snap = await tx.get(ref)
+    const current = snap.exists() ? (snap.data() as DailyUsage) : { sessionsUsed: 0, dateKey }
+    const next: DailyUsage = {
+      dateKey,
+      sessionsUsed: current.sessionsUsed + 1,
+      updatedAt: now,
+    }
+    tx.set(ref, next, { merge: true })
+    return next
+  })
+
+  return usage
+}
+
+export async function redeemGiftCode(
+  uid: string,
+  code: string
+): Promise<{ membership: Membership; code: GiftCode }> {
+  const dbInstance = getDbInstance()
+  const mRef = membershipDocRef(dbInstance, uid)
+  const cRef = codeDocRef(dbInstance, code)
+  const now = Date.now()
+
+  const result = await runTransaction(dbInstance, async (tx) => {
+    const codeSnap = await tx.get(cRef)
+    if (!codeSnap.exists()) {
+      throw new Error('코드가 존재하지 않습니다.')
+    }
+    const codeData = codeSnap.data() as GiftCode
+    if (codeData.remainingUses !== undefined && codeData.remainingUses !== null) {
+      if (codeData.remainingUses <= 0) {
+        throw new Error('사용 가능한 횟수가 없습니다.')
+      }
+    }
+
+    const membershipSnap = await tx.get(mRef)
+    const current = membershipSnap.exists() ? (membershipSnap.data() as Membership) : null
+
+    const baseTime = current?.expiresAt && current.expiresAt > now ? current.expiresAt : now
+    const durationMs = codeData.durationDays * 24 * 60 * 60 * 1000
+    const newExpiry = baseTime + durationMs
+
+    const updatedMembership: Membership = {
+      type: codeData.type || current?.type || 'gift',
+      source: 'code',
+      expiresAt: newExpiry,
+      createdAt: current?.createdAt || now,
+      updatedAt: now,
+      lastRedeemedCode: code,
+    }
+
+    tx.set(mRef, updatedMembership, { merge: true })
+
+    if (codeData.remainingUses !== undefined && codeData.remainingUses !== null) {
+      tx.update(cRef, { remainingUses: codeData.remainingUses - 1 })
+    }
+
+    return { membership: updatedMembership, code: codeData }
+  })
+
+  return result
 }
 

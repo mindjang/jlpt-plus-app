@@ -10,6 +10,7 @@ interface PaywallOverlayProps {
   showRedeem?: boolean
   onRedeem?: (code: string) => Promise<void>
   showLogin?: boolean
+  showPlans?: boolean
   onClose?: () => void
 }
 
@@ -19,6 +20,7 @@ export function PaywallOverlay({
   showRedeem = true,
   onRedeem,
   showLogin = true,
+  showPlans = true,
   onClose,
 }: PaywallOverlayProps) {
   const router = useRouter()
@@ -47,7 +49,7 @@ export function PaywallOverlay({
   }
 
   return (
-    <div className="absolute inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
       <div className="bg-surface w-full max-w-md rounded-2xl shadow-xl p-6 space-y-4 relative">
         {onClose && (
           <button
@@ -63,24 +65,26 @@ export function PaywallOverlay({
           <p className="text-body text-text-sub">{description}</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
-          <button
-            className="w-full py-3 rounded-card bg-primary text-surface text-body font-semibold button-press"
-            onClick={() => {
-              setMessage('구독 결제 연동은 준비 중입니다.')
-            }}
-          >
-            월 구독
-          </button>
-          <button
-            className="w-full py-3 rounded-card bg-blue-500 text-surface text-body font-semibold button-press"
-            onClick={() => {
-              setMessage('구독 결제 연동은 준비 중입니다.')
-            }}
-          >
-            연 구독
-          </button>
-        </div>
+        {showPlans && (
+          <div className="grid grid-cols-2 gap-3">
+            <button
+              className="w-full py-3 rounded-card bg-primary text-surface text-body font-semibold button-press"
+              onClick={() => {
+                setMessage('구독 결제 연동은 준비 중입니다.')
+              }}
+            >
+              월 구독
+            </button>
+            <button
+              className="w-full py-3 rounded-card bg-blue-500 text-surface text-body font-semibold button-press"
+              onClick={() => {
+                setMessage('구독 결제 연동은 준비 중입니다.')
+              }}
+            >
+              연 구독
+            </button>
+          </div>
+        )}
 
         {showRedeem && (
           <div className="space-y-2">
@@ -111,7 +115,7 @@ export function PaywallOverlay({
               if (user) {
                 router.push('/home')
               } else {
-                router.push('/home')
+                router.push('/login')
               }
             }}
           >

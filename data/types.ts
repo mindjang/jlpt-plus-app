@@ -124,6 +124,7 @@ export interface KanjiAliveKanjiBlock {
   character: string
   meaning: {
     english: string
+    // korean: string
     [key: string]: string
   }
   strokes: KanjiAliveKanjiStrokes

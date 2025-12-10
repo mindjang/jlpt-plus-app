@@ -25,8 +25,9 @@ const N4_KANJI_LIST = [
   '茶', '魚', '妹', '勉', '洋', '昼', '牛', '冬', '駅', '漢'
 ]
 
-async function fetchKanjiData(kanji: string): Promise<any | null> {
+async function fetchKanjiData(kanji: string, retryCount = 0): Promise<any | null> {
   const url = `https://kanjialive-api.p.rapidapi.com/api/public/kanji/${encodeURIComponent(kanji)}`
+  const MAX_RETRIES = 3
   
   try {
     const response = await fetch(url, {
@@ -42,8 +43,13 @@ async function fetchKanjiData(kanji: string): Promise<any | null> {
         return null
       }
       if (response.status === 429) {
-        console.log(`  ⚠ ${kanji}: API 호출 제한 (429), 잠시 대기...`)
-        await new Promise(resolve => setTimeout(resolve, 2000))
+        if (retryCount < MAX_RETRIES) {
+          const waitTime = (retryCount + 1) * 5000 // 5초, 10초, 15초
+          console.log(`  ⚠ ${kanji}: API 호출 제한 (429), ${waitTime/1000}초 대기 후 재시도... (${retryCount + 1}/${MAX_RETRIES})`)
+          await new Promise(resolve => setTimeout(resolve, waitTime))
+          return fetchKanjiData(kanji, retryCount + 1)
+        }
+        console.log(`  ✗ ${kanji}: API 호출 제한 (429), 재시도 횟수 초과`)
         return null
       }
       console.error(`  ✗ ${kanji}: API 호출 실패 (${response.status})`)
@@ -53,7 +59,13 @@ async function fetchKanjiData(kanji: string): Promise<any | null> {
     const data = await response.json()
     return data
   } catch (error) {
-    console.error(`  ✗ ${kanji}: 오류 발생`, error)
+    if (retryCount < MAX_RETRIES) {
+      const waitTime = (retryCount + 1) * 2000
+      console.log(`  ⚠ ${kanji}: 오류 발생, ${waitTime/1000}초 대기 후 재시도... (${retryCount + 1}/${MAX_RETRIES})`)
+      await new Promise(resolve => setTimeout(resolve, waitTime))
+      return fetchKanjiData(kanji, retryCount + 1)
+    }
+    console.error(`  ✗ ${kanji}: 오류 발생 (재시도 횟수 초과)`, error)
     return null
   }
 }
@@ -97,6 +109,8 @@ function filterKanjiAliveEntry(data: any): KanjiAliveEntry {
   return entry
 }
 
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
+
 async function main() {
   console.log(`총 ${N4_KANJI_LIST.length}개 한자 처리 시작...\n`)
   
@@ -114,7 +128,12 @@ async function main() {
     
     if (!apiData) {
       failCount++
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      // 실패 시에도 랜덤 딜레이
+      const delay = Math.floor(Math.random() * 5000) // 0~5초
+      if (delay > 0) {
+        console.log(`  ⏳ ${(delay / 1000).toFixed(1)}초 대기 후 다음 한자 처리...`)
+        await sleep(delay)
+      }
       continue
     }
     
@@ -125,8 +144,14 @@ async function main() {
     successCount++
     console.log(`  ✓ 완료`)
     
-    // API 호출 제한을 피하기 위해 딜레이
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    // 마지막 한자가 아니면 0~5초 랜덤 딜레이
+    if (i < N4_KANJI_LIST.length - 1) {
+      const delay = Math.floor(Math.random() * 5000) // 0~5초
+      if (delay > 0) {
+        console.log(`  ⏳ ${(delay / 1000).toFixed(1)}초 대기 후 다음 한자 처리...`)
+        await sleep(delay)
+      }
+    }
   }
   
   // 파일 생성

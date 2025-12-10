@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "fetch-kanji": "tsx scripts/fetch-kanji.ts",
+    "fetch-n2-kanji": "tsx scripts/fetch-n2-kanji-data.ts",
+    "fetch-n3-kanji": "tsx scripts/fetch-n3-kanji-data.ts",
+    "fetch-n4-kanji": "tsx scripts/fetch-n4-kanji-data.ts",
     "fetch-words": "tsx scripts/fetch-words.ts",
     "enrich-words": "tsx scripts/enrich-words.ts",
     "json-to-ts": "tsx scripts/json-to-ts.ts"

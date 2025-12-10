@@ -7,6 +7,7 @@ import { AppBar } from '@/components/ui/AppBar'
 import { signOutUser } from '@/lib/firebase/auth'
 import { getUserData, updateUserSettings, updateUserProfile } from '@/lib/firebase/firestore'
 import { useMembership } from '@/components/membership/MembershipProvider'
+import { PaywallOverlay } from '@/components/membership/PaywallOverlay'
 
 export default function MyPage() {
   const router = useRouter()
@@ -300,17 +301,38 @@ export default function MyPage() {
 
   if (!user) {
     return (
-      <div className="w-full">
+      <div className="w-full overflow-hidden relative min-h-[70vh]">
         <AppBar title="마이페이지" />
-        <div className="flex flex-col items-center justify-center min-h-[60vh] p-4">
-          <p className="text-body text-text-sub mb-4">로그인이 필요합니다</p>
-          <button
-            onClick={() => router.push('/home')}
-            className="bg-primary text-surface px-6 py-2 rounded-card font-medium button-press"
-          >
-            로그인하기
-          </button>
+        <div className="p-4">
+          <div className="bg-gradient-to-r from-primary/10 to-blue-500/10 border border-divider rounded-2xl p-6 space-y-3 shadow-soft">
+            <h2 className="text-title font-semibold text-text-main">마이페이지는 로그인 후 이용 가능해요</h2>
+            <p className="text-body text-text-sub">
+              통계처럼 로그인 후 학습 기록, 멤버십 상태를 확인하세요.
+            </p>
+            <div className="flex gap-2">
+              <button
+                onClick={() => router.push('/home')}
+                className="flex-1 py-3 rounded-card bg-primary text-surface text-body font-semibold button-press"
+              >
+                로그인하기
+              </button>
+              <button
+                onClick={() => router.push('/acquire')}
+                className="py-3 px-4 rounded-card bg-page border border-divider text-body text-text-main font-medium button-press"
+              >
+                둘러보기
+              </button>
+            </div>
+          </div>
         </div>
+
+        <PaywallOverlay
+          title="로그인이 필요해요"
+          description="학습 진행 상황과 멤버십을 보려면 로그인해 주세요."
+          showRedeem={false}
+          showPlans={false}
+          showLogin
+        />
       </div>
     )
   }

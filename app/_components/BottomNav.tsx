@@ -58,12 +58,19 @@ export function BottomNav() {
               <Link
                 key={tab.id}
                 href={tab.href}
+                aria-current={isActive ? 'page' : undefined}
                 className={`flex flex-col items-center justify-center flex-1 h-full transition-colors ${
                   isActive ? 'text-primary' : 'text-text-sub'
                 }`}
               >
                 <TabIcon name={tab.icon} active={isActive} />
-                <span className="text-label mt-1 font-medium">{tab.label}</span>
+                <span
+                  className={`text-label mt-1 transition-colors ${
+                    isActive ? 'font-semibold text-primary' : 'font-medium text-text-sub'
+                  }`}
+                >
+                  {tab.label}
+                </span>
               </Link>
             )
           })}

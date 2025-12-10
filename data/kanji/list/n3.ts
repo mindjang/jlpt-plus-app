@@ -1,6 +1,6 @@
-import { KanjiAliveEntry } from '../types'
+import { KanjiAliveEntry } from '../../types'
 
-// N3 한자 데이터 (372개)
+// N3 한자 데이터 (370개)
 export const n3Kanji: KanjiAliveEntry[] = [
   {
     "_id": "54317ae5791eba5146ee498b",

@@ -26,9 +26,9 @@ export default function AcquirePage() {
     <div className="w-full overflow-hidden">
       <AppBar title="습득존" showMenu />
 
-      <div className="flex flex-col gap-6 p-4">
+      <div className="flex flex-col gap-4 relative">
         {/* 레벨 스와이퍼 */}
-        <div className="w-full max-h-[400px] min-h-[300px] flex items-center justify-center overflow-hidden">
+        <div className="w-full min-h-[60vh] flex items-center justify-center overflow-hidden">
           <Swiper
             onSwiper={setSwiper}
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
@@ -52,7 +52,7 @@ export default function AcquirePage() {
           >
             {levels.map((level, index) => (
               <SwiperSlide key={level} className="flex items-center justify-center">
-                <div className="flex items-center justify-center w-full h-full py-4">
+                  <div className="flex items-center justify-center w-full h-full">
                   <LevelCard
                     level={level}
                     onClick={() => router.push(`/acquire/auto-study/${level.toLowerCase()}?type=word`)}
@@ -64,14 +64,14 @@ export default function AcquirePage() {
         </div>
 
         {/* 페이지 인디케이터 */}
-        <div className="flex gap-2 justify-center">
+        <div className="absolute top-4 left-0 right-0 flex gap-2 justify-center z-10">
           {levels.map((_, index) => (
             <button
               key={index}
               className={`rounded-full transition-all ${
                 index === activeIndex
-                  ? 'bg-primary w-6 h-2'
-                  : 'bg-divider w-2 h-2'
+                  ? `bg-primary w-6 h-2`
+                  : 'bg-white w-2 h-2'
               }`}
               onClick={() => {
                 swiper?.slideTo(index)
@@ -79,6 +79,7 @@ export default function AcquirePage() {
             />
           ))}
         </div>
+        
       </div>
     </div>
   )

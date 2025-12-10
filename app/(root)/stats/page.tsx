@@ -592,6 +592,7 @@ export default function StatsPage() {
           title="프리미엄에서 전체 통계를 확인하세요"
           description="일별 요약만 볼 수 있고, 전체/레벨별 상세는 회원권이 필요합니다."
           showRedeem={!!user}
+          showPlans={!!user}
           onRedeem={async (code) => {
             await redeemCode(code)
           }}

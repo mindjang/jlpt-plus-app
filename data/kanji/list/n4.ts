@@ -1,4 +1,4 @@
-import { KanjiAliveEntry } from '../types'
+import { KanjiAliveEntry } from '../../types'
 
 // N4 한자 데이터 (170개)
 export const n4Kanji: KanjiAliveEntry[] = [
@@ -10,7 +10,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "事",
       "meaning": {
         "english": "affair, abstract thing",
-        "korean": "일"
+        "korean": "사건, 추상적인 것"
       },
       "strokes": {
         "count": 8,
@@ -121,7 +121,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "用事（ようじ）",
         "meaning": {
           "english": "business, engagement",
-          "korean": "사업, 업무"
+          "korean": "업무, 참여"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ji-koto_06_c.opus",
@@ -160,7 +160,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "工事中（こうじちゅう）",
         "meaning": {
           "english": "under construction",
-          "korean": "건설 중"
+          "korean": "공사 중"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ji-koto_06_f.opus",
@@ -199,7 +199,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "好事家（こうずか）",
         "meaning": {
           "english": "dilettante",
-          "korean": "문화인"
+          "korean": "문예 취미"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ji-koto_06_i.opus",
@@ -260,7 +260,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "会",
       "meaning": {
         "english": "meet, society",
-        "korean": "만남, 사회"
+        "korean": "만나다, 사회"
       },
       "strokes": {
         "count": 6,
@@ -445,7 +445,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "再会する（さいかいする）",
         "meaning": {
           "english": "meet again",
-          "korean": "다시 만남"
+          "korean": "다시 만나다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kai-a(u)_06_i.opus",
@@ -471,7 +471,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "会う（あう）",
         "meaning": {
           "english": "meet",
-          "korean": "만남"
+          "korean": "만나다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kai-a(u)_06_k.opus",
@@ -554,7 +554,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "mizukara"
       },
       "meaning": {
-        "english": "self"
+        "english": "self",
+        "korean": "자신"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/mizukara0.svg",
@@ -584,7 +585,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "自慢する（じまんする）",
         "meaning": {
           "english": "boast",
-          "korean": "자랑"
+          "korean": "자랑하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mizuka(ra)_06_a.opus",
@@ -662,7 +663,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "独自（どくじ）",
         "meaning": {
           "english": "original, independent",
-          "korean": "독립적"
+          "korean": "독자적"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mizuka(ra)_06_g.opus",
@@ -675,7 +676,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "自然な（しぜんな）",
         "meaning": {
           "english": "natural",
-          "korean": "자연적"
+          "korean": "자연스럽"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mizuka(ra)_06_h.opus",
@@ -701,7 +702,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "自ずから（おのずから）",
         "meaning": {
           "english": "naturally",
-          "korean": "자연적"
+          "korean": "자연스럽"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mizuka(ra)_06_j.opus",
@@ -780,7 +781,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "te"
       },
       "meaning": {
-        "english": "hand"
+        "english": "hand",
+        "korean": "손"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/te0.svg",
@@ -888,7 +890,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "手伝う（てつだう）",
         "meaning": {
           "english": "help",
-          "korean": "도움"
+          "korean": "도와주다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/te_06_g.opus",
@@ -1023,7 +1025,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "gen"
       },
       "meaning": {
-        "english": "words, to speak, say"
+        "english": "words, to speak, say",
+        "korean": "말, 말하다"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/gen-word0.svg",
@@ -1053,7 +1056,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "断言する（だんげんする）",
         "meaning": {
           "english": "assert",
-          "korean": "주장"
+          "korean": "주장하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gen-i(u)_06_a.opus",
@@ -1066,7 +1069,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "証言する（しょうげんする）",
         "meaning": {
           "english": "testify",
-          "korean": "증언"
+          "korean": "증언하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gen-i(u)_06_b.opus",
@@ -1105,7 +1108,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "伝言する（でんごんする）",
         "meaning": {
           "english": "leave a message",
-          "korean": "메시지"
+          "korean": "메시지 남기다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gen-i(u)_06_e.opus",
@@ -1170,7 +1173,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "独り言（ひとりごと）",
         "meaning": {
           "english": "soliloquy",
-          "korean": "자기 소개"
+          "korean": "독백"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gen-i(u)_06_j.opus",
@@ -1183,7 +1186,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "寝言（ねごと）",
         "meaning": {
           "english": "talk in one's sleep",
-          "korean": "잠깨는 말하다"
+          "korean": "잠깨는 말"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gen-i(u)_06_k.opus",
@@ -1271,7 +1274,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "oikanmuri"
       },
       "meaning": {
-        "english": "old, old-age"
+        "english": "old, old-age",
+        "korean": "오래된, 노년"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/oikanmuri0.svg",
@@ -1392,7 +1396,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "前者（ぜんしゃ）",
         "meaning": {
           "english": "the former",
-          "korean": "이전"
+          "korean": "이전자"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sha-mono_06_h.opus",
@@ -1479,7 +1483,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "同",
       "meaning": {
         "english": "same",
-        "korean": "같음"
+        "korean": "같은"
       },
       "strokes": {
         "count": 6,
@@ -1529,7 +1533,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kuchi"
       },
       "meaning": {
-        "english": "mouth"
+        "english": "mouth",
+        "korean": "입"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kuchi0.svg",
@@ -1559,7 +1564,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "同一（どういつ）",
         "meaning": {
           "english": "identical",
-          "korean": "동일"
+          "korean": "동일한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ona(ji)_06_a.opus",
@@ -1572,7 +1577,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "同様（どうよう）",
         "meaning": {
           "english": "same",
-          "korean": "같음"
+          "korean": "같은"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ona(ji)_06_b.opus",
@@ -1598,7 +1603,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "同好会（どうこうかい）",
         "meaning": {
           "english": "club of like-minded people",
-          "korean": "동호회"
+          "korean": "동료 모임"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ona(ji)_06_d.opus",
@@ -1611,7 +1616,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "同窓会（どうそうかい）",
         "meaning": {
           "english": "alumni meeting",
-          "korean": "동문회"
+          "korean": "동료 모임"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ona(ji)_06_e.opus",
@@ -1755,7 +1760,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "hou"
       },
       "meaning": {
-        "english": "direction, flag"
+        "english": "direction, flag",
+        "korean": "방향, 플래그"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/hou0.svg",
@@ -1920,7 +1926,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "目",
       "meaning": {
         "english": "eye, item",
-        "korean": "눈, 물건"
+        "korean": "눈, 아이템"
       },
       "strokes": {
         "count": 5,
@@ -1968,7 +1974,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "me"
       },
       "meaning": {
-        "english": "eye"
+        "english": "eye",
+        "korean": "눈"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/me0.svg",
@@ -2194,7 +2201,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ouhen"
       },
       "meaning": {
-        "english": "jewelry, jeweled king"
+        "english": "jewelry, jeweled king",
+        "korean": "보석, 보석 왕"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ouhen0.svg",
@@ -2434,7 +2442,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "chikara"
       },
       "meaning": {
-        "english": "power"
+        "english": "power",
+        "korean": "힘"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/chikara0.svg",
@@ -2581,7 +2590,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "力む（りきむ）",
         "meaning": {
           "english": "strain",
-          "korean": "힘을 쓰다"
+          "korean": "노력하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chikara_06_j.opus",
@@ -2607,7 +2616,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "底力（そこぢから）",
         "meaning": {
           "english": "latent energy, potentiality",
-          "korean": "잠재 에너지, 가능성"
+          "korean": "잠재 에너지, 잠재력"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chikara_06_l.opus",
@@ -2698,8 +2707,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "tsuchihen"
       },
       "meaning": {
-        "english": "earth",
-        "korean": "땅"
+        "english": "earth"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/tsuchihen0.svg",
@@ -2742,7 +2750,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "出場する（しゅつじょうする）",
         "meaning": {
           "english": "participate (game)",
-          "korean": "참가하다 (게임)"
+          "korean": "참가하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/jou-ba_06_b.opus",
@@ -2755,7 +2763,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "会場（かいじょう）",
         "meaning": {
           "english": "assembly hall, meeting place",
-          "korean": "참석 장소, 모임 장소"
+          "korean": "회의 장소"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/jou-ba_06_c.opus",
@@ -2794,7 +2802,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "市場（しじょう）",
         "meaning": {
           "english": "market (business)",
-          "korean": "시장 (사업)"
+          "korean": "시장"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/jou-ba_06_f.opus",
@@ -2807,7 +2815,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "試験場（しけんじょう）",
         "meaning": {
           "english": "examination room, laboratory",
-          "korean": "시험 장소, 연구소"
+          "korean": "시험장, 연구실"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/jou-ba_06_g.opus",
@@ -2872,7 +2880,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "立場（たちば）",
         "meaning": {
           "english": "standpoint",
-          "korean": "자리"
+          "korean": "입장"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/jou-ba_06_l.opus",
@@ -2911,7 +2919,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "思",
       "meaning": {
         "english": "think",
-        "korean": "생각"
+        "korean": "생각하다"
       },
       "strokes": {
         "count": 9,
@@ -2967,8 +2975,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kokoro"
       },
       "meaning": {
-        "english": "heart, mind, spirit",
-        "korean": "마음, 정신, 기분"
+        "english": "heart, mind, spirit"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kokoro0.svg",
@@ -3037,7 +3044,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "不思議な（ふしぎな）",
         "meaning": {
           "english": "strange, mysterious",
-          "korean": "이상하다, 신비하다"
+          "korean": "이상하다, 신비한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-omo(u)_06_d.opus",
@@ -3063,7 +3070,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "思い出す（おもいだす）",
         "meaning": {
           "english": "recall",
-          "korean": "생각나다"
+          "korean": "기억하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-omo(u)_06_f.opus",
@@ -3242,7 +3249,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "移動する（いどうする）",
         "meaning": {
           "english": "move [v.t.]",
-          "korean": "움직이다"
+          "korean": "이동하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ugo(ku)_06_d.opus",
@@ -3442,8 +3449,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ukanmuri"
       },
       "meaning": {
-        "english": "roof, house",
-        "korean": "지붕, 집"
+        "english": "roof, house"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ukanmuri0.svg",
@@ -3538,7 +3544,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "徳川家（とくがわけ）",
         "meaning": {
           "english": "the House of Tokugawa",
-          "korean": "도쿠가와 가"
+          "korean": "도쿠가와 가문"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ie_06_f.opus",
@@ -3703,8 +3709,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "tsuchihen"
       },
       "meaning": {
-        "english": "earth",
-        "korean": "땅"
+        "english": "earth"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/tsuchihen0.svg",
@@ -3825,7 +3830,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "各地（かくち）",
         "meaning": {
           "english": "various places",
-          "korean": "여러 장소"
+          "korean": "각지"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chi(kyuu)_06_h.opus",
@@ -3838,7 +3843,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "現地（げんち）",
         "meaning": {
           "english": "actual place",
-          "korean": "실제 장소"
+          "korean": "현장"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chi(kyuu)_06_i.opus",
@@ -3949,8 +3954,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ninben"
       },
       "meaning": {
-        "english": "person ",
-        "korean": "사람"
+        "english": "person "
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ninben0.svg",
@@ -4006,7 +4010,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "大体（だいたい）",
         "meaning": {
           "english": "in general, mostly",
-          "korean": "일반적으로, 대부분"
+          "korean": "대체;줄거리, 대개;대다수, 도대체;도시;본시;본래"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/karada_06_c.opus",
@@ -4019,7 +4023,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "全体（ぜんたい）",
         "meaning": {
           "english": "entirety, whole",
-          "korean": "전체"
+          "korean": "전체;전체적으로"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/karada_06_d.opus",
@@ -4032,7 +4036,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "団体（だんたい）",
         "meaning": {
           "english": "group, team, organization",
-          "korean": "그룹, 팀, 조직"
+          "korean": "그룹;팀;조직"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/karada_06_e.opus",
@@ -4170,8 +4174,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ninben"
       },
       "meaning": {
-        "english": "person ",
-        "korean": "사람"
+        "english": "person "
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ninben0.svg",
@@ -4201,7 +4204,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "作成する（さくせいする）",
         "meaning": {
           "english": "produce",
-          "korean": "만들다"
+          "korean": "제작하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/saku-tsuku(ru)_06_a.opus",
@@ -4214,7 +4217,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "試作する（しさくする）",
         "meaning": {
           "english": "make a prototype",
-          "korean": "프로토타입 만들다"
+          "korean": "프로토타입 제작하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/saku-tsuku(ru)_06_b.opus",
@@ -4408,8 +4411,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "tehen"
       },
       "meaning": {
-        "english": "hand",
-        "korean": "손"
+        "english": "hand"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/tehen0.svg",
@@ -4439,7 +4441,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "持参する（じさんする）",
         "meaning": {
           "english": "bring",
-          "korean": "가져다 주다"
+          "korean": "가져오다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ji-mo(tsu)_06_a.opus",
@@ -4491,7 +4493,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "持って行く（もっていく）",
         "meaning": {
           "english": "take",
-          "korean": "가져다 주다"
+          "korean": "가져가다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ji-mo(tsu)_06_e.opus",
@@ -4504,7 +4506,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "持って来る（もってくる）",
         "meaning": {
           "english": "bring",
-          "korean": "가져다 주다"
+          "korean": "가져오다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ji-mo(tsu)_06_f.opus",
@@ -4566,7 +4568,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "明",
       "meaning": {
         "english": "bright, clear",
-        "korean": "밝다, 분명하다"
+        "korean": "밝은, 명확한"
       },
       "strokes": {
         "count": 8,
@@ -4620,8 +4622,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "hihen"
       },
       "meaning": {
-        "english": "sun, day, time",
-        "korean": "태양, 날, 시간"
+        "english": "sun, day, time"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/hihen0.svg",
@@ -4677,7 +4678,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "賢明な（けんめいな）",
         "meaning": {
           "english": "wise",
-          "korean": "지혜로운"
+          "korean": "지성적인"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aka(rui)_06_c.opus",
@@ -4742,7 +4743,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "明るい（あかるい）",
         "meaning": {
           "english": "bright, cheerful",
-          "korean": "밝다, 쾌적한"
+          "korean": "밝은, 쾌적한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aka(rui)_06_h.opus",
@@ -4881,8 +4882,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "nogihen"
       },
       "meaning": {
-        "english": "grain",
-        "korean": "곡물"
+        "english": "grain"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/nogihen0.svg",
@@ -4972,7 +4972,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "発",
       "meaning": {
         "english": "start, emit",
-        "korean": "시작하다, 발산하다"
+        "korean": "시작, 방출"
       },
       "strokes": {
         "count": 9,
@@ -5028,8 +5028,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "hatsugashira"
       },
       "meaning": {
-        "english": "outspread legs, departure",
-        "korean": "펼쳐진 다리, 출발"
+        "english": "outspread legs, departure"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/hatsugashira0.svg",
@@ -5072,7 +5071,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "発想（はっそう）",
         "meaning": {
           "english": "idea, conception",
-          "korean": "아이디어, 생각"
+          "korean": "아이디어, 개념"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hatsu-ta(tsu)_06_b.opus",
@@ -5176,7 +5175,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "発作（ほっさ）",
         "meaning": {
           "english": "fit, attack, paroxysm",
-          "korean": "증세, 공격, 폭주"
+          "korean": "광기, 공격, 폭주"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hatsu-ta(tsu)_06_j.opus",
@@ -5225,7 +5224,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "心",
       "meaning": {
         "english": "heart",
-        "korean": "마음"
+        "korean": "심장"
       },
       "strokes": {
         "count": 4,
@@ -5271,8 +5270,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kokoro"
       },
       "meaning": {
-        "english": "heart, mind, spirit",
-        "korean": "마음, 정신, 영혼"
+        "english": "heart, mind, spirit"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kokoro0.svg",
@@ -5476,7 +5474,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "意",
       "meaning": {
         "english": "mind, meaning, will",
-        "korean": "정신, 의미, 의지"
+        "korean": "마음, 의미, 의지"
       },
       "strokes": {
         "count": 13,
@@ -5541,7 +5539,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       },
       "meaning": {
         "english": "heart, mind, spirit",
-        "korean": "마음, 정신, 영혼"
+        "korean": "심장, 마음, 정신"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kokoro0.svg",
@@ -5728,7 +5726,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "度",
       "meaning": {
         "english": "degree, time",
-        "korean": "정도, 시간"
+        "korean": "도, 시간"
       },
       "strokes": {
         "count": 9,
@@ -5828,7 +5826,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "今度（こんど）",
         "meaning": {
           "english": "this time, next time",
-          "korean": "이번 번, 다음 번"
+          "korean": "이번 시간, 다음 시간"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/do-tabi_06_b.opus",
@@ -5854,7 +5852,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "程度（ていど）",
         "meaning": {
           "english": "degree, amount",
-          "korean": "정도, 양"
+          "korean": "도, 양"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/do-tabi_06_d.opus",
@@ -6118,7 +6116,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "知性（ちせい）",
         "meaning": {
           "english": "intelligence",
-          "korean": "지능"
+          "korean": "지성"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(ru)_06_e.opus",
@@ -6218,7 +6216,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "立",
       "meaning": {
         "english": "stand, establish",
-        "korean": "서다, 설립하다"
+        "korean": "서다, 세워지다"
       },
       "strokes": {
         "count": 5,
@@ -6323,7 +6321,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "確立する（かくりつする）",
         "meaning": {
           "english": "establish [v.t.], be established",
-          "korean": "설립하다"
+          "korean": "세워지다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ritsu-ta(tsu)_06_c.opus",
@@ -6388,7 +6386,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "立派な（りっぱな）",
         "meaning": {
           "english": "splendid",
-          "korean": "뛰어난"
+          "korean": "멋진"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ritsu-ta(tsu)_06_h.opus",
@@ -6440,7 +6438,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "立てる（たてる）",
         "meaning": {
           "english": "stand (something) up [v.t.]",
-          "korean": "서우다(물건을)"
+          "korean": "서다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ritsu-ta(tsu)_06_l.opus",
@@ -6587,7 +6585,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "通勤する（つうきんする）",
         "meaning": {
           "english": "commute to work",
-          "korean": "출퇴근하다"
+          "korean": "출근하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/too(ru)_06_c.opus",
@@ -6600,7 +6598,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "通学する（つうがくする）",
         "meaning": {
           "english": "commute to school",
-          "korean": "출퇴근하다"
+          "korean": "등교하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/too(ru)_06_d.opus",
@@ -6625,8 +6623,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "通夜（つや）",
         "meaning": {
-          "english": "all-night vigil over a body",
-          "korean": "올밤 경비"
+          "english": "all-night vigil over a body"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/too(ru)_06_f.opus",
@@ -6638,8 +6635,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "通る（とおる）",
         "meaning": {
-          "english": "go through [v.i.]",
-          "korean": "통과하다"
+          "english": "go through [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/too(ru)_06_g.opus",
@@ -6651,8 +6647,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "通す（とおす）",
         "meaning": {
-          "english": "let pass [v.t.]",
-          "korean": "통과하다"
+          "english": "let pass [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/too(ru)_06_h.opus",
@@ -6664,8 +6659,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "通り（とおり）",
         "meaning": {
-          "english": "avenue",
-          "korean": "거리"
+          "english": "avenue"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/too(ru)_06_i.opus",
@@ -6677,8 +6671,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "大通り（おおどおり）",
         "meaning": {
-          "english": "main street",
-          "korean": "주요 거리"
+          "english": "main street"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/too(ru)_06_j.opus",
@@ -6690,8 +6683,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "通う（かよう）",
         "meaning": {
-          "english": "commute",
-          "korean": "출퇴근하다"
+          "english": "commute"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/too(ru)_06_k.opus",
@@ -6727,8 +6719,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "不",
       "meaning": {
-        "english": "not",
-        "korean": "아니다"
+        "english": "not"
       },
       "strokes": {
         "count": 4,
@@ -6774,8 +6765,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ichi"
       },
       "meaning": {
-        "english": "one, horizontal stroke",
-        "korean": "일, 가로 획"
+        "english": "one, horizontal stroke"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ichi0.svg",
@@ -6804,8 +6794,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不規則な（ふきそくな）",
         "meaning": {
-          "english": "irregular",
-          "korean": "불규칙적"
+          "english": "irregular"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fu(man)_06_a.opus",
@@ -6817,8 +6806,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不可能な（ふかのうな）",
         "meaning": {
-          "english": "impossible",
-          "korean": "불가능"
+          "english": "impossible"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fu(man)_06_b.opus",
@@ -6830,8 +6818,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不親切な（ふしんせつな）",
         "meaning": {
-          "english": "unkind",
-          "korean": "무례한"
+          "english": "unkind"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fu(man)_06_c.opus",
@@ -6843,8 +6830,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不都合な（ふつごうな）",
         "meaning": {
-          "english": "inconvenient",
-          "korean": "불편한"
+          "english": "inconvenient"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fu(man)_06_d.opus",
@@ -6856,8 +6842,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不公平な（ふこうへいな）",
         "meaning": {
-          "english": "unfair",
-          "korean": "불공평한"
+          "english": "unfair"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fu(man)_06_e.opus",
@@ -6869,8 +6854,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不思議な（ふしぎな）",
         "meaning": {
-          "english": "mysterious, strange",
-          "korean": "신비한, 이상한"
+          "english": "mysterious, strange"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fu(man)_06_f.opus",
@@ -6882,8 +6866,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不安（ふあん）",
         "meaning": {
-          "english": "anxiety",
-          "korean": "불안"
+          "english": "anxiety"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fu(man)_06_g.opus",
@@ -6895,8 +6878,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不満（ふまん）",
         "meaning": {
-          "english": "dissatisfaction",
-          "korean": "불만"
+          "english": "dissatisfaction"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fu(man)_06_h.opus",
@@ -6908,8 +6890,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不足する（ふそくする）",
         "meaning": {
-          "english": "be short of",
-          "korean": "부족하다"
+          "english": "be short of"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fu(man)_06_i.opus",
@@ -6921,8 +6902,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不器用な（ぶきような）",
         "meaning": {
-          "english": "clumsy",
-          "korean": "서투른"
+          "english": "clumsy"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fu(man)_06_j.opus",
@@ -6934,8 +6914,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不用心な（ぶようじんな）",
         "meaning": {
-          "english": "careless, unsafe",
-          "korean": "무식한"
+          "english": "careless, unsafe"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fu(man)_06_k.opus",
@@ -6965,8 +6944,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "員",
       "meaning": {
-        "english": "member",
-        "korean": "사원"
+        "english": "member"
       },
       "strokes": {
         "count": 10,
@@ -7024,8 +7002,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kuchi"
       },
       "meaning": {
-        "english": "mouth",
-        "korean": "입"
+        "english": "mouth"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kuchi0.svg",
@@ -7054,8 +7031,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "社員（しゃいん）",
         "meaning": {
-          "english": "company employee",
-          "korean": "회사 직원"
+          "english": "company employee"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ginkou)in_06_a.opus",
@@ -7067,8 +7043,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "店員（てんいん）",
         "meaning": {
-          "english": "salesperson",
-          "korean": "판매원"
+          "english": "salesperson"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ginkou)in_06_b.opus",
@@ -7080,8 +7055,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "職員（しょくいん）",
         "meaning": {
-          "english": "staff member",
-          "korean": "직원"
+          "english": "staff member"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ginkou)in_06_c.opus",
@@ -7093,8 +7067,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "議員（ぎいん）",
         "meaning": {
-          "english": "member of congress",
-          "korean": "의원"
+          "english": "member of congress"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ginkou)in_06_d.opus",
@@ -7106,8 +7079,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "委員（いいん）",
         "meaning": {
-          "english": "committee member",
-          "korean": "위원"
+          "english": "committee member"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ginkou)in_06_e.opus",
@@ -7119,8 +7091,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "全員（ぜんいん）",
         "meaning": {
-          "english": "all members",
-          "korean": "모든 사원"
+          "english": "all members"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ginkou)in_06_f.opus",
@@ -7132,8 +7103,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "満員（まんいん）",
         "meaning": {
-          "english": "full, crowded [n.]",
-          "korean": "꽉 찬"
+          "english": "full, crowded [n.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ginkou)in_06_g.opus",
@@ -7145,8 +7115,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "定員（ていいん）",
         "meaning": {
-          "english": "fixed number, capacity",
-          "korean": "정해진 수, 용량"
+          "english": "fixed number, capacity"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ginkou)in_06_h.opus",
@@ -7158,8 +7127,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "会社員（かいしゃいん）",
         "meaning": {
-          "english": "company employee",
-          "korean": "회사 직원"
+          "english": "company employee"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ginkou)in_06_i.opus",
@@ -7171,8 +7139,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "公務員（こうむいん）",
         "meaning": {
-          "english": "public (civil) servant",
-          "korean": "공무원"
+          "english": "public (civil) servant"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ginkou)in_06_j.opus",
@@ -7208,8 +7175,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "物",
       "meaning": {
-        "english": "thing",
-        "korean": "물건"
+        "english": "thing"
       },
       "strokes": {
         "count": 8,
@@ -7292,8 +7258,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "動物園（どうぶつえん）",
         "meaning": {
-          "english": "zoo",
-          "korean": "동물원"
+          "english": "zoo"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/butsu-mono_06_a.opus",
@@ -7305,8 +7270,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "物価（ぶっか）",
         "meaning": {
-          "english": "cost of living",
-          "korean": "생활비"
+          "english": "cost of living"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/butsu-mono_06_b.opus",
@@ -7318,8 +7282,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "物理（ぶつり）",
         "meaning": {
-          "english": "physics",
-          "korean": "물리"
+          "english": "physics"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/butsu-mono_06_c.opus",
@@ -7331,8 +7294,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "見物する（けんぶつする）",
         "meaning": {
-          "english": "go sightseeing",
-          "korean": "관광하다"
+          "english": "go sightseeing"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/butsu-mono_06_d.opus",
@@ -7344,8 +7306,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "荷物（にもつ）",
         "meaning": {
-          "english": "luggage",
-          "korean": "짐"
+          "english": "luggage"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/butsu-mono_06_e.opus",
@@ -7357,8 +7318,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "物（もの）",
         "meaning": {
-          "english": "thing",
-          "korean": "물건"
+          "english": "thing"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/butsu-mono_06_f.opus",
@@ -7370,8 +7330,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "建物（たてもの）",
         "meaning": {
-          "english": "building",
-          "korean": "건물"
+          "english": "building"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/butsu-mono_06_g.opus",
@@ -7383,8 +7342,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "食べ物（たべもの）",
         "meaning": {
-          "english": "food",
-          "korean": "음식"
+          "english": "food"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/butsu-mono_06_h.opus",
@@ -7396,8 +7354,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "買い物（かいもの）",
         "meaning": {
-          "english": "shopping",
-          "korean": "쇼핑하다"
+          "english": "shopping"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/butsu-mono_06_i.opus",
@@ -7409,8 +7366,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "乗り物（のりもの）",
         "meaning": {
-          "english": "vehicle",
-          "korean": "차량"
+          "english": "vehicle"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/butsu-mono_06_j.opus",
@@ -7422,8 +7378,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "着物（きもの）",
         "meaning": {
-          "english": "kimono",
-          "korean": "카멜리아"
+          "english": "kimono"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/butsu-mono_06_k.opus",
@@ -7435,8 +7390,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "贈り物（おくりもの）",
         "meaning": {
-          "english": "gift",
-          "korean": "선물"
+          "english": "gift"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/butsu-mono_06_l.opus",
@@ -7470,8 +7424,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "的",
       "meaning": {
-        "english": "target, adjectival suffix",
-        "korean": "목표, 형용사 접미사"
+        "english": "target, adjectival suffix"
       },
       "strokes": {
         "count": 8,
@@ -7554,8 +7507,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "日本的な（にほんてきな）",
         "meaning": {
-          "english": "typically Japanese",
-          "korean": "일본식"
+          "english": "typically Japanese"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mato_06_a.opus",
@@ -7567,8 +7519,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歴史的な（れきしてきな）",
         "meaning": {
-          "english": "historic",
-          "korean": "역사적"
+          "english": "historic"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mato_06_b.opus",
@@ -7580,8 +7531,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "合理的な（ごうりてきな）",
         "meaning": {
-          "english": "rational",
-          "korean": "합리적"
+          "english": "rational"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mato_06_c.opus",
@@ -7593,8 +7543,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "私的な（してきな）",
         "meaning": {
-          "english": "personal",
-          "korean": "개인적"
+          "english": "personal"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mato_06_d.opus",
@@ -7606,8 +7555,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "国際的な（こくさいてきな）",
         "meaning": {
-          "english": "international",
-          "korean": "국제적"
+          "english": "international"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mato_06_e.opus",
@@ -7619,8 +7567,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "的確な（てきかくな）",
         "meaning": {
-          "english": "precise",
-          "korean": "정확한"
+          "english": "precise"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mato_06_f.opus",
@@ -7632,8 +7579,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "標的（ひょうてき）",
         "meaning": {
-          "english": "target",
-          "korean": "목표"
+          "english": "target"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mato_06_g.opus",
@@ -7645,8 +7591,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "目的（もくてき）",
         "meaning": {
-          "english": "purpose",
-          "korean": "목적"
+          "english": "purpose"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mato_06_h.opus",
@@ -7658,8 +7603,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "的中する（てきちゅうする）",
         "meaning": {
-          "english": "hit a target, prove correct",
-          "korean": "목표를 맞추다, 옳다"
+          "english": "hit a target, prove correct"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mato_06_i.opus",
@@ -7671,8 +7615,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "的（まと）",
         "meaning": {
-          "english": "target",
-          "korean": "목표"
+          "english": "target"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mato_06_j.opus",
@@ -7706,8 +7649,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "問",
       "meaning": {
-        "english": "question",
-        "korean": "질문"
+        "english": "question"
       },
       "strokes": {
         "count": 11,
@@ -7767,8 +7709,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "mongamae"
       },
       "meaning": {
-        "english": "gate, door",
-        "korean": "문, 문턱"
+        "english": "gate, door"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/mongamae0.svg",
@@ -7797,8 +7738,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "質問する（しつもんする）",
         "meaning": {
-          "english": "inquire",
-          "korean": "묻다"
+          "english": "inquire"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/to(u)_06_a.opus",
@@ -7810,8 +7750,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "訪問する（ほうもんする）",
         "meaning": {
-          "english": "visit",
-          "korean": "방문하다"
+          "english": "visit"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/to(u)_06_b.opus",
@@ -7823,8 +7762,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "問題（もんだい）",
         "meaning": {
-          "english": "problem, question",
-          "korean": "문제, 질문"
+          "english": "problem, question"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/to(u)_06_c.opus",
@@ -7836,8 +7774,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "問い合わせる（といあわせる）",
         "meaning": {
-          "english": "seek information, inquire",
-          "korean": "정보를 찾다, 묻다"
+          "english": "seek information, inquire"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/to(u)_06_d.opus",
@@ -7849,8 +7786,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "問う（とう）",
         "meaning": {
-          "english": "ask a question",
-          "korean": "질문하다"
+          "english": "ask a question"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/to(u)_06_e.opus",
@@ -7862,8 +7798,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "問屋（とんや）",
         "meaning": {
-          "english": "wholesale store",
-          "korean": "도매 상점"
+          "english": "wholesale store"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/to(u)_06_f.opus",
@@ -7900,8 +7835,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "用",
       "meaning": {
-        "english": "employ, things to do",
-        "korean": "사용하다, 할 일"
+        "english": "employ, things to do"
       },
       "strokes": {
         "count": 5,
@@ -7949,8 +7883,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "mochiiru"
       },
       "meaning": {
-        "english": "to use",
-        "korean": "사용하다"
+        "english": "to use"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/mochiiru0.svg",
@@ -7979,8 +7912,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "用事（ようじ）",
         "meaning": {
-          "english": "task",
-          "korean": "작업"
+          "english": "task"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mochi(iru)_06_a.opus",
@@ -7992,8 +7924,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "急用（きゅうよう）",
         "meaning": {
-          "english": "urgent business",
-          "korean": "급한 일"
+          "english": "urgent business"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mochi(iru)_06_b.opus",
@@ -8005,8 +7936,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "費用（ひよう）",
         "meaning": {
-          "english": "cost",
-          "korean": "비용"
+          "english": "cost"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mochi(iru)_06_c.opus",
@@ -8018,8 +7948,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "家庭用（かていよう）",
         "meaning": {
-          "english": "for home (vs. business) use",
-          "korean": "가정용 (비즈니스용 대비)"
+          "english": "for home (vs. business) use"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mochi(iru)_06_d.opus",
@@ -8031,8 +7960,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "用心深い（ようじんぶかい）",
         "meaning": {
-          "english": "watchful",
-          "korean": "조심스럽다"
+          "english": "watchful"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mochi(iru)_06_e.opus",
@@ -8044,8 +7972,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "利用する（りようする）",
         "meaning": {
-          "english": "utilize",
-          "korean": "사용하다"
+          "english": "utilize"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mochi(iru)_06_f.opus",
@@ -8057,8 +7984,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "用意する（よういする）",
         "meaning": {
-          "english": "prepare",
-          "korean": "준비하다"
+          "english": "prepare"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mochi(iru)_06_g.opus",
@@ -8070,8 +7996,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "採用する（さいようする）",
         "meaning": {
-          "english": "adopt",
-          "korean": "채용하다"
+          "english": "adopt"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mochi(iru)_06_h.opus",
@@ -8083,8 +8008,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "信用する（しんようする）",
         "meaning": {
-          "english": "believe",
-          "korean": "믿다"
+          "english": "believe"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mochi(iru)_06_i.opus",
@@ -8096,8 +8020,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "用いる（もちいる）",
         "meaning": {
-          "english": "make use of",
-          "korean": "사용하다"
+          "english": "make use of"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mochi(iru)_06_j.opus",
@@ -8128,8 +8051,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "新",
       "meaning": {
-        "english": "new",
-        "korean": "새로운"
+        "english": "new"
       },
       "strokes": {
         "count": 13,
@@ -8192,8 +8114,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "onozukuri"
       },
       "meaning": {
-        "english": "axe",
-        "korean": "도끼"
+        "english": "axe"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/onozukuri0.svg",
@@ -8222,8 +8143,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "新聞（しんぶん）",
         "meaning": {
-          "english": "newspaper",
-          "korean": "신문"
+          "english": "newspaper"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/atara(shii)_06_a.opus",
@@ -8235,8 +8155,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "新年（しんねん）",
         "meaning": {
-          "english": "New Year",
-          "korean": "새해"
+          "english": "New Year"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/atara(shii)_06_b.opus",
@@ -8248,8 +8167,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "新製品（しんせいひん）",
         "meaning": {
-          "english": "new product",
-          "korean": "새 제품"
+          "english": "new product"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/atara(shii)_06_c.opus",
@@ -8261,8 +8179,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "新幹線（しんかんせん）",
         "meaning": {
-          "english": "Shinkansen",
-          "korean": "신칸센"
+          "english": "Shinkansen"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/atara(shii)_06_d.opus",
@@ -8274,8 +8191,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "最新式（さいしんしき）",
         "meaning": {
-          "english": "latest style",
-          "korean": "최신 스타일"
+          "english": "latest style"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/atara(shii)_06_e.opus",
@@ -8287,8 +8203,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "新鮮な（しんせんな）",
         "meaning": {
-          "english": "fresh",
-          "korean": "신선한"
+          "english": "fresh"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/atara(shii)_06_f.opus",
@@ -8300,8 +8215,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "革新的な（かくしんてきな）",
         "meaning": {
-          "english": "liberal",
-          "korean": "자유로운"
+          "english": "liberal"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/atara(shii)_06_g.opus",
@@ -8313,8 +8227,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "更新する（こうしんする）",
         "meaning": {
-          "english": "update, renew",
-          "korean": "업데이트, 갱신"
+          "english": "update, renew"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/atara(shii)_06_h.opus",
@@ -8326,8 +8239,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "新しい（あたらしい）",
         "meaning": {
-          "english": "new",
-          "korean": "새로운"
+          "english": "new"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/atara(shii)_06_i.opus",
@@ -8339,8 +8251,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "新たな（あらたな）",
         "meaning": {
-          "english": "new",
-          "korean": "새로운"
+          "english": "new"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/atara(shii)_06_j.opus",
@@ -8352,8 +8263,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "新妻（にいづま）",
         "meaning": {
-          "english": "newly-wed wife",
-          "korean": "신혼 부인"
+          "english": "newly-wed wife"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/atara(shii)_06_k.opus",
@@ -8391,8 +8301,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "田",
       "meaning": {
-        "english": "rice field",
-        "korean": "밭"
+        "english": "rice field"
       },
       "strokes": {
         "count": 5,
@@ -8440,8 +8349,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ta"
       },
       "meaning": {
-        "english": "rice paddy",
-        "korean": "밭"
+        "english": "rice paddy"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ta0.svg",
@@ -8470,8 +8378,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "水田（すいでん）",
         "meaning": {
-          "english": "rice field",
-          "korean": "밭"
+          "english": "rice field"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/den-ta_06_a.opus",
@@ -8483,8 +8390,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "田園（でんえん）",
         "meaning": {
-          "english": "rural area",
-          "korean": "시골"
+          "english": "rural area"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/den-ta_06_b.opus",
@@ -8496,8 +8402,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "田んぼ（たんぼ）",
         "meaning": {
-          "english": "rice field",
-          "korean": "밭"
+          "english": "rice field"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/den-ta_06_c.opus",
@@ -8509,8 +8414,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "田植え（たうえ）",
         "meaning": {
-          "english": "rice planting",
-          "korean": "밭 뿌리다"
+          "english": "rice planting"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/den-ta_06_d.opus",
@@ -8522,8 +8426,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "松田（まつだ）",
         "meaning": {
-          "english": "Matsuda (surname)",
-          "korean": "마츠다 (성)"
+          "english": "Matsuda (surname)"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/den-ta_06_e.opus",
@@ -8554,8 +8457,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "代",
       "meaning": {
-        "english": "substitute, generation, charge",
-        "korean": "대체, 세대, 요금"
+        "english": "substitute, generation, charge"
       },
       "strokes": {
         "count": 5,
@@ -8603,8 +8505,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ninben"
       },
       "meaning": {
-        "english": "person ",
-        "korean": "사람"
+        "english": "person "
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ninben0.svg",
@@ -8633,8 +8534,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "時代（じだい）",
         "meaning": {
-          "english": "era",
-          "korean": "시대"
+          "english": "era"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai-ka(waru)_06_a.opus",
@@ -8646,8 +8546,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "現代（げんだい）",
         "meaning": {
-          "english": "modern times",
-          "korean": "현대"
+          "english": "modern times"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai-ka(waru)_06_b.opus",
@@ -8659,8 +8558,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "世代（せだい）",
         "meaning": {
-          "english": "generation",
-          "korean": "세대"
+          "english": "generation"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai-ka(waru)_06_c.opus",
@@ -8672,8 +8570,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "10代（じゅうだい）",
         "meaning": {
-          "english": "years between age 10 and 19",
-          "korean": "10대"
+          "english": "years between age 10 and 19"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai-ka(waru)_06_d.opus",
@@ -8685,8 +8582,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "70年代（ななじゅうねんだい）",
         "meaning": {
-          "english": "seventies",
-          "korean": "70대"
+          "english": "seventies"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai-ka(waru)_06_e.opus",
@@ -8698,8 +8594,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "電気代（でんきだい）",
         "meaning": {
-          "english": "electric utility expenses",
-          "korean": "전기 요금"
+          "english": "electric utility expenses"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai-ka(waru)_06_f.opus",
@@ -8711,8 +8606,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "代表する（だいひょうする）",
         "meaning": {
-          "english": "represent",
-          "korean": "대표하다"
+          "english": "represent"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai-ka(waru)_06_g.opus",
@@ -8724,8 +8618,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "交代する（こうたいする）",
         "meaning": {
-          "english": "take turns, alternate",
-          "korean": "번갈아 하다"
+          "english": "take turns, alternate"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai-ka(waru)_06_h.opus",
@@ -8737,8 +8630,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "代わる（かわる）",
         "meaning": {
-          "english": "take the place of [v.i.]",
-          "korean": "대체하다"
+          "english": "take the place of [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai-ka(waru)_06_i.opus",
@@ -8750,8 +8642,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "代える（かえる）",
         "meaning": {
-          "english": "exchange, replace [v.t.]",
-          "korean": "교환하다"
+          "english": "exchange, replace [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai-ka(waru)_06_j.opus",
@@ -8763,8 +8654,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "明治の代（めいじのよ）",
         "meaning": {
-          "english": "Meiji era",
-          "korean": "메이지 시대"
+          "english": "Meiji era"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai-ka(waru)_06_k.opus",
@@ -8776,8 +8666,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "身代金（みのしろきん）",
         "meaning": {
-          "english": "ransom",
-          "korean": "사상금"
+          "english": "ransom"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai-ka(waru)_06_l.opus",
@@ -8808,8 +8697,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "世",
       "meaning": {
-        "english": "world, era",
-        "korean": "세계, 시대"
+        "english": "world, era"
       },
       "strokes": {
         "count": 5,
@@ -8886,8 +8774,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "世紀（せいき）",
         "meaning": {
-          "english": "century",
-          "korean": "세기"
+          "english": "century"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sei-yo_06_a.opus",
@@ -8899,8 +8786,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "三世（さんせい）",
         "meaning": {
-          "english": "3rd generation",
-          "korean": "3세대"
+          "english": "3rd generation"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sei-yo_06_b.opus",
@@ -8912,8 +8798,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "中世（ちゅうせい）",
         "meaning": {
-          "english": "Middle Ages",
-          "korean": "중세"
+          "english": "Middle Ages"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sei-yo_06_c.opus",
@@ -8925,8 +8810,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "世界（せかい）",
         "meaning": {
-          "english": "world",
-          "korean": "세계"
+          "english": "world"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sei-yo_06_d.opus",
@@ -8938,8 +8822,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "世間（せけん）",
         "meaning": {
-          "english": "world, society",
-          "korean": "세계, 사회"
+          "english": "world, society"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sei-yo_06_e.opus",
@@ -8951,8 +8834,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "世代（せだい）",
         "meaning": {
-          "english": "generation",
-          "korean": "세대"
+          "english": "generation"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sei-yo_06_f.opus",
@@ -8964,8 +8846,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "世話（せわ）",
         "meaning": {
-          "english": "assistance",
-          "korean": "도움"
+          "english": "assistance"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sei-yo_06_g.opus",
@@ -8977,8 +8858,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "出世する（しゅっせする）",
         "meaning": {
-          "english": "get promoted",
-          "korean": "승진하다"
+          "english": "get promoted"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sei-yo_06_h.opus",
@@ -8990,8 +8870,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "世の中（よのなか）",
         "meaning": {
-          "english": "world, society",
-          "korean": "세계, 사회"
+          "english": "world, society"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sei-yo_06_i.opus",
@@ -9003,8 +8882,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "あの世（あのよ）",
         "meaning": {
-          "english": "world of the dead",
-          "korean": "죽은 세계"
+          "english": "world of the dead"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sei-yo_06_j.opus",
@@ -9035,8 +8913,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "死",
       "meaning": {
-        "english": "die, death",
-        "korean": "죽다, 죽음"
+        "english": "die, death"
       },
       "strokes": {
         "count": 6,
@@ -9115,8 +8992,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "死去（しきょ）",
         "meaning": {
-          "english": "death",
-          "korean": "죽음"
+          "english": "death"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(nu)_06_a.opus",
@@ -9128,8 +9004,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "死刑（しけい）",
         "meaning": {
-          "english": "death penalty",
-          "korean": "죽음의 벌"
+          "english": "death penalty"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(nu)_06_b.opus",
@@ -9141,8 +9016,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "死後（しご）",
         "meaning": {
-          "english": "after death",
-          "korean": "죽은 후"
+          "english": "after death"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(nu)_06_c.opus",
@@ -9154,8 +9028,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "死体（したい）",
         "meaning": {
-          "english": "corpse",
-          "korean": "시체"
+          "english": "corpse"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(nu)_06_d.opus",
@@ -9167,8 +9040,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "脳死（のうし）",
         "meaning": {
-          "english": "brain death",
-          "korean": "뇌 죽음"
+          "english": "brain death"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(nu)_06_e.opus",
@@ -9180,8 +9052,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "必死に（ひっしに）",
         "meaning": {
-          "english": "desperately",
-          "korean": "절대로"
+          "english": "desperately"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(nu)_06_f.opus",
@@ -9193,8 +9064,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "死亡する（しぼうする）",
         "meaning": {
-          "english": "die",
-          "korean": "죽다"
+          "english": "die"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(nu)_06_g.opus",
@@ -9206,8 +9076,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "殉死する（じゅんしする）",
         "meaning": {
-          "english": "die a martyr",
-          "korean": "순교하다"
+          "english": "die a martyr"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(nu)_06_h.opus",
@@ -9219,8 +9088,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "戦死する（せんしする）",
         "meaning": {
-          "english": "die in war",
-          "korean": "전사하다"
+          "english": "die in war"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(nu)_06_i.opus",
@@ -9232,8 +9100,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "即死する（そくしする）",
         "meaning": {
-          "english": "die instantly",
-          "korean": "즉시 죽다"
+          "english": "die instantly"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(nu)_06_j.opus",
@@ -9245,8 +9112,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "死ぬ（しぬ）",
         "meaning": {
-          "english": "die",
-          "korean": "죽다"
+          "english": "die"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(nu)_06_k.opus",
@@ -9278,8 +9144,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "開",
       "meaning": {
-        "english": "open",
-        "korean": "열다"
+        "english": "open"
       },
       "strokes": {
         "count": 12,
@@ -9341,8 +9206,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "mongamae"
       },
       "meaning": {
-        "english": "gate, door",
-        "korean": "문"
+        "english": "gate, door"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/mongamae0.svg",
@@ -9371,8 +9235,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "開発する（かいはつする）",
         "meaning": {
-          "english": "develop", 
-          "korean": "개발하다"
+          "english": "develop"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kai-hira(ku)_06_a.opus",
@@ -9384,8 +9247,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "開放する（かいほうする）",
         "meaning": {
-          "english": "throw open",
-          "korean": "열다"
+          "english": "throw open"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kai-hira(ku)_06_b.opus",
@@ -9397,8 +9259,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "開設する（かいせつする）",
         "meaning": {
-          "english": "establish",
-          "korean": "설립하다"
+          "english": "establish"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kai-hira(ku)_06_c.opus",
@@ -9410,8 +9271,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "開閉する（かいへいする）",
         "meaning": {
-          "english": "open and close",
-          "korean": "열고 닫다"
+          "english": "open and close"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kai-hira(ku)_06_d.opus",
@@ -9423,8 +9283,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "開始する（かいしする）",
         "meaning": {
-          "english": "start",
-          "korean": "시작하다"
+          "english": "start"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kai-hira(ku)_06_e.opus",
@@ -9436,8 +9295,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "公開する（こうかいする）",
         "meaning": {
-          "english": "present to the public",
-          "korean": "공개하다"
+          "english": "present to the public"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kai-hira(ku)_06_f.opus",
@@ -9449,8 +9307,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "再開する（さいかいする）",
         "meaning": {
-          "english": "reopen",
-          "korean": "다시 열다"
+          "english": "reopen"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kai-hira(ku)_06_g.opus",
@@ -9462,8 +9319,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "開く（ひらく）",
         "meaning": {
-          "english": "open [v.i., v.t.]",
-          "korean": "열다"
+          "english": "open [v.i., v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kai-hira(ku)_06_h.opus",
@@ -9475,8 +9331,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "開く（あく）",
         "meaning": {
-          "english": "open [v.i.]",
-          "korean": "열다"
+          "english": "open [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kai-hira(ku)_06_i.opus",
@@ -9488,8 +9343,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "開ける（あける）",
         "meaning": {
-          "english": "open [v.t.]",
-          "korean": "열다"
+          "english": "open [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kai-hira(ku)_06_j.opus",
@@ -9527,8 +9381,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "社",
       "meaning": {
-        "english": "company, society",
-        "korean": "회사, 사회"
+        "english": "company, society"
       },
       "strokes": {
         "count": 7,
@@ -9580,8 +9433,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "shimesuhen"
       },
       "meaning": {
-        "english": "altar, festival, religious service",
-        "korean": "제단, 축제, 종교 서비스"
+        "english": "altar, festival, religious service"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/shimesuhen0.svg",
@@ -9610,8 +9462,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "社会（しゃかい）",
         "meaning": {
-          "english": "society",
-          "korean": "사회"
+          "english": "society"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yashiro_06_a.opus",
@@ -9623,8 +9474,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "社長（しゃちょう）",
         "meaning": {
-          "english": "company president",
-          "korean": "회사 사장"
+          "english": "company president"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yashiro_06_b.opus",
@@ -9636,8 +9486,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "会社（かいしゃ）",
         "meaning": {
-          "english": "company",
-          "korean": "회사"
+          "english": "company"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yashiro_06_c.opus",
@@ -9649,8 +9498,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "本社（ほんしゃ）",
         "meaning": {
-          "english": "headquarters",
-          "korean": "본사"
+          "english": "headquarters"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yashiro_06_d.opus",
@@ -9662,8 +9510,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "支社（ししゃ）",
         "meaning": {
-          "english": "branch office",
-          "korean": "지사"
+          "english": "branch office"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yashiro_06_e.opus",
@@ -9675,8 +9522,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "出版社（しゅっぱんしゃ）",
         "meaning": {
-          "english": "publisher",
-          "korean": "출판사"
+          "english": "publisher"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yashiro_06_f.opus",
@@ -9688,8 +9534,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "神社（じんじゃ）",
         "meaning": {
-          "english": "Shinto shrine",
-          "korean": "신사"
+          "english": "Shinto shrine"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yashiro_06_g.opus",
@@ -9701,8 +9546,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "入社する（にゅうしゃする）",
         "meaning": {
-          "english": "join a company",
-          "korean": "회사에 들어가다"
+          "english": "join a company"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yashiro_06_h.opus",
@@ -9714,8 +9558,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "お社（おやしろ）",
         "meaning": {
-          "english": "Shinto shrine [hon.]",
-          "korean": "신사 [별칭]"
+          "english": "Shinto shrine [hon.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yashiro_06_i.opus",
@@ -9748,8 +9591,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "無",
       "meaning": {
-        "english": "without, nothing",
-        "korean": "없음, 없다"
+        "english": "without, nothing"
       },
       "strokes": {
         "count": 12,
@@ -9811,8 +9653,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "rekka"
       },
       "meaning": {
-        "english": "fire",
-        "korean": "불"
+        "english": "fire"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/rekka0.svg",
@@ -9841,8 +9682,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "無料（むりょう）",
         "meaning": {
-          "english": "free of charge",
-          "korean": "무료"
+          "english": "free of charge"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mu-na(i)_06_a.opus",
@@ -9854,8 +9694,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "無職（むしょく）",
         "meaning": {
-          "english": "unemployed",
-          "korean": "무직"
+          "english": "unemployed"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mu-na(i)_06_b.opus",
@@ -9867,8 +9706,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "無理な（むりな）",
         "meaning": {
-          "english": "impossible",
-          "korean": "불가능"
+          "english": "impossible"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mu-na(i)_06_c.opus",
@@ -9880,8 +9718,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "無神経な（むしんけいな）",
         "meaning": {
-          "english": "insensitive",
-          "korean": "무감각"
+          "english": "insensitive"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mu-na(i)_06_d.opus",
@@ -9893,8 +9730,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "無意味な（むいみな）",
         "meaning": {
-          "english": "nonsense",
-          "korean": "무의미"
+          "english": "nonsense"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mu-na(i)_06_e.opus",
@@ -9906,8 +9742,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "無視する（むしする）",
         "meaning": {
-          "english": "disregard, ignore",
-          "korean": "무시하다"
+          "english": "disregard, ignore"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mu-na(i)_06_f.opus",
@@ -9919,8 +9754,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "無事（ぶじ）",
         "meaning": {
-          "english": "safety",
-          "korean": "안전"
+          "english": "safety"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mu-na(i)_06_g.opus",
@@ -9932,8 +9766,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "無難な（ぶなんな）",
         "meaning": {
-          "english": "secure, safe",
-          "korean": "안전"
+          "english": "secure, safe"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mu-na(i)_06_h.opus",
@@ -9945,8 +9778,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "無礼な（ぶれいな）",
         "meaning": {
-          "english": "rude",
-          "korean": "무례"
+          "english": "rude"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mu-na(i)_06_i.opus",
@@ -9958,8 +9790,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "無くす（なくす）",
         "meaning": {
-          "english": "lose",
-          "korean": "잃다"
+          "english": "lose"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mu-na(i)_06_j.opus",
@@ -9971,8 +9802,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "無い（ない）",
         "meaning": {
-          "english": "no, not",
-          "korean": "없다"
+          "english": "no, not"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mu-na(i)_06_k.opus",
@@ -10010,8 +9840,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "強",
       "meaning": {
-        "english": "strong",
-        "korean": "강함"
+        "english": "strong"
       },
       "strokes": {
         "count": 11,
@@ -10100,8 +9929,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "勉強する（べんきょうする）",
         "meaning": {
-          "english": "study",
-          "korean": "공부하다"
+          "english": "study"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tsuyo(i)_06_a.opus",
@@ -10113,8 +9941,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "強化する（きょうかする）",
         "meaning": {
-          "english": "strengthen",
-          "korean": "강화하다"
+          "english": "strengthen"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tsuyo(i)_06_b.opus",
@@ -10126,8 +9953,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "強力な（きょうりょくな）",
         "meaning": {
-          "english": "powerful",
-          "korean": "강력함"
+          "english": "powerful"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tsuyo(i)_06_c.opus",
@@ -10139,8 +9965,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "強情な（ごうじょうな）",
         "meaning": {
-          "english": "obstinate",
-          "korean": "강직함"
+          "english": "obstinate"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tsuyo(i)_06_d.opus",
@@ -10152,8 +9977,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "強引な（ごういんな）",
         "meaning": {
-          "english": "coercive",
-          "korean": "강제하다"
+          "english": "coercive"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tsuyo(i)_06_e.opus",
@@ -10165,8 +9989,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "強盗（ごうとう）",
         "meaning": {
-          "english": "robbery",
-          "korean": "강도"
+          "english": "robbery"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tsuyo(i)_06_f.opus",
@@ -10178,8 +10001,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "強い（つよい）",
         "meaning": {
-          "english": "strong",
-          "korean": "강함"
+          "english": "strong"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tsuyo(i)_06_g.opus",
@@ -10191,8 +10013,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "強まる（つよまる）",
         "meaning": {
-          "english": "get strong [v.i.]",
-          "korean": "강해지다"
+          "english": "get strong [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tsuyo(i)_06_h.opus",
@@ -10204,8 +10025,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "強める（つよめる）",
         "meaning": {
-          "english": "strengthen [v.t.]",
-          "korean": "강화하다"
+          "english": "strengthen [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tsuyo(i)_06_i.opus",
@@ -10217,8 +10037,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "強いる（しいる）",
         "meaning": {
-          "english": "force, compel",
-          "korean": "강제하다"
+          "english": "force, compel"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tsuyo(i)_06_j.opus",
@@ -10255,8 +10074,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "野",
       "meaning": {
-        "english": "field",
-        "korean": "밭"
+        "english": "field"
       },
       "strokes": {
         "count": 11,
@@ -10345,8 +10163,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "野球（やきゅう）",
         "meaning": {
-          "english": "baseball",
-          "korean": "야구"
+          "english": "baseball"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ya-no_06_a.opus",
@@ -10358,8 +10175,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "野菜（やさい）",
         "meaning": {
-          "english": "vegetable",
-          "korean": "야채"
+          "english": "vegetable"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ya-no_06_b.opus",
@@ -10371,8 +10187,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "野党（やとう）",
         "meaning": {
-          "english": "opposition party",
-          "korean": "야당"
+          "english": "opposition party"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ya-no_06_c.opus",
@@ -10384,8 +10199,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "平野（へいや）",
         "meaning": {
-          "english": "plain",
-          "korean": "평야"
+          "english": "plain"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ya-no_06_d.opus",
@@ -10397,8 +10211,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "分野（ぶんや）",
         "meaning": {
-          "english": "field",
-          "korean": "밭"
+          "english": "field"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ya-no_06_e.opus",
@@ -10410,8 +10223,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "視野（しや）",
         "meaning": {
-          "english": "field of vision",
-          "korean": "시야"
+          "english": "field of vision"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ya-no_06_f.opus",
@@ -10423,8 +10235,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "野原（のはら）",
         "meaning": {
-          "english": "field",
-          "korean": "밭"
+          "english": "field"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ya-no_06_g.opus",
@@ -10436,8 +10247,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "野良犬（のらいぬ）",
         "meaning": {
-          "english": "stray dog",
-          "korean": "떼도"
+          "english": "stray dog"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ya-no_06_h.opus",
@@ -10474,8 +10284,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "教",
       "meaning": {
-        "english": "teach, religion",
-        "korean": "교육, 종교"
+        "english": "teach, religion"
       },
       "strokes": {
         "count": 11,
@@ -10535,8 +10344,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "bokuzukuri"
       },
       "meaning": {
-        "english": "activity, to strike, hit",
-        "korean": "활동, 치다, 때리다"
+        "english": "activity, to strike, hit"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/bokuzukuri0.svg",
@@ -10565,8 +10373,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "教育する（きょういくする）",
         "meaning": {
-          "english": "educate",
-          "korean": "교육하다"
+          "english": "educate"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oshi(eru)_06_a.opus",
@@ -10578,8 +10385,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "教授（きょうじゅ）",
         "meaning": {
-          "english": "teaching, professor",
-          "korean": "교수"
+          "english": "teaching, professor"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oshi(eru)_06_b.opus",
@@ -10591,8 +10397,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "教師（きょうし）",
         "meaning": {
-          "english": "teacher",
-          "korean": "교사"
+          "english": "teacher"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oshi(eru)_06_c.opus",
@@ -10604,8 +10409,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "教室（きょうしつ）",
         "meaning": {
-          "english": "classroom",
-          "korean": "교실"
+          "english": "classroom"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oshi(eru)_06_d.opus",
@@ -10617,8 +10421,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "教科書（きょうかしょ）",
         "meaning": {
-          "english": "text book",
-          "korean": "교과서"
+          "english": "text book"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oshi(eru)_06_e.opus",
@@ -10630,8 +10433,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "教養（きょうよう）",
         "meaning": {
-          "english": "cultivation, culture",
-          "korean": "교양"
+          "english": "cultivation, culture"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oshi(eru)_06_f.opus",
@@ -10643,8 +10445,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "教会（きょうかい）",
         "meaning": {
-          "english": "church",
-          "korean": "교회"
+          "english": "church"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oshi(eru)_06_g.opus",
@@ -10656,8 +10457,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "宗教（しゅうきょう）",
         "meaning": {
-          "english": "religion",
-          "korean": "종교"
+          "english": "religion"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oshi(eru)_06_h.opus",
@@ -10669,8 +10469,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "仏教（ぶっきょう）",
         "meaning": {
-          "english": "Buddhism",
-          "korean": "불교"
+          "english": "Buddhism"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oshi(eru)_06_i.opus",
@@ -10682,8 +10481,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "教える（おしえる）",
         "meaning": {
-          "english": "teach, inform [v.t.]",
-          "korean": "가르치다, 알리다"
+          "english": "teach, inform [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oshi(eru)_06_j.opus",
@@ -10695,8 +10493,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "教わる（おそわる）",
         "meaning": {
-          "english": "be taught [v.i.]",
-          "korean": "가르치다"
+          "english": "be taught [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oshi(eru)_06_k.opus",
@@ -10733,8 +10530,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "正",
       "meaning": {
-        "english": "right, correct",
-        "korean": "옳음, 정확"
+        "english": "right, correct"
       },
       "strokes": {
         "count": 5,
@@ -10782,8 +10578,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "tomeru"
       },
       "meaning": {
-        "english": "to stop",
-        "korean": "멈추다"
+        "english": "to stop"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/tomeru0.svg",
@@ -10812,8 +10607,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "正解（せいかい）",
         "meaning": {
-          "english": "correct answer",
-          "korean": "정답"
+          "english": "correct answer"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tada(shii)_06_a.opus",
@@ -10825,8 +10619,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "正義（せいぎ）",
         "meaning": {
-          "english": "justice",
-          "korean": "정의"
+          "english": "justice"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tada(shii)_06_b.opus",
@@ -10838,8 +10631,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "正確な（せいかくな）",
         "meaning": {
-          "english": "accurate",
-          "korean": "정확한"
+          "english": "accurate"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tada(shii)_06_c.opus",
@@ -10851,8 +10643,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "正常な（せいじょうな）",
         "meaning": {
-          "english": "normal",
-          "korean": "정상적인"
+          "english": "normal"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tada(shii)_06_d.opus",
@@ -10864,8 +10655,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不正な（ふせいな）",
         "meaning": {
-          "english": "unjust",
-          "korean": "불公正한"
+          "english": "unjust"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tada(shii)_06_e.opus",
@@ -10877,8 +10667,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "修正する（しゅうせいする）",
         "meaning": {
-          "english": "revise",
-          "korean": "수정하다"
+          "english": "revise"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tada(shii)_06_f.opus",
@@ -10890,8 +10679,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "正気（しょうき）",
         "meaning": {
-          "english": "sanity",
-          "korean": "정신"
+          "english": "sanity"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tada(shii)_06_g.opus",
@@ -10903,8 +10691,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "正しい（ただしい）",
         "meaning": {
-          "english": "correct [adj.]",
-          "korean": "정확한"
+          "english": "correct [adj.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tada(shii)_06_h.opus",
@@ -10916,8 +10703,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "正す（ただす）",
         "meaning": {
-          "english": "straighten",
-          "korean": "직하다"
+          "english": "straighten"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tada(shii)_06_i.opus",
@@ -10929,8 +10715,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "正に（まさに）",
         "meaning": {
-          "english": "surely",
-          "korean": "정말"
+          "english": "surely"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tada(shii)_06_j.opus",
@@ -10961,8 +10746,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "業",
       "meaning": {
-        "english": "work, business, industry",
-        "korean": "일, 사업, 산업"
+        "english": "work, business, industry"
       },
       "strokes": {
         "count": 13,
@@ -11026,8 +10810,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ki"
       },
       "meaning": {
-        "english": "tree, wood",
-        "korean": "나무, 목재"
+        "english": "tree, wood"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ki0.svg",
@@ -11056,8 +10839,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "授業（じゅぎょう）",
         "meaning": {
-          "english": "lesson, class",
-          "korean": "수업"
+          "english": "lesson, class"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyou-waza_06_a.opus",
@@ -11069,8 +10851,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "授業料（じゅぎょうりょう）",
         "meaning": {
-          "english": "school fees, tuition",
-          "korean": "학비"
+          "english": "school fees, tuition"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyou-waza_06_b.opus",
@@ -11082,8 +10863,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "授業中（じゅぎょうちゅう）",
         "meaning": {
-          "english": "while in class, during a class",
-          "korean": "수업 중"
+          "english": "while in class, during a class"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyou-waza_06_c.opus",
@@ -11095,8 +10875,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "職業（しょくぎょう）",
         "meaning": {
-          "english": "occupation",
-          "korean": "직업"
+          "english": "occupation"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyou-waza_06_d.opus",
@@ -11108,8 +10887,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "企業（きぎょう）",
         "meaning": {
-          "english": "enterprise",
-          "korean": "기업"
+          "english": "enterprise"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyou-waza_06_e.opus",
@@ -11121,8 +10899,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "従業員（じゅうぎょういん）",
         "meaning": {
-          "english": "employee",
-          "korean": "직원"
+          "english": "employee"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyou-waza_06_f.opus",
@@ -11134,8 +10911,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "卒業する（そつぎょうする）",
         "meaning": {
-          "english": "graduate",
-          "korean": "졸업하다"
+          "english": "graduate"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyou-waza_06_g.opus",
@@ -11147,8 +10923,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "作業する（さぎょうする）",
         "meaning": {
-          "english": "work",
-          "korean": "일하다"
+          "english": "work"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyou-waza_06_h.opus",
@@ -11160,8 +10935,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "営業する（えいぎょうする）",
         "meaning": {
-          "english": "be in business",
-          "korean": "영업하다"
+          "english": "be in business"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyou-waza_06_i.opus",
@@ -11173,8 +10947,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "仕業（しわざ）",
         "meaning": {
-          "english": "handiwork",
-          "korean": "일"
+          "english": "handiwork"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyou-waza_06_j.opus",
@@ -11186,8 +10959,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "人間業（にんげんわざ）",
         "meaning": {
-          "english": "the work of man",
-          "korean": "사람 일"
+          "english": "the work of man"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyou-waza_06_k.opus",
@@ -11226,8 +10998,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "題",
       "meaning": {
-        "english": "title, topic, problem",
-        "korean": "제목, 주제, 문제"
+        "english": "title, topic, problem"
       },
       "strokes": {
         "count": 18,
@@ -11301,8 +11072,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "oogai"
       },
       "meaning": {
-        "english": "head, page",
-        "korean": "머리, 페이지"
+        "english": "head, page"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/oogai0.svg",
@@ -11331,8 +11101,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "問題（もんだい）",
         "meaning": {
-          "english": "problem, question",
-          "korean": "문제, 질문"
+          "english": "problem, question"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(moku)_06_a.opus",
@@ -11344,8 +11113,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "宿題（しゅくだい）",
         "meaning": {
-          "english": "homework",
-          "korean": "과제"
+          "english": "homework"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(moku)_06_b.opus",
@@ -11357,8 +11125,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "題名（だいめい）",
         "meaning": {
-          "english": "title",
-          "korean": "제목"
+          "english": "title"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(moku)_06_c.opus",
@@ -11370,8 +11137,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "主題（しゅだい）",
         "meaning": {
-          "english": "theme",
-          "korean": "주제"
+          "english": "theme"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(moku)_06_d.opus",
@@ -11383,8 +11149,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "話題（わだい）",
         "meaning": {
-          "english": "topic",
-          "korean": "주제"
+          "english": "topic"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(moku)_06_e.opus",
@@ -11396,8 +11161,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "課題（かだい）",
         "meaning": {
-          "english": "subject, problem, assignment",
-          "korean": "과제, 문제, 과제"
+          "english": "subject, problem, assignment"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(moku)_06_f.opus",
@@ -11409,8 +11173,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "出題する（しゅつだいする）",
         "meaning": {
-          "english": "propose a question",
-          "korean": "질문을 제안하다"
+          "english": "propose a question"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(moku)_06_g.opus",
@@ -11454,8 +11217,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "使",
       "meaning": {
-        "english": "use, envoy",
-        "korean": "사용, 사람"
+        "english": "use, envoy"
       },
       "strokes": {
         "count": 8,
@@ -11538,8 +11300,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "使用する（しようする）",
         "meaning": {
-          "english": "use [v.t.]",
-          "korean": "사용하다"
+          "english": "use [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-tsuka(u)_06_a.opus",
@@ -11551,8 +11312,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "行使する（こうしする）",
         "meaning": {
-          "english": "exercise [v.t.]",
-          "korean": "실행하다"
+          "english": "exercise [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-tsuka(u)_06_b.opus",
@@ -11564,8 +11324,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "駆使する（くしする）",
         "meaning": {
-          "english": "use freely",
-          "korean": "자유롭게 사용하다"
+          "english": "use freely"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-tsuka(u)_06_c.opus",
@@ -11577,8 +11336,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "使役形（しえきけい）",
         "meaning": {
-          "english": "causative form",
-          "korean": "사용하다"
+          "english": "causative form"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-tsuka(u)_06_d.opus",
@@ -11590,8 +11348,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "使命（しめい）",
         "meaning": {
-          "english": "mission",
-          "korean": "임무"
+          "english": "mission"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-tsuka(u)_06_e.opus",
@@ -11603,8 +11360,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "大使（たいし）",
         "meaning": {
-          "english": "ambassador",
-          "korean": "대사"
+          "english": "ambassador"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-tsuka(u)_06_f.opus",
@@ -11616,8 +11372,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "天使（てんし）",
         "meaning": {
-          "english": "angel",
-          "korean": "천사"
+          "english": "angel"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-tsuka(u)_06_g.opus",
@@ -11629,8 +11384,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "使う（つかう）",
         "meaning": {
-          "english": "use",
-          "korean": "사용하다"
+          "english": "use"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-tsuka(u)_06_h.opus",
@@ -11642,8 +11396,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "魔法使い（まほうつかい）",
         "meaning": {
-          "english": "wizard",
-          "korean": "마법사"
+          "english": "wizard"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-tsuka(u)_06_i.opus",
@@ -11677,8 +11430,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "考",
       "meaning": {
-        "english": "think",
-        "korean": "생각하다"
+        "english": "think"
       },
       "strokes": {
         "count": 6,
@@ -11757,8 +11509,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "参考書（さんこうしょ）",
         "meaning": {
-          "english": "reference book",
-          "korean": "참고서"
+          "english": "reference book"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kanga(e)_06_a.opus",
@@ -11770,8 +11521,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "考古学（こうこがく）",
         "meaning": {
-          "english": "archaeology",
-          "korean": "고고학"
+          "english": "archaeology"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kanga(e)_06_b.opus",
@@ -11783,8 +11533,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "考慮する（こうりょする）",
         "meaning": {
-          "english": "take into consideration",
-          "korean": "고려하다"
+          "english": "take into consideration"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kanga(e)_06_c.opus",
@@ -11796,8 +11545,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "思考する（しこうする）",
         "meaning": {
-          "english": "think",
-          "korean": "생각하다"
+          "english": "think"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kanga(e)_06_d.opus",
@@ -11809,8 +11557,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "選考する（せんこうする）",
         "meaning": {
-          "english": "screen [v.t.]",
-          "korean": "선발하다"
+          "english": "screen [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kanga(e)_06_e.opus",
@@ -11822,8 +11569,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "考え（かんがえ）",
         "meaning": {
-          "english": "ideas",
-          "korean": "아이디어"
+          "english": "ideas"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kanga(e)_06_f.opus",
@@ -11835,8 +11581,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "考える（かんがえる）",
         "meaning": {
-          "english": "think",
-          "korean": "생각하다"
+          "english": "think"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kanga(e)_06_g.opus",
@@ -11868,8 +11613,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "界",
       "meaning": {
-        "english": "world, boundary",
-        "korean": "세계, 경계"
+        "english": "world, boundary"
       },
       "strokes": {
         "count": 9,
@@ -11954,8 +11698,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "世界（せかい）",
         "meaning": {
-          "english": "world",
-          "korean": "세계"
+          "english": "world"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(se)kai_06_a.opus",
@@ -11967,8 +11710,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "業界（ぎょうかい）",
         "meaning": {
-          "english": "industry, business",
-          "korean": "산업, 사업"
+          "english": "industry, business"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(se)kai_06_b.opus",
@@ -11980,8 +11722,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "学界（がっかい）",
         "meaning": {
-          "english": "academic world",
-          "korean": "학술 세계"
+          "english": "academic world"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(se)kai_06_c.opus",
@@ -11993,8 +11734,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "政界（せいかい）",
         "meaning": {
-          "english": "political world",
-          "korean": "정치 세계"
+          "english": "political world"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(se)kai_06_d.opus",
@@ -12006,8 +11746,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "経済界（けいざいかい）",
         "meaning": {
-          "english": "economic world",
-          "korean": "경제 세계"
+          "english": "economic world"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(se)kai_06_e.opus",
@@ -12019,8 +11758,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "限界（げんかい）",
         "meaning": {
-          "english": "limit [n.]",
-          "korean": "한계"
+          "english": "limit [n.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(se)kai_06_f.opus",
@@ -12032,8 +11770,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "境界（きょうかい）",
         "meaning": {
-          "english": "boundary",
-          "korean": "경계"
+          "english": "boundary"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(se)kai_06_g.opus",
@@ -12045,8 +11782,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "他界する（たかいする）",
         "meaning": {
-          "english": "pass away",
-          "korean": "죽다"
+          "english": "pass away"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(se)kai_06_h.opus",
@@ -12081,8 +11817,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "別",
       "meaning": {
-        "english": "separate, another",
-        "korean": "다른, 분리하다"
+        "english": "separate, another"
       },
       "strokes": {
         "count": 7,
@@ -12163,8 +11898,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "特別な（とくべつな）",
         "meaning": {
-          "english": "special",
-          "korean": "특별한"
+          "english": "special"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/betsu-waka(re)_06_a.opus",
@@ -12176,8 +11910,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "別な（べつな）",
         "meaning": {
-          "english": "different, another",
-          "korean": "다른, 분리하다"
+          "english": "different, another"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/betsu-waka(re)_06_b.opus",
@@ -12189,8 +11922,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "別々に（べつべつに）",
         "meaning": {
-          "english": "separately",
-          "korean": "분리하다"
+          "english": "separately"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/betsu-waka(re)_06_c.opus",
@@ -12202,8 +11934,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "個別に（こべつに）",
         "meaning": {
-          "english": "individually",
-          "korean": "개별적으로"
+          "english": "individually"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/betsu-waka(re)_06_d.opus",
@@ -12215,8 +11946,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "別離（べつり）",
         "meaning": {
-          "english": "parting",
-          "korean": "분리하다"
+          "english": "parting"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/betsu-waka(re)_06_e.opus",
@@ -12228,8 +11958,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "別荘（べっそう）",
         "meaning": {
-          "english": "summer home",
-          "korean": "여름 집"
+          "english": "summer home"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/betsu-waka(re)_06_f.opus",
@@ -12241,8 +11970,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "別世界（べっせかい）",
         "meaning": {
-          "english": "another world",
-          "korean": "다른 세계"
+          "english": "another world"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/betsu-waka(re)_06_g.opus",
@@ -12254,8 +11982,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "差別する（さべつする）",
         "meaning": {
-          "english": "discriminate",
-          "korean": "차별하다"
+          "english": "discriminate"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/betsu-waka(re)_06_h.opus",
@@ -12267,8 +11994,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "区別する（くべつする）",
         "meaning": {
-          "english": "differentiate",
-          "korean": "구분하다"
+          "english": "differentiate"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/betsu-waka(re)_06_i.opus",
@@ -12280,8 +12006,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "別居する（べっきょする）",
         "meaning": {
-          "english": "separate (i.e. a married couple)",
-          "korean": "분리하다"
+          "english": "separate (i.e. a married couple)"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/betsu-waka(re)_06_j.opus",
@@ -12293,8 +12018,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "別れる（わかれる）",
         "meaning": {
-          "english": "be divided, part from",
-          "korean": "분리하다"
+          "english": "be divided, part from"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/betsu-waka(re)_06_k.opus",
@@ -12327,8 +12051,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "以",
       "meaning": {
-        "english": "to the ... of, by means of",
-        "korean": "~에 대하여, 방법으로"
+        "english": "to the ... of, by means of"
       },
       "strokes": {
         "count": 5,
@@ -12405,8 +12128,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "以上（いじょう）",
         "meaning": {
-          "english": "more than",
-          "korean": "~보다"
+          "english": "more than"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(nai)_06_a.opus",
@@ -12418,8 +12140,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "以下（いか）",
         "meaning": {
-          "english": "less than",
-          "korean": "~보다"
+          "english": "less than"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(nai)_06_b.opus",
@@ -12431,8 +12152,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "以来（いらい）",
         "meaning": {
-          "english": "since",
-          "korean": "~이후"
+          "english": "since"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(nai)_06_c.opus",
@@ -12444,8 +12164,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "以外（いがい）",
         "meaning": {
-          "english": "except",
-          "korean": "~을 제외하고"
+          "english": "except"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(nai)_06_d.opus",
@@ -12457,8 +12176,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "以内（いない）",
         "meaning": {
-          "english": "within, less than",
-          "korean": "~ 이내"
+          "english": "within, less than"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(nai)_06_e.opus",
@@ -12470,8 +12188,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "以降（いこう）",
         "meaning": {
-          "english": "hereafter, thereafter",
-          "korean": "~ 이후"
+          "english": "hereafter, thereafter"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(nai)_06_f.opus",
@@ -12483,8 +12200,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "以心伝心（いしんでんしん）",
         "meaning": {
-          "english": "tacit understanding",
-          "korean": "암시적 이해"
+          "english": "tacit understanding"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(nai)_06_g.opus",
@@ -12496,8 +12212,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "以って（もって）",
         "meaning": {
-          "english": "with, by means of",
-          "korean": "~ 과 함께"
+          "english": "with, by means of"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(nai)_06_h.opus",
@@ -12528,8 +12243,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "元",
       "meaning": {
-        "english": "origin",
-        "korean": "원점"
+        "english": "origin"
       },
       "strokes": {
         "count": 4,
@@ -12604,8 +12318,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "元気な（げんきな）",
         "meaning": {
-          "english": "energetic",
-          "korean": "에너지 있는"
+          "english": "energetic"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gen-moto_06_a.opus",
@@ -12617,8 +12330,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "紀元前（きげんぜん）",
         "meaning": {
-          "english": "B.C.E.",
-          "korean": "기원전"
+          "english": "B.C.E."
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gen-moto_06_b.opus",
@@ -12630,8 +12342,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "三次元（さんじげん）",
         "meaning": {
-          "english": "3 dimensions",
-          "korean": "3 차원"
+          "english": "3 dimensions"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gen-moto_06_c.opus",
@@ -12643,8 +12354,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "元祖（がんそ）",
         "meaning": {
-          "english": "founder, inventor",
-          "korean": "창시자, 발명가"
+          "english": "founder, inventor"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gen-moto_06_d.opus",
@@ -12656,8 +12366,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "元年（がんねん）",
         "meaning": {
-          "english": "first year (of a specific reign)",
-          "korean": "첫 해 (특정 시대)"
+          "english": "first year (of a specific reign)"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gen-moto_06_e.opus",
@@ -12669,8 +12378,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "製造元（せいぞうもと）",
         "meaning": {
-          "english": "manufacturer",
-          "korean": "제조사"
+          "english": "manufacturer"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gen-moto_06_f.opus",
@@ -12682,8 +12390,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "地元（じもと）",
         "meaning": {
-          "english": "local",
-          "korean": "지역"
+          "english": "local"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gen-moto_06_g.opus",
@@ -12695,8 +12402,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "身元（みもと）",
         "meaning": {
-          "english": "person's identity",
-          "korean": "사람의 신분"
+          "english": "person's identity"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gen-moto_06_h.opus",
@@ -12726,8 +12432,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "待",
       "meaning": {
-        "english": "wait",
-        "korean": "기다리다"
+        "english": "wait"
       },
       "strokes": {
         "count": 9,
@@ -12783,8 +12488,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "gyouninben"
       },
       "meaning": {
-        "english": "step, stride, street, to go",
-        "korean": "걸음, 걸음, 거리, 가다"
+        "english": "step, stride, street, to go"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/gyouninben0.svg",
@@ -12813,8 +12517,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "待機する（たいきする）",
         "meaning": {
-          "english": "stand by",
-          "korean": "대기하다"
+          "english": "stand by"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ma(tsu)_06_a.opus",
@@ -12826,8 +12529,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "期待する（きたいする）",
         "meaning": {
-          "english": "hope",
-          "korean": "기대하다"
+          "english": "hope"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ma(tsu)_06_b.opus",
@@ -12839,8 +12541,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "招待する（しょうたいする）",
         "meaning": {
-          "english": "invite",
-          "korean": "초대하다"
+          "english": "invite"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ma(tsu)_06_c.opus",
@@ -12852,8 +12553,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "待つ（まつ）",
         "meaning": {
-          "english": "wait",
-          "korean": "기다리다"
+          "english": "wait"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ma(tsu)_06_d.opus",
@@ -12865,8 +12565,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "待たせる（またせる）",
         "meaning": {
-          "english": "keep (a person) waiting",
-          "korean": "기다리다"
+          "english": "keep (a person) waiting"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ma(tsu)_06_e.opus",
@@ -12878,8 +12577,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "待ち合わせる（まちあわせる）",
         "meaning": {
-          "english": "rendezvous",
-          "korean": "모임"
+          "english": "rendezvous"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ma(tsu)_06_f.opus",
@@ -12891,8 +12589,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "待合室（まちあいしつ）",
         "meaning": {
-          "english": "waiting room",
-          "korean": "대기실"
+          "english": "waiting room"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ma(tsu)_06_g.opus",
@@ -12927,8 +12624,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "安",
       "meaning": {
-        "english": "peaceful, inexpensive",
-        "korean": "평화로운, 저렴한"
+        "english": "peaceful, inexpensive"
       },
       "strokes": {
         "count": 6,
@@ -12978,8 +12674,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ukanmuri"
       },
       "meaning": {
-        "english": "roof, house",
-        "korean": "지붕, 집"
+        "english": "roof, house"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ukanmuri0.svg",
@@ -13008,8 +12703,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "安定する（あんていする）",
         "meaning": {
-          "english": "become stable",
-          "korean": "안정하다"
+          "english": "become stable"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yasu(i)_06_a.opus",
@@ -13021,8 +12715,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "安心する（あんしんする）",
         "meaning": {
-          "english": "be relieved",
-          "korean": "안심하다"
+          "english": "be relieved"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yasu(i)_06_b.opus",
@@ -13034,8 +12727,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不安な（ふあんな）",
         "meaning": {
-          "english": "anxious",
-          "korean": "불안하다"
+          "english": "anxious"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yasu(i)_06_c.opus",
@@ -13047,8 +12739,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "安全な（あんぜんな）",
         "meaning": {
-          "english": "safe",
-          "korean": "안전하다"
+          "english": "safe"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yasu(i)_06_d.opus",
@@ -13060,8 +12751,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "治安（ちあん）",
         "meaning": {
-          "english": "public peace and order",
-          "korean": "공공 평화와 주민 안전"
+          "english": "public peace and order"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yasu(i)_06_e.opus",
@@ -13073,8 +12763,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "安い（やすい）",
         "meaning": {
-          "english": "cheap",
-          "korean": "저렴한"
+          "english": "cheap"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yasu(i)_06_f.opus",
@@ -13086,8 +12775,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "安らぎ（やすらぎ）",
         "meaning": {
-          "english": "peace",
-          "korean": "평화"
+          "english": "peace"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yasu(i)_06_g.opus",
@@ -13099,8 +12787,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "安らか（やすらか）",
         "meaning": {
-          "english": "restful",
-          "korean": "편안한"
+          "english": "restful"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yasu(i)_06_h.opus",
@@ -13112,8 +12799,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "安まる（やすまる）",
         "meaning": {
-          "english": "feel rested",
-          "korean": "편안해지다"
+          "english": "feel rested"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yasu(i)_06_i.opus",
@@ -13145,8 +12831,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "近",
       "meaning": {
-        "english": "near, recent",
-        "korean": "가까운, 최근"
+        "english": "near, recent"
       },
       "strokes": {
         "count": 7,
@@ -13227,8 +12912,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "近視（きんし）",
         "meaning": {
-          "english": "shortsightedness",
-          "korean": "시력 저하"
+          "english": "shortsightedness"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chika(ku)_06_a.opus",
@@ -13240,8 +12924,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "近所（きんじょ）",
         "meaning": {
-          "english": "neighborhood",
-          "korean": "근처"
+          "english": "neighborhood"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chika(ku)_06_b.opus",
@@ -13253,8 +12936,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "最近（さいきん）",
         "meaning": {
-          "english": "recently",
-          "korean": "최근"
+          "english": "recently"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chika(ku)_06_c.opus",
@@ -13266,8 +12948,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "近代（きんだい）",
         "meaning": {
-          "english": "modern",
-          "korean": "현대"
+          "english": "modern"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chika(ku)_06_d.opus",
@@ -13279,8 +12960,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "接近する（せっきんする）",
         "meaning": {
-          "english": "approach",
-          "korean": "접근하다"
+          "english": "approach"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chika(ku)_06_e.opus",
@@ -13292,8 +12972,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "近く（ちかく）",
         "meaning": {
-          "english": "nearby [n.]",
-          "korean": "근처"
+          "english": "nearby [n.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chika(ku)_06_f.opus",
@@ -13305,8 +12984,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "近い（ちかい）",
         "meaning": {
-          "english": "nearby [adj.]",
-          "korean": "근처"
+          "english": "nearby [adj.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chika(ku)_06_g.opus",
@@ -13318,8 +12996,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "近付く（ちかづく）",
         "meaning": {
-          "english": "come near, approach",
-          "korean": "접근하다"
+          "english": "come near, approach"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chika(ku)_06_h.opus",
@@ -13331,8 +13008,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "近道（ちかみち）",
         "meaning": {
-          "english": "shortcut",
-          "korean": "짧은 길"
+          "english": "shortcut"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chika(ku)_06_i.opus",
@@ -13344,8 +13020,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "身近な（みぢかな）",
         "meaning": {
-          "english": "close, familiar",
-          "korean": "가까운, 친숙한"
+          "english": "close, familiar"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chika(ku)_06_j.opus",
@@ -13378,8 +13053,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "真",
       "meaning": {
-        "english": "true, genuine",
-        "korean": "진실한, 진정한"
+        "english": "true, genuine"
       },
       "strokes": {
         "count": 10,
@@ -13466,8 +13140,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "写真（しゃしん）",
         "meaning": {
-          "english": "photograph",
-          "korean": "사진"
+          "english": "photograph"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(sha)shin_06_a.opus",
@@ -13479,8 +13152,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "真意（しんい）",
         "meaning": {
-          "english": "real intention",
-          "korean": "진실한 의도"
+          "english": "real intention"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(sha)shin_06_b.opus",
@@ -13492,8 +13164,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "真実（しんじつ）",
         "meaning": {
-          "english": "truth",
-          "korean": "진실"
+          "english": "truth"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(sha)shin_06_c.opus",
@@ -13505,8 +13176,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "真偽（しんぎ）",
         "meaning": {
-          "english": "truth or falsity",
-          "korean": "진실 또는 거짓"
+          "english": "truth or falsity"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(sha)shin_06_d.opus",
@@ -13518,8 +13188,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "真面目な（まじめな）",
         "meaning": {
-          "english": "serious",
-          "korean": "심각한"
+          "english": "serious"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(sha)shin_06_e.opus",
@@ -13531,8 +13200,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "真っ直ぐ（まっすぐ）",
         "meaning": {
-          "english": "straight",
-          "korean": "직선의"
+          "english": "straight"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(sha)shin_06_f.opus",
@@ -13544,8 +13212,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "真似する（まねする）",
         "meaning": {
-          "english": "imitate",
-          "korean": "모방하다"
+          "english": "imitate"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(sha)shin_06_g.opus",
@@ -13557,8 +13224,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "真ん中（まんなか）",
         "meaning": {
-          "english": "middle",
-          "korean": "중간"
+          "english": "middle"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(sha)shin_06_h.opus",
@@ -13570,8 +13236,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "真上（まうえ）",
         "meaning": {
-          "english": "just above",
-          "korean": "위"
+          "english": "just above"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(sha)shin_06_i.opus",
@@ -13607,8 +13272,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "少",
       "meaning": {
-        "english": "little",
-        "korean": "적은"
+        "english": "little"
       },
       "strokes": {
         "count": 4,
@@ -13683,8 +13347,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "少々（しょうしょう）",
         "meaning": {
-          "english": "small quantity, a little",
-          "korean": "적은 양"
+          "english": "small quantity, a little"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/suko(shi)_06_a.opus",
@@ -13696,8 +13359,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "少数（しょうすう）",
         "meaning": {
-          "english": "minority",
-          "korean": "소수"
+          "english": "minority"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/suko(shi)_06_b.opus",
@@ -13709,8 +13371,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "少量（しょうりょう）",
         "meaning": {
-          "english": "small quantity",
-          "korean": "적은 양"
+          "english": "small quantity"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/suko(shi)_06_c.opus",
@@ -13722,8 +13383,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "少額（しょうがく）",
         "meaning": {
-          "english": "small sum (of money)",
-          "korean": "적은 금액"
+          "english": "small sum (of money)"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/suko(shi)_06_d.opus",
@@ -13735,8 +13395,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "多少（たしょう）",
         "meaning": {
-          "english": "more or less",
-          "korean": "어떤 정도"
+          "english": "more or less"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/suko(shi)_06_e.opus",
@@ -13748,8 +13407,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "少年（しょうねん）",
         "meaning": {
-          "english": "boy",
-          "korean": "소년"
+          "english": "boy"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/suko(shi)_06_f.opus",
@@ -13761,8 +13419,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "減少する（げんしょうする）",
         "meaning": {
-          "english": "decrease [v.i.]",
-          "korean": "감소하다"
+          "english": "decrease [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/suko(shi)_06_g.opus",
@@ -13774,8 +13431,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "少ない（すくない）",
         "meaning": {
-          "english": "a few, a little",
-          "korean": "조금"
+          "english": "a few, a little"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/suko(shi)_06_h.opus",
@@ -13787,8 +13443,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "少なくとも（すくなくとも）",
         "meaning": {
-          "english": "at least",
-          "korean": "적어도"
+          "english": "at least"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/suko(shi)_06_i.opus",
@@ -13831,8 +13486,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "切",
       "meaning": {
-        "english": "cut",
-        "korean": "자르다"
+        "english": "cut"
       },
       "strokes": {
         "count": 4,
@@ -13878,8 +13532,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "katana"
       },
       "meaning": {
-        "english": "knife, sword",
-        "korean": "칼, 검"
+        "english": "knife, sword"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/katana0.svg",
@@ -14057,7 +13710,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "主",
       "meaning": {
         "english": "main, master",
-        "korean": "주인, 주인公"
+        "korean": "주인"
       },
       "strokes": {
         "count": 5,
@@ -14135,7 +13788,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "主人（しゅじん）",
         "meaning": {
           "english": "one's own husband",
-          "korean": "나의 남편"
+          "korean": "내 남편"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/nushi_06_a.opus",
@@ -14213,7 +13866,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "坊主（ぼうず）",
         "meaning": {
           "english": "Buddhist priest",
-          "korean": "불교 사도"
+          "korean": "불교 사람"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/nushi_06_g.opus",
@@ -14265,7 +13918,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "一家の主（いっかのあるじ）",
         "meaning": {
           "english": "master of the household",
-          "korean": "가문의 주인"
+          "korean": "가족의 주인"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/nushi_06_k.opus",
@@ -14356,8 +14009,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "itohen"
       },
       "meaning": {
-        "english": "thread",
-        "korean": "실"
+        "english": "thread"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/itohen0.svg",
@@ -14413,7 +14065,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "最終（さいしゅう）",
         "meaning": {
           "english": "final",
-          "korean": "최종"
+          "korean": "마지막"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/o(waru)_06_c.opus",
@@ -14624,7 +14276,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "楽な（らくな）",
         "meaning": {
           "english": "comfortable",
-          "korean": "편안한"
+          "korean": "편안함"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tano(shii)_06_c.opus",
@@ -14798,7 +14450,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "oto"
       },
       "meaning": {
-        "english": "sound, noise"
+        "english": "sound, noise",
+        "korean": "소리, 소음"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/oto0.svg",
@@ -14880,7 +14533,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "観音様（かんのんさま）",
         "meaning": {
           "english": "Kannon, Goddess of Mercy",
-          "korean": "온천 주님"
+          "korean": "관음사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oto_06_e.opus",
@@ -15056,7 +14709,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "shinnyou"
       },
       "meaning": {
-        "english": "road, walk, to advance"
+        "english": "road, walk, to advance",
+        "korean": "도로, 걷다, 나아가다"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/shinnyou0.svg",
@@ -15242,7 +14896,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "親",
       "meaning": {
         "english": "parent, relatives, intimate",
-        "korean": "부모, 친척, 친밀한"
+        "korean": "부모, 친족, 친밀한"
       },
       "strokes": {
         "count": 16,
@@ -15356,7 +15010,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "親戚（しんせき）",
         "meaning": {
           "english": "relative",
-          "korean": "친척"
+          "korean": "친족"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shita(shii)_06_b.opus",
@@ -15434,7 +15088,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "親会社（おやがいしゃ）",
         "meaning": {
           "english": "parent company",
-          "korean": "부모 회사"
+          "korean": "주요 회사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shita(shii)_06_h.opus",
@@ -15792,7 +15446,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "onnahen"
       },
       "meaning": {
-        "english": "woman"
+        "english": "woman",
+        "korean": "여자"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/onnahen0.svg",
@@ -15835,7 +15490,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "年始（ねんし）",
         "meaning": {
           "english": "beginning of the year",
-          "korean": "년 시작"
+          "korean": "연초"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/haji(maru)_06_b.opus",
@@ -15848,7 +15503,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "始業式（しぎょうしき）",
         "meaning": {
           "english": "opening ceremony (for a school)",
-          "korean": "시작 축하"
+          "korean": "개교식"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/haji(maru)_06_c.opus",
@@ -16002,7 +15657,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "多分（たぶん）",
         "meaning": {
           "english": "perhaps",
-          "korean": "아마"
+          "korean": "아마도"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ta-oo(i)_06_a.opus",
@@ -16028,7 +15683,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "多少（たしょう）",
         "meaning": {
           "english": "more or less",
-          "korean": "약간"
+          "korean": "어떤 정도"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ta-oo(i)_06_c.opus",
@@ -16041,7 +15696,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "多目的（たもくてき）",
         "meaning": {
           "english": "multipurpose",
-          "korean": "다양한"
+          "korean": "다양한 목적"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ta-oo(i)_06_d.opus",
@@ -16067,7 +15722,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "多めに（おおめに）",
         "meaning": {
           "english": "generously",
-          "korean": "여유롭게"
+          "korean": "많이"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ta-oo(i)_06_f.opus",
@@ -16150,7 +15805,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "hi"
       },
       "meaning": {
-        "english": "sun, day, time"
+        "english": "sun, day, time",
+        "korean": "태양, 날, 시간"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/hi0.svg",
@@ -16180,7 +15836,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "早朝（そうちょう）",
         "meaning": {
           "english": "early morning",
-          "korean": "일찍 아침"
+          "korean": "조조"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-haya(i)_06_a.opus",
@@ -16232,7 +15888,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "早まる（はやまる）",
         "meaning": {
           "english": "be rash [v.i.]",
-          "korean": "급하게 되다"
+          "korean": "급한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-haya(i)_06_e.opus",
@@ -16245,7 +15901,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "早める（はやめる）",
         "meaning": {
           "english": "hasten [v.t.]",
-          "korean": "빨리 하다"
+          "korean": "급하게"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-haya(i)_06_f.opus",
@@ -16339,7 +15995,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ninben"
       },
       "meaning": {
-        "english": "person "
+        "english": "person ",
+        "korean": "사람"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ninben0.svg",
@@ -16395,7 +16052,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "仕方がない（しかたがない）",
         "meaning": {
           "english": "it can't be helped",
-          "korean": "도와주지 못하다"
+          "korean": "도와주다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(goto)_06_c.opus",
@@ -16434,7 +16091,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "仕上げる（しあげる）",
         "meaning": {
           "english": "finish up",
-          "korean": "끝내다"
+          "korean": "마무리"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(goto)_06_f.opus",
@@ -16447,7 +16104,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "仕返しする（しかえしする）",
         "meaning": {
           "english": "revenge",
-          "korean": "복수하다"
+          "korean": "복수"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(goto)_06_g.opus",
@@ -16473,7 +16130,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "仕える（つかえる）",
         "meaning": {
           "english": "serve [v.i.]",
-          "korean": "서비스하다"
+          "korean": "서비스"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi(goto)_06_i.opus",
@@ -16518,7 +16175,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "海",
       "meaning": {
         "english": "sea, ocean",
-        "korean": "바다, 바다"
+        "korean": "바다"
       },
       "strokes": {
         "count": 9,
@@ -16574,7 +16231,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "sanzui"
       },
       "meaning": {
-        "english": "water"
+        "english": "water",
+        "korean": "물"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/sanzui0.svg",
@@ -16708,7 +16366,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "*海苔（のり）",
         "meaning": {
           "english": "sea seed sheet",
-          "korean": "바다 씨 종이"
+          "korean": "해초"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kai-umi_06_i.opus",
@@ -16743,8 +16401,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "悪",
       "meaning": {
-        "english": "bad, evil",
-        "korean": "나쁜, 악한"
+        "english": "bad, evil"
       },
       "strokes": {
         "count": 11,
@@ -16804,7 +16461,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kokoro"
       },
       "meaning": {
-        "english": "heart, mind, spirit"
+        "english": "heart, mind, spirit",
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kokoro0.svg",
@@ -16912,7 +16569,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "悪い（わるい）",
         "meaning": {
           "english": "bad",
-          "korean": "나쁜"
+          "korean": "악"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/waru(i)_06_g.opus",
@@ -16925,7 +16582,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "悪口（わるくち）",
         "meaning": {
           "english": "slander, abuse [n.]",
-          "korean": "중상"
+          "korean": "악한 말"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/waru(i)_06_h.opus",
@@ -16988,8 +16645,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "止",
       "meaning": {
-        "english": "stop",
-        "korean": "멈춤"
+        "english": "stop"
       },
       "strokes": {
         "count": 4,
@@ -17035,7 +16691,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "tomeru"
       },
       "meaning": {
-        "english": "to stop"
+        "english": "to stop",
+        "korean": "멈추다"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/tomeru0.svg",
@@ -17065,7 +16722,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "停止する（ていしする）",
         "meaning": {
           "english": "stop",
-          "korean": "멈춤"
+          "korean": "멈추다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-to(maru)_06_a.opus",
@@ -17078,7 +16735,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "中止する（ちゅうしする）",
         "meaning": {
           "english": "cancel",
-          "korean": "취소"
+          "korean": "취소하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-to(maru)_06_b.opus",
@@ -17091,7 +16748,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "廃止する（はいしする）",
         "meaning": {
           "english": "abolish",
-          "korean": "폐지하다"
+          "korean": "취소하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-to(maru)_06_c.opus",
@@ -17117,7 +16774,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "止まる（とまる）",
         "meaning": {
           "english": "stop [v.i.]",
-          "korean": "멈춤"
+          "korean": "멈추다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-to(maru)_06_e.opus",
@@ -17143,7 +16800,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "止む（やむ）",
         "meaning": {
           "english": "(e.g. rain) stop [v.i.]",
-          "korean": "멈춤"
+          "korean": "멈추다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-to(maru)_06_g.opus",
@@ -17243,7 +16900,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "sato"
       },
       "meaning": {
-        "english": "village, (3.93 km)"
+        "english": "village, (3.93 km)",
+        "korean": "마을, (3.93 km)"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/sato0.svg",
@@ -17338,7 +16996,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "慎重な（しんちょうな）",
         "meaning": {
           "english": "prudent",
-          "korean": "신중하게 하다"
+          "korean": "신중한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/juu-omo(ri)_06_f.opus",
@@ -17506,7 +17164,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kannyou"
       },
       "meaning": {
-        "english": "container, open box"
+        "english": "container, open box",
+        "korean": "컨테이너, 열린 박스"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kannyou0.svg",
@@ -17614,7 +17273,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "画数（かくすう）",
         "meaning": {
           "english": "stroke count",
-          "korean": "자수"
+          "korean": "작품 수"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ei)ga_06_g.opus",
@@ -17627,7 +17286,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "画期的（かっきてき）",
         "meaning": {
           "english": "epoch-making",
-          "korean": "시대를 바꾸다"
+          "korean": "시대를 바꾸는"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ei)ga_06_h.opus",
@@ -17706,7 +17365,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kuchi"
       },
       "meaning": {
-        "english": "mouth"
+        "english": "mouth",
+        "korean": "입"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kuchi0.svg",
@@ -17840,7 +17500,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "悪口（わるぐち）",
         "meaning": {
           "english": "slander, abuse",
-          "korean": "중상"
+          "korean": "악한 말"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kuchi_06_i.opus",
@@ -17937,7 +17597,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kuchihen"
       },
       "meaning": {
-        "english": "mouth"
+        "english": "mouth",
+        "korean": "입"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kuchihen0.svg",
@@ -17980,7 +17641,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "興味（きょうみ）",
         "meaning": {
           "english": "interest (in something)",
-          "korean": "관심 (무언가에)"
+          "korean": "관심"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aji(wau)_06_b.opus",
@@ -18006,7 +17667,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "味噌（みそ）",
         "meaning": {
           "english": "bean paste",
-          "korean": "된장"
+          "korean": "맛사지"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aji(wau)_06_d.opus",
@@ -18147,7 +17808,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "anakanmuri"
       },
       "meaning": {
-        "english": "hole, cave"
+        "english": "hole, cave",
+        "korean": "구멍, 동굴"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/anakanmuri0.svg",
@@ -18216,7 +17878,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "空車（くうしゃ）",
         "meaning": {
           "english": "free taxi",
-          "korean": "무료 택시"
+          "korean": "빈 택시"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sora_06_d.opus",
@@ -18294,7 +17956,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "空（から）",
         "meaning": {
           "english": "empty [n.]",
-          "korean": "빈"
+          "korean": "빈 공간"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sora_06_j.opus",
@@ -18307,7 +17969,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "空手（からて）",
         "meaning": {
           "english": "karate",
-          "korean": "가라테"
+          "korean": "공수도"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sora_06_k.opus",
@@ -18320,7 +17982,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "空しい（むなしい）",
         "meaning": {
           "english": "feel empty [adj.]",
-          "korean": "빈 감각"
+          "korean": "빈 느낌"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sora_06_l.opus",
@@ -18407,7 +18069,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "mi"
       },
       "meaning": {
-        "english": "body"
+        "english": "body",
+        "korean": "몸"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/mi0.svg",
@@ -18450,7 +18113,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "身長（しんちょう）",
         "meaning": {
           "english": "height (of body)",
-          "korean": "신장"
+          "korean": "몸 높이"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mi(gara)_06_b.opus",
@@ -18502,7 +18165,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "出身（しゅっしん）",
         "meaning": {
           "english": "birth place, graduate [n.]",
-          "korean": "출신"
+          "korean": "출신, 졸업"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mi(gara)_06_f.opus",
@@ -18541,7 +18204,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "身（み）",
         "meaning": {
           "english": "body, meaty part",
-          "korean": "몸"
+          "korean": "몸, 고기 부위"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mi(gara)_06_i.opus",
@@ -18554,7 +18217,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "身近な（みぢかな）",
         "meaning": {
           "english": "familiar",
-          "korean": "친밀한"
+          "korean": "친숙한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mi(gara)_06_j.opus",
@@ -18580,7 +18243,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "刺身（さしみ）",
         "meaning": {
           "english": "sliced raw fish",
-          "korean": "생선 절단"
+          "korean": "생선 슬라이스"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mi(gara)_06_l.opus",
@@ -18614,7 +18277,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "運",
       "meaning": {
         "english": "carry, move, fortune",
-        "korean": "운송, 이동, 운명"
+        "korean": "운, 운전, 운명"
       },
       "strokes": {
         "count": 12,
@@ -18810,7 +18473,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "運ぶ（はこぶ）",
         "meaning": {
           "english": "transport",
-          "korean": "운송하다"
+          "korean": "운반하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hako(bu)_06_i.opus",
@@ -18849,7 +18512,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "帰",
       "meaning": {
         "english": "return",
-        "korean": "귀환"
+        "korean": "귀국하다"
       },
       "strokes": {
         "count": 10,
@@ -18937,7 +18600,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "帰国する（きこくする）",
         "meaning": {
           "english": "return to one's own country",
-          "korean": "귀환하다"
+          "korean": "귀국하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ki-kae(ru)_06_a.opus",
@@ -18950,7 +18613,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "帰宅する（きたくする）",
         "meaning": {
           "english": "return home",
-          "korean": "귀환하다"
+          "korean": "귀가하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ki-kae(ru)_06_b.opus",
@@ -18963,7 +18626,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "復帰する（ふっきする）",
         "meaning": {
           "english": "come back",
-          "korean": "귀환하다"
+          "korean": "복귀하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ki-kae(ru)_06_c.opus",
@@ -18976,7 +18639,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "帰る（かえる）",
         "meaning": {
           "english": "go home, go back",
-          "korean": "귀환하다"
+          "korean": "귀가하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ki-kae(ru)_06_d.opus",
@@ -18989,7 +18652,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "日帰り（ひがえり）",
         "meaning": {
           "english": "day trip",
-          "korean": "귀환하다"
+          "korean": "하루 여행"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ki-kae(ru)_06_e.opus",
@@ -19026,7 +18689,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "集",
       "meaning": {
         "english": "collect",
-        "korean": "수집"
+        "korean": "모으다"
       },
       "strokes": {
         "count": 12,
@@ -19088,8 +18751,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "furutori"
       },
       "meaning": {
-        "english": "small bird",
-        "korean": "작은 새"
+        "english": "small bird"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/furutori0.svg",
@@ -19119,7 +18781,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "募集する（ぼしゅうする）",
         "meaning": {
           "english": "recruit, collect",
-          "korean": "수집하다"
+          "korean": "모집하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tsudo(u)_06_a.opus",
@@ -19275,7 +18937,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "急",
       "meaning": {
         "english": "urgent, hurry, sudden",
-        "korean": "급한, 빨리, 갑자기"
+        "korean": "급한, 빨리, 갑작스러운"
       },
       "strokes": {
         "count": 9,
@@ -19583,7 +19245,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "遠足（えんそく）",
         "meaning": {
           "english": "field trip",
-          "korean": "캠핑"
+          "korean": "축제 여행"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/soku-ashi_06_b.opus",
@@ -19747,8 +19409,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "samuraikanmuri"
       },
       "meaning": {
-        "english": "man, scholar, samurai",
-        "korean": "사무라이, 학자, 사람"
+        "english": "man, scholar, samurai"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/samuraikanmuri0.svg",
@@ -19804,7 +19465,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "発売する（はつばいする）",
         "meaning": {
           "english": "put a product on the market",
-          "korean": "시장에 판매하다"
+          "korean": "시장에 내다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bai-u(ru)_06_c.opus",
@@ -19948,8 +19609,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "sounyou"
       },
       "meaning": {
-        "english": "to run",
-        "korean": "달리다"
+        "english": "to run"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/sounyou0.svg",
@@ -19979,7 +19639,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "起床する（きしょうする）",
         "meaning": {
           "english": "get out of bed",
-          "korean": "침대에서 일어나다"
+          "korean": "일어나다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/o(kiru)_06_a.opus",
@@ -20135,8 +19795,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "yuube"
       },
       "meaning": {
-        "english": "evening",
-        "korean": "저녁"
+        "english": "evening"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/yuube0.svg",
@@ -20205,7 +19864,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "徹夜する（てつやする）",
         "meaning": {
           "english": "stay up all night",
-          "korean": "밤을 새우다"
+          "korean": "밤새 일하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yoru_06_d.opus",
@@ -20546,8 +20205,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "特",
       "meaning": {
-        "english": "special",
-        "korean": "특별"
+        "english": "special"
       },
       "strokes": {
         "count": 10,
@@ -20634,8 +20292,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "特色（とくしょく）",
         "meaning": {
-          "english": "characteristic",
-          "korean": "특징"
+          "english": "characteristic"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/toku(betsu)_06_a.opus",
@@ -20647,8 +20304,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "特徴（とくちょう）",
         "meaning": {
-          "english": "feature",
-          "korean": "특징"
+          "english": "feature"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/toku(betsu)_06_b.opus",
@@ -20660,8 +20316,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "特急（とっきゅう）",
         "meaning": {
-          "english": "express train",
-          "korean": "특급"
+          "english": "express train"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/toku(betsu)_06_c.opus",
@@ -20673,8 +20328,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "特別な（とくべつな）",
         "meaning": {
-          "english": "special",
-          "korean": "특별"
+          "english": "special"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/toku(betsu)_06_d.opus",
@@ -20686,8 +20340,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "特有な（とくゆうな）",
         "meaning": {
-          "english": "peculiar (to)",
-          "korean": "특별"
+          "english": "peculiar (to)"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/toku(betsu)_06_e.opus",
@@ -20699,8 +20352,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "独特な（どくとくな）",
         "meaning": {
-          "english": "unique",
-          "korean": "특별"
+          "english": "unique"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/toku(betsu)_06_f.opus",
@@ -20712,8 +20364,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "特訓する（とっくんする）",
         "meaning": {
-          "english": "give special training",
-          "korean": "특별 훈련"
+          "english": "give special training"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/toku(betsu)_06_g.opus",
@@ -20725,8 +20376,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "特集する（とくしゅうする）",
         "meaning": {
-          "english": "feature (e.g. newspaper)",
-          "korean": "특별 훈련"
+          "english": "feature (e.g. newspaper)"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/toku(betsu)_06_h.opus",
@@ -20762,8 +20412,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "品",
       "meaning": {
-        "english": "article, goods",
-        "korean": "품질, 재료"
+        "english": "article, goods"
       },
       "strokes": {
         "count": 9,
@@ -20848,8 +20497,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "品質（ひんしつ）",
         "meaning": {
-          "english": "quality",
-          "korean": "품질"
+          "english": "quality"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shina_06_a.opus",
@@ -20861,8 +20509,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "品種（ひんしゅ）",
         "meaning": {
-          "english": "brand",
-          "korean": "브랜드"
+          "english": "brand"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shina_06_b.opus",
@@ -20874,8 +20521,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "作品（さくひん）",
         "meaning": {
-          "english": "work (of fiction, etc.) [n.]",
-          "korean": "작품"
+          "english": "work (of fiction, etc.) [n.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shina_06_c.opus",
@@ -20887,8 +20533,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "製品（せいひん）",
         "meaning": {
-          "english": "manufactured goods",
-          "korean": "제품"
+          "english": "manufactured goods"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shina_06_d.opus",
@@ -20900,8 +20545,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "食品（しょくひん）",
         "meaning": {
-          "english": "food product",
-          "korean": "식품"
+          "english": "food product"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shina_06_e.opus",
@@ -20913,8 +20557,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "商品（しょうひん）",
         "meaning": {
-          "english": "merchandise",
-          "korean": "상품"
+          "english": "merchandise"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shina_06_f.opus",
@@ -20926,8 +20569,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "貴重品（きちょうひん）",
         "meaning": {
-          "english": "valuables",
-          "korean": "귀중품"
+          "english": "valuables"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shina_06_g.opus",
@@ -20939,8 +20581,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "上品な（じょうひんな）",
         "meaning": {
-          "english": "elegant",
-          "korean": "상품"
+          "english": "elegant"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shina_06_h.opus",
@@ -20952,8 +20593,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "返品する（へんぴんする）",
         "meaning": {
-          "english": "return (an item)",
-          "korean": "반품하다"
+          "english": "return (an item)"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shina_06_i.opus",
@@ -20965,8 +20605,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "品（しな）",
         "meaning": {
-          "english": "goods",
-          "korean": "상품"
+          "english": "goods"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shina_06_j.opus",
@@ -20978,8 +20617,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "品物（しなもの）",
         "meaning": {
-          "english": "goods",
-          "korean": "상품"
+          "english": "goods"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shina_06_k.opus",
@@ -20991,8 +20629,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "品切れ（しなぎれ）",
         "meaning": {
-          "english": "out of stock",
-          "korean": "품절"
+          "english": "out of stock"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shina_06_l.opus",
@@ -21084,7 +20721,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "gonben"
       },
       "meaning": {
-        "english": "words, to speak, say"
+        "english": "words, to speak, say",
+        "korean": "말, 말하다"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/gonben0.svg",
@@ -21230,7 +20868,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "合計する（ごうけいする）",
         "meaning": {
-          "english": "add up"
+          "english": "add up",
+          "korean": "합산하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kei-haka(ru)_06_j.opus",
@@ -21242,7 +20881,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "計る（はかる）",
         "meaning": {
-          "english": "measure"
+          "english": "measure",
+          "korean": "측정하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kei-haka(ru)_06_k.opus",
@@ -21277,7 +20917,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "店",
       "meaning": {
-        "english": "shop, store"
+        "english": "shop, store",
+        "korean": "가게"
       },
       "strokes": {
         "count": 8,
@@ -21331,7 +20972,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "madare"
       },
       "meaning": {
-        "english": "slanting roof"
+        "english": "slanting roof",
+        "korean": "기둥"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/madare0.svg",
@@ -21360,7 +21002,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "商店（しょうてん）",
         "meaning": {
-          "english": "shop [n.]"
+          "english": "shop [n.]",
+          "korean": "가게"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mise_06_a.opus",
@@ -21372,7 +21015,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "書店（しょてん）",
         "meaning": {
-          "english": "bookstore"
+          "english": "bookstore",
+          "korean": "서점"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mise_06_b.opus",
@@ -21384,7 +21028,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "売店（ばいてん）",
         "meaning": {
-          "english": "stand [n.]"
+          "english": "stand [n.]",
+          "korean": "놀이터"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mise_06_c.opus",
@@ -21396,7 +21041,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "本店（ほんてん）",
         "meaning": {
-          "english": "head office"
+          "english": "head office",
+          "korean": "본사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mise_06_d.opus",
@@ -21408,7 +21054,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "支店（してん）",
         "meaning": {
-          "english": "branch office"
+          "english": "branch office",
+          "korean": "지사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mise_06_e.opus",
@@ -21420,7 +21067,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "喫茶店（きっさてん）",
         "meaning": {
-          "english": "coffee shop"
+          "english": "coffee shop",
+          "korean": "카페"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mise_06_f.opus",
@@ -21432,7 +21080,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "店員（てんいん）",
         "meaning": {
-          "english": "salesperson"
+          "english": "salesperson",
+          "korean": "직원"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mise_06_g.opus",
@@ -21444,7 +21093,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "店頭（てんとう）",
         "meaning": {
-          "english": "shop front"
+          "english": "shop front",
+          "korean": "전망대"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mise_06_h.opus",
@@ -21456,7 +21106,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "店（みせ）",
         "meaning": {
-          "english": "store [n.]"
+          "english": "store [n.]",
+          "korean": "가게"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mise_06_i.opus",
@@ -21468,7 +21119,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "店先（みせさき）",
         "meaning": {
-          "english": "store front"
+          "english": "store front",
+          "korean": "전망대"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/mise_06_j.opus",
@@ -21502,7 +21154,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "送",
       "meaning": {
-        "english": "send"
+        "english": "send",
+        "korean": "보내다"
       },
       "strokes": {
         "count": 9,
@@ -21558,7 +21211,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "shinnyou"
       },
       "meaning": {
-        "english": "road, walk, to advance"
+        "english": "road, walk, to advance",
+        "korean": "도로, 걷다, 진행하다"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/shinnyou0.svg",
@@ -21587,7 +21241,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "発送する（はっそうする）",
         "meaning": {
-          "english": "ship [v.t.]"
+          "english": "ship [v.t.]",
+          "korean": "배 보내다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-oku(ru)_06_a.opus",
@@ -21599,7 +21254,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "返送する（へんそうする）",
         "meaning": {
-          "english": "send back"
+          "english": "send back",
+          "korean": "배 보내다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-oku(ru)_06_b.opus",
@@ -21611,7 +21267,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "郵送する（ゆうそうする）",
         "meaning": {
-          "english": "mail [v.t.]"
+          "english": "mail [v.t.]",
+          "korean": "우편 보내다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-oku(ru)_06_c.opus",
@@ -21623,7 +21280,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "放送する（ほうそうする）",
         "meaning": {
-          "english": "broadcast [v.t.]"
+          "english": "broadcast [v.t.]",
+          "korean": "방송 보내다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-oku(ru)_06_d.opus",
@@ -21635,7 +21293,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "送金する（そうきんする）",
         "meaning": {
-          "english": "send money"
+          "english": "send money",
+          "korean": "돈 보내다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-oku(ru)_06_e.opus",
@@ -21647,7 +21306,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "送料（そうりょう）",
         "meaning": {
-          "english": "shipping fee"
+          "english": "shipping fee",
+          "korean": "배송료"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-oku(ru)_06_f.opus",
@@ -21659,7 +21319,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "送別会（そうべつかい）",
         "meaning": {
-          "english": "farewell party"
+          "english": "farewell party",
+          "korean": "파티"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-oku(ru)_06_g.opus",
@@ -21671,7 +21332,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "送る（おくる）",
         "meaning": {
-          "english": "send, spend time"
+          "english": "send, spend time",
+          "korean": "보내다, 시간 보내다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-oku(ru)_06_h.opus",
@@ -21683,7 +21345,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "送り仮名（おくりがな）",
         "meaning": {
-          "english": "conjugational ending in kana"
+          "english": "conjugational ending in kana",
+          "korean": "가나 조사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-oku(ru)_06_i.opus",
@@ -21718,7 +21381,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "族",
       "meaning": {
-        "english": "family,tribe"
+        "english": "family,tribe",
+        "korean": "가족, 민족"
       },
       "strokes": {
         "count": 11,
@@ -21778,7 +21442,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "houhen"
       },
       "meaning": {
-        "english": "direction, flag"
+        "english": "direction, flag",
+        "korean": "방향, 깃발"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/houhen0.svg",
@@ -21807,7 +21472,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "家族（かぞく）",
         "meaning": {
-          "english": "family"
+          "english": "family",
+          "korean": "가족"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ka)zoku_06_a.opus",
@@ -21819,7 +21485,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "民族（みんぞく）",
         "meaning": {
-          "english": "race, nation"
+          "english": "race, nation",
+          "korean": "민족"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ka)zoku_06_b.opus",
@@ -21831,7 +21498,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "水族館（すいぞくかん）",
         "meaning": {
-          "english": "aquarium"
+          "english": "aquarium",
+          "korean": "수족관"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ka)zoku_06_c.opus",
@@ -21843,7 +21511,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "遺族（いぞく）",
         "meaning": {
-          "english": "bereaved family"
+          "english": "bereaved family",
+          "korean": "가족"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(ka)zoku_06_d.opus",
@@ -21880,7 +21549,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "文",
       "meaning": {
-        "english": "letter, writings, sentence"
+        "english": "letter, writings, sentence",
+        "korean": "문자, 글, 문장"
       },
       "strokes": {
         "count": 4,
@@ -21926,7 +21596,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "bun"
       },
       "meaning": {
-        "english": "literature, letters"
+        "english": "literature, letters",
+        "korean": "문학, 문자"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/bun0.svg",
@@ -21955,7 +21626,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "文法（ぶんぽう）",
         "meaning": {
-          "english": "grammar"
+          "english": "grammar",
+          "korean": "문법"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bun-fumi_06_a.opus",
@@ -21967,7 +21639,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "文章（ぶんしょう）",
         "meaning": {
-          "english": "sentence"
+          "english": "sentence",
+          "korean": "문장"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bun-fumi_06_b.opus",
@@ -21979,7 +21652,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "文学（ぶんがく）",
         "meaning": {
-          "english": "literature"
+          "english": "literature",
+          "korean": "문학"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bun-fumi_06_c.opus",
@@ -21991,7 +21665,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "文化（ぶんか）",
         "meaning": {
-          "english": "culture"
+          "english": "culture",
+          "korean": "문화"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bun-fumi_06_d.opus",
@@ -22003,7 +21678,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "文明（ぶんめい）",
         "meaning": {
-          "english": "civilization"
+          "english": "civilization",
+          "korean": "문명"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bun-fumi_06_e.opus",
@@ -22015,7 +21691,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "文庫本（ぶんこぼん）",
         "meaning": {
-          "english": "paperback"
+          "english": "paperback",
+          "korean": "책"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bun-fumi_06_f.opus",
@@ -22027,7 +21704,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "文房具（ぶんぼうぐ）",
         "meaning": {
-          "english": "stationery"
+          "english": "stationery",
+          "korean": "문구"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bun-fumi_06_g.opus",
@@ -22039,7 +21717,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "論文（ろんぶん）",
         "meaning": {
-          "english": "thesis"
+          "english": "thesis",
+          "korean": "논문"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bun-fumi_06_h.opus",
@@ -22051,7 +21730,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "文通する（ぶんつうする）",
         "meaning": {
-          "english": "correspond, exchange letters"
+          "english": "correspond, exchange letters",
+          "korean": "문자 교환하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bun-fumi_06_i.opus",
@@ -22063,7 +21743,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "文部省（もんぶしょう）",
         "meaning": {
-          "english": "Ministry of Education"
+          "english": "Ministry of Education",
+          "korean": "교육부"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bun-fumi_06_j.opus",
@@ -22075,7 +21756,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "文句（もんく）",
         "meaning": {
-          "english": "phrase, complaint"
+          "english": "phrase, complaint",
+          "korean": "문장, 불만"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bun-fumi_06_k.opus",
@@ -22087,7 +21769,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "恋文（こいぶみ）",
         "meaning": {
-          "english": "love-letter"
+          "english": "love-letter",
+          "korean": "사랑 문자"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bun-fumi_06_l.opus",
@@ -22117,7 +21800,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "院",
       "meaning": {
-        "english": "institution"
+        "english": "institution",
+        "korean": "기관"
       },
       "strokes": {
         "count": 10,
@@ -22175,7 +21859,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kozatohen"
       },
       "meaning": {
-        "english": "hill, mound"
+        "english": "hill, mound",
+        "korean": "산, 더미"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kozatohen0.svg",
@@ -22204,7 +21889,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "大学院（だいがくいん）",
         "meaning": {
-          "english": "graduate school"
+          "english": "graduate school",
+          "korean": "대학원"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(byou)in_06_a.opus",
@@ -22216,7 +21902,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "病院（びょういん）",
         "meaning": {
-          "english": "hospital"
+          "english": "hospital",
+          "korean": "병원"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(byou)in_06_b.opus",
@@ -22228,7 +21915,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "美容院（びよういん）",
         "meaning": {
-          "english": "beauty salon"
+          "english": "beauty salon",
+          "korean": "뷰티 살롱"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(byou)in_06_c.opus",
@@ -22264,7 +21952,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "朝",
       "meaning": {
-        "english": "morning, dynasty"
+        "english": "morning, dynasty",
+        "korean": "아침, 왕조"
       },
       "strokes": {
         "count": 12,
@@ -22326,7 +22015,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "tsuki"
       },
       "meaning": {
-        "english": "moon, month, period"
+        "english": "moon, month, period",
+        "korean": "달, 달, 기간"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/tsuki0.svg",
@@ -22355,7 +22045,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "朝食（ちょうしょく）",
         "meaning": {
-          "english": "breakfast"
+          "english": "breakfast",
+          "korean": "아침식사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-asa_06_a.opus",
@@ -22367,7 +22058,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "朝刊（ちょうかん）",
         "meaning": {
-          "english": "morning newspaper"
+          "english": "morning newspaper",
+          "korean": "아침 신문"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-asa_06_b.opus",
@@ -22379,7 +22071,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "平安朝（へいあんちょう）",
         "meaning": {
-          "english": "Heian period"
+          "english": "Heian period",
+          "korean": "헤이안 시대"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-asa_06_c.opus",
@@ -22391,7 +22084,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "朝（あさ）",
         "meaning": {
-          "english": "morning"
+          "english": "morning",
+          "korean": "아침"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-asa_06_d.opus",
@@ -22403,7 +22097,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "毎朝（まいあさ）",
         "meaning": {
-          "english": "every morning"
+          "english": "every morning",
+          "korean": "매일 아침"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-asa_06_e.opus",
@@ -22415,7 +22110,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "朝日（あさひ）",
         "meaning": {
-          "english": "morning sun"
+          "english": "morning sun",
+          "korean": "아침 태양"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-asa_06_f.opus",
@@ -22427,7 +22123,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "朝御飯（あさごはん）",
         "meaning": {
-          "english": "breakfast"
+          "english": "breakfast",
+          "korean": "아침식사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-asa_06_g.opus",
@@ -22439,7 +22136,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "*今朝（けさ）",
         "meaning": {
-          "english": "this morning"
+          "english": "this morning",
+          "korean": "이번 아침"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-asa_06_h.opus",
@@ -22477,7 +22175,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "転",
       "meaning": {
-        "english": "turn, roll over, fall down"
+        "english": "turn, roll over, fall down",
+        "korean": "돌리다, 넘어지다, 떨어지다"
       },
       "strokes": {
         "count": 11,
@@ -22537,7 +22236,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kurumahen"
       },
       "meaning": {
-        "english": "vehicle, wheel, car"
+        "english": "vehicle, wheel, car",
+        "korean": "차, 바퀴, 차"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kurumahen0.svg",
@@ -22566,7 +22266,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "転機（てんき）",
         "meaning": {
-          "english": "turning point"
+          "english": "turning point",
+          "korean": "전환점"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/koro(bu)_06_a.opus",
@@ -22578,7 +22279,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "自転車（じてんしゃ）",
         "meaning": {
-          "english": "bicycle"
+          "english": "bicycle",
+          "korean": "자전거"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/koro(bu)_06_b.opus",
@@ -22590,7 +22292,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "転倒する（てんとうする）",
         "meaning": {
-          "english": "tumble, fall down"
+          "english": "tumble, fall down",
+          "korean": "넘어지다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/koro(bu)_06_c.opus",
@@ -22602,7 +22305,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "転換する（てんかんする）",
         "meaning": {
-          "english": "convert, divert, change"
+          "english": "convert, divert, change",
+          "korean": "변환하다, 방향 전환하다, 변경하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/koro(bu)_06_d.opus",
@@ -22614,7 +22318,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "転職する（てんしょくする）",
         "meaning": {
-          "english": "change occupations"
+          "english": "change occupations",
+          "korean": "직업 변경하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/koro(bu)_06_e.opus",
@@ -22626,7 +22331,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "回転する（かいてんする）",
         "meaning": {
-          "english": "rotate"
+          "english": "rotate",
+          "korean": "회전하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/koro(bu)_06_f.opus",
@@ -22638,7 +22344,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "運転する（うんてんする）",
         "meaning": {
-          "english": "operate, drive"
+          "english": "operate, drive",
+          "korean": "운전하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/koro(bu)_06_g.opus",
@@ -22650,7 +22357,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "好転する（こうてんする）",
         "meaning": {
-          "english": "change for the better"
+          "english": "change for the better",
+          "korean": "좋은 변화"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/koro(bu)_06_h.opus",
@@ -22662,7 +22370,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "逆転する（ぎゃくてんする）",
         "meaning": {
-          "english": "reverse, turn around"
+          "english": "reverse, turn around",
+          "korean": "역전하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/koro(bu)_06_i.opus",
@@ -22674,7 +22383,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "転がす（ころがす）",
         "meaning": {
-          "english": "roll [v.t.]"
+          "english": "roll [v.t.]",
+          "korean": "굴리다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/koro(bu)_06_j.opus",
@@ -22686,7 +22396,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "転がる（ころがる）",
         "meaning": {
-          "english": "roll, tumble, fall down [v.i.]"
+          "english": "roll, tumble, fall down [v.i.]",
+          "korean": "굴러다니다, 넘어지다, 떨어지다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/koro(bu)_06_k.opus",
@@ -22698,7 +22409,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "転ぶ（ころぶ）",
         "meaning": {
-          "english": "fall down [v.i.]"
+          "english": "fall down [v.i.]",
+          "korean": "넘어지다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/koro(bu)_06_l.opus",
@@ -22735,7 +22447,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "公",
       "meaning": {
-        "english": "public, official"
+        "english": "public, official",
+        "korean": "공공, 공식"
       },
       "strokes": {
         "count": 4,
@@ -22781,7 +22494,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "hachigashira"
       },
       "meaning": {
-        "english": "eight"
+        "english": "eight",
+        "korean": "여덟"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/hachigashira0.svg",
@@ -22810,7 +22524,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "公園（こうえん）",
         "meaning": {
-          "english": "park"
+          "english": "park",
+          "korean": "공원"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ooyake_06_a.opus",
@@ -22822,7 +22537,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "公害（こうがい）",
         "meaning": {
-          "english": "public nuisance, pollution"
+          "english": "public nuisance, pollution",
+          "korean": "공공 문제, 오염"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ooyake_06_b.opus",
@@ -22834,7 +22550,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "公判（こうはん）",
         "meaning": {
-          "english": "public hearing, trial"
+          "english": "public hearing, trial",
+          "korean": "공공 청원, 재판"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ooyake_06_c.opus",
@@ -22846,7 +22563,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "公式（こうしき）",
         "meaning": {
-          "english": "formula, formal, official"
+          "english": "formula, formal, official",
+          "korean": "공식, 형식, 공식"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ooyake_06_d.opus",
@@ -22858,7 +22576,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "公立（こうりつ）",
         "meaning": {
-          "english": "public"
+          "english": "public",
+          "korean": "공공"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ooyake_06_e.opus",
@@ -22870,7 +22589,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "公務員（こうむいん）",
         "meaning": {
-          "english": "public employee"
+          "english": "public employee",
+          "korean": "공공 직원"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ooyake_06_f.opus",
@@ -22882,7 +22602,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "主人公（しゅじんこう）",
         "meaning": {
-          "english": "main character, hero"
+          "english": "main character, hero",
+          "korean": "주인공, 영웅"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ooyake_06_g.opus",
@@ -22894,7 +22615,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "公平な（こうへいな）",
         "meaning": {
-          "english": "fair, impartial"
+          "english": "fair, impartial",
+          "korean": "공정, 공정"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ooyake_06_h.opus",
@@ -22906,7 +22628,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "公認する（こうにんする）",
         "meaning": {
-          "english": "recognize officially, authorize"
+          "english": "recognize officially, authorize",
+          "korean": "공식 인정하다, 인가하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ooyake_06_i.opus",
@@ -22918,7 +22641,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "公表する（こうひょうする）",
         "meaning": {
-          "english": "announce publicly"
+          "english": "announce publicly",
+          "korean": "공개 발표하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ooyake_06_j.opus",
@@ -22930,7 +22654,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "公開する（こうかいする）",
         "meaning": {
-          "english": "present to the public"
+          "english": "present to the public",
+          "korean": "공개 발표하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ooyake_06_k.opus",
@@ -22942,7 +22667,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "公（おおやけ）",
         "meaning": {
-          "english": "official, public, formal [n.]"
+          "english": "official, public, formal [n.]",
+          "korean": "공식, 공공, 형식"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ooyake_06_l.opus",
@@ -22972,7 +22698,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "可",
       "meaning": {
-        "english": " - able, approve"
+        "english": " - able, approve",
+        "korean": " - 가능, 승인"
       },
       "strokes": {
         "count": 5,
@@ -23020,7 +22747,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kuchi"
       },
       "meaning": {
-        "english": "mouth"
+        "english": "mouth",
+        "korean": "입"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kuchi0.svg",
@@ -23049,7 +22777,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "可能性（かのうせい）",
         "meaning": {
-          "english": "potentiality, possibility"
+          "english": "potentiality, possibility",
+          "korean": "가능성, 가능성"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka(nousei)_06_a.opus",
@@ -23061,7 +22790,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "可燃物（かねんぶつ）",
         "meaning": {
-          "english": "flammable materials"
+          "english": "flammable materials",
+          "korean": "연료 가능한 재료"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka(nousei)_06_b.opus",
@@ -23073,7 +22803,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "可愛らしい（かわいらしい）",
         "meaning": {
-          "english": "lovely, sweet"
+          "english": "lovely, sweet",
+          "korean": "사랑스럽다, 달다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka(nousei)_06_c.opus",
@@ -23085,7 +22816,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "可能な（かのうな）",
         "meaning": {
-          "english": "possible"
+          "english": "possible",
+          "korean": "가능한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka(nousei)_06_d.opus",
@@ -23097,7 +22829,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不可能な（ふかのうな）",
         "meaning": {
-          "english": "impossible"
+          "english": "impossible",
+          "korean": "불가능한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka(nousei)_06_e.opus",
@@ -23109,7 +22842,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不可分な（ふかぶんな）",
         "meaning": {
-          "english": "indivisible"
+          "english": "indivisible",
+          "korean": "분리 불가능한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka(nousei)_06_f.opus",
@@ -23121,7 +22855,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不可解な（ふかかいな）",
         "meaning": {
-          "english": "mysterious, baffling"
+          "english": "mysterious, baffling",
+          "korean": "신비한, 당황스러운"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka(nousei)_06_g.opus",
@@ -23133,7 +22868,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "可決する（かけつする）",
         "meaning": {
-          "english": "approve"
+          "english": "approve",
+          "korean": "승인하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka(nousei)_06_h.opus",
@@ -23145,7 +22881,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "許可する（きょかする）",
         "meaning": {
-          "english": "permit [v.t.]"
+          "english": "permit [v.t.]",
+          "korean": "허가하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka(nousei)_06_i.opus",
@@ -23176,7 +22913,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "病",
       "meaning": {
-        "english": "illness, disease, sickness"
+        "english": "illness, disease, sickness",
+        "korean": "병, 질병, 병"
       },
       "strokes": {
         "count": 10,
@@ -23234,7 +22972,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "yamaidare"
       },
       "meaning": {
-        "english": "sickness"
+        "english": "sickness",
+        "korean": "병"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/yamaidare0.svg",
@@ -23263,7 +23002,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "病気（びょうき）",
         "meaning": {
-          "english": "illness"
+          "english": "illness",
+          "korean": "병"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yamai_06_a.opus",
@@ -23275,7 +23015,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "病院（びょういん）",
         "meaning": {
-          "english": "hospital"
+          "english": "hospital",
+          "korean": "병원"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yamai_06_b.opus",
@@ -23287,7 +23028,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "病人（びょうにん）",
         "meaning": {
-          "english": "patient"
+          "english": "patient",
+          "korean": "환자"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yamai_06_c.opus",
@@ -23299,7 +23041,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "心臓病（しんぞうびょう）",
         "meaning": {
-          "english": "heart disease"
+          "english": "heart disease",
+          "korean": "심장 질환"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yamai_06_d.opus",
@@ -23311,7 +23054,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "看病する（かんびょうする）",
         "meaning": {
-          "english": "nurse (a patient)"
+          "english": "nurse (a patient)",
+          "korean": "환자 돌보기"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yamai_06_e.opus",
@@ -23323,7 +23067,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "病む（やむ）",
         "meaning": {
-          "english": "be ill"
+          "english": "be ill",
+          "korean": "병이 나다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yamai_06_f.opus",
@@ -23335,7 +23080,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "病み付き（やみつき）",
         "meaning": {
-          "english": "addicted, hooked"
+          "english": "addicted, hooked",
+          "korean": "중독된, 후회된"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yamai_06_g.opus",
@@ -23347,7 +23093,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "病み上がり（やみあがり）",
         "meaning": {
-          "english": "convalescence"
+          "english": "convalescence",
+          "korean": "회복하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yamai_06_h.opus",
@@ -23359,7 +23106,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "病（やまい）",
         "meaning": {
-          "english": "illness"
+          "english": "illness",
+          "korean": "병"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yamai_06_i.opus",
@@ -23395,7 +23143,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "住",
       "meaning": {
-        "english": "live"
+        "english": "live",
+        "korean": "살다"
       },
       "strokes": {
         "count": 7,
@@ -23476,7 +23225,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "住民（じゅうみん）",
         "meaning": {
-          "english": "residents"
+          "english": "residents",
+          "korean": "거주자"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/juu-su(mu)_06_a.opus",
@@ -23488,7 +23238,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "住所（じゅうしょ）",
         "meaning": {
-          "english": "address"
+          "english": "address",
+          "korean": "주소"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/juu-su(mu)_06_b.opus",
@@ -23500,7 +23251,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "住宅（じゅうたく）",
         "meaning": {
-          "english": "housing"
+          "english": "housing",
+          "korean": "주거"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/juu-su(mu)_06_c.opus",
@@ -23512,7 +23264,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "移住する（いじゅうする）",
         "meaning": {
-          "english": "migrate"
+          "english": "migrate",
+          "korean": "이주하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/juu-su(mu)_06_d.opus",
@@ -23524,7 +23277,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "住む（すむ）",
         "meaning": {
-          "english": "live"
+          "english": "live",
+          "korean": "살다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/juu-su(mu)_06_e.opus",
@@ -23536,7 +23290,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "住まい（すまい）",
         "meaning": {
-          "english": "dwelling"
+          "english": "dwelling",
+          "korean": "주거"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/juu-su(mu)_06_f.opus",
@@ -23569,7 +23324,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "屋",
       "meaning": {
-        "english": "house, small shop"
+        "english": "house, small shop",
+        "korean": "집, 작은 가게"
       },
       "strokes": {
         "count": 9,
@@ -23654,7 +23410,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "屋上（おくじょう）",
         "meaning": {
-          "english": "rooftop"
+          "english": "rooftop",
+          "korean": "지붕"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oku-ya_06_a.opus",
@@ -23666,7 +23423,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "屋内（おくない）",
         "meaning": {
-          "english": "indoor"
+          "english": "indoor",
+          "korean": "실내"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oku-ya_06_b.opus",
@@ -23678,7 +23436,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "屋外（おくがい）",
         "meaning": {
-          "english": "outdoor"
+          "english": "outdoor",
+          "korean": "외부"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oku-ya_06_c.opus",
@@ -23690,7 +23449,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "屋敷（やしき）",
         "meaning": {
-          "english": "mansion"
+          "english": "mansion",
+          "korean": "맨션"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oku-ya_06_d.opus",
@@ -23702,7 +23462,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "屋根（やね）",
         "meaning": {
-          "english": "roof"
+          "english": "roof",
+          "korean": "지붕"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oku-ya_06_e.opus",
@@ -23714,7 +23475,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "本屋（ほんや）",
         "meaning": {
-          "english": "bookstore"
+          "english": "bookstore",
+          "korean": "책방"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oku-ya_06_f.opus",
@@ -23726,7 +23488,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "部屋（へや）",
         "meaning": {
-          "english": "room"
+          "english": "room",
+          "korean": "방"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/oku-ya_06_g.opus",
@@ -23761,7 +23524,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "買",
       "meaning": {
-        "english": "buy"
+        "english": "buy",
+        "korean": "사다"
       },
       "strokes": {
         "count": 12,
@@ -23852,7 +23616,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "買収する（ばいしゅうする）",
         "meaning": {
-          "english": "purchase, buy, bribe"
+          "english": "purchase, buy, bribe",
+          "korean": "구매하다, 사다, 은혜를 베푸다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bai-ka(u)_06_a.opus",
@@ -23864,7 +23629,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "売買する（ばいばいする）",
         "meaning": {
-          "english": "trade"
+          "english": "trade",
+          "korean": "거래하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bai-ka(u)_06_b.opus",
@@ -23876,7 +23642,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "購買（こうばい）",
         "meaning": {
-          "english": "purchasing"
+          "english": "purchasing",
+          "korean": "구매하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bai-ka(u)_06_c.opus",
@@ -23888,7 +23655,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "買う（かう）",
         "meaning": {
-          "english": "buy"
+          "english": "buy",
+          "korean": "사다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bai-ka(u)_06_d.opus",
@@ -23900,7 +23668,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "買い物（かいもの）",
         "meaning": {
-          "english": "shopping"
+          "english": "shopping",
+          "korean": "쇼핑하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bai-ka(u)_06_e.opus",
@@ -23912,7 +23681,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "買い手（かいて）",
         "meaning": {
-          "english": "buyer"
+          "english": "buyer",
+          "korean": "구매자"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/bai-ka(u)_06_f.opus",
@@ -23950,7 +23720,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "試",
       "meaning": {
-        "english": "try, attempt"
+        "english": "try, attempt",
+        "korean": "시도하다, 시도하다"
       },
       "strokes": {
         "count": 13,
@@ -24043,7 +23814,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "試験（しけん）",
         "meaning": {
-          "english": "examination"
+          "english": "examination",
+          "korean": "시험"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tame(su)_06_a.opus",
@@ -24055,7 +23827,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "試合（しあい）",
         "meaning": {
-          "english": "game"
+          "english": "game",
+          "korean": "게임"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tame(su)_06_b.opus",
@@ -24067,7 +23840,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "試行錯誤（しこうさくご）",
         "meaning": {
-          "english": "trial and error"
+          "english": "trial and error",
+          "korean": "시도와 오류"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tame(su)_06_c.opus",
@@ -24079,7 +23853,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "試作する（しさくする）",
         "meaning": {
-          "english": "make a prototype"
+          "english": "make a prototype",
+          "korean": "프로토타입 만들다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tame(su)_06_d.opus",
@@ -24091,7 +23866,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "試食する（ししょくする）",
         "meaning": {
-          "english": "taste, sample food"
+          "english": "taste, sample food",
+          "korean": "맛 보다, 음식 시도하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tame(su)_06_e.opus",
@@ -24103,7 +23879,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "試着する（しちゃくする）",
         "meaning": {
-          "english": "try on clothes"
+          "english": "try on clothes",
+          "korean": "옷 시도하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tame(su)_06_f.opus",
@@ -24115,7 +23892,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "試みる（こころみる）",
         "meaning": {
-          "english": "attempt"
+          "english": "attempt",
+          "korean": "시도하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tame(su)_06_g.opus",
@@ -24127,7 +23905,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "試す（ためす）",
         "meaning": {
-          "english": "try"
+          "english": "try",
+          "korean": "시도하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tame(su)_06_h.opus",
@@ -24166,7 +23945,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "有",
       "meaning": {
-        "english": "have"
+        "english": "have",
+        "korean": "가지다"
       },
       "strokes": {
         "count": 6,
@@ -24216,7 +23996,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "tsuki"
       },
       "meaning": {
-        "english": "moon, month, period"
+        "english": "moon, month, period",
+        "korean": "달, 달, 기간"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/tsuki0.svg",
@@ -24245,7 +24026,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "有料（ゆうりょう）",
         "meaning": {
-          "english": "toll"
+          "english": "toll",
+          "korean": "통행료"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yuu-a(ru)_06_a.opus",
@@ -24257,7 +24039,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "有名な（ゆうめいな）",
         "meaning": {
-          "english": "famous"
+          "english": "famous",
+          "korean": "유명한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yuu-a(ru)_06_b.opus",
@@ -24269,7 +24052,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "有力な（ゆうりょくな）",
         "meaning": {
-          "english": "influential, powerful"
+          "english": "influential, powerful",
+          "korean": "영향력 있는, 강력한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yuu-a(ru)_06_c.opus",
@@ -24281,7 +24065,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "有利な（ゆうりな）",
         "meaning": {
-          "english": "advantageous"
+          "english": "advantageous",
+          "korean": "유리한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yuu-a(ru)_06_d.opus",
@@ -24293,7 +24078,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "有望な（ゆうぼうな）",
         "meaning": {
-          "english": "promising"
+          "english": "promising",
+          "korean": "유망한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yuu-a(ru)_06_e.opus",
@@ -24305,7 +24091,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "有害な（ゆうがいな）",
         "meaning": {
-          "english": "harmful"
+          "english": "harmful",
+          "korean": "해로운"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yuu-a(ru)_06_f.opus",
@@ -24317,7 +24104,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "有意義な（ゆういぎな）",
         "meaning": {
-          "english": "worthwhile"
+          "english": "worthwhile",
+          "korean": "가치 있는"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yuu-a(ru)_06_g.opus",
@@ -24329,7 +24117,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "所有する（しょゆうする）",
         "meaning": {
-          "english": "possess"
+          "english": "possess",
+          "korean": "소유하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yuu-a(ru)_06_h.opus",
@@ -24341,7 +24130,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "有無（うむ）",
         "meaning": {
-          "english": "presence or absence"
+          "english": "presence or absence",
+          "korean": "존재 또는 부재"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yuu-a(ru)_06_i.opus",
@@ -24353,7 +24143,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "有る（ある）",
         "meaning": {
-          "english": "be, have"
+          "english": "be, have",
+          "korean": "있다, 가지다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yuu-a(ru)_06_j.opus",
@@ -24365,7 +24156,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "有り難う（ありがとう）",
         "meaning": {
-          "english": "Thank you"
+          "english": "Thank you",
+          "korean": "감사합니다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/yuu-a(ru)_06_k.opus",
@@ -24397,7 +24189,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "質",
       "meaning": {
-        "english": "quality, matter"
+        "english": "quality, matter",
+        "korean": "질, 물질"
       },
       "strokes": {
         "count": 15,
@@ -24465,7 +24258,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kai"
       },
       "meaning": {
-        "english": "shell, property, wealth"
+        "english": "shell, property, wealth",
+        "korean": "껍질, 재산, 재산"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kai0.svg",
@@ -24494,7 +24288,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "質問する（しつもんする）",
         "meaning": {
-          "english": "inquire"
+          "english": "inquire",
+          "korean": "묻다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu(mon)_06_a.opus",
@@ -24506,7 +24301,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "本質（ほんしつ）",
         "meaning": {
-          "english": "essence"
+          "english": "essence",
+          "korean": "본질"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu(mon)_06_b.opus",
@@ -24518,7 +24314,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "体質（たいしつ）",
         "meaning": {
-          "english": "(physical) constitution"
+          "english": "(physical) constitution",
+          "korean": "신체 상태"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu(mon)_06_c.opus",
@@ -24530,7 +24327,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "性質（せいしつ）",
         "meaning": {
-          "english": "nature, personality"
+          "english": "nature, personality",
+          "korean": "성질, 성격"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu(mon)_06_d.opus",
@@ -24542,7 +24340,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "素質（そしつ）",
         "meaning": {
-          "english": "qualities"
+          "english": "qualities",
+          "korean": "성질"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu(mon)_06_e.opus",
@@ -24554,7 +24353,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "特質（とくしつ）",
         "meaning": {
-          "english": "characteristic"
+          "english": "characteristic",
+          "korean": "특성"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu(mon)_06_f.opus",
@@ -24566,7 +24366,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "質屋（しちや）",
         "meaning": {
-          "english": "pawnshop"
+          "english": "pawnshop",
+          "korean": "담보 상점"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu(mon)_06_g.opus",
@@ -24578,7 +24379,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "人質（ひとじち）",
         "meaning": {
-          "english": "hostage"
+          "english": "hostage",
+          "korean": "인질"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu(mon)_06_h.opus",
@@ -24590,7 +24392,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "質素な（しっそな）",
         "meaning": {
-          "english": "simple"
+          "english": "simple",
+          "korean": "간단한"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu(mon)_06_i.opus",
@@ -24602,7 +24405,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "言質を取る（げんちをとる）",
         "meaning": {
-          "english": "keep someone to a pledge"
+          "english": "keep someone to a pledge",
+          "korean": "맹세하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu(mon)_06_j.opus",
@@ -24643,7 +24447,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "医",
       "meaning": {
-        "english": "medicine, doctor"
+        "english": "medicine, doctor",
+        "korean": "의학, 의사"
       },
       "strokes": {
         "count": 7,
@@ -24695,7 +24500,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "hakogamae"
       },
       "meaning": {
-        "english": "box"
+        "english": "box",
+        "korean": "상자"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/hakogamae0.svg",
@@ -24724,7 +24530,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "医者（いしゃ）",
         "meaning": {
-          "english": "doctor (medical)"
+          "english": "doctor (medical)",
+          "korean": "의사 (의학)"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(gaku)_06_a.opus",
@@ -24736,7 +24543,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "医師（いし）",
         "meaning": {
-          "english": "doctor (medical)"
+          "english": "doctor (medical)",
+          "korean": "의사 (의학)"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(gaku)_06_b.opus",
@@ -24748,7 +24556,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "医療（いりょう）",
         "meaning": {
-          "english": "medical care"
+          "english": "medical care",
+          "korean": "의료 관리"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(gaku)_06_c.opus",
@@ -24760,7 +24569,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "医学（いがく）",
         "meaning": {
-          "english": "medical science"
+          "english": "medical science",
+          "korean": "의학 과학"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(gaku)_06_d.opus",
@@ -24772,7 +24582,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "医院（いいん）",
         "meaning": {
-          "english": "clinic"
+          "english": "clinic",
+          "korean": "병원"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(gaku)_06_e.opus",
@@ -24784,7 +24595,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "医薬品（いやくひん）",
         "meaning": {
-          "english": "medical supplies"
+          "english": "medical supplies",
+          "korean": "의료 자재"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(gaku)_06_f.opus",
@@ -24796,7 +24608,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "獣医（じゅうい）",
         "meaning": {
-          "english": "veterinarian"
+          "english": "veterinarian",
+          "korean": "수련사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(gaku)_06_g.opus",
@@ -24808,7 +24621,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歯科医（しかい）",
         "meaning": {
-          "english": "dentist"
+          "english": "dentist",
+          "korean": "치과 의사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/i(gaku)_06_h.opus",
@@ -24841,7 +24655,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "映",
       "meaning": {
-        "english": "reflect, project"
+        "english": "reflect, project",
+        "korean": "반사, 투사"
       },
       "strokes": {
         "count": 9,
@@ -24897,7 +24712,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "hihen"
       },
       "meaning": {
-        "english": "sun, day, time"
+        "english": "sun, day, time",
+        "korean": "태양, 날짜, 시간"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/hihen0.svg",
@@ -24926,7 +24742,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "映画（えいが）",
         "meaning": {
-          "english": "movie"
+          "english": "movie",
+          "korean": "영화"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei-utsu(ru)_06_a.opus",
@@ -24938,7 +24755,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "映画館（えいがかん）",
         "meaning": {
-          "english": "movie theater"
+          "english": "movie theater",
+          "korean": "영화관"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei-utsu(ru)_06_b.opus",
@@ -24950,7 +24768,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "反映する（はんえいする）",
         "meaning": {
-          "english": "reflect"
+          "english": "reflect",
+          "korean": "반사하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei-utsu(ru)_06_c.opus",
@@ -24962,7 +24781,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "上映する（じょうえいする）",
         "meaning": {
-          "english": "show a movie"
+          "english": "show a movie",
+          "korean": "영화 보여주다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei-utsu(ru)_06_d.opus",
@@ -24974,7 +24794,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "映る（うつる）",
         "meaning": {
-          "english": "be reflected [v.i.]"
+          "english": "be reflected [v.i.]",
+          "korean": "반사되다 [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei-utsu(ru)_06_e.opus",
@@ -24986,7 +24807,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "映す（うつす）",
         "meaning": {
-          "english": "project [v.t.]"
+          "english": "project [v.t.]",
+          "korean": "투사하다 [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei-utsu(ru)_06_f.opus",
@@ -24998,7 +24820,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "映える（はえる）",
         "meaning": {
-          "english": "shine, look pretty"
+          "english": "shine, look pretty",
+          "korean": "빛나다, 예쁘다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei-utsu(ru)_06_g.opus",
@@ -25010,7 +24833,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "夕映え（ゆうばえ）",
         "meaning": {
-          "english": "sunset glow"
+          "english": "sunset glow",
+          "korean": "해질녘 빛"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei-utsu(ru)_06_h.opus",
@@ -25045,7 +24869,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "室",
       "meaning": {
-        "english": "room"
+        "english": "room",
+        "korean": "방"
       },
       "strokes": {
         "count": 9,
@@ -25101,7 +24926,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ukanmuri"
       },
       "meaning": {
-        "english": "roof, house"
+        "english": "roof, house",
+        "korean": "지붕, 집"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ukanmuri0.svg",
@@ -25130,7 +24956,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "教室（きょうしつ）",
         "meaning": {
-          "english": "classroom"
+          "english": "classroom",
+          "korean": "교실"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu-muro_06_a.opus",
@@ -25142,7 +24969,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "研究室（けんきゅうしつ）",
         "meaning": {
-          "english": "seminar room, prof's office"
+          "english": "seminar room, prof's office",
+          "korean": "세미나 방, 교수 사무실"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu-muro_06_b.opus",
@@ -25154,7 +24982,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "図書室（としょしつ）",
         "meaning": {
-          "english": "library room"
+          "english": "library room",
+          "korean": "도서실"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu-muro_06_c.opus",
@@ -25166,7 +24995,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "個室（こしつ）",
         "meaning": {
-          "english": "private room"
+          "english": "private room",
+          "korean": "개인실"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu-muro_06_d.opus",
@@ -25178,7 +25008,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "和室（わしつ）",
         "meaning": {
-          "english": "Japanese-style room"
+          "english": "Japanese-style room",
+          "korean": "일본식 방"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu-muro_06_e.opus",
@@ -25190,7 +25021,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "温室（おんしつ）",
         "meaning": {
-          "english": "greenhouse"
+          "english": "greenhouse",
+          "korean": "온실"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu-muro_06_f.opus",
@@ -25202,7 +25034,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "根室（ねむろ）",
         "meaning": {
-          "english": "Nemuro"
+          "english": "Nemuro",
+          "korean": "根室"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shitsu-muro_06_g.opus",
@@ -25237,7 +25070,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "台",
       "meaning": {
-        "english": "stand, counter for machinery"
+        "english": "stand, counter for machinery",
+        "korean": "기계 계수기"
       },
       "strokes": {
         "count": 5,
@@ -25285,7 +25119,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kuchi"
       },
       "meaning": {
-        "english": "mouth"
+        "english": "mouth",
+        "korean": "입"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kuchi0.svg",
@@ -25314,7 +25149,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "台（だい）",
         "meaning": {
-          "english": "stand, rack"
+          "english": "stand, rack",
+          "korean": "기둥, 대"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(za)_06_a.opus",
@@ -25326,7 +25162,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "台座（だいざ）",
         "meaning": {
-          "english": "pedestal"
+          "english": "pedestal",
+          "korean": "기둥"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(za)_06_b.opus",
@@ -25338,7 +25175,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "台所（だいどころ）",
         "meaning": {
-          "english": "kitchen"
+          "english": "kitchen",
+          "korean": "주방"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(za)_06_c.opus",
@@ -25350,7 +25188,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "台地（だいち）",
         "meaning": {
-          "english": "plateau"
+          "english": "plateau",
+          "korean": "평지"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(za)_06_d.opus",
@@ -25362,7 +25201,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "一台（いちだい）",
         "meaning": {
-          "english": "one (machine)"
+          "english": "one (machine)",
+          "korean": "한 대"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(za)_06_e.opus",
@@ -25374,7 +25214,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "気象台（きしょうだい）",
         "meaning": {
-          "english": "meteorological observatory"
+          "english": "meteorological observatory",
+          "korean": "기상 관측소"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(za)_06_f.opus",
@@ -25386,7 +25227,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "台湾（たいわん）",
         "meaning": {
-          "english": "Taiwan"
+          "english": "Taiwan",
+          "korean": "대만"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(za)_06_g.opus",
@@ -25398,7 +25240,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "台風（たいふう）",
         "meaning": {
-          "english": "typhoon"
+          "english": "typhoon",
+          "korean": "태풍"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/dai(za)_06_h.opus",
@@ -25429,7 +25272,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "験",
       "meaning": {
-        "english": "test"
+        "english": "test",
+        "korean": "시험"
       },
       "strokes": {
         "count": 18,
@@ -25532,7 +25376,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "試験する（しけんする）",
         "meaning": {
-          "english": "examine"
+          "english": "examine",
+          "korean": "시험하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(shi)ken(kan)_06_a.opus",
@@ -25544,7 +25389,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "経験する（けいけんする）",
         "meaning": {
-          "english": "experience [v.t.]"
+          "english": "experience [v.t.]",
+          "korean": "경험하다 [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(shi)ken(kan)_06_b.opus",
@@ -25556,7 +25402,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "実験する（じっけんする）",
         "meaning": {
-          "english": "experiment [v.t.]"
+          "english": "experiment [v.t.]",
+          "korean": "실험하다 [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(shi)ken(kan)_06_c.opus",
@@ -25568,7 +25415,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "受験する（じゅけんする）",
         "meaning": {
-          "english": "take an examination"
+          "english": "take an examination",
+          "korean": "시험 보다 [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(shi)ken(kan)_06_d.opus",
@@ -25580,7 +25428,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "体験する（たいけんする）",
         "meaning": {
-          "english": "experience [v.t.]"
+          "english": "experience [v.t.]",
+          "korean": "경험하다 [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(shi)ken(kan)_06_e.opus",
@@ -25624,7 +25473,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "歌",
       "meaning": {
-        "english": "song"
+        "english": "song",
+        "korean": "노래"
       },
       "strokes": {
         "count": 14,
@@ -25719,7 +25569,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歌手（かしゅ）",
         "meaning": {
-          "english": "singer"
+          "english": "singer",
+          "korean": "가수"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka-uta_06_a.opus",
@@ -25731,7 +25582,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歌詞（かし）",
         "meaning": {
-          "english": "song lyrics"
+          "english": "song lyrics",
+          "korean": "노래 가사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka-uta_06_b.opus",
@@ -25743,7 +25595,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歌舞伎（かぶき）",
         "meaning": {
-          "english": "Japanese classical drama"
+          "english": "Japanese classical drama",
+          "korean": "일본 전통 무대"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka-uta_06_c.opus",
@@ -25755,7 +25608,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "国歌（こっか）",
         "meaning": {
-          "english": "national anthem"
+          "english": "national anthem",
+          "korean": "국가 애가"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka-uta_06_d.opus",
@@ -25767,7 +25621,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "和歌（わか）",
         "meaning": {
-          "english": "Japanese poem"
+          "english": "Japanese poem",
+          "korean": "일본 시"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka-uta_06_e.opus",
@@ -25779,7 +25634,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "短歌（たんか）",
         "meaning": {
-          "english": "31-syllable Japanese poem"
+          "english": "31-syllable Japanese poem",
+          "korean": "31-음절 일본 시"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka-uta_06_f.opus",
@@ -25791,7 +25647,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歌（うた）",
         "meaning": {
-          "english": "song"
+          "english": "song",
+          "korean": "노래"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka-uta_06_g.opus",
@@ -25803,7 +25660,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歌う（うたう）",
         "meaning": {
-          "english": "sing"
+          "english": "sing",
+          "korean": "노래하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka-uta_06_h.opus",
@@ -25843,7 +25701,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "去",
       "meaning": {
-        "english": "go away, leave"
+        "english": "go away, leave",
+        "korean": "가다, 떠나다"
       },
       "strokes": {
         "count": 5,
@@ -25920,7 +25779,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "去年（きょねん）",
         "meaning": {
-          "english": "last year"
+          "english": "last year",
+          "korean": "작년"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kyo-sa(ru)_06_a.opus",
@@ -25932,7 +25792,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "去来する（きょらいする）",
         "meaning": {
-          "english": "come and go"
+          "english": "come and go",
+          "korean": "오다가다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kyo-sa(ru)_06_b.opus",
@@ -25944,8 +25805,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "退去する（たいきょする）",
         "meaning": {
-          "english": "depart, leave",
-          "korean": "떠나다 [v.i.]"
+          "english": "depart, leave"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kyo-sa(ru)_06_c.opus",
@@ -25957,7 +25817,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "死去する（しきょする）",
         "meaning": {
-          "english": "pass away, die"
+          "english": "pass away, die",
+          "korean": "죽다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kyo-sa(ru)_06_d.opus",
@@ -25969,7 +25830,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "過去（かこ）",
         "meaning": {
-          "english": "the past"
+          "english": "the past",
+          "korean": "과거"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kyo-sa(ru)_06_e.opus",
@@ -25981,7 +25843,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "去る（さる）",
         "meaning": {
-          "english": "leave, go away"
+          "english": "leave, go away",
+          "korean": "떠나다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kyo-sa(ru)_06_f.opus",
@@ -26012,7 +25875,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "風",
       "meaning": {
-        "english": "wind, manner"
+        "english": "wind, manner",
+        "korean": "바람, 방법"
       },
       "strokes": {
         "count": 9,
@@ -26097,7 +25961,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "風習（ふうしゅう）",
         "meaning": {
-          "english": "custom"
+          "english": "custom",
+          "korean": "소비자 문화"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kaze_06_a.opus",
@@ -26109,7 +25974,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "風景（ふうけい）",
         "meaning": {
-          "english": "scenery"
+          "english": "scenery",
+          "korean": "경관"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kaze_06_b.opus",
@@ -26121,7 +25987,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "台風（たいふう）",
         "meaning": {
-          "english": "typhoon"
+          "english": "typhoon",
+          "korean": "태풍"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kaze_06_c.opus",
@@ -26133,7 +26000,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "扇風機（せんぷうき）",
         "meaning": {
-          "english": "electric fan"
+          "english": "electric fan",
+          "korean": "전기 선풍기"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kaze_06_d.opus",
@@ -26145,7 +26013,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "風呂（ふろ）",
         "meaning": {
-          "english": "bath"
+          "english": "bath",
+          "korean": "목욕"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kaze_06_e.opus",
@@ -26157,7 +26026,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "風（かぜ）",
         "meaning": {
-          "english": "wind"
+          "english": "wind",
+          "korean": "바람"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kaze_06_f.opus",
@@ -26167,21 +26037,10 @@ export const n4Kanji: KanjiAliveEntry[] = [
         }
       },
       {
-        "japanese": "北風（きたかぜ）",
-        "meaning": {
-          "english": "north wind"
-        },
-        "audio": {
-          "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kaze_06_g.opus",
-          "aac": "https://media.kanjialive.com/examples_audio/audio-aac/kaze_06_g.aac",
-          "ogg": "https://media.kanjialive.com/examples_audio/audio-ogg/kaze_06_g.ogg",
-          "mp3": "https://media.kanjialive.com/examples_audio/audio-mp3/kaze_06_g.mp3"
-        }
-      },
-      {
         "japanese": "風向き（かざむき）",
         "meaning": {
-          "english": "wind's direction"
+          "english": "wind's direction",
+          "korean": "바람 방향"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kaze_06_h.opus",
@@ -26193,7 +26052,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "*風邪（かぜ）",
         "meaning": {
-          "english": "cold (illness)"
+          "english": "cold (illness)",
+          "korean": "감기"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kaze_06_i.opus",
@@ -26228,7 +26088,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "歩",
       "meaning": {
-        "english": "walk"
+        "english": "walk",
+        "korean": "걷다"
       },
       "strokes": {
         "count": 8,
@@ -26282,7 +26143,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "tomeru"
       },
       "meaning": {
-        "english": "to stop"
+        "english": "to stop",
+        "korean": "멈추다"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/tomeru0.svg",
@@ -26311,7 +26173,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歩道（ほどう）",
         "meaning": {
-          "english": "sidewalk"
+          "english": "sidewalk",
+          "korean": "보도"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aru(ku)_06_a.opus",
@@ -26323,7 +26186,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歩調（ほちょう）",
         "meaning": {
-          "english": "pace (walking)"
+          "english": "pace (walking)",
+          "korean": "걷는 속도"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aru(ku)_06_b.opus",
@@ -26335,7 +26199,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歩行者（ほこうしゃ）",
         "meaning": {
-          "english": "pedestrian"
+          "english": "pedestrian",
+          "korean": "보행자"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aru(ku)_06_c.opus",
@@ -26347,7 +26212,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "徒歩（とほ）",
         "meaning": {
-          "english": "on foot [n.]"
+          "english": "on foot [n.]",
+          "korean": "걷는 방법"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aru(ku)_06_d.opus",
@@ -26359,7 +26225,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "初歩（しょほ）",
         "meaning": {
-          "english": "elementary"
+          "english": "elementary",
+          "korean": "초등"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aru(ku)_06_e.opus",
@@ -26371,7 +26238,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "散歩する（さんぽする）",
         "meaning": {
-          "english": "take a walk"
+          "english": "take a walk",
+          "korean": "걷다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aru(ku)_06_f.opus",
@@ -26383,7 +26251,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "進歩する（しんぽする）",
         "meaning": {
-          "english": "make progress"
+          "english": "make progress",
+          "korean": "진행하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aru(ku)_06_g.opus",
@@ -26395,7 +26264,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歩合（ぶあい）",
         "meaning": {
-          "english": "rate"
+          "english": "rate",
+          "korean": "비율"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aru(ku)_06_h.opus",
@@ -26407,7 +26277,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歩（ふ）",
         "meaning": {
-          "english": "pawn (in chess or shogi)"
+          "english": "pawn (in chess or shogi)",
+          "korean": "체스 또는 쇼기 체스"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aru(ku)_06_i.opus",
@@ -26419,7 +26290,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歩く（あるく）",
         "meaning": {
-          "english": "walk"
+          "english": "walk",
+          "korean": "걷다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aru(ku)_06_j.opus",
@@ -26431,7 +26303,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "歩む（あゆむ）",
         "meaning": {
-          "english": "walk"
+          "english": "walk",
+          "korean": "걷다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aru(ku)_06_k.opus",
@@ -26465,7 +26338,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "広",
       "meaning": {
-        "english": "wide"
+        "english": "wide",
+        "korean": "넓다"
       },
       "strokes": {
         "count": 5,
@@ -26542,7 +26416,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "広大な（こうだいな）",
         "meaning": {
-          "english": "very large"
+          "english": "very large",
+          "korean": "매우 크다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kou-hiro(i)_06_a.opus",
@@ -26554,7 +26429,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "広範囲（こうはんい）",
         "meaning": {
-          "english": "vast range"
+          "english": "vast range",
+          "korean": "광범위한 범위"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kou-hiro(i)_06_b.opus",
@@ -26566,7 +26442,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "広告（こうこく）",
         "meaning": {
-          "english": "advertisement"
+          "english": "advertisement",
+          "korean": "광고"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kou-hiro(i)_06_c.opus",
@@ -26578,7 +26455,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "広い（ひろい）",
         "meaning": {
-          "english": "spacious"
+          "english": "spacious",
+          "korean": "넓다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kou-hiro(i)_06_d.opus",
@@ -26590,7 +26468,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "広まる（ひろまる）",
         "meaning": {
-          "english": "spread [v.i.]"
+          "english": "spread [v.i.]",
+          "korean": "퍼지다 [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kou-hiro(i)_06_e.opus",
@@ -26602,7 +26481,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "広がる（ひろがる）",
         "meaning": {
-          "english": "spread [v.i.]"
+          "english": "spread [v.i.]",
+          "korean": "퍼지다 [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kou-hiro(i)_06_f.opus",
@@ -26614,7 +26494,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "広げる（ひろげる）",
         "meaning": {
-          "english": "spread [v.t.]"
+          "english": "spread [v.t.]",
+          "korean": "퍼지다 [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kou-hiro(i)_06_g.opus",
@@ -26626,7 +26507,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "広場（ひろば）",
         "meaning": {
-          "english": "plaza"
+          "english": "plaza",
+          "korean": "광장"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kou-hiro(i)_06_h.opus",
@@ -26638,7 +26520,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "広島（ひろしま）",
         "meaning": {
-          "english": "Hiroshima"
+          "english": "Hiroshima",
+          "korean": "히로시마"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kou-hiro(i)_06_i.opus",
@@ -26650,7 +26533,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "背広（せびろ）",
         "meaning": {
-          "english": "business suit"
+          "english": "business suit",
+          "korean": "비즈니스 옷"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kou-hiro(i)_06_j.opus",
@@ -26681,7 +26565,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "週",
       "meaning": {
-        "english": "week"
+        "english": "week",
+        "korean": "주"
       },
       "strokes": {
         "count": 11,
@@ -26741,7 +26626,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "shinnyou"
       },
       "meaning": {
-        "english": "road, walk, to advance"
+        "english": "road, walk, to advance",
+        "korean": "도로, 걷다, 나아가다"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/shinnyou0.svg",
@@ -26770,7 +26656,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "今週（こんしゅう）",
         "meaning": {
-          "english": "this week"
+          "english": "this week",
+          "korean": "이번 주"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu(matsu)_06_a.opus",
@@ -26782,7 +26669,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "先週（せんしゅう）",
         "meaning": {
-          "english": "last week"
+          "english": "last week",
+          "korean": "지난 주"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu(matsu)_06_b.opus",
@@ -26794,7 +26682,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "来週（らいしゅう）",
         "meaning": {
-          "english": "next week"
+          "english": "next week",
+          "korean": "다음 주"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu(matsu)_06_c.opus",
@@ -26806,7 +26695,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "週末（しゅうまつ）",
         "meaning": {
-          "english": "weekend"
+          "english": "weekend",
+          "korean": "주말"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu(matsu)_06_d.opus",
@@ -26818,7 +26708,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "一週間（いっしゅうかん）",
         "meaning": {
-          "english": "one week"
+          "english": "one week",
+          "korean": "한 주"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu(matsu)_06_e.opus",
@@ -26855,7 +26746,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "写",
       "meaning": {
-        "english": "copy"
+        "english": "copy",
+        "korean": "복사"
       },
       "strokes": {
         "count": 5,
@@ -26903,7 +26795,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "wakanmuri"
       },
       "meaning": {
-        "english": "cover, crown"
+        "english": "cover, crown",
+        "korean": "커버, 왕관"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/wakanmuri0.svg",
@@ -26932,7 +26825,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "写真（しゃしん）",
         "meaning": {
-          "english": "photograph"
+          "english": "photograph",
+          "korean": "사진"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sha-utsu(su)_06_a.opus",
@@ -26944,7 +26838,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "写実的な（しゃじつてきな）",
         "meaning": {
-          "english": "true to life"
+          "english": "true to life",
+          "korean": "삶과 같다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sha-utsu(su)_06_b.opus",
@@ -26956,7 +26851,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "写生する（しゃせいする）",
         "meaning": {
-          "english": "sketch (drawing)"
+          "english": "sketch (drawing)",
+          "korean": "스케치"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sha-utsu(su)_06_c.opus",
@@ -26968,7 +26864,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "写経する（しゃきょうする）",
         "meaning": {
-          "english": "hand-copy a sutra"
+          "english": "hand-copy a sutra",
+          "korean": "스트라"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sha-utsu(su)_06_d.opus",
@@ -26980,7 +26877,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "写本する（しゃほんする）",
         "meaning": {
-          "english": "hand-copy a manuscript"
+          "english": "hand-copy a manuscript",
+          "korean": "만자"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sha-utsu(su)_06_e.opus",
@@ -26992,7 +26890,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "複写する（ふくしゃする）",
         "meaning": {
-          "english": "copy"
+          "english": "copy",
+          "korean": "복사하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sha-utsu(su)_06_f.opus",
@@ -27004,7 +26903,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "描写する（びょうしゃする）",
         "meaning": {
-          "english": "depict"
+          "english": "depict",
+          "korean": "그리다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sha-utsu(su)_06_g.opus",
@@ -27016,7 +26916,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "写す（うつす）",
         "meaning": {
-          "english": "film, project [v.t.]"
+          "english": "film, project [v.t.]",
+          "korean": "영화, 프로젝트"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sha-utsu(su)_06_h.opus",
@@ -27028,7 +26929,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "写る（うつる）",
         "meaning": {
-          "english": "be projected [v.i.]"
+          "english": "be projected [v.i.]",
+          "korean": "계획되다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sha-utsu(su)_06_i.opus",
@@ -27059,7 +26961,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "花",
       "meaning": {
-        "english": "flower"
+        "english": "flower",
+        "korean": "꽃"
       },
       "strokes": {
         "count": 7,
@@ -27111,7 +27014,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kusakanmuri"
       },
       "meaning": {
-        "english": "grass"
+        "english": "grass",
+        "korean": "잔디"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kusakanmuri0.svg",
@@ -27140,7 +27044,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "花壇（かだん）",
         "meaning": {
-          "english": "flower bed"
+          "english": "flower bed",
+          "korean": "꽃밭"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hana(bi)_06_a.opus",
@@ -27152,7 +27057,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "花瓶（かびん）",
         "meaning": {
-          "english": "vase"
+          "english": "vase",
+          "korean": "꽃병"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hana(bi)_06_b.opus",
@@ -27164,7 +27070,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "造花（ぞうか）",
         "meaning": {
-          "english": "artificial flowers"
+          "english": "artificial flowers",
+          "korean": "인공꽃"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hana(bi)_06_c.opus",
@@ -27176,7 +27083,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "花粉（かふん）",
         "meaning": {
-          "english": "pollen"
+          "english": "pollen",
+          "korean": "꽃가루"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hana(bi)_06_d.opus",
@@ -27188,7 +27096,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "開花する（かいかする）",
         "meaning": {
-          "english": "bloom"
+          "english": "bloom",
+          "korean": "꽃이 피다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hana(bi)_06_e.opus",
@@ -27200,7 +27109,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "花（はな）",
         "meaning": {
-          "english": "flower"
+          "english": "flower",
+          "korean": "꽃"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hana(bi)_06_f.opus",
@@ -27212,7 +27122,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "花屋（はなや）",
         "meaning": {
-          "english": "florist"
+          "english": "florist",
+          "korean": "꽃집"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hana(bi)_06_g.opus",
@@ -27224,7 +27135,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "生け花（いけばな）",
         "meaning": {
-          "english": "flower arrangement"
+          "english": "flower arrangement",
+          "korean": "꽃꽂이"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hana(bi)_06_h.opus",
@@ -27236,7 +27148,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "花嫁（はなよめ）",
         "meaning": {
-          "english": "bride"
+          "english": "bride",
+          "korean": "꽃미남"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hana(bi)_06_i.opus",
@@ -27248,7 +27161,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "花火（はなび）",
         "meaning": {
-          "english": "fireworks"
+          "english": "fireworks",
+          "korean": "불꽃놀이"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hana(bi)_06_j.opus",
@@ -27260,7 +27174,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "お花見（おはなみ）",
         "meaning": {
-          "english": "cherry-blossom viewing"
+          "english": "cherry-blossom viewing",
+          "korean": "벚꽃놀이"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hana(bi)_06_k.opus",
@@ -27272,7 +27187,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "草花（くさばな）",
         "meaning": {
-          "english": "plants and flowers"
+          "english": "plants and flowers",
+          "korean": "잔디꽃"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hana(bi)_06_l.opus",
@@ -27305,7 +27221,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "黒",
       "meaning": {
-        "english": "black"
+        "english": "black",
+        "korean": "검정"
       },
       "strokes": {
         "count": 11,
@@ -27461,7 +27378,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "真っ黒な（まっくろな）",
         "meaning": {
           "english": "pitch black",
-          "korean": "매우 검정"
+          "korean": "검정색"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kuro_06_f.opus",
@@ -27498,7 +27415,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "答",
       "meaning": {
-        "english": "answer"
+        "english": "answer",
+        "korean": "답"
       },
       "strokes": {
         "count": 12,
@@ -27560,7 +27478,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "takekanmuri"
       },
       "meaning": {
-        "english": "bamboo", 
+        "english": "bamboo",
         "korean": "대나무"
       },
       "animation": [
@@ -27591,7 +27509,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "解答する（かいとうする）",
         "meaning": {
           "english": "solve, figure out",
-          "korean": "풀다, 해결하다"
+          "korean": "풀다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tou-kota(e)_06_a.opus",
@@ -27604,7 +27522,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "回答する（かいとうする）",
         "meaning": {
           "english": "reply [v.i.]",
-          "korean": "답장하다 [v.i.]"
+          "korean": "답변하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tou-kota(e)_06_b.opus",
@@ -27617,7 +27535,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "応答する（おうとうする）",
         "meaning": {
           "english": "respond [v.i.]",
-          "korean": "답장하다 [v.i.]"
+          "korean": "응답하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tou-kota(e)_06_c.opus",
@@ -27630,7 +27548,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "返答する（へんとうする）",
         "meaning": {
           "english": "reply [v.i.]",
-          "korean": "답장하다 [v.i.]"
+          "korean": "답변하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tou-kota(e)_06_d.opus",
@@ -27643,7 +27561,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "答案（とうあん）",
         "meaning": {
           "english": "examination paper",
-          "korean": "시험지"
+          "korean": "답안지"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tou-kota(e)_06_e.opus",
@@ -27656,7 +27574,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "答える（こたえる）",
         "meaning": {
           "english": "answer [v.i.]",
-          "korean": "답장하다 [v.i.]"
+          "korean": "답변하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tou-kota(e)_06_f.opus",
@@ -27791,7 +27709,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "赤十字（せきじゅうじ）",
         "meaning": {
           "english": "Red Cross",
-          "korean": "레드크로스"
+          "korean": "빨강십자"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/seki-aka_06_b.opus",
@@ -27817,7 +27735,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "赤面する（せきめんする）",
         "meaning": {
           "english": "blush",
-          "korean": "붉은 얼굴"
+          "korean": "붉게 하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/seki-aka_06_d.opus",
@@ -27830,7 +27748,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "赤銅色（しゃくどういろ）",
         "meaning": {
           "english": "tanned color",
-          "korean": "붉은 색"
+          "korean": "타인 색"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/seki-aka_06_e.opus",
@@ -27895,7 +27813,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "赤らめる（あからめる）",
         "meaning": {
           "english": "redden",
-          "korean": "붉은 얼굴"
+          "korean": "붉게 하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/seki-aka_06_j.opus",
@@ -27908,7 +27826,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "*真っ赤な（まっかな）",
         "meaning": {
           "english": "deep red",
-          "korean": "매우 붉은 색"
+          "korean": "적게 하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/seki-aka_06_k.opus",
@@ -28020,8 +27938,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "地方色（ちほうしょく）",
         "meaning": {
-          "english": "local color",
-          "korean": "지역 색"
+          "english": "local color"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shoku-iro_06_a.opus",
@@ -28033,8 +27950,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "景色（けしき）",
         "meaning": {
-          "english": "scenery, landscape",
-          "korean": "경관, 풍경"
+          "english": "scenery, landscape"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shoku-iro_06_b.opus",
@@ -28046,8 +27962,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "何色（なにいろ）",
         "meaning": {
-          "english": "what color",
-          "korean": "무슨 색"
+          "english": "what color"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shoku-iro_06_c.opus",
@@ -28059,8 +27974,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "黄色（きいろ）",
         "meaning": {
-          "english": "yellow",
-          "korean": "노랑"
+          "english": "yellow"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shoku-iro_06_d.opus",
@@ -28072,8 +27986,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "色々（いろいろ）",
         "meaning": {
-          "english": "various",
-          "korean": "다양한"
+          "english": "various"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shoku-iro_06_e.opus",
@@ -28085,8 +27998,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "顔色（かおいろ）",
         "meaning": {
-          "english": "complexion",
-          "korean": "얼굴 색"
+          "english": "complexion"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shoku-iro_06_f.opus",
@@ -28118,8 +28030,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "町",
       "meaning": {
-        "english": "town",
-        "korean": "마을"
+        "english": "town"
       },
       "strokes": {
         "count": 7,
@@ -28200,8 +28111,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "町長（ちょうちょう）",
         "meaning": {
-          "english": "town headman",
-          "korean": "마을 현장"
+          "english": "town headman"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-machi_06_a.opus",
@@ -28213,8 +28123,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "町名（ちょうめい）",
         "meaning": {
-          "english": "name of a town",
-          "korean": "마을 이름"
+          "english": "name of a town"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-machi_06_b.opus",
@@ -28226,8 +28135,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "市町村（しちょうそん）",
         "meaning": {
-          "english": "cities, towns and villages",
-          "korean": "시, 마을, 마을"
+          "english": "cities, towns and villages"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-machi_06_c.opus",
@@ -28239,8 +28147,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "町（まち）",
         "meaning": {
-          "english": "town",
-          "korean": "마을"
+          "english": "town"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-machi_06_d.opus",
@@ -28252,8 +28159,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "町並み（まちなみ）",
         "meaning": {
-          "english": "the appearance of a town/street",
-          "korean": "마을 모습"
+          "english": "the appearance of a town/street"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-machi_06_e.opus",
@@ -28265,8 +28171,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "下町（したまち）",
         "meaning": {
-          "english": "old commercial area of Tokyo",
-          "korean": "도쿄 오래된 상업 지역"
+          "english": "old commercial area of Tokyo"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chou-machi_06_f.opus",
@@ -28299,8 +28204,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "銀",
       "meaning": {
-        "english": "silver",
-        "korean": "은"
+        "english": "silver"
       },
       "strokes": {
         "count": 14,
@@ -28409,7 +28313,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "銀河（ぎんが）",
         "meaning": {
           "english": "galaxy",
-          "korean": "은하수"
+          "korean": "은하"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gin(za)_06_b.opus",
@@ -28476,7 +28380,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "工",
       "meaning": {
         "english": "manufacture, construction",
-        "korean": "제작, 건설"
+        "korean": "제조, 건설"
       },
       "strokes": {
         "count": 3,
@@ -28520,7 +28424,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "takumi"
       },
       "meaning": {
-        "english": "work, carpenter, skill"
+        "english": "work, carpenter, skill",
+        "korean": "일, 철공사, 기술"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/takumi0.svg",
@@ -28550,7 +28455,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "工事（こうじ）",
         "meaning": {
           "english": "construction work",
-          "korean": "건설 작업"
+          "korean": "건설 일"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ku(fuu)_06_a.opus",
@@ -28602,7 +28507,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "加工する（かこうする）",
         "meaning": {
           "english": "process [v.t.]",
-          "korean": "처리하다 [v.t.]"
+          "korean": "처리하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ku(fuu)_06_e.opus",
@@ -28615,7 +28520,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "大工（だいく）",
         "meaning": {
           "english": "carpenter",
-          "korean": "나무 장인"
+          "korean": "철공사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ku(fuu)_06_f.opus",
@@ -28628,7 +28533,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "細工する（さいくする）",
         "meaning": {
           "english": "craft",
-          "korean": "장인"
+          "korean": "장식하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ku(fuu)_06_g.opus",
@@ -28869,7 +28774,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "大字（おおあざ）",
         "meaning": {
           "english": "larger section (of village)",
-          "korean": "마을 큰 부분"
+          "korean": "큰 문자"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ji-aza_06_i.opus",
@@ -29008,7 +28913,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "飲酒運転（いんしゅうんてん）",
         "meaning": {
           "english": "drunk driving",
-          "korean": "취한 운전"
+          "korean": "음주 운전"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/in-no(mu)_06_b.opus",
@@ -29099,7 +29004,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "注",
       "meaning": {
         "english": "pour, concentrate, note",
-        "korean": "부어 주다, 집중하다, 메모"
+        "korean": "붓다, 집중하다, 메모"
       },
       "strokes": {
         "count": 8,
@@ -29153,8 +29058,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "sanzui"
       },
       "meaning": {
-        "english": "water",
-        "korean": "물"
+        "english": "water"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/sanzui0.svg",
@@ -29183,8 +29087,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "注射（ちゅうしゃ）",
         "meaning": {
-          "english": "injection",
-          "korean": "주사"
+          "english": "injection"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chuu-soso(gu)_06_a.opus",
@@ -29196,8 +29099,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "注解（ちゅうかい）",
         "meaning": {
-          "english": "explanatory, notes, annotation",
-          "korean": "설명, 메모, 주석"
+          "english": "explanatory, notes, annotation"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chuu-soso(gu)_06_b.opus",
@@ -29209,8 +29111,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "脚注（きゃくちゅう）",
         "meaning": {
-          "english": "footnote",
-          "korean": "발취"
+          "english": "footnote"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chuu-soso(gu)_06_c.opus",
@@ -29222,8 +29123,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "注目する（ちゅうもくする）",
         "meaning": {
-          "english": "pay attention, watch [v.i.]",
-          "korean": "주목하다 [v.i.]"
+          "english": "pay attention, watch [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chuu-soso(gu)_06_d.opus",
@@ -29235,8 +29135,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "注文する（ちゅうもんする）",
         "meaning": {
-          "english": "order, request [v.t.]",
-          "korean": "주문하다 [v.t.]"
+          "english": "order, request [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chuu-soso(gu)_06_e.opus",
@@ -29248,8 +29147,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "注視する（ちゅうしする）",
         "meaning": {
-          "english": "gaze steadily at",
-          "korean": "주목하다"
+          "english": "gaze steadily at"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chuu-soso(gu)_06_f.opus",
@@ -29261,8 +29159,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "注意する（ちゅういする）",
         "meaning": {
-          "english": "be careful, beware [v.i.]",
-          "korean": "주의하다 [v.i.]"
+          "english": "be careful, beware [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chuu-soso(gu)_06_g.opus",
@@ -29274,8 +29171,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "発注する（はっちゅうする）",
         "meaning": {
-          "english": "place an order",
-          "korean": "발주하다"
+          "english": "place an order"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chuu-soso(gu)_06_h.opus",
@@ -29287,8 +29183,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "注ぐ（そそぐ）",
         "meaning": {
-          "english": "pour",
-          "korean": "부어 주다"
+          "english": "pour"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/chuu-soso(gu)_06_i.opus",
@@ -29322,8 +29217,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "走",
       "meaning": {
-        "english": "run",
-        "korean": "달리다"
+        "english": "run"
       },
       "strokes": {
         "count": 7,
@@ -29404,8 +29298,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "滑走路（かっそうろ）",
         "meaning": {
-          "english": "runway",
-          "korean": "비행장"
+          "english": "runway"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-hashi(ru)_06_a.opus",
@@ -29417,8 +29310,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "御馳走する（ごちそうする）",
         "meaning": {
-          "english": "treat someone to a meal",
-          "korean": "식사를 먹이다"
+          "english": "treat someone to a meal"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-hashi(ru)_06_b.opus",
@@ -29430,8 +29322,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "競走する（きょうそうする）",
         "meaning": {
-          "english": "race",
-          "korean": "경주하다"
+          "english": "race"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-hashi(ru)_06_c.opus",
@@ -29443,8 +29334,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "逃走する（とうそうする）",
         "meaning": {
-          "english": "escape [v.i.]",
-          "korean": "도망하다 [v.i.]"
+          "english": "escape [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-hashi(ru)_06_d.opus",
@@ -29456,8 +29346,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "脱走する（だっそうする）",
         "meaning": {
-          "english": "escape [v.i.]",
-          "korean": "도망하다 [v.i.]"
+          "english": "escape [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-hashi(ru)_06_e.opus",
@@ -29469,8 +29358,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "走る（はしる）",
         "meaning": {
-          "english": "run",
-          "korean": "달리다"
+          "english": "run"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-hashi(ru)_06_f.opus",
@@ -29482,8 +29370,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "*師走（しわす）",
         "meaning": {
-          "english": "traditional name for December",
-          "korean": "12월"
+          "english": "traditional name for December"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/sou-hashi(ru)_06_g.opus",
@@ -29516,8 +29403,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "京",
       "meaning": {
-        "english": "capital",
-        "korean": "수도"
+        "english": "capital"
       },
       "strokes": {
         "count": 8,
@@ -29600,8 +29486,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "東京（とうきょう）",
         "meaning": {
-          "english": "Tokyo",
-          "korean": "도쿄"
+          "english": "Tokyo"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kyou(to)_06_a.opus",
@@ -29613,8 +29498,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "京都（きょうと）",
         "meaning": {
-          "english": "Kyoto",
-          "korean": "교토"
+          "english": "Kyoto"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kyou(to)_06_b.opus",
@@ -29626,8 +29510,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "上京する（じょうきょうする）",
         "meaning": {
-          "english": "travel to the capital",
-          "korean": "수도로 여행하다"
+          "english": "travel to the capital"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kyou(to)_06_c.opus",
@@ -29639,8 +29522,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "京浜（けいひん）",
         "meaning": {
-          "english": "Tokyo and Yokohama",
-          "korean": "도쿄와 요코하마"
+          "english": "Tokyo and Yokohama"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kyou(to)_06_d.opus",
@@ -29652,8 +29534,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "京阪神（けいはんしん）",
         "meaning": {
-          "english": "Kyoto-Osaka-Kobe",
-          "korean": "교토-오사카-코베"
+          "english": "Kyoto-Osaka-Kobe"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kyou(to)_06_e.opus",
@@ -29665,8 +29546,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "北京（ぺきん）",
         "meaning": {
-          "english": "Beijing",
-          "korean": "베이징"
+          "english": "Beijing"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kyou(to)_06_f.opus",
@@ -29678,8 +29558,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "南京（なんきん）",
         "meaning": {
-          "english": "Nanjing",
-          "korean": "난징"
+          "english": "Nanjing"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kyou(to)_06_g.opus",
@@ -29713,8 +29592,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "古",
       "meaning": {
-        "english": "old",
-        "korean": "오래된"
+        "english": "old"
       },
       "strokes": {
         "count": 5,
@@ -29791,8 +29669,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "古典（こてん）",
         "meaning": {
-          "english": "classics",
-          "korean": "고전"
+          "english": "classics"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/furu(i)_06_a.opus",
@@ -29804,8 +29681,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "古代（こだい）",
         "meaning": {
-          "english": "ancient times",
-          "korean": "고대"
+          "english": "ancient times"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/furu(i)_06_b.opus",
@@ -29817,8 +29693,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "古い（ふるい）",
         "meaning": {
-          "english": "old",
-          "korean": "오래된"
+          "english": "old"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/furu(i)_06_c.opus",
@@ -29830,8 +29705,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "古新聞（ふるしんぶん）",
         "meaning": {
-          "english": "old newspapers",
-          "korean": "오래된 신문"
+          "english": "old newspapers"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/furu(i)_06_d.opus",
@@ -29862,8 +29736,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "英",
       "meaning": {
-        "english": "distinguished, England",
-        "korean": "저명한, 영국"
+        "english": "distinguished, England"
       },
       "strokes": {
         "count": 8,
@@ -29917,8 +29790,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kusakanmuri"
       },
       "meaning": {
-        "english": "grass",
-        "korean": "잔디"
+        "english": "grass"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kusakanmuri0.svg",
@@ -29947,8 +29819,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "英語（えいご）",
         "meaning": {
-          "english": "English language",
-          "korean": "영어"
+          "english": "English language"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei(go)_06_a.opus",
@@ -29960,8 +29831,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "英国（えいこく）",
         "meaning": {
-          "english": "England",
-          "korean": "영국"
+          "english": "England"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei(go)_06_b.opus",
@@ -29973,8 +29843,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "英国人（えいこくじん）",
         "meaning": {
-          "english": "English person",
-          "korean": "영국인"
+          "english": "English person"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei(go)_06_c.opus",
@@ -29986,8 +29855,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "英会話（えいかいわ）",
         "meaning": {
-          "english": "English conversation",
-          "korean": "영어 대화"
+          "english": "English conversation"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei(go)_06_d.opus",
@@ -29999,8 +29867,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "英和辞典（えいわじてん）",
         "meaning": {
-          "english": "English-Japanese dictionary",
-          "korean": "영어-일본어 사전"
+          "english": "English-Japanese dictionary"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei(go)_06_e.opus",
@@ -30012,8 +29879,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "英雄（えいゆう）",
         "meaning": {
-          "english": "hero",
-          "korean": "영웅"
+          "english": "hero"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ei(go)_06_f.opus",
@@ -30047,8 +29913,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "習",
       "meaning": {
-        "english": "learn, custom",
-        "korean": "배우다, 습관"
+        "english": "learn, custom"
       },
       "strokes": {
         "count": 11,
@@ -30108,8 +29973,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "hane"
       },
       "meaning": {
-        "english": "feather, wing",
-        "korean": "깃털, 날개"
+        "english": "feather, wing"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/hane0.svg",
@@ -30138,8 +30002,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "練習する（れんしゅうする）",
         "meaning": {
-          "english": "practice",
-          "korean": "연습하다"
+          "english": "practice"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu-nara(u)_06_a.opus",
@@ -30151,8 +30014,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "予習する（よしゅうする）",
         "meaning": {
-          "english": "prepare for a lesson",
-          "korean": "수업을 준비하다"
+          "english": "prepare for a lesson"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu-nara(u)_06_b.opus",
@@ -30164,8 +30026,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "復習する（ふくしゅうする）",
         "meaning": {
-          "english": "review a lesson",
-          "korean": "수업을 되짚다"
+          "english": "review a lesson"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu-nara(u)_06_c.opus",
@@ -30177,8 +30038,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "学習する（がくしゅうする）",
         "meaning": {
-          "english": "learn",
-          "korean": "배우다"
+          "english": "learn"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu-nara(u)_06_d.opus",
@@ -30190,8 +30050,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "習慣（しゅうかん）",
         "meaning": {
-          "english": "custom, habit",
-          "korean": "습관"
+          "english": "custom, habit"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu-nara(u)_06_e.opus",
@@ -30203,8 +30062,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "風習（ふうしゅう）",
         "meaning": {
-          "english": "custom",
-          "korean": "습관"
+          "english": "custom"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu-nara(u)_06_f.opus",
@@ -30216,8 +30074,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "習う（ならう）",
         "meaning": {
-          "english": "learn",
-          "korean": "배우다"
+          "english": "learn"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu-nara(u)_06_g.opus",
@@ -30229,8 +30086,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "見習い（みならい）",
         "meaning": {
-          "english": "apprentice",
-          "korean": "제자"
+          "english": "apprentice"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu-nara(u)_06_h.opus",
@@ -30242,8 +30098,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "習わし（ならわし）",
         "meaning": {
-          "english": "customary practice",
-          "korean": "습관"
+          "english": "customary practice"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shuu-nara(u)_06_i.opus",
@@ -30280,8 +30135,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "兄",
       "meaning": {
-        "english": "older brother",
-        "korean": "오빠"
+        "english": "older brother"
       },
       "strokes": {
         "count": 5,
@@ -30329,8 +30183,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "hitoashi"
       },
       "meaning": {
-        "english": "human legs",
-        "korean": "다리"
+        "english": "human legs"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/hitoashi0.svg",
@@ -30359,8 +30212,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "父兄（ふけい）",
         "meaning": {
-          "english": "guardians",
-          "korean": "보살"
+          "english": "guardians"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ani_06_a.opus",
@@ -30372,8 +30224,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "兄弟（きょうだい）",
         "meaning": {
-          "english": "siblings",
-          "korean": "형제"
+          "english": "siblings"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ani_06_b.opus",
@@ -30385,8 +30236,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "兄（あに）",
         "meaning": {
-          "english": "one's own older brother",
-          "korean": "내 오빠"
+          "english": "one's own older brother"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ani_06_c.opus",
@@ -30398,8 +30248,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "*お兄さん（おにいさん）",
         "meaning": {
-          "english": "older brother [hon.]",
-          "korean": "오빠 [호남]"
+          "english": "older brother [hon.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ani_06_d.opus",
@@ -30430,8 +30279,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "服",
       "meaning": {
-        "english": "clothes, clothing, submit",
-        "korean": "옷, 옷차림, 제출"
+        "english": "clothes, clothing, submit"
       },
       "strokes": {
         "count": 8,
@@ -30485,8 +30333,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "tsukihen"
       },
       "meaning": {
-        "english": "moon, month, period",
-        "korean": "달, 달, 기간"
+        "english": "moon, month, period"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/tsukihen0.svg",
@@ -30515,8 +30362,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "服（ふく）",
         "meaning": {
-          "english": "clothes",
-          "korean": "옷"
+          "english": "clothes"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(you)fuku_06_a.opus",
@@ -30528,8 +30374,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "洋服（ようふく）",
         "meaning": {
-          "english": "Western-style clothes",
-          "korean": "서양식 옷"
+          "english": "Western-style clothes"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(you)fuku_06_b.opus",
@@ -30541,8 +30386,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "和服（わふく）",
         "meaning": {
-          "english": "Japanese clothes",
-          "korean": "일본식 옷"
+          "english": "Japanese clothes"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(you)fuku_06_c.opus",
@@ -30554,8 +30398,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "制服（せいふく）",
         "meaning": {
-          "english": "uniform",
-          "korean": "교복"
+          "english": "uniform"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(you)fuku_06_d.opus",
@@ -30567,8 +30410,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "服装（ふくそう）",
         "meaning": {
-          "english": "clothes",
-          "korean": "옷"
+          "english": "clothes"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(you)fuku_06_e.opus",
@@ -30580,8 +30422,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "服従する（ふくじゅうする）",
         "meaning": {
-          "english": "obey",
-          "korean": "따르다"
+          "english": "obey"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(you)fuku_06_f.opus",
@@ -30593,8 +30434,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "服役する（ふくえきする）",
         "meaning": {
-          "english": "serve time in prison",
-          "korean": "감옥에 가다"
+          "english": "serve time in prison"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(you)fuku_06_g.opus",
@@ -30606,8 +30446,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "克服する（こくふくする）",
         "meaning": {
-          "english": "conquer",
-          "korean": "이기다"
+          "english": "conquer"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(you)fuku_06_h.opus",
@@ -30619,8 +30458,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "不服な（ふふくな）",
         "meaning": {
-          "english": "dissatisfied",
-          "korean": "불만"
+          "english": "dissatisfied"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(you)fuku_06_i.opus",
@@ -30632,8 +30470,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "内服薬（ないふくやく）",
         "meaning": {
-          "english": "medicine taken internally",
-          "korean": "내부 약"
+          "english": "medicine taken internally"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(you)fuku_06_j.opus",
@@ -30667,8 +30504,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "建",
       "meaning": {
-        "english": "build",
-        "korean": "건축"
+        "english": "build"
       },
       "strokes": {
         "count": 9,
@@ -30724,8 +30560,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ennyou"
       },
       "meaning": {
-        "english": "to move, stretch",
-        "korean": "움직이다, 늘리다"
+        "english": "to move, stretch"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ennyou0.svg",
@@ -30754,8 +30589,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "建築（けんちく）",
         "meaning": {
-          "english": "architecture",
-          "korean": "건축"
+          "english": "architecture"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-ta(teru)_06_a.opus",
@@ -30767,8 +30601,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "建設する（けんせつする）",
         "meaning": {
-          "english": "construct",
-          "korean": "건설하다"
+          "english": "construct"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-ta(teru)_06_b.opus",
@@ -30780,8 +30613,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "再建する（さいけんする）",
         "meaning": {
-          "english": "rebuild",
-          "korean": "재건하다"
+          "english": "rebuild"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-ta(teru)_06_c.opus",
@@ -30793,8 +30625,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "建立する（こんりゅうする）",
         "meaning": {
-          "english": "erect (building) [v.t.]",
-          "korean": "건설하다"
+          "english": "erect (building) [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-ta(teru)_06_d.opus",
@@ -30806,8 +30637,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "建つ（たつ）",
         "meaning": {
-          "english": "be built [v.i.]",
-          "korean": "건설되다"
+          "english": "be built [v.i.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-ta(teru)_06_e.opus",
@@ -30819,8 +30649,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "建てる（たてる）",
         "meaning": {
-          "english": "build [v.t.]",
-          "korean": "건설하다"
+          "english": "build [v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-ta(teru)_06_f.opus",
@@ -30832,8 +30661,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "建物（たてもの）",
         "meaning": {
-          "english": "building",
-          "korean": "건물"
+          "english": "building"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-ta(teru)_06_g.opus",
@@ -30845,8 +30673,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "建前（たてまえ）",
         "meaning": {
-          "english": "public position",
-          "korean": "공정한 입장"
+          "english": "public position"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-ta(teru)_06_h.opus",
@@ -30858,8 +30685,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "二階建て（にかいだて）",
         "meaning": {
-          "english": "two-storied building",
-          "korean": "2층 건물"
+          "english": "two-storied building"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-ta(teru)_06_i.opus",
@@ -30894,8 +30720,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "青",
       "meaning": {
-        "english": "blue",
-        "korean": "파란색"
+        "english": "blue"
       },
       "strokes": {
         "count": 8,
@@ -30949,8 +30774,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ao"
       },
       "meaning": {
-        "english": "blue, green",
-        "korean": "파란색, 녹색"
+        "english": "blue, green"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ao0.svg",
@@ -30979,8 +30803,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "青春（せいしゅん）",
         "meaning": {
-          "english": "springtime of life",
-          "korean": "청춘"
+          "english": "springtime of life"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ao_06_a.opus",
@@ -30992,8 +30815,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "青年（せいねん）",
         "meaning": {
-          "english": "youth",
-          "korean": "청년"
+          "english": "youth"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ao_06_b.opus",
@@ -31005,8 +30827,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "緑青（ろくしょう）",
         "meaning": {
-          "english": "copper rust",
-          "korean": "동색"
+          "english": "copper rust"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ao_06_c.opus",
@@ -31018,8 +30839,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "青い（あおい）",
         "meaning": {
-          "english": "blue, pale",
-          "korean": "파란색, 연한색"
+          "english": "blue, pale"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ao_06_d.opus",
@@ -31031,8 +30851,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "青空（あおぞら）",
         "meaning": {
-          "english": "blue sky",
-          "korean": "파란하늘"
+          "english": "blue sky"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ao_06_e.opus",
@@ -31044,8 +30863,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "青白い（あおじろい）",
         "meaning": {
-          "english": "pale",
-          "korean": "연한색"
+          "english": "pale"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ao_06_f.opus",
@@ -31057,8 +30875,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "青信号（あおしんごう）",
         "meaning": {
-          "english": "green light",
-          "korean": "녹색 신호"
+          "english": "green light"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ao_06_g.opus",
@@ -31092,8 +30909,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "研",
       "meaning": {
-        "english": "sand, sharpen",
-        "korean": "모래, 가는 도구"
+        "english": "sand, sharpen"
       },
       "strokes": {
         "count": 9,
@@ -31149,8 +30965,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ishihen"
       },
       "meaning": {
-        "english": "stone",
-        "korean": "돌"
+        "english": "stone"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ishihen0.svg",
@@ -31179,8 +30994,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "研修（けんしゅう）",
         "meaning": {
-          "english": "training",
-          "korean": "훈련"
+          "english": "training"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-to(gu)_06_a.opus",
@@ -31192,8 +31006,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "研究所（けんきゅうじょ）",
         "meaning": {
-          "english": "research institute",
-          "korean": "연구소"
+          "english": "research institute"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-to(gu)_06_b.opus",
@@ -31205,8 +31018,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "研究室（けんきゅうしつ）",
         "meaning": {
-          "english": "seminar room, prof's office",
-          "korean": "연구실"
+          "english": "seminar room, prof's office"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-to(gu)_06_c.opus",
@@ -31218,8 +31030,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "研摩する（けんまする）",
         "meaning": {
-          "english": "grind",
-          "korean": "가는 도구"
+          "english": "grind"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-to(gu)_06_d.opus",
@@ -31231,8 +31042,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "研究する（けんきゅうする）",
         "meaning": {
-          "english": "research [ v.t.]",
-          "korean": "연구하다"
+          "english": "research [ v.t.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-to(gu)_06_e.opus",
@@ -31244,8 +31054,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "研ぐ（とぐ）",
         "meaning": {
-          "english": "sharpen",
-          "korean": "갈다, 연마하다"
+          "english": "sharpen"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ken-to(gu)_06_f.opus",
@@ -31280,8 +31089,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "紙",
       "meaning": {
-        "english": "paper",
-        "korean": "종이"
+        "english": "paper"
       },
       "strokes": {
         "count": 10,
@@ -31339,8 +31147,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "itohen"
       },
       "meaning": {
-        "english": "thread",
-        "korean": "실"
+        "english": "thread"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/itohen0.svg",
@@ -31369,8 +31176,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "白紙（はくし）",
         "meaning": {
-          "english": "white paper",
-          "korean": "하얀 종이"
+          "english": "white paper"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-kami_06_a.opus",
@@ -31382,8 +31188,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "用紙（ようし）",
         "meaning": {
-          "english": "blank form",
-          "korean": "빈 양식"
+          "english": "blank form"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-kami_06_b.opus",
@@ -31395,8 +31200,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "表紙（ひょうし）",
         "meaning": {
-          "english": "front cover",
-          "korean": "표지"
+          "english": "front cover"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-kami_06_c.opus",
@@ -31408,8 +31212,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "新聞紙（しんぶんし）",
         "meaning": {
-          "english": "newspaper",
-          "korean": "신문"
+          "english": "newspaper"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-kami_06_d.opus",
@@ -31421,8 +31224,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "紙（かみ）",
         "meaning": {
-          "english": "paper",
-          "korean": "종이"
+          "english": "paper"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-kami_06_e.opus",
@@ -31434,8 +31236,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "手紙（てがみ）",
         "meaning": {
-          "english": "letter",
-          "korean": "편지"
+          "english": "letter"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/shi-kami_06_f.opus",
@@ -31471,8 +31272,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "究",
       "meaning": {
-        "english": "study exhaustively",
-        "korean": "연구하다"
+        "english": "study exhaustively"
       },
       "strokes": {
         "count": 7,
@@ -31883,7 +31683,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "図面（ずめん）",
         "meaning": {
-          "english": "plan"
+          "english": "plan",
+          "korean": "계획"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/zu-haka(ru)_06_b.opus",
@@ -31895,7 +31696,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "設計図（せっけいず）",
         "meaning": {
-          "english": "blueprint"
+          "english": "blueprint",
+          "korean": "설계도"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/zu-haka(ru)_06_c.opus",
@@ -31907,7 +31709,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "意図する（いとする）",
         "meaning": {
-          "english": "intend"
+          "english": "intend",
+          "korean": "의도하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/zu-haka(ru)_06_d.opus",
@@ -31919,7 +31722,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "図書室（としょしつ）",
         "meaning": {
-          "english": "library room"
+          "english": "library room",
+          "korean": "도서실"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/zu-haka(ru)_06_e.opus",
@@ -31931,7 +31735,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "図書館（としょかん）",
         "meaning": {
-          "english": "library"
+          "english": "library",
+          "korean": "도서관"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/zu-haka(ru)_06_f.opus",
@@ -31943,7 +31748,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "図る（はかる）",
         "meaning": {
-          "english": "plot, attempt"
+          "english": "plot, attempt",
+          "korean": "계획하다, 시도하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/zu-haka(ru)_06_g.opus",
@@ -32063,7 +31869,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "旅行する（りょこうする）",
         "meaning": {
-          "english": "travel"
+          "english": "travel",
+          "korean": "여행"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ryo-tabi_06_a.opus",
@@ -32075,7 +31882,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "旅券（りょけん）",
         "meaning": {
-          "english": "passport"
+          "english": "passport",
+          "korean": "여권"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ryo-tabi_06_b.opus",
@@ -32087,7 +31895,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "旅費（りょひ）",
         "meaning": {
-          "english": "travel expenses"
+          "english": "travel expenses",
+          "korean": "여행비"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ryo-tabi_06_c.opus",
@@ -32099,7 +31908,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "旅館（りょかん）",
         "meaning": {
-          "english": "Japanese style hotel"
+          "english": "Japanese style hotel",
+          "korean": "일본식 호텔"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ryo-tabi_06_d.opus",
@@ -32111,7 +31921,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "旅（たび）",
         "meaning": {
-          "english": "journey"
+          "english": "journey",
+          "korean": "여행"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ryo-tabi_06_e.opus",
@@ -32123,7 +31934,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "旅先（たびさき）",
         "meaning": {
-          "english": "destination"
+          "english": "destination",
+          "korean": "목적지"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ryo-tabi_06_f.opus",
@@ -32135,7 +31947,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "旅立つ（たびだつ）",
         "meaning": {
-          "english": "begin a trip [v.i.]"
+          "english": "begin a trip [v.i.]",
+          "korean": "여행을 시작하다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ryo-tabi_06_g.opus",
@@ -32147,7 +31960,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "旅人（たびびと）",
         "meaning": {
-          "english": "traveller"
+          "english": "traveller",
+          "korean": "여행자"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ryo-tabi_06_h.opus",
@@ -32262,7 +32076,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "肉屋（にくや）",
         "meaning": {
-          "english": "butcher [n.]"
+          "english": "butcher [n.]",
+          "korean": "도축장"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/niku_06_a.opus",
@@ -32274,7 +32089,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "肉食（にくしょく）",
         "meaning": {
-          "english": "meat-eating, carnivorous"
+          "english": "meat-eating, carnivorous",
+          "korean": "고기 먹는 동물"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/niku_06_b.opus",
@@ -32286,7 +32102,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "肉体（にくたい）",
         "meaning": {
-          "english": "body, flesh"
+          "english": "body, flesh",
+          "korean": "몸, 살"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/niku_06_c.opus",
@@ -32298,7 +32115,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "肉親（にくしん）",
         "meaning": {
-          "english": "blood relative"
+          "english": "blood relative",
+          "korean": "혈연"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/niku_06_d.opus",
@@ -32310,7 +32128,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "肉眼（にくがん）",
         "meaning": {
-          "english": "naked eye"
+          "english": "naked eye",
+          "korean": "눈"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/niku_06_e.opus",
@@ -32322,7 +32141,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "肉筆（にくひつ）",
         "meaning": {
-          "english": "one's own handwriting"
+          "english": "one's own handwriting",
+          "korean": "자신의 손글씨"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/niku_06_f.opus",
@@ -32334,7 +32154,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "皮肉（ひにく）",
         "meaning": {
-          "english": "cynicism, sarcasm, irony, satire"
+          "english": "cynicism, sarcasm, irony, satire",
+          "korean": "비꼬다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/niku_06_g.opus",
@@ -32346,7 +32167,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "牛肉（ぎゅうにく）",
         "meaning": {
-          "english": "beef"
+          "english": "beef",
+          "korean": "소고기"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/niku_06_h.opus",
@@ -32358,7 +32180,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "豚肉（ぶたにく）",
         "meaning": {
-          "english": "pork"
+          "english": "pork",
+          "korean": "돼지고기"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/niku_06_i.opus",
@@ -32370,7 +32193,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "鳥肉（とりにく）",
         "meaning": {
-          "english": "chicken meat"
+          "english": "chicken meat",
+          "korean": "닭고기"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/niku_06_j.opus",
@@ -32382,7 +32206,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "筋肉（きんにく）",
         "meaning": {
-          "english": "muscle, sinew"
+          "english": "muscle, sinew",
+          "korean": "근육, 뼈"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/niku_06_k.opus",
@@ -32394,7 +32219,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "挽き肉（ひきにく）",
         "meaning": {
-          "english": "minced, ground meat"
+          "english": "minced, ground meat",
+          "korean": "고기 다짐"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/niku_06_l.opus",
@@ -32426,7 +32252,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "夏",
       "meaning": {
-        "english": "summer"
+        "english": "summer",
+        "korean": "여름"
       },
       "strokes": {
         "count": 10,
@@ -32513,7 +32340,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "夏期講座（かきこうざ）",
         "meaning": {
-          "english": "course in summer term"
+          "english": "course in summer term",
+          "korean": "여름 학기 수업"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/natsu_06_a.opus",
@@ -32525,7 +32353,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "初夏（しょか）",
         "meaning": {
-          "english": "early summer"
+          "english": "early summer",
+          "korean": "초여름"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/natsu_06_b.opus",
@@ -32537,7 +32366,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "夏至（げし）",
         "meaning": {
-          "english": "summer solstice"
+          "english": "summer solstice",
+          "korean": "여름 중점"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/natsu_06_c.opus",
@@ -32549,7 +32379,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "夏（なつ）",
         "meaning": {
-          "english": "summer"
+          "english": "summer",
+          "korean": "여름"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/natsu_06_d.opus",
@@ -32561,7 +32392,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "真夏（まなつ）",
         "meaning": {
-          "english": "midsummer"
+          "english": "midsummer",
+          "korean": "중여름"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/natsu_06_e.opus",
@@ -32573,7 +32405,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "常夏（とこなつ）",
         "meaning": {
-          "english": "everlasting summer"
+          "english": "everlasting summer",
+          "korean": "영구 여름"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/natsu_06_f.opus",
@@ -32609,7 +32442,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "弟",
       "meaning": {
-        "english": "younger brother"
+        "english": "younger brother",
+        "korean": "남동생"
       },
       "strokes": {
         "count": 7,
@@ -32690,7 +32524,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "師弟（してい）",
         "meaning": {
-          "english": "teacher and student"
+          "english": "teacher and student",
+          "korean": "선생님과 학생"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/otouto_06_a.opus",
@@ -32702,7 +32537,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "義弟（ぎてい）",
         "meaning": {
-          "english": "younger brother-in-law"
+          "english": "younger brother-in-law",
+          "korean": "남동생 남편"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/otouto_06_b.opus",
@@ -32714,7 +32550,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "兄弟（きょうだい）",
         "meaning": {
-          "english": "siblings"
+          "english": "siblings",
+          "korean": "형제"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/otouto_06_c.opus",
@@ -32726,7 +32563,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "弟子（でし）",
         "meaning": {
-          "english": "disciple"
+          "english": "disciple",
+          "korean": "제자"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/otouto_06_d.opus",
@@ -32738,7 +32576,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "弟（おとうと）",
         "meaning": {
-          "english": "one's own younger brother"
+          "english": "one's own younger brother",
+          "korean": "자신의 남동생"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/otouto_06_e.opus",
@@ -32771,7 +32610,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "犬",
       "meaning": {
-        "english": "dog"
+        "english": "dog",
+        "korean": "개"
       },
       "strokes": {
         "count": 4,
@@ -32846,7 +32686,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "番犬（ばんけん）",
         "meaning": {
-          "english": "watchdog"
+          "english": "watchdog",
+          "korean": "개 보호"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/inu_06_a.opus",
@@ -32858,7 +32699,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "盲導犬（もうどうけん）",
         "meaning": {
-          "english": "seeing eye dog"
+          "english": "seeing eye dog",
+          "korean": "시각 장애 개"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/inu_06_b.opus",
@@ -32870,7 +32712,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "犬（いぬ）",
         "meaning": {
-          "english": "dog"
+          "english": "dog",
+          "korean": "개"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/inu_06_c.opus",
@@ -32882,7 +32725,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "飼い犬（かいいぬ）",
         "meaning": {
-          "english": "pet dog"
+          "english": "pet dog",
+          "korean": "애완 개"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/inu_06_d.opus",
@@ -32894,7 +32738,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "子犬（こいぬ）",
         "meaning": {
-          "english": "puppy"
+          "english": "puppy",
+          "korean": "강아지"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/inu_06_e.opus",
@@ -32924,7 +32769,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "飯",
       "meaning": {
-        "english": "cooked rice, meal"
+        "english": "cooked rice, meal",
+        "korean": "밥, 식사"
       },
       "strokes": {
         "count": 12,
@@ -32986,7 +32832,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "shokuhen"
       },
       "meaning": {
-        "english": "food, to eat"
+        "english": "food, to eat",
+        "korean": "음식, 먹다"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/shokuhen0.svg",
@@ -33015,7 +32862,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "御飯（ごはん）",
         "meaning": {
-          "english": "rice (cooked), meal"
+          "english": "rice (cooked), meal",
+          "korean": "밥, 식사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/meshi_06_a.opus",
@@ -33027,7 +32875,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "夕飯（ゆうはん）",
         "meaning": {
-          "english": "dinner"
+          "english": "dinner",
+          "korean": "저녁 식사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/meshi_06_b.opus",
@@ -33039,7 +32888,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "朝御飯（あさごはん）",
         "meaning": {
-          "english": "breakfast"
+          "english": "breakfast",
+          "korean": "아침 식사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/meshi_06_c.opus",
@@ -33051,7 +32901,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "昼御飯（ひるごはん）",
         "meaning": {
-          "english": "lunch"
+          "english": "lunch",
+          "korean": "점심 식사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/meshi_06_d.opus",
@@ -33063,7 +32914,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "晩御飯（ばんごはん）",
         "meaning": {
-          "english": "dinner"
+          "english": "dinner",
+          "korean": "저녁 식사"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/meshi_06_e.opus",
@@ -33075,7 +32927,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "炊飯器（すいはんき）",
         "meaning": {
-          "english": "rice cooker"
+          "english": "rice cooker",
+          "korean": "밥 솥"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/meshi_06_f.opus",
@@ -33087,7 +32940,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "飯（めし）",
         "meaning": {
-          "english": "meal, food (derogatory)"
+          "english": "meal, food (derogatory)",
+          "korean": "식사, 음식 (비난)"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/meshi_06_g.opus",
@@ -33099,7 +32953,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "朝飯前（あさめしまえ）",
         "meaning": {
-          "english": "simple, a piece of cake"
+          "english": "simple, a piece of cake",
+          "korean": "간단, 쉬운 일"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/meshi_06_h.opus",
@@ -33137,7 +32992,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "館",
       "meaning": {
-        "english": "public building"
+        "english": "public building",
+        "korean": "공공 건물"
       },
       "strokes": {
         "count": 16,
@@ -33207,7 +33063,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "shokuhen"
       },
       "meaning": {
-        "english": "food, to eat"
+        "english": "food, to eat",
+        "korean": "음식, 먹다"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/shokuhen0.svg",
@@ -33236,7 +33093,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "開館する（かいかんする）",
         "meaning": {
-          "english": "open a building"
+          "english": "open a building",
+          "korean": "건물을 열다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kan-tate(mono)_06_a.opus",
@@ -33248,7 +33106,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "閉館する（へいかんする）",
         "meaning": {
-          "english": "close a building"
+          "english": "close a building",
+          "korean": "건물을 닫다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kan-tate(mono)_06_b.opus",
@@ -33260,7 +33119,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "休館する（きゅうかんする）",
         "meaning": {
-          "english": "close a library or museum"
+          "english": "close a library or museum",
+          "korean": "도서관이나 박물관을 닫다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kan-tate(mono)_06_c.opus",
@@ -33272,7 +33132,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "図書館（としょかん）",
         "meaning": {
-          "english": "library"
+          "english": "library",
+          "korean": "도서관"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kan-tate(mono)_06_d.opus",
@@ -33284,7 +33145,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "映画館（えいがかん）",
         "meaning": {
-          "english": "movie theater"
+          "english": "movie theater",
+          "korean": "영화관"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kan-tate(mono)_06_e.opus",
@@ -33296,7 +33158,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "体育館（たいいくかん）",
         "meaning": {
-          "english": "gym"
+          "english": "gym",
+          "korean": "체육관"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kan-tate(mono)_06_f.opus",
@@ -33308,7 +33171,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "大使館（たいしかん）",
         "meaning": {
-          "english": "embassy"
+          "english": "embassy",
+          "korean": "대사관"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kan-tate(mono)_06_g.opus",
@@ -33320,7 +33184,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "旅館（りょかん）",
         "meaning": {
-          "english": "Japanese style hotel"
+          "english": "Japanese style hotel",
+          "korean": "일본식 호텔"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kan-tate(mono)_06_h.opus",
@@ -33332,7 +33197,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "函館（はこだて）",
         "meaning": {
-          "english": "Hakodate"
+          "english": "Hakodate",
+          "korean": "하코다테"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kan-tate(mono)_06_i.opus",
@@ -33374,7 +33240,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "貸",
       "meaning": {
-        "english": "lend"
+        "english": "lend",
+        "korean": "빌리다"
       },
       "strokes": {
         "count": 12,
@@ -33436,7 +33303,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kai"
       },
       "meaning": {
-        "english": "shell, property, wealth"
+        "english": "shell, property, wealth",
+        "korean": "껍질, 재산, 부"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kai0.svg",
@@ -33465,7 +33333,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "賃貸（ちんたい）",
         "meaning": {
-          "english": "lease"
+          "english": "lease",
+          "korean": "임대"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tai-ka(su)_06_a.opus",
@@ -33477,7 +33346,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "貸与する（たいよする）",
         "meaning": {
-          "english": "loan, lend"
+          "english": "loan, lend",
+          "korean": "대출, 빌리다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tai-ka(su)_06_b.opus",
@@ -33489,7 +33359,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "貸す（かす）",
         "meaning": {
-          "english": "lend"
+          "english": "lend",
+          "korean": "빌리다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tai-ka(su)_06_c.opus",
@@ -33501,7 +33372,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "貸家（かしや）",
         "meaning": {
-          "english": "house for rent"
+          "english": "house for rent",
+          "korean": "임대 주택"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tai-ka(su)_06_d.opus",
@@ -33513,7 +33385,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "貸し出す（かしだす）",
         "meaning": {
-          "english": "lend"
+          "english": "lend",
+          "korean": "빌리다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tai-ka(su)_06_e.opus",
@@ -33525,7 +33398,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "貸し切り（かしきり）",
         "meaning": {
-          "english": "reservation"
+          "english": "reservation",
+          "korean": "예약"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/tai-ka(su)_06_f.opus",
@@ -33563,7 +33437,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "堂",
       "meaning": {
-        "english": "hall"
+        "english": "hall",
+        "korean": "정장실"
       },
       "strokes": {
         "count": 11,
@@ -33623,7 +33498,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "tsuchi"
       },
       "meaning": {
-        "english": "earth"
+        "english": "earth",
+        "korean": "땅"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/tsuchi0.svg",
@@ -33652,7 +33528,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "食堂（しょくどう）",
         "meaning": {
-          "english": "dining hall"
+          "english": "dining hall",
+          "korean": "식당"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(shoku)dou_06_a.opus",
@@ -33664,7 +33541,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "議事堂（ぎじどう）",
         "meaning": {
-          "english": "Diet building"
+          "english": "Diet building",
+          "korean": "의회 건물"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(shoku)dou_06_b.opus",
@@ -33676,7 +33554,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "講堂（こうどう）",
         "meaning": {
-          "english": "auditorium"
+          "english": "auditorium",
+          "korean": "강당"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(shoku)dou_06_c.opus",
@@ -33713,7 +33592,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "借",
       "meaning": {
-        "english": "borrow"
+        "english": "borrow",
+        "korean": "빌리다"
       },
       "strokes": {
         "count": 10,
@@ -33771,7 +33651,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ninben"
       },
       "meaning": {
-        "english": "person "
+        "english": "person ",
+        "korean": "사람"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ninben0.svg",
@@ -33800,7 +33681,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "拝借する（はいしゃくする）",
         "meaning": {
-          "english": "borrow [hum.]"
+          "english": "borrow [hum.]",
+          "korean": "빌리다 [인간]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka(riru)_06_a.opus",
@@ -33812,7 +33694,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "借金（しゃっきん）",
         "meaning": {
-          "english": "debt"
+          "english": "debt",
+          "korean": "빚"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka(riru)_06_b.opus",
@@ -33824,7 +33707,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "借家（しゃくや）",
         "meaning": {
-          "english": "rented house"
+          "english": "rented house",
+          "korean": "임대 주택"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka(riru)_06_c.opus",
@@ -33836,7 +33720,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "借りる（かりる）",
         "meaning": {
-          "english": "borrow"
+          "english": "borrow",
+          "korean": "빌리다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ka(riru)_06_d.opus",
@@ -33872,7 +33757,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "秋",
       "meaning": {
-        "english": "autumn"
+        "english": "autumn",
+        "korean": "가을"
       },
       "strokes": {
         "count": 9,
@@ -33928,7 +33814,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "nogihen"
       },
       "meaning": {
-        "english": "grain"
+        "english": "grain",
+        "korean": "곡물"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/nogihen0.svg",
@@ -33957,7 +33844,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "秋分（しゅうぶん）",
         "meaning": {
-          "english": "autumn equinox"
+          "english": "autumn equinox",
+          "korean": "가을 중점"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aki_06_a.opus",
@@ -33969,7 +33857,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "秋（あき）",
         "meaning": {
-          "english": "autumn"
+          "english": "autumn",
+          "korean": "가을"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aki_06_b.opus",
@@ -33981,7 +33870,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "秋風（あきかぜ）",
         "meaning": {
-          "english": "autumn breeze"
+          "english": "autumn breeze",
+          "korean": "가을 바람"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aki_06_c.opus",
@@ -33993,7 +33883,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "秋学期（あきがっき）",
         "meaning": {
-          "english": "autumn semester/quarter"
+          "english": "autumn semester/quarter",
+          "korean": "가을 학기/분기"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/aki_06_d.opus",
@@ -34028,7 +33919,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "姉",
       "meaning": {
-        "english": "older sister"
+        "english": "older sister",
+        "korean": "누이"
       },
       "strokes": {
         "count": 8,
@@ -34082,7 +33974,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "onnahen"
       },
       "meaning": {
-        "english": "woman"
+        "english": "woman",
+        "korean": "여자"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/onnahen0.svg",
@@ -34111,7 +34004,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "姉妹（しまい）",
         "meaning": {
-          "english": "sisters"
+          "english": "sisters",
+          "korean": "자매"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ane_06_a.opus",
@@ -34123,7 +34017,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "姉（あね）",
         "meaning": {
-          "english": "one's own older sister"
+          "english": "one's own older sister",
+          "korean": "내 누이"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ane_06_b.opus",
@@ -34135,7 +34030,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "*お姉さん（おねえさん）",
         "meaning": {
-          "english": "older sister [hon.]"
+          "english": "older sister [hon.]",
+          "korean": "누이 [호남]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/ane_06_c.opus",
@@ -34169,7 +34065,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "曜",
       "meaning": {
-        "english": "day of the week"
+        "english": "day of the week",
+        "korean": "요일"
       },
       "strokes": {
         "count": 18,
@@ -34243,7 +34140,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "hihen"
       },
       "meaning": {
-        "english": "sun, day, time"
+        "english": "sun, day, time",
+        "korean": "일, 시간"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/hihen0.svg",
@@ -34272,7 +34170,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "曜日（ようび）",
         "meaning": {
-          "english": "day of the week"
+          "english": "day of the week",
+          "korean": "요일"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(bi)_06_a.opus",
@@ -34284,7 +34183,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "日曜日（にちようび）",
         "meaning": {
-          "english": "Sunday"
+          "english": "Sunday",
+          "korean": "일요일"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(bi)_06_b.opus",
@@ -34296,7 +34196,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "月曜日（げつようび）",
         "meaning": {
-          "english": "Monday"
+          "english": "Monday",
+          "korean": "월요일"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(bi)_06_c.opus",
@@ -34308,7 +34209,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "火曜日（かようび）",
         "meaning": {
-          "english": "Tuesday"
+          "english": "Tuesday",
+          "korean": "화요일"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(bi)_06_d.opus",
@@ -34320,7 +34222,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "水曜日（すいようび）",
         "meaning": {
-          "english": "Wednesday"
+          "english": "Wednesday",
+          "korean": "수요일"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(bi)_06_e.opus",
@@ -34332,7 +34235,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "木曜日（もくようび）",
         "meaning": {
-          "english": "Thursday"
+          "english": "Thursday",
+          "korean": "목요일"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(bi)_06_f.opus",
@@ -34344,7 +34248,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "金曜日（きんようび）",
         "meaning": {
-          "english": "Friday"
+          "english": "Friday",
+          "korean": "금요일"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(bi)_06_g.opus",
@@ -34356,7 +34261,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "土曜日（どようび）",
         "meaning": {
-          "english": "Saturday"
+          "english": "Saturday",
+          "korean": "토요일"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(bi)_06_h.opus",
@@ -34400,7 +34306,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "鳥",
       "meaning": {
-        "english": "bird, fowl, poultry"
+        "english": "bird, fowl, poultry",
+        "korean": "새, 새 등"
       },
       "strokes": {
         "count": 11,
@@ -34460,7 +34367,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "tori"
       },
       "meaning": {
-        "english": "bird"
+        "english": "bird",
+        "korean": "새"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/tori0.svg",
@@ -34489,7 +34397,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "鳥類（ちょうるい）",
         "meaning": {
-          "english": "birds, avian"
+          "english": "birds, avian",
+          "korean": "새, 새 등"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(haku)chou_06_a.opus",
@@ -34501,7 +34410,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "野鳥（やちょう）",
         "meaning": {
-          "english": "wild bird"
+          "english": "wild bird",
+          "korean": "야생 새"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(haku)chou_06_b.opus",
@@ -34513,7 +34423,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "白鳥（はくちょう）",
         "meaning": {
-          "english": "swan"
+          "english": "swan",
+          "korean": "백조"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(haku)chou_06_c.opus",
@@ -34525,7 +34436,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "益鳥（えきちょう）",
         "meaning": {
-          "english": "beneficial bird"
+          "english": "beneficial bird",
+          "korean": "이로운 새"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(haku)chou_06_d.opus",
@@ -34537,7 +34449,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "一石二鳥（いっせきにちょう）",
         "meaning": {
-          "english": "killing two birds with one stone"
+          "english": "killing two birds with one stone",
+          "korean": "한 돌에 두 새를 죽이다"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(haku)chou_06_e.opus",
@@ -34549,7 +34462,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "七面鳥（しちめんちょう）",
         "meaning": {
-          "english": "turkey"
+          "english": "turkey",
+          "korean": "터키"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(haku)chou_06_f.opus",
@@ -34561,7 +34475,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "鳥（とり）",
         "meaning": {
-          "english": "bird, fowl, poultry"
+          "english": "bird, fowl, poultry",
+          "korean": "새, 새 등"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(haku)chou_06_g.opus",
@@ -34573,7 +34488,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "鳥居（とりい）",
         "meaning": {
-          "english": "torii, gateway to a Shinto shrine"
+          "english": "torii, gateway to a Shinto shrine",
+          "korean": "도메이 게이트"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(haku)chou_06_h.opus",
@@ -34585,7 +34501,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "鳥肉（とりにく）",
         "meaning": {
-          "english": "chicken meat"
+          "english": "chicken meat",
+          "korean": "닭 고기"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(haku)chou_06_i.opus",
@@ -34597,7 +34514,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "渡り鳥（わたりどり）",
         "meaning": {
-          "english": "migratory bird, bird of passage"
+          "english": "migratory bird, bird of passage",
+          "korean": "이주 새, 통곡 새"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(haku)chou_06_j.opus",
@@ -34634,7 +34552,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "夕",
       "meaning": {
-        "english": "evening"
+        "english": "evening",
+        "korean": "저녁"
       },
       "strokes": {
         "count": 3,
@@ -34707,7 +34626,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "一朝一夕（いっちょういっせき）",
         "meaning": {
-          "english": "in a brief space of time"
+          "english": "in a brief space of time",
+          "korean": "짧은 시간 동안"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/seki-yuu_06_a.opus",
@@ -34719,7 +34639,8 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "夕方（ゆうがた）",
         "meaning": {
-          "english": "evening"
+          "english": "evening",
+          "korean": "저녁"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/seki-yuu_06_b.opus",
@@ -34732,7 +34653,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "夕食（ゆうしょく）",
         "meaning": {
           "english": "dinner",
-          "korean": "저녁 식사"
+          "korean": "저녁"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/seki-yuu_06_c.opus",
@@ -34771,7 +34692,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "夕暮れ（ゆうぐれ）",
         "meaning": {
           "english": "twilight",
-          "korean": "해질녘"
+          "korean": "황혼"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/seki-yuu_06_f.opus",
@@ -34857,8 +34778,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "kusakanmuri"
       },
       "meaning": {
-        "english": "grass",
-        "korean": "잔디"
+        "english": "grass"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/kusakanmuri0.svg",
@@ -34940,7 +34860,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "茶の湯（ちゃのゆ）",
         "meaning": {
           "english": "tea ceremony",
-          "korean": "차 의례"
+          "korean": "차 의식"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/cha_06_e.opus",
@@ -34966,7 +34886,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "japanese": "茶道（さどう）",
         "meaning": {
           "english": "Way of Tea",
-          "korean": "차 의례"
+          "korean": "다도"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/cha_06_g.opus",
@@ -35002,7 +34922,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       "character": "魚",
       "meaning": {
         "english": "fish",
-        "korean": "물고기"
+        
       },
       "strokes": {
         "count": 11,
@@ -35091,8 +35011,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "魚類（ぎょるい）",
         "meaning": {
-          "english": "fish (as class of animal)",
-          "korean": "물고기 (동물 종류)"
+          "english": "fish (as class of animal)"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/uo_06_a.opus",
@@ -35104,8 +35023,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "魚介類（ぎょかいるい）",
         "meaning": {
-          "english": "marine products, seafood",
-          "korean": "해산물, 해물"
+          "english": "marine products, seafood"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/uo_06_b.opus",
@@ -35117,8 +35035,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "金魚（きんぎょ）",
         "meaning": {
-          "english": "goldfish",
-          "korean": "금붕어"
+          "english": "goldfish"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/uo_06_c.opus",
@@ -35130,8 +35047,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "鮮魚（せんぎょ）",
         "meaning": {
-          "english": "fresh fish",
-          "korean": "신선한 물고기"
+          "english": "fresh fish"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/uo_06_d.opus",
@@ -35143,8 +35059,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "人魚（にんぎょ）",
         "meaning": {
-          "english": "mermaid, merman",
-          "korean": "인어"
+          "english": "mermaid, merman"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/uo_06_e.opus",
@@ -35156,8 +35071,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "深海魚（しんかいぎょ）",
         "meaning": {
-          "english": "deep-sea fish",
-          "korean": "깊은 바다의 물고기"
+          "english": "deep-sea fish"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/uo_06_f.opus",
@@ -35169,8 +35083,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "熱帯魚（ねったいぎょ）",
         "meaning": {
-          "english": "tropical fish",
-          "korean": "열대 물고기"
+          "english": "tropical fish"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/uo_06_g.opus",
@@ -35182,8 +35095,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "魚市場（うおいちば）",
         "meaning": {
-          "english": "fish market",
-          "korean": "물고기 시장"
+          "english": "fish market"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/uo_06_h.opus",
@@ -35195,8 +35107,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "飛び魚（とびうお）",
         "meaning": {
-          "english": "flying fish",
-          "korean": "날아가는 물고기"
+          "english": "flying fish"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/uo_06_i.opus",
@@ -35208,8 +35119,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "魚（さかな）",
         "meaning": {
-          "english": "fish [n.]",
-          "korean": "물고기 [n.]"
+          "english": "fish [n.]"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/uo_06_j.opus",
@@ -35221,8 +35131,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "魚屋（さかなや）",
         "meaning": {
-          "english": "fish market, fish dealer",
-          "korean": "물고기 시장, 물고기 판매자"
+          "english": "fish market, fish dealer"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/uo_06_k.opus",
@@ -35234,8 +35143,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "*雑魚（ざこ）",
         "meaning": {
-          "english": "small fish, small fry",
-          "korean": "작은 물고기, 작은 물고기"
+          "english": "small fish, small fry"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/uo_06_l.opus",
@@ -35272,8 +35180,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "妹",
       "meaning": {
-        "english": "younger sister",
-        "korean": "어린 여동생"
+        "english": "younger sister"
       },
       "strokes": {
         "count": 8,
@@ -35356,8 +35263,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "姉妹（しまい）",
         "meaning": {
-          "english": "sisters",
-          "korean": "자매"
+          "english": "sisters"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/imouto_06_a.opus",
@@ -35369,8 +35275,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "姉妹校（しまいこう）",
         "meaning": {
-          "english": "sister school",
-          "korean": "자매 학교"
+          "english": "sister school"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/imouto_06_b.opus",
@@ -35382,8 +35287,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "妹（いもうと）",
         "meaning": {
-          "english": "one's own younger sister",
-          "korean": "내 어린 여동생"
+          "english": "one's own younger sister"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/imouto_06_c.opus",
@@ -35417,8 +35321,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "勉",
       "meaning": {
-        "english": "endeavor",
-        "korean": "노력"
+        "english": "endeavor"
       },
       "strokes": {
         "count": 10,
@@ -35553,8 +35456,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "洋",
       "meaning": {
-        "english": "ocean, western",
-        "korean": "바다, 서반"
+        "english": "ocean, western"
       },
       "strokes": {
         "count": 9,
@@ -35610,8 +35512,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "sanzui"
       },
       "meaning": {
-        "english": "water",
-        "korean": "물"
+        "english": "water"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/sanzui0.svg",
@@ -35640,8 +35541,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "西洋（せいよう）",
         "meaning": {
-          "english": "the west",
-          "korean": "서반"
+          "english": "the west"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(fuku)_06_a.opus",
@@ -35653,8 +35553,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "東洋（とうよう）",
         "meaning": {
-          "english": "East Asia",
-          "korean": "동아시아"
+          "english": "East Asia"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(fuku)_06_b.opus",
@@ -35666,8 +35565,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "洋服（ようふく）",
         "meaning": {
-          "english": "Western-style clothes",
-          "korean": "서반 스타일 옷"
+          "english": "Western-style clothes"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(fuku)_06_c.opus",
@@ -35679,8 +35577,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "洋式（ようしき）",
         "meaning": {
-          "english": "Western style",
-          "korean": "서반 스타일"
+          "english": "Western style"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(fuku)_06_d.opus",
@@ -35692,8 +35589,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "洋食（ようしょく）",
         "meaning": {
-          "english": "Western-style meal",
-          "korean": "서반 스타일 식사"
+          "english": "Western-style meal"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(fuku)_06_e.opus",
@@ -35705,8 +35601,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "太平洋（たいへいよう）",
         "meaning": {
-          "english": "Pacific Ocean",
-          "korean": "태평양"
+          "english": "Pacific Ocean"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(fuku)_06_f.opus",
@@ -35718,8 +35613,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "大西洋（たいせいよう）",
         "meaning": {
-          "english": "Atlantic Ocean",
-          "korean": "아프리카 해"
+          "english": "Atlantic Ocean"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/you(fuku)_06_g.opus",
@@ -35754,8 +35648,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "昼",
       "meaning": {
-        "english": "daytime",
-        "korean": "낮"
+        "english": "daytime"
       },
       "strokes": {
         "count": 9,
@@ -35811,8 +35704,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "hi"
       },
       "meaning": {
-        "english": "sun, day, time",
-        "korean": "태양, 낮, 시간"
+        "english": "sun, day, time"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/hi0.svg",
@@ -35841,8 +35733,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "昼食（ちゅうしょく）",
         "meaning": {
-          "english": "lunch",
-          "korean": "점심"
+          "english": "lunch"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hiru_06_a.opus",
@@ -35854,8 +35745,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "昼（ひる）",
         "meaning": {
-          "english": "noon",
-          "korean": "점심"
+          "english": "noon"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hiru_06_b.opus",
@@ -35867,8 +35757,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "真昼（まひる）",
         "meaning": {
-          "english": "midday",
-          "korean": "한낮"
+          "english": "midday"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hiru_06_c.opus",
@@ -35880,8 +35769,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "昼間（ひるま）",
         "meaning": {
-          "english": "daytime",
-          "korean": "낮"
+          "english": "daytime"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hiru_06_d.opus",
@@ -35893,8 +35781,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "昼過ぎ（ひるすぎ）",
         "meaning": {
-          "english": "afternoon",
-          "korean": "오후"
+          "english": "afternoon"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hiru_06_e.opus",
@@ -35906,8 +35793,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "昼休み（ひるやすみ）",
         "meaning": {
-          "english": "lunch break",
-          "korean": "점심 휴식"
+          "english": "lunch break"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hiru_06_f.opus",
@@ -35919,8 +35805,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "昼寝（ひるね）",
         "meaning": {
-          "english": "nap",
-          "korean": "낮잠"
+          "english": "nap"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/hiru_06_g.opus",
@@ -35955,8 +35840,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "牛",
       "meaning": {
-        "english": "cattle, cow, ox",
-        "korean": "소"
+        "english": "cattle, cow, ox"
       },
       "strokes": {
         "count": 4,
@@ -36002,8 +35886,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "ushi"
       },
       "meaning": {
-        "english": "cow",
-        "korean": "소"
+        "english": "cow"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/ushi0.svg",
@@ -36032,8 +35915,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "牛乳（ぎゅうにゅう）",
         "meaning": {
-          "english": "(cow) milk",
-          "korean": "소 우유"
+          "english": "(cow) milk"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyuu-ushi_06_a.opus",
@@ -36045,8 +35927,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "牛肉（ぎゅうにく）",
         "meaning": {
-          "english": "beef",
-          "korean": "소 고기"
+          "english": "beef"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyuu-ushi_06_b.opus",
@@ -36058,8 +35939,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "闘牛（とうぎゅう）",
         "meaning": {
-          "english": "bull fight",
-          "korean": "소 싸움"
+          "english": "bull fight"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyuu-ushi_06_c.opus",
@@ -36071,8 +35951,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "牛（うし）",
         "meaning": {
-          "english": "cow",
-          "korean": "소"
+          "english": "cow"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyuu-ushi_06_d.opus",
@@ -36084,8 +35963,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "子牛（こうし）",
         "meaning": {
-          "english": "calf",
-          "korean": "소 새끼"
+          "english": "calf"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/gyuu-ushi_06_e.opus",
@@ -36115,8 +35993,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "冬",
       "meaning": {
-        "english": "winter",
-        "korean": "겨울"
+        "english": "winter"
       },
       "strokes": {
         "count": 5,
@@ -36164,8 +36041,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "nisui"
       },
       "meaning": {
-        "english": "ice",
-        "korean": "얼음"
+        "english": "ice"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/nisui0.svg",
@@ -36194,8 +36070,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "冬期（とうき）",
         "meaning": {
-          "english": "winter term",
-          "korean": "겨울 학기"
+          "english": "winter term"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fuyu_06_a.opus",
@@ -36207,8 +36082,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "初冬（しょとう）",
         "meaning": {
-          "english": "early winter",
-          "korean": "초겨울"
+          "english": "early winter"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fuyu_06_b.opus",
@@ -36220,8 +36094,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "冬至（とうじ）",
         "meaning": {
-          "english": "winter solstice",
-          "korean": "겨울 동지"
+          "english": "winter solstice"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fuyu_06_c.opus",
@@ -36233,8 +36106,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "冬眠（とうみん）",
         "meaning": {
-          "english": "hibernation",
-          "korean": "겨울 잠"
+          "english": "hibernation"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fuyu_06_d.opus",
@@ -36246,8 +36118,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "越冬する（えっとうする）",
         "meaning": {
-          "english": "pass the winter",
-          "korean": "겨울 지나기"
+          "english": "pass the winter"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fuyu_06_e.opus",
@@ -36259,8 +36130,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "冬（ふゆ）",
         "meaning": {
-          "english": "winter",
-          "korean": "겨울"
+          "english": "winter"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fuyu_06_f.opus",
@@ -36272,8 +36142,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "冬学期（ふゆがっき）",
         "meaning": {
-          "english": "winter semester",
-          "korean": "겨울 학기"
+          "english": "winter semester"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fuyu_06_g.opus",
@@ -36285,8 +36154,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "真冬（まふゆ）",
         "meaning": {
-          "english": "midwinter",
-          "korean": "한겨울"
+          "english": "midwinter"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/fuyu_06_h.opus",
@@ -36317,8 +36185,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "駅",
       "meaning": {
-        "english": "station",
-        "korean": "역"
+        "english": "station"
       },
       "strokes": {
         "count": 14,
@@ -36384,8 +36251,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "umahen"
       },
       "meaning": {
-        "english": "horse",
-        "korean": "말"
+        "english": "horse"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/umahen0.svg",
@@ -36414,8 +36280,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "駅（えき）",
         "meaning": {
-          "english": "station",
-          "korean": "역"
+          "english": "station"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(kaku)eki_06_a.opus",
@@ -36427,8 +36292,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "駅前（えきまえ）",
         "meaning": {
-          "english": "in front of the station",
-          "korean": "역 앞"
+          "english": "in front of the station"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(kaku)eki_06_b.opus",
@@ -36440,8 +36304,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "駅長（えきちょう）",
         "meaning": {
-          "english": "station master",
-          "korean": "역 주인"
+          "english": "station master"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(kaku)eki_06_c.opus",
@@ -36453,8 +36316,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "駅弁（えきべん）",
         "meaning": {
-          "english": "(boxed) lunch sold in stations",
-          "korean": "역 탁송 점심"
+          "english": "(boxed) lunch sold in stations"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(kaku)eki_06_d.opus",
@@ -36466,8 +36328,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "東京駅（とうきょうえき）",
         "meaning": {
-          "english": "Tokyo station",
-          "korean": "도쿄 역"
+          "english": "Tokyo station"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/(kaku)eki_06_e.opus",
@@ -36507,8 +36368,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "漢",
       "meaning": {
-        "english": "Chinese, fellow",
-        "korean": "중국, 동료"
+        "english": "Chinese, fellow"
       },
       "strokes": {
         "count": 13,
@@ -36572,8 +36432,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
         "romaji": "sanzui"
       },
       "meaning": {
-        "english": "water",
-        "korean": "물"
+        "english": "water"
       },
       "animation": [
         "https://media.kanjialive.com/rad_frames/sanzui0.svg",
@@ -36602,8 +36461,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "漢字（かんじ）",
         "meaning": {
-          "english": "Chinese characters",
-          "korean": "중국 문자"
+          "english": "Chinese characters"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kan(ji)_06_a.opus",
@@ -36615,8 +36473,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "漢語（かんご）",
         "meaning": {
-          "english": "Sino-Japanese word",
-          "korean": "중국 일본어"
+          "english": "Sino-Japanese word"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kan(ji)_06_b.opus",
@@ -36628,8 +36485,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "漢和辞典（かんわじてん）",
         "meaning": {
-          "english": "character dictionary",
-          "korean": "문자 사전"
+          "english": "character dictionary"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kan(ji)_06_c.opus",
@@ -36641,8 +36497,7 @@ export const n4Kanji: KanjiAliveEntry[] = [
       {
         "japanese": "熱血漢（ねっけつかん）",
         "meaning": {
-          "english": "hot-blooded person",
-          "korean": "열정적인 사람"
+          "english": "hot-blooded person"
         },
         "audio": {
           "opus": "https://media.kanjialive.com/examples_audio/audio-opus/kan(ji)_06_d.opus",

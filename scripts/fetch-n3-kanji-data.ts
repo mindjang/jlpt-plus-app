@@ -45,8 +45,9 @@ const N3_KANJI_LIST = [
   '頂', '偉', '寒', '猫', '泳', '貧', '易', '煙', '偶', '幾'
 ]
 
-async function fetchKanjiData(kanji: string): Promise<any | null> {
+async function fetchKanjiData(kanji: string, retryCount = 0): Promise<any | null> {
   const url = `https://kanjialive-api.p.rapidapi.com/api/public/kanji/${encodeURIComponent(kanji)}`
+  const MAX_RETRIES = 3
   
   try {
     const response = await fetch(url, {
@@ -62,8 +63,13 @@ async function fetchKanjiData(kanji: string): Promise<any | null> {
         return null
       }
       if (response.status === 429) {
-        console.log(`  ⚠ ${kanji}: API 호출 제한 (429), 잠시 대기...`)
-        await new Promise(resolve => setTimeout(resolve, 2000))
+        if (retryCount < MAX_RETRIES) {
+          const waitTime = (retryCount + 1) * 5000 // 5초, 10초, 15초
+          console.log(`  ⚠ ${kanji}: API 호출 제한 (429), ${waitTime/1000}초 대기 후 재시도... (${retryCount + 1}/${MAX_RETRIES})`)
+          await new Promise(resolve => setTimeout(resolve, waitTime))
+          return fetchKanjiData(kanji, retryCount + 1)
+        }
+        console.log(`  ✗ ${kanji}: API 호출 제한 (429), 재시도 횟수 초과`)
         return null
       }
       console.error(`  ✗ ${kanji}: API 호출 실패 (${response.status})`)
@@ -73,7 +79,13 @@ async function fetchKanjiData(kanji: string): Promise<any | null> {
     const data = await response.json()
     return data
   } catch (error) {
-    console.error(`  ✗ ${kanji}: 오류 발생`, error)
+    if (retryCount < MAX_RETRIES) {
+      const waitTime = (retryCount + 1) * 2000
+      console.log(`  ⚠ ${kanji}: 오류 발생, ${waitTime/1000}초 대기 후 재시도... (${retryCount + 1}/${MAX_RETRIES})`)
+      await new Promise(resolve => setTimeout(resolve, waitTime))
+      return fetchKanjiData(kanji, retryCount + 1)
+    }
+    console.error(`  ✗ ${kanji}: 오류 발생 (재시도 횟수 초과)`, error)
     return null
   }
 }
@@ -117,54 +129,113 @@ function filterKanjiAliveEntry(data: any): KanjiAliveEntry {
   return entry
 }
 
+const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
+
 async function main() {
-  console.log(`총 ${N3_KANJI_LIST.length}개 한자 처리 시작...\n`)
+  const outputFilePath = path.join(__dirname, '../data/kanji/n3.ts')
   
-  const kanjiDataArray: KanjiAliveEntry[] = []
+  // 기존 파일에서 한자 데이터 읽기
+  let existingKanjiData: KanjiAliveEntry[] = []
+  let existingKanjiSet = new Set<string>()
+  
+  if (fs.existsSync(outputFilePath)) {
+    try {
+      // 기존 파일을 동적으로 import
+      delete require.cache[require.resolve(outputFilePath)]
+      const existingModule = require(outputFilePath)
+      existingKanjiData = existingModule.n3Kanji || []
+      
+      // 기존 한자들의 ka_utf를 Set에 저장
+      existingKanjiData.forEach((entry: KanjiAliveEntry) => {
+        if (entry.ka_utf) {
+          existingKanjiSet.add(entry.ka_utf)
+        }
+      })
+      
+      console.log(`기존 파일에서 ${existingKanjiData.length}개 한자 데이터를 찾았습니다.\n`)
+    } catch (error) {
+      console.log('기존 파일을 읽는 중 오류 발생, 새로 시작합니다.\n')
+    }
+  }
+  
+  // 누락된 한자 찾기
+  const missingKanji = N3_KANJI_LIST.filter(kanji => !existingKanjiSet.has(kanji))
+  
+  if (missingKanji.length === 0) {
+    console.log('✅ 모든 한자가 이미 존재합니다. 업데이트할 항목이 없습니다.')
+    return
+  }
+  
+  console.log(`누락된 한자 ${missingKanji.length}개를 찾았습니다:`)
+  console.log(missingKanji.join(', '))
+  console.log(`\n누락된 한자 처리 시작...\n`)
+  
   let successCount = 0
   let failCount = 0
+  const newKanjiData: KanjiAliveEntry[] = []
   
-  // 각 한자에 대해 API 호출
-  for (let i = 0; i < N3_KANJI_LIST.length; i++) {
-    const kanji = N3_KANJI_LIST[i]
+  // 누락된 한자들만 API 호출
+  for (let i = 0; i < missingKanji.length; i++) {
+    const kanji = missingKanji[i]
     
-    console.log(`[${i + 1}/${N3_KANJI_LIST.length}] ${kanji} 처리 중...`)
+    console.log(`[${i + 1}/${missingKanji.length}] ${kanji} 처리 중...`)
     
     const apiData = await fetchKanjiData(kanji)
     
     if (!apiData) {
       failCount++
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      // 실패 시에도 랜덤 딜레이 (5~25초)
+      const delay = Math.floor(Math.random() * 20000) + 5000 // 5~25초
+      console.log(`  ⏳ ${(delay / 1000).toFixed(1)}초 대기 후 다음 한자 처리...`)
+      await sleep(delay)
       continue
     }
     
     // 인터페이스에 정의된 필드만 추출
     const filteredData = filterKanjiAliveEntry(apiData)
-    kanjiDataArray.push(filteredData)
+    newKanjiData.push(filteredData)
     
     successCount++
     console.log(`  ✓ 완료`)
     
-    // API 호출 제한을 피하기 위해 딜레이
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    // 마지막 한자가 아니면 5~25초 랜덤 딜레이
+    if (i < missingKanji.length - 1) {
+      const delay = Math.floor(Math.random() * 20000) + 5000 // 5~25초
+      console.log(`  ⏳ ${(delay / 1000).toFixed(1)}초 대기 후 다음 한자 처리...`)
+      await sleep(delay)
+    }
   }
   
-  // 파일 생성
-  const outputFilePath = path.join(__dirname, '../data/kanji/n3.ts')
+  // 기존 데이터와 새 데이터 합치기
+  const allKanjiData = [...existingKanjiData, ...newKanjiData]
   
+  // ka_utf 기준으로 정렬 (N3_KANJI_LIST 순서대로)
+  const kanjiOrderMap = new Map<string, number>()
+  N3_KANJI_LIST.forEach((kanji, index) => {
+    kanjiOrderMap.set(kanji, index)
+  })
+  
+  allKanjiData.sort((a, b) => {
+    const orderA = kanjiOrderMap.get(a.ka_utf || '') ?? 9999
+    const orderB = kanjiOrderMap.get(b.ka_utf || '') ?? 9999
+    return orderA - orderB
+  })
+  
+  // 파일 업데이트
   const fileContent = `import { KanjiAliveEntry } from '../types'
 
-// N3 한자 데이터 (${kanjiDataArray.length}개)
-export const n3Kanji: KanjiAliveEntry[] = ${JSON.stringify(kanjiDataArray, null, 2)}
+// N3 한자 데이터 (${allKanjiData.length}개)
+export const n3Kanji: KanjiAliveEntry[] = ${JSON.stringify(allKanjiData, null, 2)}
 `
   
   fs.writeFileSync(outputFilePath, fileContent, 'utf-8')
   
-  console.log(`\n✅ 파일 생성 완료!`)
-  console.log(`   성공: ${successCount}개`)
+  console.log(`\n✅ 파일 업데이트 완료!`)
+  console.log(`   기존: ${existingKanjiData.length}개`)
+  console.log(`   새로 추가: ${successCount}개`)
   console.log(`   실패: ${failCount}개`)
-  console.log(`   총: ${kanjiDataArray.length}개`)
-  console.log(`\n생성된 파일: ${outputFilePath}`)
+  console.log(`   총: ${allKanjiData.length}개`)
+  console.log(`\n업데이트된 파일: ${outputFilePath}`)
 }
 
 main().catch(console.error)

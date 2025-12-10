@@ -124,7 +124,6 @@ export interface KanjiAliveKanjiBlock {
   character: string
   meaning: {
     english: string
-    korean: string
     [key: string]: string
   }
   strokes: KanjiAliveKanjiStrokes
@@ -165,8 +164,8 @@ export interface KanjiAliveEntry {
   _id: string
   _rev: string
 
-  grade?: number            // ← 다시 포함 (교육 레벨)
-  hint_group?: number
+  grade?: number | null            // ← 다시 포함 (교육 레벨)
+  hint_group?: number | null
 
   // 음독/훈독
   onyomi?: string

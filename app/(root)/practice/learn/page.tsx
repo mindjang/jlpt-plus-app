@@ -9,7 +9,7 @@ import { AppBar } from '@/components/ui/AppBar'
 import { getWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
 import { convertSearchResultToWord, convertKanjiAliveEntryToKanji } from '@/lib/utils/dataConverter'
-import type { Word, Kanji } from '@/lib/types/content'
+import type { Word, Kanji, JlptLevel } from '@/lib/types/content'
 import { Level } from '@/data'
 
 function LearnContent() {

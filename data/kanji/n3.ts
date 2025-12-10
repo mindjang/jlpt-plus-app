@@ -57554,7 +57554,6 @@ export const n3Kanji: KanjiAliveEntry[] = [
     "dicn": "1115",
     "mn_hint": "Singing 口 and drumming [24] in joy."
   },
-  {},
   {
     "_id": "54317b01791eba5146ee4ba5",
     "_rev": "12-d98398da023824fb3f6696efe5601cec",
@@ -61578,7 +61577,6 @@ export const n3Kanji: KanjiAliveEntry[] = [
     "dicn": "5080",
     "mn_hint": "Please view the animation in the radical field to the left."
   },
-  {},
   {
     "_id": "54317b0c791eba5146ee4c6b",
     "_rev": "11-be0bd407a04b29c428e12c80e7f50e2b",

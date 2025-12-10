@@ -94,7 +94,7 @@ function AutoStudyContent() {
     if (activeTab !== 'kanji') return []
     const kanjiEntries = getKanjiByLevel(level)
     return kanjiEntries.map((entry, index) => 
-      convertKanjiAliveEntryToKanji(entry, `${level}_K_${String(index + 1).padStart(4, '0')}`, level as JlptLevel)
+      convertKanjiAliveEntryToKanji(entry, `${level}_K_${String(index + 1).padStart(4, '0')}`, level as Level)
     )
   }, [level, activeTab])
 

@@ -3,7 +3,7 @@ import { n5Kanji } from './n5'
 import { n4Kanji } from './n4'
 import { n3Kanji } from './n3'
 import { n2Kanji } from './n2'
-import { n1Kanji } from './list/n1'
+import { n1Kanji } from './n1'
 
 // 레벨별 한자 데이터 통합
 // N1은 WordData 형식이므로 나중에 변환 필요 (현재는 빈 배열)

@@ -1,11 +1,12 @@
 'use client'
 
-import React, { useState, Suspense, useMemo } from 'react'
+import React, { useState, Suspense, useMemo, useEffect } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { StudySession } from '@/components/study/StudySession'
 import { LoginForm } from '@/components/auth/LoginForm'
 import { AppBar } from '@/components/ui/AppBar'
+import { ConfirmModal } from '@/components/ui/ConfirmModal'
 import { getWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
 import { convertSearchResultToWord, convertKanjiAliveEntryToKanji } from '@/lib/utils/dataConverter'
@@ -23,6 +24,9 @@ function LearnContent() {
   const [mode, setMode] = useState<'example' | 'quiz'>('example')
   const [studyTime, setStudyTime] = useState(0)
   const [completed, setCompleted] = useState(false)
+  const [isStudyStarted, setIsStudyStarted] = useState(false)
+  const [showExitConfirm, setShowExitConfirm] = useState(false)
+  const [pendingNavigation, setPendingNavigation] = useState<(() => void) | null>(null)
 
   const level = useMemo(() => {
     return levelParam.toUpperCase() as Level
@@ -82,12 +86,51 @@ function LearnContent() {
     return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`
   }
 
+  const handleBack = () => {
+    if (isStudyStarted && !completed) {
+      setPendingNavigation(() => () => router.back())
+      setShowExitConfirm(true)
+    } else {
+      router.back()
+    }
+  }
+
+  const handleConfirmExit = () => {
+    setShowExitConfirm(false)
+    if (pendingNavigation) {
+      pendingNavigation()
+      setPendingNavigation(null)
+    }
+  }
+
+  // 브라우저 뒤로가기 처리
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+      if (isStudyStarted && !completed) {
+        e.preventDefault()
+        setPendingNavigation(() => () => window.history.back())
+        setShowExitConfirm(true)
+        // 히스토리에 다시 추가하여 뒤로가기 취소
+        window.history.pushState(null, '', window.location.href)
+      }
+    }
+
+    if (isStudyStarted && !completed) {
+      window.history.pushState(null, '', window.location.href)
+      window.addEventListener('popstate', handlePopState)
+    }
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState)
+    }
+  }, [isStudyStarted, completed])
+
   return (
     <div className="w-full">
       {!completed && (
         <AppBar 
           title={`${level} ${typeParam === 'word' ? '단어' : '한자'} 학습`} 
-          onBack={() => router.back()}
+          onBack={handleBack}
           rightAction={
             <div className="text-body text-text-main font-medium">
               {formatTime(studyTime)}
@@ -106,6 +149,22 @@ function LearnContent() {
         initialCompleted={initialCompleted}
         onTimeUpdate={setStudyTime}
         onCompleteChange={setCompleted}
+        onStudyStarted={setIsStudyStarted}
+      />
+
+      {/* 학습 중 나가기 확인 모달 */}
+      <ConfirmModal
+        isOpen={showExitConfirm}
+        onClose={() => {
+          setShowExitConfirm(false)
+          setPendingNavigation(null)
+        }}
+        onConfirm={handleConfirmExit}
+        title="학습 중단"
+        message="학습을 중단하시겠습니까? 지금까지의 진행 상황이 저장되지 않을 수 있습니다."
+        confirmText="나가기"
+        cancelText="계속 학습"
+        confirmButtonColor="danger"
       />
     </div>
   )

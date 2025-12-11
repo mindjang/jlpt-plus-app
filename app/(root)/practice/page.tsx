@@ -12,6 +12,7 @@ import type { Swiper as SwiperType } from 'swiper'
 // Swiper CSS
 import 'swiper/css'
 import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 
 function PracticeContent() {
   const router = useRouter()
@@ -30,7 +31,7 @@ function PracticeContent() {
 
   return (
     <div className="w-full overflow-hidden">
-      <AppBar title="학습존" showMenu />
+      <AppBar title="퀴즈존" showMenu />
 
       <div className="flex flex-col gap-6 p-4">
         {/* 학습 모드 선택 */}
@@ -66,9 +67,21 @@ function PracticeContent() {
         </div>
 
         {/* 레벨 선택 */}
-        <div>
+        <div className="relative">
           <h2 className="text-title font-semibold text-text-main mb-4">레벨 선택</h2>
-          <div className="w-full max-h-[400px] min-h-[300px] flex items-center justify-center overflow-hidden">
+          <div className="w-full max-h-[400px] min-h-[300px] flex items-center justify-center overflow-hidden relative">
+            {/* 이전 화살표 */}
+            <button
+              className="swiper-button-prev-custom absolute left-2 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/80 hover:bg-white shadow-md transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+              onClick={() => swiper?.slidePrev()}
+              disabled={activeIndex === 0}
+              aria-label="이전"
+            >
+              <svg className="w-6 h-6 text-text-main" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
             <Swiper
               onSwiper={setSwiper}
               onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
@@ -77,6 +90,10 @@ function PracticeContent() {
               pagination={{
                 clickable: true,
                 enabled: false,
+              }}
+              navigation={{
+                nextEl: '.swiper-button-next-custom',
+                prevEl: '.swiper-button-prev-custom',
               }}
               className="w-full h-full swiper-simple"
               centeredSlides={true}
@@ -101,6 +118,18 @@ function PracticeContent() {
                 </SwiperSlide>
               ))}
             </Swiper>
+            
+            {/* 다음 화살표 */}
+            <button
+              className="swiper-button-next-custom absolute right-2 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/80 hover:bg-white shadow-md transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+              onClick={() => swiper?.slideNext()}
+              disabled={activeIndex === levels.length - 1}
+              aria-label="다음"
+            >
+              <svg className="w-6 h-6 text-text-main" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
 
           {/* 페이지 인디케이터 */}
@@ -129,7 +158,7 @@ export default function PracticePage() {
   return (
     <Suspense fallback={
       <div className="w-full">
-        <AppBar title="학습존" />
+        <AppBar title="퀴즈존" />
         <div className="flex items-center justify-center min-h-[60vh]">
           <div className="text-body text-text-sub">로딩 중...</div>
         </div>

@@ -12,6 +12,7 @@ import { Pagination, Navigation } from 'swiper/modules'
 import type { Swiper as SwiperType } from 'swiper'
 import { getUserData } from '@/lib/firebase/firestore'
 import { getReviewCards } from '@/lib/firebase/firestore'
+import { logger } from '@/lib/utils/logger'
 
 // Swiper CSS
 import 'swiper/css'
@@ -44,7 +45,7 @@ export default function HomePage() {
       const reviewCards = await getReviewCards(user.uid, 1000)
       setReviewDueCount(reviewCards.length)
     } catch (error) {
-      console.error('Failed to load user data:', error)
+      logger.error('Failed to load user data:', error)
     }
   }
 

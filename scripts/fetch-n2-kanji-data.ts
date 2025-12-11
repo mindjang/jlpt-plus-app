@@ -1,8 +1,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import { KanjiAliveEntry } from '../data/types'
-
-const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY || '5bacc8bb82msh444081c0b2aa85cp1c6aadjsnbdac63aa4cee'
+import { fetchKanjiData, filterKanjiAliveEntry } from './shared/fetchKanjiHelpers'
 
 // N2 한자 목록 (사용자 제공)
 const N2_KANJI_LIST = [
@@ -45,90 +44,6 @@ const N2_KANJI_LIST = [
   '刷', '脇', '銅', '綿', '膚', '滴', '隻', '符', '伺', '沸',
   '畜', '舟', '枯', '姓', '畳', '燥', '耕', '膝', '曇', '肯'
 ]
-
-async function fetchKanjiData(kanji: string, retryCount = 0): Promise<any | null> {
-  const url = `https://kanjialive-api.p.rapidapi.com/api/public/kanji/${encodeURIComponent(kanji)}`
-  const MAX_RETRIES = 3
-  
-  try {
-    const response = await fetch(url, {
-      headers: {
-        'X-RapidAPI-Key': RAPIDAPI_KEY,
-        'X-RapidAPI-Host': 'kanjialive-api.p.rapidapi.com'
-      }
-    })
-    
-    if (!response.ok) {
-      if (response.status === 404) {
-        console.log(`  ⚠ ${kanji}: 데이터를 찾을 수 없습니다`)
-        return null
-      }
-      if (response.status === 429) {
-        if (retryCount < MAX_RETRIES) {
-          const waitTime = (retryCount + 1) * 5000 // 5초, 10초, 15초
-          console.log(`  ⚠ ${kanji}: API 호출 제한 (429), ${waitTime/1000}초 대기 후 재시도... (${retryCount + 1}/${MAX_RETRIES})`)
-          await new Promise(resolve => setTimeout(resolve, waitTime))
-          return fetchKanjiData(kanji, retryCount + 1)
-        }
-        console.log(`  ✗ ${kanji}: API 호출 제한 (429), 재시도 횟수 초과`)
-        return null
-      }
-      console.error(`  ✗ ${kanji}: API 호출 실패 (${response.status})`)
-      return null
-    }
-    
-    const data = await response.json()
-    return data
-  } catch (error) {
-    if (retryCount < MAX_RETRIES) {
-      const waitTime = (retryCount + 1) * 2000
-      console.log(`  ⚠ ${kanji}: 오류 발생, ${waitTime/1000}초 대기 후 재시도... (${retryCount + 1}/${MAX_RETRIES})`)
-      await new Promise(resolve => setTimeout(resolve, waitTime))
-      return fetchKanjiData(kanji, retryCount + 1)
-    }
-    console.error(`  ✗ ${kanji}: 오류 발생 (재시도 횟수 초과)`, error)
-    return null
-  }
-}
-
-function filterKanjiAliveEntry(data: any): KanjiAliveEntry {
-  // 인터페이스에 정의된 필드만 추출
-  const entry: KanjiAliveEntry = {
-    _id: data._id,
-    _rev: data._rev,
-    ka_utf: data.ka_utf,
-    kanji: data.kanji,
-    radical: data.radical,
-  }
-  
-  // 선택적 필드들
-  if (data.grade !== undefined) entry.grade = data.grade
-  if (data.hint_group !== undefined) entry.hint_group = data.hint_group
-  if (data.onyomi !== undefined) entry.onyomi = data.onyomi
-  if (data.onyomi_ja !== undefined) entry.onyomi_ja = data.onyomi_ja
-  if (data.kunyomi !== undefined) entry.kunyomi = data.kunyomi
-  if (data.kunyomi_ja !== undefined) entry.kunyomi_ja = data.kunyomi_ja
-  if (data.kunyomi_ka_display !== undefined) entry.kunyomi_ka_display = data.kunyomi_ka_display
-  if (data.meaning !== undefined) entry.meaning = data.meaning
-  if (data.kstroke !== undefined) entry.kstroke = data.kstroke
-  if (data.rad_stroke !== undefined) entry.rad_stroke = data.rad_stroke
-  if (data.rad_utf !== undefined) entry.rad_utf = data.rad_utf
-  if (data.rad_name !== undefined) entry.rad_name = data.rad_name
-  if (data.rad_name_ja !== undefined) entry.rad_name_ja = data.rad_name_ja
-  if (data.rad_name_file !== undefined) entry.rad_name_file = data.rad_name_file
-  if (data.rad_order !== undefined) entry.rad_order = data.rad_order
-  if (data.rad_position !== undefined) entry.rad_position = data.rad_position
-  if (data.rad_position_ja !== undefined) entry.rad_position_ja = data.rad_position_ja
-  if (data.examples !== undefined) entry.examples = data.examples
-  if (data.stroketimes !== undefined) entry.stroketimes = data.stroketimes
-  if (data.ka_id !== undefined) entry.ka_id = data.ka_id
-  if (data.kname !== undefined) entry.kname = data.kname
-  if (data.dick !== undefined) entry.dick = data.dick
-  if (data.dicn !== undefined) entry.dicn = data.dicn
-  if (data.mn_hint !== undefined) entry.mn_hint = data.mn_hint
-  
-  return entry
-}
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 

@@ -1,6 +1,7 @@
 // 카드 상태 판정 로직
 import type { UserCardState, CardStatus } from '../types/srs'
-import { nowAsMinutes, daysToMinutes } from './reviewCard'
+import { nowAsMinutes, daysToMinutes } from '../utils/dateUtils'
+import { normalizeDue, normalizeInterval } from './cardMigration'
 
 /**
  * 카드 상태 판정
@@ -18,14 +19,8 @@ export function getCardStatus(card: UserCardState | null): CardStatus {
   const nowMinutes = nowAsMinutes()
   
   // 기존 일 단위 데이터 마이그레이션
-  let dueMinutes = card.due
-  let intervalMinutes = card.interval
-  if (card.due < 10000) {
-    // 일 단위로 저장된 경우 분 단위로 변환
-    const { dayNumberToMinutes, daysToMinutes: daysToMin } = require('./reviewCard')
-    dueMinutes = dayNumberToMinutes(card.due)
-    intervalMinutes = card.interval < 365 ? daysToMin(card.interval) : card.interval
-  }
+  const dueMinutes = normalizeDue(card.due)
+  const intervalMinutes = normalizeInterval(card.interval)
 
   // Mastered: interval >= 30일 (43200분) 또는 reps >= 12 (실제 장기 기억 기준)
   const thirtyDaysInMinutes = daysToMinutes(30)

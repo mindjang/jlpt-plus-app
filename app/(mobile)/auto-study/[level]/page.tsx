@@ -1,20 +1,27 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import { useRouter, useParams } from 'next/navigation'
+import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
 import { Modal } from '@/components/ui/Modal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisVertical, faBook, faLanguage } from '@fortawesome/free-solid-svg-icons'
 import { Level, levelData, getLevelGradient } from '@/data'
-import { hexToRgba } from '@/lib/utils/colorUtils'
+import { getWordsByLevel } from '@/data/words/index'
+import { getKanjiByLevel } from '@/data/kanji/index'
+import { convertSearchResultToWord, convertKanjiAliveEntryToKanji } from '@/lib/utils/dataConverter'
+import type { Word, Kanji } from '@/lib/types/content'
 import { SemicircleProgress } from '@/components/ui/SemicircleProgress'
+import { ProgressDisplay } from '@/components/ui/ProgressDisplay'
+import { useStudyProgress } from '@/hooks/useStudyProgress'
 
 type StudyMode = 'auto' | 'chapter'
 
 export default function AutoStudyPage() {
   const router = useRouter()
   const params = useParams()
+  const { user } = useAuth()
   const level = (params.level as string)?.toUpperCase() as Level || 'N5'
   const gradient = getLevelGradient(params.level as string)
   const data = levelData[level]
@@ -24,22 +31,57 @@ export default function AutoStudyPage() {
   const [targetAmount, setTargetAmount] = useState(20)
   const [activeTab, setActiveTab] = useState<'word' | 'kanji'>('word')
 
-  // 임시 데이터 (나중에 실제 학습 데이터로 교체)
-  const currentProgress = 0 // 초기 상태: 0
-  const totalWords = activeTab === 'word' ? data.words : data.kanji
-  const newWords = targetAmount
-  const reviewWords = 0
-  const sessionProgress = 0 // 초기 상태: 0
-  const sessionTotal = targetAmount
+  // 단어/한자 데이터 변환
+  const words: Word[] = useMemo(() => {
+    if (activeTab !== 'word') return []
+    const searchResults = getWordsByLevel(level)
+    return searchResults.map((result, index) => 
+      convertSearchResultToWord(result, `${level}_W_${String(index + 1).padStart(4, '0')}`, 1)
+    )
+  }, [level, activeTab])
 
-  // 챕터 계산 (각 챕터당 targetAmount개)
+  const kanjis: Kanji[] = useMemo(() => {
+    if (activeTab !== 'kanji') return []
+    const kanjiEntries = getKanjiByLevel(level)
+    return kanjiEntries.map((entry, index) => 
+      convertKanjiAliveEntryToKanji(entry, `${level}_K_${String(index + 1).padStart(4, '0')}`, level)
+    )
+  }, [level, activeTab])
+
+  // 진행률 데이터를 커스텀 훅으로 관리
+  const {
+    currentProgress,
+    newWords,
+    reviewWords,
+    longTermMemory,
+    sessionProgress,
+    sessionTotalFixed,
+    chaptersData,
+    loading,
+  } = useStudyProgress({
+    uid: user?.uid || null,
+    level,
+    activeTab,
+    words,
+    kanjis,
+    totalWords: activeTab === 'word' ? data.words : data.kanji,
+    targetAmount,
+    canLoad: !!user,
+  })
+
+  const totalWords = activeTab === 'word' ? data.words : data.kanji
+  const sessionTotal = sessionTotalFixed ?? targetAmount
+
+  // 챕터 계산 (각 챕터당 targetAmount개) - chaptersData가 있으면 사용, 없으면 기본값
   const totalChapters = Math.ceil(totalWords / targetAmount)
-  const chapters = Array.from({ length: totalChapters }, (_, i) => ({
-    number: i + 1,
-    totalWords: i === totalChapters - 1 ? totalWords % targetAmount || targetAmount : targetAmount,
-    longTermMemory: 0,
-    learned: 0,
-  }))
+  const chapters = chaptersData.length > 0 
+    ? chaptersData 
+    : Array.from({ length: totalChapters }, (_, i) => ({
+        number: i + 1,
+        totalWords: i === totalChapters - 1 ? totalWords % targetAmount || targetAmount : targetAmount,
+        longTermMemory: 0,
+        learned: 0,
+      }))
 
   const handleModeSelect = (mode: StudyMode) => {
     setStudyMode(mode)
@@ -111,7 +153,7 @@ export default function AutoStudyPage() {
 
                 {/* 진행률 반원형 차트 */}
                 <SemicircleProgress 
-                  value={(sessionProgress / sessionTotal) * 100}
+                  value={sessionTotal === 0 ? 0 : (sessionProgress / sessionTotal) * 100}
                   progress={sessionProgress}
                   total={sessionTotal}
                   color={gradient.from}
@@ -128,7 +170,7 @@ export default function AutoStudyPage() {
                 onClick={() => router.push(`/acquire/auto-study/${params.level}/new-words?type=${activeTab}&limit=${targetAmount}`)}
                 className="text-body text-text-main font-medium"
               >
-                {newWords} &gt;
+                {loading ? '...' : newWords} &gt;
               </button>
                 </div>
                 <div className="flex items-center justify-between">
@@ -136,7 +178,7 @@ export default function AutoStudyPage() {
                     복습 {activeTab === 'word' ? '단어' : '한자'}
                   </span>
               <button className="text-body text-text-main font-medium">
-                {reviewWords} &gt;
+                {loading ? '...' : reviewWords} &gt;
               </button>
                 </div>
               </div>
@@ -176,64 +218,28 @@ export default function AutoStudyPage() {
 
               {/* 장기 기억 단어/한자 */}
               <div className="mb-3">
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-body text-text-sub">
-                    장기 기억 {activeTab === 'word' ? '단어' : '한자'}
-                  </span>
-                  <span className="text-body text-text-main font-medium">
-                    {currentProgress}/{totalWords}
-                  </span>
-                </div>
-                <div className="h-2 bg-divider rounded-full overflow-hidden relative">
-                  <div
-                    className="h-full rounded-full"
-                    style={{
-                      width: `${Math.max((currentProgress / totalWords) * 100, 0.5)}%`,
-                      backgroundColor: hexToRgba(gradient.to, 0.3),
-                      border: '1px solid #FF8A00',
-                    }}
-                  />
-                  {currentProgress === 0 && (
-                    <div
-                      className="absolute left-0 top-0 w-1 h-full rounded-full"
-                      style={{
-                        backgroundColor: hexToRgba(gradient.to, 0.3),
-                        border: '1px solid #FF8A00',
-                      }}
-                    />
-                  )}
-                </div>
+                <ProgressDisplay
+                  current={loading ? 0 : longTermMemory}
+                  total={totalWords}
+                  color={gradient.to}
+                  label={`장기 기억 ${activeTab === 'word' ? '단어' : '한자'}`}
+                  labelPosition="left"
+                  numberPosition="right"
+                  showZeroIndicator
+                />
               </div>
 
               {/* 학습한 단어/한자 */}
               <div>
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-body text-text-sub">
-                    학습한 {activeTab === 'word' ? '단어' : '한자'}
-                  </span>
-                  <span className="text-body text-text-main font-medium">
-                    {currentProgress}/{totalWords}
-                  </span>
-                </div>
-                <div className="h-2 bg-divider rounded-full overflow-hidden relative">
-                  <div
-                    className="h-full rounded-full"
-                    style={{
-                      width: `${Math.max((currentProgress / totalWords) * 100, 0.5)}%`,
-                      backgroundColor: hexToRgba(gradient.to, 0.3),
-                      border: '1px solid #FF8A00',
-                    }}
-                  />
-                  {currentProgress === 0 && (
-                    <div
-                      className="absolute left-0 top-0 w-1 h-full rounded-full"
-                      style={{
-                        backgroundColor: hexToRgba(gradient.to, 0.3),
-                        border: '1px solid #FF8A00',
-                      }}
-                    />
-                  )}
-                </div>
+                <ProgressDisplay
+                  current={loading ? 0 : currentProgress}
+                  total={totalWords}
+                  color={gradient.to}
+                  label={`학습한 ${activeTab === 'word' ? '단어' : '한자'}`}
+                  labelPosition="left"
+                  numberPosition="right"
+                  showZeroIndicator
+                />
               </div>
             </div>
           </div>
@@ -281,34 +287,26 @@ export default function AutoStudyPage() {
 
                   {/* 장기 기억 단어 */}
                   <div className="mb-2">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-body text-text-sub">장기 기억 단어</span>
-                      <span className="text-body text-text-main font-medium">
-                        {chapter.longTermMemory}/{chapter.totalWords}
-                      </span>
-                    </div>
-                    <div className="h-2 bg-divider rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-orange-500 rounded-full"
-                        style={{ width: `${(chapter.longTermMemory / chapter.totalWords) * 100}%` }}
-                      />
-                    </div>
+                    <ProgressDisplay
+                      current={chapter.longTermMemory}
+                      total={chapter.totalWords}
+                      color={gradient.to}
+                      label="장기 기억 단어"
+                      labelPosition="left"
+                      numberPosition="right"
+                    />
                   </div>
 
                   {/* 학습한 단어 */}
                   <div>
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-body text-text-sub">학습한 단어</span>
-                      <span className="text-body text-text-main font-medium">
-                        {chapter.learned}/{chapter.totalWords}
-                      </span>
-                    </div>
-                    <div className="h-2 bg-divider rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-orange-500 rounded-full"
-                        style={{ width: `${(chapter.learned / chapter.totalWords) * 100}%` }}
-                      />
-                    </div>
+                    <ProgressDisplay
+                      current={chapter.learned}
+                      total={chapter.totalWords}
+                      color={gradient.to}
+                      label="학습한 단어"
+                      labelPosition="left"
+                      numberPosition="right"
+                    />
                   </div>
                 </div>
               ))}

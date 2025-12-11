@@ -20,20 +20,20 @@ const tabs: TabItem[] = [
     icon: 'home',
   },
   {
-    id: 'stats',
-    label: '통계',
-    href: '/stats',
-    icon: 'stats',
-  },
-  {
     id: 'acquire',
-    label: '습득존',
+    label: '도서관',
     href: '/acquire',
     icon: 'acquire',
   },
   {
+    id: 'game',
+    label: '게임존',
+    href: '/game',
+    icon: 'game',
+  },
+  {
     id: 'practice',
-    label: '학습존',
+    label: '퀴즈존',
     href: '/practice',
     icon: 'practice',
   },
@@ -60,13 +60,13 @@ export function BottomNav() {
                 href={tab.href}
                 aria-current={isActive ? 'page' : undefined}
                 className={`flex flex-col items-center justify-center flex-1 h-full transition-colors ${
-                  isActive ? 'text-primary' : 'text-text-sub'
+                  isActive ? 'text-[#FF8A00]' : 'text-text-sub'
                 }`}
               >
                 <TabIcon name={tab.icon} active={isActive} />
                 <span
-                  className={`text-label mt-1 transition-colors ${
-                    isActive ? 'font-semibold text-primary' : 'font-medium text-text-sub'
+                  className={`text-label transition-colors ${
+                    isActive ? 'font-bold text-[#FF8A00]' : 'text-text-sub'
                   }`}
                 >
                   {tab.label}

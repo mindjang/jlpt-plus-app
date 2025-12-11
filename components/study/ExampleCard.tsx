@@ -1,64 +1,28 @@
 'use client'
 
-import React, { useState, useMemo, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { useRouter } from 'next/navigation'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPencil, faEye, faEyeSlash, faFileLines, faRotateLeft } from '@fortawesome/free-solid-svg-icons'
-import type { Word, Kanji } from '@/lib/types/content'
+import React from 'react'
+import type { Word, Kanji, JlptLevel } from '@/lib/types/content'
 import type { Grade, UserCardState } from '@/lib/types/srs'
 import { reviewCard } from '@/lib/srs/reviewCard'
-import { LevelChip } from '../ui/LevelChip'
-import { getWordsByLevel } from '@/data/words/index'
-import { convertSearchResultToWord } from '@/lib/utils/dataConverter'
-import { Level } from '@/data'
-import type { SearchResult } from '@/data/types'
-
-// 한자별 관련 단어 캐시 (7일 유지)
-const RELATED_WORD_CACHE = new Map<
-  string,
-  { timestamp: number; items: Word[] }
->()
-const CACHE_TTL = 7 * 24 * 60 * 60 * 1000 // 7 days
-
-function getCachedRelatedWords(
-  kanjiChar: string,
-  level: Level
-): Word[] {
-  const key = `${kanjiChar}:${level}`
-  const now = Date.now()
-  const cached = RELATED_WORD_CACHE.get(key)
-  if (cached && now - cached.timestamp < CACHE_TTL) {
-    return cached.items
-  }
-
-  // 해당 레벨의 단어 데이터에서 한자가 포함된 단어 필터링
-  const levelWords: SearchResult[] = getWordsByLevel(level)
-  const filteredWords = levelWords.filter(
-    (w) => w.word.includes(kanjiChar)
-  )
-  
-  // SearchResult를 Word 타입으로 변환
-  const items: Word[] = filteredWords.map((result, index) =>
-    convertSearchResultToWord(result, `${level}_W_${String(index + 1).padStart(4, '0')}`, 1)
-  )
-  
-  RELATED_WORD_CACHE.set(key, { timestamp: now, items })
-  return items
-}
+import { WordCard } from './WordCard'
+import { KanjiCard } from './KanjiCard'
 
 interface ExampleCardProps {
   item: Word | Kanji
   type: 'word' | 'kanji'
   level: string
   isNew?: boolean
-  cardState?: any // UserCardState | null
+  cardState?: UserCardState | null
   onGrade: (grade: Grade) => void
   onNext: () => void
   allWords?: Word[] // 한자 학습 시 해당 한자가 포함된 단어 찾기용
   onGradeStateChange?: (selectedGrade: Grade | null, nextReviewInterval: number | null) => void
 }
 
+/**
+ * 예문 학습 카드 래퍼 컴포넌트
+ * 단어와 한자 카드를 타입에 따라 분기하여 표시
+ */
 export const ExampleCard: React.FC<ExampleCardProps> = ({
   item,
   type,
@@ -70,34 +34,12 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
   allWords = [],
   onGradeStateChange,
 }) => {
-  const router = useRouter()
-  const [showMeaning, setShowMeaning] = useState(false)
-  const [showFurigana, setShowFurigana] = useState(false)
-  const [showReadings, setShowReadings] = useState(false) // 음독/훈독 표시 여부
-  const [examplePage, setExamplePage] = useState(0) // 예문 페이지네이션
-  const [activeLevel, setActiveLevel] = useState<Level>('N5')
-  
-  // 레벨별 관련 단어 데이터 (초기 로딩 시 조회)
-  const [levelWordsMap, setLevelWordsMap] = useState<Record<Level, Word[]>>({
-    N5: [],
-    N4: [],
-    N3: [],
-    N2: [],
-    N1: [],
-  })
-  
-  // 레벨별 단어 존재 여부 (버튼 표시용)
-  const [availableLevels, setAvailableLevels] = useState<Set<Level>>(new Set())
-
-  // 모든 내용이 보이는지 확인 (눈 아이콘 상태용)
-  const isAllVisible = showMeaning && showFurigana && showReadings
-
   const handleGrade = (grade: Grade) => {
     // 다음 복습 간격 계산 (실제 SRS 로직 사용)
-    const updatedState = reviewCard(cardState as UserCardState | null, {
+    const updatedState = reviewCard(cardState, {
       itemId: item.id,
       type: type as 'word' | 'kanji',
-      level: level as any,
+      level: level as JlptLevel,
       grade,
     })
     
@@ -106,402 +48,31 @@ export const ExampleCard: React.FC<ExampleCardProps> = ({
     
     // 부모 컴포넌트의 handleGrade 호출 (저장 및 다음 카드 이동은 부모에서 처리)
     onGrade(grade)
-    // Note: 다음 카드로 이동은 StudySession의 handleGrade에서 처리됨
   }
 
-  const handleReset = () => {
-    setShowMeaning(false)
-    setShowFurigana(false)
-    setShowReadings(false)
-  }
-
-  // 카드가 변경될 때 상태 초기화
-  useEffect(() => {
-    setShowMeaning(false)
-    setShowFurigana(false)
-    setShowReadings(false)
-    setExamplePage(0)
-    setActiveLevel('N5')
-  }, [item.id])
-
-  // 눈 아이콘 클릭: 모든 것을 한 번에 보이기/숨기기
-  const handleToggleAll = () => {
-    if (isAllVisible) {
-      // 모두 보이면 모두 숨기기
-      setShowMeaning(false)
-      setShowFurigana(false)
-      setShowReadings(false)
-    } else {
-      // 하나라도 숨겨져 있으면 모두 보이기
-      setShowMeaning(true)
-      setShowFurigana(true)
-      setShowReadings(true)
-    }
-  }
-
-  const isWord = type === 'word'
-  const word = isWord ? (item as Word) : null
-  const kanji = !isWord ? (item as Kanji) : null
-
-  // 초기 로딩 시 모든 레벨의 관련 단어 조회
-  useEffect(() => {
-    if (!kanji) return
-
-    const allLevels: Level[] = ['N5', 'N4', 'N3', 'N2', 'N1']
-    const newLevelWordsMap: Record<Level, Word[]> = {
-      N5: [],
-      N4: [],
-      N3: [],
-      N2: [],
-      N1: [],
-    }
-    const newAvailableLevels = new Set<Level>()
-
-    // 모든 레벨에 대해 관련 단어 조회
-    allLevels.forEach((level) => {
-      const words = getCachedRelatedWords(kanji.character, level)
-      newLevelWordsMap[level] = words
-      if (words.length > 0) {
-        newAvailableLevels.add(level)
-      }
-    })
-
-    setLevelWordsMap(newLevelWordsMap)
-    setAvailableLevels(newAvailableLevels)
-
-    // 첫 번째 사용 가능한 레벨로 초기화 (또는 한자의 레벨)
-    if (kanji.level && newAvailableLevels.has(kanji.level as Level)) {
-      setActiveLevel(kanji.level as Level)
-    } else if (newAvailableLevels.size > 0) {
-      // 사용 가능한 첫 번째 레벨 선택
-      const firstAvailable = Array.from(newAvailableLevels)[0]
-      setActiveLevel(firstAvailable)
-    }
-  }, [kanji?.character, kanji?.level])
-
-  // 현재 선택된 레벨의 단어 가져오기 (미리 조회한 데이터 사용)
-  const exampleWords = useMemo(() => {
-    if (!kanji) return []
-    const words = levelWordsMap[activeLevel] || []
-    return words.slice(0, 9) // 최대 9개 (3개씩 3페이지)
-  }, [kanji, activeLevel, levelWordsMap])
-
-  const wordsPerPage = 3
-  const totalPages = Math.ceil(exampleWords.length / wordsPerPage)
-  const currentPageWords = exampleWords.slice(
-    examplePage * wordsPerPage,
-    (examplePage + 1) * wordsPerPage
-  )
-
-  // 한자 학습 화면
-  if (kanji) {
+  if (type === 'word') {
     return (
-      <div className="w-full max-w-md mx-auto">
-        {/* 카드 */}
-        <motion.div
-          className="bg-surface rounded-card shadow-soft p-6 relative"
-          initial={{ scale: 0.95, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.18 }}
-        >
-          {/* NEW 라벨 */}
-          {isNew && (
-            <div className="absolute top-4 left-4">
-              <span className="text-label font-medium text-white bg-blue-500 px-3 py-1 rounded-full">
-                New
-              </span>
-            </div>
-          )}
-
-          {/* 우측 상단 아이콘 */}
-          <div className="absolute top-4 right-4 flex items-center gap-2">
-            {/* 펜 아이콘 (위치만) */}
-            <button className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors">
-              <FontAwesomeIcon icon={faPencil} className="text-text-sub text-sm" />
-            </button>
-            {/* 눈 아이콘 (모든 내용 보이기/숨기기 토글) */}
-            <button
-              onClick={handleToggleAll}
-              className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors"
-            >
-              <FontAwesomeIcon 
-                icon={isAllVisible ? faEye : faEyeSlash} 
-                className="text-text-sub text-sm" 
-              />
-            </button>
-            {/* 상세 아이콘 */}
-            <button
-              onClick={() => router.push(`/acquire/kanji/${encodeURIComponent(kanji.character)}`)}
-              className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors"
-            >
-              <FontAwesomeIcon icon={faFileLines} className="text-text-sub text-sm" />
-            </button>
-          </div>
-
-          {/* 카드 내용 */}
-          <div className="mb-6 pt-8">
-            {/* 한자 표시 */}
-              <div className="mb-6 text-center">
-              <h1 className="text-display-l text-jp font-medium text-text-main mb-4">
-                {kanji.character}
-              </h1>
-              
-              {/* 의미 표시 (visibility로 높이 유지) */}
-              <div className={`mb-4 ${showMeaning ? 'visible' : 'invisible'}`}>
-                <p className="text-title text-text-main font-semibold">
-                  {kanji.meaningKo}
-                </p>
-              </div>
-
-              {/* 음독/훈독 표시 (각각 별도 row, 좌측 정렬) */}
-              <div className="mb-4 space-y-2 text-left">
-                {kanji.onyomi && kanji.onyomi.length > 0 && (
-                  <div className="flex items-center">
-                    <span className="text-label text-text-sub mr-2">음독</span>
-                    {showReadings ? (
-                      <span className="text-label text-jp font-medium text-text-main">
-                        {kanji.onyomi.join('・')}
-                      </span>
-                    ) : (
-                      <span className="text-label text-text-sub">•••</span>
-                    )}
-                  </div>
-                )}
-                {kanji.kunyomi && kanji.kunyomi.length > 0 && (
-                  <div className="flex items-center">
-                    <span className="text-label text-text-sub mr-2">훈독</span>
-                    {showReadings ? (
-                      <span className="text-label text-jp font-medium text-text-main">
-                        {kanji.kunyomi.join('・')}
-                      </span>
-                    ) : (
-                      <span className="text-label text-text-sub">•••</span>
-                    )}
-                  </div>
-                )}
-              </div>
-
-                {/* 레벨 탭 (N5~N1) - 단어가 있는 레벨만 표시 */}
-                {availableLevels.size > 0 && (
-                  <div className="mb-4 flex justify-center gap-2">
-                    {(['N5', 'N4', 'N3', 'N2', 'N1'] as Level[]).map((lv) => {
-                      if (!availableLevels.has(lv)) return null
-                      return (
-                        <button
-                          key={lv}
-                          onClick={() => {
-                            setActiveLevel(lv)
-                            setExamplePage(0)
-                          }}
-                          className={`px-3 py-1 rounded-full text-label font-medium transition-colors ${
-                            activeLevel === lv
-                              ? 'bg-primary text-white'
-                              : 'bg-page text-text-sub'
-                          }`}
-                        >
-                          {lv}
-                        </button>
-                      )
-                    })}
-                  </div>
-                )}
-            </div>
-
-            {/* 예문 단어 리스트 (3개씩 페이지네이션) */}
-            {exampleWords.length > 0 && (
-              <div className="mb-4">
-                {/* 페이지네이션 네비게이션 */}
-                {totalPages > 1 && (
-                  <div className="flex items-center justify-center gap-2 mb-3">
-                    <button
-                      onClick={() => setExamplePage(Math.max(0, examplePage - 1))}
-                      disabled={examplePage === 0}
-                      className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-                    >
-                      <span className="text-body text-text-sub">‹</span>
-                    </button>
-                    <span className="text-body text-text-sub">
-                      {examplePage + 1}/{totalPages}
-                    </span>
-                    <button
-                      onClick={() => setExamplePage(Math.min(totalPages - 1, examplePage + 1))}
-                      disabled={examplePage >= totalPages - 1}
-                      className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-                    >
-                      <span className="text-body text-text-sub">›</span>
-                    </button>
-                  </div>
-                )}
-
-                {/* 예문 단어 리스트 */}
-                <div className="space-y-2">
-                  {currentPageWords.map((word, index) => (
-                    <div
-                      key={word.id || index}
-                      className="flex items-center gap-2 px-3 py-2 rounded-card bg-page"
-                    >
-                      <LevelChip level={word.level as any} />
-                      <div className="flex items-center gap-2 flex-1">
-                        <span className="text-subtitle text-jp font-medium text-text-main">
-                          {word.kanji || word.kana}
-                        </span>
-                        {showFurigana && word.kanji && (
-                          <span className="text-label text-jp text-text-sub">
-                            {word.kana}
-                          </span>
-                        )}
-                      </div>
-                      {showMeaning && (
-                        <span className="text-body text-text-sub">
-                          {word.meaningKo}
-                        </span>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* 하단 버튼 영역 (되돌리기, 의미, 히라가나만) */}
-          <div className="flex items-center gap-2">
-            <button
-              onClick={handleReset}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-divider hover:bg-page transition-colors"
-            >
-              <FontAwesomeIcon icon={faRotateLeft} className="text-text-sub text-sm" />
-            </button>
-            <button
-              onClick={() => setShowMeaning(!showMeaning)}
-              className={`button-press flex-1 py-3 px-4 rounded-card text-body font-medium ${
-                showMeaning
-                  ? 'bg-primary text-white'
-                  : 'bg-surface border border-divider text-text-main'
-              }`}
-            >
-              의미
-            </button>
-            <button
-              onClick={() => {
-                const newShowFurigana = !showFurigana
-                setShowFurigana(newShowFurigana)
-                // 히라가나를 보이면 음독/훈독도 함께 보이기, 숨기면 함께 숨기기
-                setShowReadings(newShowFurigana)
-              }}
-              className={`button-press flex-1 py-3 px-4 rounded-card text-body font-medium ${
-                showFurigana
-                  ? 'bg-primary text-white'
-                  : 'bg-surface border border-divider text-text-main'
-              }`}
-            >
-              히라가나
-            </button>
-          </div>
-        </motion.div>
-      </div>
+      <WordCard
+        word={item as Word}
+        isNew={isNew}
+        cardState={cardState}
+        onGrade={handleGrade}
+        onNext={onNext}
+        onGradeStateChange={onGradeStateChange}
+      />
     )
   }
 
-  // 단어 학습 화면 (기존 로직 유지)
   return (
-    <div className="w-full max-w-md mx-auto">
-      {/* 카드 */}
-      <motion.div
-        className="bg-surface rounded-card shadow-soft p-6 relative"
-        initial={{ scale: 0.95, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.18 }}
-      >
-        {/* NEW 라벨 */}
-        {isNew && (
-          <div className="absolute top-4 right-4">
-            <span className="text-label font-medium text-white bg-blue-500 px-3 py-1 rounded-full">
-              New
-            </span>
-          </div>
-        )}
-
-        {/* 카드 내용 */}
-        <div className="mb-6">
-          {/* 단어 표시 */}
-          {word && (
-            <div className="mb-4">
-              <h1 className="text-display-l text-jp font-medium text-text-main mb-2 text-center">
-                {word.kanji || word.kana}
-              </h1>
-              {word.kanji && showFurigana && (
-                <div className="text-subtitle text-text-sub text-center">
-                  {word.kana}
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* 예문 표시 */}
-          {word && word.examples && word.examples.length > 0 && (
-            <div className="mb-4 text-center">
-              <div className="text-jp text-body text-text-main">
-                {word.examples[0].ja}
-              </div>
-            </div>
-          )}
-
-          {/* 의미 표시 */}
-          <AnimatePresence>
-            {showMeaning && word && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="mb-4 text-center"
-              >
-                <p className="text-title text-text-main font-semibold mb-2">
-                  {word.meaningKo}
-                </p>
-                {word.examples && word.examples[0] && (
-                  <div className="text-body text-text-sub">
-                    <p className="text-kr">{word.examples[0].ko}</p>
-                  </div>
-                )}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-
-        {/* 하단 버튼 영역 (되돌리기, 의미, 히라가나만) */}
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => {
-              setShowMeaning(false)
-              setShowFurigana(false)
-            }}
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-divider hover:bg-page transition-colors"
-          >
-            <FontAwesomeIcon icon={faRotateLeft} className="text-text-sub text-sm" />
-          </button>
-          <button
-            onClick={() => setShowMeaning(!showMeaning)}
-            className={`button-press flex-1 py-3 px-4 rounded-card text-body font-medium ${
-              showMeaning
-                ? 'bg-primary text-white'
-                : 'bg-surface border border-divider text-text-main'
-            }`}
-          >
-            의미
-          </button>
-          <button
-            onClick={() => setShowFurigana(!showFurigana)}
-            className={`button-press flex-1 py-3 px-4 rounded-card text-body font-medium ${
-              showFurigana
-                ? 'bg-primary text-white'
-                : 'bg-surface border border-divider text-text-main'
-            }`}
-          >
-            히라가나
-          </button>
-        </div>
-      </motion.div>
-    </div>
+    <KanjiCard
+      kanji={item as Kanji}
+      level={level}
+      isNew={isNew}
+      cardState={cardState}
+      onGrade={handleGrade}
+      onNext={onNext}
+      onGradeStateChange={onGradeStateChange}
+    />
   )
 }
 

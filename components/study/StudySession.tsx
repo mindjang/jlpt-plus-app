@@ -5,7 +5,8 @@ import { useRouter } from 'next/navigation'
 import { useAuth } from '../auth/AuthProvider'
 import { ExampleCard } from './ExampleCard'
 import { QuizCard } from './QuizCard'
-import { getTodayQueues, type StudyCard } from '@/lib/srs/studyQueue'
+import type { StudyCard } from '@/lib/srs/studyQueue'
+import { useStudyQueue } from '@/hooks/useStudyQueue'
 import { minutesToDays } from '@/lib/srs/reviewCard'
 import { getLevelGradient } from '@/data'
 import {
@@ -15,12 +16,14 @@ import {
   saveCardStateImmediate,
   savePendingUpdates,
 } from '@/lib/srs/cardEvaluation'
-import { calculateStudyStats, formatStudyTime } from '@/lib/srs/studyStats'
-import type { Word, Kanji } from '@/lib/types/content'
-import type { Grade } from '@/lib/types/srs'
-import { hexToRgba } from '@/lib/utils/colorUtils'
+import { calculateStudyStats } from '@/lib/srs/studyStats'
+import type { Word, Kanji, JlptLevel } from '@/lib/types/content'
+import type { Grade, UserCardState } from '@/lib/types/srs'
 import { useMembership } from '../membership/MembershipProvider'
 import { PaywallOverlay } from '../membership/PaywallOverlay'
+import { logger } from '@/lib/utils/logger'
+import { ProgressDisplay } from '../ui/ProgressDisplay'
+import { SessionCompleteModal } from './SessionCompleteModal'
 
 interface StudySessionProps {
   level: string
@@ -31,6 +34,7 @@ interface StudySessionProps {
   initialCompleted?: number // 세션 재진입 시 이미 완료한 개수
   onTimeUpdate?: (seconds: number) => void
   onCompleteChange?: (completed: boolean) => void
+  onStudyStarted?: (started: boolean) => void // 학습 시작 여부 콜백
 }
 
 export function StudySession({
@@ -42,6 +46,7 @@ export function StudySession({
   initialCompleted = 0,
   onTimeUpdate,
   onCompleteChange,
+  onStudyStarted,
 }: StudySessionProps) {
   const router = useRouter()
   const { user } = useAuth()
@@ -53,11 +58,28 @@ export function StudySession({
     recordSession,
   } = useMembership()
   const gradient = getLevelGradient(level.toLowerCase())
+  const [sessionReserved, setSessionReserved] = useState(false)
+  const [paywallMessage, setPaywallMessage] = useState<string | null>(null)
+  
+  const {
+    queue: initialQueue,
+    loading: queueLoading,
+    error: queueError,
+  } = useStudyQueue({
+    uid: user?.uid || null,
+    level: level as JlptLevel,
+    words,
+    kanjis,
+    dailyNewLimit,
+    canLoad: canStartSession || sessionReserved,
+  })
+
   const [queue, setQueue] = useState<StudyCard[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [sessionInitialQueue, setSessionInitialQueue] = useState<StudyCard[]>([]) // 세션 시작 시 초기 큐 (통계 계산용)
   const [initialQueueLength, setInitialQueueLength] = useState(0) // 세션 시작 시 총 카드 수
   const [completedCount, setCompletedCount] = useState(initialCompleted) // 완료한 카드 수 (again 제외)
-  const [pendingUpdates, setPendingUpdates] = useState<Map<string, any>>(new Map())
+  const [pendingUpdates, setPendingUpdates] = useState<Map<string, UserCardState>>(new Map())
   const [loading, setLoading] = useState(true)
   const [studyTime, setStudyTime] = useState(0) // 학습 시간 (초)
   const [selectedGrade, setSelectedGrade] = useState<Grade | null>(null)
@@ -69,8 +91,6 @@ export function StudySession({
     reviewCards: number
     studyTime: number
   } | null>(null)
-  const [sessionReserved, setSessionReserved] = useState(false)
-  const [paywallMessage, setPaywallMessage] = useState<string | null>(null)
 
   // 세션 종료 처리 (배치 저장 + 통계 계산)
   const finishSession = async (finalQueue: StudyCard[]) => {
@@ -79,45 +99,27 @@ export function StudySession({
       setPendingUpdates(emptyMap)
     }
 
-    const stats = calculateStudyStats(finalQueue, studyTime)
+    // 초기 큐를 사용하여 통계 계산 (실제 학습한 카드 수 반영)
+    const queueForStats = sessionInitialQueue.length > 0 ? sessionInitialQueue : finalQueue
+    const stats = calculateStudyStats(queueForStats, studyTime)
     setCompletedStats(stats)
     setIsCompleted(true)
     onCompleteChange?.(true)
   }
 
-  // 학습 큐 로드
+  // 학습 큐 동기화
   useEffect(() => {
-    if (!user || membershipLoading) return
-    if (!canStartSession && !sessionReserved) {
-      setLoading(false)
-      return
+    if (initialQueue.length > 0 && queue.length === 0) {
+      setQueue(initialQueue)
+      setSessionInitialQueue(initialQueue) // 초기 큐 저장 (통계 계산용)
+      setInitialQueueLength(initialQueue.length)
+      setCompletedCount(initialCompleted)
+      setCurrentIndex(0)
+      setIsCompleted(false)
+      setCompletedStats(null)
     }
-
-    const loadQueue = async () => {
-      setLoading(true)
-      try {
-        const queues = await getTodayQueues(
-          user.uid,
-          level as any,
-          words,
-          kanjis,
-          dailyNewLimit
-        )
-        setQueue(queues.mixedQueue)
-        setInitialQueueLength(queues.mixedQueue.length)
-        setCompletedCount(initialCompleted)
-        setCurrentIndex(0)
-        setIsCompleted(false)
-        setCompletedStats(null)
-      } catch (error) {
-        console.error('Failed to load study queue:', error)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    loadQueue()
-  }, [user, level, words, kanjis, dailyNewLimit, membershipLoading, canStartSession])
+    setLoading(queueLoading)
+  }, [initialQueue, queueLoading, queue.length, initialCompleted])
 
   // 타이머 시작
   useEffect(() => {
@@ -171,7 +173,7 @@ export function StudySession({
       recordSession()
         .then(() => setSessionReserved(true))
         .catch((error) => {
-          console.error('[StudySession] recordSession failed:', error)
+          logger.error('[StudySession] recordSession failed:', error)
           setPaywallMessage(error?.message || '학습을 시작할 수 없습니다.')
         })
     }
@@ -239,6 +241,12 @@ export function StudySession({
     setNextReviewInterval(null)
   }, [currentIndex])
 
+  // 학습 시작 여부 감지 (카드 평가 또는 시간 경과)
+  useEffect(() => {
+    const hasStarted = completedCount > initialCompleted || studyTime > 0
+    onStudyStarted?.(hasStarted)
+  }, [completedCount, initialCompleted, studyTime, onStudyStarted])
+
   const handleNext = async () => {
     if (currentIndex < queue.length - 1) {
       setCurrentIndex(currentIndex + 1)
@@ -275,48 +283,7 @@ export function StudySession({
 
   // 학습 완료 화면
   if (isCompleted && completedStats) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-white">
-        <div className="w-full max-w-md  text-center">
-          <div className="mb-6">
-            <div className="text-display-l text-primary mb-2">🎉</div>
-            <h1 className="text-title text-text-main font-bold mb-2">학습 완료!</h1>
-            <p className="text-body text-text-sub">오늘의 학습을 완료했습니다</p>
-          </div>
-
-          <div className="space-y-4 mb-6">
-            <div className="bg-page rounded-card p-4">
-              <div className="text-label text-text-sub mb-1">총 학습 카드</div>
-              <div className="text-display-m text-text-main font-bold">{completedStats.totalCards}개</div>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-page rounded-card p-4">
-                <div className="text-label text-text-sub mb-1">신규 카드</div>
-                <div className="text-title text-text-main font-bold">{completedStats.newCards}개</div>
-              </div>
-              
-              <div className="bg-page rounded-card p-4">
-                <div className="text-label text-text-sub mb-1">복습 카드</div>
-                <div className="text-title text-text-main font-bold">{completedStats.reviewCards}개</div>
-              </div>
-            </div>
-
-            <div className="bg-page rounded-card p-4">
-              <div className="text-label text-text-sub mb-1">학습 시간</div>
-              <div className="text-title text-text-main font-bold">{formatStudyTime(completedStats.studyTime)}</div>
-            </div>
-          </div>
-
-          <button
-            onClick={() => router.back()}
-            className="w-full button-press py-4 px-4 rounded-card bg-primary text-white text-body font-medium"
-          >
-            이전 화면으로 돌아가기
-          </button>
-        </div>
-      </div>
-    )
+    return <SessionCompleteModal stats={completedStats} />
   }
 
   if (queue.length === 0) {
@@ -353,22 +320,12 @@ export function StudySession({
   return (
     <div className="w-full pb-24">
       {/* 진행도 바 */}
-      <div className="flex gap-2 items-center my-2 px-4">
-        <div className="text-label text-text-sub text-center">
-          {displayIndex} / {totalCount}
-        </div>
-
-        <div className="flex-1 h-2 bg-divider rounded-full overflow-hidden">
-          <div
-            className="h-full transition-all duration-300 rounded-full"
-            style={{
-              width: `${progress}%`,
-              backgroundColor: hexToRgba(gradient.to, 0.3),
-              border: '1px solid #FF8A00',
-            }}
-          />
-        </div>
-        
+      <div className="my-2 px-4">
+        <ProgressDisplay
+          current={displayIndex}
+          total={totalCount}
+          color={gradient.to}
+        />
       </div>
 
       {/* 카드 표시 */}

@@ -1,8 +1,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import { KanjiAliveEntry } from '../data/types'
-
-const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY || '5bacc8bb82msh444081c0b2aa85cp1c6aadjsnbdac63aa4cee'
+import { fetchKanjiData, filterKanjiAliveEntry } from './shared/fetchKanjiHelpers'
 
 // N5 한자 목록 (사용자 제공)
 const N5_KANJI_LIST = [
@@ -15,78 +14,6 @@ const N5_KANJI_LIST = [
   '火', '土', '南', '千', '西', '毎', '休', '八', '読', '五',
   '四', '百', '円', '午', '七', '左', '右', '雨', '六', '九'
 ]
-
-async function fetchKanjiData(kanji: string): Promise<any | null> {
-  const url = `https://kanjialive-api.p.rapidapi.com/api/public/kanji/${encodeURIComponent(kanji)}`
-  
-  try {
-    const response = await fetch(url, {
-      headers: {
-        'X-RapidAPI-Key': RAPIDAPI_KEY,
-        'X-RapidAPI-Host': 'kanjialive-api.p.rapidapi.com'
-      }
-    })
-    
-    if (!response.ok) {
-      if (response.status === 404) {
-        console.log(`  ⚠ ${kanji}: 데이터를 찾을 수 없습니다`)
-        return null
-      }
-      if (response.status === 429) {
-        console.log(`  ⚠ ${kanji}: API 호출 제한 (429), 잠시 대기...`)
-        await new Promise(resolve => setTimeout(resolve, 2000))
-        return null
-      }
-      console.error(`  ✗ ${kanji}: API 호출 실패 (${response.status})`)
-      return null
-    }
-    
-    const data = await response.json()
-    return data
-  } catch (error) {
-    console.error(`  ✗ ${kanji}: 오류 발생`, error)
-    return null
-  }
-}
-
-function filterKanjiAliveEntry(data: any): KanjiAliveEntry {
-  // 인터페이스에 정의된 필드만 추출
-  const entry: KanjiAliveEntry = {
-    _id: data._id,
-    _rev: data._rev,
-    ka_utf: data.ka_utf,
-    kanji: data.kanji,
-    radical: data.radical,
-  }
-  
-  // 선택적 필드들
-  if (data.grade !== undefined) entry.grade = data.grade
-  if (data.hint_group !== undefined) entry.hint_group = data.hint_group
-  if (data.onyomi !== undefined) entry.onyomi = data.onyomi
-  if (data.onyomi_ja !== undefined) entry.onyomi_ja = data.onyomi_ja
-  if (data.kunyomi !== undefined) entry.kunyomi = data.kunyomi
-  if (data.kunyomi_ja !== undefined) entry.kunyomi_ja = data.kunyomi_ja
-  if (data.kunyomi_ka_display !== undefined) entry.kunyomi_ka_display = data.kunyomi_ka_display
-  if (data.meaning !== undefined) entry.meaning = data.meaning
-  if (data.kstroke !== undefined) entry.kstroke = data.kstroke
-  if (data.rad_stroke !== undefined) entry.rad_stroke = data.rad_stroke
-  if (data.rad_utf !== undefined) entry.rad_utf = data.rad_utf
-  if (data.rad_name !== undefined) entry.rad_name = data.rad_name
-  if (data.rad_name_ja !== undefined) entry.rad_name_ja = data.rad_name_ja
-  if (data.rad_name_file !== undefined) entry.rad_name_file = data.rad_name_file
-  if (data.rad_order !== undefined) entry.rad_order = data.rad_order
-  if (data.rad_position !== undefined) entry.rad_position = data.rad_position
-  if (data.rad_position_ja !== undefined) entry.rad_position_ja = data.rad_position_ja
-  if (data.examples !== undefined) entry.examples = data.examples
-  if (data.stroketimes !== undefined) entry.stroketimes = data.stroketimes
-  if (data.ka_id !== undefined) entry.ka_id = data.ka_id
-  if (data.kname !== undefined) entry.kname = data.kname
-  if (data.dick !== undefined) entry.dick = data.dick
-  if (data.dicn !== undefined) entry.dicn = data.dicn
-  if (data.mn_hint !== undefined) entry.mn_hint = data.mn_hint
-  
-  return entry
-}
 
 async function main() {
   console.log(`총 ${N5_KANJI_LIST.length}개 한자 처리 시작...\n`)

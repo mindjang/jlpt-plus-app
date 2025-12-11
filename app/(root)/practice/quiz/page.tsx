@@ -5,9 +5,10 @@ import { useSearchParams, useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { StudySession } from '@/components/study/StudySession'
 import { LoginForm } from '@/components/auth/LoginForm'
+import type { Word, Kanji } from '@/lib/types/content'
 
-const mockWords: any[] = []
-const mockKanjis: any[] = []
+const mockWords: Word[] = []
+const mockKanjis: Kanji[] = []
 
 function QuizContent() {
   const searchParams = useSearchParams()

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, Suspense, useEffect, useMemo, useCallback, useRef } from 'react'
+import { useState, Suspense, useMemo } from 'react'
 import { useRouter, useParams, useSearchParams } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
@@ -8,20 +8,13 @@ import { Modal } from '@/components/ui/Modal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisVertical, faBook, faLanguage } from '@fortawesome/free-solid-svg-icons'
 import { Level, levelData, getLevelGradient } from '@/data'
-import { getLevelProgress } from '@/lib/srs/studyQueue'
-import { getTodayQueues } from '@/lib/srs/studyQueue'
 import { getWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
 import { convertSearchResultToWord, convertKanjiAliveEntryToKanji } from '@/lib/utils/dataConverter'
-import {
-  calculateProgressStats,
-  calculateRoundProgress,
-  calculateChapterProgress,
-} from '@/lib/srs/progressCalculation'
-import { nowAsMinutes, dayNumberToMinutes, minutesToDays } from '@/lib/srs/reviewCard'
 import type { Word, Kanji } from '@/lib/types/content'
-import { hexToRgba } from '@/lib/utils/colorUtils'
 import { SemicircleProgress } from '@/components/ui/SemicircleProgress'
+import { ProgressDisplay } from '@/components/ui/ProgressDisplay'
+import { useStudyProgress } from '@/hooks/useStudyProgress'
 
 type StudyMode = 'auto' | 'chapter'
 
@@ -39,24 +32,6 @@ function AutoStudyContent() {
   const typeParam = searchParams.get('type')
   const modeParam = searchParams.get('mode')
   
-  // 진행률 데이터 상태
-  const [currentProgress, setCurrentProgress] = useState(0)
-  const [newWords, setNewWords] = useState(0)
-  const [reviewWords, setReviewWords] = useState(0)
-  const [longTermMemory, setLongTermMemory] = useState(0)
-  const [sessionProgress, setSessionProgress] = useState(0) // 오늘 학습한 카드 수
-  const [studyRound, setStudyRound] = useState(1) // 학습 회차
-  const [nextReviewDays, setNextReviewDays] = useState<number | null>(null) // 가장 가까운 미래 복습일까지
-  const [sessionTotalFixed, setSessionTotalFixed] = useState<number>(targetAmount) // 세션 분모 고정값
-  const [loading, setLoading] = useState(true)
-  const studyRoundRef = useRef(1) // studyRound의 최신 값을 추적
-  const [chaptersData, setChaptersData] = useState<Array<{
-    number: number
-    totalWords: number
-    longTermMemory: number
-    learned: number
-  }>>([])
-  
   // URL 파라미터로 탭 및 모드 초기화 (useMemo로 동기화)
   const activeTab = useMemo(() => {
     return typeParam === 'kanji' ? 'kanji' : 'word'
@@ -65,21 +40,6 @@ function AutoStudyContent() {
   const studyMode = useMemo(() => {
     return modeParam === 'chapter' ? 'chapter' : 'auto'
   }, [modeParam])
-  
-  const handleTabChange = (tab: 'word' | 'kanji') => {
-    // 탭 변경 시 URL 업데이트 (기존 mode 파라미터 유지)
-    const mode = modeParam || 'auto'
-    router.push(`/acquire/auto-study/${params.level}?type=${tab}&mode=${mode}`)
-  }
-
-  const totalWords = activeTab === 'word' ? data.words : data.kanji
-  // 세션 분모: 세션 시작 시 계산된 값 사용, 없으면 목표량
-  const sessionTotal = sessionTotalFixed ?? targetAmount
-
-  // 목표량 / 탭 변경 시 분모 초기화
-  useEffect(() => {
-    setSessionTotalFixed(targetAmount)
-  }, [targetAmount, activeTab])
 
   // 단어/한자 데이터 변환
   const words: Word[] = useMemo(() => {
@@ -98,134 +58,40 @@ function AutoStudyContent() {
     )
   }, [level, activeTab])
 
-  // 진행률 데이터 로드 함수
-  const loadProgress = useCallback(async () => {
-      if (!user) {
-        setLoading(false)
-        return
-      }
+  // 진행률 데이터를 커스텀 훅으로 관리
+  const {
+    currentProgress,
+    newWords,
+    reviewWords,
+    longTermMemory,
+    sessionProgress,
+    studyRound,
+    nextReviewDays,
+    sessionTotalFixed,
+    chaptersData,
+    loading,
+    refresh: refreshProgress,
+  } = useStudyProgress({
+    uid: user?.uid || null,
+    level,
+    activeTab,
+    words,
+    kanjis,
+    totalWords: activeTab === 'word' ? data.words : data.kanji,
+    targetAmount,
+    canLoad: !!user,
+  })
+  
+  const handleTabChange = (tab: 'word' | 'kanji') => {
+    // 탭 변경 시 URL 업데이트 (기존 mode 파라미터 유지)
+    const mode = modeParam || 'auto'
+    router.push(`/acquire/auto-study/${params.level}?type=${tab}&mode=${mode}`)
+  }
 
-      try {
-        setLoading(true)
-        
-        // 1. 학습한 카드 수 가져오기
-        const progress = await getLevelProgress(
-          user.uid,
-          level,
-          data.words,
-          data.kanji
-        )
-        
-        const learned = activeTab === 'word' ? progress.learnedWords : progress.learnedKanjis
-        setCurrentProgress(learned)
+  const totalWords = activeTab === 'word' ? data.words : data.kanji
+  // 세션 분모: 세션 시작 시 계산된 값 사용, 없으면 목표량
+  const sessionTotal = sessionTotalFixed ?? targetAmount
 
-        // 2. 장기 기억 카드 수 및 오늘 새로 학습한 카드 수 계산
-        const { getCardsByLevel } = await import('@/lib/firebase/firestore')
-        const levelCardsMap = await getCardsByLevel(user.uid, level)
-        const levelCards = Array.from(levelCardsMap.values())
-        
-        // 진행률 통계 계산
-        const progressStats = calculateProgressStats(levelCards, activeTab)
-        setLongTermMemory(progressStats.longTermMemory)
-        
-        // 회차 진행률 계산
-        const roundProgress = calculateRoundProgress(
-          progressStats.todayNewStudied,
-          targetAmount,
-          studyRoundRef.current
-        )
-        
-        // 학습 회차 업데이트
-        setStudyRound((prev) => {
-          const newRound = Math.max(prev, roundProgress.currentRound)
-          studyRoundRef.current = newRound
-          return newRound
-        })
-        
-        // 현재 회차 진행률 설정
-        setSessionProgress(roundProgress.currentRoundProgress)
-
-        // 3. 새 카드/복습 카드 수 가져오기 (현재 회차를 구성하는 카드 수)
-        const items = activeTab === 'word' ? words : kanjis
-        let availableToday = 0
-        if (items.length > 0) {
-          const queues = await getTodayQueues(
-            user.uid,
-            level,
-            words,
-            kanjis,
-            targetAmount // dailyNewLimit으로 사용
-          )
-          // 현재 회차를 구성하는 새 카드와 복습 카드 수
-          setNewWords(queues.newCards.filter(c => c.type === activeTab).length)
-          setReviewWords(queues.reviewCards.filter(c => c.type === activeTab).length)
-          availableToday = queues.mixedQueue.length
-        }
-
-        // 세션 분모 고정 (최초 1회만 설정; 이후 감소하지 않도록 prev 유지)
-        const remainingCards = Math.max(totalWords - learned, 0)
-        const fallbackTotal = remainingCards > 0 ? Math.min(targetAmount, remainingCards) : targetAmount
-        const initialFixed = availableToday > 0 ? Math.min(targetAmount, availableToday) : fallbackTotal
-        setSessionTotalFixed((prev) => (prev === null ? initialFixed : prev))
-
-        // 4. 미래 복습까지 남은 일수 계산 (오늘 due 제외)
-        const nowMinutesLocal = nowAsMinutes()
-        let minFutureDays: number | null = null
-        levelCards.forEach((card) => {
-          if (card.type === activeTab) {
-            const dueMinutes = card.due < 10000 ? dayNumberToMinutes(card.due) : card.due
-            const diff = dueMinutes - nowMinutesLocal
-            if (diff > 0) {
-              const days = minutesToDays(diff)
-              if (minFutureDays === null || days < minFutureDays) {
-                minFutureDays = days
-              }
-            }
-          }
-        })
-        setNextReviewDays(minFutureDays)
-
-        // 5. 챕터별 진행률 계산
-        const totalChapters = Math.ceil(totalWords / targetAmount)
-        const chaptersProgress: Array<{
-          number: number
-          totalWords: number
-          longTermMemory: number
-          learned: number
-        }> = []
-
-        for (let i = 0; i < totalChapters; i++) {
-          const startIndex = i * targetAmount
-          const endIndex = Math.min(startIndex + targetAmount, items.length)
-          const chapterItems = items.slice(startIndex, endIndex)
-          const chapterCardIds = new Set(chapterItems.map(item => item.id))
-
-          const chapterProgress = calculateChapterProgress(
-            levelCards,
-            chapterCardIds,
-            activeTab
-          )
-
-          chaptersProgress.push({
-            number: i + 1,
-            totalWords: chapterItems.length,
-            longTermMemory: chapterProgress.longTermMemory,
-            learned: chapterProgress.learned,
-          })
-        }
-
-        setChaptersData(chaptersProgress)
-      } catch (error) {
-        console.error('진행률 로드 실패:', error)
-      } finally {
-        setLoading(false)
-      }
-    }, [user, level, activeTab, targetAmount, words, kanjis, data.words, data.kanji, studyRound])
-
-  // 진행률 데이터 로드
-  useEffect(() => {
-    loadProgress()
-  }, [loadProgress])
 
   // 챕터 계산 (각 챕터당 targetAmount개) - chaptersData가 있으면 사용, 없으면 기본값
   const totalChapters = Math.ceil(totalWords / targetAmount)
@@ -254,16 +120,9 @@ function AutoStudyContent() {
   }
 
   const handleNextRound = () => {
-    // 다음 회차로 넘어가기
-    setStudyRound((prev) => {
-      const newRound = prev + 1
-      studyRoundRef.current = newRound
-      return newRound
-    })
-    // 현재 회차 진행률 리셋
-    setSessionProgress(0)
-    // 데이터 다시 로드
-    loadProgress()
+    // 다음 회차로 넘어가기 - useStudyProgress 훅에서 자동으로 처리됨
+    // 진행률을 새로고침하여 최신 데이터 반영
+    refreshProgress()
   }
 
   return (
@@ -410,71 +269,30 @@ function AutoStudyContent() {
             <div className="bg-surface rounded-card p-4 shadow-soft">
               {/* 장기 기억 단어/한자 */}
               <div className="mb-3">
-                <div className="grid grid-cols-2 gap-2 items-center justify-between mb-1">
-                  <span className="text-label text-text-sub">
-                    장기 기억 {activeTab === 'word' ? '단어' : '한자'}
-                  </span>
-                  
-                  <div className="flex items-center gap-2">
-                    <span className="text-label text-text-sub font-medium">
-                      {loading ? '...' : `${longTermMemory}/${totalWords}`}
-                    </span>
-
-                    <div className="flex-1 h-2 bg-divider rounded-full overflow-hidden relative">
-                      <div
-                        className="h-full rounded-full"
-                        style={{
-                          width: `${Math.max((longTermMemory / totalWords) * 100, 0.5)}%`,
-                          backgroundColor: hexToRgba(gradient.to, 0.3),
-                          border: '1px solid #FF8A00',
-                        }}
-                      />
-                      {longTermMemory === 0 && (
-                        <div
-                          className="absolute left-0 top-0 w-1 h-full rounded-full"
-                          style={{
-                            backgroundColor: hexToRgba(gradient.to, 0.3),
-                            border: '1px solid #FF8A00',
-                          }}
-                        />
-                      )}
-                    </div>
-                  </div>
-                </div>
-                
+                <ProgressDisplay
+                  current={loading ? 0 : longTermMemory}
+                  total={totalWords}
+                  color={gradient.to}
+                  label={`장기 기억 ${activeTab === 'word' ? '단어' : '한자'}`}
+                  labelPosition="left"
+                  numberPosition="right"
+                  showZeroIndicator
+                  className="grid grid-cols-2 gap-2 items-center"
+                />
               </div>
 
               {/* 학습한 단어/한자 */}
               <div>
-                <div className="grid grid-cols-2 gap-2 items-center justify-between mb-1">
-                  <span className="text-label text-text-sub">
-                    학습한 {activeTab === 'word' ? '단어' : '한자'}
-                  </span>
-                  <div className="flex items-center gap-2">
-                    <span className="text-label text-text-sub font-medium">
-                      {loading ? '...' : `${currentProgress}/${totalWords}`}
-                    </span>
-                    <div className="flex-1 h-2 bg-divider rounded-full overflow-hidden relative">
-                      <div
-                        className="h-full rounded-full"
-                        style={{
-                          width: `${Math.max((currentProgress / totalWords) * 100, 0.5)}%`,
-                          backgroundColor: hexToRgba(gradient.to, 0.3),
-                          border: '1px solid #FF8A00',
-                        }}
-                      />
-                      {currentProgress === 0 && (
-                        <div
-                          className="absolute left-0 top-0 w-1 h-full rounded-full"
-                          style={{
-                            backgroundColor: hexToRgba(gradient.to, 0.3),
-                            border: '1px solid #FF8A00',
-                          }}
-                        />
-                      )}
-                    </div>
-                  </div>
-                </div>
+                <ProgressDisplay
+                  current={loading ? 0 : currentProgress}
+                  total={totalWords}
+                  color={gradient.to}
+                  label={`학습한 ${activeTab === 'word' ? '단어' : '한자'}`}
+                  labelPosition="left"
+                  numberPosition="right"
+                  showZeroIndicator
+                  className="grid grid-cols-2 gap-2 items-center"
+                />
               </div>
             </div>
           </div>
@@ -522,34 +340,26 @@ function AutoStudyContent() {
 
                   {/* 장기 기억 단어 */}
                   <div className="mb-2">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-body text-text-sub">장기 기억 단어</span>
-                      <span className="text-body text-text-main font-medium">
-                        {chapter.longTermMemory}/{chapter.totalWords}
-                      </span>
-                    </div>
-                    <div className="h-2 bg-divider rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-orange-500 rounded-full"
-                        style={{ width: `${(chapter.longTermMemory / chapter.totalWords) * 100}%` }}
-                      />
-                    </div>
+                    <ProgressDisplay
+                      current={chapter.longTermMemory}
+                      total={chapter.totalWords}
+                      color={gradient.to}
+                      label="장기 기억 단어"
+                      labelPosition="left"
+                      numberPosition="right"
+                    />
                   </div>
 
                   {/* 학습한 단어 */}
                   <div>
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-body text-text-sub">학습한 단어</span>
-                      <span className="text-body text-text-main font-medium">
-                        {chapter.learned}/{chapter.totalWords}
-                      </span>
-                    </div>
-                    <div className="h-2 bg-divider rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-orange-500 rounded-full"
-                        style={{ width: `${(chapter.learned / chapter.totalWords) * 100}%` }}
-                      />
-                    </div>
+                    <ProgressDisplay
+                      current={chapter.learned}
+                      total={chapter.totalWords}
+                      color={gradient.to}
+                      label="학습한 단어"
+                      labelPosition="left"
+                      numberPosition="right"
+                    />
                   </div>
                 </div>
               ))}

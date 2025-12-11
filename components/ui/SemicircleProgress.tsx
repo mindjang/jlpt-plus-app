@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import type { Chart as ChartType, ChartData, ChartOptions } from 'chart.js'
 import { hexToRgba } from '@/lib/utils/colorUtils'
 
@@ -118,6 +118,7 @@ function SemicircleProgressChart({
 }: Omit<SemicircleProgressProps, 'useChart'>) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
   const chartRef = useRef<ChartType<'doughnut'> | null>(null)
+  const [chartError, setChartError] = useState(false)
 
   const safePercent = Math.min(Math.max(value, 0), 100)
   const completedCount = Math.max(Math.min(progress, total), 0)
@@ -127,48 +128,56 @@ function SemicircleProgressChart({
     let isMounted = true
 
     const renderChart = async () => {
-      const { Chart } = await import('chart.js/auto')
-      if (!canvasRef.current || !isMounted) return
+      try {
+        const { Chart } = await import('chart.js/auto')
+        if (!canvasRef.current || !isMounted) return
 
-      // 난이도 컬러 사용 (채우기) + 20% 투명도의 테두리
-      const primaryColor = hexToRgba(color, 0.3)
-      const primaryBorder = '#FF8A00'
-      const restBorder = hexToRgba('#E5E7EB', 0)
+        // 난이도 컬러 사용 (채우기) + 20% 투명도의 테두리
+        const primaryColor = hexToRgba(color, 0.3)
+        const primaryBorder = '#FF8A00'
+        const restBorder = hexToRgba('#E5E7EB', 0)
 
-      const data: ChartData<'doughnut'> = {
-        labels: ['완료', '남음'],
-        datasets: [
-          {
-            data: [completedCount, remainingCount],
-            backgroundColor: [primaryColor, '#E5E7EB'],
-            borderColor: [primaryBorder, restBorder],
-            borderWidth: 1,
-            hoverOffset: 0,
+        const data: ChartData<'doughnut'> = {
+          labels: ['완료', '남음'],
+          datasets: [
+            {
+              data: [completedCount, remainingCount],
+              backgroundColor: [primaryColor, '#E5E7EB'],
+              borderColor: [primaryBorder, restBorder],
+              borderWidth: 1,
+              hoverOffset: 0,
+            },
+          ],
+        }
+
+        const options: ChartOptions<'doughnut'> = {
+          cutout: '60%',
+          rotation: -90,
+          circumference: 180,
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: { enabled: false },
           },
-        ],
-      }
+          animation: {
+            duration: 400,
+          },
+        }
 
-      const options: ChartOptions<'doughnut'> = {
-        cutout: '60%',
-        rotation: -90,
-        circumference: 180,
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: { display: false },
-          tooltip: { enabled: false },
-        },
-        animation: {
-          duration: 400,
-        },
+        chartRef.current?.destroy()
+        chartRef.current = new Chart(canvasRef.current, {
+          type: 'doughnut',
+          data,
+          options,
+        })
+      } catch (error) {
+        console.error('Failed to load Chart.js:', error)
+        // Chart.js 로드 실패 시 SVG로 폴백
+        if (isMounted) {
+          setChartError(true)
+        }
       }
-
-      chartRef.current?.destroy()
-      chartRef.current = new Chart(canvasRef.current, {
-        type: 'doughnut',
-        data,
-        options,
-      })
     }
 
     renderChart()
@@ -178,6 +187,11 @@ function SemicircleProgressChart({
       chartRef.current?.destroy()
     }
   }, [completedCount, remainingCount, total, color])
+
+  // Chart.js 로드 실패 시 SVG로 폴백
+  if (chartError) {
+    return <SemicircleProgressSVG value={safePercent} progress={completedCount} total={total} color={color} />
+  }
 
   return (
     <div className="relative w-full h-36">

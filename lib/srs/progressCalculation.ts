@@ -3,7 +3,8 @@
  * 모든 학습 모드에서 재사용 가능
  */
 import type { UserCardState } from '../types/srs'
-import { nowAsMinutes, daysToMinutes, dayNumberToMinutes } from './reviewCard'
+import { nowAsMinutes, daysToMinutes } from '../utils/dateUtils'
+import { migrateCardState } from './cardMigration'
 
 export interface ProgressStats {
   longTermMemory: number
@@ -15,32 +16,6 @@ export interface RoundProgress {
   currentRound: number
   currentRoundProgress: number
   completedRounds: number
-}
-
-/**
- * 카드 상태 마이그레이션 (일 단위 → 분 단위)
- * @param card 카드 상태
- * @returns 마이그레이션된 카드 상태
- */
-export function migrateCardState(card: UserCardState): UserCardState {
-  const migrated = { ...card }
-
-  // due 마이그레이션
-  if (card.due < 10000) {
-    migrated.due = dayNumberToMinutes(card.due)
-  }
-
-  // lastReviewed 마이그레이션
-  if (card.lastReviewed < 10000) {
-    migrated.lastReviewed = dayNumberToMinutes(card.lastReviewed)
-  }
-
-  // interval 마이그레이션
-  if (card.interval < 365) {
-    migrated.interval = daysToMinutes(card.interval)
-  }
-
-  return migrated
 }
 
 /**

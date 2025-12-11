@@ -1,6 +1,6 @@
 /**
  * 카드 평가 및 상태 업데이트 로직
- * 모든 학습 모드(단어, 한자, 습득존, 학습존)에서 재사용 가능
+ * 모든 학습 모드(단어, 한자, 도서관, 퀴즈존)에서 재사용 가능
  */
 import type { UserCardState, ReviewParams, Grade } from '../types/srs'
 import type { StudyCard } from './studyQueue'

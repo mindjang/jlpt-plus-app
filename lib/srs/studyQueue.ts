@@ -3,6 +3,7 @@ import type { JlptLevel } from '../types/content'
 import type { Word, Kanji } from '../types/content'
 import type { UserCardState } from '../types/srs'
 import { getReviewCards, getCardsByLevel, getAllCardIds } from '../firebase/firestore'
+import { logger } from '../utils/logger'
 
 export interface StudyCard {
   itemId: string
@@ -28,11 +29,11 @@ export async function getTodayQueues(
   kanjis: Kanji[],
   dailyNewLimit: number = 10
 ): Promise<StudyQueue> {
-  console.log('[getTodayQueues] 시작:', { uid, level, wordsCount: words.length, kanjisCount: kanjis.length, dailyNewLimit })
+  logger.debug('[getTodayQueues] 시작:', { uid, level, wordsCount: words.length, kanjisCount: kanjis.length, dailyNewLimit })
   
   // 1. 복습 카드 큐 (Anki 기본: due 순서 처리)
   const reviewCardStates = await getReviewCards(uid, 100)
-  console.log('[getTodayQueues] 복습 카드 수:', reviewCardStates.length)
+  logger.debug('[getTodayQueues] 복습 카드 수:', reviewCardStates.length)
   const reviewCards: StudyCard[] = []
 
   // 복습 카드들을 Word/Kanji 데이터와 매칭
@@ -50,7 +51,7 @@ export async function getTodayQueues(
           cardState,
         })
       } else {
-        console.log('[getTodayQueues] 단어 매칭 실패:', cardState.itemId, 'words IDs:', words.slice(0, 5).map(w => w.id))
+        logger.warn('[getTodayQueues] 단어 매칭 실패:', cardState.itemId, 'words IDs:', words.slice(0, 5).map(w => w.id))
       }
     } else {
       const kanji = kanjis.find((k) => k.id === cardState.itemId)
@@ -63,12 +64,12 @@ export async function getTodayQueues(
           cardState,
         })
       } else {
-        console.log('[getTodayQueues] 한자 매칭 실패:', cardState.itemId)
+        logger.warn('[getTodayQueues] 한자 매칭 실패:', cardState.itemId)
       }
     }
   }
 
-  console.log('[getTodayQueues] 매칭된 복습 카드 수:', reviewCards.length)
+  logger.debug('[getTodayQueues] 매칭된 복습 카드 수:', reviewCards.length)
 
   // due 오름차순 정렬 (가장 시급한 카드부터)
   reviewCards.sort((a, b) => {
@@ -79,7 +80,7 @@ export async function getTodayQueues(
 
   // 2. 새 카드 큐
   const allCardIds = await getAllCardIds(uid)
-  console.log('[getTodayQueues] 학습한 카드 ID 수:', allCardIds.size)
+  logger.debug('[getTodayQueues] 학습한 카드 ID 수:', allCardIds.size)
   const newCards: StudyCard[] = []
 
   // 단어 중 New 카드 찾기 (단어가 있는 경우)
@@ -100,7 +101,7 @@ export async function getTodayQueues(
     }
   }
 
-  console.log('[getTodayQueues] 새 단어 카드 수:', newCards.length)
+  logger.debug('[getTodayQueues] 새 단어 카드 수:', newCards.length)
 
   // 한자 중 New 카드 찾기 (단어가 부족하거나 단어가 없는 경우)
   if (newCards.length < dailyNewLimit && kanjis.length > 0) {
@@ -120,7 +121,7 @@ export async function getTodayQueues(
     }
   }
 
-  console.log('[getTodayQueues] 최종 새 카드 수 (단어+한자):', newCards.length)
+  logger.debug('[getTodayQueues] 최종 새 카드 수 (단어+한자):', newCards.length)
 
   // 3. 오늘 목표량(dailyNewLimit)만큼 선택: 복습:새 카드 비율 고정 (70:30)
   const TARGET = dailyNewLimit

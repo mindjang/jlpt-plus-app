@@ -1,4 +1,11 @@
 import type { UserCardState, ReviewParams } from '../types/srs'
+import { normalizeCardState } from './cardMigration'
+import {
+  nowAsMinutes,
+  daysToMinutes,
+  minutesToDays,
+  dayNumberToMinutes,
+} from '../utils/dateUtils'
 
 const DEFAULT_EASE = 2.5
 const MIN_EASE = 1.3
@@ -6,22 +13,8 @@ const ONE_DAY_IN_MINUTES = 24 * 60
 const MAX_INTERVAL_DAYS = 365
 const MAX_INTERVAL_MINUTES = MAX_INTERVAL_DAYS * ONE_DAY_IN_MINUTES
 
-export function nowAsMinutes(): number {
-  return Math.floor(Date.now() / (1000 * 60))
-}
-
-export function daysToMinutes(days: number): number {
-  return days * ONE_DAY_IN_MINUTES
-}
-
-export function minutesToDays(minutes: number): number {
-  return Math.round(minutes / ONE_DAY_IN_MINUTES * 10) / 10
-}
-
-export function dayNumberToMinutes(dayNumber: number): number {
-  const epochStartMinutes = Math.floor(new Date('1970-01-01').getTime() / (1000 * 60))
-  return epochStartMinutes + (dayNumber * ONE_DAY_IN_MINUTES)
-}
+// 날짜 변환 함수들을 dateUtils에서 재export
+export { nowAsMinutes, daysToMinutes, minutesToDays, dayNumberToMinutes }
 
 /**
  * 카드 복습 처리 (언어 학습 최적화된 SRS)
@@ -50,14 +43,9 @@ export function reviewCard(
       lastReviewed: nowMinutes,
     }
   } else {
-    card = { ...prev }
-    if (card.due < 10000) {
-      card.due = dayNumberToMinutes(card.due)
-      card.lastReviewed = dayNumberToMinutes(card.lastReviewed)
-      if (card.interval < 365) {
-        card.interval = daysToMinutes(card.interval)
-      }
-    }
+    // 마이그레이션이 필요한 경우 자동 변환
+    const normalized = normalizeCardState(prev)
+    card = normalized || prev
   }
 
   card.reps += 1

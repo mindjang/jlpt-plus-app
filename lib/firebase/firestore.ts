@@ -3,6 +3,8 @@ import {
   doc,
   getDoc,
   setDoc,
+  deleteDoc,
+  updateDoc,
   collection,
   query,
   where,
@@ -11,6 +13,7 @@ import {
   getDocs,
   writeBatch,
   runTransaction,
+  type Firestore,
 } from 'firebase/firestore'
 import { db } from './config'
 import type { UserCardState } from '../types/srs'
@@ -63,7 +66,7 @@ export async function createUserDocument(
       photoURL: initialData?.photoURL,
     },
     settings: {
-      dailyNewLimit: 10, // 기본값
+      dailyNewLimit: 20, // 기본값
       theme: 'auto',
       notifications: true,
       soundEnabled: true,
@@ -232,16 +235,16 @@ export async function getAllCardIds(uid: string): Promise<Set<string>> {
 
 // ========== 멤버십 관리 ==========
 
-const membershipDocRef = (dbInstance: any, uid: string) =>
+const membershipDocRef = (dbInstance: Firestore, uid: string) =>
   doc(dbInstance, 'users', uid, 'membership', 'info')
 
-const usageDocRef = (dbInstance: any, uid: string, dateKey: string) =>
+const usageDocRef = (dbInstance: Firestore, uid: string, dateKey: string) =>
   doc(dbInstance, 'users', uid, 'usage', dateKey)
 
-const billingDocRef = (dbInstance: any, uid: string) =>
+const billingDocRef = (dbInstance: Firestore, uid: string) =>
   doc(dbInstance, 'users', uid, 'billing', 'info')
 
-const codeDocRef = (dbInstance: any, code: string) => doc(dbInstance, 'codes', code)
+const codeDocRef = (dbInstance: Firestore, code: string) => doc(dbInstance, 'codes', code)
 
 export async function getMembership(uid: string): Promise<Membership | null> {
   const dbInstance = getDbInstance()
@@ -297,7 +300,9 @@ export async function redeemGiftCode(
 ): Promise<{ membership: Membership; code: GiftCode }> {
   const dbInstance = getDbInstance()
   const mRef = membershipDocRef(dbInstance, uid)
-  const cRef = codeDocRef(dbInstance, code)
+  // 코드 정규화: 하이픈 제거 및 대문자 변환 (createGiftCode와 동일하게 처리)
+  const normalizedCode = code.toUpperCase().replace(/-/g, '')
+  const cRef = codeDocRef(dbInstance, normalizedCode)
   const now = Date.now()
 
   const result = await runTransaction(dbInstance, async (tx) => {
@@ -325,7 +330,7 @@ export async function redeemGiftCode(
       expiresAt: newExpiry,
       createdAt: current?.createdAt || now,
       updatedAt: now,
-      lastRedeemedCode: code,
+      lastRedeemedCode: normalizedCode,
     }
 
     tx.set(mRef, updatedMembership, { merge: true })
@@ -352,5 +357,104 @@ export async function getBillingInfo(uid: string): Promise<BillingInfo | null> {
   const snap = await getDoc(ref)
   if (!snap.exists()) return null
   return snap.data() as BillingInfo
+}
+
+// ==================== Gift Code Management ====================
+
+/**
+ * 쿠폰 코드 생성
+ * @param code 코드 문자열 (8자리)
+ * @param giftCode 코드 정보
+ * @throws 코드가 이미 존재하는 경우 에러
+ */
+export async function createGiftCode(code: string, giftCode: GiftCode): Promise<void> {
+  const dbInstance = getDbInstance()
+  const ref = codeDocRef(dbInstance, code.toUpperCase().replace(/-/g, ''))
+
+  // 코드 중복 체크
+  const existing = await getDoc(ref)
+  if (existing.exists()) {
+    throw new Error('이미 존재하는 코드입니다.')
+  }
+
+  await setDoc(ref, {
+    ...giftCode,
+    createdAt: Date.now(),
+  })
+}
+
+/**
+ * 모든 쿠폰 코드 목록 조회
+ * @returns 코드 목록 (코드 문자열과 정보를 포함한 객체 배열)
+ */
+export async function getAllGiftCodes(): Promise<Array<{ code: string; data: GiftCode & { createdAt?: number } }>> {
+  const dbInstance = getDbInstance()
+  const codesRef = collection(dbInstance, 'codes')
+  const q = query(codesRef, orderBy('createdAt', 'desc'))
+  const snapshot = await getDocs(q)
+
+  const codes: Array<{ code: string; data: GiftCode & { createdAt?: number } }> = []
+  snapshot.forEach((doc) => {
+    codes.push({
+      code: doc.id,
+      data: doc.data() as GiftCode & { createdAt?: number },
+    })
+  })
+
+  return codes
+}
+
+/**
+ * 쿠폰 코드 정보 수정
+ * @param code 코드 문자열
+ * @param updates 수정할 필드들
+ */
+export async function updateGiftCode(code: string, updates: Partial<GiftCode>): Promise<void> {
+  const dbInstance = getDbInstance()
+  // 코드 정규화: 하이픈 제거 및 대문자 변환
+  const normalizedCode = code.toUpperCase().replace(/-/g, '')
+  const ref = codeDocRef(dbInstance, normalizedCode)
+
+  // 코드 존재 확인
+  const existing = await getDoc(ref)
+  if (!existing.exists()) {
+    throw new Error('코드가 존재하지 않습니다.')
+  }
+
+  await updateDoc(ref, updates)
+}
+
+/**
+ * 쿠폰 코드 삭제
+ * @param code 코드 문자열
+ */
+export async function deleteGiftCode(code: string): Promise<void> {
+  const dbInstance = getDbInstance()
+  // 코드 정규화: 하이픈 제거 및 대문자 변환
+  const normalizedCode = code.toUpperCase().replace(/-/g, '')
+  const ref = codeDocRef(dbInstance, normalizedCode)
+
+  // 코드 존재 확인
+  const existing = await getDoc(ref)
+  if (!existing.exists()) {
+    throw new Error('코드가 존재하지 않습니다.')
+  }
+
+  await deleteDoc(ref)
+}
+
+/**
+ * 특정 코드 조회
+ * @param code 코드 문자열
+ * @returns 코드 정보 또는 null
+ */
+export async function getGiftCode(code: string): Promise<(GiftCode & { createdAt?: number }) | null> {
+  const dbInstance = getDbInstance()
+  // 코드 정규화: 하이픈 제거 및 대문자 변환
+  const normalizedCode = code.toUpperCase().replace(/-/g, '')
+  const ref = codeDocRef(dbInstance, normalizedCode)
+  const snap = await getDoc(ref)
+  if (!snap.exists()) return null
+  return snap.data() as GiftCode & { createdAt?: number }
 }
 

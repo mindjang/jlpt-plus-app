@@ -2,7 +2,7 @@
 
 ## 개요
 
-JLPT Plus App의 SRS(Spaced Repetition System)에서 사용하는 카드 분류 알고리즘을 설명합니다.
+Mogu-JLPT(MoguMogu JLPT 시험 대비 학습 앱)의 SRS(Spaced Repetition System)에서 사용하는 카드 분류 알고리즘을 설명합니다.
 각 카테고리는 `UserCardState`의 필드값을 기반으로 판정됩니다.
 
 ---

@@ -5,6 +5,7 @@
 import type { UserCardState } from '../types/srs'
 import { nowAsMinutes, daysToMinutes } from '../utils/dateUtils'
 import { migrateCardState } from './cardMigration'
+import { LONG_TERM_MEMORY_INTERVAL_DAYS, LONG_TERM_MEMORY_REPS } from './constants'
 
 export interface ProgressStats {
   longTermMemory: number
@@ -25,8 +26,8 @@ export interface RoundProgress {
  */
 export function isLongTermMemory(card: UserCardState): boolean {
   const migrated = migrateCardState(card)
-  const twentyOneDaysInMinutes = daysToMinutes(21)
-  return migrated.interval >= twentyOneDaysInMinutes || card.reps >= 8
+  const longTermIntervalMinutes = daysToMinutes(LONG_TERM_MEMORY_INTERVAL_DAYS)
+  return migrated.interval >= longTermIntervalMinutes || card.reps >= LONG_TERM_MEMORY_REPS
 }
 
 /**

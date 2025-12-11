@@ -4,6 +4,12 @@ import type { Word, Kanji } from '../types/content'
 import type { UserCardState } from '../types/srs'
 import { getReviewCards, getCardsByLevel, getAllCardIds } from '../firebase/firestore'
 import { logger } from '../utils/logger'
+import {
+  DEFAULT_DAILY_NEW_CARDS,
+  MAX_REVIEW_CARDS_FETCH,
+  REVIEW_CARD_RATIO,
+  NEW_CARD_RATIO,
+} from './constants'
 
 export interface StudyCard {
   itemId: string
@@ -27,12 +33,12 @@ export async function getTodayQueues(
   level: JlptLevel,
   words: Word[],
   kanjis: Kanji[],
-  dailyNewLimit: number = 10
+  dailyNewLimit: number = DEFAULT_DAILY_NEW_CARDS
 ): Promise<StudyQueue> {
   logger.debug('[getTodayQueues] 시작:', { uid, level, wordsCount: words.length, kanjisCount: kanjis.length, dailyNewLimit })
   
   // 1. 복습 카드 큐 (Anki 기본: due 순서 처리)
-  const reviewCardStates = await getReviewCards(uid, 100)
+  const reviewCardStates = await getReviewCards(uid, MAX_REVIEW_CARDS_FETCH)
   logger.debug('[getTodayQueues] 복습 카드 수:', reviewCardStates.length)
   const reviewCards: StudyCard[] = []
 
@@ -123,13 +129,10 @@ export async function getTodayQueues(
 
   logger.debug('[getTodayQueues] 최종 새 카드 수 (단어+한자):', newCards.length)
 
-  // 3. 오늘 목표량(dailyNewLimit)만큼 선택: 복습:새 카드 비율 고정 (70:30)
+  // 3. 오늘 목표량(dailyNewLimit)만큼 선택: 복습:새 카드 비율 고정
   const TARGET = dailyNewLimit
-  const REVIEW_RATIO = 0.7  // 복습 카드 70%
-  const NEW_RATIO = 0.3     // 새 카드 30%
-
-  const reviewLimit = Math.floor(TARGET * REVIEW_RATIO)
-  const newLimit = Math.floor(TARGET * NEW_RATIO)
+  const reviewLimit = Math.floor(TARGET * REVIEW_CARD_RATIO)
+  const newLimit = Math.floor(TARGET * NEW_CARD_RATIO)
 
   // 복습 선택 (due 오름차순으로 reviewLimit까지)
   const selectedReview = reviewCards.slice(0, reviewLimit)

@@ -19,6 +19,8 @@ import { db } from './config'
 import type { UserCardState } from '../types/srs'
 import type { UserProfile, UserSettings, UserData } from '../types/user'
 import type { Membership, DailyUsage, GiftCode, BillingInfo } from '../types/membership'
+import type { LevelStats } from '../types/stats'
+import { LONG_TERM_MEMORY_INTERVAL_DAYS, LONG_TERM_MEMORY_REPS } from '../srs/constants'
 
 function getDbInstance() {
   if (!db) {
@@ -195,15 +197,24 @@ export async function getReviewCards(uid: string, maxCards: number = 100) {
 }
 
 /**
- * 특정 레벨의 모든 카드 상태 가져오기
+ * 특정 레벨의 카드 상태 가져오기 (페이지네이션 지원)
+ * @param uid 사용자 ID
+ * @param level 레벨
+ * @param limitCount 최대 개수 (기본 500, 성능을 위해 제한)
+ * @returns 카드 상태 Map
  */
 export async function getCardsByLevel(
   uid: string,
-  level: string
+  level: string,
+  limitCount: number = 500
 ): Promise<Map<string, UserCardState>> {
   const dbInstance = getDbInstance()
   const cardsRef = collection(dbInstance, 'users', uid, 'cards')
-  const q = query(cardsRef, where('level', '==', level))
+  const q = query(
+    cardsRef,
+    where('level', '==', level),
+    limit(limitCount)
+  )
 
   const querySnapshot = await getDocs(q)
   const cardMap = new Map<string, UserCardState>()
@@ -217,12 +228,62 @@ export async function getCardsByLevel(
 }
 
 /**
- * 모든 카드 상태 가져오기 (itemId Set 반환)
+ * 특정 레벨의 카드 개수 집계 (카운트만 필요할 때 사용)
+ * 주의: Firestore에서 count 쿼리는 비용이 발생하므로 캐싱 권장
  */
-export async function getAllCardIds(uid: string): Promise<Set<string>> {
+export async function getCardsCountByLevel(
+  uid: string,
+  level: string
+): Promise<number> {
   const dbInstance = getDbInstance()
   const cardsRef = collection(dbInstance, 'users', uid, 'cards')
-  const querySnapshot = await getDocs(cardsRef)
+  const q = query(cardsRef, where('level', '==', level))
+  const querySnapshot = await getDocs(q)
+  return querySnapshot.size
+}
+
+/**
+ * 모든 카드 ID 가져오기 (itemId Set 반환)
+ * 성능 최적화: 전체 문서 대신 문서 ID만 가져옴
+ * @param uid 사용자 ID
+ * @param limitCount 최대 개수 (기본 1000, 모든 카드가 필요한 경우에만 사용)
+ * @returns 카드 ID Set
+ */
+export async function getAllCardIds(uid: string, limitCount: number = 1000): Promise<Set<string>> {
+  const dbInstance = getDbInstance()
+  const cardsRef = collection(dbInstance, 'users', uid, 'cards')
+  const q = query(cardsRef, limit(limitCount))
+  const querySnapshot = await getDocs(q)
+
+  const cardIds = new Set<string>()
+
+  querySnapshot.forEach((doc) => {
+    cardIds.add(doc.id)
+  })
+
+  return cardIds
+}
+
+/**
+ * 특정 레벨의 카드 ID만 가져오기 (최적화)
+ * @param uid 사용자 ID
+ * @param level 레벨
+ * @param limitCount 최대 개수
+ * @returns 카드 ID Set
+ */
+export async function getCardIdsByLevel(
+  uid: string,
+  level: string,
+  limitCount: number = 500
+): Promise<Set<string>> {
+  const dbInstance = getDbInstance()
+  const cardsRef = collection(dbInstance, 'users', uid, 'cards')
+  const q = query(
+    cardsRef,
+    where('level', '==', level),
+    limit(limitCount)
+  )
+  const querySnapshot = await getDocs(q)
 
   const cardIds = new Set<string>()
 
@@ -456,5 +517,160 @@ export async function getGiftCode(code: string): Promise<(GiftCode & { createdAt
   const snap = await getDoc(ref)
   if (!snap.exists()) return null
   return snap.data() as GiftCode & { createdAt?: number }
+}
+
+// ==================== Level Stats Management ====================
+
+const statsDocRef = (dbInstance: Firestore, uid: string, level: string) =>
+  doc(dbInstance, 'users', uid, 'stats', level)
+
+/**
+ * 레벨별 통계 가져오기
+ * @param uid 사용자 ID
+ * @param level 레벨
+ * @returns 레벨 통계 또는 null
+ */
+export async function getLevelStats(uid: string, level: string): Promise<LevelStats | null> {
+  const dbInstance = getDbInstance()
+  const ref = statsDocRef(dbInstance, uid, level)
+  const snap = await getDoc(ref)
+  if (!snap.exists()) return null
+  return snap.data() as LevelStats
+}
+
+/**
+ * 레벨별 통계 초기화
+ * @param uid 사용자 ID
+ * @param level 레벨
+ */
+export async function initializeLevelStats(uid: string, level: string): Promise<LevelStats> {
+  const dbInstance = getDbInstance()
+  const ref = statsDocRef(dbInstance, uid, level)
+  
+  const initialStats: LevelStats = {
+    level: level as any,
+    wordStats: {
+      total: 0,
+      new: 0,
+      learning: 0,
+      review: 0,
+      longTermMemory: 0,
+    },
+    kanjiStats: {
+      total: 0,
+      new: 0,
+      learning: 0,
+      review: 0,
+      longTermMemory: 0,
+    },
+    lastUpdated: Date.now(),
+  }
+  
+  await setDoc(ref, initialStats)
+  return initialStats
+}
+
+/**
+ * 레벨 통계 업데이트 (증감량 적용)
+ * @param uid 사용자 ID
+ * @param level 레벨
+ * @param cardType 카드 타입 (word | kanji)
+ * @param updates 업데이트 내용
+ */
+export async function updateLevelStats(
+  uid: string,
+  level: string,
+  cardType: 'word' | 'kanji',
+  updates: {
+    totalDelta?: number
+    newDelta?: number
+    learningDelta?: number
+    reviewDelta?: number
+    longTermMemoryDelta?: number
+  }
+): Promise<void> {
+  const dbInstance = getDbInstance()
+  const ref = statsDocRef(dbInstance, uid, level)
+  
+  const statsType = cardType === 'word' ? 'wordStats' : 'kanjiStats'
+  const updateObj: any = {
+    lastUpdated: Date.now(),
+  }
+  
+  if (updates.totalDelta) {
+    updateObj[`${statsType}.total`] = (await getDoc(ref)).data()?.[statsType]?.total + updates.totalDelta || updates.totalDelta
+  }
+  if (updates.newDelta) {
+    updateObj[`${statsType}.new`] = (await getDoc(ref)).data()?.[statsType]?.new + updates.newDelta || updates.newDelta
+  }
+  if (updates.learningDelta) {
+    updateObj[`${statsType}.learning`] = (await getDoc(ref)).data()?.[statsType]?.learning + updates.learningDelta || updates.learningDelta
+  }
+  if (updates.reviewDelta) {
+    updateObj[`${statsType}.review`] = (await getDoc(ref)).data()?.[statsType]?.review + updates.reviewDelta || updates.reviewDelta
+  }
+  if (updates.longTermMemoryDelta) {
+    updateObj[`${statsType}.longTermMemory`] = (await getDoc(ref)).data()?.[statsType]?.longTermMemory + updates.longTermMemoryDelta || updates.longTermMemoryDelta
+  }
+  
+  await setDoc(ref, updateObj, { merge: true })
+}
+
+/**
+ * 레벨 통계 재계산 (모든 카드 재집계)
+ * 마이그레이션 또는 데이터 불일치 발생 시 사용
+ * @param uid 사용자 ID
+ * @param level 레벨
+ */
+export async function recalculateLevelStats(uid: string, level: string): Promise<LevelStats> {
+  const dbInstance = getDbInstance()
+  const cardsMap = await getCardsByLevel(uid, level, 1000)
+  const nowMinutes = Math.floor(Date.now() / (1000 * 60))
+  
+  const wordStats = {
+    total: 0,
+    new: 0,
+    learning: 0,
+    review: 0,
+    longTermMemory: 0,
+  }
+  
+  const kanjiStats = {
+    total: 0,
+    new: 0,
+    learning: 0,
+    review: 0,
+    longTermMemory: 0,
+  }
+  
+  cardsMap.forEach((card) => {
+    const stats = card.type === 'word' ? wordStats : kanjiStats
+    stats.total++
+    
+    // 카드 상태 판정
+    const intervalDays = card.interval / (24 * 60)
+    
+    if (intervalDays >= LONG_TERM_MEMORY_INTERVAL_DAYS || card.reps >= LONG_TERM_MEMORY_REPS) {
+      stats.longTermMemory++
+    } else if (intervalDays >= 1) {
+      stats.learning++
+    }
+    
+    if (card.due <= nowMinutes && !card.suspended) {
+      stats.review++
+    }
+  })
+  
+  const newStats: LevelStats = {
+    level: level as any,
+    wordStats,
+    kanjiStats,
+    lastUpdated: Date.now(),
+  }
+  
+  const ref = statsDocRef(dbInstance, uid, level)
+  await setDoc(ref, newStats)
+  
+  return newStats
 }
 

@@ -1,6 +1,24 @@
-# JLPT 학습 웹앱 - 프리미엄 UI/UX 디자인 시스템 (V3)
+# Mogu-JLPT - MoguMogu JLPT 시험 대비 학습 앱
 
-JLPT 학습을 위한 프리미엄 웹 애플리케이션입니다. 미니멀리즘 디자인과 레벨 기반 컬러 시스템을 적용한 학습 최적화 UI를 제공합니다.
+**MoguMogu**는 "우물우물 먹다"는 의미의 언어 학습 플랫폼 브랜드입니다.  
+**Mogu-JLPT**는 MoguMogu 시리즈 중 일본어 JLPT 시험 대비에 특화된 앱으로, 간격 반복 학습(SRS)을 활용한 효율적인 학습 경험을 제공합니다.
+
+## 🌏 MoguMogu 시리즈
+
+### 일본어
+- **Mogu-JLPT** (현재) - JLPT 시험 대비 학습
+- **Mogu-JP** (예정) - 일반 일본어 회화/독해 학습
+
+### 기타 언어
+- **Mogu-TOPIK** (예정) - 한국어 TOPIK 시험 대비
+- **Mogu-KR** (예정) - 일반 한국어 학습
+- **Mogu-HSK** (예정) - 중국어 HSK 시험 대비
+- **Mogu-CN** (예정) - 일반 중국어 학습
+- **Mogu-TOEFL** (예정) - 영어 TOEFL 시험 대비
+- **Mogu-EN** (예정) - 일반 영어 학습
+
+## ✨ 특징
+미니멀리즘 디자인과 레벨 기반 컬러 시스템을 적용한 학습 최적화 UI를 제공합니다.
 
 ## 🎨 디자인 시스템 특징
 
@@ -242,10 +260,18 @@ jlpt-study-app/
 개발 및 테스트를 위한 임시 계정 정보는 `TEST_ACCOUNT.md` 파일을 참고하세요.
 
 **테스트 계정**:
-- 이메일: `test@jlpt-plus.app`
+- 이메일: `test@mogumogu.com`
 - 비밀번호: `test123456`
 
 > ⚠️ 이 계정은 개발/테스트 전용입니다. 프로덕션 환경에서는 사용하지 마세요.
+
+---
+
+## 📘 추가 문서
+
+- [브랜드 가이드](./docs/BRAND_GUIDE.md) - MoguMogu 브랜드 네이밍 및 사용 규칙
+- [SRS 알고리즘](./docs/ANKI_SRS_IMPLEMENTATION.md) - 간격 반복 학습 구현
+- [카드 분류](./docs/CARD_CATEGORY_ALGORITHM.md) - 카드 상태 판정 알고리즘
 
 ## 📄 라이선스
 

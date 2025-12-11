@@ -26,7 +26,7 @@ export default function MobileHomePage() {
   return (
     <div className="w-full overflow-hidden">
       {/* AppBar */}
-      <AppBar title="JLPT Plus" showMenu />
+      <AppBar title="Mogu-JLPT" showMenu />
 
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)] w-full overflow-hidden">
         <div className="flex flex-col items-center justify-center gap-4 w-full max-w-full overflow-hidden px-4">

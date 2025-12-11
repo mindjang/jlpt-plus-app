@@ -3,29 +3,37 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { AppBar } from '@/components/ui/AppBar'
-import { LevelCard } from '@/components/ui/LevelCard'
-import { levels, Level } from '@/data'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation } from 'swiper/modules'
-import type { Swiper as SwiperType } from 'swiper'
-
-// Swiper CSS
-import 'swiper/css'
-import 'swiper/css/pagination'
+import { Level } from '@/data'
+import {
+  LibraryViewSwitcher,
+  VisualMode
+} from '@/components/library/LibraryViewSwitcher'
+import {
+  StackLevelView,
+  MinimalContentView
+} from '@/components/library/LibraryViews'
 
 export default function AcquirePage() {
   const router = useRouter()
-  const [swiper, setSwiper] = useState<SwiperType | null>(null)
-  const [activeIndex, setActiveIndex] = useState(0)
+  // Default to Stack view
+  const [visualMode, setVisualMode] = useState<VisualMode>('stack')
 
-  const handleLevelClick = (level: Level, type: 'word' | 'kanji') => {
+  const handleNavigate = (level: Level, type: 'word' | 'kanji') => {
     router.push(`/acquire/auto-study/${level.toLowerCase()}?type=${type}`)
   }
 
+  const renderContent = () => {
+    switch (visualMode) {
+      case 'stack': return <StackLevelView onNavigate={handleNavigate} />
+      case 'minimal': return <MinimalContentView onNavigate={handleNavigate} />
+      default: return <StackLevelView onNavigate={handleNavigate} />
+    }
+  }
+
   return (
-    <div className="w-full overflow-hidden">
-      <AppBar 
-        title="도서관" 
+    <div className="w-full min-h-screen bg-page">
+      <AppBar
+        title="도서관"
         showMenu
         rightAction={
           <button
@@ -50,60 +58,13 @@ export default function AcquirePage() {
         }
       />
 
-      <div className="flex flex-col gap-4 relative">
-        {/* 레벨 스와이퍼 */}
-        <div className="w-full min-h-[60vh] flex items-center justify-center overflow-hidden">
-          <Swiper
-            onSwiper={setSwiper}
-            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-            grabCursor={true}
-            modules={[Pagination, Navigation]}
-            pagination={{
-              clickable: true,
-              enabled: false,
-            }}
-            className="w-full h-full swiper-simple"
-            centeredSlides={true}
-            initialSlide={0}
-            loop={false}
-            slidesPerView={1}
-            spaceBetween={0}
-            touchRatio={1}
-            threshold={15}
-            resistance={true}
-            resistanceRatio={0.85}
-            speed={400}
-          >
-            {levels.map((level, index) => (
-              <SwiperSlide key={level} className="flex items-center justify-center">
-                  <div className="flex items-center justify-center w-full h-full">
-                  <LevelCard
-                    level={level}
-                    onClick={() => router.push(`/acquire/auto-study/${level.toLowerCase()}?type=word`)}
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+      <LibraryViewSwitcher
+        visualMode={visualMode}
+        setVisualMode={setVisualMode}
+      />
 
-        {/* 페이지 인디케이터 */}
-        <div className="absolute top-4 left-0 right-0 flex gap-2 justify-center z-10">
-          {levels.map((_, index) => (
-            <button
-              key={index}
-              className={`rounded-full transition-all ${
-                index === activeIndex
-                  ? `bg-primary w-6 h-2`
-                  : 'bg-white w-2 h-2'
-              }`}
-              onClick={() => {
-                swiper?.slideTo(index)
-              }}
-            />
-          ))}
-        </div>
-        
+      <div className="w-full">
+        {renderContent()}
       </div>
     </div>
   )

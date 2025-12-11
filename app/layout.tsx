@@ -4,8 +4,7 @@ import Script from 'next/script'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import './globals.css'
-import { AuthProvider } from '@/components/auth/AuthProvider'
-import { MembershipProvider } from '@/components/membership/MembershipProvider'
+import { Providers } from '@/components/Providers'
 
 // FontAwesome CSS 자동 주입 비활성화 (SVG만 사용)
 config.autoAddCss = false
@@ -23,8 +22,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'JLPT Plus',
-  description: 'Premium JLPT learning application',
+  title: 'Mogu-JLPT',
+  description: 'MoguMogu 언어 학습 플랫폼 - JLPT 시험 대비 간격 반복 학습',
   manifest: '/manifest.json',
   icons: {
     icon: [
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'JLPT Plus',
+    title: 'Mogu-JLPT',
   },
   other: {
     'mobile-web-app-capable': 'yes',
@@ -61,9 +60,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className={`${notoSansJP.variable} ${inter.variable}`}>
       <body>
-        <AuthProvider>
-          <MembershipProvider>{children}</MembershipProvider>
-        </AuthProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

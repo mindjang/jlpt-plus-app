@@ -1,6 +1,7 @@
 'use server'
 
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
+import { requireAuth } from '@/lib/firebase/auth-middleware'
 
 type Plan = 'monthly' | 'yearly'
 
@@ -9,18 +10,24 @@ const PLAN_AMOUNTS: Record<Plan, number> = {
   yearly: Number(process.env.PORTONE_YEARLY_AMOUNT || 99000),
 }
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
+    // 인증 확인
+    const [user, authError] = await requireAuth(request)
+    if (authError) return authError
+
     const body = await request.json()
-    const { billingKey, plan, customerId, timeToPay } = body as {
+    const { billingKey, plan, timeToPay } = body as {
       billingKey?: string
       plan?: Plan
-      customerId?: string
       timeToPay?: string
     }
 
-    if (!billingKey || !plan || !customerId) {
-      return NextResponse.json({ error: 'billingKey, plan, customerId are required' }, { status: 400 })
+    // customerId는 인증된 사용자의 uid를 사용
+    const customerId = user!.uid
+
+    if (!billingKey || !plan) {
+      return NextResponse.json({ error: 'billingKey, plan are required' }, { status: 400 })
     }
 
     if (!['monthly', 'yearly'].includes(plan)) {

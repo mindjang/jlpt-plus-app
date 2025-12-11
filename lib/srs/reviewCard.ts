@@ -6,12 +6,29 @@ import {
   minutesToDays,
   dayNumberToMinutes,
 } from '../utils/dateUtils'
-
-const DEFAULT_EASE = 2.5
-const MIN_EASE = 1.3
-const ONE_DAY_IN_MINUTES = 24 * 60
-const MAX_INTERVAL_DAYS = 365
-const MAX_INTERVAL_MINUTES = MAX_INTERVAL_DAYS * ONE_DAY_IN_MINUTES
+import {
+  DEFAULT_EASE,
+  MIN_EASE,
+  MAX_EASE,
+  EASE_AGAIN_PENALTY,
+  EASE_HARD_PENALTY,
+  EASE_GOOD_BONUS,
+  EASE_EASY_BONUS,
+  LEARNING_STEP_1_MINUTES,
+  LEARNING_STEP_2_MINUTES,
+  LEARNING_STEP_3_MINUTES,
+  FIRST_REVIEW_EASY_DAYS,
+  FIRST_REVIEW_NORMAL_DAYS,
+  SECOND_REVIEW_EASY_DAYS,
+  SECOND_REVIEW_NORMAL_DAYS,
+  THIRD_REVIEW_EASY_DAYS,
+  THIRD_REVIEW_NORMAL_DAYS,
+  LAPSE_REDUCTION_FACTOR,
+  LEECH_THRESHOLD,
+  MAX_INTERVAL_MINUTES,
+  ONE_DAY_IN_MINUTES,
+  INTERVAL_THRESHOLDS,
+} from './constants'
 
 // 날짜 변환 함수들을 dateUtils에서 재export
 export { nowAsMinutes, daysToMinutes, minutesToDays, dayNumberToMinutes }
@@ -53,14 +70,9 @@ export function reviewCard(
 
   // 언어 학습에 최적화된 학습 스텝 (분 단위)
   // 4시간 → 1일 → 3일 (단기 기억 → 장기 기억 전환)
-  const LEARNING_STEPS = [
-    4 * 60,           // 4시간 (단기 기억 강화)
-    ONE_DAY_IN_MINUTES,  // 1일 (장기 기억 전환)
-    3 * ONE_DAY_IN_MINUTES  // 3일 (강화)
-  ]
-  const firstStep = LEARNING_STEPS[0]
-  const secondStep = LEARNING_STEPS[1]
-  const finalStep = LEARNING_STEPS[2]
+  const firstStep = LEARNING_STEP_1_MINUTES
+  const secondStep = LEARNING_STEP_2_MINUTES
+  const finalStep = LEARNING_STEP_3_MINUTES
 
   const capInterval = (minutes: number) => Math.min(minutes, MAX_INTERVAL_MINUTES)
 
@@ -73,10 +85,10 @@ export function reviewCard(
       // 학습 스텝 초기화: 첫 스텝으로
       card.interval = firstStep
     } else {
-      // 복습 단계에서 Lapse: 현재 간격의 25%로 감소 (최소 1일)
-      const reducedInterval = Math.floor(card.interval * 0.25)
+      // 복습 단계에서 Lapse: 현재 간격 감소 (최소 1일)
+      const reducedInterval = Math.floor(card.interval * LAPSE_REDUCTION_FACTOR)
       card.interval = Math.max(ONE_DAY_IN_MINUTES, reducedInterval)
-      card.ease = Math.max(MIN_EASE, card.ease - 0.2)
+      card.ease = Math.max(MIN_EASE, card.ease - EASE_AGAIN_PENALTY)
     }
     card.interval = capInterval(card.interval)
     card.due = nowMinutes + card.interval
@@ -85,12 +97,12 @@ export function reviewCard(
 
   // Ease Factor 조정
   if (params.grade === 'hard') {
-    card.ease = Math.max(MIN_EASE, card.ease - 0.15)
+    card.ease = Math.max(MIN_EASE, card.ease - EASE_HARD_PENALTY)
   } else if (params.grade === 'good') {
     // 'good' 평가 시 미세한 ease 증가 (학습 향상 반영)
-    card.ease = Math.min(3.0, card.ease + 0.05)
+    card.ease = Math.min(MAX_EASE, card.ease + EASE_GOOD_BONUS)
   } else if (params.grade === 'easy') {
-    card.ease = Math.min(3.0, card.ease + 0.15)
+    card.ease = Math.min(MAX_EASE, card.ease + EASE_EASY_BONUS)
   }
 
   // 학습 스텝 진행 (learning phase)
@@ -112,15 +124,15 @@ export function reviewCard(
     let intervalInDays: number
     intervalInDays = card.interval / ONE_DAY_IN_MINUTES
 
-    if (intervalInDays === 0) {
-      // 첫 복습: easy는 3일, good/hard는 2일 (망각 곡선 고려)
-      intervalInDays = params.grade === 'easy' ? 3 : 2
-    } else if (intervalInDays <= 2) {
-      // 두 번째 복습: easy는 5일, good/hard는 3일
-      intervalInDays = params.grade === 'easy' ? 5 : 3
-    } else if (intervalInDays <= 3) {
-      // 세 번째 복습: easy는 7일, good/hard는 5일
-      intervalInDays = params.grade === 'easy' ? 7 : 5
+    if (intervalInDays === INTERVAL_THRESHOLDS.FIRST_REVIEW) {
+      // 첫 복습: easy/good/hard 구분 (망각 곡선 고려)
+      intervalInDays = params.grade === 'easy' ? FIRST_REVIEW_EASY_DAYS : FIRST_REVIEW_NORMAL_DAYS
+    } else if (intervalInDays <= INTERVAL_THRESHOLDS.SECOND_REVIEW) {
+      // 두 번째 복습
+      intervalInDays = params.grade === 'easy' ? SECOND_REVIEW_EASY_DAYS : SECOND_REVIEW_NORMAL_DAYS
+    } else if (intervalInDays <= INTERVAL_THRESHOLDS.THIRD_REVIEW) {
+      // 세 번째 복습
+      intervalInDays = params.grade === 'easy' ? THIRD_REVIEW_EASY_DAYS : THIRD_REVIEW_NORMAL_DAYS
     } else {
       // 네 번째 이후: SM-2 알고리즘 적용
       intervalInDays = Math.round(intervalInDays * card.ease)
@@ -132,8 +144,8 @@ export function reviewCard(
 
   card.due = nowMinutes + card.interval
 
-  // Leech 처리: lapses >= 8 (일본어 학습에 맞춘 기준)
-  if (card.lapses >= 8 && !card.suspended) {
+  // Leech 처리: 반복 오답 카드 일시 정지
+  if (card.lapses >= LEECH_THRESHOLD && !card.suspended) {
     card.suspended = true
   }
 

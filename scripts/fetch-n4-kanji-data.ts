@@ -2,7 +2,10 @@ import * as fs from 'fs'
 import * as path from 'path'
 import { KanjiAliveEntry } from '../data/types'
 
-const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY || '5bacc8bb82msh444081c0b2aa85cp1c6aadjsnbdac63aa4cee'
+const RAPIDAPI_KEY: string = process.env.RAPIDAPI_KEY ?? ''
+if (!RAPIDAPI_KEY) {
+  throw new Error('RAPIDAPI_KEY 환경변수가 설정되지 않았습니다.')
+}
 
 // N4 한자 목록 (사용자 제공)
 const N4_KANJI_LIST = [
@@ -33,8 +36,8 @@ async function fetchKanjiData(kanji: string, retryCount = 0): Promise<any | null
     const response = await fetch(url, {
       headers: {
         'X-RapidAPI-Key': RAPIDAPI_KEY,
-        'X-RapidAPI-Host': 'kanjialive-api.p.rapidapi.com'
-      }
+        'X-RapidAPI-Host': 'kanjialive-api.p.rapidapi.com',
+      } satisfies HeadersInit,
     })
     
     if (!response.ok) {

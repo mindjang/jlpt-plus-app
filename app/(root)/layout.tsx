@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 import { BottomNav } from '../_components/BottomNav'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
 
 export default function RootLayout({
   children,
@@ -20,12 +21,14 @@ export default function RootLayout({
     pathname?.startsWith('/acquire/kanji')
 
   return (
-    <div className="min-h-screen bg-page w-full overflow-x-hidden">
-      <div className={`mx-auto max-w-lg w-full min-h-screen overflow-x-hidden ${hideBottomNav ? '' : 'pb-16'}`}>
-        {children}
+    <ErrorBoundary>
+      <div className="min-h-screen bg-page w-full overflow-x-hidden">
+        <div className={`mx-auto max-w-lg w-full min-h-screen overflow-x-hidden ${hideBottomNav ? '' : 'pb-16'}`}>
+          {children}
+        </div>
+        {!hideBottomNav && <BottomNav />}
       </div>
-      {!hideBottomNav && <BottomNav />}
-    </div>
+    </ErrorBoundary>
   )
 }
 

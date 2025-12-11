@@ -43,9 +43,12 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
                 {/* 헤더 */}
                 <div className="flex items-center gap-3 px-6 py-5 border-b border-divider">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 via-green-500 via-orange-500 to-blue-500 flex items-center justify-center">
-                    <span className="text-label font-bold text-surface">JLPT</span>
+                    <span className="text-label font-bold text-surface">모구</span>
                   </div>
-                  <h2 className="text-title font-semibold text-text-main">JLPT Plus</h2>
+                  <div className="flex flex-col">
+                    <h2 className="text-title font-semibold text-text-main">Mogu-JLPT</h2>
+                    <span className="text-label text-text-sub">MoguMogu</span>
+                  </div>
                 </div>
 
                 {/* 메뉴 내용 */}

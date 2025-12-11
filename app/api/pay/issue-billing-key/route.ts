@@ -1,9 +1,9 @@
 'use server'
 
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
+import { requireAuth } from '@/lib/firebase/auth-middleware'
 
 type IssueBody = {
-  customerId: string
   fullName: string
   phoneNumber: string
   email: string
@@ -14,11 +14,14 @@ type IssueBody = {
   passwordTwoDigits?: string
 }
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
+    // 인증 확인
+    const [user, authError] = await requireAuth(request)
+    if (authError) return authError
+
     const body = (await request.json()) as Partial<IssueBody>
     const {
-      customerId,
       fullName,
       phoneNumber,
       email,
@@ -29,8 +32,10 @@ export async function POST(request: Request) {
       passwordTwoDigits,
     } = body
 
+    // customerId는 인증된 사용자의 uid를 사용
+    const customerId = user!.uid
+
     if (
-      !customerId ||
       !fullName ||
       !phoneNumber ||
       !email ||

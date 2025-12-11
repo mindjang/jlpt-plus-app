@@ -1,5 +1,5 @@
 {
-  "name": "jlpt-study-app",
+  "name": "mogu-jlpt",
   "version": "3.0.0",
   "private": true,
   "scripts": {
@@ -19,19 +19,21 @@
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
     "@fortawesome/react-fontawesome": "^3.1.1",
-    "chart.js": "^4.4.4",
+    "@portone/browser-sdk": "^0.0.10",
     "@types/react-circular-progressbar": "^1.0.2",
     "@types/react-window": "^1.8.8",
+    "chart.js": "^4.4.4",
     "firebase": "^12.6.0",
+    "firebase-admin": "^13.6.0",
     "framer-motion": "^11.0.0",
+    "lucide-react": "^0.560.0",
     "next": "^14.2.0",
     "react": "^18.3.0",
     "react-calendar-heatmap": "^1.10.0",
     "react-circular-progressbar": "^2.2.0",
     "react-dom": "^18.3.0",
     "react-window": "^2.2.3",
-    "swiper": "^11.0.0",
-    "@portone/browser-sdk": "^0.0.10"
+    "swiper": "^11.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

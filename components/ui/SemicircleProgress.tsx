@@ -1,34 +1,23 @@
 'use client'
 
-import { useRef, useEffect, useState } from 'react'
-import type { Chart as ChartType, ChartData, ChartOptions } from 'chart.js'
-import { hexToRgba } from '@/lib/utils/colorUtils'
-
 interface SemicircleProgressProps {
   value: number
   progress: number
   total: number
   color: string
-  useChart?: boolean // Chart.js 사용 여부 (기본값: false, SVG 사용)
+  useChart?: boolean // 레거시 호환성 (무시됨)
 }
 
 /**
- * 반원형 진행률 차트 컴포넌트
- * 기본적으로 SVG를 사용하며, useChart=true일 경우 Chart.js를 사용합니다.
+ * 반원형 진행률 차트 컴포넌트 (SVG 버전)
+ * Chart.js를 제거하고 경량 SVG 구현만 사용합니다.
  */
 export function SemicircleProgress({
   value,
   progress,
   total,
   color,
-  useChart = false,
 }: SemicircleProgressProps) {
-  // Chart.js 버전
-  if (useChart) {
-    return <SemicircleProgressChart value={value} progress={progress} total={total} color={color} />
-  }
-
-  // SVG 버전 (기본)
   return <SemicircleProgressSVG value={value} progress={progress} total={total} color={color} />
 }
 
@@ -38,7 +27,7 @@ function SemicircleProgressSVG({
   progress,
   total,
   color,
-}: Omit<SemicircleProgressProps, 'useChart'>) {
+}: SemicircleProgressProps) {
   const radius = 80
   const centerX = 100
   const centerY = 100
@@ -103,105 +92,6 @@ function SemicircleProgressSVG({
         </span>
         <span className="text-label text-text-sub leading-tight">
           {progress}/{total}
-        </span>
-      </div>
-    </div>
-  )
-}
-
-// Chart.js 구현 (애니메이션 있음)
-function SemicircleProgressChart({
-  value,
-  progress,
-  total,
-  color,
-}: Omit<SemicircleProgressProps, 'useChart'>) {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null)
-  const chartRef = useRef<ChartType<'doughnut'> | null>(null)
-  const [chartError, setChartError] = useState(false)
-
-  const safePercent = Math.min(Math.max(value, 0), 100)
-  const completedCount = Math.max(Math.min(progress, total), 0)
-  const remainingCount = Math.max(total - completedCount, 0)
-
-  useEffect(() => {
-    let isMounted = true
-
-    const renderChart = async () => {
-      try {
-        const { Chart } = await import('chart.js/auto')
-        if (!canvasRef.current || !isMounted) return
-
-        // 난이도 컬러 사용 (채우기) + 20% 투명도의 테두리
-        const primaryColor = hexToRgba(color, 0.3)
-        const primaryBorder = '#FF8A00'
-        const restBorder = hexToRgba('#E5E7EB', 0)
-
-        const data: ChartData<'doughnut'> = {
-          labels: ['완료', '남음'],
-          datasets: [
-            {
-              data: [completedCount, remainingCount],
-              backgroundColor: [primaryColor, '#E5E7EB'],
-              borderColor: [primaryBorder, restBorder],
-              borderWidth: 1,
-              hoverOffset: 0,
-            },
-          ],
-        }
-
-        const options: ChartOptions<'doughnut'> = {
-          cutout: '60%',
-          rotation: -90,
-          circumference: 180,
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: { display: false },
-            tooltip: { enabled: false },
-          },
-          animation: {
-            duration: 400,
-          },
-        }
-
-        chartRef.current?.destroy()
-        chartRef.current = new Chart(canvasRef.current, {
-          type: 'doughnut',
-          data,
-          options,
-        })
-      } catch (error) {
-        console.error('Failed to load Chart.js:', error)
-        // Chart.js 로드 실패 시 SVG로 폴백
-        if (isMounted) {
-          setChartError(true)
-        }
-      }
-    }
-
-    renderChart()
-
-    return () => {
-      isMounted = false
-      chartRef.current?.destroy()
-    }
-  }, [completedCount, remainingCount, total, color])
-
-  // Chart.js 로드 실패 시 SVG로 폴백
-  if (chartError) {
-    return <SemicircleProgressSVG value={safePercent} progress={completedCount} total={total} color={color} />
-  }
-
-  return (
-    <div className="relative w-full h-36">
-      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
-      <div className="absolute inset-x-0 bottom-0 flex flex-col items-center justify-end pointer-events-none z-10 pb-7">
-        <span className="text-subtitle font-semibold text-text-main leading-tight">
-          {Math.round(safePercent)}%
-        </span>
-        <span className="text-label text-text-sub leading-tight">
-          {completedCount}/{total}
         </span>
       </div>
     </div>

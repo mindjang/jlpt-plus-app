@@ -10,7 +10,7 @@ export function TermsContent() {
         <section>
           <h3 className="text-title font-semibold mb-3">제1조 (목적)</h3>
           <p className="text-body text-text-sub leading-relaxed">
-            본 약관은 재미찾는개발자(이하 "회사")가 제공하는 JLPT Plus 언어 학습 서비스(이하 "서비스")의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.
+            본 약관은 재미찾는개발자(이하 "회사")가 제공하는 MoguMogu 언어 학습 플랫폼의 JLPT 시험 대비 버전인 Mogu-JLPT 서비스(이하 "서비스")의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.
           </p>
         </section>
 

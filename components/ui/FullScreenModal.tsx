@@ -33,7 +33,7 @@ export const FullScreenModal: React.FC<FullScreenModalProps> = ({
         <>
           {/* Dim 배경 */}
           <motion.div
-            className="fixed inset-0 bg-black z-40"
+            className="fixed inset-0 bg-black z-[60]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.45 }}
             exit={{ opacity: 0 }}
@@ -41,7 +41,7 @@ export const FullScreenModal: React.FC<FullScreenModalProps> = ({
           />
 
           {/* 전체 화면 모달 */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+          <div className="fixed inset-0 z-[70] flex items-center justify-center pointer-events-none">
             <motion.div
               className="bg-surface w-full h-full overflow-y-auto pointer-events-auto"
               initial={{ opacity: 0, y: 20 }}

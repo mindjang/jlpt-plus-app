@@ -5070,8 +5070,8 @@ export const n5Kanji: KanjiAliveEntry[] = [
         "katakana": "キ、ケ"
       },
       "kunyomi": {
-        "romaji": "n/a",
-        "hiragana": "n/a"
+        "romaji": "ki, ke",
+        "hiragana": "き, け"
       },
       "video": {
         "poster": "https://media.kanjialive.com/kanji_strokes/ki(mochi)_6.svg",
@@ -5106,9 +5106,9 @@ export const n5Kanji: KanjiAliveEntry[] = [
     "hint_group": 6,
     "onyomi": "ki, ke",
     "onyomi_ja": "キ、ケ",
-    "kunyomi": "n/a",
+    "kunyomi": "ki, ke",
     "kunyomi_ja": "",
-    "kunyomi_ka_display": "n/a",
+    "kunyomi_ka_display": "き, け",
     "meaning": "gas, spirit",
     "kstroke": 6,
     "rad_stroke": 4,
@@ -9637,8 +9637,8 @@ export const n5Kanji: KanjiAliveEntry[] = [
         "katakana": "デン"
       },
       "kunyomi": {
-        "romaji": "n/a",
-        "hiragana": "n/a"
+        "romaji": "den",
+        "hiragana": "でん"
       },
       "video": {
         "poster": "https://media.kanjialive.com/kanji_strokes/den(wa)_13.svg",
@@ -9673,9 +9673,9 @@ export const n5Kanji: KanjiAliveEntry[] = [
     "hint_group": 1,
     "onyomi": "den",
     "onyomi_ja": "デン",
-    "kunyomi": "n/a",
+    "kunyomi": "den",
     "kunyomi_ja": "",
-    "kunyomi_ka_display": "n/a",
+    "kunyomi_ka_display": "でん",
     "meaning": "electricity",
     "kstroke": 13,
     "rad_stroke": 8,
@@ -10815,8 +10815,8 @@ export const n5Kanji: KanjiAliveEntry[] = [
         "katakana": "コウ"
       },
       "kunyomi": {
-        "romaji": "n/a",
-        "hiragana": "n/a"
+        "romaji": "chichi",
+        "hiragana": "ちち"
       },
       "video": {
         "poster": "https://media.kanjialive.com/kanji_strokes/(gak)kou_10.svg",
@@ -10851,9 +10851,9 @@ export const n5Kanji: KanjiAliveEntry[] = [
     "hint_group": 1,
     "onyomi": "kou",
     "onyomi_ja": "コウ",
-    "kunyomi": "n/a",
+    "kunyomi": "chichi",
     "kunyomi_ja": "",
-    "kunyomi_ka_display": "n/a",
+    "kunyomi_ka_display": "ちち",
     "meaning": "school",
     "kstroke": 10,
     "rad_stroke": 4,
@@ -11822,7 +11822,7 @@ export const n5Kanji: KanjiAliveEntry[] = [
     "kname": "10",
     "dick": "2110",
     "dicn": "768",
-    "mn_hint": "n/a"
+    "mn_hint": "じゅう"
   },
   {
     "_id": "54317b06791eba5146ee4c0e",
@@ -11853,8 +11853,8 @@ export const n5Kanji: KanjiAliveEntry[] = [
         "katakana": "マン、バン"
       },
       "kunyomi": {
-        "romaji": "n/a",
-        "hiragana": "n/a"
+        "romaji": "man, ban",
+        "hiragana": "まん, ばん"
       },
       "video": {
         "poster": "https://media.kanjialive.com/kanji_strokes/(nan)man_3.svg",
@@ -11888,9 +11888,9 @@ export const n5Kanji: KanjiAliveEntry[] = [
     "hint_group": 1,
     "onyomi": "man, ban",
     "onyomi_ja": "マン、バン",
-    "kunyomi": "n/a",
+    "kunyomi": "man, ban",
     "kunyomi_ja": "",
-    "kunyomi_ka_display": "n/a",
+    "kunyomi_ka_display": "マン、バン",
     "meaning": "ten thousand",
     "kstroke": 3,
     "rad_stroke": 1,
@@ -14765,7 +14765,7 @@ export const n5Kanji: KanjiAliveEntry[] = [
     "kname": "8",
     "dick": "1859",
     "dicn": "577",
-    "mn_hint": "n/a"
+    "mn_hint": "はち"
   },
   {
     "_id": "54317afb791eba5146ee4b3b",
@@ -15193,7 +15193,7 @@ export const n5Kanji: KanjiAliveEntry[] = [
     "kname": "5",
     "dick": "2142",
     "dicn": "15",
-    "mn_hint": "n/a"
+    "mn_hint": "ご"
   },
   {
     "_id": "54317b11791eba5146ee4cca",
@@ -15445,8 +15445,8 @@ export const n5Kanji: KanjiAliveEntry[] = [
         "katakana": "ヒャク"
       },
       "kunyomi": {
-        "romaji": "n/a",
-        "hiragana": "n/a"
+        "romaji": "momo",
+        "hiragana": "もも"
       },
       "video": {
         "poster": "https://media.kanjialive.com/kanji_strokes/hyaku-momo_6.svg",
@@ -15481,9 +15481,9 @@ export const n5Kanji: KanjiAliveEntry[] = [
     "hint_group": 1,
     "onyomi": "hyaku",
     "onyomi_ja": "ヒャク",
-    "kunyomi": "n/a",
+    "kunyomi": "momo",
     "kunyomi_ja": "",
-    "kunyomi_ka_display": "n/a",
+    "kunyomi_ka_display": "もも",
     "meaning": "hundred",
     "kstroke": 6,
     "rad_stroke": 5,
@@ -15806,8 +15806,8 @@ export const n5Kanji: KanjiAliveEntry[] = [
         "katakana": "ゴ"
       },
       "kunyomi": {
-        "romaji": "n/a",
-        "hiragana": "n/a"
+        "romaji": "go",
+        "hiragana": "ご"
       },
       "video": {
         "poster": "https://media.kanjialive.com/kanji_strokes/(shou)go_4.svg",
@@ -15842,9 +15842,9 @@ export const n5Kanji: KanjiAliveEntry[] = [
     "hint_group": 2,
     "onyomi": "go",
     "onyomi_ja": "ゴ",
-    "kunyomi": "n/a",
+    "kunyomi": "go",
     "kunyomi_ja": "",
-    "kunyomi_ka_display": "n/a",
+    "kunyomi_ka_display": "ご",
     "meaning": "noon",
     "kstroke": 4,
     "rad_stroke": 2,
@@ -16100,7 +16100,7 @@ export const n5Kanji: KanjiAliveEntry[] = [
     "kname": "7",
     "dick": "2109",
     "dicn": "261",
-    "mn_hint": "n/a"
+    "mn_hint": "しち"
   },
   {
     "_id": "54317ae1791eba5146ee493c",
@@ -16874,7 +16874,7 @@ export const n5Kanji: KanjiAliveEntry[] = [
     "kname": "6",
     "dick": "1244",
     "dicn": "283",
-    "mn_hint": "n/a"
+    "mn_hint": "ろく"
   },
   {
     "_id": "54317ad1791eba5146ee4830",
@@ -17066,6 +17066,6 @@ export const n5Kanji: KanjiAliveEntry[] = [
     "kname": "9",
     "dick": "2112",
     "dicn": "146",
-    "mn_hint": "n/a"
+    "mn_hint": "く"
   }
 ]

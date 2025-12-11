@@ -65,9 +65,9 @@ export default function StatsPage() {
     try {
       const { collection, getDocs } = await import('firebase/firestore')
       const { db } = await import('@/lib/firebase/config')
-      
+
       if (!db) return new Map()
-      
+
       const cardsRef = collection(db, 'users', user.uid, 'cards')
       const querySnapshot = await getDocs(cardsRef)
       const cardMap = new Map<string, UserCardState>()
@@ -87,7 +87,7 @@ export default function StatsPage() {
   // 학습일 계산 (전체 기준, 한 번만 계산)
   const calculateLearningDays = useCallback((cards: Map<string, UserCardState>) => {
     const learningDaysSet = new Set<number>()
-    
+
     cards.forEach((card) => {
       const migrated = migrateCardState(card)
       if (migrated.lastReviewed > 0) {
@@ -95,7 +95,7 @@ export default function StatsPage() {
         learningDaysSet.add(dayNumber)
       }
     })
-    
+
     return learningDaysSet.size
   }, [])
 
@@ -117,12 +117,12 @@ export default function StatsPage() {
 
     for (const level of levelsToProcess) {
       const total = currentContentType === 'word' ? levelData[level].words : levelData[level].kanji
-      
+
       // 해당 레벨의 카드 필터링
       const levelCards = Array.from(cards.values()).filter(
         (card) => card.level === level && card.type === currentContentType
       )
-      
+
       // 장기 기억 카드 수 계산
       let longTerm = 0
       levelCards.forEach((card) => {
@@ -168,7 +168,7 @@ export default function StatsPage() {
 
     try {
       setLoading(true)
-      
+
       // 모든 카드 로드 (한 번만)
       const cards = await loadAllCards()
       setAllCards(cards)
@@ -186,7 +186,7 @@ export default function StatsPage() {
       const heatmap: Array<{ date: string; count: number; level?: Level }> = []
       const year = 2025
       const startDate = new Date(year, 0, 1)
-      
+
       // 레벨별 시작일 계산
       const sepStart = new Date(year, 8, 1).getTime() // 9월 1일
       const sepEnd = new Date(year, 8, 30).getTime() // 9월 30일
@@ -194,16 +194,16 @@ export default function StatsPage() {
       const octEnd = new Date(year, 9, 31).getTime() // 10월 31일
       const decStart = new Date(year, 11, 1).getTime() // 12월 1일
       const decEnd = new Date(year, 11, 31).getTime() // 12월 31일
-      
+
       // 1년치 데이터 생성
       for (let i = 0; i < 365; i++) {
         const date = new Date(startDate)
         date.setDate(date.getDate() + i)
         const dateTime = date.getTime()
-        
+
         let count = 0
         let level: Level | undefined = undefined
-        
+
         // 9월: N5 학습
         if (dateTime >= sepStart && dateTime <= sepEnd) {
           level = 'N5'
@@ -220,14 +220,14 @@ export default function StatsPage() {
           level = 'N1'
           count = Math.floor(Math.random() * 4) + 1 // 1-4 랜덤
         }
-        
+
         heatmap.push({
           date: date.toISOString().split('T')[0],
           count,
           level,
         })
       }
-      
+
       setHeatmapData(heatmap)
     } catch (error) {
       handleFirestoreError(error, '통계 로드')
@@ -311,28 +311,26 @@ export default function StatsPage() {
 
   return (
     <div className="w-full overflow-hidden pb-20 relative">
-      <AppBar title="습득존 통계" onBack={() => router.back()} />
+      <AppBar title="독서 기록" onBack={() => router.back()} />
 
       <div className="flex flex-col gap-6 p-4">
         {/* 탭 선택 */}
         <div className="flex gap-4 border-b border-divider">
           <button
             onClick={() => setActiveTab('overall')}
-            className={`pb-3 px-2 text-body font-medium transition-colors ${
-              activeTab === 'overall'
+            className={`pb-3 px-2 text-body font-medium transition-colors ${activeTab === 'overall'
                 ? 'text-text-main border-b-2 border-text-main'
                 : 'text-text-sub'
-            }`}
+              }`}
           >
             전체
           </button>
           <button
             onClick={() => setActiveTab('daily')}
-            className={`pb-3 px-2 text-body font-medium transition-colors ${
-              activeTab === 'daily'
+            className={`pb-3 px-2 text-body font-medium transition-colors ${activeTab === 'daily'
                 ? 'text-text-main border-b-2 border-text-main'
                 : 'text-text-sub'
-            }`}
+              }`}
           >
             일별
           </button>
@@ -383,7 +381,7 @@ export default function StatsPage() {
                     </svg>
                   </button>
                 </div>
-                
+
                 <div className="overflow-x-auto">
                   {heatmapData.length > 0 ? (
                     <CalendarHeatmap
@@ -394,16 +392,16 @@ export default function StatsPage() {
                         if (!value || value.count === 0) {
                           return 'color-empty'
                         }
-                        
+
                         // 레벨별 메인 컬러 사용
                         const level = (value as any).level
                         if (!level) return 'color-empty'
-                        
+
                         // 레벨별 기본 클래스
                         const levelClass = `color-${level.toLowerCase()}`
                         // 학습량에 따른 진하기 (1-4)
                         const intensityClass = `-scale-${value.count}`
-                        
+
                         return `${levelClass}${intensityClass}`
                       }}
                       tooltipDataAttrs={(value) => {
@@ -424,7 +422,7 @@ export default function StatsPage() {
                     <div className="p-4 text-center text-text-sub">데이터가 없습니다.</div>
                   )}
                 </div>
-                
+
                 <style jsx global>{`
                   .react-calendar-heatmap {
                     font-family: var(--font-pretendard);
@@ -508,26 +506,24 @@ export default function StatsPage() {
             <div>
               <h2 className="text-title font-semibold text-text-main mb-1">단계별 진행상황</h2>
               <p className="text-label text-text-sub mb-4">앱 등록 이후 현재까지 총 학습 정보</p>
-              
+
               {/* 단어/한자 탭 */}
               <div className="flex gap-4 border-b border-divider mb-4">
                 <button
                   onClick={() => setContentType('word')}
-                  className={`pb-3 px-2 text-body font-medium transition-colors ${
-                    contentType === 'word'
+                  className={`pb-3 px-2 text-body font-medium transition-colors ${contentType === 'word'
                       ? 'text-text-main border-b-2 border-text-main'
                       : 'text-text-sub'
-                  }`}
+                    }`}
                 >
                   단어
                 </button>
                 <button
                   onClick={() => setContentType('kanji')}
-                  className={`pb-3 px-2 text-body font-medium transition-colors ${
-                    contentType === 'kanji'
+                  className={`pb-3 px-2 text-body font-medium transition-colors ${contentType === 'kanji'
                       ? 'text-text-main border-b-2 border-text-main'
                       : 'text-text-sub'
-                  }`}
+                    }`}
                 >
                   한자
                 </button>
@@ -537,11 +533,10 @@ export default function StatsPage() {
               <div className="flex flex-wrap gap-2 mb-4">
                 <button
                   onClick={() => setSelectedLevel(null)}
-                  className={`px-4 py-2 rounded-full text-label font-medium transition-colors ${
-                    selectedLevel === null
+                  className={`px-4 py-2 rounded-full text-label font-medium transition-colors ${selectedLevel === null
                       ? 'bg-primary text-surface'
                       : 'bg-page text-text-sub border border-divider'
-                  }`}
+                    }`}
                 >
                   전체
                 </button>
@@ -559,11 +554,10 @@ export default function StatsPage() {
                     <button
                       key={level}
                       onClick={() => setSelectedLevel(level)}
-                      className={`px-4 py-2 rounded-full text-label font-medium transition-colors ${
-                        isSelected
+                      className={`px-4 py-2 rounded-full text-label font-medium transition-colors ${isSelected
                           ? `${colors.bg} ${colors.text}`
                           : 'bg-page text-text-sub border border-divider'
-                      }`}
+                        }`}
                     >
                       {level}
                     </button>
@@ -594,8 +588,8 @@ export default function StatsPage() {
                   })
                   .map((level) => {
                     const progress = stats.levelProgress[level] || { learned: 0, total: 0, longTerm: 0 }
-                    const percentage = progress.total > 0 
-                      ? Math.round((progress.learned / progress.total) * 100) 
+                    const percentage = progress.total > 0
+                      ? Math.round((progress.learned / progress.total) * 100)
                       : 0
 
                     const levelColors: Record<Level, string> = {
@@ -666,9 +660,8 @@ export default function StatsPage() {
                     <button
                       key={index}
                       onClick={() => setSelectedDate(date)}
-                      className={`flex flex-col items-center gap-1 p-2 rounded-full transition-colors ${
-                        isSelected ? 'bg-gray-200' : ''
-                      }`}
+                      className={`flex flex-col items-center gap-1 p-2 rounded-full transition-colors ${isSelected ? 'bg-gray-200' : ''
+                        }`}
                     >
                       <span className={`text-body ${isSelected ? 'font-semibold text-text-main' : 'text-text-sub'}`}>
                         {date.getDate()}
@@ -698,26 +691,24 @@ export default function StatsPage() {
             {/* 일일 학습 정보 */}
             <div>
               <h2 className="text-title font-semibold text-text-main mb-4">일일 학습 정보</h2>
-              
+
               {/* 단어/한자 탭 */}
               <div className="flex gap-4 border-b border-divider mb-4">
                 <button
                   onClick={() => setContentType('word')}
-                  className={`pb-3 px-2 text-body font-medium transition-colors ${
-                    contentType === 'word'
+                  className={`pb-3 px-2 text-body font-medium transition-colors ${contentType === 'word'
                       ? 'text-text-main border-b-2 border-text-main'
                       : 'text-text-sub'
-                  }`}
+                    }`}
                 >
                   단어
                 </button>
                 <button
                   onClick={() => setContentType('kanji')}
-                  className={`pb-3 px-2 text-body font-medium transition-colors ${
-                    contentType === 'kanji'
+                  className={`pb-3 px-2 text-body font-medium transition-colors ${contentType === 'kanji'
                       ? 'text-text-main border-b-2 border-text-main'
                       : 'text-text-sub'
-                  }`}
+                    }`}
                 >
                   한자
                 </button>
@@ -727,11 +718,10 @@ export default function StatsPage() {
               <div className="flex flex-wrap gap-2 mb-4">
                 <button
                   onClick={() => setSelectedLevel(null)}
-                  className={`px-4 py-2 rounded-full text-label font-medium transition-colors ${
-                    selectedLevel === null
+                  className={`px-4 py-2 rounded-full text-label font-medium transition-colors ${selectedLevel === null
                       ? 'bg-primary text-surface'
                       : 'bg-page text-text-sub border border-divider'
-                  }`}
+                    }`}
                 >
                   전체
                 </button>
@@ -749,11 +739,10 @@ export default function StatsPage() {
                     <button
                       key={level}
                       onClick={() => setSelectedLevel(level)}
-                      className={`px-4 py-2 rounded-full text-label font-medium transition-colors ${
-                        isSelected
+                      className={`px-4 py-2 rounded-full text-label font-medium transition-colors ${isSelected
                           ? `${colors.bg} ${colors.text}`
                           : 'bg-page text-text-sub border border-divider'
-                      }`}
+                        }`}
                     >
                       {level}
                     </button>

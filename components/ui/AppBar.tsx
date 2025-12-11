@@ -34,7 +34,7 @@ export const AppBar: React.FC<AppBarProps> = ({
 
   return (
     <>
-      <header className={`sticky top-0 z-30 ${className || 'bg-surface border-b border-divider'} w-full`}>
+      <header className={`fixed top-0 left-0 right-0 z-30 ${className || 'bg-surface border-b border-divider'}`}>
         <div className="flex items-center justify-between h-14 px-4 relative">
           <div className="flex items-center gap-3 flex-1">
             {showMenu && !onBack && (
@@ -62,6 +62,8 @@ export const AppBar: React.FC<AppBarProps> = ({
           </div>
         </div>
       </header>
+      {/* Spacer for fixed header */}
+      <div className="h-14" />
 
       {/* 사이드 메뉴 */}
       <SideMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />

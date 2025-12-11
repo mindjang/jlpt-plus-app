@@ -16,6 +16,7 @@ export interface GiftCode {
   remainingUses?: number | null // null/undefined 이면 무제한
   type?: MembershipType // 지정되지 않으면 'gift'로 처리
   note?: string
+  createdAt?: number // epoch ms
 }
 
 export interface DailyUsage {

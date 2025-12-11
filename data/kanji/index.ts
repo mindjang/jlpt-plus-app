@@ -1,7 +1,7 @@
 import { KanjiAliveEntry, Level } from '../types'
 import { n5Kanji } from './n5'
-import { n4Kanji } from './list/n4'
-import { n3Kanji } from './list/n3'
+import { n4Kanji } from './n4'
+import { n3Kanji } from './n3'
 import { n2Kanji } from './n2'
 import { n1Kanji } from './n1'
 

@@ -18,12 +18,13 @@ export default function RootLayout({
     pathname?.startsWith('/acquire/auto-study/') ||
     pathname?.startsWith('/practice/learn') ||
     pathname?.startsWith('/acquire/word') ||
-    pathname?.startsWith('/acquire/kanji')
+    pathname?.startsWith('/acquire/kanji') ||
+    pathname?.startsWith('/game/')
 
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-page w-full overflow-x-hidden">
-        <div className={`mx-auto max-w-lg w-full min-h-screen overflow-x-hidden ${hideBottomNav ? '' : 'pb-16'}`}>
+        <div className={`mx-auto max-w-lg w-full min-h-screen overflow-x-hidden`}>
           {children}
         </div>
         {!hideBottomNav && <BottomNav />}

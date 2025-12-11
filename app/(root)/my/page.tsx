@@ -17,6 +17,7 @@ import { ConfirmModal } from '@/components/ui/ConfirmModal'
 import { TermsContent } from '@/data/legal/terms'
 import { PrivacyContent } from '@/data/legal/privacy'
 import { motion, AnimatePresence } from 'framer-motion'
+import { AUTO_STUDY_TARGET_OPTIONS } from '@/lib/constants/ui'
 import {
   ChevronRight,
   CreditCard,
@@ -97,6 +98,9 @@ export default function MyPage() {
   const [showRedeemConfirm, setShowRedeemConfirm] = useState(false)
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false)
   const [showManageModal, setShowManageModal] = useState(false)
+  const [showDailyTargetModal, setShowDailyTargetModal] = useState(false)
+  const [dailyTargetDraft, setDailyTargetDraft] = useState(settings.dailyNewLimit)
+  const [dailyTargetSaving, setDailyTargetSaving] = useState(false)
   const [redeemLoading, setRedeemLoading] = useState(false)
 
   // Payment Modal State
@@ -159,7 +163,7 @@ export default function MyPage() {
 
   const handleLogout = async () => {
     await signOutUser()
-    router.push('/home')
+    router.push('/my')
   }
 
   const handleRedeemCode = async () => {
@@ -180,6 +184,29 @@ export default function MyPage() {
       setShowRedeemConfirm(false)
     } finally {
       setRedeemLoading(false)
+    }
+  }
+
+  const clampTarget = (val: number) => {
+    const min = AUTO_STUDY_TARGET_OPTIONS[0]
+    const max = AUTO_STUDY_TARGET_OPTIONS[AUTO_STUDY_TARGET_OPTIONS.length - 1]
+    return Math.min(max, Math.max(min, val))
+  }
+
+  const changeDailyTarget = (delta: number) => {
+    setDailyTargetDraft((prev) => clampTarget(prev + delta))
+  }
+
+  const handleSaveDailyTarget = async () => {
+    if (!user) return
+    try {
+      setDailyTargetSaving(true)
+      await updateDailyNewLimit(dailyTargetDraft)
+      setShowDailyTargetModal(false)
+    } catch (error) {
+      handleError(error, '일일 목표 저장')
+    } finally {
+      setDailyTargetSaving(false)
     }
   }
 
@@ -212,7 +239,7 @@ export default function MyPage() {
             학습 기록을 저장하고<br />프리미엄 기능을 이용해보세요.
           </p>
           <div className="flex flex-col gap-3 w-full max-w-xs">
-            <button onClick={() => router.push('/home')} className="w-full py-4 rounded-xl bg-black text-white font-bold text-lg hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-black/20">
+            <button onClick={() => router.push('/login')} className="w-full py-4 rounded-xl bg-black text-white font-bold text-lg hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-black/20">
               로그인하기
             </button>
             <button onClick={() => router.push('/acquire')} className="w-full py-4 rounded-xl bg-white border border-gray-200 text-gray-900 font-bold text-lg hover:bg-gray-50 active:scale-[0.98] transition-all">
@@ -350,7 +377,15 @@ export default function MyPage() {
         {/* Action Menu Group */}
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
           <SectionTitle>학습 관리</SectionTitle>
-          <MenuItem icon={Target} label="일일 목표 설정" value={`${settings.dailyNewLimit}개`} onClick={() => router.push('/my/settings')} />
+          <MenuItem
+            icon={Target}
+            label="일일 목표 설정"
+            value={`${settings.dailyNewLimit}개`}
+            onClick={() => {
+              setDailyTargetDraft(settings.dailyNewLimit)
+              setShowDailyTargetModal(true)
+            }}
+          />
           <MenuItem icon={BarChart2} label="나의 독서 기록" onClick={() => router.push('/stats')} />
 
           <SectionTitle>계정 설정</SectionTitle>
@@ -374,6 +409,49 @@ export default function MyPage() {
       </div>
 
       {/* --- MODALS --- */}
+
+      {/* Daily Target Modal */}
+      {showDailyTargetModal && (
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-surface w-full max-w-sm rounded-3xl p-6 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
+            <button onClick={() => setShowDailyTargetModal(false)} className="absolute right-5 top-5 text-gray-400 hover:text-gray-900 transition-colors">✕</button>
+            <div className="text-center mb-6 mt-1">
+              <h2 className="text-xl font-bold text-text-main">일일 목표 설정</h2>
+              <p className="text-body text-text-sub mt-1">자동 학습 목표를 조절하세요 (5~40, 5개 단위)</p>
+            </div>
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <button
+                onClick={() => changeDailyTarget(-5)}
+                className="w-12 h-12 rounded-full border border-divider text-title text-text-main flex items-center justify-center hover:bg-gray-50"
+              >
+                -
+              </button>
+              <div className="text-3xl font-black text-text-main min-w-[80px] text-center">{dailyTargetDraft}</div>
+              <button
+                onClick={() => changeDailyTarget(5)}
+                className="w-12 h-12 rounded-full border border-divider text-title text-text-main flex items-center justify-center hover:bg-gray-50"
+              >
+                +
+              </button>
+            </div>
+            <div className="flex gap-3">
+              <button
+                onClick={handleSaveDailyTarget}
+                disabled={dailyTargetSaving}
+                className="flex-1 py-3 rounded-xl bg-black text-white font-semibold disabled:opacity-60"
+              >
+                {dailyTargetSaving ? '저장 중...' : '저장'}
+              </button>
+              <button
+                onClick={() => setShowDailyTargetModal(false)}
+                className="flex-1 py-3 rounded-xl bg-white border border-divider text-text-main font-semibold"
+              >
+                취소
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* 1. Manage Modal (New) */}
       {showManageModal && (

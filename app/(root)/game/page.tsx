@@ -10,48 +10,53 @@ interface GameItem {
   description: string
   icon: string
   comingSoon?: boolean
+  href?: string
 }
 
 const games: GameItem[] = [
   {
     id: 1,
-    name: '게임 1',
-    description: '게임 설명이 들어갑니다',
-    icon: '🎮',
-    comingSoon: true,
+    name: 'NEON RAIN',
+    description: '떨어지는 단어를 맞춰보세요',
+    icon: '🌧️',
+    comingSoon: false,
+    href: '/game/rain',
   },
   {
     id: 2,
-    name: '게임 2',
-    description: '게임 설명이 들어갑니다',
-    icon: '🎯',
-    comingSoon: true,
+    name: 'WORD BLAST',
+    description: '콤보로 폭발적인 점수를!',
+    icon: '💥',
+    comingSoon: false,
+    href: '/game/blast',
   },
   {
     id: 3,
-    name: '게임 3',
-    description: '게임 설명이 들어갑니다',
-    icon: '🎲',
-    comingSoon: true,
+    name: 'FLASH QUIZ',
+    description: '3초 안에 빠르게 선택!',
+    icon: '⚡',
+    comingSoon: false,
+    href: '/game/flash',
   },
   {
     id: 4,
-    name: '게임 4',
-    description: '게임 설명이 들어갑니다',
-    icon: '🧩',
-    comingSoon: true,
+    name: 'WORD MATCH',
+    description: '카드를 뒤집어 매칭하세요',
+    icon: '🎴',
+    comingSoon: false,
+    href: '/game/match',
   },
   {
     id: 5,
     name: '게임 5',
-    description: '게임 설명이 들어갑니다',
+    description: '준비 중입니다',
     icon: '🎪',
     comingSoon: true,
   },
   {
     id: 6,
     name: '게임 6',
-    description: '게임 설명이 들어갑니다',
+    description: '준비 중입니다',
     icon: '🎨',
     comingSoon: true,
   },
@@ -77,17 +82,15 @@ export default function GamePage() {
             <button
               key={game.id}
               onClick={() => {
-                // 추후 게임 페이지로 이동
-                if (!game.comingSoon) {
-                  // router.push(`/game/${game.id}`)
+                if (!game.comingSoon && (game as any).href) {
+                  router.push((game as any).href)
                 }
               }}
               disabled={game.comingSoon}
-              className={`bg-surface rounded-card shadow-soft p-6 text-center button-press transition-all ${
-                game.comingSoon
-                  ? 'opacity-75 cursor-not-allowed'
-                  : 'hover:shadow-md hover:scale-105'
-              }`}
+              className={`bg-surface rounded-card shadow-soft p-6 text-center button-press transition-all ${game.comingSoon
+                ? 'opacity-75 cursor-not-allowed'
+                : 'hover:shadow-md hover:scale-105'
+                }`}
             >
               {/* 게임 아이콘 */}
               <div className="text-5xl mb-3">{game.icon}</div>

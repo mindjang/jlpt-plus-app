@@ -1,13 +1,17 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { signInWithEmail, signUpWithEmail, signInWithGoogle } from '@/lib/firebase/auth'
 
 export function LoginForm() {
+  const router = useRouter()
   const [isSignUp, setIsSignUp] = useState(false)
-  // 테스트 계정 정보 (개발용)
-  const [email, setEmail] = useState('test@jlpt-plus.app')
-  const [password, setPassword] = useState('test123456')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [name, setName] = useState('')
+  const [phoneNumber, setPhoneNumber] = useState('')
+
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -18,14 +22,21 @@ export function LoginForm() {
 
     try {
       if (isSignUp) {
-        await signUpWithEmail(email, password)
+        if (!name.trim()) {
+          throw new Error('이름을 입력해주세요.')
+        }
+        if (!phoneNumber.trim()) {
+          throw new Error('휴대폰 번호를 입력해주세요.')
+        }
+        await signUpWithEmail(email, password, name, phoneNumber)
       } else {
         await signInWithEmail(email, password)
       }
+      router.replace('/my')
     } catch (err) {
       const error = err as { code?: string; message?: string }
       let errorMessage = error.message || '인증에 실패했습니다.'
-      
+
       // Firebase 오류 메시지 한글화
       if (error.code === 'auth/operation-not-allowed') {
         errorMessage = '이메일/비밀번호 인증이 활성화되지 않았습니다. Firebase Console에서 활성화해주세요.'
@@ -40,7 +51,7 @@ export function LoginForm() {
       } else if (error.code === 'auth/weak-password') {
         errorMessage = '비밀번호가 너무 약합니다. (최소 6자)'
       }
-      
+
       setError(errorMessage)
     } finally {
       setLoading(false)
@@ -53,16 +64,17 @@ export function LoginForm() {
 
     try {
       await signInWithGoogle()
+      router.replace('/my')
     } catch (err) {
       const error = err as { code?: string; message?: string }
       let errorMessage = error.message || 'Google 로그인에 실패했습니다.'
-      
+
       if (error.code === 'auth/operation-not-allowed') {
         errorMessage = 'Google 로그인이 활성화되지 않았습니다. Firebase Console에서 활성화해주세요.'
       } else if (error.code === 'auth/popup-closed-by-user') {
         errorMessage = '로그인 창이 닫혔습니다.'
       }
-      
+
       setError(errorMessage)
     } finally {
       setLoading(false)
@@ -83,6 +95,33 @@ export function LoginForm() {
         )}
 
         <form onSubmit={handleEmailAuth} className="space-y-4 mb-4">
+          {isSignUp && (
+            <>
+              <div>
+                <label className="block text-body text-text-main mb-2">이름</label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  placeholder="홍길동"
+                  className="w-full px-4 py-2 rounded-card border border-divider bg-surface text-text-main"
+                />
+              </div>
+              <div>
+                <label className="block text-body text-text-main mb-2">휴대폰 번호</label>
+                <input
+                  type="tel"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  required
+                  placeholder="010-1234-5678"
+                  className="w-full px-4 py-2 rounded-card border border-divider bg-surface text-text-main"
+                />
+              </div>
+            </>
+          )}
+
           <div>
             <label className="block text-body text-text-main mb-2">이메일</label>
             <input
@@ -90,6 +129,7 @@ export function LoginForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              placeholder="email@example.com"
               className="w-full px-4 py-2 rounded-card border border-divider bg-surface text-text-main"
             />
           </div>
@@ -101,6 +141,7 @@ export function LoginForm() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              placeholder="••••••"
               className="w-full px-4 py-2 rounded-card border border-divider bg-surface text-text-main"
             />
           </div>

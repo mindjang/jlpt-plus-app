@@ -47,6 +47,7 @@ export async function createUserDocument(
     email?: string
     displayName?: string
     photoURL?: string
+    phoneNumber?: string
   }
 ) {
   const dbInstance = getDbInstance()
@@ -66,6 +67,7 @@ export async function createUserDocument(
       createdAt: now,
       email: initialData?.email,
       photoURL: initialData?.photoURL,
+      phoneNumber: initialData?.phoneNumber,
     },
     settings: {
       dailyNewLimit: 20, // 기본값
@@ -174,7 +176,7 @@ export async function getReviewCards(uid: string, maxCards: number = 100) {
   const dbInstance = getDbInstance()
   const nowMinutes = Math.floor(Date.now() / (1000 * 60))
   const cardsRef = collection(dbInstance, 'users', uid, 'cards')
-  
+
   const q = query(
     cardsRef,
     where('due', '<=', nowMinutes),
@@ -546,7 +548,7 @@ export async function getLevelStats(uid: string, level: string): Promise<LevelSt
 export async function initializeLevelStats(uid: string, level: string): Promise<LevelStats> {
   const dbInstance = getDbInstance()
   const ref = statsDocRef(dbInstance, uid, level)
-  
+
   const initialStats: LevelStats = {
     level: level as any,
     wordStats: {
@@ -565,7 +567,7 @@ export async function initializeLevelStats(uid: string, level: string): Promise<
     },
     lastUpdated: Date.now(),
   }
-  
+
   await setDoc(ref, initialStats)
   return initialStats
 }
@@ -591,12 +593,12 @@ export async function updateLevelStats(
 ): Promise<void> {
   const dbInstance = getDbInstance()
   const ref = statsDocRef(dbInstance, uid, level)
-  
+
   const statsType = cardType === 'word' ? 'wordStats' : 'kanjiStats'
   const updateObj: any = {
     lastUpdated: Date.now(),
   }
-  
+
   if (updates.totalDelta) {
     updateObj[`${statsType}.total`] = (await getDoc(ref)).data()?.[statsType]?.total + updates.totalDelta || updates.totalDelta
   }
@@ -612,7 +614,7 @@ export async function updateLevelStats(
   if (updates.longTermMemoryDelta) {
     updateObj[`${statsType}.longTermMemory`] = (await getDoc(ref)).data()?.[statsType]?.longTermMemory + updates.longTermMemoryDelta || updates.longTermMemoryDelta
   }
-  
+
   await setDoc(ref, updateObj, { merge: true })
 }
 
@@ -626,7 +628,7 @@ export async function recalculateLevelStats(uid: string, level: string): Promise
   const dbInstance = getDbInstance()
   const cardsMap = await getCardsByLevel(uid, level, 1000)
   const nowMinutes = Math.floor(Date.now() / (1000 * 60))
-  
+
   const wordStats = {
     total: 0,
     new: 0,
@@ -634,7 +636,7 @@ export async function recalculateLevelStats(uid: string, level: string): Promise
     review: 0,
     longTermMemory: 0,
   }
-  
+
   const kanjiStats = {
     total: 0,
     new: 0,
@@ -642,35 +644,72 @@ export async function recalculateLevelStats(uid: string, level: string): Promise
     review: 0,
     longTermMemory: 0,
   }
-  
+
   cardsMap.forEach((card) => {
     const stats = card.type === 'word' ? wordStats : kanjiStats
     stats.total++
-    
+
     // 카드 상태 판정
     const intervalDays = card.interval / (24 * 60)
-    
+
     if (intervalDays >= LONG_TERM_MEMORY_INTERVAL_DAYS || card.reps >= LONG_TERM_MEMORY_REPS) {
       stats.longTermMemory++
     } else if (intervalDays >= 1) {
       stats.learning++
     }
-    
+
     if (card.due <= nowMinutes && !card.suspended) {
       stats.review++
     }
   })
-  
+
   const newStats: LevelStats = {
     level: level as any,
     wordStats,
     kanjiStats,
     lastUpdated: Date.now(),
   }
-  
+
   const ref = statsDocRef(dbInstance, uid, level)
   await setDoc(ref, newStats)
-  
+
   return newStats
+}
+
+// ==================== Study Settings Management ====================
+
+export interface StudySettings {
+  [level: string]: {
+    word: boolean
+    kanji: boolean
+  }
+}
+
+const studySettingsRef = (dbInstance: Firestore) => doc(dbInstance, 'settings', 'study')
+
+export async function getAllUsers(): Promise<UserProfile[]> {
+  const dbInstance = getDbInstance()
+  const usersRef = collection(dbInstance, 'users')
+  const snapshot = await getDocs(usersRef)
+
+  return snapshot.docs.map(doc => {
+    const data = doc.data()
+    return {
+      uid: doc.id,
+      ...data.profile
+    } as UserProfile
+  })
+}
+
+export async function getStudySettings(): Promise<StudySettings | null> {
+  const dbInstance = getDbInstance()
+  const snap = await getDoc(studySettingsRef(dbInstance))
+  if (!snap.exists()) return null
+  return snap.data() as StudySettings
+}
+
+export async function updateStudySettings(settings: StudySettings): Promise<void> {
+  const dbInstance = getDbInstance()
+  await setDoc(studySettingsRef(dbInstance), settings, { merge: true })
 }
 

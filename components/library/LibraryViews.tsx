@@ -1,9 +1,8 @@
-'use client'
-
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Level, levelData, levelGradients } from '@/data'
-import { ChevronRight, Book, Type, ArrowRight } from 'lucide-react'
+import { ChevronDown, Book, Type, ArrowRight, Lock } from 'lucide-react'
+import { getStudySettings, StudySettings } from '@/lib/firebase/firestore'
 
 // --- Types & Constants & Helpers ---
 const levels: Level[] = ['N5', 'N4', 'N3', 'N2', 'N1']
@@ -24,9 +23,22 @@ interface ViewProps {
 // --- UI 1: Stack Level View (Interactive Accordion) ---
 export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
     const [expandedLevel, setExpandedLevel] = useState<Level | null>('N5')
+    const [settings, setSettings] = useState<StudySettings | null>(null)
+
+    useEffect(() => {
+        getStudySettings().then(s => setSettings(s))
+    }, [])
+
+    const isEnabled = (level: Level, type: 'word' | 'kanji') => {
+        // Default to true if loading or no settings found
+        if (!settings) return true
+        const s = settings[level]
+        if (!s) return true
+        return s[type]
+    }
 
     return (
-        <div className="flex flex-col gap-2 p-4 pb-24 min-h-[80vh]">
+        <div className="flex flex-col gap-4 p-4 pb-24 min-h-[80vh]">
             {levels.map((level, i) => {
                 const isExpanded = expandedLevel === level
                 const data = levelData[level]
@@ -36,7 +48,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                         key={level}
                         layout
                         onClick={() => setExpandedLevel(isExpanded ? null : level)}
-                        className={`relative rounded-3xl overflow-hidden cursor-pointer shadow-soft transition-all duration-500 ease-spring`}
+                        className={`relative rounded-2xl overflow-hidden cursor-pointer shadow-soft transition-all duration-500 ease-spring`}
                         style={{
                             ...getGradientStyle(level),
                             height: isExpanded ? '280px' : '72px',
@@ -64,7 +76,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                 animate={{ rotate: isExpanded ? 180 : 0 }}
                                 className="w-8 h-8 rounded-full bg-white/30 flex items-center justify-center"
                             >
-                                <ChevronRight size={20} className="text-text-main opacity-60" />
+                                <ChevronDown size={20} className="text-text-main opacity-60" />
                             </motion.div>
                         </motion.div>
 
@@ -83,28 +95,52 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                         </p>
 
                                         <div className="grid grid-cols-2 gap-3">
+                                            {/* Word Button */}
                                             <button
-                                                onClick={(e) => { e.stopPropagation(); onNavigate(level, 'word') }}
-                                                className="flex flex-col items-center justify-center p-4 bg-white/60 hover:bg-white rounded-2xl gap-2 transition-colors group"
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    if (isEnabled(level, 'word')) onNavigate(level, 'word');
+                                                }}
+                                                className={`flex flex-col items-center justify-center p-4 rounded-2xl gap-2 transition-colors group relative overflow-hidden ${isEnabled(level, 'word')
+                                                        ? 'bg-white/60 hover:bg-white'
+                                                        : 'bg-white/30 cursor-not-allowed'
+                                                    }`}
                                             >
-                                                <div className="p-3 bg-white rounded-full shadow-sm text-orange-500 group-hover:scale-110 transition-transform">
+                                                {!isEnabled(level, 'word') && (
+                                                    <div className="absolute inset-0 bg-gray-500/10 backdrop-blur-[1px] flex items-center justify-center z-10">
+                                                        <span className="bg-black/60 text-white text-xs px-2 py-1 rounded-full">준비 중</span>
+                                                    </div>
+                                                )}
+                                                <div className={`p-3 bg-white rounded-full shadow-sm text-orange-500 ${isEnabled(level, 'word') ? 'group-hover:scale-110' : 'opacity-50'} transition-transform`}>
                                                     <Book size={20} />
                                                 </div>
                                                 <div className="text-center">
-                                                    <span className="block text-sm font-bold text-text-main">단어장</span>
+                                                    <span className={`block text-sm font-bold text-text-main ${!isEnabled(level, 'word') && 'opacity-50'}`}>단어장</span>
                                                     <span className="text-xs text-text-sub">{data.words}개</span>
                                                 </div>
                                             </button>
 
+                                            {/* Kanji Button */}
                                             <button
-                                                onClick={(e) => { e.stopPropagation(); onNavigate(level, 'kanji') }}
-                                                className="flex flex-col items-center justify-center p-4 bg-white/60 hover:bg-white rounded-2xl gap-2 transition-colors group"
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    if (isEnabled(level, 'kanji')) onNavigate(level, 'kanji');
+                                                }}
+                                                className={`flex flex-col items-center justify-center p-4 rounded-2xl gap-2 transition-colors group relative overflow-hidden ${isEnabled(level, 'kanji')
+                                                        ? 'bg-white/60 hover:bg-white'
+                                                        : 'bg-white/30 cursor-not-allowed'
+                                                    }`}
                                             >
-                                                <div className="p-3 bg-white rounded-full shadow-sm text-blue-500 group-hover:scale-110 transition-transform">
+                                                {!isEnabled(level, 'kanji') && (
+                                                    <div className="absolute inset-0 bg-gray-500/10 backdrop-blur-[1px] flex items-center justify-center z-10">
+                                                        <span className="bg-black/60 text-white text-xs px-2 py-1 rounded-full">준비 중</span>
+                                                    </div>
+                                                )}
+                                                <div className={`p-3 bg-white rounded-full shadow-sm text-blue-500 ${isEnabled(level, 'kanji') ? 'group-hover:scale-110' : 'opacity-50'} transition-transform`}>
                                                     <Type size={20} />
                                                 </div>
                                                 <div className="text-center">
-                                                    <span className="block text-sm font-bold text-text-main">한자 암기</span>
+                                                    <span className={`block text-sm font-bold text-text-main ${!isEnabled(level, 'kanji') && 'opacity-50'}`}>한자 암기</span>
                                                     <span className="text-xs text-text-sub">{data.kanji}개</span>
                                                 </div>
                                             </button>
@@ -122,6 +158,19 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
 
 // --- UI 2: Minimal Content View (Swiss Style List) ---
 export const MinimalContentView: React.FC<ViewProps> = ({ onNavigate }) => {
+    const [settings, setSettings] = useState<StudySettings | null>(null)
+
+    useEffect(() => {
+        getStudySettings().then(s => setSettings(s))
+    }, [])
+
+    const isEnabled = (level: Level, type: 'word' | 'kanji') => {
+        if (!settings) return true
+        const s = settings[level]
+        if (!s) return true
+        return s[type]
+    }
+
     const items = React.useMemo(() => {
         const arr: { level: Level, type: 'word' | 'kanji' }[] = []
         levels.forEach(level => { arr.push({ level, type: 'word' }); arr.push({ level, type: 'kanji' }) })
@@ -133,6 +182,7 @@ export const MinimalContentView: React.FC<ViewProps> = ({ onNavigate }) => {
             {items.map((item, i) => {
                 const data = levelData[item.level]
                 const count = item.type === 'word' ? data.words : data.kanji
+                const enabled = isEnabled(item.level, item.type)
 
                 return (
                     <motion.div
@@ -140,22 +190,33 @@ export const MinimalContentView: React.FC<ViewProps> = ({ onNavigate }) => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: i * 0.04 }}
-                        onClick={() => onNavigate(item.level, item.type)}
-                        className="flex items-center py-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50 active:bg-gray-50 transition-colors group"
+                        onClick={() => {
+                            if (enabled) onNavigate(item.level, item.type)
+                        }}
+                        className={`flex items-center py-4 border-b border-gray-100 transition-colors group ${enabled ? 'cursor-pointer hover:bg-gray-50 active:bg-gray-50' : 'opacity-50 cursor-not-allowed bg-gray-50/50'
+                            }`}
                     >
                         <div className={`w-12 text-lg font-black transition-colors ${getTextColorClass(item.level)}`}>
                             {item.level}
                         </div>
                         <div className="flex-1">
-                            <div className="text-base font-bold text-gray-900">
+                            <div className="text-base font-bold text-gray-900 flex items-center gap-2">
                                 {item.type === 'word' ? 'Vocabulary' : 'Kanji'}
+                                {!enabled && <span className="text-[10px] bg-gray-200 text-gray-500 px-1.5 py-0.5 rounded">준비 중</span>}
                             </div>
                             <div className="text-xs text-gray-400 font-mono mt-0.5">
                                 {count} CARDS
                             </div>
                         </div>
-                        <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center group-hover:bg-black group-hover:border-black group-hover:text-white group-active:bg-black group-active:border-black group-active:text-white transition-colors">
-                            <ArrowRight size={14} className="text-gray-400 group-hover:text-white group-active:text-white" />
+                        <div className={`w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center transition-colors ${enabled
+                                ? 'group-hover:bg-black group-hover:border-black group-hover:text-white group-active:bg-black group-active:border-black group-active:text-white'
+                                : ''
+                            }`}>
+                            {enabled ? (
+                                <ArrowRight size={14} className="text-gray-400 group-hover:text-white group-active:text-white" />
+                            ) : (
+                                <Lock size={14} className="text-gray-300" />
+                            )}
                         </div>
                     </motion.div>
                 )

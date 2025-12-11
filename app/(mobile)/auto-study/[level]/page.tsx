@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
@@ -15,6 +15,8 @@ import type { Word, Kanji } from '@/lib/types/content'
 import { SemicircleProgress } from '@/components/ui/SemicircleProgress'
 import { ProgressDisplay } from '@/components/ui/ProgressDisplay'
 import { useStudyProgress } from '@/hooks/useStudyProgress'
+import { useUserSettings } from '@/hooks/useUserSettings'
+import { AUTO_STUDY_TARGET_OPTIONS } from '@/lib/constants/ui'
 
 type StudyMode = 'auto' | 'chapter'
 
@@ -22,6 +24,7 @@ export default function AutoStudyPage() {
   const router = useRouter()
   const params = useParams()
   const { user } = useAuth()
+  const { settings } = useUserSettings(user)
   const level = (params.level as string)?.toUpperCase() as Level || 'N5'
   const gradient = getLevelGradient(params.level as string)
   const data = levelData[level]
@@ -30,6 +33,13 @@ export default function AutoStudyPage() {
   const [showModeModal, setShowModeModal] = useState(false)
   const [targetAmount, setTargetAmount] = useState(20)
   const [activeTab, setActiveTab] = useState<'word' | 'kanji'>('word')
+
+  // 사용자 설정 불러오면 기본 목표 적용
+  useEffect(() => {
+    if (settings?.dailyNewLimit) {
+      setTargetAmount(settings.dailyNewLimit)
+    }
+  }, [settings.dailyNewLimit])
 
   // 단어/한자 데이터 변환
   const words: Word[] = useMemo(() => {
@@ -144,10 +154,11 @@ export default function AutoStudyPage() {
                       paddingRight: '2.5rem',
                     }}
                   >
-                    <option value={10}>10개</option>
-                    <option value={20}>20개</option>
-                    <option value={30}>30개</option>
-                    <option value={50}>50개</option>
+                    {AUTO_STUDY_TARGET_OPTIONS.map((opt) => (
+                      <option key={opt} value={opt}>
+                        {opt}개
+                      </option>
+                    ))}
                   </select>
                 </div>
 

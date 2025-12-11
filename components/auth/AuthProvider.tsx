@@ -20,9 +20,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // 초기 유저 상태 확인
+    setLoading(true)
     const currentUser = getCurrentUser()
-    setUser(currentUser)
-    setLoading(false)
+    if (currentUser) {
+      setUser(currentUser)
+    }
 
     // Auth 상태 변경 감지
     const unsubscribe = onAuthChange((user) => {

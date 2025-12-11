@@ -60,7 +60,7 @@ export function StudySession({
   const gradient = getLevelGradient(level.toLowerCase())
   const [sessionReserved, setSessionReserved] = useState(false)
   const [paywallMessage, setPaywallMessage] = useState<string | null>(null)
-  
+
   const {
     queue: initialQueue,
     loading: queueLoading,
@@ -94,6 +94,16 @@ export function StudySession({
 
   // 세션 종료 처리 (배치 저장 + 통계 계산)
   const finishSession = async (finalQueue: StudyCard[]) => {
+    // 비회원/만료 회원: 실제 세션 완료 시 1회차 소진 처리
+    if (user && membershipStatus !== 'member' && !sessionReserved) {
+      try {
+        await recordSession()
+        setSessionReserved(true) // 동일 세션 내 재확인용
+      } catch (error) {
+        logger.error('[StudySession] recordSession on finish failed:', error)
+      }
+    }
+
     if (pendingUpdates.size > 0 && user) {
       const emptyMap = await savePendingUpdates(user.uid, pendingUpdates)
       setPendingUpdates(emptyMap)
@@ -162,22 +172,15 @@ export function StudySession({
     return () => clearInterval(interval)
   }, [pendingUpdates, user])
 
-  // 비회원/만료 회원의 하루 1회차 기록
+  // 무료 회차 사용 여부 안내 (비회원/만료 회원)
   useEffect(() => {
     if (!user || membershipLoading) return
-    if (!canStartSession) {
+    if (!canStartSession && !sessionReserved) {
       setPaywallMessage('오늘의 무료 학습 회차를 모두 사용했어요. 회원권이 필요합니다.')
-      return
+    } else {
+      setPaywallMessage(null)
     }
-    if (!sessionReserved && membershipStatus !== 'member') {
-      recordSession()
-        .then(() => setSessionReserved(true))
-        .catch((error) => {
-          logger.error('[StudySession] recordSession failed:', error)
-          setPaywallMessage(error?.message || '학습을 시작할 수 없습니다.')
-        })
-    }
-  }, [user, membershipLoading, canStartSession, sessionReserved, membershipStatus, recordSession])
+  }, [user, membershipLoading, canStartSession, sessionReserved])
 
   const handleGrade = (grade: Grade) => {
     if (!user) return
@@ -298,7 +301,7 @@ export function StudySession({
   }
 
   const currentCard = queue[currentIndex]
-  
+
   // currentCard가 없는 경우 (인덱스 범위 초과 등)
   if (!currentCard) {
     return (
@@ -359,26 +362,24 @@ export function StudySession({
           <div className="flex gap-2">
             <button
               onClick={() => handleGrade('again')}
-              className={`button-press flex-1 py-4 px-4 rounded-card text-body font-medium transition-colors ${
-                selectedGrade === 'again'
+              className={`button-press flex-1 py-4 px-4 rounded-card text-body font-medium transition-colors ${selectedGrade === 'again'
                   ? 'bg-gray-300 text-text-main'
                   : 'bg-gray-200 text-text-main hover:bg-gray-250'
-              }`}
+                }`}
             >
               다시 학습
             </button>
             <button
               onClick={() => handleGrade('good')}
-              className={`button-press flex-1 py-4 px-4 rounded-card text-body font-medium transition-colors ${
-                selectedGrade === 'good'
+              className={`button-press flex-1 py-4 px-4 rounded-card text-body font-medium transition-colors ${selectedGrade === 'good'
                   ? 'bg-gray-600 text-white'
                   : 'bg-gray-500 text-white hover:bg-gray-550'
-              }`}
+                }`}
             >
               <div>알고있음</div>
               {selectedGrade === 'good' && nextReviewInterval !== null && (
                 <div className="text-label mt-1">
-                  {nextReviewInterval < 1440 
+                  {nextReviewInterval < 1440
                     ? `${Math.round(nextReviewInterval / 60)}시간 후 복습`
                     : `${minutesToDays(nextReviewInterval)}일 후 복습`
                   }

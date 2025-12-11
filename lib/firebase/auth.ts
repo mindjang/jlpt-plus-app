@@ -22,7 +22,7 @@ function getAuthInstance(): Auth {
 /**
  * 이메일/비밀번호로 회원가입
  */
-export async function signUpWithEmail(email: string, password: string) {
+export async function signUpWithEmail(email: string, password: string, displayName?: string, phoneNumber?: string) {
   const authInstance = getAuthInstance()
   const userCredential = await createUserWithEmailAndPassword(authInstance, email, password)
   const user = userCredential.user
@@ -30,8 +30,9 @@ export async function signUpWithEmail(email: string, password: string) {
   // 유저 문서 생성
   await createUserDocument(user.uid, {
     email: user.email || undefined,
-    displayName: user.displayName || undefined,
+    displayName: displayName || user.displayName || undefined,
     photoURL: user.photoURL || undefined,
+    phoneNumber: phoneNumber || undefined,
   })
 
   return user

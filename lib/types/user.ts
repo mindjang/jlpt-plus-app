@@ -2,6 +2,7 @@
 import type { JlptLevel } from './content'
 
 export interface UserProfile {
+  uid?: string // Added for easier identification in lists
   displayName?: string
   createdAt: number // epoch ms
   targetLevel?: JlptLevel

@@ -1,5 +1,8 @@
 'use client'
 
+import { AdminContent } from '@/components/admin/AdminContent'
+import { AdminUsers } from '@/components/admin/AdminUsers'
+import { AdminStats } from '@/components/admin/AdminStats'
 import React, { useState, useEffect, useCallback } from 'react'
 import { AppBar } from '@/components/ui/AppBar'
 import { Modal } from '@/components/ui/Modal'
@@ -219,12 +222,18 @@ export default function AdminPage() {
           <h2 className="text-title font-semibold text-text-main mb-6">관리자 페이지</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <div className="bg-surface rounded-card p-6 shadow-soft">
+            <div
+              className="bg-surface rounded-card p-6 shadow-soft cursor-pointer hover:shadow-md transition-shadow"
+              onClick={() => setActiveSection(activeSection === 'users' ? null : 'users')}
+            >
               <h3 className="text-subtitle font-semibold text-text-main mb-2">사용자 관리</h3>
               <p className="text-body text-text-sub">사용자 목록 및 권한 관리</p>
             </div>
 
-            <div className="bg-surface rounded-card p-6 shadow-soft">
+            <div
+              className="bg-surface rounded-card p-6 shadow-soft cursor-pointer hover:shadow-md transition-shadow"
+              onClick={() => setActiveSection(activeSection === 'content' ? null : 'content')}
+            >
               <h3 className="text-subtitle font-semibold text-text-main mb-2">콘텐츠 관리</h3>
               <p className="text-body text-text-sub">단어, 한자, 예문 관리</p>
             </div>
@@ -237,11 +246,19 @@ export default function AdminPage() {
               <p className="text-body text-text-sub">기간제 쿠폰 코드 생성 및 관리</p>
             </div>
 
-            <div className="bg-surface rounded-card p-6 shadow-soft">
+            <div
+              className="bg-surface rounded-card p-6 shadow-soft cursor-pointer hover:shadow-md transition-shadow"
+              onClick={() => setActiveSection(activeSection === 'stats' ? null : 'stats')}
+            >
               <h3 className="text-subtitle font-semibold text-text-main mb-2">통계 분석</h3>
               <p className="text-body text-text-sub">학습 통계 및 분석</p>
             </div>
           </div>
+
+          {/* 섹션 렌더링 */}
+          {activeSection === 'users' && <AdminUsers />}
+          {activeSection === 'content' && <AdminContent />}
+          {activeSection === 'stats' && <AdminStats />}
 
           {/* 쿠폰 코드 관리 섹션 */}
           {activeSection === 'codes' && (
@@ -284,9 +301,8 @@ export default function AdminPage() {
               {/* 메시지 */}
               {message && (
                 <div
-                  className={`mb-4 p-3 rounded-card text-body ${
-                    message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-                  }`}
+                  className={`mb-4 p-3 rounded-card text-body ${message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                    }`}
                 >
                   {message.text}
                 </div>

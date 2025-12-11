@@ -1,6 +1,6 @@
 import { KanjiAliveEntry } from '../types'
 
-// N2 한자 데이터 (380개)
+// N2 한자 데이터 (391개)
 export const n2Kanji: KanjiAliveEntry[] = [
   {
     "_id": "54317aef791eba5146ee4a50",
@@ -9,8 +9,7 @@ export const n2Kanji: KanjiAliveEntry[] = [
     "kanji": {
       "character": "査",
       "meaning": {
-        "english": "look into, investigate",
-        "korean": "조사하다"
+        "english": "look into, investigate"
       },
       "strokes": {
         "count": 9,
@@ -5367,7 +5366,6 @@ export const n2Kanji: KanjiAliveEntry[] = [
     "dicn": "2637",
     "mn_hint": "Water シ level decreases when there is a hole 口 in the dam/fortress [116]."
   },
-  
   {
     "_id": "54317ad9791eba5146ee48b8",
     "_rev": "11-96b70682ce1e0d9c7e85f7bf459d4ba5",
@@ -10693,7 +10691,6 @@ export const n2Kanji: KanjiAliveEntry[] = [
     "dicn": "489",
     "mn_hint": "Person イ \"enclosed\" 囗 in his many 十 individual characteristics 口 <span class='note'>(orig. \"mouth\")</span>."
   },
-  
   {
     "_id": "54317afa791eba5146ee4b1c",
     "_rev": "12-c0df4e173a53addff2531106d7ab281f",
@@ -14258,7 +14255,6 @@ export const n2Kanji: KanjiAliveEntry[] = [
     "dicn": "1078",
     "mn_hint": "Place 土 made strong with soldiers 成 <span class='note'>(10,000 万 men with spears 戈)</span>."
   },
-  
   {
     "_id": "54317ada791eba5146ee48c6",
     "_rev": "12-0b04df0aee5fb14a2f37c29c12ef30d1",
@@ -32124,7 +32120,6 @@ export const n2Kanji: KanjiAliveEntry[] = [
     "dicn": "197",
     "mn_hint": "Receive humbly like hands [166] receiving holy water [167]."
   },
-  
   {
     "_id": "54317ada791eba5146ee48c4",
     "_rev": "10-7a60011514c813fc290323e995082bae",
@@ -55330,7 +55325,6 @@ export const n2Kanji: KanjiAliveEntry[] = [
     "dicn": "1820",
     "mn_hint": "Part of the body 月 one can use to open a stuck door 戸."
   },
-  
   {
     "_id": "54317add791eba5146ee48f1",
     "_rev": "10-3e57581788b36166d2b3fa03b471539d",
@@ -59490,7 +59484,6 @@ export const n2Kanji: KanjiAliveEntry[] = [
     "dicn": "1492",
     "mn_hint": "Many 十 dried seeds sowed in the soil 一."
   },
-  
   {
     "_id": "54317b09791eba5146ee4c40",
     "_rev": "10-e6edc11a3212c38209fbc3646d0f2f00",
@@ -60643,7 +60636,6 @@ export const n2Kanji: KanjiAliveEntry[] = [
     "dicn": "1484",
     "mn_hint": "Width indicated with flags 巾placed between one 一 field 田 and another 口."
   },
-  
   {
     "_id": "54317b0e791eba5146ee4c8d",
     "_rev": "11-91958146c96c448eb68ad1a09b0e0549",
@@ -63473,7 +63465,6 @@ export const n2Kanji: KanjiAliveEntry[] = [
     "dicn": "668",
     "mn_hint": "Superior with a sword 刀 summoning 口 people."
   },
-  
   {
     "_id": "54317adc791eba5146ee48e3",
     "_rev": "10-9b463013bee79228820fdd6dd4212efa",
@@ -67218,7 +67209,6 @@ export const n2Kanji: KanjiAliveEntry[] = [
     "dicn": "3492",
     "mn_hint": "Please view the radical animation on the left."
   },
-  
   {
     "_id": "54317b10791eba5146ee4cb0",
     "_rev": "9-354d49f42b79e46c4d1461dff8ff3b74",
@@ -72448,7 +72438,6 @@ export const n2Kanji: KanjiAliveEntry[] = [
     "dicn": "210",
     "mn_hint": "Person 尸 with a knife刂carving designs on a woodblock to print it on a cloth 巾."
   },
-  
   {
     "_id": "54317ad1791eba5146ee4829",
     "_rev": "9-6d6f5fad250cb21a3602f6bb229a1cee",
@@ -75107,7 +75096,6 @@ export const n2Kanji: KanjiAliveEntry[] = [
     "dicn": "3695",
     "mn_hint": "Plow 耒 and bring water from the well 井."
   },
-  
   {
     "_id": "54317ae9791eba5146ee49dd",
     "_rev": "10-98d3bef72914efe83e3a7d7b6e1250d8",
@@ -75413,5 +75401,5 @@ export const n2Kanji: KanjiAliveEntry[] = [
     "dick": "1567",
     "dicn": "2432",
     "mn_hint": "Affirming the beauty of life by stopping 止 to admire the moon 月."
-  }
+  },
 ]

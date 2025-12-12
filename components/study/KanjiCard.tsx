@@ -135,7 +135,6 @@ export function KanjiCard({
             {/* 의미 표시 (visibility로 높이 유지) */}
             <div className={`mb-4 ${showMeaning ? 'visible' : 'invisible'}`}>
               <p className="text-title text-text-main font-semibold">
-                {kanji.meaningKo}
               </p>
             </div>
 
@@ -239,7 +238,6 @@ export function KanjiCard({
                     </div>
                     {showMeaning && (
                       <span className="text-body text-text-sub">
-                        {word.meaningKo}
                       </span>
                     )}
                   </div>

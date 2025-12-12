@@ -27,6 +27,42 @@ function LearnContent() {
   const [isStudyStarted, setIsStudyStarted] = useState(false)
   const [showExitConfirm, setShowExitConfirm] = useState(false)
   const [pendingNavigation, setPendingNavigation] = useState<(() => void) | null>(null)
+  // 나가기 확인 후에는 뒤로가기 가드를 해제하기 위한 플래그
+  const [allowNavigation, setAllowNavigation] = useState(false)
+
+  // 기본 복귀 경로 (진입 전 페이지인 acquire로 안내)
+  const defaultReturn = () =>
+    router.push(`/acquire/auto-study/${levelParam.toLowerCase()}?type=${typeParam}`)
+
+  // 나가기 확정 이후에 가드 해제 -> 이동을 순서대로 실행
+  useEffect(() => {
+    if (!allowNavigation) return
+    const nav = pendingNavigation || defaultReturn
+    setPendingNavigation(null)
+    nav()
+  }, [allowNavigation, pendingNavigation, router, defaultReturn])
+
+  // 브라우저 뒤로가기 처리
+  useEffect(() => {
+    const handlePopState = (e: PopStateEvent) => {
+      if (isStudyStarted && !completed) {
+        e.preventDefault()
+        setPendingNavigation(() => router.back)
+        setShowExitConfirm(true)
+        // 히스토리에 다시 추가하여 뒤로가기 취소
+        window.history.pushState(null, '', window.location.href)
+      }
+    }
+
+    if (isStudyStarted && !completed && !allowNavigation) {
+      window.history.pushState(null, '', window.location.href)
+      window.addEventListener('popstate', handlePopState)
+    }
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState)
+    }
+  }, [isStudyStarted, completed, router, allowNavigation])
 
   const level = useMemo(() => {
     return levelParam.toUpperCase() as Level
@@ -87,44 +123,22 @@ function LearnContent() {
   }
 
   const handleBack = () => {
-    if (isStudyStarted && !completed) {
+    if (isStudyStarted && !completed && !allowNavigation) {
       setPendingNavigation(() => router.back)
       setShowExitConfirm(true)
     } else {
-      router.back()
+      defaultReturn()
     }
   }
 
   const handleConfirmExit = () => {
+    // 사용자가 나가기를 확정하면 뒤로가기 가드를 해제한 뒤 이동한다.
+    setAllowNavigation(true)
     setShowExitConfirm(false)
-    const nav = pendingNavigation
-    setPendingNavigation(null)
-    if (nav) {
-      nav()
+    if (!pendingNavigation) {
+      setPendingNavigation(defaultReturn)
     }
   }
-
-  // 브라우저 뒤로가기 처리
-  useEffect(() => {
-    const handlePopState = (e: PopStateEvent) => {
-      if (isStudyStarted && !completed) {
-        e.preventDefault()
-        setPendingNavigation(() => router.back)
-        setShowExitConfirm(true)
-        // 히스토리에 다시 추가하여 뒤로가기 취소
-        window.history.pushState(null, '', window.location.href)
-      }
-    }
-
-    if (isStudyStarted && !completed) {
-      window.history.pushState(null, '', window.location.href)
-      window.addEventListener('popstate', handlePopState)
-    }
-
-    return () => {
-      window.removeEventListener('popstate', handlePopState)
-    }
-  }, [isStudyStarted, completed, router])
 
   return (
     <div className="w-full">

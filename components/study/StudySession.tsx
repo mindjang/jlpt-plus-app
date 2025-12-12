@@ -346,13 +346,7 @@ export function StudySession({
         />
       ) : (
         <QuizCard
-          item={currentCard.data}
-          type={currentCard.type}
-          level={currentCard.level}
-          allItems={[...words, ...kanjis]}
-          isNew={currentCard.cardState === null}
-          onGrade={handleGrade}
-          onNext={handleNext}
+ 
         />
       )}
 

@@ -108,7 +108,7 @@ export default function WordDetailPage() {
               level={wordData.level}
               kanji={wordData.kanji}
               onYomi={wordData.onYomi}
-              kunYomi={wordData.kunyomi}
+              kunYomi={wordData.kunYomi}
               radical={wordData.radical}
               strokeCount={wordData.strokeCount}
               relatedWords={wordData.relatedWords}

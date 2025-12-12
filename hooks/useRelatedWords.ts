@@ -16,10 +16,10 @@ const RELATED_WORD_CACHE = new Map<
 >()
 const CACHE_TTL = 7 * 24 * 60 * 60 * 1000 // 7 days
 
-function getCachedRelatedWords(
+async function getCachedRelatedWords(
   kanjiChar: string,
   level: Level
-): Word[] {
+): Promise<Word[]> {
   const key = `${kanjiChar}:${level}`
   const now = Date.now()
   const cached = RELATED_WORD_CACHE.get(key)
@@ -27,11 +27,10 @@ function getCachedRelatedWords(
     return cached.items
   }
 
-  // 해당 레벨의 네이버 단어 데이터에서 한자가 포함된 단어 필터링
+  // 해당 레벨의 네이버 단어 데이터
   const levelWords: NaverWord[] = getNaverWordsByLevel(level)
-  const filteredWords = levelWords.filter(
-    (w) => w.entry.includes(kanjiChar)
-  )
+  // entry에 해당 한자가 포함된 것만 필터링 (상세 데이터 없이 동작)
+  const filteredWords = levelWords.filter((w) => w.entry.includes(kanjiChar))
   
   // NaverWord를 Word 타입으로 변환
   const items: Word[] = filteredWords.map((naverWord, index) =>
@@ -81,36 +80,37 @@ export function useRelatedWords({
   useEffect(() => {
     if (!kanjiCharacter) return
 
-    const allLevels: Level[] = ['N5', 'N4', 'N3', 'N2', 'N1']
-    const newLevelWordsMap: Record<Level, Word[]> = {
-      N5: [],
-      N4: [],
-      N3: [],
-      N2: [],
-      N1: [],
-    }
-    const newAvailableLevels = new Set<Level>()
-
-    // 모든 레벨에 대해 관련 단어 조회
-    allLevels.forEach((level) => {
-      const words = getCachedRelatedWords(kanjiCharacter, level)
-      newLevelWordsMap[level] = words
-      if (words.length > 0) {
-        newAvailableLevels.add(level)
+    const load = async () => {
+      const allLevels: Level[] = ['N5', 'N4', 'N3', 'N2', 'N1']
+      const newLevelWordsMap: Record<Level, Word[]> = {
+        N5: [],
+        N4: [],
+        N3: [],
+        N2: [],
+        N1: [],
       }
-    })
+      const newAvailableLevels = new Set<Level>()
 
-    setLevelWordsMap(newLevelWordsMap)
-    setAvailableLevels(newAvailableLevels)
+      for (const level of allLevels) {
+        const words = await getCachedRelatedWords(kanjiCharacter, level)
+        newLevelWordsMap[level] = words
+        if (words.length > 0) {
+          newAvailableLevels.add(level)
+        }
+      }
 
-    // 첫 번째 사용 가능한 레벨로 초기화 (또는 한자의 레벨)
-    if (kanjiLevel && newAvailableLevels.has(kanjiLevel as Level)) {
-      setActiveLevel(kanjiLevel as Level)
-    } else if (newAvailableLevels.size > 0) {
-      // 사용 가능한 첫 번째 레벨 선택
-      const firstAvailable = Array.from(newAvailableLevels)[0]
-      setActiveLevel(firstAvailable)
+      setLevelWordsMap(newLevelWordsMap)
+      setAvailableLevels(newAvailableLevels)
+
+      if (kanjiLevel && newAvailableLevels.has(kanjiLevel as Level)) {
+        setActiveLevel(kanjiLevel as Level)
+      } else if (newAvailableLevels.size > 0) {
+        const firstAvailable = Array.from(newAvailableLevels)[0]
+        setActiveLevel(firstAvailable)
+      }
     }
+
+    load()
   }, [kanjiCharacter, kanjiLevel])
 
   // 카드가 변경될 때 페이지 초기화

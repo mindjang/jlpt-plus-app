@@ -8,11 +8,11 @@ import { SearchBar } from '@/components/ui/SearchBar'
 import { ListItem } from '@/components/ui/ListItem'
 import {
   getNaverSearchResults,
+  getSearchResults,
   getTotalNaverWordCount,
-  getKanjiSearchResults,
-  getTotalKanjiCount,
+  getTotalWordCount,
 } from '@/data/words/index'
-import type { NaverWord } from '@/data/words/index'
+import type { Word } from '@/data/types'
 
 const INITIAL_DISPLAY_LIMIT = 50
 
@@ -51,7 +51,7 @@ export function SearchContent({
     if (activeTab === 'word') {
       // 네이버 데이터를 SearchResult 형식으로 변환
       const naverResults = getNaverSearchResults(searchQuery)
-      allResults = naverResults.map((w: NaverWord) => {
+      allResults = naverResults.map((w: Word) => {
         // 첫 번째 part의 첫 번째 의미 사용
         const firstMean = w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0
           ? w.partsMeans[0].means[0]
@@ -71,7 +71,7 @@ export function SearchContent({
         }
       })
     } else {
-      allResults = getKanjiSearchResults(searchQuery)
+      allResults = getSearchResults(searchQuery)
     }
 
     if (!searchQuery && allResults.length > INITIAL_DISPLAY_LIMIT) {
@@ -118,7 +118,7 @@ export function SearchContent({
           : getTotalNaverWordCount()
         : searchQuery
           ? results.length
-          : getTotalKanjiCount()
+          : getTotalWordCount()
     }
     return null
   }, [activeTab, searchQuery, results.length, showTotalCount])
@@ -169,7 +169,7 @@ export function SearchContent({
               }`}
             >
               <FontAwesomeIcon icon={faLanguage} className="mr-2" />
-              한자 ({getTotalKanjiCount()})
+              한자 ({getTotalWordCount()})
             </button>
           </div>
         </div>

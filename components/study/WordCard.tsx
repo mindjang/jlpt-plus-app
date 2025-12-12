@@ -125,14 +125,7 @@ export function WordCard({
                 ) : (
                   // 네이버 데이터가 없으면 기존 방식으로 표시
                   <div className="text-center">
-                    <p className="text-title text-text-main font-semibold mb-2">
-                      {word.meaningKo}
-                    </p>
-                    {word.examples && word.examples[0] && (
-                      <div className="text-body text-text-sub">
-                        <p className="text-kr">{word.examples[0].ko}</p>
-                      </div>
-                    )}
+                
                   </div>
                 )}
               </motion.div>

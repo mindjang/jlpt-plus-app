@@ -7,6 +7,21 @@ import { n3Words } from './n3'
 import { n2Words } from './n2'
 import { n1Words } from './n1'
 
+export interface NaverWord {
+  entry_id: string
+  origin_entry_id: string
+  entry: string
+  level: string
+  source: string
+  partsMeans: Array<{
+    part: string | null
+    means: string[]
+  }>
+  category1: string | null
+  category2: string | null
+  category3: string | null
+}
+
 // 레벨별 네이버 단어 데이터 통합
 const allNaverWordsByLevel: Record<Level, Word[]> = {
   N5: n5Words,

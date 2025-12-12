@@ -4,7 +4,7 @@ import React, { useState, useMemo } from 'react'
 import { Modal } from '@/components/ui/Modal'
 import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
-import type { NaverWord } from '@/data/words/index'
+import type { Word } from '@/data/types'
 // We need to import Level type but avoiding circular dependency or complex imports if possible
 // Assuming Level is just 'N1' | 'N2' | ...
 type Level = 'N1' | 'N2' | 'N3' | 'N4' | 'N5'
@@ -24,13 +24,13 @@ export function ContentViewer({ isOpen, onClose, level, type }: ContentViewerPro
     const lvl = level.toUpperCase() as Level
     if (type === 'word') {
       const allWords = getNaverWordsByLevel(lvl)
-      return allWords.map((w: NaverWord, i: number) => {
+      return allWords.map((w: Word, i: number) => {
         // 첫 번째 part의 첫 번째 의미 사용
         const firstMean = w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0
           ? w.partsMeans[0].means[0]
           : ''
         return {
-          id: i,
+        id: i,
           main: w.entry,
           sub: firstMean,
           extra: undefined // 네이버 데이터에는 furigana 정보가 없음

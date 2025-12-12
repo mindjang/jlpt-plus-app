@@ -3,10 +3,11 @@
  * 한자에 대한 관련 단어를 레벨별로 로드하고 관리
  */
 import { useState, useEffect, useMemo } from 'react'
-import { getWordsByLevel } from '@/data/words/index'
-import { convertSearchResultToWord } from '@/lib/utils/dataConverter'
+import { getNaverWordsByLevel } from '@/data/words/index'
+import { convertNaverWordToWord } from '@/lib/utils/dataConverter'
 import type { Word } from '@/lib/types/content'
-import type { Level, SearchResult } from '@/data/types'
+import type { Level } from '@/data/types'
+import type { NaverWord } from '@/data/words/index'
 
 // 한자별 관련 단어 캐시 (7일 유지)
 const RELATED_WORD_CACHE = new Map<
@@ -26,15 +27,15 @@ function getCachedRelatedWords(
     return cached.items
   }
 
-  // 해당 레벨의 단어 데이터에서 한자가 포함된 단어 필터링
-  const levelWords: SearchResult[] = getWordsByLevel(level)
+  // 해당 레벨의 네이버 단어 데이터에서 한자가 포함된 단어 필터링
+  const levelWords: NaverWord[] = getNaverWordsByLevel(level)
   const filteredWords = levelWords.filter(
-    (w) => w.word.includes(kanjiChar)
+    (w) => w.entry.includes(kanjiChar)
   )
   
-  // SearchResult를 Word 타입으로 변환
-  const items: Word[] = filteredWords.map((result, index) =>
-    convertSearchResultToWord(result, `${level}_W_${String(index + 1).padStart(4, '0')}`, 1)
+  // NaverWord를 Word 타입으로 변환
+  const items: Word[] = filteredWords.map((naverWord, index) =>
+    convertNaverWordToWord(naverWord, `${level}_W_${String(index + 1).padStart(4, '0')}`, 1)
   )
   
   RELATED_WORD_CACHE.set(key, { timestamp: now, items })

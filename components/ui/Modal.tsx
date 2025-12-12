@@ -33,7 +33,7 @@ export const Modal: React.FC<ModalProps> = ({
         <>
           {/* Dim 배경 */}
           <motion.div
-            className="fixed inset-0 bg-black z-40"
+            className="fixed inset-0 bg-black z-[60]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.45 }}
             exit={{ opacity: 0 }}
@@ -41,7 +41,7 @@ export const Modal: React.FC<ModalProps> = ({
           />
 
           {/* 모달 */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
+          <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 pointer-events-none">
             <motion.div
               className="bg-surface rounded-card p-6 w-full max-w-md max-h-[90vh] overflow-y-auto pointer-events-auto modal-enter"
               initial={{ opacity: 0, scale: 0.95 }}

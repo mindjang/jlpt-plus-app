@@ -1,11 +1,12 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRotateLeft } from '@fortawesome/free-solid-svg-icons'
 import type { Word } from '@/lib/types/content'
 import type { Grade, UserCardState } from '@/lib/types/srs'
+import { findNaverWord } from '@/data/words/index'
 
 interface WordCardProps {
   word: Word
@@ -29,6 +30,14 @@ export function WordCard({
 }: WordCardProps) {
   const [showMeaning, setShowMeaning] = useState(false)
   const [showFurigana, setShowFurigana] = useState(false)
+
+  // 네이버 단어 데이터 찾기 (kanji 또는 kana로 검색)
+  const naverWord = useMemo(() => {
+    if (word.kanji) {
+      return findNaverWord(word.kanji) || findNaverWord(word.kana)
+    }
+    return findNaverWord(word.kana)
+  }, [word.kanji, word.kana])
 
   // 카드가 변경될 때 상태 초기화
   useEffect(() => {
@@ -84,14 +93,46 @@ export function WordCard({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="mb-4 text-center"
+                className="mb-4"
               >
-                <p className="text-title text-text-main font-semibold mb-2">
-                  {word.meaningKo}
-                </p>
-                {word.examples && word.examples[0] && (
-                  <div className="text-body text-text-sub">
-                    <p className="text-kr">{word.examples[0].ko}</p>
+                {naverWord && naverWord.partsMeans && naverWord.partsMeans.length > 0 ? (
+                  // 네이버 데이터가 있으면 partsMeans 표시
+                  <div className="space-y-3">
+                    {naverWord.partsMeans.map((partMean, index) => (
+                      <div key={index} className="text-center">
+                        {/* Part 뱃지 */}
+                        {partMean.part && (
+                          <div className="mb-2">
+                            <span className="inline-block px-2 py-1 text-label font-medium text-text-sub bg-page rounded-md">
+                              {partMean.part}
+                            </span>
+                          </div>
+                        )}
+                        
+                        {/* Means 표시 */}
+                        {partMean.means && partMean.means.length > 0 && (
+                          <div className="space-y-1">
+                            {partMean.means.map((mean, meanIndex) => (
+                              <div key={meanIndex} className="text-body text-text-main">
+                                {mean}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  // 네이버 데이터가 없으면 기존 방식으로 표시
+                  <div className="text-center">
+                    <p className="text-title text-text-main font-semibold mb-2">
+                      {word.meaningKo}
+                    </p>
+                    {word.examples && word.examples[0] && (
+                      <div className="text-body text-text-sub">
+                        <p className="text-kr">{word.examples[0].ko}</p>
+                      </div>
+                    )}
                   </div>
                 )}
               </motion.div>

@@ -4,36 +4,44 @@ import React from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { AppBar } from '@/components/ui/AppBar'
 import { KanjiDetail } from '@/components/ui/KanjiDetail'
-import { getWordData, findWord } from '@/data'
+import { getWordData } from '@/data'
+import { findNaverWord } from '@/data/words/index'
+import type { NaverWord } from '@/data/words/index'
 
 export default function WordDetailPage() {
   const router = useRouter()
   const params = useParams()
   const word = decodeURIComponent(params.id as string)
 
-  // 단어 데이터에서 먼저 찾기
-  const searchResult = findWord(word)
+  // 네이버 단어 데이터에서 찾기
+  const naverWord = findNaverWord(word)
   
-  // 단어 데이터가 있으면 한자 정보도 가져오기
+  // 한자 정보 가져오기
   let wordData = null
-  if (searchResult && searchResult.kanjiDetails && searchResult.kanjiDetails.length > 0) {
-    // 첫 번째 한자 정보 사용
-    const firstKanji = searchResult.kanjiDetails[0]
-    wordData = {
-      level: searchResult.level,
-      kanji: firstKanji.kanji,
-      onYomi: firstKanji.onReadings || [],
-      kunYomi: firstKanji.kunReadings || [],
-      radical: undefined,
-      strokeCount: firstKanji.strokeCount,
-      relatedWords: searchResult.kanjiDetails.map(k => ({
-        word: searchResult.word,
-        furigana: searchResult.furigana,
-        meaning: searchResult.meaning,
-      })),
+  if (naverWord) {
+    // 네이버 단어가 있으면 한자 데이터에서 찾기
+    const kanjiData = getWordData(naverWord.entry)
+    if (kanjiData) {
+      wordData = kanjiData
+    } else {
+      // 기본값
+      const levelMap: Record<string, 'N1' | 'N2' | 'N3' | 'N4' | 'N5'> = {
+        '1': 'N1',
+        '2': 'N2',
+        '3': 'N3',
+        '4': 'N4',
+        '5': 'N5',
+      }
+      wordData = {
+        level: levelMap[naverWord.level] || 'N5',
+        kanji: naverWord.entry,
+        onYomi: [],
+        kunYomi: [],
+        relatedWords: [],
+      }
     }
   } else {
-    // 한자 데이터에서 찾기
+    // 네이버 단어가 없으면 한자 데이터에서 찾기
     const kanjiData = getWordData(word)
     if (kanjiData) {
       wordData = kanjiData
@@ -58,19 +66,40 @@ export default function WordDetailPage() {
 
       <div className="p-4">
         <div className="bg-surface rounded-card p-6">
-          {searchResult && (
+          {naverWord && (
             <div className="mb-6">
-              <h1 className="text-display-l text-jp font-medium text-text-main mb-2">
-                {searchResult.word}
+              <h1 className="text-display-l text-jp font-medium text-text-main mb-4">
+                {naverWord.entry}
               </h1>
-              {searchResult.furigana && (
-                <div className="text-subtitle text-text-sub mb-2">
-                  {searchResult.furigana}
+              
+              {/* partsMeans 표시 */}
+              {naverWord.partsMeans && naverWord.partsMeans.length > 0 && (
+                <div className="space-y-4">
+                  {naverWord.partsMeans.map((partMean, index) => (
+                    <div key={index} className="border-b border-divider pb-4 last:border-b-0 last:pb-0">
+                      {/* Part 뱃지 */}
+                      {partMean.part && (
+                        <div className="mb-2">
+                          <span className="inline-block px-2 py-1 text-label font-medium text-text-sub bg-page rounded-md">
+                            {partMean.part}
+                          </span>
+                        </div>
+                      )}
+                      
+                      {/* Means 표시 */}
+                      {partMean.means && partMean.means.length > 0 && (
+                        <div className="space-y-1">
+                          {partMean.means.map((mean, meanIndex) => (
+                            <div key={meanIndex} className="text-body text-text-main">
+                              {mean}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
               )}
-              <div className="text-title text-text-main font-semibold mb-4">
-                {searchResult.meaning}
-              </div>
             </div>
           )}
           
@@ -79,7 +108,7 @@ export default function WordDetailPage() {
               level={wordData.level}
               kanji={wordData.kanji}
               onYomi={wordData.onYomi}
-              kunYomi={wordData.kunYomi}
+              kunYomi={wordData.kunyomi}
               radical={wordData.radical}
               strokeCount={wordData.strokeCount}
               relatedWords={wordData.relatedWords}
@@ -94,4 +123,3 @@ export default function WordDetailPage() {
     </div>
   )
 }
-

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Level } from '@/data'
-import { getWordsByLevel } from '@/data/words/index'
+import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji'
 
 export type GameState = 'menu' | 'playing' | 'paused' | 'gameover'
@@ -66,11 +66,17 @@ export function useBlastEngine(level: Level, mode: 'word' | 'kanji') {
   useEffect(() => {
     let data: any[] = []
     if (mode === 'word') {
-      data = getWordsByLevel(level).map((w) => ({
-        text: w.word,
-        subText: shortReading(w.furigana),
-        answer: w.meaning,
-      }))
+      data = getNaverWordsByLevel(level)
+        .filter(w => w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0)
+        .map((w) => {
+          // 첫 번째 part의 첫 번째 의미 사용
+          const firstMean = w.partsMeans[0].means[0]
+          return {
+            text: w.entry,
+            subText: undefined, // 네이버 데이터에는 furigana 정보가 없음
+            answer: firstMean,
+          }
+        })
     } else {
       data = getKanjiByLevel(level).map((k) => ({
         text: k.kanji?.character || k.ka_utf,

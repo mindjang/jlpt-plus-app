@@ -1,0 +1,1872 @@
+[
+  {
+    "entry": "よんぷん",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "四分",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "4분",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "よんぷん",
+        "vcode": "566263",
+        "encode": "%E3%82%88%E3%82%93%E3%81%B7%E3%82%93"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "四分位数",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "사분위수",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "よんぷんくらいすう",
+        "vcode": "902297",
+        "encode": "%E3%82%88%E3%82%93%E3%81%B7%E3%82%93%E3%81%8F%E3%82%89%E3%81%84%E3%81%99%E3%81%86"
+      }
+    ],
+    "meaning": [],
+    "examples": [],
+    "hiraganaList": []
+  },
+  {
+    "entry": "よんほん",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "四本",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "4자루",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "よんほん",
+        "vcode": "646331",
+        "encode": "%E3%82%88%E3%82%93%E3%81%BB%E3%82%93"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "四本鎖DNA",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "4가닥DNA",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "よんほんさDNA",
+        "vcode": "125063",
+        "encode": "%E3%82%88%E3%82%93%E3%81%BB%E3%82%93%E3%81%95DNA"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "윷",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "1",
+                "value": "ユッ, <ruby><rb>小</rb><rt>ちい</rt></ruby>さな<ruby><rb>丸</rb><rt>まる</rt></ruby>い<ruby><rb>棒切</rb><rt>ぼうぎ</rt></ruby>れを<ruby><rb>割</rb><rt>わ</rt></ruby>って<ruby><rb>作</rb><rt>つく</rt></ruby>った<ruby><rb>四本一組</rb><rt><strong>よんほん</strong>ひとくみ</rt></ruby>の<ruby><rb>遊戯具</rb><rt>ゆうぎぐ</rt></ruby>.",
+                "vcode": "683745"
+              },
+              {
+                "order": "2",
+                "value": "‘윷’をなげうった<ruby><rb>時</rb><rt>とき</rt></ruby>, ‘윷’が<ruby><rb>揃</rb><rt>そろ</rt></ruby>ってあおむけになった<ruby><rb>時</rb><rt>とき</rt></ruby>の<ruby><rb>称</rb><rt>しょう</rt></ruby>.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "윷",
+        "vcode": "604418",
+        "encode": "%EC%9C%B7"
+      },
+      {
+        "rank": "2",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "모",
+        "expEntrySuperscript": "2",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "‘윷놀이(ユンノリ)’で, <ruby><rb>四本</rb><rt><strong>よんほん</strong></rt></ruby><strong>の</strong>‘윷가락(＝かり)’が<ruby><rb>全部</rb><rt>ぜんぶ</rt></ruby><ruby><rb>伏</rb><rt>ふ</rt></ruby>したときの<ruby><rb>称</rb><rt>しょう</rt></ruby>.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "모",
+        "vcode": "001596",
+        "encode": "%EB%AA%A8"
+      },
+      {
+        "rank": "3",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "도",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "‘윷놀이(ユンノリ)’の<ruby><rb>4</rb><rt><strong>よん</strong></rt></ruby><ruby><rb>本</rb><rt><strong>ほん</strong></rt></ruby>の‘윷’の<ruby><rb>中</rb><rt>うち</rt></ruby>, <ruby><rb>1</rb><rt>いっ</rt></ruby><ruby><rb>本</rb><rt>ぽん</rt></ruby>だけ<ruby><rb>裏側</rb><rt>うらがわ</rt></ruby>が<ruby><rb>出</rb><rt>で</rt></ruby>ること((<ruby><rb>得点</rb><rt>とくてん</rt></ruby>は<ruby><rb>1</rb><rt>いっ</rt></ruby><ruby><rb>点</rb><rt>てん</rt></ruby>)).",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "도",
+        "vcode": "652829",
+        "encode": "%EB%8F%84"
+      },
+      {
+        "rank": "4",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "윷짝",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "‘윷놀이(ユンノリ)’の<ruby><rb>采</rb><rt>さい</rt></ruby>((<ruby><rb>四本</rb><rt><strong>よんほん</strong></rt></ruby><strong>の</strong>‘윷(ユッ)’の<ruby><rb>一</rb><rt>ひと</rt></ruby>つ<ruby><rb>一</rb><rt>ひと</rt></ruby>つ)). (=<span class=\"related_word\" lang=\"ko\">윷가락</span>)",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "윷짝",
+        "vcode": "094990",
+        "encode": "%EC%9C%B7%EC%A7%9D"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>４本</rb><rt><strong>よんほん</strong></rt></ruby><strong>の</strong><ruby><rb>長</rb><rt>ちょう</rt></ruby><ruby><rb>短打</rb><rt>たんだ</rt></ruby>を<ruby><rb>許</rb><rt>ゆる</rt></ruby>す",
+        "example2Lang": "1",
+        "expExample2": "4개의 장단타를 허용하다",
+        "expEntry": "ちょうたんだ[長短打]"
+      },
+      {
+        "rank": "2",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>4K</rb><rt><strong>よん</strong>ケー</rt></ruby><ruby><rb>2K</rb><rt>にケー</rt></ruby>テレビの<ruby><rb>販売</rb><rt>はんばい</rt></ruby>が<ruby><rb>本格</rb><rt><strong>ほん</strong>かく</rt></ruby><ruby><rb>化</rb><rt>か</rt></ruby>する",
+        "example2Lang": "1",
+        "expExample2": "4K2K TV 판매가 본격화되다",
+        "expEntry": "<strong>よん</strong>ケーにケーテレビ"
+      }
+    ],
+    "hiraganaList": []
+  },
+  {
+    "entry": "よんまい",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "四枚",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "4장",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "よんまい",
+        "vcode": "967826",
+        "encode": "%E3%82%88%E3%82%93%E3%81%BE%E3%81%84"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "사매시",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "よんまいしの",
+        "vcode": "799333",
+        "encode": "%E3%82%88%E3%82%93%E3%81%BE%E3%81%84%E3%81%97%E3%81%AE"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "넌출문",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>四枚</rb><rt><strong>よんまい</strong></rt></ruby><ruby><rb>続</rb><rt>つづ</rt></ruby>きの<ruby><rb>門</rb><rt>もん</rt></ruby>.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "―門"
+          }
+        ],
+        "handleEntry": "넌출문",
+        "vcode": "701255",
+        "encode": "%EB%84%8C%EC%B6%9C%EB%AC%B8"
+      },
+      {
+        "rank": "2",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "사분합",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>四枚</rb><rt><strong>よんまい</strong></rt></ruby>になっている<ruby><rb>引</rb><rt>ひ</rt></ruby>き<ruby><rb>戸</rb><rt>ど</rt></ruby>. (=<span class=\"related_word\" lang=\"ko\">사분합문(門)</span>)",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "四分閤"
+          }
+        ],
+        "handleEntry": "사분합",
+        "vcode": "554583",
+        "encode": "%EC%82%AC%EB%B6%84%ED%95%A9"
+      },
+      {
+        "rank": "3",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "비약",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "(<ruby><rb>花札</rb><rt>はなふだ</rt></ruby>で)<ruby><rb>柳</rb><rt>やなぎ</rt></ruby>[<ruby><rb>雨</rb><rt>あめ</rt></ruby>]の<ruby><rb>札</rb><rt>ふだ</rt></ruby><ruby><rb>4</rb><rt><strong>よん</strong></rt></ruby><ruby><rb>枚</rb><rt><strong>まい</strong></rt></ruby>をそろえた<ruby><rb>役</rb><rt>やく</rt></ruby>. (→<span class=\"related_word\" lang=\"ko\">풍약</span>)",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "―約"
+          }
+        ],
+        "handleEntry": "비약",
+        "vcode": "152133",
+        "encode": "%EB%B9%84%EC%95%BD"
+      },
+      {
+        "rank": "4",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "초약",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>花札</rb><rt>はなふだ</rt></ruby>で, <ruby><rb>菖蒲</rb><rt>しょうぶ</rt></ruby><ruby><rb>四枚</rb><rt><strong>よんまい</strong></rt></ruby>をそろえる<ruby><rb>役</rb><rt>やく</rt></ruby>.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "草約"
+          }
+        ],
+        "handleEntry": "초약",
+        "vcode": "594075",
+        "encode": "%EC%B4%88%EC%95%BD"
+      },
+      {
+        "rank": "5",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "모리",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "‘투전(闘牋)’で, <ruby><rb>六枚</rb><rt>ろく<strong>まい</strong></rt></ruby>の<ruby><rb>札</rb><rt>ふだ</rt></ruby>のうち, <ruby><rb>四枚</rb><rt><strong>よんまい</strong></rt></ruby><strong>と</strong><ruby><rb>二枚</rb><rt>に<strong>まい</strong></rt></ruby>が<ruby><rb>各各</rb><rt>おのおの</rt></ruby><ruby><rb>同</rb><rt>おな</rt></ruby>じ<ruby><rb>字</rb><rt>じ</rt></ruby>で<ruby><rb>組</rb><rt>く</rt></ruby>み<ruby><rb>合</rb><rt>あ</rt></ruby>わされること.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "모리",
+        "vcode": "532025",
+        "encode": "%EB%AA%A8%EB%A6%AC"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>四枚</rb><rt><strong>よんまい</strong></rt></ruby>",
+        "example2Lang": "1",
+        "expExample2": "넉 장",
+        "expEntry": "넉"
+      },
+      {
+        "rank": "2",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>特別</rb><rt>とくべつ</rt></ruby><ruby><rb>限定</rb><rt>げんてい</rt></ruby>のプロモカード<ruby><rb>4枚</rb><rt><strong>よんまい</strong></rt></ruby>セット",
+        "example2Lang": "1",
+        "expExample2": "특별 한정판 프로모션 카드 네 장 세트",
+        "expEntry": "プロモカード"
+      }
+    ],
+    "hiraganaList": []
+  },
+  {
+    "entry": "ろくえん",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "六円",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "6엔",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろくえん",
+        "vcode": "239704",
+        "encode": "%E3%82%8D%E3%81%8F%E3%81%88%E3%82%93"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "1",
+                "value": "호모 로퀜스",
+                "vcode": "683745"
+              },
+              {
+                "order": "2",
+                "value": "인간을 다른 동물과 구별하는 기준 개념으로서의 말하는 인간. *loquens는 ‘말하다’의 뜻.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ホモ・ロクエンス",
+        "vcode": "301324",
+        "encode": "%E3%83%9B%E3%83%A2%E3%83%BB%E3%83%AD%E3%82%AF%E3%82%A8%E3%83%B3%E3%82%B9"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "悟り",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "縁覚（<strong>えん</strong>がく）は十二因縁を覚ってそれぞれ解脱するとする。​Both Hinayana and Mahayana Buddhism seek enlightenment, but in Hinayana, where an individual seeks his enlightenment, an individual can be...",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "영어 Satori: Enlightenment"
+          }
+        ],
+        "handleEntry": "悟り",
+        "vcode": "503733",
+        "encode": "%E6%82%9F%E3%82%8A"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>六</rb><rt><strong>ろく</strong></rt></ruby><ruby><rb>飛</rb><rt>と</rt></ruby>び<ruby><rb>五</rb><rt>ご</rt></ruby><ruby><rb>円</rb><rt><strong>えん</strong></rt></ruby>",
+        "example2Lang": "1",
+        "expExample2": "605엔",
+        "expEntry": ""
+      },
+      {
+        "rank": "2",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>6年</rb><rt><strong>ろく</strong>ねん</rt></ruby><ruby><rb>間</rb><rt>かん</rt></ruby>の<ruby><rb>遠</rb><rt><strong>えん</strong></rt></ruby><ruby><rb>距離</rb><rt>きょり</rt></ruby><ruby><rb>恋愛</rb><rt>れんあい</rt></ruby>の<ruby><rb>末</rb><rt>すえ</rt></ruby>に<ruby><rb>結婚</rb><rt>けっこん</rt></ruby>したカップル",
+        "example2Lang": "1",
+        "expExample2": "6년간의 장거리 연애 끝에 결혼한 커플",
+        "expEntry": "すえ[末]"
+      },
+      {
+        "rank": "3",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>乾性</rb><rt>かんせい</rt></ruby><strong>ろく</strong><ruby><rb>膜炎</rb><rt>まく<strong>えん</strong></rt></ruby>",
+        "example2Lang": "1",
+        "expExample2": "건성 늑막염.",
+        "expEntry": "かんせい[乾性]"
+      }
+    ],
+    "hiraganaList": []
+  },
+  {
+    "entry": "ろくにん",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "六人",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "6명",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろくにん",
+        "vcode": "612779",
+        "encode": "%E3%82%8D%E3%81%8F%E3%81%AB%E3%82%93"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAJA",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "",
+        "partGroupYn": "0",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "人が、六の数であること。",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろくにん",
+        "vcode": "612779",
+        "encode": "%E3%82%8D%E3%81%8F%E3%81%AB%E3%82%93"
+      }
+    ],
+    "meaning": [],
+    "examples": [],
+    "hiraganaList": []
+  },
+  {
+    "entry": "ろくねん",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "六年",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "6년",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろくねん",
+        "vcode": "152813",
+        "encode": "%E3%82%8D%E3%81%8F%E3%81%AD%E3%82%93"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 2,
+        "expKanji": "六",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "1",
+                "value": "육, 여섯. (=<span class=\"related_word\" lang=\"ja\">むつ</span>, <span class=\"related_word\" lang=\"ja\">むっつ</span>)",
+                "vcode": "199905"
+              },
+              {
+                "order": "2",
+                "value": "여섯 번째, 제육(第六).",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろく",
+        "vcode": "066212",
+        "encode": "%E3%82%8D%E3%81%8F"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "춘세",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>春税</rb><rt>しゅんぜい</rt></ruby>, <ruby><rb>一年分</rb><rt>いち<strong>ねん</strong>ぶん</rt></ruby>を<ruby><rb>二度</rb><rt>にど</rt></ruby>に<ruby><rb>分</rb><rt>わ</rt></ruby>けたその<ruby><rb>一部</rb><rt>いちぶ</rt></ruby>を<ruby><rb>六月</rb><rt><strong>ろく</strong>がつ</rt></ruby>に<ruby><rb>納</rb><rt>おさ</rt></ruby>める<ruby><rb>租税</rb><rt>そぜい</rt></ruby>.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "春稅"
+          }
+        ],
+        "handleEntry": "춘세",
+        "vcode": "087105",
+        "encode": "%EC%B6%98%EC%84%B8"
+      },
+      {
+        "rank": "2",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "称名念仏",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "称名念仏（しょうみょう<strong>ねん</strong>ぶつ）とは、仏を念ずる行（念仏）の一つであり、「南無阿弥陀仏」のように仏の名号（みょうごう）を唱える行をさす。​Shomyo Nenbutsu is one practice of praying to the Buddha (nenbutsu (Buddhist invocation)),...",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "영어 Shomyo Nenbutsu"
+          }
+        ],
+        "handleEntry": "称名念仏",
+        "vcode": "912474",
+        "encode": "%E7%A7%B0%E5%90%8D%E5%BF%B5%E4%BB%8F"
+      },
+      {
+        "rank": "3",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "明治六年政変",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "明治六年政変（めいじ<strong>ろくねん</strong>せいへん, 1873年（明治6年））は、征韓論に端を発した明治初期の一大政変。​Meiji roku-nen no Seihen (Coups of 1873) is a major political change in the early Meiji era caused by Seikanron (debate on subjugation of Korea).​...",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "영어 Meiji roku-nen no Seihen (Coups of 1873)"
+          }
+        ],
+        "handleEntry": "明治六年政変",
+        "vcode": "197682",
+        "encode": "%E6%98%8E%E6%B2%BB%E5%85%AD%E5%B9%B4%E6%94%BF%E5%A4%89"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>六</rb><rt><strong>ろく</strong></rt></ruby><ruby><rb>年</rb><rt><strong>ねん</strong></rt></ruby>",
+        "example2Lang": "1",
+        "expExample2": "여섯 해",
+        "expEntry": ""
+      },
+      {
+        "rank": "2",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>足掛</rb><rt>あしか</rt></ruby>け<ruby><rb>6年</rb><rt><strong>ろくねん</strong></rt></ruby><strong>に</strong><ruby><rb>亘</rb><rt>わた</rt></ruby>る<ruby><rb>大</rb><rt>だい</rt></ruby><ruby><rb>規模</rb><rt>きぼ</rt></ruby>な<ruby><rb>工事</rb><rt>こうじ</rt></ruby>",
+        "example2Lang": "1",
+        "expExample2": "햇수로 6년에 걸친 대규모 공사",
+        "expEntry": "わたる[亘る·亙る]"
+      },
+      {
+        "rank": "3",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>校庭</rb><rt>こうてい</rt></ruby>に<ruby><rb>集</rb><rt>あつ</rt></ruby>まっていた<ruby><rb>六</rb><rt><strong>ろく</strong></rt></ruby><ruby><rb>年</rb><rt><strong>ねん</strong></rt></ruby>の<ruby><rb>児童</rb><rt>じどう</rt></ruby>の<ruby><rb>上</rb><rt>うえ</rt></ruby>にサッカーのゴールポストが<ruby><rb>倒</rb><rt>たお</rt></ruby>れた",
+        "example2Lang": "1",
+        "expExample2": "교정에 모여 있던 6학년 학생들 위로 축구 골대가 넘어졌다.",
+        "expEntry": "ゴールポスト"
+      },
+      {
+        "rank": "4",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>例</rb><rt>たと</rt></ruby>えば<ruby><rb>六</rb><rt><strong>ろく</strong></rt></ruby><ruby><rb>年</rb><rt><strong>ねん</strong></rt></ruby><ruby><rb>用</rb><rt>よう</rt></ruby>プログラムでは，<ruby><rb>実際</rb><rt>じっさい</rt></ruby>に<ruby><rb>誘</rb><rt>さそ</rt></ruby>う<ruby><rb>役</rb><rt>やく</rt></ruby>と<ruby><rb>断</rb><rt>ことわ</rt></ruby>る<ruby><rb>役</rb><rt>やく</rt></ruby>を<ruby><rb>決</rb><rt>き</rt></ruby>めて<ruby><rb>演</rb><rt>えん</rt></ruby>じるロールプレーをする",
+        "example2Lang": "1",
+        "expExample2": "이를테면 6학년용 프로그램에서는, 실제로 권유하는 역과 거절하는 역을 정하여 연기하는 롤플레이를 한다.",
+        "expEntry": "ロールプレー"
+      },
+      {
+        "rank": "5",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>八</rb><rt>はちじゅう</rt></ruby><ruby><rb>六</rb><rt><strong>ろく</strong></rt></ruby><ruby><rb>年</rb><rt><strong>ねん</strong></rt></ruby>のチェルノブイリ<ruby><rb>原発</rb><rt>げんぱつ</rt></ruby><ruby><rb>事故</rb><rt>じこ</rt></ruby>では，<ruby><rb>炉心</rb><rt>ろしん</rt></ruby>の<ruby><rb>屋根</rb><rt>やね</rt></ruby>が<ruby><rb>吹っ飛</rb><rt>ふっと</rt></ruby>び，<ruby><rb>大量</rb><rt>たいりょう</rt></ruby>の<ruby><rb>放射</rb><rt>ほうしゃ</rt></ruby><ruby><rb>能</rb><rt>のう</rt></ruby>が<ruby><rb>大気</rb><rt>たいき</rt></ruby><ruby><rb>中</rb><rt>ちゅう</rt></ruby>にまき<ruby><rb>散</rb><rt>ち</rt></ruby>らされた",
+        "example2Lang": "1",
+        "expExample2": "86년의 체르노빌 원자력 발전소 사고에서는 노심의 지붕이 날아가버려 대량의 방사능이 대기중으로 확산되었다.",
+        "expEntry": "チェルノブイリ"
+      }
+    ],
+    "hiraganaList": []
+  },
+  {
+    "entry": "ろくばい",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "六倍",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "6배",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろくばい",
+        "vcode": "461344",
+        "encode": "%E3%82%8D%E3%81%8F%E3%81%B0%E3%81%84"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "육배체",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろくばいたい",
+        "vcode": "292757",
+        "encode": "%E3%82%8D%E3%81%8F%E3%81%B0%E3%81%84%E3%81%9F%E3%81%84"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "六条斎院宣旨",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "六条斎院宣旨（<strong>ろく</strong>じょうさいいんのせんじ生没年不詳）は、平安時代後期の女流歌人。​Rokujosaiin no senji (year of birth and death is not clear) was a female waka poet in the late Heian period.​父は源頼国で、藤原高定の妻となった。​Her fa...",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "영어 Rokujosaiin no senji"
+          }
+        ],
+        "handleEntry": "六条斎院宣旨",
+        "vcode": "628413",
+        "encode": "%E5%85%AD%E6%9D%A1%E6%96%8E%E9%99%A2%E5%AE%A3%E6%97%A8"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>録画</rb><rt><strong>ろく</strong>が</rt></ruby>した<ruby><rb>1</rb><rt>いち</rt></ruby><ruby><rb>時間</rb><rt>じかん</rt></ruby>の<ruby><rb>番組</rb><rt>ばんぐみ</rt></ruby>を<ruby><rb>1.5</rb><rt>いってんご</rt></ruby><ruby><rb>倍速</rb><rt><strong>ばい</strong>そく</rt></ruby>で<ruby><rb>見</rb><rt>み</rt></ruby>る",
+        "example2Lang": "1",
+        "expExample2": "녹화한 1시간짜리 프로그램을 1.5배속으로 보다",
+        "expEntry": "<strong>ばい</strong>そく[倍速]"
+      }
+    ],
+    "hiraganaList": []
+  },
+  {
+    "entry": "ろくばん",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "六番",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "6번",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろくばん",
+        "vcode": "537136",
+        "encode": "%E3%82%8D%E3%81%8F%E3%81%B0%E3%82%93"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "B6判",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "비6판; 종이·책 규격의 하나((세로 18.2cm, 가로 12.8cm; 책에서는 사륙판과 거의 같음)).",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ビーろくばん",
+        "vcode": "046261",
+        "encode": "%E3%83%93%E3%83%BC%E3%82%8D%E3%81%8F%E3%81%B0%E3%82%93"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "늑판",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "<strong>ろくばん</strong> [肋板]",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "늑판",
+        "vcode": "359250",
+        "encode": "%EB%8A%91%ED%8C%90"
+      },
+      {
+        "rank": "2",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "삼륙판",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>三六</rb><rt>さん<strong>ろく</strong></rt></ruby><ruby><rb>判</rb><rt><strong>ばん</strong></rt></ruby>, さぶ<strong>ろくばん</strong>.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "三六判"
+          }
+        ],
+        "handleEntry": "삼륙판",
+        "vcode": "468069",
+        "encode": "%EC%82%BC%EB%A5%99%ED%8C%90"
+      },
+      {
+        "rank": "3",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "문고판",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>文庫</rb><rt>ぶんこ</rt></ruby><ruby><rb>判</rb><rt><strong>ばん</strong></rt></ruby>, <ruby><rb>A</rb><rt>エー</rt></ruby><ruby><rb>6</rb><rt><strong>ろく</strong></rt></ruby><ruby><rb>判</rb><rt><strong>ばん</strong></rt></ruby>.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "文庫版"
+          }
+        ],
+        "handleEntry": "문고판",
+        "vcode": "176404",
+        "encode": "%EB%AC%B8%EA%B3%A0%ED%8C%90"
+      },
+      {
+        "rank": "4",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "비육판",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb> B</rb><rt>ビー</rt></ruby><ruby><rb>6</rb><rt><strong>ろく</strong></rt></ruby><ruby><rb>判</rb><rt><strong>ばん</strong></rt></ruby>.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "B六判"
+          }
+        ],
+        "handleEntry": "비육판",
+        "vcode": "377049",
+        "encode": "%EB%B9%84%EC%9C%A1%ED%8C%90"
+      },
+      {
+        "rank": "5",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "신사륙판",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>新</rb><rt>しん</rt></ruby><ruby><rb>四六判</rb><rt>し<strong>ろくばん</strong></rt></ruby>((<ruby><rb>四六判</rb><rt>し<strong>ろくばん</strong></rt></ruby>より<ruby><rb>少</rb><rt>すこ</rt></ruby>し<ruby><rb>小</rb><rt>ちい</rt></ruby>さい<ruby><rb>本</rb><rt>ほん</rt></ruby>の<ruby><rb>規格</rb><rt>きかく</rt></ruby>)).",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "新四六版"
+          }
+        ],
+        "handleEntry": "신사륙판",
+        "vcode": "823486",
+        "encode": "%EC%8B%A0%EC%82%AC%EB%A5%99%ED%8C%90"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>９回</rb><rt>ぐかい</rt></ruby><ruby><rb>二死</rb><rt>にし</rt></ruby><ruby><rb>二</rb><rt>に</rt></ruby>∙<ruby><rb>三塁</rb><rt>さんるい</rt></ruby>で<ruby><rb>6番</rb><rt><strong>ろくばん</strong></rt></ruby><ruby><rb>打者</rb><rt>だしゃ</rt></ruby>が<ruby><rb>左越</rb><rt>ひだりこ</rt></ruby>え<ruby><rb>二塁</rb><rt>にるい</rt></ruby><ruby><rb>打</rb><rt>だ</rt></ruby>を<ruby><rb>放</rb><rt>はな</rt></ruby>った",
+        "example2Lang": "1",
+        "expExample2": "9회 2사 2, 3루에서 6번 타자가 좌월 2루타를 날렸다",
+        "expEntry": "にさんるい[二三塁]"
+      }
+    ],
+    "hiraganaList": []
+  },
+  {
+    "entry": "ろくまい",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "禄米",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "녹미; 무가 시대에, 녹으로 받는 쌀. (=<span class=\"related_word\" lang=\"ja\">ろくべい</span>, <span class=\"related_word\" lang=\"ja\">扶持米</span>)",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろくまい",
+        "vcode": "713810",
+        "encode": "%E3%82%8D%E3%81%8F%E3%81%BE%E3%81%84"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "六枚",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "6장",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろくまい",
+        "vcode": "713810",
+        "encode": "%E3%82%8D%E3%81%8F%E3%81%BE%E3%81%84"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "녹미",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>禄米</rb><rt><strong>ろくまい</strong></rt></ruby>, <ruby><rb>扶持米</rb><rt>ふちまい</rt></ruby>.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "祿米"
+          }
+        ],
+        "handleEntry": "녹미",
+        "vcode": "922618",
+        "encode": "%EB%85%B9%EB%AF%B8"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>禄米</rb><rt><strong>ろくまい</strong></rt></ruby>",
+        "example2Lang": "1",
+        "expExample2": "녹미",
+        "expEntry": "禄[祿]"
+      }
+    ],
+    "hiraganaList": [
+      {
+        "entry_id": "3197fac01cff400496615a0d2f7b69d3",
+        "parent_entry_id": "3197fac01cff400496615a0d2f7b69d3",
+        "origin_entry_id": "JK000000094966",
+        "entry": "ろくまい",
+        "level": "0",
+        "source": "081341B9",
+        "parts": [
+          "명사"
+        ],
+        "pron": "禄米",
+        "means": [
+          "녹미; 무가 시대에, 녹으로 받는 쌀."
+        ],
+        "category1": "katakana",
+        "category2": "ろくまい"
+      }
+    ]
+  },
+  {
+    "entry": "ろっかい",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "六界",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "육계. (→<span class=\"related_word\" lang=\"ja\">ろくどう</span>)",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろっかい",
+        "vcode": "381999",
+        "encode": "%E3%82%8D%E3%81%A3%E3%81%8B%E3%81%84"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "六回",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "6회",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろっかい",
+        "vcode": "381999",
+        "encode": "%E3%82%8D%E3%81%A3%E3%81%8B%E3%81%84"
+      }
+    ],
+    "meaning": [],
+    "examples": [],
+    "hiraganaList": [
+      {
+        "entry_id": "a2580a484cc349d1a2404f7028a8b8ff",
+        "parent_entry_id": "a2580a484cc349d1a2404f7028a8b8ff",
+        "origin_entry_id": "JK000000095026",
+        "entry": "ろっかい",
+        "level": "0",
+        "source": "081341B9",
+        "parts": [
+          "명사"
+        ],
+        "pron": "六界",
+        "means": [
+          "육계."
+        ],
+        "category1": "katakana",
+        "category2": "ろっかい"
+      }
+    ]
+  },
+  {
+    "entry": "ろっこ",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "六個",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "6개",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろっこ",
+        "vcode": "800399",
+        "encode": "%E3%82%8D%E3%81%A3%E3%81%93"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAEN",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "オルシ-グ<strong>ロッコ</strong>法",
+        "partGroupYn": "0",
+        "newEntry": "1",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "Orsi-Grocco method",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "オルシグロッコほう",
+        "vcode": "155597",
+        "encode": "%E3%82%AA%E3%83%AB%E3%82%B7%E3%82%B0%E3%83%AD%E3%83%83%E3%82%B3%E3%81%BB%E3%81%86"
+      }
+    ],
+    "meaning": [],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>六個</rb><rt><strong>ろっこ</strong></rt></ruby>; <ruby><rb>六</rb><rt>むっ</rt></ruby>つ",
+        "example2Lang": "1",
+        "expExample2": "여섯 개",
+        "expEntry": "개"
+      }
+    ],
+    "hiraganaList": []
+  },
+  {
+    "entry": "ろっぱい",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "六杯",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "여섯 잔",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろっぱい",
+        "vcode": "544533",
+        "encode": "%E3%82%8D%E3%81%A3%E3%81%B1%E3%81%84"
+      }
+    ],
+    "meaning": [],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>六杯</rb><rt><strong>ろっぱい</strong></rt></ruby>",
+        "example2Lang": "1",
+        "expExample2": "여섯 잔",
+        "expEntry": "はい[杯·盃]"
+      }
+    ],
+    "hiraganaList": []
+  },
+  {
+    "entry": "ろっぴき",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "六匹",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "6마리",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろっぴき",
+        "vcode": "472127",
+        "encode": "%E3%82%8D%E3%81%A3%E3%81%B4%E3%81%8D"
+      }
+    ],
+    "meaning": [],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>牛馬</rb><rt>ぎゅうば</rt></ruby><ruby><rb>六匹</rb><rt><strong>ろっぴき</strong></rt></ruby>.",
+        "example2Lang": "1",
+        "expExample2": "마소 여섯 필",
+        "expEntry": "필"
+      }
+    ],
+    "hiraganaList": []
+  },
+  {
+    "entry": "ろっぷん",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "六分",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "6분",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろっぷん",
+        "vcode": "911157",
+        "encode": "%E3%82%8D%E3%81%A3%E3%81%B7%E3%82%93"
+      }
+    ],
+    "meaning": [],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>大人</rb><rt>おとな</rt></ruby>のランニングの<ruby><rb>上限</rb><rt>じょうげん</rt></ruby>は「<ruby><rb>一</rb><rt>いち</rt></ruby><ruby><rb>日</rb><rt>にち</rt></ruby>１５キロ<ruby><rb>以下</rb><rt>いか</rt></ruby>，<ruby><rb>時間</rb><rt>じかん</rt></ruby>で<ruby><rb>一</rb><rt>いち</rt></ruby><ruby><rb>時間</rb><rt>じかん</rt></ruby><ruby><rb>半</rb><rt>はん</rt></ruby><ruby><rb>以下</rb><rt>いか</rt></ruby>，１キロを<ruby><rb>六</rb><rt><strong>ろっ</strong></rt></ruby><ruby><rb>分</rb><rt><strong>ぷん</strong></rt></ruby><ruby><rb>以上</rb><rt>いじょう</rt></ruby>かけて」という",
+        "example2Lang": "1",
+        "expExample2": "어른의 달리기의 상한은 ‘하루 15킬로미터 이하, 시간으로 1시간 반 이하, 1킬로미터를 6분 이상 걸려서’라고 한다.",
+        "expEntry": "ランニング"
+      },
+      {
+        "rank": "2",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "ゴム<ruby><rb>素材</rb><rt>そざい</rt></ruby>をマニュアル<ruby><rb>通</rb><rt>どお</rt></ruby>りプレスにかける<ruby><rb>仕事</rb><rt>しごと</rt></ruby>をするうちに，<ruby><rb>自分</rb><rt>じぶん</rt></ruby>なりに<ruby><rb>工夫</rb><rt>くふう</rt></ruby>して，<ruby><rb>八</rb><rt>はっ</rt></ruby><ruby><rb>分</rb><rt><strong>ぷん</strong></rt></ruby>かかっていた<ruby><rb>工程</rb><rt>こうてい</rt></ruby>を<ruby><rb>六</rb><rt><strong>ろっ</strong></rt></ruby><ruby><rb>分間</rb><rt><strong>ぷん</strong>かん</rt></ruby>に<ruby><rb>短縮</rb><rt>たんしゅく</rt></ruby>させた",
+        "example2Lang": "1",
+        "expExample2": "고무 소재를 사용 설명서대로 프레스에 거는 일을 하는 동안에 자기 나름으로 연구하여 8분 걸렸던 공정을 6분간으로 단축시켰다.",
+        "expEntry": "マニュアル"
+      }
+    ],
+    "hiraganaList": []
+  },
+  {
+    "entry": "ろっぽん",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "六本",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 5",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조수사",
+            "partOfSpeech2": "助数詞",
+            "partOfSpeechCode": "助数詞",
+            "means": [
+              {
+                "order": "",
+                "value": "6자루",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ろっぽん",
+        "vcode": "676241",
+        "encode": "%E3%82%8D%E3%81%A3%E3%81%BD%E3%82%93"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "千六本·繊六本",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "무채; 또, 무채를 써는 일. (=<span class=\"related_word\" lang=\"ja\">せんぎり</span>)",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "せんろっぽん",
+        "vcode": "605512",
+        "encode": "%E3%81%9B%E3%82%93%E3%82%8D%E3%81%A3%E3%81%BD%E3%82%93"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "무채",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "ダイコンの<ruby><rb>千切</rb><rt>せんぎ</rt></ruby>り, <ruby><rb>千六本</rb><rt>せん<strong>ろっぽん</strong></rt></ruby>.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "무채",
+        "vcode": "049717",
+        "encode": "%EB%AC%B4%EC%B1%84"
+      },
+      {
+        "rank": "2",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "육족",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>六本</rb><rt><strong>ろっぽん</strong></rt></ruby><strong>の</strong><ruby><rb>足</rb><rt>あし</rt></ruby>, すなわち<ruby><rb>馬</rb><rt>うま</rt></ruby>と<ruby><rb>馬丁</rb><rt>ばてい</rt></ruby>.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "六足"
+          }
+        ],
+        "handleEntry": "육족",
+        "vcode": "873914",
+        "encode": "%EC%9C%A1%EC%A1%B1"
+      },
+      {
+        "rank": "3",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "육방망이",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>六本</rb><rt><strong>ろっぽん</strong></rt></ruby><strong>の</strong><ruby><rb>長柄</rb><rt>ながえ</rt></ruby>を<ruby><rb>横</rb><rt>よこ</rt></ruby>につき<ruby><rb>通</rb><rt>とお</rt></ruby>して<ruby><rb>十二人</rb><rt>じゅうににん</rt></ruby>がかつぐようになっているひつぎを<ruby><rb>載</rb><rt>の</rt></ruby>せる<ruby><rb>輿</rb><rt>こし</rt></ruby>.",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "六―"
+          }
+        ],
+        "handleEntry": "육방망이",
+        "vcode": "096184",
+        "encode": "%EC%9C%A1%EB%B0%A9%EB%A7%9D%EC%9D%B4"
+      },
+      {
+        "rank": "4",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "초교탕",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>夏向</rb><rt>なつむ</rt></ruby>きの<ruby><rb>料理</rb><rt>りょうり</rt></ruby>の<ruby><rb>一種</rb><rt>いっしゅ</rt></ruby>((<ruby><rb>若</rb><rt>わか</rt></ruby>いとりの<ruby><rb>水炊</rb><rt>みずた</rt></ruby>きを<ruby><rb>細</rb><rt>こま</rt></ruby>かく<ruby><rb>裂</rb><rt>さ</rt></ruby>いて, ナマコ(海鼠)·アワビ(鮑)の<ruby><rb>切</rb><rt>き</rt></ruby>り<ruby><rb>身</rb><rt>み</rt></ruby>とまぜ, キュウリ(胡瓜)の<ruby><rb>千六本</rb><rt>せん<strong>ろっぽん</strong></rt></ruby>とシイタケ(椎葺)·いり<ruby><rb>卵</rb><rt>たまご</rt></ruby>などを...",
+                "vcode": "683745"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "―湯"
+          }
+        ],
+        "handleEntry": "초교탕",
+        "vcode": "796731",
+        "encode": "%EC%B4%88%EA%B5%90%ED%83%95"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "ファウルを<ruby><rb>6本</rb><rt><strong>ろっぽん</strong></rt></ruby><ruby><rb>打</rb><rt>う</rt></ruby>って<ruby><rb>粘</rb><rt>ねば</rt></ruby>りに<ruby><rb>粘</rb><rt>ねば</rt></ruby>る",
+        "example2Lang": "1",
+        "expExample2": "파울 볼을 여섯 개 치며 끈덕지게 물고 늘어지다",
+        "expEntry": "ねばる[粘る]"
+      },
+      {
+        "rank": "2",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>相手</rb><rt>あいて</rt></ruby>の<ruby><rb>守備</rb><rt>しゅび</rt></ruby>の<ruby><rb>乱</rb><rt>みだ</rt></ruby>れに<ruby><rb>乗</rb><rt>のう</rt></ruby>じて<ruby><rb>６本</rb><rt><strong>ろっぽん</strong></rt></ruby><strong>の</strong><ruby><rb>長</rb><rt>ちょう</rt></ruby><ruby><rb>短打</rb><rt>たんだ</rt></ruby>を<ruby><rb>集</rb><rt>あつ</rt></ruby>める",
+        "example2Lang": "1",
+        "expExample2": "상대 수비의 혼란을 틈타 6개의 장단타를 집중시키다[퍼붓다]",
+        "expEntry": "ちょうたんだ[長短打]"
+      },
+      {
+        "rank": "3",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>華</rb><rt>はな</rt></ruby>やかなプレー・スポットが<ruby><rb>集</rb><rt>あつ</rt></ruby>まる<ruby><rb>六本木</rb><rt><strong>ろっぽん</strong>ぎ</rt></ruby>の<ruby><rb>歩道</rb><rt>ほどう</rt></ruby>",
+        "example2Lang": "1",
+        "expExample2": "화려한 번화가가 모이는 롯폰기(六本木)의 보도.",
+        "expEntry": "プレー・スポット"
+      },
+      {
+        "rank": "4",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>鉛筆</rb><rt>えんぴつ</rt></ruby><ruby><rb>六本</rb><rt><strong>ろっぽん</strong></rt></ruby>",
+        "example2Lang": "1",
+        "expExample2": "연필 여섯 자루",
+        "expEntry": "ほん[本]"
+      }
+    ],
+    "hiraganaList": []
+  }
+]

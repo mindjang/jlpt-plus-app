@@ -77,6 +77,87 @@ export interface SearchResult {
   }>
 }
 
+// 네이버 히라가나 리스트 항목 (getHiraganaList API 응답)
+export interface HiraganaListItem {
+  entry_id: string
+  parent_entry_id: string
+  origin_entry_id: string
+  entry: string
+  level: string
+  source: string
+  parts: string[]
+  pron: string
+  means: string[]
+  category1: string
+  category2: string
+}
+
+// 단어 상세 정보 관련 인터페이스
+export interface MeanItem {
+  order: string
+  value: string
+  vcode: string
+}
+
+export interface MeansCollectorItem {
+  partOfSpeech: string
+  partOfSpeech2: string
+  partOfSpeechCode: string
+  means: MeanItem[]
+}
+
+export interface WordItem {
+  rank: string
+  languageCode: string
+  expDictTypeForm: string
+  dictTypeForm: string
+  priority: number
+  expKanji: string
+  partGroupYn: string
+  newEntry: string
+  frequencyAdd: string
+  meansCollector: MeansCollectorItem[]
+  handleEntry: string
+  vcode: string
+  encode: string
+}
+
+export interface MeaningItem {
+  rank: string
+  expDictTypeForm: string
+  dictTypeForm: string
+  expEntry: string
+  expEntrySuperscript: string
+  priority: number
+  meansCollector: MeansCollectorItem[]
+  expAliasGeneralAlwaysList: Array<{
+    originLanguageValue?: string
+  }>
+  handleEntry: string
+  vcode: string
+  encode: string
+}
+
+export interface ExampleItem {
+  rank: string
+  exampleLangCode: string
+  example1Lang: number
+  expExample1: string
+  example2Lang: string
+  expExample2: string
+  expEntry: string
+}
+
+// 단어 상세 정보 (n1_details.ts ~ n5_details.ts)
+export interface WordDetails {
+  entry: string
+  priority: number
+  words: WordItem[]
+  meaning: MeaningItem[]
+  examples: ExampleItem[]
+  hiraganaList: HiraganaListItem[]
+}
+
 
 // 예문 오디오 정보
 export interface KanjiAliveExampleAudio {
@@ -210,4 +291,19 @@ export interface KanjiAliveEntry {
   // 복합 객체
   kanji: KanjiAliveKanjiBlock
   radical: KanjiAliveRadicalBlock
+}
+
+export interface Word {
+  entry_id: string
+  origin_entry_id: string
+  entry: string
+  level: string
+  source: string
+  partsMeans: Array<{
+    part: string | null
+    means: string[]
+  }>
+  category1: string | null
+  category2: string | null
+  category3: string | null
 }

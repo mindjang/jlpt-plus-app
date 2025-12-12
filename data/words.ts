@@ -3,10 +3,12 @@
 
 import { WordData, SearchResult } from './types'
 import { 
-  getSearchResults as getWordsSearchResults,
-  getTotalWordCount as getWordsTotalCount,
-  findWord as findWordInIndex
+  getNaverSearchResults,
+  getTotalNaverWordCount,
+  findNaverWord,
+  getNaverWordsByLevel
 } from './words/index'
+import type { NaverWord } from './words/index'
 import { 
   getKanjiEntry,
   searchKanji,
@@ -22,14 +24,51 @@ import {
   getFirstMeaning,
 } from '../lib/utils/kanjiHelpers'
 
-// 단어 검색 (레거시 호환)
+// 단어 검색 (레거시 호환 - 네이버 데이터 사용)
 export const getSearchResults = (query: string): SearchResult[] => {
-  return getWordsSearchResults(query)
+  const naverResults = getNaverSearchResults(query)
+  // NaverWord를 SearchResult 형식으로 변환
+  return naverResults.map((w: NaverWord) => {
+    const firstMean = w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0
+      ? w.partsMeans[0].means[0]
+      : ''
+    const levelMap: Record<string, 'N1' | 'N2' | 'N3' | 'N4' | 'N5'> = {
+      '1': 'N1',
+      '2': 'N2',
+      '3': 'N3',
+      '4': 'N4',
+      '5': 'N5',
+    }
+    return {
+      level: levelMap[w.level] || 'N5',
+      word: w.entry,
+      furigana: undefined,
+      meaning: firstMean,
+    }
+  })
 }
 
-// 특정 단어 찾기 (레거시 호환)
+// 특정 단어 찾기 (레거시 호환 - 네이버 데이터 사용)
 export const findWord = (word: string): SearchResult | null => {
-  return findWordInIndex(word)
+  const naverWord = findNaverWord(word)
+  if (!naverWord) return null
+  
+  const firstMean = naverWord.partsMeans && naverWord.partsMeans.length > 0 && naverWord.partsMeans[0].means && naverWord.partsMeans[0].means.length > 0
+    ? naverWord.partsMeans[0].means[0]
+    : ''
+  const levelMap: Record<string, 'N1' | 'N2' | 'N3' | 'N4' | 'N5'> = {
+    '1': 'N1',
+    '2': 'N2',
+    '3': 'N3',
+    '4': 'N4',
+    '5': 'N5',
+  }
+  return {
+    level: levelMap[naverWord.level] || 'N5',
+    word: naverWord.entry,
+    furigana: undefined,
+    meaning: firstMean,
+  }
 }
 
 // 한자 데이터 가져오기 (레거시 호환)
@@ -53,9 +92,9 @@ export const getWordData = (word: string): WordData | null => {
   }
 }
 
-// 전체 단어 수 가져오기 (레거시 호환)
+// 전체 단어 수 가져오기 (레거시 호환 - 네이버 데이터 사용)
 export const getTotalWordCount = (): number => {
-  return getWordsTotalCount()
+  return getTotalNaverWordCount()
 }
 
 // 한자 검색 결과를 SearchResult 형식으로 변환

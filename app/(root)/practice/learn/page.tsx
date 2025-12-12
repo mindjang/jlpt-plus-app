@@ -7,9 +7,9 @@ import { StudySession } from '@/components/study/StudySession'
 import { LoginForm } from '@/components/auth/LoginForm'
 import { AppBar } from '@/components/ui/AppBar'
 import { ConfirmModal } from '@/components/ui/ConfirmModal'
-import { getWordsByLevel } from '@/data/words/index'
+import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
-import { convertSearchResultToWord, convertKanjiAliveEntryToKanji } from '@/lib/utils/dataConverter'
+import { convertNaverWordToWord, convertKanjiAliveEntryToKanji } from '@/lib/utils/dataConverter'
 import type { Word, Kanji, JlptLevel } from '@/lib/types/content'
 import { Level } from '@/data'
 
@@ -37,13 +37,13 @@ function LearnContent() {
   // 남은 카드만 큐에 담기도록 목표량 조정 (분모는 initialCompleted + remaining으로 유지)
   const remainingDailyLimit = Math.max(dailyNewLimit - initialCompleted, 0)
 
-  // 실제 데이터를 Word/Kanji 타입으로 변환
+  // 실제 데이터를 Word/Kanji 타입으로 변환 (네이버 데이터 사용)
   const words: Word[] = useMemo(() => {
     if (typeParam !== 'word') return []
-    const searchResults = getWordsByLevel(level)
-    console.log('[LearnPage] 단어 데이터 로드:', { level, count: searchResults.length })
-    const converted = searchResults.map((result, index) => 
-      convertSearchResultToWord(result, `${level}_W_${String(index + 1).padStart(4, '0')}`, 1)
+    const naverWords = getNaverWordsByLevel(level)
+    console.log('[LearnPage] 네이버 단어 데이터 로드:', { level, count: naverWords.length })
+    const converted = naverWords.map((naverWord, index) => 
+      convertNaverWordToWord(naverWord, `${level}_W_${String(index + 1).padStart(4, '0')}`, 1)
     )
     console.log('[LearnPage] 변환된 단어 수:', converted.length, '첫 번째 단어 ID:', converted[0]?.id)
     return converted
@@ -88,7 +88,7 @@ function LearnContent() {
 
   const handleBack = () => {
     if (isStudyStarted && !completed) {
-      setPendingNavigation(() => () => router.back())
+      setPendingNavigation(() => router.back)
       setShowExitConfirm(true)
     } else {
       router.back()
@@ -97,9 +97,10 @@ function LearnContent() {
 
   const handleConfirmExit = () => {
     setShowExitConfirm(false)
-    if (pendingNavigation) {
-      pendingNavigation()
-      setPendingNavigation(null)
+    const nav = pendingNavigation
+    setPendingNavigation(null)
+    if (nav) {
+      nav()
     }
   }
 
@@ -108,7 +109,7 @@ function LearnContent() {
     const handlePopState = (e: PopStateEvent) => {
       if (isStudyStarted && !completed) {
         e.preventDefault()
-        setPendingNavigation(() => () => window.history.back())
+        setPendingNavigation(() => router.back)
         setShowExitConfirm(true)
         // 히스토리에 다시 추가하여 뒤로가기 취소
         window.history.pushState(null, '', window.location.href)
@@ -123,7 +124,7 @@ function LearnContent() {
     return () => {
       window.removeEventListener('popstate', handlePopState)
     }
-  }, [isStudyStarted, completed])
+  }, [isStudyStarted, completed, router])
 
   return (
     <div className="w-full">

@@ -2,11 +2,11 @@ import { Level, LevelData, LevelGradient } from './types'
 
 // 레벨별 단어/한자 수 (실제 데이터 기준)
 export const levelData: Record<Level, LevelData> = {
-  N5: { words: 662, kanji: 80 },
-  N4: { words: 1037, kanji: 166 },
-  N3: { words: 632, kanji: 367 },
-  N2: { words: 2648, kanji: 367 },
-  N1: { words: 3246, kanji: 1232 },
+  N5: { words: 715, kanji: 80 },
+  N4: { words: 967, kanji: 166 },
+  N3: { words: 1506, kanji: 367 },
+  N2: { words: 2401, kanji: 367 },
+  N1: { words: 2676, kanji: 1232 },
 }
 
 // 레벨별 그라데이션 색상

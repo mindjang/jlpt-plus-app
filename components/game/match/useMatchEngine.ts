@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Level } from '@/data'
-import { getWordsByLevel } from '@/data/words/index'
+import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji'
 
 export type GameState = 'playing' | 'complete'
@@ -48,15 +48,19 @@ export function useMatchEngine(
     let data: { question: string; answer: string }[] = []
 
     if (mode === 'word') {
-      const words = getWordsByLevel(level)
-        .filter(w => w.meaning)
+      const naverWords = getNaverWordsByLevel(level)
+        .filter(w => w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0)
         .sort(() => Math.random() - 0.5)
         .slice(0, totalPairs)
 
-      data = words.map(w => ({
-        question: w.word,
-        answer: w.meaning.split(',')[0]
-      }))
+      data = naverWords.map(w => {
+        // 첫 번째 part의 첫 번째 의미 사용
+        const firstMean = w.partsMeans[0].means[0]
+        return {
+          question: w.entry,
+          answer: firstMean.split(';')[0].trim()
+        }
+      })
     } else {
       const kanji = getKanjiByLevel(level)
         .filter(k => k.kanji?.meaning?.korean || k.kanji?.meaning?.english || k.meaning)

@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-12-12T07:21:47.631Z",
+  "totalEntries": 715,
+  "successCount": 715,
+  "errorCount": 0,
+  "chunkSize": 100,
+  "chunkFiles": [
+    "n5-details-chunk-0.json",
+    "n5-details-chunk-1.json",
+    "n5-details-chunk-2.json",
+    "n5-details-chunk-3.json",
+    "n5-details-chunk-4.json",
+    "n5-details-chunk-5.json",
+    "n5-details-chunk-6.json",
+    "n5-details-chunk-7.json"
+  ],
+  "detailsIndexFile": "n5-details-index.json",
+  "backupJsonFile": "n5-search-results-2025-12-12T07-21-47-556Z.json"
+}

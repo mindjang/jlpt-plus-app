@@ -1,0 +1,1600 @@
+[
+  {
+    "entry": "だが",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 3",
+        "meansCollector": [
+          {
+            "partOfSpeech": "접속사",
+            "partOfSpeech2": "接続詞",
+            "partOfSpeechCode": "接続詞",
+            "means": [
+              {
+                "order": "",
+                "value": "그러나, 그렇지만. (=<span class=\"related_word\" lang=\"ja\">しかし</span>, <span class=\"related_word\" lang=\"ja\">けれども</span>)",
+                "vcode": "266652"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "だが",
+        "vcode": "970003",
+        "encode": "%E3%81%A0%E3%81%8C"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "1",
+                "value": "대거.",
+                "vcode": "474657"
+              },
+              {
+                "order": "2",
+                "value": "(양날의) 단검.",
+                "vcode": "474657"
+              },
+              {
+                "order": "3",
+                "value": "칼표(()). (=<span class=\"related_word\" lang=\"ja\">短剣符</span>)",
+                "vcode": "474657"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ダガー",
+        "vcode": "381496",
+        "encode": "%E3%83%80%E3%82%AC%E3%83%BC"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "그러나",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "부사",
+            "partOfSpeech2": "副詞",
+            "partOfSpeechCode": "副詞",
+            "means": [
+              {
+                "order": "1",
+                "value": "‘그렇지마는·그러하지만(＝しかし, <strong>だが</strong>, けれど, ところが, されど[아어(雅語)])’の<ruby><rb>意</rb><rt>い</rt></ruby>の<ruby><rb>接続副詞</rb><rt>せつぞくふくし</rt></ruby>.",
+                "vcode": "536783"
+              }
+            ]
+          },
+          {
+            "partOfSpeech": "준말",
+            "partOfSpeech2": "縮約形",
+            "partOfSpeechCode": "縮約形",
+            "means": [
+              {
+                "order": "2",
+                "value": "そうではあるが, そう<strong>だが</strong>. [본딧말]<span class=\"related_word\" lang=\"ko\">그러하나</span>",
+                "vcode": "901102"
+              },
+              {
+                "order": "3",
+                "value": "そのようにするが. [본딧말]<span class=\"related_word\" lang=\"ko\">그리하나</span>",
+                "vcode": "073597"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "그러나",
+        "vcode": "263571",
+        "encode": "%EA%B7%B8%EB%9F%AC%EB%82%98"
+      },
+      {
+        "rank": "2",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "하지만",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "부사",
+            "partOfSpeech2": "副詞",
+            "partOfSpeechCode": "副詞",
+            "means": [
+              {
+                "order": "",
+                "value": "‘그러나, 그렇지만(＝しかし; <strong>だが</strong>; <strong>だけれども</strong>; もっとも; だって[속어])’の<ruby><rb>意</rb><rt>い</rt></ruby>の<ruby><rb>接続</rb><rt>せつぞく</rt></ruby><ruby><rb>副詞</rb><rt>ふくし</rt></ruby>.",
+                "vcode": "024994"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "하지만",
+        "vcode": "052150",
+        "encode": "%ED%95%98%EC%A7%80%EB%A7%8C"
+      },
+      {
+        "rank": "3",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "-아도",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "어미",
+            "partOfSpeech2": "語尾",
+            "partOfSpeechCode": "語尾",
+            "means": [
+              {
+                "order": "",
+                "value": "‘ㅗ’の<ruby><rb>母音</rb><rt>ぼいん</rt></ruby>からなる<ruby><rb>語幹</rb><rt>ごかん</rt></ruby>につき, <ruby><rb>仮定</rb><rt>かてい</rt></ruby>·<ruby><rb>譲歩</rb><rt>じょうほ</rt></ruby>や, その<ruby><rb>事実</rb><rt>じじつ</rt></ruby>は<ruby><rb>認</rb><rt>みと</rt></ruby>めるが<ruby><rb>次</rb><rt>つぎ</rt></ruby>の<ruby><rb>語</rb><rt>ご</rt></ruby>とは<ruby><rb>関係</rb><rt>かんけい</rt></ruby>のないことを<ruby><rb>表</rb><rt>あら</rt></ruby>わす<ruby><rb>連結語尾</rb><rt>れんけつごび</rt></ruby>: …て[と]も; …(<strong>だ</strong>)<strong>が</strong>. (→<span class=\"related_word\" lang=\"ko\">-어도</span>)",
+                "vcode": "516643"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "아도",
+        "vcode": "480642",
+        "encode": "%EC%95%84%EB%8F%84"
+      },
+      {
+        "rank": "4",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "-다마는",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "어미",
+            "partOfSpeech2": "語尾",
+            "partOfSpeechCode": "語尾",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>語尾</rb><rt>ごび</rt></ruby>‘―다’に<ruby><rb>助詞</rb><rt>じょし</rt></ruby>‘마는’が<ruby><rb>重</rb><rt>かさ</rt></ruby>なって‘―지마는’の<ruby><rb>意</rb><rt>い</rt></ruby>を<ruby><rb>表</rb><rt>あら</rt></ruby>わす<ruby><rb>連結語尾</rb><rt>れんけつごび</rt></ruby>: …(<strong>だ</strong>)けれども, …(<strong>だ</strong>)<strong>が</strong>, …であるが. [준말]<span class=\"related_word\" lang=\"ko\">-다만</span>",
+                "vcode": "960130"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "다마는",
+        "vcode": "466236",
+        "encode": "%EB%8B%A4%EB%A7%88%EB%8A%94"
+      },
+      {
+        "rank": "5",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "그렇지마는",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "부사",
+            "partOfSpeech2": "副詞",
+            "partOfSpeechCode": "副詞",
+            "means": [
+              {
+                "order": "",
+                "value": "‘그러하지마는(＝それはそう<strong>だが</strong>, <strong>だが</strong>, しかし, しかしながら)’の<ruby><rb>意</rb><rt>い</rt></ruby>の<ruby><rb>接続副詞</rb><rt>せつぞくふくし</rt></ruby>.",
+                "vcode": "606287"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "그렇지마는",
+        "vcode": "438400",
+        "encode": "%EA%B7%B8%EB%A0%87%EC%A7%80%EB%A7%88%EB%8A%94"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>君</rb><rt>きみ</rt></ruby>も<ruby><rb>不幸</rb><rt>ふこう</rt></ruby>な<ruby><rb>男</rb><rt>おとこ</rt></ruby>だ.がしかし、<ruby><rb>余</rb><rt>あま</rt></ruby>り<ruby><rb>元気</rb><rt>げんき</rt></ruby>を<ruby><rb>落</rb><rt>お</rt></ruby>とすな",
+        "example2Lang": "1",
+        "expExample2": "자네도 불행한 사나이다. 그렇지만, 너무 낙심하지 말게.",
+        "expEntry": "がしかし"
+      },
+      {
+        "rank": "2",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>頭</rb><rt>あたま</rt></ruby>はいい。<strong>だが</strong><ruby><rb>健康</rb><rt>けんこう</rt></ruby>がよくない",
+        "example2Lang": "1",
+        "expExample2": "머리는 좋다. 그렇지만 건강이 좋지 못하다",
+        "expEntry": "<strong>だが</strong>"
+      },
+      {
+        "rank": "3",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>本</rb><rt>ほん</rt></ruby>がほしい、<strong>だが</strong><ruby><rb>金</rb><rt>かね</rt></ruby>がなくて<ruby><rb>買</rb><rt>か</rt></ruby>えない",
+        "example2Lang": "1",
+        "expExample2": "책을 갖고 싶다, 하지만 돈이 없어 사지 못한다",
+        "expEntry": "<strong>だが</strong>"
+      },
+      {
+        "rank": "4",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>危機</rb><rt>きき</rt></ruby>は<ruby><rb>去</rb><rt>さ</rt></ruby>った。<strong>だが</strong>、<ruby><rb>安心</rb><rt>あんしん</rt></ruby>できない",
+        "example2Lang": "1",
+        "expExample2": "위기는 지나갔다. 그러나 안심할 수 없다",
+        "expEntry": "<strong>だが</strong>"
+      },
+      {
+        "rank": "5",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>今日</rb><rt>きょう</rt></ruby>は<ruby><rb>失敗</rb><rt>しっぱい</rt></ruby>した。<strong>だが</strong><ruby><rb>明日</rb><rt>あした</rt></ruby>はうまくいくだろう",
+        "example2Lang": "1",
+        "expExample2": "오늘은 실패했다. 그렇지만 내일은 잘될 것이다",
+        "expEntry": "<strong>だが</strong>"
+      }
+    ],
+    "hiraganaList": []
+  },
+  {
+    "entry": "だけど",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 3",
+        "meansCollector": [
+          {
+            "partOfSpeech": "접속사",
+            "partOfSpeech2": "接続詞",
+            "partOfSpeechCode": "接続詞",
+            "means": [
+              {
+                "order": "",
+                "value": "‘だけれど’의 준말, 그러나, 그렇지만, …(이)지만.",
+                "vcode": "635540"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "だけど",
+        "vcode": "807045",
+        "encode": "%E3%81%A0%E3%81%91%E3%81%A9"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "조동사",
+            "partOfSpeech2": "助動詞",
+            "partOfSpeechCode": "助動詞",
+            "means": [
+              {
+                "order": "1",
+                "value": "(체언(体言) 및 그에 준하는 말에 붙어서) 긍정적으로 인정하고 단정하는 뜻을 나타냄: 다, 이다. (→<span class=\"related_word\" lang=\"ja\">じゃ</span>)",
+                "vcode": "004380"
+              },
+              {
+                "order": "2",
+                "value": "(활용어+‘のだ[んだ]’의 꼴로)",
+                "vcode": "474657"
+              },
+              {
+                "order": "3",
+                "value": "원인·이유·근거 등을 설명함: …는[ㄴ] 것이다.",
+                "vcode": "239493"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "だ",
+        "vcode": "636957",
+        "encode": "%E3%81%A0"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "그렇지만",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "부사",
+            "partOfSpeech2": "副詞",
+            "partOfSpeechCode": "副詞",
+            "means": [
+              {
+                "order": "",
+                "value": "そうではあるが, しかし(ながら), でも, だが, <strong>だけれども</strong>, <strong>だけど</strong>((준말)), とはいえ. [본딧말]<span class=\"related_word\" lang=\"ko\">그렇지마는</span>",
+                "vcode": "296366"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "그렇지만",
+        "vcode": "087461",
+        "encode": "%EA%B7%B8%EB%A0%87%EC%A7%80%EB%A7%8C"
+      },
+      {
+        "rank": "2",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "-더라만",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "たんだが。たん<strong>だけど</strong>",
+                "vcode": "854357"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "더라만",
+        "vcode": "682381",
+        "encode": "%EB%8D%94%EB%9D%BC%EB%A7%8C"
+      },
+      {
+        "rank": "3",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "-더라마는",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "たんだが。たん<strong>だけど</strong>",
+                "vcode": "912157"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "더라마는",
+        "vcode": "427442",
+        "encode": "%EB%8D%94%EB%9D%BC%EB%A7%88%EB%8A%94"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>必死</rb><rt>ひっし</rt></ruby>に<ruby><rb>練習</rb><rt>れんしゅう</rt></ruby>した。<strong>だけど</strong><ruby><rb>出場</rb><rt>しゅつじょう</rt></ruby>できなかった",
+        "example2Lang": "1",
+        "expExample2": "필사적으로 연습했다. 그러나 출전하지 못했다",
+        "expEntry": "<strong>だけど</strong>"
+      },
+      {
+        "rank": "2",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>声</rb><rt>こえ</rt></ruby>はとてもいい。<strong>だけど</strong><ruby><rb>曲</rb><rt>きょく</rt></ruby>がよくないね",
+        "example2Lang": "1",
+        "expExample2": "목소리는 아주 좋아. 하지만 곡이 별로 안 좋네",
+        "expEntry": "<strong>だけど</strong>"
+      },
+      {
+        "rank": "3",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "やるだけのことはやった。<strong>だけど</strong><ruby><rb>駄目</rb><rt>だめ</rt></ruby>だった",
+        "example2Lang": "1",
+        "expExample2": "할 만큼 했다. 그러나 헛수고였다",
+        "expEntry": "<strong>だけど</strong>"
+      },
+      {
+        "rank": "4",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>頑張</rb><rt>がんば</rt></ruby>ろうと<ruby><rb>思</rb><rt>おも</rt></ruby>った。<strong>だけど</strong>、<ruby><rb>不安</rb><rt>ふあん</rt></ruby>も<ruby><rb>大</rb><rt>おお</rt></ruby>きかった",
+        "example2Lang": "1",
+        "expExample2": "분발하려고 생각했다. 하지만 불안도 컸다",
+        "expEntry": "<strong>だけど</strong>"
+      },
+      {
+        "rank": "5",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<strong>だけど</strong>、<ruby><rb>掃除機</rb><rt>そうじき</rt></ruby>が<ruby><rb>故障</rb><rt>こしょう</rt></ruby>してる。",
+        "example2Lang": "1",
+        "expExample2": "그런데 청소기가 고장이군요. (생활/가정>가정생활>집 안 청소)",
+        "expEntry": ""
+      }
+    ],
+    "hiraganaList": []
+  },
+  {
+    "entry": "ついて",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "就いて",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 3",
+        "meansCollector": [
+          {
+            "partOfSpeech": "연어",
+            "partOfSpeech2": "連語",
+            "partOfSpeechCode": "連語",
+            "means": [
+              {
+                "order": "1",
+                "value": "(‘…に就いて’의 꼴로)",
+                "vcode": "474657"
+              },
+              {
+                "order": "2",
+                "value": "…에 관[대]해서, …을 대상으로.",
+                "vcode": "299074"
+              },
+              {
+                "order": "3",
+                "value": "(매)…당(當).",
+                "vcode": "076521"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ついて",
+        "vcode": "118937",
+        "encode": "%E3%81%A4%E3%81%84%E3%81%A6"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 2,
+        "expKanji": "付く·附く",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 4",
+        "meansCollector": [
+          {
+            "partOfSpeech": "5단활용 자동사",
+            "partOfSpeech2": "五段活用自動詞",
+            "partOfSpeechCode": "五段活用自動詞",
+            "means": [
+              {
+                "order": "1",
+                "value": "붙다.",
+                "vcode": "474657"
+              },
+              {
+                "order": "2",
+                "value": "달라붙다, 매달리다.",
+                "vcode": "092347"
+              },
+              {
+                "order": "3",
+                "value": "묻다.",
+                "vcode": "896352"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "つく",
+        "vcode": "607834",
+        "encode": "%E3%81%A4%E3%81%8F"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "의",
+        "expEntrySuperscript": "2",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "조사",
+            "partOfSpeech2": "助詞",
+            "partOfSpeechCode": "助詞",
+            "means": [
+              {
+                "order": "1",
+                "value": "<ruby><rb>体言</rb><rt>たいげん</rt></ruby>の<ruby><rb>後</rb><rt>あと</rt></ruby>に<strong>ついて</strong>, <ruby><rb>前</rb><rt>まえ</rt></ruby>の<ruby><rb>体言</rb><rt>たいげん</rt></ruby>を<ruby><rb>冠形語</rb><rt>かんけいご</rt></ruby>にする<ruby><rb>冠形格</rb><rt>かんけいかく</rt></ruby><ruby><rb>助詞</rb><rt>じょし</rt></ruby>: …の; …が[문학].",
+                "vcode": "474657"
+              },
+              {
+                "order": "2",
+                "value": "‘(으)로서’の<ruby><rb>後</rb><rt>あと</rt></ruby>に<strong>ついて</strong>, <ruby><rb>資格</rb><rt>しかく</rt></ruby>を<ruby><rb>表</rb><rt>あら</rt></ruby>わす.",
+                "vcode": "026878"
+              },
+              {
+                "order": "3",
+                "value": "<ruby><rb>持</rb><rt>も</rt></ruby>ち<ruby><rb>主</rb><rt>ぬし</rt></ruby>·<ruby><rb>所属</rb><rt>しょぞく</rt></ruby>などを<ruby><rb>表</rb><rt>あら</rt></ruby>わす.",
+                "vcode": "204630"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "의",
+        "vcode": "023488",
+        "encode": "%EC%9D%98"
+      },
+      {
+        "rank": "2",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "-꾼",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "접미사",
+            "partOfSpeech2": "接尾辞",
+            "partOfSpeechCode": "接尾辞",
+            "means": [
+              {
+                "order": "1",
+                "value": "ある<ruby><rb>語</rb><rt>ご</rt></ruby>に<strong>ついて</strong>,",
+                "vcode": "474657"
+              },
+              {
+                "order": "2",
+                "value": "その<ruby><rb>事</rb><rt>こと</rt></ruby>を<ruby><rb>専門的</rb><rt>せんもんてき</rt></ruby>·<ruby><rb>習慣的</rb><rt>しゅうかんてき</rt></ruby>にする<ruby><rb>人</rb><rt>ひと</rt></ruby>をあらわす<ruby><rb>語</rb><rt>ご</rt></ruby>.",
+                "vcode": "024727"
+              },
+              {
+                "order": "3",
+                "value": "その<ruby><rb>場</rb><rt>ば</rt></ruby>に<ruby><rb>集</rb><rt>あつ</rt></ruby>まる<ruby><rb>人</rb><rt>ひと</rt></ruby>の<ruby><rb>意</rb><rt>い</rt></ruby>.",
+                "vcode": "075730"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "꾼",
+        "vcode": "168995",
+        "encode": "%EA%BE%BC"
+      },
+      {
+        "rank": "3",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "겉-",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "접두사",
+            "partOfSpeech2": "接頭辞",
+            "partOfSpeechCode": "接頭辞",
+            "means": [
+              {
+                "order": "1",
+                "value": "<ruby><rb>数量</rb><rt>すうりょう</rt></ruby>·<ruby><rb>程度</rb><rt>ていど</rt></ruby>を<ruby><rb>推測</rb><rt>すいそく</rt></ruby>する<ruby><rb>名詞</rb><rt>めいし</rt></ruby>や<ruby><rb>動詞</rb><rt>どうし</rt></ruby>に<strong>ついて</strong>, <ruby><rb>推</rb><rt>お</rt></ruby>し<ruby><rb>測</rb><rt>はか</rt></ruby>るの<ruby><rb>意</rb><rt>い</rt></ruby>を<ruby><rb>表</rb><rt>あら</rt></ruby>わす<ruby><rb>語</rb><rt>ご</rt></ruby>: <ruby><rb>大体</rb><rt>だいたい</rt></ruby>; おおよそ.",
+                "vcode": "126882"
+              },
+              {
+                "order": "2",
+                "value": "<ruby><rb>一部</rb><rt>いちぶ</rt></ruby>の<ruby><rb>名詞</rb><rt>めいし</rt></ruby>·<ruby><rb>動詞</rb><rt>どうし</rt></ruby>·<ruby><rb>形容詞</rb><rt>けいようし</rt></ruby>の<ruby><rb>前</rb><rt>まえ</rt></ruby>に<strong>ついて</strong>, <ruby><rb>中身</rb><rt>なかみ</rt></ruby>より<ruby><rb>外見</rb><rt>がいけん</rt></ruby>がそれらしいという<ruby><rb>意</rb><rt>い</rt></ruby>を<ruby><rb>表</rb><rt>あら</rt></ruby>わす: うわべだけ…; <ruby><rb>外側</rb><rt>そとがわ</rt></ruby>だけ.",
+                "vcode": "771156"
+              },
+              {
+                "order": "3",
+                "value": "<ruby><rb>一部</rb><rt>いちぶ</rt></ruby>の<ruby><rb>動詞</rb><rt>どうし</rt></ruby>の<ruby><rb>前</rb><rt>まえ</rt></ruby>に<strong>ついて</strong>, うわべだけ<ruby><rb>適当</rb><rt>てきとう</rt></ruby>に<ruby><rb>取</rb><rt>と</rt></ruby>り<ruby><rb>繕</rb><rt><strong>つく</strong>ろ</rt></ruby>うの<ruby><rb>意</rb><rt>い</rt></ruby>を<ruby><rb>表</rb><rt>あら</rt></ruby>わす: いい<ruby><rb>加減</rb><rt>かげん</rt></ruby>に; なおざりに…; うわべだけ….",
+                "vcode": "006084"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "겉",
+        "vcode": "062308",
+        "encode": "%EA%B2%89"
+      },
+      {
+        "rank": "4",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "-라",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "어미",
+            "partOfSpeech2": "語尾",
+            "partOfSpeechCode": "語尾",
+            "means": [
+              {
+                "order": "1",
+                "value": "‘이다’·‘아니다’の<ruby><rb>語幹</rb><rt>ごかん</rt></ruby>に<strong>ついて</strong>, <ruby><rb>叙述</rb><rt>じょじゅつ</rt></ruby>する<ruby><rb>終結語尾</rb><rt>しゅうけつごび</rt></ruby>: …だ; …なり.",
+                "vcode": "626666"
+              },
+              {
+                "order": "2",
+                "value": "‘이다’·‘아니다’の<ruby><rb>語幹</rb><rt>ごかん</rt></ruby>に<strong>ついて</strong>, <ruby><rb>次</rb><rt>つぎ</rt></ruby>の<ruby><rb>語</rb><rt>ご</rt></ruby>の<ruby><rb>前提的</rb><rt>ぜんていてき</rt></ruby><ruby><rb>事実</rb><rt>じじつ</rt></ruby>を<ruby><rb>叙述</rb><rt>じょじゅつ</rt></ruby>する<ruby><rb>連結</rb><rt>れんけつ</rt></ruby><ruby><rb>語尾</rb><rt>ごび</rt></ruby>: …なので; …だから; …である[ない]ので.",
+                "vcode": "613154"
+              },
+              {
+                "order": "3",
+                "value": "<ruby><rb>終声</rb><rt>しゅうせい</rt></ruby>のない<ruby><rb>動詞</rb><rt>どうし</rt></ruby>の<ruby><rb>語幹</rb><rt>ごかん</rt></ruby>に<strong>ついて</strong>, <ruby><rb>命令</rb><rt>めいれい</rt></ruby>の<ruby><rb>意</rb><rt>い</rt></ruby>を<ruby><rb>表</rb><rt>あら</rt></ruby>わす<ruby><rb>終結語尾</rb><rt>しゅうけつごび</rt></ruby>: …よ; …せよ.",
+                "vcode": "049964"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "라",
+        "vcode": "168995",
+        "encode": "%EB%9D%BC"
+      },
+      {
+        "rank": "5",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "를",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "조사",
+            "partOfSpeech2": "助詞",
+            "partOfSpeechCode": "助詞",
+            "means": [
+              {
+                "order": "1",
+                "value": "<ruby><rb>終声</rb><rt>しゅうせい</rt></ruby>のない<ruby><rb>体言</rb><rt>たいげん</rt></ruby>に<strong>ついて</strong>, その<ruby><rb>語</rb><rt>ご</rt></ruby>を<ruby><rb>目的語</rb><rt>もくてきご</rt></ruby>にする<ruby><rb>目的格</rb><rt>もくてきかく</rt></ruby><ruby><rb>助詞</rb><rt>じょし</rt></ruby>((*<ruby><rb>会話体</rb><rt>かいわたい</rt></ruby>では<ruby><rb>略語</rb><rt>りゃくご</rt></ruby>の‘ㄹ’が<ruby><rb>多</rb><rt>おお</rt></ruby>く<ruby><rb>用</rb><rt>もち</rt></ruby>いられる)).",
+                "vcode": "474657"
+              },
+              {
+                "order": "2",
+                "value": "…を.",
+                "vcode": "912357"
+              },
+              {
+                "order": "3",
+                "value": "…が.",
+                "vcode": "855536"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "를",
+        "vcode": "252139",
+        "encode": "%EB%A5%BC"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>次</rb><rt>つぎ</rt></ruby>の<ruby><rb>問題</rb><rt>もんだい</rt></ruby>に<ruby><rb>就</rb><rt><strong>つ</strong></rt></ruby><strong>いて</strong><ruby><rb>解答</rb><rt>かいとう</rt></ruby>せよ",
+        "example2Lang": "1",
+        "expExample2": "다음 문제에 대하여 답하라",
+        "expEntry": "<strong>ついて</strong>[就いて]"
+      },
+      {
+        "rank": "2",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>命</rb><rt>いのち</rt></ruby>の<ruby><rb>大切</rb><rt>たいせつ</rt></ruby>さに<ruby><rb>就</rb><rt><strong>つ</strong></rt></ruby><strong>いて</strong><ruby><rb>考</rb><rt>かんが</rt></ruby>えてみた",
+        "example2Lang": "1",
+        "expExample2": "생명의 중요성에 대해서 생각해 보았다",
+        "expEntry": "<strong>ついて</strong>[就いて]"
+      },
+      {
+        "rank": "3",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>一人</rb><rt>ひとり</rt></ruby>に<ruby><rb>就</rb><rt><strong>つ</strong></rt></ruby><strong>いて</strong><ruby><rb>経費</rb><rt>けいひ</rt></ruby>が<ruby><rb>五万</rb><rt>ごまん</rt></ruby><ruby><rb>円</rb><rt>えん</rt></ruby>もかかる",
+        "example2Lang": "1",
+        "expExample2": "한 사람당 경비가 오 만엔이나 든다",
+        "expEntry": "<strong>ついて</strong>[就いて]"
+      },
+      {
+        "rank": "4",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>面接</rb><rt>めんせつ</rt></ruby>の<ruby><rb>日程</rb><rt>にってい</rt></ruby>に<ruby><rb>就</rb><rt><strong>つ</strong></rt></ruby><strong>いては</strong><ruby><rb>後日</rb><rt>ごじつ</rt></ruby><ruby><rb>連絡</rb><rt>れんらく</rt></ruby>する",
+        "example2Lang": "1",
+        "expExample2": "면접 일정에 관해서는 추후 연락한다",
+        "expEntry": "<strong>ついて</strong>[就いて]"
+      },
+      {
+        "rank": "5",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>上記</rb><rt>じょうき</rt></ruby>の<ruby><rb>件</rb><rt>けん</rt></ruby>に<ruby><rb>就</rb><rt><strong>つ</strong></rt></ruby><strong>いては</strong><ruby><rb>申</rb><rt>もう</rt></ruby>し<ruby><rb>上</rb><rt>あ</rt></ruby>げたいことがあります",
+        "example2Lang": "1",
+        "expExample2": "상기의 건에 관해서는 말씀드릴 것이 있습니다",
+        "expEntry": "<strong>ついて</strong>[就いて]"
+      }
+    ],
+    "hiraganaList": [
+      {
+        "entry_id": "09f2c2bb179841879f88a9e791b6c9cb",
+        "parent_entry_id": "09f2c2bb179841879f88a9e791b6c9cb",
+        "origin_entry_id": "JK000000058296",
+        "entry": "ついて",
+        "level": "0",
+        "source": "081341B9",
+        "parts": [
+          "연어"
+        ],
+        "pron": "就いて",
+        "means": [
+          "(‘…に～’의 꼴로)"
+        ],
+        "category1": "katakana",
+        "category2": "ついて"
+      }
+    ]
+  },
+  {
+    "entry": "できれば",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "出来れば",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 3",
+        "meansCollector": [
+          {
+            "partOfSpeech": "연어",
+            "partOfSpeech2": "連語",
+            "partOfSpeechCode": "連語",
+            "means": [
+              {
+                "order": "",
+                "value": "가능하면, 될 수 있으면.",
+                "vcode": "306370"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "できれば",
+        "vcode": "175616",
+        "encode": "%E3%81%A7%E3%81%8D%E3%82%8C%E3%81%B0"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 2,
+        "expKanji": "出来る",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 4",
+        "meansCollector": [
+          {
+            "partOfSpeech": "상1단 자동사",
+            "partOfSpeech2": "上一段自動詞",
+            "partOfSpeechCode": "上一段自動詞",
+            "means": [
+              {
+                "order": "1",
+                "value": "(일·무엇이) 생기다.",
+                "vcode": "712470"
+              },
+              {
+                "order": "2",
+                "value": "남녀가 은밀히 맺어지다.",
+                "vcode": "835620"
+              },
+              {
+                "order": "3",
+                "value": "되다, 이루어지다, 완성되다.",
+                "vcode": "996201"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "できる",
+        "vcode": "533643",
+        "encode": "%E3%81%A7%E3%81%8D%E3%82%8B"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "숙어",
+        "dictTypeForm": "3",
+        "expEntry": "될 수 있으면",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "<strong>できるだけ</strong>。<strong>できれば</strong>。なるべく",
+                "vcode": "517812"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "될 수 있으면",
+        "vcode": "927076",
+        "encode": "%EB%90%A0+%EC%88%98+%EC%9E%88%EC%9C%BC%EB%A9%B4"
+      },
+      {
+        "rank": "2",
+        "expDictTypeForm": "숙어",
+        "dictTypeForm": "3",
+        "expEntry": "될 수 있는 대로",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "<strong>できるだけ</strong>。<strong>できれば</strong>。なるべく",
+                "vcode": "360345"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "될 수 있는 대로",
+        "vcode": "661216",
+        "encode": "%EB%90%A0+%EC%88%98+%EC%9E%88%EB%8A%94+%EB%8C%80%EB%A1%9C"
+      },
+      {
+        "rank": "3",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "웬만하면",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "<strong>できれば</strong>。",
+                "vcode": "474657"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "웬만하면",
+        "vcode": "966386",
+        "encode": "%EC%9B%AC%EB%A7%8C%ED%95%98%EB%A9%B4"
+      },
+      {
+        "rank": "4",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "I wish it were  possible to time travel.",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "タイムトラベルが<strong>できれば</strong>なあ。",
+                "vcode": "474657"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "I wish it were  possible to time travel ",
+        "vcode": "103124",
+        "encode": "I+wish+it+were++possible+to+time+travel+"
+      },
+      {
+        "rank": "5",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "I wish I  could  have known.",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "私は知ることが<strong>できれば</strong>よかったのになあ。",
+                "vcode": "474657"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "I wish I  could  have known ",
+        "vcode": "610508",
+        "encode": "I+wish+I++could++have+known+"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>出来</rb><rt><strong>でき</strong></rt></ruby><strong>れば</strong><ruby><rb>借金</rb><rt>しゃっきん</rt></ruby>はしたくない",
+        "example2Lang": "1",
+        "expExample2": "가능하면 빚은 지고 싶지 않다",
+        "expEntry": "<strong>できれば</strong>[出来れば]"
+      },
+      {
+        "rank": "2",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>出来</rb><rt><strong>でき</strong></rt></ruby><strong>れば</strong><ruby><rb>今日中</rb><rt>きょうじゅう</rt></ruby>に<ruby><rb>仕上</rb><rt>しあ</rt></ruby>げてほしい",
+        "example2Lang": "1",
+        "expExample2": "가능하면 오늘 안으로 마무리해 주었으면 하네.",
+        "expEntry": "<strong>できれば</strong>[出来れば]"
+      },
+      {
+        "rank": "3",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<strong>できれば</strong><ruby><rb>自然</rb><rt>しぜん</rt></ruby><ruby><rb>分娩</rb><rt>ぶんべん</rt></ruby>にしたい",
+        "example2Lang": "1",
+        "expExample2": "가급적 자연 분만 하고 싶다",
+        "expEntry": "しぜんぶんべん[自然分娩]"
+      },
+      {
+        "rank": "4",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<strong>できれば</strong><ruby><rb>借金</rb><rt>しゃっきん</rt></ruby>はしたくない",
+        "example2Lang": "1",
+        "expExample2": "가능하면 빚은 지고 싶지 않다",
+        "expEntry": "가능"
+      },
+      {
+        "rank": "5",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "それだけ<strong>できれば</strong><ruby><rb>上</rb><rt>じょう</rt></ruby>の<ruby><rb>部</rb><rt>ぶ</rt></ruby>だ",
+        "example2Lang": "1",
+        "expExample2": "그만큼 할 수 있으면 상에 든다",
+        "expEntry": "じょう[上]"
+      }
+    ],
+    "hiraganaList": [
+      {
+        "entry_id": "d9dacfd4189f4e329bc80c63cfe1c7eb",
+        "parent_entry_id": "d9dacfd4189f4e329bc80c63cfe1c7eb",
+        "origin_entry_id": "JK000000060371",
+        "entry": "できれば",
+        "level": "0",
+        "source": "081341B9",
+        "parts": [
+          "연어"
+        ],
+        "pron": "出来れば",
+        "means": [
+          "가능하면; 될 수 있으면."
+        ],
+        "category1": "katakana",
+        "category2": "できれば"
+      }
+    ]
+  },
+  {
+    "entry": "やむをえない",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "<strong>やむを</strong>得ない·已むを得ない",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 3",
+        "meansCollector": [
+          {
+            "partOfSpeech": "연어",
+            "partOfSpeech2": "連語",
+            "partOfSpeechCode": "連語",
+            "means": [
+              {
+                "order": "",
+                "value": "할 수 없다, 어쩔 수 없다, 부득이하다.",
+                "vcode": "655057"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "やむをえない",
+        "vcode": "003674",
+        "encode": "%E3%82%84%E3%82%80%E3%82%92%E3%81%88%E3%81%AA%E3%81%84"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "<strong>やむを</strong>得ない",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "「<strong>やむを</strong>得ない」(어쩔 수 없다)는 부득이한 사정으로 어떤 일을 할 수밖에 없음을 나타낸다. 예를 들어 「<strong>やむを</strong>得ない用のため欠席した」(어쩔 수 없는 용건 때문에 결석했다)처럼 쓸 수 있음.",
+                "vcode": "474657"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "やむをえない",
+        "vcode": "003674",
+        "encode": "%E3%82%84%E3%82%80%E3%82%92%E3%81%88%E3%81%AA%E3%81%84"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "마지못하다",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "형용사",
+            "partOfSpeech2": "形容詞",
+            "partOfSpeechCode": "形容詞",
+            "means": [
+              {
+                "order": "",
+                "value": "(<ruby><rb>主</rb><rt>おも</rt></ruby>に‘마지못해’の<ruby><rb>形</rb><rt>かたち</rt></ruby>に<ruby><rb>用</rb><rt>もち</rt></ruby>いられて) <strong>やむをえない</strong>, <ruby><rb>仕方</rb><rt>しかた</rt></ruby>[<ruby><rb>致</rb><rt>いた</rt></ruby>し<ruby><rb>方</rb><rt>かた</rt></ruby>]ない, どうしようもない, よんどころない.",
+                "vcode": "847131"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "마지못하다",
+        "vcode": "764496",
+        "encode": "%EB%A7%88%EC%A7%80%EB%AA%BB%ED%95%98%EB%8B%A4"
+      },
+      {
+        "rank": "2",
+        "expDictTypeForm": "숙어",
+        "dictTypeForm": "3",
+        "expEntry": "옴치고 뛸 수도 없다",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "관용구",
+            "partOfSpeech2": "熟語",
+            "partOfSpeechCode": "熟語",
+            "means": [
+              {
+                "order": "1",
+                "value": "いかんともしがたい, <strong>やむをえない</strong>.",
+                "vcode": "474657"
+              },
+              {
+                "order": "2",
+                "value": "<ruby><rb>微動</rb><rt>びどう</rt></ruby>だにできない.",
+                "vcode": "474657"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "옴치고 뛸 수도 없다",
+        "vcode": "157124",
+        "encode": "%EC%98%B4%EC%B9%98%EA%B3%A0+%EB%9B%B8+%EC%88%98%EB%8F%84+%EC%97%86%EB%8B%A4"
+      },
+      {
+        "rank": "3",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "부득이하다",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "형용사",
+            "partOfSpeech2": "形容詞",
+            "partOfSpeechCode": "形容詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>仕方</rb><rt>しかた</rt></ruby>がない, <ruby><rb>余儀</rb><rt>よぎ</rt></ruby>ない, せん<ruby><rb>方</rb><rt>かた</rt></ruby>ない, よんどころない, <strong>やむを</strong><ruby><rb>得</rb><rt><strong>え</strong></rt></ruby><strong>ない</strong>.",
+                "vcode": "486321"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "부득이하다",
+        "vcode": "974668",
+        "encode": "%EB%B6%80%EB%93%9D%EC%9D%B4%ED%95%98%EB%8B%A4"
+      },
+      {
+        "rank": "4",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "만부득이하다",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "형용사",
+            "partOfSpeech2": "形容詞",
+            "partOfSpeechCode": "形容詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<strong>やむをえない</strong>【止むを得ない】。しかたがない【仕方がない】 (→<a href=\"#/entry/koja/fe2e00cf7e3d4576ae4d3ef9e1a7b134\" class=\"link\" lang=\"ko\">부득이하다</a>)",
+                "vcode": "212093"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "萬不得已하다"
+          }
+        ],
+        "handleEntry": "만부득이하다",
+        "vcode": "615082",
+        "encode": "%EB%A7%8C%EB%B6%80%EB%93%9D%EC%9D%B4%ED%95%98%EB%8B%A4"
+      },
+      {
+        "rank": "5",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "官印",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "もっとも貞観10年の格においては「有印の諸家はみな私印を鋳造し、ひそかに用いる慣習となってしまっているが、これは<strong>やむをえない</strong>ことだ」...",
+                "vcode": "474657"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "영어 Kanin (official seal)"
+          }
+        ],
+        "handleEntry": "官印",
+        "vcode": "446124",
+        "encode": "%E5%AE%98%E5%8D%B0"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<strong>やむをえない</strong>",
+        "example2Lang": "1",
+        "expExample2": "어쩔[할] 수 없다",
+        "expEntry": "<strong>える</strong>[得る]"
+      },
+      {
+        "rank": "2",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>止</rb><rt><strong>や</strong></rt></ruby><strong>む</strong>を<ruby><rb>得</rb><rt><strong>え</strong></rt></ruby><strong>ない</strong>",
+        "example2Lang": "1",
+        "expExample2": "어쩔 수 없다; 부득이하다",
+        "expEntry": "<strong>えない</strong>[得ない]"
+      },
+      {
+        "rank": "3",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>残念</rb><rt>ざんねん</rt></ruby>だが<strong>やむ</strong>を<ruby><rb>得</rb><rt><strong>え</strong></rt></ruby><strong>ない</strong>",
+        "example2Lang": "1",
+        "expExample2": "유감이지만 어쩔 수 없다",
+        "expEntry": "<strong>やむをえない</strong>[<strong>やむ</strong>を得ない·已むを得ない]"
+      },
+      {
+        "rank": "4",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>現状</rb><rt>げんじょう</rt></ruby>では<strong>やむ</strong>を<ruby><rb>得</rb><rt><strong>え</strong></rt></ruby><strong>ない</strong><ruby><rb>面</rb><rt>めん</rt></ruby>もある",
+        "example2Lang": "1",
+        "expExample2": "현재 상태로서는 어쩔 수 없는 면도 있다",
+        "expEntry": "<strong>やむをえない</strong>[<strong>やむ</strong>を得ない·已むを得ない]"
+      },
+      {
+        "rank": "5",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>休</rb><rt>やす</rt></ruby>むのも<strong>やむ</strong>を<ruby><rb>得</rb><rt><strong>え</strong></rt></ruby><strong>ない</strong>",
+        "example2Lang": "1",
+        "expExample2": "쉬는 것도 부득이하다",
+        "expEntry": "<strong>やむをえない</strong>[<strong>やむ</strong>を得ない·已むを得ない]"
+      }
+    ],
+    "hiraganaList": [
+      {
+        "entry_id": "cfc2fc0c164343a2ab32b3f56624e8e8",
+        "parent_entry_id": "cfc2fc0c164343a2ab32b3f56624e8e8",
+        "origin_entry_id": "JK000000089259",
+        "entry": "やむをえない",
+        "level": "0",
+        "source": "081341B9",
+        "parts": [
+          "연어"
+        ],
+        "pron": "やむを得ない·已むを得ない",
+        "means": [
+          "할 수 없다; 어쩔 수 없다; 부득이하다."
+        ],
+        "category1": "katakana",
+        "category2": "やむをえない"
+      }
+    ]
+  },
+  {
+    "entry": "ようこそ",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 3",
+        "meansCollector": [
+          {
+            "partOfSpeech": "연어",
+            "partOfSpeech2": "連語",
+            "partOfSpeechCode": "連語",
+            "means": [
+              {
+                "order": "",
+                "value": "상대의 방문에 감사하거나 환영의 뜻을 나타내는 말: 정말, 잘. (=<span class=\"related_word\" lang=\"ja\">よくぞ</span>)",
+                "vcode": "152855"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ようこそ",
+        "vcode": "601486",
+        "encode": "%E3%82%88%E3%81%86%E3%81%93%E3%81%9D"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "<strong>ようこそ</strong>お越し下さいました",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "잘 오셨습니다.",
+                "vcode": "542895"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "ようこそおこしくださいました",
+        "vcode": "398618",
+        "encode": "%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%E3%81%8A%E3%81%93%E3%81%97%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%81%BE%E3%81%97%E3%81%9F"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "웰컴",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사, 감탄사",
+            "partOfSpeech2": "名詞, 感嘆詞",
+            "partOfSpeechCode": "名詞, 感嘆詞",
+            "means": [
+              {
+                "order": "",
+                "value": "ウエルカム, <ruby><rb>歓迎</rb><rt>かんげい</rt></ruby>, <strong>ようこそ</strong>.",
+                "vcode": "474657"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "welcome"
+          }
+        ],
+        "handleEntry": "웰컴",
+        "vcode": "585553",
+        "encode": "%EC%9B%B0%EC%BB%B4"
+      },
+      {
+        "rank": "2",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "잘",
+        "expEntrySuperscript": "2",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "부사",
+            "partOfSpeech2": "副詞",
+            "partOfSpeechCode": "副詞",
+            "means": [
+              {
+                "order": "1",
+                "value": "(알맞게) その<ruby><rb>行為</rb><rt>こうい</rt></ruby>が<ruby><rb>好</rb><rt>この</rt></ruby>ましくうれしい<ruby><rb>事</rb><rt>こと</rt></ruby>だと<ruby><rb>言</rb><rt>い</rt></ruby>う<ruby><rb>気持</rb><rt>きも</rt></ruby>ちを<ruby><rb>表</rb><rt>あら</rt></ruby>わす<ruby><rb>語</rb><rt>ご</rt></ruby>, <ruby><rb>折</rb><rt>おり</rt></ruby>よく, <strong>ようこそ</strong>.",
+                "vcode": "807603"
+              },
+              {
+                "order": "2",
+                "value": "よく.",
+                "vcode": "474657"
+              },
+              {
+                "order": "3",
+                "value": "(바르게) <ruby><rb>正</rb><rt>ただ</rt></ruby>しく.",
+                "vcode": "263230"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "잘",
+        "vcode": "888095",
+        "encode": "%EC%9E%98"
+      },
+      {
+        "rank": "3",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "welcome",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "(…へ)『<strong>ようこそ</strong>』;いらっしゃい / 〈人〉‘を'出迎える,〈人〉‘に'出迎えのあいさつをする / 〈人〉‘を'『歓迎する』,喜んで迎える / 〈提案など〉‘を'受け入れる / (出迎えの)『あいさつ』 / 『歓迎』 / もてなし[方] /...",
+                "vcode": "474657"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "welcome",
+        "vcode": "584139",
+        "encode": "welcome"
+      },
+      {
+        "rank": "4",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "동막골 영화세트장",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "映画『トンマッコルへ<strong>ようこそ</strong>』セット (일본어 표기: トンマッコル・ヨンファセトゥジャン)",
+                "vcode": "474657"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "동막골 영화세트장",
+        "vcode": "492087",
+        "encode": "%EB%8F%99%EB%A7%89%EA%B3%A8+%EC%98%81%ED%99%94%EC%84%B8%ED%8A%B8%EC%9E%A5"
+      },
+      {
+        "rank": "5",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "웰컴투동막골세트장",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "",
+                "value": "映画『トンマッコルへ<strong>ようこそ</strong>』オープンセット (일본어 표기: 『ウェルカム・トゥ・トンマッコル』セットジャン)",
+                "vcode": "474657"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "웰컴투동막골세트장",
+        "vcode": "870859",
+        "encode": "%EC%9B%B0%EC%BB%B4%ED%88%AC%EB%8F%99%EB%A7%89%EA%B3%A8%EC%84%B8%ED%8A%B8%EC%9E%A5"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>良</rb><rt><strong>よ</strong></rt></ruby><strong>うこそ</strong>",
+        "example2Lang": "1",
+        "expExample2": "잘 오셨습니다",
+        "expEntry": "よい[良い·善い·好い]"
+      },
+      {
+        "rank": "2",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>遠</rb><rt>とお</rt></ruby>い<ruby><rb>所</rb><rt>ところ</rt></ruby>を<strong>ようこそ</strong>",
+        "example2Lang": "1",
+        "expExample2": "먼 데를 이렇게 와 주셔서 감사합니다",
+        "expEntry": "<strong>ようこそ</strong>"
+      },
+      {
+        "rank": "3",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "これは、<strong>ようこそ</strong>",
+        "example2Lang": "1",
+        "expExample2": "이것 참, 잘 오셨습니다",
+        "expEntry": "<strong>ようこそ</strong>"
+      },
+      {
+        "rank": "4",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<strong>ようこそ</strong>おいでくださった",
+        "example2Lang": "1",
+        "expExample2": "참으로 잘 와 주셨소",
+        "expEntry": "<strong>ようこそ</strong>"
+      },
+      {
+        "rank": "5",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>遠</rb><rt>とお</rt></ruby>い<ruby><rb>所</rb><rt>ところ</rt></ruby>を<strong>ようこそ</strong>.",
+        "example2Lang": "1",
+        "expExample2": "먼 데를 이렇게 와 주셔서 감사합니다",
+        "expEntry": "멀다"
+      }
+    ],
+    "hiraganaList": []
+  }
+]

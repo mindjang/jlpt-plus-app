@@ -8,9 +8,9 @@ import { Modal } from '@/components/ui/Modal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
 import { Level, levelData, getLevelGradient } from '@/data'
-import { getWordsByLevel } from '@/data/words/index'
+import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
-import { convertSearchResultToWord, convertKanjiAliveEntryToKanji } from '@/lib/utils/dataConverter'
+import { convertNaverWordToWord, convertKanjiAliveEntryToKanji } from '@/lib/utils/dataConverter'
 import type { Word, Kanji } from '@/lib/types/content'
 import { useStudyProgress } from '@/hooks/useStudyProgress'
 import { AutoStudyCard } from '@/components/study/AutoStudyCard'
@@ -43,12 +43,12 @@ function AutoStudyContent() {
     return modeParam === 'chapter' ? 'chapter' : 'auto'
   }, [modeParam])
 
-  // 단어/한자 데이터 변환
+  // 단어/한자 데이터 변환 (네이버 데이터 사용)
   const words: Word[] = useMemo(() => {
     if (activeTab !== 'word') return []
-    const searchResults = getWordsByLevel(level)
-    return searchResults.map((result, index) => 
-      convertSearchResultToWord(result, `${level}_W_${String(index + 1).padStart(4, '0')}`, 1)
+    const naverWords = getNaverWordsByLevel(level)
+    return naverWords.map((naverWord, index) => 
+      convertNaverWordToWord(naverWord, `${level}_W_${String(index + 1).padStart(4, '0')}`, 1)
     )
   }, [level, activeTab])
 

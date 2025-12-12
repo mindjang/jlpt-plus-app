@@ -7,11 +7,12 @@ import { faBook, faLanguage } from '@fortawesome/free-solid-svg-icons'
 import { SearchBar } from '@/components/ui/SearchBar'
 import { ListItem } from '@/components/ui/ListItem'
 import {
-  getSearchResults,
-  getTotalWordCount,
+  getNaverSearchResults,
+  getTotalNaverWordCount,
   getKanjiSearchResults,
   getTotalKanjiCount,
-} from '@/data'
+} from '@/data/words/index'
+import type { NaverWord } from '@/data/words/index'
 
 const INITIAL_DISPLAY_LIMIT = 50
 
@@ -48,7 +49,27 @@ export function SearchContent({
     }> = []
 
     if (activeTab === 'word') {
-      allResults = getSearchResults(searchQuery)
+      // 네이버 데이터를 SearchResult 형식으로 변환
+      const naverResults = getNaverSearchResults(searchQuery)
+      allResults = naverResults.map((w: NaverWord) => {
+        // 첫 번째 part의 첫 번째 의미 사용
+        const firstMean = w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0
+          ? w.partsMeans[0].means[0]
+          : ''
+        const levelMap: Record<string, 'N1' | 'N2' | 'N3' | 'N4' | 'N5'> = {
+          '1': 'N1',
+          '2': 'N2',
+          '3': 'N3',
+          '4': 'N4',
+          '5': 'N5',
+        }
+        return {
+          level: levelMap[w.level] || 'N5',
+          word: w.entry,
+          furigana: undefined, // 네이버 데이터에는 furigana 정보가 없음
+          meaning: firstMean,
+        }
+      })
     } else {
       allResults = getKanjiSearchResults(searchQuery)
     }
@@ -94,7 +115,7 @@ export function SearchContent({
       return activeTab === 'word'
         ? searchQuery
           ? results.length
-          : getTotalWordCount()
+          : getTotalNaverWordCount()
         : searchQuery
           ? results.length
           : getTotalKanjiCount()
@@ -137,7 +158,7 @@ export function SearchContent({
               }`}
             >
               <FontAwesomeIcon icon={faBook} className="mr-2" />
-              단어 ({getTotalWordCount()})
+              단어 ({getTotalNaverWordCount()})
             </button>
             <button
               onClick={() => handleTabChange('kanji')}

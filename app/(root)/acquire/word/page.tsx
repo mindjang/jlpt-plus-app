@@ -4,8 +4,9 @@ import React, { Suspense, useMemo } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { AppBar } from '@/components/ui/AppBar'
 import { ListItem } from '@/components/ui/ListItem'
-import { getWordsByLevel } from '@/data/words/index'
+import { getNaverWordsByLevel } from '@/data/words/index'
 import { levels, Level } from '@/data'
+import type { NaverWord } from '@/data/words/index'
 
 function WordListContent() {
   const router = useRouter()
@@ -24,7 +25,26 @@ function WordListContent() {
   }, [levelParam])
 
   const words = useMemo(() => {
-    return getWordsByLevel(level)
+    const naverWords = getNaverWordsByLevel(level)
+    // NaverWord를 SearchResult 형식으로 변환
+    return naverWords.map((w: NaverWord) => {
+      const firstMean = w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0
+        ? w.partsMeans[0].means[0]
+        : ''
+      const levelMap: Record<string, Level> = {
+        '1': 'N1',
+        '2': 'N2',
+        '3': 'N3',
+        '4': 'N4',
+        '5': 'N5',
+      }
+      return {
+        level: levelMap[w.level] || 'N5',
+        word: w.entry,
+        furigana: undefined,
+        meaning: firstMean,
+      }
+    })
   }, [level])
 
   const handleItemClick = (word: string) => {

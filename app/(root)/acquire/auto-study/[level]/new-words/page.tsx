@@ -5,8 +5,9 @@ import { useRouter, useParams, useSearchParams } from 'next/navigation'
 import { AppBar } from '@/components/ui/AppBar'
 import { SearchBar } from '@/components/ui/SearchBar'
 import { ListItem } from '@/components/ui/ListItem'
-import { getWordsByLevel } from '@/data/words/index'
+import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
+import type { NaverWord } from '@/data/words/index'
 import { levels, Level } from '@/data'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { getAllCardIds } from '@/lib/firebase/firestore'
@@ -75,13 +76,29 @@ function NewWordsContent() {
     }> = []
 
     if (typeParam === 'word') {
-      const words = getWordsByLevel(level)
-      // 학습하지 않은 단어만 필터링
-      allItems = words.filter((item) => {
-        // SearchResult의 word를 ID로 사용 (실제로는 word 자체가 ID 역할)
-        // TODO: 실제 Word 타입의 id 필드와 매칭 필요
-        return !learnedIds.has(item.word)
-      })
+      const naverWords = getNaverWordsByLevel(level)
+      // 학습하지 않은 단어만 필터링하고 SearchResult 형식으로 변환
+      allItems = naverWords
+        .filter((w: NaverWord) => !learnedIds.has(w.entry))
+        .map((w: NaverWord) => {
+          // 첫 번째 part의 첫 번째 의미 사용
+          const firstMean = w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0
+            ? w.partsMeans[0].means[0]
+            : ''
+          const levelMap: Record<string, Level> = {
+            '1': 'N1',
+            '2': 'N2',
+            '3': 'N3',
+            '4': 'N4',
+            '5': 'N5',
+          }
+          return {
+            level: levelMap[w.level] || 'N5',
+            word: w.entry,
+            furigana: undefined,
+            meaning: firstMean,
+          }
+        })
     } else {
       const kanjis = getKanjiByLevel(level)
       // KanjiAliveEntry를 SearchResult 형식으로 변환

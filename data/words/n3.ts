@@ -1,11215 +1,25600 @@
-import { SearchResult } from '../types'
+// 네이버 일본어 사전 N3 단어 데이터 (1506개)
+// API: https://ja.dict.naver.com/api/jako/getJLPTList?level=3
+// 품사별 수집: 명사(114페이지), 대명사(1페이지), 동사(55페이지), 조사(1페이지), 형용사(5페이지), 접사(2페이지), 부사(8페이지), 감동사(1페이지), 형용동사(5페이지), 기타(2페이지)
 
-// N3 단어 데이터 (632개)
-export const n3Words: SearchResult[] = [
-  {
-    level: 'N3',
-    word: '雲',
-    furigana: 'くも',
-    meaning: 'cloud'
-,
-    kanjiDetails: [
-      {
-        kanji: '雲',
-        meanings: ['cloud'],
-        onReadings: ['ウン'],
-        kunReadings: ['-ぐも', 'くも'],
-        strokeCount: 12,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'サンドイッチ',
-    meaning: 'sandwich'
-  },
+import type { Word } from '../types'
+
+export const n3Words: Word[] = [
   {
-    level: 'N3',
-    word: '故障',
-    furigana: 'こしょう・する',
-    meaning: 'to break-down'
-,
-    kanjiDetails: [
-      {
-        kanji: '故',
-        meanings: ['cause', 'circumstances', 'consequently', 'especially', 'happenstance', 'intentionally', 'reason', 'the late', 'therefore'],
-        onReadings: ['コ'],
-        kunReadings: ['ふる.い', 'もと', 'ゆえ'],
-        strokeCount: 9,
-        jlpt: 1
-      },
-      {
-        kanji: '障',
-        meanings: ['harm', 'hinder', 'hurt'],
-        onReadings: ['ショウ'],
-        kunReadings: ['さわ.る'],
-        strokeCount: 14,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '怖い',
-    furigana: 'こわい',
-    meaning: 'frightening'
-,
-    kanjiDetails: [
-      {
-        kanji: '怖',
-        meanings: ['be frightened', 'dreadful', 'fearful'],
-        onReadings: ['フ', 'ホ'],
-        kunReadings: ['お.じる', 'おそ.れる', 'こわ.い', 'こわ.がる'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'エスカレーター',
-    meaning: 'escalator'
-  },
-  {
-    level: 'N3',
-    word: '運ぶ',
-    furigana: 'はこぶ',
-    meaning: 'to transport'
-,
-    kanjiDetails: [
-      {
-        kanji: '運',
-        meanings: ['advance', 'carry', 'destiny', 'fate', 'lot', 'luck', 'progress', 'transport'],
-        onReadings: ['ウン'],
-        kunReadings: ['はこ.ぶ'],
-        strokeCount: 12,
-        jlpt: 4
-      }
-    ]
+    entry_id: "14c9ad02f89148dfa811364d69f804be",
+    origin_entry_id: "JK000000000051",
+    entry: "あい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사랑;애정"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あい",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '受ける',
-    furigana: 'うける',
-    meaning: 'to take a lesson or test'
-,
-    kanjiDetails: [
-      {
-        kanji: '受',
-        meanings: ['accept', 'answer (phone)', 'catch', 'get', 'receive', 'take', 'undergo'],
-        onReadings: ['ジュ'],
-        kunReadings: ['-う.け', 'う.かる', 'う.ける'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'お嬢さん',
-    furigana: 'おじょうさん',
-    meaning: 'young lady'
-,
-    kanjiDetails: [
+    entry_id: "099bf0724ceb4751bde785c2c5412ea8",
+    origin_entry_id: "JK000000000230",
+    entry: "あいて",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '嬢',
-        meanings: ['Miss', 'daughter', 'girl', 'lass'],
-        onReadings: ['ジョウ'],
-        kunReadings: ['むすめ'],
-        strokeCount: 16,
-        jlpt: 1
+        part: "명사",
+        means: ["상대"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '首',
-    furigana: 'くび',
-    meaning: 'neck'
-,
-    kanjiDetails: [
-      {
-        kanji: '首',
-        meanings: ['counter for songs and poems', 'neck'],
-        onReadings: ['シュ'],
-        kunReadings: ['くび'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '市民',
-    furigana: 'しみん',
-    meaning: 'citizen'
-,
-    kanjiDetails: [
-      {
-        kanji: '市',
-        meanings: ['city', 'market', 'town'],
-        onReadings: ['シ'],
-        kunReadings: ['いち'],
-        strokeCount: 5,
-        jlpt: 3
-      },
-      {
-        kanji: '民',
-        meanings: ['nation', 'people', 'subjects'],
-        onReadings: ['ミン'],
-        kunReadings: ['たみ'],
-        strokeCount: 5,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '付く',
-    furigana: 'つく',
-    meaning: 'to be attached'
-,
-    kanjiDetails: [
-      {
-        kanji: '付',
-        meanings: ['adhere', 'append', 'attach', 'refer to'],
-        onReadings: ['フ'],
-        kunReadings: ['-つ.き', '-つ.け', '-つ.ける', '-つき', '-づ.き', '-づ.く', '-づ.け', '-づ.ける', '-づき', '-づけ', 'つ.き', 'つ.く', 'つ.け', 'つ.け-', 'つ.ける'],
-        strokeCount: 5,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'すく',
-    meaning: 'to become empty'
+    ],
+    category1: "jlpt",
+    category2: "あいて",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'こと',
-    meaning: 'thing, matter'
-  },
-  {
-    level: 'N3',
-    word: '訪ねる',
-    furigana: 'たずねる',
-    meaning: 'to visit'
-,
-    kanjiDetails: [
+    entry_id: "4ed72437d62d47039fedb1a1db27c1bd",
+    origin_entry_id: "JK000000000682",
+    entry: "あかんぼう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '訪',
-        meanings: ['call on', 'look up', 'offer sympathy', 'visit'],
-        onReadings: ['ホウ'],
-        kunReadings: ['おとず.れる', 'たず.ねる', 'と.う'],
-        strokeCount: 11,
-        jlpt: 3
+        part: "명사",
+        means: ["갓난아기;태어날  아기;또,  어리고 유치함"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あかんぼう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'お祝い',
-    furigana: 'おいわい',
-    meaning: 'congratulation'
-,
-    kanjiDetails: [
+    entry_id: "4353cebafa2f4bf6a41d4dec672d77a7",
+    origin_entry_id: "JK000000000726",
+    entry: "あきち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '祝',
-        meanings: ['celebrate', 'congratulate'],
-        onReadings: ['シュウ', 'シュク'],
-        kunReadings: ['いわ.う'],
-        strokeCount: 9,
-        jlpt: 2
+        part: "명사",
+        means: ["공지;빈터;공터"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あきち",
+    category3: null
   },
-  {
-    level: 'N3',
-    word: '一生懸命',
-    furigana: 'いっしょうけんめい',
-    meaning: 'with utmost effort'
-,
-    kanjiDetails: [
-      {
-        kanji: '一',
-        meanings: ['one', 'one radical (no.1)'],
-        onReadings: ['イチ', 'イツ'],
-        kunReadings: ['ひと-', 'ひと.つ'],
-        strokeCount: 1,
-        jlpt: 5
-      },
-      {
-        kanji: '生',
-        meanings: ['birth', 'genuine', 'life'],
-        onReadings: ['ショウ', 'セイ'],
-        kunReadings: ['-う', 'い.かす', 'い.きる', 'い.ける', 'う.まれ', 'う.まれる', 'う.む', 'うま.れる', 'うまれ', 'お.う', 'き', 'な.す', 'な.る', 'なま', 'なま-', 'は.える', 'は.やす', 'む.す'],
-        strokeCount: 5,
-        jlpt: 5
-      },
+  {
+    entry_id: "9e183a8998a64dad8168af58b83cc74b",
+    origin_entry_id: "JK000000000814",
+    entry: "あくしゅ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '懸',
-        meanings: ['consult', 'depend', 'distant', 'far apart', 'hang', 'state of suspension'],
-        onReadings: ['ケ', 'ケン'],
-        kunReadings: ['か.かる', 'か.ける'],
-        strokeCount: 20,
-        jlpt: 1
+        part: "명사",
+        means: ["악수"]
       },
       {
-        kanji: '命',
-        meanings: ['appoint', 'command', 'decree', 'destiny', 'fate', 'life'],
-        onReadings: ['ミョウ', 'メイ'],
-        kunReadings: ['いのち'],
-        strokeCount: 8,
-        jlpt: 3
+        part: "동사",
+        means: ["악수"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あくしゅ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '済む',
-    furigana: 'すむ',
-    meaning: 'to finish'
-,
-    kanjiDetails: [
-      {
-        kanji: '済',
-        meanings: ['come to an end', 'excusable', 'finish', 'need not', 'relieve (burden)', 'settle (debt, etc.)'],
-        onReadings: ['サイ', 'セイ'],
-        kunReadings: ['-す.ます', '-ず.み', '-ずみ', 'す.ます', 'す.まない', 'す.む', 'すく.う', 'な.す', 'わた.る', 'わたし'],
-        strokeCount: 11,
-        jlpt: 3
+    entry_id: "c4e81a13ec23446b885c2ab11d689e8b",
+    origin_entry_id: "JK000000000890",
+    entry: "あくび",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["하품"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あくび",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'アメリカ',
-    meaning: 'America'
-  },
-  {
-    level: 'N3',
-    word: '復習',
-    furigana: 'ふくしゅう',
-    meaning: 'revision'
-,
-    kanjiDetails: [
+    entry_id: "81e9dfc8aed44ca58d58353b2ae7a93c",
+    origin_entry_id: "JK100001118001",
+    entry: "あさねぼう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '復',
-        meanings: ['restore', 'resume', 'return to', 'revert'],
-        onReadings: ['フク'],
-        kunReadings: ['また'],
-        strokeCount: 12,
-        jlpt: 2
+        part: "명사",
+        means: ["늦잠꾸러기;늦잠을 잠"]
       },
       {
-        kanji: '習',
-        meanings: ['learn'],
-        onReadings: ['シュウ', 'ジュ'],
-        kunReadings: ['なら.い', 'なら.う'],
-        strokeCount: 11,
-        jlpt: 4
+        part: "동사",
+        means: ["늦잠꾸러기;늦잠을 잠"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あさねぼう",
+    category3: null
   },
-  {
-    level: 'N3',
-    word: '急',
-    furigana: 'きゅう',
-    meaning: 'urgent, steep'
-,
-    kanjiDetails: [
-      {
-        kanji: '急',
-        meanings: ['emergency', 'hurry', 'steep', 'sudden'],
-        onReadings: ['キュウ'],
-        kunReadings: ['いそ.ぎ', 'いそ.ぐ', 'せ.く'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'これから',
-    meaning: 'after this'
-  },
   {
-    level: 'N3',
-    word: '指輪',
-    furigana: 'ゆびわ',
-    meaning: 'finger ring'
-,
-    kanjiDetails: [
-      {
-        kanji: '指',
-        meanings: ['finger', 'indicate', 'measure (ruler)', 'play (chess)', 'point to', 'put into'],
-        onReadings: ['シ'],
-        kunReadings: ['-さ.し', 'さ.す', 'ゆび'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '輪',
-        meanings: ['circle', 'counter for wheels and flowers', 'link', 'loop', 'ring', 'wheel'],
-        onReadings: ['リン'],
-        kunReadings: ['わ'],
-        strokeCount: 15,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '美しい',
-    furigana: 'うつくしい',
-    meaning: 'beautiful'
-,
-    kanjiDetails: [
-      {
-        kanji: '美',
-        meanings: ['beautiful', 'beauty'],
-        onReadings: ['ビ', 'ミ'],
-        kunReadings: ['うつく.しい'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '直る',
-    furigana: 'なおる',
-    meaning: 'to be fixed, to be repaired'
-,
-    kanjiDetails: [
-      {
-        kanji: '直',
-        meanings: ['fix', 'frankness', 'honesty', 'repair', 'straightaway'],
-        onReadings: ['ジカ', 'ジキ', 'チョク'],
-        kunReadings: ['-なお.す', 'す.ぐ', 'ただ.ちに', 'なお.き', 'なお.す', 'なお.る'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '水泳',
-    furigana: 'すいえい',
-    meaning: 'swimming'
-,
-    kanjiDetails: [
-      {
-        kanji: '水',
-        meanings: ['water'],
-        onReadings: ['スイ'],
-        kunReadings: ['みず', 'みず-'],
-        strokeCount: 4,
-        jlpt: 5
-      },
-      {
-        kanji: '泳',
-        meanings: ['swim'],
-        onReadings: ['エイ'],
-        kunReadings: ['およ.ぐ'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '真中',
-    furigana: 'まんなか',
-    meaning: 'middle'
-,
-    kanjiDetails: [
-      {
-        kanji: '真',
-        meanings: ['Buddhist sect', 'reality', 'true'],
-        onReadings: ['シン'],
-        kunReadings: ['ま', 'ま-', 'まこと'],
-        strokeCount: 10,
-        jlpt: 4
-      },
-      {
-        kanji: '中',
-        meanings: ['center', 'in', 'inside', 'mean', 'middle'],
-        onReadings: ['チュウ'],
-        kunReadings: ['あた.る', 'うち', 'なか'],
-        strokeCount: 4,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '発音',
-    furigana: 'はつおん',
-    meaning: 'pronunciation'
-,
-    kanjiDetails: [
-      {
-        kanji: '発',
-        meanings: ['counter for gunshots', 'departure', 'discharge', 'disclose', 'emit', 'publish', 'start from'],
-        onReadings: ['ハツ', 'ホツ'],
-        kunReadings: ['あば.く', 'おこ.る', 'た.つ', 'つか.わす', 'はな.つ'],
-        strokeCount: 9,
-        jlpt: 4
-      },
-      {
-        kanji: '音',
-        meanings: ['noise', 'sound'],
-        onReadings: ['-ノン', 'イン', 'オン'],
-        kunReadings: ['おと', 'ね'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '手伝う',
-    furigana: 'てつだう',
-    meaning: 'to assist'
-,
-    kanjiDetails: [
-      {
-        kanji: '手',
-        meanings: ['hand'],
-        onReadings: ['シュ', 'ズ'],
-        kunReadings: ['-て', 'た-', 'て', 'て-'],
-        strokeCount: 4,
-        jlpt: 4
-      },
+    entry_id: "d15eec67894d4769a50c2e676b7f6425",
+    origin_entry_id: "JK000000001125",
+    entry: "あさひ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '伝',
-        meanings: ['communicate', 'follow', 'go along', 'legend', 'report', 'tradition', 'transmit', 'walk along'],
-        onReadings: ['テン', 'デン'],
-        kunReadings: ['-づた.い', 'つた.う', 'つた.える', 'つた.わる', 'つだ.う', 'つて'],
-        strokeCount: 6,
-        jlpt: 3
+        part: "명사",
+        means: ["아침 해;또, 그 햇빛"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '折れる',
-    furigana: 'おれる',
-    meaning: 'to break or be folded'
-,
-    kanjiDetails: [
-      {
-        kanji: '折',
-        meanings: ['bend', 'break', 'fold', 'fracture', 'submit', 'yield'],
-        onReadings: ['シャク', 'セツ'],
-        kunReadings: ['-お.り', 'お.り', 'お.る', 'お.れる', 'おり'],
-        strokeCount: 7,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '一度',
-    furigana: 'いちど',
-    meaning: 'once'
-,
-    kanjiDetails: [
-      {
-        kanji: '一',
-        meanings: ['one', 'one radical (no.1)'],
-        onReadings: ['イチ', 'イツ'],
-        kunReadings: ['ひと-', 'ひと.つ'],
-        strokeCount: 1,
-        jlpt: 5
-      },
-      {
-        kanji: '度',
-        meanings: ['attitude', 'consider', 'counter for occurrences', 'degrees', 'occurrence', 'time'],
-        onReadings: ['タク', 'ト', 'ド'],
-        kunReadings: ['-た.い', 'たび'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '高等学校',
-    furigana: 'こうとうがっこう',
-    meaning: 'high school'
-,
-    kanjiDetails: [
-      {
-        kanji: '高',
-        meanings: ['expensive', 'high', 'tall'],
-        onReadings: ['コウ'],
-        kunReadings: ['-だか', 'たか', 'たか.い', 'たか.まる', 'たか.める'],
-        strokeCount: 10,
-        jlpt: 5
-      },
-      {
-        kanji: '等',
-        meanings: ['and so forth', 'class (first)', 'equal', 'etc.', 'quality', 'similar'],
-        onReadings: ['トウ'],
-        kunReadings: ['-ら', 'など', 'ひと.しい'],
-        strokeCount: 12,
-        jlpt: 3
-      },
-      {
-        kanji: '学',
-        meanings: ['learning', 'science', 'study'],
-        onReadings: ['ガク'],
-        kunReadings: ['まな.ぶ'],
-        strokeCount: 8,
-        jlpt: 5
-      },
-      {
-        kanji: '校',
-        meanings: ['correction', 'exam', 'printing', 'proof', 'school'],
-        onReadings: ['キョウ', 'コウ'],
-        strokeCount: 10,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'アルコール',
-    meaning: 'alcohol'
-  },
-  {
-    level: 'N3',
-    word: 'アナウンサー',
-    meaning: 'announcer'
-  },
-  {
-    level: 'N3',
-    word: '最初',
-    furigana: 'さいしょ',
-    meaning: 'beginning, first'
-,
-    kanjiDetails: [
-      {
-        kanji: '最',
-        meanings: ['extreme', 'most', 'utmost'],
-        onReadings: ['サイ', 'シュ'],
-        kunReadings: ['つま', 'もっと.も'],
-        strokeCount: 12,
-        jlpt: 3
-      },
-      {
-        kanji: '初',
-        meanings: ['beginning', 'first time'],
-        onReadings: ['ショ'],
-        kunReadings: ['-そ.める', '-ぞ.め', 'うい-', 'はじ.め', 'はじ.めて', 'はつ', 'はつ-'],
-        strokeCount: 7,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '投げる',
-    furigana: 'なげる',
-    meaning: 'to throw or cast away'
-,
-    kanjiDetails: [
-      {
-        kanji: '投',
-        meanings: ['abandon', 'discard', 'give up', 'hurl', 'invest in', 'join', 'launch into', 'sell at a loss', 'throw'],
-        onReadings: ['トウ'],
-        kunReadings: ['-な.げ', 'な.げる'],
-        strokeCount: 7,
-        jlpt: 3
-      }
-    ]
-  },
+    ],
+    category1: "jlpt",
+    category2: "あさひ",
+    category3: null
+  },
   {
-    level: 'N3',
-    word: '変える',
-    furigana: 'かえる',
-    meaning: 'to change'
-,
-    kanjiDetails: [
-      {
-        kanji: '変',
-        meanings: ['change', 'strange', 'unusual'],
-        onReadings: ['ヘン'],
-        kunReadings: ['か.える', 'か.わり', 'か.わる'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '昼間',
-    furigana: 'ひるま',
-    meaning: 'daytime, during the day'
-,
-    kanjiDetails: [
-      {
-        kanji: '昼',
-        meanings: ['daytime', 'noon'],
-        onReadings: ['チュウ'],
-        kunReadings: ['ひる'],
-        strokeCount: 9,
-        jlpt: 4
-      },
-      {
-        kanji: '間',
-        meanings: ['interval', 'space'],
-        onReadings: ['カン', 'ケン'],
-        kunReadings: ['あい', 'あいだ', 'ま'],
-        strokeCount: 12,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '神社',
-    furigana: 'じんじゃ',
-    meaning: 'Shinto shrine'
-,
-    kanjiDetails: [
-      {
-        kanji: '神',
-        meanings: ['gods', 'mind', 'soul'],
-        onReadings: ['シン', 'ジン'],
-        kunReadings: ['かみ', 'かん-', 'こう-'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '社',
-        meanings: ['association', 'company', 'firm', 'office', 'shrine'],
-        onReadings: ['シャ'],
-        kunReadings: ['やしろ'],
-        strokeCount: 7,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '食料品',
-    furigana: 'しょくりょうひん',
-    meaning: 'groceries'
-,
-    kanjiDetails: [
-      {
-        kanji: '食',
-        meanings: ['eat', 'food'],
-        onReadings: ['ショク', 'ジキ'],
-        kunReadings: ['く.う', 'く.らう', 'た.べる', 'は.む'],
-        strokeCount: 9,
-        jlpt: 5
-      },
-      {
-        kanji: '料',
-        meanings: ['fee', 'materials'],
-        onReadings: ['リョウ'],
-        strokeCount: 10,
-        jlpt: 4
-      },
-      {
-        kanji: '品',
-        meanings: ['article', 'counter for meal courses', 'dignity', 'goods', 'refinement'],
-        onReadings: ['ヒン', 'ホン'],
-        kunReadings: ['しな'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '丁寧',
-    furigana: 'ていねい',
-    meaning: 'polite'
-,
-    kanjiDetails: [
-      {
-        kanji: '丁',
-        meanings: ['4th calendar sign', 'counter for guns, tools, leaves or cakes of something', 'even number', 'street', 'town', 'ward'],
-        onReadings: ['チ', 'チョウ', 'チン', 'テイ', 'トウ'],
-        kunReadings: ['ひのと'],
-        strokeCount: 2,
-        jlpt: 1
-      },
-      {
-        kanji: '寧',
-        meanings: ['peaceful', 'preferably', 'quiet', 'rather', 'tranquility'],
-        onReadings: ['ネイ'],
-        kunReadings: ['むし.ろ'],
-        strokeCount: 14,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '規則',
-    furigana: 'きそく',
-    meaning: 'regulations'
-,
-    kanjiDetails: [
-      {
-        kanji: '規',
-        meanings: ['measure', 'standard'],
-        onReadings: ['キ'],
-        strokeCount: 11,
-        jlpt: 3
-      },
-      {
-        kanji: '則',
-        meanings: ['based on', 'follow', 'law', 'model after', 'rule'],
-        onReadings: ['ソク'],
-        kunReadings: ['すなわち', 'のっと.る', 'のり'],
-        strokeCount: 9,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'もうすぐ',
-    meaning: 'soon'
-  },
-  {
-    level: 'N3',
-    word: '絹',
-    furigana: 'きぬ',
-    meaning: 'silk'
-,
-    kanjiDetails: [
-      {
-        kanji: '絹',
-        meanings: ['silk'],
-        onReadings: ['ケン'],
-        kunReadings: ['きぬ'],
-        strokeCount: 13,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '怒る',
-    furigana: 'おこる',
-    meaning: 'to get angry, to be angry'
-,
-    kanjiDetails: [
-      {
-        kanji: '怒',
-        meanings: ['angry', 'be offended'],
-        onReadings: ['ド', 'ヌ'],
-        kunReadings: ['いか.る', 'おこ.る'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '用',
-    furigana: 'よう',
-    meaning: 'use'
-,
-    kanjiDetails: [
-      {
-        kanji: '用',
-        meanings: ['business', 'employ', 'service', 'use', 'utilize'],
-        onReadings: ['ヨウ'],
-        kunReadings: ['もち.いる'],
-        strokeCount: 5,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '致す',
-    furigana: 'いたす',
-    meaning: '(humble) to do'
-,
-    kanjiDetails: [
-      {
-        kanji: '致',
-        meanings: ['cause', 'do', 'doth', 'engage', 'exert', 'forward', 'incur', 'send'],
-        onReadings: ['チ'],
-        kunReadings: ['いた.す'],
-        strokeCount: 10,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '海岸',
-    furigana: 'かいがん',
-    meaning: 'coast'
-,
-    kanjiDetails: [
-      {
-        kanji: '海',
-        meanings: ['ocean', 'sea'],
-        onReadings: ['カイ'],
-        kunReadings: ['うみ'],
-        strokeCount: 9,
-        jlpt: 4
-      },
-      {
-        kanji: '岸',
-        meanings: ['beach'],
-        onReadings: ['ガン'],
-        kunReadings: ['きし'],
-        strokeCount: 8,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '経済',
-    furigana: 'けいざい',
-    meaning: 'finance, economy'
-,
-    kanjiDetails: [
-      {
-        kanji: '経',
-        meanings: ['expire', 'longitude', 'pass thru', 'sutra', 'warp'],
-        onReadings: ['キョウ', 'キン', 'ケイ'],
-        kunReadings: ['た.つ', 'たていと', 'のり', 'はか.る', 'へ.る'],
-        strokeCount: 11,
-        jlpt: 3
-      },
-      {
-        kanji: '済',
-        meanings: ['come to an end', 'excusable', 'finish', 'need not', 'relieve (burden)', 'settle (debt, etc.)'],
-        onReadings: ['サイ', 'セイ'],
-        kunReadings: ['-す.ます', '-ず.み', '-ずみ', 'す.ます', 'す.まない', 'す.む', 'すく.う', 'な.す', 'わた.る', 'わたし'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '以上',
-    furigana: 'いじょう',
-    meaning: 'more than, this is all'
-,
-    kanjiDetails: [
-      {
-        kanji: '以',
-        meanings: ['because', 'by means of', 'compared with', 'in view of'],
-        onReadings: ['イ'],
-        kunReadings: ['もっ.て'],
-        strokeCount: 5,
-        jlpt: 4
-      },
-      {
-        kanji: '上',
-        meanings: ['above', 'up'],
-        onReadings: ['シャン', 'ショウ', 'ジョウ'],
-        kunReadings: ['-あ.がり', '-あ.がる', '-あ.げる', '-うえ', 'あ.がり', 'あ.がる', 'あ.げる', 'うえ', 'うわ-', 'かみ', 'たてまつ.る', 'のぼ.す', 'のぼ.せる', 'のぼ.り', 'のぼ.る'],
-        strokeCount: 3,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '掛ける',
-    furigana: 'かける',
-    meaning: 'to hang something'
-,
-    kanjiDetails: [
-      {
-        kanji: '掛',
-        meanings: ['arrive at', 'depend', 'hang', 'pour', 'suspend', 'tax'],
-        onReadings: ['カイ', 'ケイ'],
-        kunReadings: ['-か.かる', '-か.け', '-か.ける', '-が.かり', '-が.かる', '-が.け', '-がかり', 'か.かり', 'か.かる', 'か.け', 'か.ける', 'かかり'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '届ける',
-    furigana: 'とどける',
-    meaning: 'to reach'
-,
-    kanjiDetails: [
-      {
-        kanji: '届',
-        meanings: ['arrive', 'deliver', 'forward', 'notify', 'reach', 'report'],
-        onReadings: ['カイ'],
-        kunReadings: ['-とど.け', 'とど.く', 'とど.ける'],
-        strokeCount: 8,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '適当',
-    furigana: 'てきとう',
-    meaning: 'suitability'
-,
-    kanjiDetails: [
-      {
-        kanji: '適',
-        meanings: ['capable', 'occasional', 'qualified', 'rare', 'suitable'],
-        onReadings: ['テキ'],
-        kunReadings: ['かな.う'],
-        strokeCount: 14,
-        jlpt: 3
-      },
-      {
-        kanji: '当',
-        meanings: ['appropriate', 'himself', 'hit', 'right'],
-        onReadings: ['トウ'],
-        kunReadings: ['あ.たり', 'あ.たる', 'あ.て', 'あ.てる', 'まさ.に', 'まさ.にべし'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '祖父',
-    furigana: 'そふ',
-    meaning: 'grandfather'
-,
-    kanjiDetails: [
-      {
-        kanji: '祖',
-        meanings: ['ancestor', 'founder', 'pioneer'],
-        onReadings: ['ソ'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '父',
-        meanings: ['father'],
-        onReadings: ['フ'],
-        kunReadings: ['ちち'],
-        strokeCount: 4,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '研究室',
-    furigana: 'けんきゅうしつ',
-    meaning: 'study room, laboratory'
-,
-    kanjiDetails: [
-      {
-        kanji: '研',
-        meanings: ['polish', 'sharpen', 'study of'],
-        onReadings: ['ケン'],
-        kunReadings: ['と.ぐ'],
-        strokeCount: 9,
-        jlpt: 4
-      },
-      {
-        kanji: '究',
-        meanings: ['research', 'study'],
-        onReadings: ['キュウ', 'ク'],
-        kunReadings: ['きわ.める'],
-        strokeCount: 7,
-        jlpt: 4
-      },
-      {
-        kanji: '室',
-        meanings: ['apartment', 'cellar', 'chamber', 'greenhouse', 'room'],
-        onReadings: ['シツ'],
-        kunReadings: ['むろ'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '文学',
-    furigana: 'ぶんがく',
-    meaning: 'literature'
-,
-    kanjiDetails: [
-      {
-        kanji: '文',
-        meanings: ['art', 'decoration', 'figures', 'literary radical (no. 67)', 'literature', 'plan', 'sentence', 'style'],
-        onReadings: ['ブン', 'モン'],
-        kunReadings: ['あや', 'ふみ'],
-        strokeCount: 4,
-        jlpt: 4
-      },
-      {
-        kanji: '学',
-        meanings: ['learning', 'science', 'study'],
-        onReadings: ['ガク'],
-        kunReadings: ['まな.ぶ'],
-        strokeCount: 8,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '生きる',
-    furigana: 'いきる',
-    meaning: 'to live'
-,
-    kanjiDetails: [
-      {
-        kanji: '生',
-        meanings: ['birth', 'genuine', 'life'],
-        onReadings: ['ショウ', 'セイ'],
-        kunReadings: ['-う', 'い.かす', 'い.きる', 'い.ける', 'う.まれ', 'う.まれる', 'う.む', 'うま.れる', 'うまれ', 'お.う', 'き', 'な.す', 'な.る', 'なま', 'なま-', 'は.える', 'は.やす', 'む.す'],
-        strokeCount: 5,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'それほど',
-    meaning: 'to that extent'
-  },
-  {
-    level: 'N3',
-    word: 'うまい',
-    meaning: 'delicious'
-  },
-  {
-    level: 'N3',
-    word: 'ずいぶん',
-    meaning: 'extremely'
-  },
-  {
-    level: 'N3',
-    word: 'お・金持ち',
-    furigana: 'かねもち / おかねもち',
-    meaning: 'rich man'
-,
-    kanjiDetails: [
-      {
-        kanji: '金',
-        meanings: ['gold'],
-        onReadings: ['キン', 'コン', 'ゴン'],
-        kunReadings: ['-がね', 'かな-', 'かね'],
-        strokeCount: 8,
-        jlpt: 5
-      },
-      {
-        kanji: '持',
-        meanings: ['have', 'hold'],
-        onReadings: ['ジ'],
-        kunReadings: ['-も.ち', 'も.つ', 'も.てる'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '続く',
-    furigana: 'つづく',
-    meaning: 'to be continued'
-,
-    kanjiDetails: [
-      {
-        kanji: '続',
-        meanings: ['continue', 'sequel', 'series'],
-        onReadings: ['キョウ', 'コウ', 'ショク', 'ゾク'],
-        kunReadings: ['つぐ.ない', 'つづ.く', 'つづ.ける'],
-        strokeCount: 13,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '受付',
-    furigana: 'うけつけ',
-    meaning: 'receipt'
-,
-    kanjiDetails: [
-      {
-        kanji: '受',
-        meanings: ['accept', 'answer (phone)', 'catch', 'get', 'receive', 'take', 'undergo'],
-        onReadings: ['ジュ'],
-        kunReadings: ['-う.け', 'う.かる', 'う.ける'],
-        strokeCount: 8,
-        jlpt: 3
-      },
-      {
-        kanji: '付',
-        meanings: ['adhere', 'append', 'attach', 'refer to'],
-        onReadings: ['フ'],
-        kunReadings: ['-つ.き', '-つ.け', '-つ.ける', '-つき', '-づ.き', '-づ.く', '-づ.け', '-づ.ける', '-づき', '-づけ', 'つ.き', 'つ.く', 'つ.け', 'つ.け-', 'つ.ける'],
-        strokeCount: 5,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '代わり',
-    furigana: 'かわり',
-    meaning: 'substitute, alternate'
-,
-    kanjiDetails: [
-      {
-        kanji: '代',
-        meanings: ['age', 'change', 'charge', 'convert', 'counter for decades of ages, eras, etc.', 'fee', 'generation', 'period', 'rate', 'replace', 'substitute'],
-        onReadings: ['タイ', 'ダイ'],
-        kunReadings: ['-が.わり', '-がわ.り', 'か.える', 'か.わり', 'か.わる', 'かわ.り', 'かわ.る', 'しろ', 'よ'],
-        strokeCount: 5,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '残る',
-    furigana: 'のこる',
-    meaning: 'to remain'
-,
-    kanjiDetails: [
-      {
-        kanji: '残',
-        meanings: ['balance', 'leftover', 'remainder'],
-        onReadings: ['サン', 'ザン'],
-        kunReadings: ['そこな.う', 'のこ.す', 'のこ.り', 'のこ.る'],
-        strokeCount: 10,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '世話',
-    furigana: 'せわ・する',
-    meaning: 'to look after'
-,
-    kanjiDetails: [
-      {
-        kanji: '世',
-        meanings: ['generation', 'public', 'society', 'world'],
-        onReadings: ['セ', 'セイ', 'ソウ'],
-        kunReadings: ['よ'],
-        strokeCount: 5,
-        jlpt: 4
-      },
-      {
-        kanji: '話',
-        meanings: ['tale', 'talk'],
-        onReadings: ['ワ'],
-        kunReadings: ['はな.す', 'はなし'],
-        strokeCount: 13,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'スーツケース',
-    meaning: 'suitcase'
-  },
-  {
-    level: 'N3',
-    word: 'くれる',
-    meaning: 'to give'
-  },
-  {
-    level: 'N3',
-    word: '会話',
-    furigana: 'かいわ',
-    meaning: 'conversation'
-,
-    kanjiDetails: [
-      {
-        kanji: '会',
-        meanings: ['association', 'interview', 'join', 'meet', 'meeting', 'party'],
-        onReadings: ['エ', 'カイ'],
-        kunReadings: ['あ.う', 'あ.わせる', 'あつ.まる'],
-        strokeCount: 6,
-        jlpt: 4
-      },
-      {
-        kanji: '話',
-        meanings: ['tale', 'talk'],
-        onReadings: ['ワ'],
-        kunReadings: ['はな.す', 'はなし'],
-        strokeCount: 13,
-        jlpt: 5
+    entry_id: "f66a5acac67d4c208ea5a41e6a23851a",
+    origin_entry_id: "JK000000001165",
+    entry: "あしあと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["발자취"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あしあと",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '向かう',
-    furigana: 'むかう',
-    meaning: 'to face'
-,
-    kanjiDetails: [
-      {
-        kanji: '向',
-        meanings: ['approach', 'beyond', 'confront', 'defy', 'facing', 'tend toward', 'yonder'],
-        onReadings: ['コウ'],
-        kunReadings: ['-む.き', '-む.け', 'む.い', 'む.かい', 'む.かう', 'む.く', 'む.ける', 'む.こう', 'む.こう-', 'むか.い', 'むこ'],
-        strokeCount: 6,
-        jlpt: 3
+    entry_id: "557c5da4b7f346a5a7db28c8f965d92b",
+    origin_entry_id: "JK000000001272",
+    entry: "あしもと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["발밑;또, 그 언저리"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あしもと",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '増える',
-    furigana: 'ふえる',
-    meaning: 'to increase'
-,
-    kanjiDetails: [
-      {
-        kanji: '増',
-        meanings: ['add', 'augment', 'gain', 'increase', 'promote'],
-        onReadings: ['ゾウ'],
-        kunReadings: ['ふ.える', 'ふ.やす', 'ま.し', 'ま.す'],
-        strokeCount: 14,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '紹介',
-    furigana: 'しょうかい',
-    meaning: 'introduction'
-,
-    kanjiDetails: [
+    entry_id: "f8e9df60fe9b4addbc64709accac44c0",
+    origin_entry_id: "JK000000001271",
+    entry: "あじみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '紹',
-        meanings: ['help', 'inherit', 'introduce'],
-        onReadings: ['ショウ'],
-        strokeCount: 11,
-        jlpt: 2
+        part: "명사",
+        means: ["맛을 봄"]
       },
       {
-        kanji: '介',
-        meanings: ['concern oneself with', 'jammed in', 'mediate', 'shellfish'],
-        onReadings: ['カイ'],
-        strokeCount: 4,
-        jlpt: 2
+        part: "동사",
+        means: ["맛을 봄"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'だから',
-    meaning: 'so, therefore'
+    ],
+    category1: "jlpt",
+    category2: "あじみ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '季節',
-    furigana: 'きせつ',
-    meaning: 'season'
-,
-    kanjiDetails: [
+    entry_id: "0229bfcd50fc4076bb15331377e6d28f",
+    origin_entry_id: "JK000000001546",
+    entry: "あっか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '季',
-        meanings: ['seasons'],
-        onReadings: ['キ'],
-        strokeCount: 8,
-        jlpt: 2
+        part: "명사",
+        means: ["악화"]
       },
       {
-        kanji: '節',
-        meanings: ['clause', 'honor', 'joint', 'knob', 'knot', 'knuckle', 'melody', 'node', 'occasion', 'period', 'season', 'stanza', 'tune', 'verse'],
-        onReadings: ['セチ', 'セツ'],
-        kunReadings: ['-ぶし', 'のっと', 'ふし'],
-        strokeCount: 13,
-        jlpt: 1
+        part: "동사",
+        means: ["악화"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あっか",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'そんなに',
-    meaning: 'so much, like that'
+    entry_id: "03da980f693748e28d35e109c59f5d3f",
+    origin_entry_id: "JK000000001644",
+    entry: "あつまり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["모임;또, 모인 것;특히, 회합"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あつまり",
+    category3: null
   },
-  {
-    level: 'N3',
-    word: 'このあいだ',
-    meaning: 'the other day, recently'
-  },
   {
-    level: 'N3',
-    word: '虫',
-    furigana: 'むし',
-    meaning: 'insect'
-,
-    kanjiDetails: [
+    entry_id: "bc96ac14169c4ea1a2fc5c4ed0a8f805",
+    origin_entry_id: "JK000000001679",
+    entry: "あてさき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '虫',
-        meanings: ['bug', 'insect', 'temper'],
-        onReadings: ['キ', 'チュウ'],
-        kunReadings: ['むし'],
-        strokeCount: 6,
-        jlpt: 2
+        part: "명사",
+        means: ["수신인의 주소;수신인"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あてさき",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '祖母',
-    furigana: 'そぼ',
-    meaning: 'grandmother'
-,
-    kanjiDetails: [
+    entry_id: "f05641efa07143afb7c41e20b5107582",
+    origin_entry_id: "JK000000001985",
+    entry: "あぶら",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '祖',
-        meanings: ['ancestor', 'founder', 'pioneer'],
-        onReadings: ['ソ'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '母',
-        meanings: ['mother'],
-        onReadings: ['ボ'],
-        kunReadings: ['はは', 'も'],
-        strokeCount: 5,
-        jlpt: 5
+        part: "명사",
+        means: ["기름"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あぶら",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'いらっしゃる',
-    meaning: '(respectful) to be, to come or to go'
+    entry_id: "cb0f06160cb947f9adc75a3ddba1432d",
+    origin_entry_id: "JK000000002179",
+    entry: "あまど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["빈지문;덧문"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あまど",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '変',
-    furigana: 'へん',
-    meaning: 'strange'
-,
-    kanjiDetails: [
+    entry_id: "cb67b3bf56424d4bb8720806ccd7ffb5",
+    origin_entry_id: "JK000000002250",
+    entry: "あみど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '変',
-        meanings: ['change', 'strange', 'unusual'],
-        onReadings: ['ヘン'],
-        kunReadings: ['か.える', 'か.わり', 'か.わる'],
-        strokeCount: 9,
-        jlpt: 3
+        part: "명사",
+        means: ["망창;철망 따위를 친 문"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あみど",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'ぶどう',
-    meaning: 'grapes'
+    entry_id: "51d44af0527f4fc5928170dc13294741",
+    origin_entry_id: "JK000000002738",
+    entry: "あれこれ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["이것저것"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あれこれ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '直す',
-    furigana: 'なおす',
-    meaning: 'to fix, to repair'
-,
-    kanjiDetails: [
+    entry_id: "8729d8f3ed6840b8ab55fbea32d481e6",
+    origin_entry_id: "JK000000002760",
+    entry: "あわ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '直',
-        meanings: ['fix', 'frankness', 'honesty', 'repair', 'straightaway'],
-        onReadings: ['ジカ', 'ジキ', 'チョク'],
-        kunReadings: ['-なお.す', 'す.ぐ', 'ただ.ちに', 'なお.き', 'なお.す', 'なお.る'],
-        strokeCount: 8,
-        jlpt: 3
+        part: "명사",
+        means: ["거품"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あわ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '世界',
-    furigana: 'せかい',
-    meaning: 'the world'
-,
-    kanjiDetails: [
+    entry_id: "a987a84e9603484eab6aa75af9a0806d",
+    origin_entry_id: "JK000000002838",
+    entry: "あんい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '世',
-        meanings: ['generation', 'public', 'society', 'world'],
-        onReadings: ['セ', 'セイ', 'ソウ'],
-        kunReadings: ['よ'],
-        strokeCount: 5,
-        jlpt: 4
+        part: "명사",
+        means: ["안이"]
       },
       {
-        kanji: '界',
-        meanings: ['boundary', 'world'],
-        onReadings: ['カイ'],
-        strokeCount: 9,
-        jlpt: 4
+        part: "형용동사",
+        means: ["안이"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あんい",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '食事',
-    furigana: 'しょくじ・する',
-    meaning: 'to have a meal'
-,
-    kanjiDetails: [
+    entry_id: "989dbac397394278aed2cf4dc88c420f",
+    origin_entry_id: "JK000000002857",
+    entry: "あんき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '食',
-        meanings: ['eat', 'food'],
-        onReadings: ['ショク', 'ジキ'],
-        kunReadings: ['く.う', 'く.らう', 'た.べる', 'は.む'],
-        strokeCount: 9,
-        jlpt: 5
+        part: "명사",
+        means: ["암기;욈"]
       },
       {
-        kanji: '事',
-        meanings: ['business', 'fact', 'matter', 'possibly', 'reason', 'thing'],
-        onReadings: ['ジ', 'ズ'],
-        kunReadings: ['こと', 'つか.う', 'つか.える'],
-        strokeCount: 8,
-        jlpt: 4
+        part: "동사",
+        means: ["암기;욈"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "あんき",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'うそ',
-    meaning: 'a lie'
+    entry_id: "f43c76f350d34a229e4fca24cc4271cd",
+    origin_entry_id: "JK000000003510",
+    entry: "いかり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["분노;노여움"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いかり",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '合う',
-    furigana: 'あう',
-    meaning: 'to match'
-,
-    kanjiDetails: [
+    entry_id: "8b882f35bce24d1686a37ce969b1ed01",
+    origin_entry_id: "JK000000003544",
+    entry: "いき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '合',
-        meanings: ['0.1', 'fit', 'join', 'suit'],
-        onReadings: ['カッ', 'ガッ', 'ゴウ'],
-        kunReadings: ['-あ.い', '-あ.う', '-あ.わせる', '-あい', 'あ.い', 'あ.う', 'あ.わす', 'あ.わせる', 'あい-'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
+        part: "명사",
+        means: ["→ゆき"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いき",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '小鳥',
-    furigana: 'ことり',
-    meaning: 'small bird'
-,
-    kanjiDetails: [
-      {
-        kanji: '小',
-        meanings: ['little', 'small'],
-        onReadings: ['ショウ'],
-        kunReadings: ['お-', 'こ-', 'さ-', 'ちい.さい'],
-        strokeCount: 3,
-        jlpt: 5
-      },
-      {
-        kanji: '鳥',
-        meanings: ['bird', 'chicken'],
-        onReadings: ['チョウ'],
-        kunReadings: ['とり'],
-        strokeCount: 11,
-        jlpt: 4
+    entry_id: "dce429f8d1f64b518ef25ecd5273d0fb",
+    origin_entry_id: "JK000000003567",
+    entry: "いきおい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["기세;힘"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "いきおい",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '電報',
-    furigana: 'でんぽう',
-    meaning: 'telegram'
-,
-    kanjiDetails: [
+    entry_id: "98801926aa944f9281d3875f83d82877",
+    origin_entry_id: "JK000000003679",
+    entry: "いきもの",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '電',
-        meanings: ['electricity'],
-        onReadings: ['デン'],
-        strokeCount: 13,
-        jlpt: 5
-      },
-      {
-        kanji: '報',
-        meanings: ['news', 'report', 'retribution', 'reward'],
-        onReadings: ['ホウ'],
-        kunReadings: ['むく.いる'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
+        part: "명사",
+        means: ["살아 있는 것;생물"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いきもの",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '星',
-    furigana: 'ほし',
-    meaning: 'star'
-,
-    kanjiDetails: [
-      {
-        kanji: '星',
-        meanings: ['dot', 'mark', 'spot', 'star'],
-        onReadings: ['ショウ', 'セイ'],
-        kunReadings: ['-ぼし', 'ほし'],
-        strokeCount: 9,
-        jlpt: 2
-      }
-    ]
+    entry_id: "85133bbff9174f0cb93c71c4adda46d8",
+    origin_entry_id: "JK000000003555",
+    entry: "いぎ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["의의;뜻"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いぎ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '申す',
-    furigana: 'もうす',
-    meaning: '(humble) to be called, to say'
-,
-    kanjiDetails: [
-      {
-        kanji: '申',
-        meanings: ['3-5PM', 'have the honor to', 'ninth sign of Chinese zodiac', 'sign of the monkey'],
-        onReadings: ['シン'],
-        kunReadings: ['さる', 'もう.し-', 'もう.す'],
-        strokeCount: 5,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '失敗',
-    furigana: 'しっぱい',
-    meaning: 'failure, mistake'
-,
-    kanjiDetails: [
+    entry_id: "6a036f96ef144468a2c9ed558ac66025",
+    origin_entry_id: "JK000000003735",
+    entry: "いくじ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '失',
-        meanings: ['disadvantage', 'error', 'fault', 'lose', 'loss'],
-        onReadings: ['シツ'],
-        kunReadings: ['う.せる', 'うしな.う'],
-        strokeCount: 5,
-        jlpt: 3
-      },
-      {
-        kanji: '敗',
-        meanings: ['defeat', 'failure', 'reversal'],
-        onReadings: ['ハイ'],
-        kunReadings: ['やぶ.れる'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '汽車',
-    furigana: 'きしゃ',
-    meaning: 'steam train'
-,
-    kanjiDetails: [
-      {
-        kanji: '汽',
-        meanings: ['steam', 'vapor'],
-        onReadings: ['キ'],
-        strokeCount: 7,
-        jlpt: 1
-      },
-      {
-        kanji: '車',
-        meanings: ['car'],
-        onReadings: ['シャ'],
-        kunReadings: ['くるま'],
-        strokeCount: 7,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '下宿',
-    furigana: 'げしゅく',
-    meaning: 'lodging'
-,
-    kanjiDetails: [
-      {
-        kanji: '下',
-        meanings: ['below', 'descend', 'down', 'give', 'inferior', 'low'],
-        onReadings: ['カ', 'ゲ'],
-        kunReadings: ['-くだ.す', 'お.りる', 'お.ろす', 'くだ.さる', 'くだ.す', 'くだ.り', 'くだ.る', 'さ.がる', 'さ.げる', 'した', 'しも', 'もと'],
-        strokeCount: 3,
-        jlpt: 5
-      },
-      {
-        kanji: '宿',
-        meanings: ['be pregnant', 'dwell', 'dwelling', 'home', 'inn', 'lodge', 'lodging', 'relay station'],
-        onReadings: ['シュク'],
-        kunReadings: ['やど', 'やど.す', 'やど.る'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '思う',
-    furigana: 'おもう',
-    meaning: 'to think, to feel'
-,
-    kanjiDetails: [
-      {
-        kanji: '思',
-        meanings: ['think'],
-        onReadings: ['シ'],
-        kunReadings: ['おぼ.す', 'おも.う', 'おもえら.く'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '機会',
-    furigana: 'きかい',
-    meaning: 'opportunity'
-,
-    kanjiDetails: [
-      {
-        kanji: '機',
-        meanings: ['airplane', 'efficacy', 'loom', 'machine', 'mechanism', 'occasion', 'opportunity', 'potency'],
-        onReadings: ['キ'],
-        kunReadings: ['はた'],
-        strokeCount: 16,
-        jlpt: 3
-      },
+        part: "명사",
+        means: ["육아"]
+      },
       {
-        kanji: '会',
-        meanings: ['association', 'interview', 'join', 'meet', 'meeting', 'party'],
-        onReadings: ['エ', 'カイ'],
-        kunReadings: ['あ.う', 'あ.わせる', 'あつ.まる'],
-        strokeCount: 6,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '皆',
-    furigana: 'みな',
-    meaning: 'everybody'
-,
-    kanjiDetails: [
-      {
-        kanji: '皆',
-        meanings: ['all', 'everything'],
-        onReadings: ['カイ'],
-        kunReadings: ['みな', 'みんな'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '苦い',
-    furigana: 'にがい',
-    meaning: 'bitter'
-,
-    kanjiDetails: [
-      {
-        kanji: '苦',
-        meanings: ['feel bitter', 'hardship', 'scowl', 'suffering', 'trial', 'worry'],
-        onReadings: ['ク'],
-        kunReadings: ['-ぐる.しい', 'くる.しい', 'くる.しむ', 'くる.しめる', 'にが.い', 'にが.る'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '特に',
-    furigana: 'とくに',
-    meaning: 'particularly, especially'
-,
-    kanjiDetails: [
-      {
-        kanji: '特',
-        meanings: ['special'],
-        onReadings: ['トク'],
-        strokeCount: 10,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '乾く',
-    furigana: 'かわく',
-    meaning: 'to get dry'
-,
-    kanjiDetails: [
-      {
-        kanji: '乾',
-        meanings: ['dessicate', 'drink up', 'drought', 'dry', 'emperor', 'heaven'],
-        onReadings: ['カン', 'ケン'],
-        kunReadings: ['いぬい', 'かわ.かす', 'かわ.く', 'ひ.る', 'ほ.す'],
-        strokeCount: 11,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '葉',
-    furigana: 'は',
-    meaning: 'leaf'
-,
-    kanjiDetails: [
-      {
-        kanji: '葉',
-        meanings: ['blade', 'counter for flat things', 'fragment', 'leaf', 'lobe', 'needle', 'piece', 'plane', 'spear'],
-        onReadings: ['ヨウ'],
-        kunReadings: ['は'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'かっこう',
-    meaning: 'appearance'
-  },
-  {
-    level: 'N3',
-    word: '昼休み',
-    furigana: 'ひるやすみ',
-    meaning: 'noon break'
-,
-    kanjiDetails: [
-      {
-        kanji: '昼',
-        meanings: ['daytime', 'noon'],
-        onReadings: ['チュウ'],
-        kunReadings: ['ひる'],
-        strokeCount: 9,
-        jlpt: 4
-      },
-      {
-        kanji: '休',
-        meanings: ['day off', 'rest', 'retire', 'sleep'],
-        onReadings: ['キュウ'],
-        kunReadings: ['やす.まる', 'やす.む', 'やす.める'],
-        strokeCount: 6,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '以下',
-    furigana: 'いか',
-    meaning: 'less than'
-,
-    kanjiDetails: [
-      {
-        kanji: '以',
-        meanings: ['because', 'by means of', 'compared with', 'in view of'],
-        onReadings: ['イ'],
-        kunReadings: ['もっ.て'],
-        strokeCount: 5,
-        jlpt: 4
-      },
-      {
-        kanji: '下',
-        meanings: ['below', 'descend', 'down', 'give', 'inferior', 'low'],
-        onReadings: ['カ', 'ゲ'],
-        kunReadings: ['-くだ.す', 'お.りる', 'お.ろす', 'くだ.さる', 'くだ.す', 'くだ.り', 'くだ.る', 'さ.がる', 'さ.げる', 'した', 'しも', 'もと'],
-        strokeCount: 3,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '彼ら',
-    furigana: 'かれら',
-    meaning: 'they'
-,
-    kanjiDetails: [
-      {
-        kanji: '彼',
-        meanings: ['he', 'that', 'the'],
-        onReadings: ['ヒ'],
-        kunReadings: ['か.の', 'かの', 'かれ'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '寄る',
-    furigana: 'よる',
-    meaning: 'to visit'
-,
-    kanjiDetails: [
-      {
-        kanji: '寄',
-        meanings: ['bring near', 'collect', 'draw near', 'forward', 'gather', 'send', 'stop in'],
-        onReadings: ['キ'],
-        kunReadings: ['-よ.り', 'よ.せる', 'よ.る'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '字',
-    furigana: 'じ',
-    meaning: 'character'
-,
-    kanjiDetails: [
-      {
-        kanji: '字',
-        meanings: ['character', 'letter', 'section of village', 'word'],
-        onReadings: ['ジ'],
-        kunReadings: ['-な', 'あざ', 'あざな'],
-        strokeCount: 6,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '厳しい',
-    furigana: 'きびしい',
-    meaning: 'strict'
-,
-    kanjiDetails: [
-      {
-        kanji: '厳',
-        meanings: ['rigidity', 'severity', 'stern', 'strictness'],
-        onReadings: ['ゲン', 'ゴン'],
-        kunReadings: ['いか.めしい', 'いつくし', 'おごそ.か', 'きび.しい'],
-        strokeCount: 17,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '優しい',
-    furigana: 'やさしい',
-    meaning: 'kind'
-,
-    kanjiDetails: [
-      {
-        kanji: '優',
-        meanings: ['actor', 'excel', 'gentleness', 'superiority', 'surpass', 'tenderness'],
-        onReadings: ['ウ', 'ユウ'],
-        kunReadings: ['すぐ.れる', 'まさ.る', 'やさ.しい'],
-        strokeCount: 17,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'たいてい',
-    meaning: 'usually'
-  },
-  {
-    level: 'N3',
-    word: '花見',
-    furigana: 'はなみ',
-    meaning: 'cherry-blossom viewing'
-,
-    kanjiDetails: [
-      {
-        kanji: '花',
-        meanings: ['flower'],
-        onReadings: ['カ', 'ケ'],
-        kunReadings: ['はな'],
-        strokeCount: 7,
-        jlpt: 4
-      },
-      {
-        kanji: '見',
-        meanings: ['chances', 'hopes', 'idea', 'look at', 'opinion', 'see', 'visible'],
-        onReadings: ['ケン'],
-        kunReadings: ['み.える', 'み.せる', 'み.る'],
-        strokeCount: 7,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '注射',
-    furigana: 'ちゅうしゃ',
-    meaning: 'injection'
-,
-    kanjiDetails: [
-      {
-        kanji: '注',
-        meanings: ['annotate', 'comment', 'concentrate on', 'flow into', 'irrigate', 'notes', 'pour', 'shed (tears)'],
-        onReadings: ['チュウ'],
-        kunReadings: ['さ.す', 'そそ.ぐ', 'つ.ぐ'],
-        strokeCount: 8,
-        jlpt: 4
-      },
-      {
-        kanji: '射',
-        meanings: ['archery', 'onto', 'shine into', 'shoot'],
-        onReadings: ['シャ'],
-        kunReadings: ['い.る', 'う.つ', 'さ.す'],
-        strokeCount: 10,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '大分',
-    furigana: 'だいぶ',
-    meaning: 'greatly'
-,
-    kanjiDetails: [
-      {
-        kanji: '大',
-        meanings: ['big', 'large'],
-        onReadings: ['タイ', 'ダイ'],
-        kunReadings: ['-おお.いに', 'おお-', 'おお.きい'],
-        strokeCount: 3,
-        jlpt: 5
-      },
-      {
-        kanji: '分',
-        meanings: ['1%', 'chances', 'degree', 'duty', 'know', 'minute of time', 'one\'s lot', 'part', 'rate', 'segment', 'shaku/100', 'share', 'understand'],
-        onReadings: ['フン', 'ブ', 'ブン'],
-        kunReadings: ['わ.かつ', 'わ.かる', 'わ.かれる', 'わ.け', 'わ.ける'],
-        strokeCount: 4,
-        jlpt: null
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ベル',
-    meaning: 'bell'
-  },
-  {
-    level: 'N3',
-    word: '景色',
-    furigana: 'けしき',
-    meaning: 'scene, landscape'
-,
-    kanjiDetails: [
-      {
-        kanji: '景',
-        meanings: ['scenery', 'view'],
-        onReadings: ['ケイ'],
-        strokeCount: 12,
-        jlpt: 3
-      },
-      {
-        kanji: '色',
-        meanings: ['color'],
-        onReadings: ['シキ', 'ショク'],
-        kunReadings: ['いろ'],
-        strokeCount: 6,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'しかる',
-    meaning: 'a particular'
-  },
-  {
-    level: 'N3',
-    word: '日記',
-    furigana: 'にっき',
-    meaning: 'journal'
-,
-    kanjiDetails: [
-      {
-        kanji: '日',
-        meanings: ['Japan', 'counter for days', 'day', 'sun'],
-        onReadings: ['ジツ', 'ニチ'],
-        kunReadings: ['-か', '-び', 'ひ'],
-        strokeCount: 4,
-        jlpt: 5
-      },
-      {
-        kanji: '記',
-        meanings: ['account', 'narrative', 'scribe'],
-        onReadings: ['キ'],
-        kunReadings: ['しる.す'],
-        strokeCount: 10,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'お礼',
-    furigana: 'おれい',
-    meaning: 'expression of gratitude'
-,
-    kanjiDetails: [
-      {
-        kanji: '礼',
-        meanings: ['bow', 'ceremony', 'remuneration', 'salute', 'thanks'],
-        onReadings: ['ライ', 'レイ'],
-        strokeCount: 5,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '集る',
-    furigana: 'あつまる',
-    meaning: 'to gather'
-,
-    kanjiDetails: [
-      {
-        kanji: '集',
-        meanings: ['congregate', 'flock', 'gather', 'meet', 'swarm'],
-        onReadings: ['シュウ'],
-        kunReadings: ['あつ.まる', 'あつ.める', 'つど.う'],
-        strokeCount: 12,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '大体',
-    furigana: 'だいたい',
-    meaning: 'generally'
-,
-    kanjiDetails: [
-      {
-        kanji: '大',
-        meanings: ['big', 'large'],
-        onReadings: ['タイ', 'ダイ'],
-        kunReadings: ['-おお.いに', 'おお-', 'おお.きい'],
-        strokeCount: 3,
-        jlpt: 5
-      },
-      {
-        kanji: '体',
-        meanings: ['body', 'counter for images', 'object', 'reality', 'substance'],
-        onReadings: ['タイ', 'テイ'],
-        kunReadings: ['かたち', 'からだ'],
-        strokeCount: 7,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'なるほど',
-    meaning: 'now I understand'
-  },
-  {
-    level: 'N3',
-    word: '公務員',
-    furigana: 'こうむいん',
-    meaning: 'government worker'
-,
-    kanjiDetails: [
-      {
-        kanji: '公',
-        meanings: ['governmental', 'official', 'prince', 'public'],
-        onReadings: ['ク', 'コウ'],
-        kunReadings: ['おおやけ'],
-        strokeCount: 4,
-        jlpt: 4
-      },
-      {
-        kanji: '務',
-        meanings: ['duties', 'task'],
-        onReadings: ['ム'],
-        kunReadings: ['つと.める'],
-        strokeCount: 11,
-        jlpt: 3
-      },
-      {
-        kanji: '員',
-        meanings: ['employee', 'member', 'number', 'the one in charge'],
-        onReadings: ['イン'],
-        strokeCount: 10,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '警察',
-    furigana: 'けいさつ',
-    meaning: 'police'
-,
-    kanjiDetails: [
-      {
-        kanji: '警',
-        meanings: ['admonish', 'commandment'],
-        onReadings: ['ケイ'],
-        kunReadings: ['いまし.める'],
-        strokeCount: 19,
-        jlpt: 3
-      },
-      {
-        kanji: '察',
-        meanings: ['guess', 'judge', 'presume', 'surmise', 'understand'],
-        onReadings: ['サツ'],
-        strokeCount: 14,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '空気',
-    furigana: 'くうき',
-    meaning: 'air, atmosphere'
-,
-    kanjiDetails: [
-      {
-        kanji: '空',
-        meanings: ['empty', 'sky', 'vacant', 'vacuum', 'void'],
-        onReadings: ['クウ'],
-        kunReadings: ['あ.き', 'あ.く', 'あ.ける', 'から', 'す.かす', 'す.く', 'そら', 'むな.しい'],
-        strokeCount: 8,
-        jlpt: 4
-      },
-      {
-        kanji: '気',
-        meanings: ['air', 'atmosphere', 'mind', 'mood', 'spirit'],
-        onReadings: ['キ', 'ケ'],
-        kunReadings: ['き'],
-        strokeCount: 6,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '周り',
-    furigana: 'まわり',
-    meaning: 'surroundings'
-,
-    kanjiDetails: [
-      {
-        kanji: '周',
-        meanings: ['circuit', 'circumference', 'lap'],
-        onReadings: ['シュウ'],
-        kunReadings: ['まわ.り'],
-        strokeCount: 8,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '汚れる',
-    furigana: 'よごれる',
-    meaning: 'to get dirty'
-,
-    kanjiDetails: [
-      {
-        kanji: '汚',
-        meanings: ['defile', 'dirty', 'disgrace', 'pollute', 'rape'],
-        onReadings: ['オ'],
-        kunReadings: ['きたな.い', 'けが.す', 'けが.らわしい', 'けが.れる', 'よご.す', 'よご.れる'],
-        strokeCount: 6,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '約束',
-    furigana: 'やくそく',
-    meaning: 'promise'
-,
-    kanjiDetails: [
-      {
-        kanji: '約',
-        meanings: ['approximately', 'promise', 'shrink'],
-        onReadings: ['ヤク'],
-        kunReadings: ['つづ.まる', 'つづ.める', 'つづま.やか'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '束',
-        meanings: ['bundle', 'control', 'govern', 'manage', 'ream', 'sheaf', 'tie in bundles'],
-        onReadings: ['ソク'],
-        kunReadings: ['たば', 'たば.ねる', 'つか', 'つか.ねる'],
-        strokeCount: 7,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '砂',
-    furigana: 'すな',
-    meaning: 'sand'
-,
-    kanjiDetails: [
-      {
-        kanji: '砂',
-        meanings: ['sand'],
-        onReadings: ['サ', 'シャ'],
-        kunReadings: ['すな'],
-        strokeCount: 9,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '笑う',
-    furigana: 'わらう',
-    meaning: 'to laugh, to smile'
-,
-    kanjiDetails: [
-      {
-        kanji: '笑',
-        meanings: ['laugh'],
-        onReadings: ['ショウ'],
-        kunReadings: ['え.む', 'わら.う'],
-        strokeCount: 10,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'しっかり',
-    meaning: 'firmly, steadily'
-  },
-  {
-    level: 'N3',
-    word: '住所',
-    furigana: 'じゅうしょ',
-    meaning: 'an address, a residence'
-,
-    kanjiDetails: [
-      {
-        kanji: '住',
-        meanings: ['dwell', 'inhabit', 'live', 'reside'],
-        onReadings: ['ジュウ', 'チュウ', 'ヂュウ'],
-        kunReadings: ['-ず.まい', 'す.まう', 'す.む'],
-        strokeCount: 7,
-        jlpt: 4
-      },
-      {
-        kanji: '所',
-        meanings: ['extent', 'place'],
-        onReadings: ['ショ'],
-        kunReadings: ['-ところ', 'とこ', 'ところ', 'どころ'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'すり',
-    meaning: 'pickpocket'
-  },
-  {
-    level: 'N3',
-    word: '注意',
-    furigana: 'ちゅうい',
-    meaning: 'caution'
-,
-    kanjiDetails: [
-      {
-        kanji: '注',
-        meanings: ['annotate', 'comment', 'concentrate on', 'flow into', 'irrigate', 'notes', 'pour', 'shed (tears)'],
-        onReadings: ['チュウ'],
-        kunReadings: ['さ.す', 'そそ.ぐ', 'つ.ぐ'],
-        strokeCount: 8,
-        jlpt: 4
-      },
-      {
-        kanji: '意',
-        meanings: ['care', 'desire', 'heart', 'idea', 'liking', 'mind', 'taste', 'thought'],
-        onReadings: ['イ'],
-        strokeCount: 13,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '仕方',
-    furigana: 'しかた',
-    meaning: 'method'
-,
-    kanjiDetails: [
-      {
-        kanji: '仕',
-        meanings: ['attend', 'doing', 'official', 'serve'],
-        onReadings: ['シ', 'ジ'],
-        kunReadings: ['つか.える'],
-        strokeCount: 5,
-        jlpt: 4
-      },
-      {
-        kanji: '方',
-        meanings: ['alternative', 'direction', 'person'],
-        onReadings: ['ホウ'],
-        kunReadings: ['-かた', '-がた', 'かた'],
-        strokeCount: 4,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '無理',
-    furigana: 'むり',
-    meaning: 'impossible'
-,
-    kanjiDetails: [
-      {
-        kanji: '無',
-        meanings: ['ain\'t', 'nil', 'none', 'not', 'nothing', 'nothingness'],
-        onReadings: ['ブ', 'ム'],
-        kunReadings: ['な.い'],
-        strokeCount: 12,
-        jlpt: null
-      },
-      {
-        kanji: '理',
-        meanings: ['arrangement', 'justice', 'logic', 'reason', 'truth'],
-        onReadings: ['リ'],
-        kunReadings: ['ことわり'],
-        strokeCount: 11,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '触る',
-    furigana: 'さわる',
-    meaning: 'to touch'
-,
-    kanjiDetails: [
-      {
-        kanji: '触',
-        meanings: ['announce', 'conflict', 'contact', 'feel', 'hit', 'proclaim', 'touch'],
-        onReadings: ['ショク'],
-        kunReadings: ['さわ', 'さわ.る', 'ふ.れる'],
-        strokeCount: 13,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '押し入れ',
-    furigana: 'おしいれ',
-    meaning: 'closet'
-,
-    kanjiDetails: [
-      {
-        kanji: '押',
-        meanings: ['attach', 'check', 'do in spite of', 'press', 'push', 'seal', 'seize', 'shove', 'stop', 'subdue', 'weight'],
-        onReadings: ['オウ'],
-        kunReadings: ['お.さえる', 'お.し-', 'お.す', 'お.っ-', 'おさ.える'],
-        strokeCount: 8,
-        jlpt: 3
-      },
-      {
-        kanji: '入',
-        meanings: ['enter', 'insert'],
-        onReadings: ['ジュ', 'ニュウ'],
-        kunReadings: ['-い.り', '-い.る', '-い.れ', 'い.る', 'い.れる', 'はい.る'],
-        strokeCount: 2,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'さ来月',
-    furigana: 'さらいげつ',
-    meaning: 'the month after next'
-,
-    kanjiDetails: [
-      {
-        kanji: '来',
-        meanings: ['become', 'cause', 'come', 'due', 'next'],
-        onReadings: ['タイ', 'ライ'],
-        kunReadings: ['き', 'き.たす', 'き.たる', 'きた.す', 'きた.る', 'く.る', 'こ'],
-        strokeCount: 7,
-        jlpt: 5
-      },
-      {
-        kanji: '月',
-        meanings: ['month', 'moon'],
-        onReadings: ['ガツ', 'ゲツ'],
-        kunReadings: ['つき'],
-        strokeCount: 4,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ビル',
-    meaning: 'building or bill'
-  },
-  {
-    level: 'N3',
-    word: '歯医者',
-    furigana: 'はいしゃ',
-    meaning: 'dentist'
-,
-    kanjiDetails: [
-      {
-        kanji: '歯',
-        meanings: ['cog', 'tooth'],
-        onReadings: ['シ'],
-        kunReadings: ['は', 'よわ.い', 'よわい', 'よわい.する'],
-        strokeCount: 12,
-        jlpt: 3
-      },
-      {
-        kanji: '医',
-        meanings: ['doctor', 'medicine'],
-        onReadings: ['イ'],
-        kunReadings: ['い.する', 'い.やす', 'くすし'],
-        strokeCount: 7,
-        jlpt: 4
-      },
-      {
-        kanji: '者',
-        meanings: ['person', 'someone'],
-        onReadings: ['シャ'],
-        kunReadings: ['もの'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '知らせる',
-    furigana: 'しらせる',
-    meaning: 'to notify'
-,
-    kanjiDetails: [
-      {
-        kanji: '知',
-        meanings: ['know', 'wisdom'],
-        onReadings: ['チ'],
-        kunReadings: ['し.らせる', 'し.る'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '点',
-    furigana: 'てん',
-    meaning: 'point, dot'
-,
-    kanjiDetails: [
-      {
-        kanji: '点',
-        meanings: ['decimal point', 'mark', 'point', 'speck', 'spot'],
-        onReadings: ['テン'],
-        kunReadings: ['さ.す', 'た.てる', 'つ.く', 'つ.ける', 'とぼ.す', 'とも.す', 'ぼち'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '予定',
-    furigana: 'よてい',
-    meaning: 'arrangement'
-,
-    kanjiDetails: [
-      {
-        kanji: '予',
-        meanings: ['I', 'beforehand', 'myself', 'previous'],
-        onReadings: ['シャ', 'ヨ'],
-        kunReadings: ['あらかじ.め'],
-        strokeCount: 4,
-        jlpt: 3
-      },
-      {
-        kanji: '定',
-        meanings: ['decide', 'determine', 'establish', 'fix'],
-        onReadings: ['ジョウ', 'テイ'],
-        kunReadings: ['さだ.か', 'さだ.まる', 'さだ.める'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '火事',
-    furigana: 'かじ',
-    meaning: 'fire'
-,
-    kanjiDetails: [
-      {
-        kanji: '火',
-        meanings: ['fire'],
-        onReadings: ['カ'],
-        kunReadings: ['-び', 'ひ', 'ほ-'],
-        strokeCount: 4,
-        jlpt: 5
-      },
-      {
-        kanji: '事',
-        meanings: ['business', 'fact', 'matter', 'possibly', 'reason', 'thing'],
-        onReadings: ['ジ', 'ズ'],
-        kunReadings: ['こと', 'つか.う', 'つか.える'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '出席',
-    furigana: 'しゅっせき・する',
-    meaning: 'to attend'
-,
-    kanjiDetails: [
-      {
-        kanji: '出',
-        meanings: ['come out', 'exit', 'go out', 'leave', 'protrude', 'put out'],
-        onReadings: ['シュツ', 'スイ'],
-        kunReadings: ['-だ.す', '-で', 'い.だす', 'い.でる', 'だ.す', 'で.る'],
-        strokeCount: 5,
-        jlpt: 5
-      },
-      {
-        kanji: '席',
-        meanings: ['mat', 'occasion', 'place', 'seat'],
-        onReadings: ['セキ'],
-        kunReadings: ['むしろ'],
-        strokeCount: 10,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '壁',
-    furigana: 'かべ',
-    meaning: 'wall'
-,
-    kanjiDetails: [
-      {
-        kanji: '壁',
-        meanings: ['fence', 'lining (stomach)', 'wall'],
-        onReadings: ['ヘキ'],
-        kunReadings: ['かべ'],
-        strokeCount: 16,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '植える',
-    furigana: 'うえる',
-    meaning: 'to plant, to grow'
-,
-    kanjiDetails: [
-      {
-        kanji: '植',
-        meanings: ['plant'],
-        onReadings: ['ショク'],
-        kunReadings: ['う.える', 'う.わる'],
-        strokeCount: 12,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '生産',
-    furigana: 'せいさん・する',
-    meaning: 'to produce'
-,
-    kanjiDetails: [
-      {
-        kanji: '生',
-        meanings: ['birth', 'genuine', 'life'],
-        onReadings: ['ショウ', 'セイ'],
-        kunReadings: ['-う', 'い.かす', 'い.きる', 'い.ける', 'う.まれ', 'う.まれる', 'う.む', 'うま.れる', 'うまれ', 'お.う', 'き', 'な.す', 'な.る', 'なま', 'なま-', 'は.える', 'は.やす', 'む.す'],
-        strokeCount: 5,
-        jlpt: 5
-      },
-      {
-        kanji: '産',
-        meanings: ['bear', 'childbirth', 'give birth', 'native', 'products', 'property', 'yield'],
-        onReadings: ['サン'],
-        kunReadings: ['う.まれる', 'う.む', 'うぶ-', 'む.す'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '法律',
-    furigana: 'ほうりつ',
-    meaning: 'law'
-,
-    kanjiDetails: [
-      {
-        kanji: '法',
-        meanings: ['law', 'method', 'model', 'principle', 'rule', 'system'],
-        onReadings: ['ハッ', 'フラン', 'ホウ', 'ホッ'],
-        kunReadings: ['のり'],
-        strokeCount: 8,
-        jlpt: 3
-      },
-      {
-        kanji: '律',
-        meanings: ['control', 'gauge', 'law', 'regulation', 'rhythm'],
-        onReadings: ['リチ', 'リツ', 'レツ'],
-        strokeCount: 9,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '見つかる',
-    furigana: 'みつかる',
-    meaning: 'to be discovered'
-,
-    kanjiDetails: [
-      {
-        kanji: '見',
-        meanings: ['chances', 'hopes', 'idea', 'look at', 'opinion', 'see', 'visible'],
-        onReadings: ['ケン'],
-        kunReadings: ['み.える', 'み.せる', 'み.る'],
-        strokeCount: 7,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '港',
-    furigana: 'みなと',
-    meaning: 'harbour'
-,
-    kanjiDetails: [
-      {
-        kanji: '港',
-        meanings: ['harbor'],
-        onReadings: ['コウ'],
-        kunReadings: ['みなと'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '連れる',
-    furigana: 'つれる',
-    meaning: 'to lead'
-,
-    kanjiDetails: [
-      {
-        kanji: '連',
-        meanings: ['clique', 'connect', 'gang', 'join', 'lead', 'party', 'take along'],
-        onReadings: ['レン'],
-        kunReadings: ['-づ.れ', 'つ.れる', 'つら.なる', 'つら.ねる'],
-        strokeCount: 10,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '見つける',
-    furigana: 'みつける',
-    meaning: 'to discover'
-,
-    kanjiDetails: [
-      {
-        kanji: '見',
-        meanings: ['chances', 'hopes', 'idea', 'look at', 'opinion', 'see', 'visible'],
-        onReadings: ['ケン'],
-        kunReadings: ['み.える', 'み.せる', 'み.る'],
-        strokeCount: 7,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '辞典',
-    furigana: 'じてん',
-    meaning: 'dictionary'
-,
-    kanjiDetails: [
-      {
-        kanji: '辞',
-        meanings: ['expression', 'resign', 'term', 'word'],
-        onReadings: ['ジ'],
-        kunReadings: ['いな.む', 'や.める'],
-        strokeCount: 13,
-        jlpt: 3
-      },
-      {
-        kanji: '典',
-        meanings: ['ceremony', 'code', 'law', 'rule'],
-        onReadings: ['テン', 'デン'],
-        kunReadings: ['のり', 'ふみ'],
-        strokeCount: 8,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '乗り換える',
-    furigana: 'のりかえる',
-    meaning: 'to change between buses or trains'
-,
-    kanjiDetails: [
-      {
-        kanji: '乗',
-        meanings: ['board', 'counter for vehicles', 'join', 'mount', 'multiplication', 'power', 'record', 'ride'],
-        onReadings: ['ショウ', 'ジョウ'],
-        kunReadings: ['-の.り', 'の.せる', 'の.る'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '換',
-        meanings: ['change', 'convert', 'interchange', 'period', 'renew', 'replace'],
-        onReadings: ['カン'],
-        kunReadings: ['-か.える', 'か.える', 'か.わる'],
-        strokeCount: 12,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '役に立つ',
-    furigana: 'やくにたつ',
-    meaning: 'to be helpful'
-,
-    kanjiDetails: [
-      {
-        kanji: '役',
-        meanings: ['campaign', 'drafted labor', 'duty', 'office', 'role', 'service', 'war'],
-        onReadings: ['エキ', 'ヤク'],
-        strokeCount: 7,
-        jlpt: 3
-      },
-      {
-        kanji: '立',
-        meanings: ['erect', 'rise', 'set up', 'stand up'],
-        onReadings: ['リットル', 'リツ', 'リュウ'],
-        kunReadings: ['-た.つ', '-た.て', '-た.てる', '-だ.て', '-だ.てる', 'た.ち-', 'た.つ', 'た.て-', 'た.てる', 'たて-'],
-        strokeCount: 5,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '写す',
-    furigana: 'うつす',
-    meaning: 'to copy or photograph'
-,
-    kanjiDetails: [
-      {
-        kanji: '写',
-        meanings: ['be photographed', 'copy', 'describe'],
-        onReadings: ['シャ', 'ジャ'],
-        kunReadings: ['うつ-', 'うつ.し', 'うつ.す', 'うつ.る'],
-        strokeCount: 5,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '理由',
-    furigana: 'りゆう',
-    meaning: 'reason'
-,
-    kanjiDetails: [
-      {
-        kanji: '理',
-        meanings: ['arrangement', 'justice', 'logic', 'reason', 'truth'],
-        onReadings: ['リ'],
-        kunReadings: ['ことわり'],
-        strokeCount: 11,
-        jlpt: 4
-      },
-      {
-        kanji: '由',
-        meanings: ['a reason', 'wherefore'],
-        onReadings: ['ユ', 'ユイ', 'ユウ'],
-        kunReadings: ['よ.る', 'よし'],
-        strokeCount: 5,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'たまに',
-    meaning: 'occasionally'
-  },
-  {
-    level: 'N3',
-    word: 'プレゼント',
-    meaning: 'present'
-  },
-  {
-    level: 'N3',
-    word: 'いっぱい',
-    meaning: 'full'
-  },
-  {
-    level: 'N3',
-    word: '運動',
-    furigana: 'うんどう・する',
-    meaning: 'to exercise'
-,
-    kanjiDetails: [
-      {
-        kanji: '運',
-        meanings: ['advance', 'carry', 'destiny', 'fate', 'lot', 'luck', 'progress', 'transport'],
-        onReadings: ['ウン'],
-        kunReadings: ['はこ.ぶ'],
-        strokeCount: 12,
-        jlpt: 4
-      },
-      {
-        kanji: '動',
-        meanings: ['change', 'confusion', 'motion', 'move', 'shake', 'shift'],
-        onReadings: ['ドウ'],
-        kunReadings: ['うご.かす', 'うご.く'],
-        strokeCount: 11,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '見える',
-    furigana: 'みえる',
-    meaning: 'to be in sight'
-,
-    kanjiDetails: [
-      {
-        kanji: '見',
-        meanings: ['chances', 'hopes', 'idea', 'look at', 'opinion', 'see', 'visible'],
-        onReadings: ['ケン'],
-        kunReadings: ['み.える', 'み.せる', 'み.る'],
-        strokeCount: 7,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '申し上げる',
-    furigana: 'もうしあげる',
-    meaning: '(humble) to say, to tell'
-,
-    kanjiDetails: [
-      {
-        kanji: '申',
-        meanings: ['3-5PM', 'have the honor to', 'ninth sign of Chinese zodiac', 'sign of the monkey'],
-        onReadings: ['シン'],
-        kunReadings: ['さる', 'もう.し-', 'もう.す'],
-        strokeCount: 5,
-        jlpt: 3
-      },
-      {
-        kanji: '上',
-        meanings: ['above', 'up'],
-        onReadings: ['シャン', 'ショウ', 'ジョウ'],
-        kunReadings: ['-あ.がり', '-あ.がる', '-あ.げる', '-うえ', 'あ.がり', 'あ.がる', 'あ.げる', 'うえ', 'うわ-', 'かみ', 'たてまつ.る', 'のぼ.す', 'のぼ.せる', 'のぼ.り', 'のぼ.る'],
-        strokeCount: 3,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '冷える',
-    furigana: 'ひえる',
-    meaning: 'to grow cold'
-,
-    kanjiDetails: [
-      {
-        kanji: '冷',
-        meanings: ['chill', 'cold (beer, person)', 'cool'],
-        onReadings: ['レイ'],
-        kunReadings: ['さ.ます', 'さ.める', 'つめ.たい', 'ひ.える', 'ひ.や', 'ひ.やかす', 'ひ.やす', 'ひ.ややか'],
-        strokeCount: 7,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '痩せる',
-    furigana: 'やせる',
-    meaning: 'to become thin'
-,
-    kanjiDetails: [
-      {
-        kanji: '痩',
-        meanings: ['get thin'],
-        onReadings: ['シュ', 'シュウ', 'ソウ', 'チュウ'],
-        kunReadings: ['や.せる'],
-        strokeCount: 12,
-        jlpt: null
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '屋上',
-    furigana: 'おくじょう',
-    meaning: 'rooftop'
-,
-    kanjiDetails: [
-      {
-        kanji: '屋',
-        meanings: ['dealer', 'house', 'roof', 'seller', 'shop'],
-        onReadings: ['オク'],
-        kunReadings: ['や'],
-        strokeCount: 9,
-        jlpt: 4
-      },
-      {
-        kanji: '上',
-        meanings: ['above', 'up'],
-        onReadings: ['シャン', 'ショウ', 'ジョウ'],
-        kunReadings: ['-あ.がり', '-あ.がる', '-あ.げる', '-うえ', 'あ.がり', 'あ.がる', 'あ.げる', 'うえ', 'うわ-', 'かみ', 'たてまつ.る', 'のぼ.す', 'のぼ.せる', 'のぼ.り', 'のぼ.る'],
-        strokeCount: 3,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ステレオ',
-    meaning: 'stereo'
-  },
-  {
-    level: 'N3',
-    word: 'そう',
-    meaning: 'really'
-  },
-  {
-    level: 'N3',
-    word: 'お土産',
-    furigana: 'おみやげ',
-    meaning: 'souvenir'
-,
-    kanjiDetails: [
-      {
-        kanji: '土',
-        meanings: ['Turkey', 'earth', 'ground', 'soil'],
-        onReadings: ['ト', 'ド'],
-        kunReadings: ['つち'],
-        strokeCount: 3,
-        jlpt: 5
-      },
-      {
-        kanji: '産',
-        meanings: ['bear', 'childbirth', 'give birth', 'native', 'products', 'property', 'yield'],
-        onReadings: ['サン'],
-        kunReadings: ['う.まれる', 'う.む', 'うぶ-', 'む.す'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '泥棒',
-    furigana: 'どろぼう',
-    meaning: 'thief'
-,
-    kanjiDetails: [
-      {
-        kanji: '泥',
-        meanings: ['adhere to', 'be attached to', 'mire', 'mud'],
-        onReadings: ['デ', 'デイ', 'ナイ', 'ニ'],
-        kunReadings: ['どろ', 'なず.む'],
-        strokeCount: 8,
-        jlpt: 2
-      },
-      {
-        kanji: '棒',
-        meanings: ['cane', 'club', 'line', 'pole', 'rod', 'stick'],
-        onReadings: ['ボウ'],
-        strokeCount: 12,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'お祭り',
-    furigana: 'おまつり',
-    meaning: 'festival'
-,
-    kanjiDetails: [
-      {
-        kanji: '祭',
-        meanings: ['celebrate', 'deify', 'enshrine', 'offer prayers', 'ritual', 'worship'],
-        onReadings: ['サイ'],
-        kunReadings: ['まつ.り', 'まつ.る', 'まつり'],
-        strokeCount: 11,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '浅い',
-    furigana: 'あさい',
-    meaning: 'shallow, superficial'
-,
-    kanjiDetails: [
-      {
-        kanji: '浅',
-        meanings: ['frivolous', 'shallow', 'shameful', 'superficial', 'wretched'],
-        onReadings: ['セン'],
-        kunReadings: ['あさ.い'],
-        strokeCount: 9,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'お見舞い',
-    furigana: 'おみまい',
-    meaning: 'calling on someone who is ill, enquiry'
-,
-    kanjiDetails: [
-      {
-        kanji: '見',
-        meanings: ['chances', 'hopes', 'idea', 'look at', 'opinion', 'see', 'visible'],
-        onReadings: ['ケン'],
-        kunReadings: ['み.える', 'み.せる', 'み.る'],
-        strokeCount: 7,
-        jlpt: 5
-      },
-      {
-        kanji: '舞',
-        meanings: ['circle', 'dance', 'flit', 'wheel'],
-        onReadings: ['ブ'],
-        kunReadings: ['-ま.う', 'ま.う', 'まい'],
-        strokeCount: 15,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'アルバイト',
-    meaning: 'part-time job'
-  },
-  {
-    level: 'N3',
-    word: 'おつり',
-    meaning: 'change from purchase, balance'
-  },
-  {
-    level: 'N3',
-    word: '輸入',
-    furigana: 'ゆにゅう・する',
-    meaning: 'to import'
-,
-    kanjiDetails: [
-      {
-        kanji: '輸',
-        meanings: ['be inferior', 'send', 'transport'],
-        onReadings: ['シュ', 'ユ'],
-        strokeCount: 16,
-        jlpt: 2
-      },
-      {
-        kanji: '入',
-        meanings: ['enter', 'insert'],
-        onReadings: ['ジュ', 'ニュウ'],
-        kunReadings: ['-い.り', '-い.る', '-い.れ', 'い.る', 'い.れる', 'はい.る'],
-        strokeCount: 2,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '人口',
-    furigana: 'じんこう',
-    meaning: 'population'
-,
-    kanjiDetails: [
-      {
-        kanji: '人',
-        meanings: ['person'],
-        onReadings: ['ジン', 'ニン'],
-        kunReadings: ['-と', '-り', 'ひと'],
-        strokeCount: 2,
-        jlpt: 5
-      },
-      {
-        kanji: '口',
-        meanings: ['mouth'],
-        onReadings: ['ク', 'コウ'],
-        kunReadings: ['くち'],
-        strokeCount: 3,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '興味',
-    furigana: 'きょうみ',
-    meaning: 'an interest'
-,
-    kanjiDetails: [
-      {
-        kanji: '興',
-        meanings: ['entertain', 'interest', 'pleasure', 'retrieve', 'revive'],
-        onReadings: ['キョウ', 'コウ'],
-        kunReadings: ['おこ.す', 'おこ.る'],
-        strokeCount: 16,
-        jlpt: 1
-      },
-      {
-        kanji: '味',
-        meanings: ['flavor', 'taste'],
-        onReadings: ['ミ'],
-        kunReadings: ['あじ', 'あじ.わう'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '時代',
-    furigana: 'じだい',
-    meaning: 'era'
-,
-    kanjiDetails: [
-      {
-        kanji: '時',
-        meanings: ['hour', 'time'],
-        onReadings: ['ジ'],
-        kunReadings: ['-どき', 'とき'],
-        strokeCount: 10,
-        jlpt: 5
-      },
-      {
-        kanji: '代',
-        meanings: ['age', 'change', 'charge', 'convert', 'counter for decades of ages, eras, etc.', 'fee', 'generation', 'period', 'rate', 'replace', 'substitute'],
-        onReadings: ['タイ', 'ダイ'],
-        kunReadings: ['-が.わり', '-がわ.り', 'か.える', 'か.わり', 'か.わる', 'かわ.り', 'かわ.る', 'しろ', 'よ'],
-        strokeCount: 5,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '特急',
-    furigana: 'とっきゅう',
-    meaning: 'limited express train (faster than an express train)'
-,
-    kanjiDetails: [
-      {
-        kanji: '特',
-        meanings: ['special'],
-        onReadings: ['トク'],
-        strokeCount: 10,
-        jlpt: 4
-      },
-      {
-        kanji: '急',
-        meanings: ['emergency', 'hurry', 'steep', 'sudden'],
-        onReadings: ['キュウ'],
-        kunReadings: ['いそ.ぎ', 'いそ.ぐ', 'せ.く'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '腕',
-    furigana: 'うで',
-    meaning: 'arm'
-,
-    kanjiDetails: [
-      {
-        kanji: '腕',
-        meanings: ['ability', 'arm', 'talent'],
-        onReadings: ['ワン'],
-        kunReadings: ['うで'],
-        strokeCount: 12,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '気分',
-    furigana: 'きぶん',
-    meaning: 'mood'
-,
-    kanjiDetails: [
-      {
-        kanji: '気',
-        meanings: ['air', 'atmosphere', 'mind', 'mood', 'spirit'],
-        onReadings: ['キ', 'ケ'],
-        kunReadings: ['き'],
-        strokeCount: 6,
-        jlpt: 5
-      },
-      {
-        kanji: '分',
-        meanings: ['1%', 'chances', 'degree', 'duty', 'know', 'minute of time', 'one\'s lot', 'part', 'rate', 'segment', 'shaku/100', 'share', 'understand'],
-        onReadings: ['フン', 'ブ', 'ブン'],
-        kunReadings: ['わ.かつ', 'わ.かる', 'わ.かれる', 'わ.け', 'わ.ける'],
-        strokeCount: 4,
-        jlpt: null
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '上る',
-    furigana: 'あがる',
-    meaning: 'to rise'
-,
-    kanjiDetails: [
-      {
-        kanji: '上',
-        meanings: ['above', 'up'],
-        onReadings: ['シャン', 'ショウ', 'ジョウ'],
-        kunReadings: ['-あ.がり', '-あ.がる', '-あ.げる', '-うえ', 'あ.がり', 'あ.がる', 'あ.げる', 'うえ', 'うわ-', 'かみ', 'たてまつ.る', 'のぼ.す', 'のぼ.せる', 'のぼ.り', 'のぼ.る'],
-        strokeCount: 3,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'いただく',
-    meaning: '(humble) to receive'
-  },
-  {
-    level: 'N3',
-    word: '泊まる',
-    furigana: 'とまる',
-    meaning: 'to lodge at'
-,
-    kanjiDetails: [
-      {
-        kanji: '泊',
-        meanings: ['overnight stay', 'put up at', 'ride at anchor'],
-        onReadings: ['ハク'],
-        kunReadings: ['と.まる', 'と.める'],
-        strokeCount: 8,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '盗む',
-    furigana: 'ぬすむ',
-    meaning: 'to steal'
-,
-    kanjiDetails: [
-      {
-        kanji: '盗',
-        meanings: ['pilfer', 'rob', 'steal'],
-        onReadings: ['トウ'],
-        kunReadings: ['ぬす.み', 'ぬす.む'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ひげ',
-    meaning: 'beard'
-  },
-  {
-    level: 'N3',
-    word: '坂',
-    furigana: 'さか',
-    meaning: 'slope, hill'
-,
-    kanjiDetails: [
-      {
-        kanji: '坂',
-        meanings: ['hill', 'incline', 'slope'],
-        onReadings: ['ハン'],
-        kunReadings: ['さか'],
-        strokeCount: 7,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'よろしい',
-    meaning: '(respectful) OK, all right'
-  },
-  {
-    level: 'N3',
-    word: '技術',
-    furigana: 'ぎじゅつ',
-    meaning: 'art, technology, skill'
-,
-    kanjiDetails: [
-      {
-        kanji: '技',
-        meanings: ['ability', 'art', 'arts', 'craft', 'feat', 'performance', 'skill', 'vocation'],
-        onReadings: ['ギ'],
-        kunReadings: ['わざ'],
-        strokeCount: 7,
-        jlpt: 2
-      },
-      {
-        kanji: '術',
-        meanings: ['art', 'magic', 'means', 'resources', 'skill', 'technique', 'trick'],
-        onReadings: ['ジュツ'],
-        kunReadings: ['すべ'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '為',
-    furigana: 'ため',
-    meaning: 'in order to'
-,
-    kanjiDetails: [
-      {
-        kanji: '為',
-        meanings: ['advantage', 'as a result of', 'be of use', 'benefit', 'change', 'cost', 'do', 'good', 'make', 'practice', 'reach to', 'serve as', 'try', 'welfare'],
-        onReadings: ['イ'],
-        kunReadings: ['す.る', 'ため', 'たり', 'つく.る', 'な.す', 'な.る', 'なり'],
-        strokeCount: 9,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '小説',
-    furigana: 'しょうせつ',
-    meaning: 'novel'
-,
-    kanjiDetails: [
-      {
-        kanji: '小',
-        meanings: ['little', 'small'],
-        onReadings: ['ショウ'],
-        kunReadings: ['お-', 'こ-', 'さ-', 'ちい.さい'],
-        strokeCount: 3,
-        jlpt: 5
-      },
-      {
-        kanji: '説',
-        meanings: ['explanation', 'opinion', 'rumor', 'theory'],
-        onReadings: ['セツ', 'ゼイ'],
-        kunReadings: ['と.く'],
-        strokeCount: 14,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '調べる',
-    furigana: 'しらべる',
-    meaning: 'to investigate'
-,
-    kanjiDetails: [
-      {
-        kanji: '調',
-        meanings: ['exorcise', 'harmonize', 'investigate', 'key (music)', 'mediate', 'meter', 'prepare', 'tone', 'tune', 'writing style'],
-        onReadings: ['チョウ'],
-        kunReadings: ['しら.べ', 'しら.べる', 'ととの.う', 'ととの.える'],
-        strokeCount: 15,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '趣味',
-    furigana: 'しゅみ',
-    meaning: 'hobby'
-,
-    kanjiDetails: [
-      {
-        kanji: '趣',
-        meanings: ['become', 'elegance', 'gist', 'interest', 'proceed to', 'purport', 'tend'],
-        onReadings: ['シュ'],
-        kunReadings: ['おもむ.く', 'おもむき'],
-        strokeCount: 15,
-        jlpt: 1
-      },
-      {
-        kanji: '味',
-        meanings: ['flavor', 'taste'],
-        onReadings: ['ミ'],
-        kunReadings: ['あじ', 'あじ.わう'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '運転手',
-    furigana: 'うんてんしゅ',
-    meaning: 'driver'
-,
-    kanjiDetails: [
-      {
-        kanji: '運',
-        meanings: ['advance', 'carry', 'destiny', 'fate', 'lot', 'luck', 'progress', 'transport'],
-        onReadings: ['ウン'],
-        kunReadings: ['はこ.ぶ'],
-        strokeCount: 12,
-        jlpt: 4
-      },
-      {
-        kanji: '転',
-        meanings: ['change', 'revolve', 'turn around'],
-        onReadings: ['テン'],
-        kunReadings: ['うたた', 'うつ.る', 'くる.めく', 'ころ.がす', 'ころ.がる', 'ころ.げる', 'ころ.ぶ', 'まろ.ぶ'],
-        strokeCount: 11,
-        jlpt: 4
-      },
-      {
-        kanji: '手',
-        meanings: ['hand'],
-        onReadings: ['シュ', 'ズ'],
-        kunReadings: ['-て', 'た-', 'て', 'て-'],
-        strokeCount: 4,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '深い',
-    furigana: 'ふかい',
-    meaning: 'deep'
-,
-    kanjiDetails: [
-      {
-        kanji: '深',
-        meanings: ['deep', 'heighten', 'intensify', 'strengthen'],
-        onReadings: ['シン'],
-        kunReadings: ['-ぶか.い', 'ふか.い', 'ふか.まる', 'ふか.める', 'み-'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '林',
-    furigana: 'はやし',
-    meaning: 'woods, forester'
-,
-    kanjiDetails: [
-      {
-        kanji: '林',
-        meanings: ['forest', 'grove'],
-        onReadings: ['リン'],
-        kunReadings: ['はやし'],
-        strokeCount: 8,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '小学校',
-    furigana: 'しょうがっこう',
-    meaning: 'elementary school'
-,
-    kanjiDetails: [
-      {
-        kanji: '小',
-        meanings: ['little', 'small'],
-        onReadings: ['ショウ'],
-        kunReadings: ['お-', 'こ-', 'さ-', 'ちい.さい'],
-        strokeCount: 3,
-        jlpt: 5
-      },
-      {
-        kanji: '学',
-        meanings: ['learning', 'science', 'study'],
-        onReadings: ['ガク'],
-        kunReadings: ['まな.ぶ'],
-        strokeCount: 8,
-        jlpt: 5
-      },
-      {
-        kanji: '校',
-        meanings: ['correction', 'exam', 'printing', 'proof', 'school'],
-        onReadings: ['キョウ', 'コウ'],
-        strokeCount: 10,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'まず',
-    meaning: 'first of all'
-  },
-  {
-    level: 'N3',
-    word: '気持ち',
-    furigana: 'きもち',
-    meaning: 'feeling, mood'
-,
-    kanjiDetails: [
-      {
-        kanji: '気',
-        meanings: ['air', 'atmosphere', 'mind', 'mood', 'spirit'],
-        onReadings: ['キ', 'ケ'],
-        kunReadings: ['き'],
-        strokeCount: 6,
-        jlpt: 5
-      },
-      {
-        kanji: '持',
-        meanings: ['have', 'hold'],
-        onReadings: ['ジ'],
-        kunReadings: ['-も.ち', 'も.つ', 'も.てる'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '思い出す',
-    furigana: 'おもいだす',
-    meaning: 'to remember'
-,
-    kanjiDetails: [
-      {
-        kanji: '思',
-        meanings: ['think'],
-        onReadings: ['シ'],
-        kunReadings: ['おぼ.す', 'おも.う', 'おもえら.く'],
-        strokeCount: 9,
-        jlpt: 4
-      },
-      {
-        kanji: '出',
-        meanings: ['come out', 'exit', 'go out', 'leave', 'protrude', 'put out'],
-        onReadings: ['シュツ', 'スイ'],
-        kunReadings: ['-だ.す', '-で', 'い.だす', 'い.でる', 'だ.す', 'で.る'],
-        strokeCount: 5,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '留守',
-    furigana: 'るす',
-    meaning: 'absence'
-,
-    kanjiDetails: [
-      {
-        kanji: '留',
-        meanings: ['detain', 'fasten', 'halt', 'stop'],
-        onReadings: ['リュウ', 'ル'],
-        kunReadings: ['と.まる', 'と.める', 'とど.まる', 'とど.める', 'るうぶる'],
-        strokeCount: 10,
-        jlpt: 3
-      },
-      {
-        kanji: '守',
-        meanings: ['defend', 'guard', 'obey', 'protect'],
-        onReadings: ['シュ', 'ス'],
-        kunReadings: ['-もり', 'かみ', 'まも.り', 'まも.る', 'もり'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '続ける',
-    furigana: 'つづける',
-    meaning: 'to continue'
-,
-    kanjiDetails: [
-      {
-        kanji: '続',
-        meanings: ['continue', 'sequel', 'series'],
-        onReadings: ['キョウ', 'コウ', 'ショク', 'ゾク'],
-        kunReadings: ['つぐ.ない', 'つづ.く', 'つづ.ける'],
-        strokeCount: 13,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '草',
-    furigana: 'くさ',
-    meaning: 'grass'
-,
-    kanjiDetails: [
-      {
-        kanji: '草',
-        meanings: ['draft', 'grass', 'herbs', 'pasture', 'weeds', 'write'],
-        onReadings: ['ソウ'],
-        kunReadings: ['-ぐさ', 'くさ', 'くさ-'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '途中',
-    furigana: 'とちゅう',
-    meaning: 'on the way'
-,
-    kanjiDetails: [
-      {
-        kanji: '途',
-        meanings: ['road', 'route', 'way'],
-        onReadings: ['ト'],
-        kunReadings: ['みち'],
-        strokeCount: 10,
-        jlpt: 3
-      },
-      {
-        kanji: '中',
-        meanings: ['center', 'in', 'inside', 'mean', 'middle'],
-        onReadings: ['チュウ'],
-        kunReadings: ['あた.る', 'うち', 'なか'],
-        strokeCount: 4,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'できるだけ',
-    meaning: 'as much as possible'
-  },
-  {
-    level: 'N3',
-    word: 'お宅',
-    furigana: 'おたく',
-    meaning: '(polite) your house'
-,
-    kanjiDetails: [
-      {
-        kanji: '宅',
-        meanings: ['home', 'house', 'my husband', 'our house', 'residence'],
-        onReadings: ['タク'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '召し上がる',
-    furigana: 'めしあがる',
-    meaning: '(polite) to eat'
-,
-    kanjiDetails: [
-      {
-        kanji: '召',
-        meanings: ['buy', 'call', 'catch (cold)', 'drink', 'eat', 'put on', 'ride in', 'seduce', 'send for', 'wear'],
-        onReadings: ['ショウ'],
-        kunReadings: ['め.す'],
-        strokeCount: 5,
-        jlpt: 2
-      },
-      {
-        kanji: '上',
-        meanings: ['above', 'up'],
-        onReadings: ['シャン', 'ショウ', 'ジョウ'],
-        kunReadings: ['-あ.がり', '-あ.がる', '-あ.げる', '-うえ', 'あ.がり', 'あ.がる', 'あ.げる', 'うえ', 'うわ-', 'かみ', 'たてまつ.る', 'のぼ.す', 'のぼ.せる', 'のぼ.り', 'のぼ.る'],
-        strokeCount: 3,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '悲しい',
-    furigana: 'かなしい',
-    meaning: 'sad'
-,
-    kanjiDetails: [
-      {
-        kanji: '悲',
-        meanings: ['deplore', 'grieve', 'regret', 'sad'],
-        onReadings: ['ヒ'],
-        kunReadings: ['かな.しい', 'かな.しむ'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '子',
-    furigana: 'こ',
-    meaning: 'child'
-,
-    kanjiDetails: [
-      {
-        kanji: '子',
-        meanings: ['11PM-1AM', 'child', 'first sign of Chinese zodiac', 'sign of the rat'],
-        onReadings: ['シ', 'ス', 'ツ'],
-        kunReadings: ['-こ', 'こ', 'ね'],
-        strokeCount: 3,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '運転',
-    furigana: 'うんてん・する',
-    meaning: 'to drive'
-,
-    kanjiDetails: [
-      {
-        kanji: '運',
-        meanings: ['advance', 'carry', 'destiny', 'fate', 'lot', 'luck', 'progress', 'transport'],
-        onReadings: ['ウン'],
-        kunReadings: ['はこ.ぶ'],
-        strokeCount: 12,
-        jlpt: 4
-      },
-      {
-        kanji: '転',
-        meanings: ['change', 'revolve', 'turn around'],
-        onReadings: ['テン'],
-        kunReadings: ['うたた', 'うつ.る', 'くる.めく', 'ころ.がす', 'ころ.がる', 'ころ.げる', 'ころ.ぶ', 'まろ.ぶ'],
-        strokeCount: 11,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'はっきり',
-    meaning: 'clearly'
-  },
-  {
-    level: 'N3',
-    word: '折る',
-    furigana: 'おる',
-    meaning: 'to break or to fold'
-,
-    kanjiDetails: [
-      {
-        kanji: '折',
-        meanings: ['bend', 'break', 'fold', 'fracture', 'submit', 'yield'],
-        onReadings: ['シャク', 'セツ'],
-        kunReadings: ['-お.り', 'お.り', 'お.る', 'お.れる', 'おり'],
-        strokeCount: 7,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '今度',
-    furigana: 'こんど',
-    meaning: 'now, next time'
-,
-    kanjiDetails: [
-      {
-        kanji: '今',
-        meanings: ['now'],
-        onReadings: ['キン', 'コン'],
-        kunReadings: ['いま'],
-        strokeCount: 4,
-        jlpt: 5
-      },
-      {
-        kanji: '度',
-        meanings: ['attitude', 'consider', 'counter for occurrences', 'degrees', 'occurrence', 'time'],
-        onReadings: ['タク', 'ト', 'ド'],
-        kunReadings: ['-た.い', 'たび'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'アフリカ',
-    meaning: 'Africa'
-  },
-  {
-    level: 'N3',
-    word: '壊れる',
-    furigana: 'こわれる',
-    meaning: 'to be broken'
-,
-    kanjiDetails: [
-      {
-        kanji: '壊',
-        meanings: ['break', 'demolition', 'destroy'],
-        onReadings: ['エ', 'カイ'],
-        kunReadings: ['こわ.す', 'こわ.れる', 'やぶ.る'],
-        strokeCount: 16,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '番組',
-    furigana: 'ばんぐみ',
-    meaning: 'television or radio program'
-,
-    kanjiDetails: [
-      {
-        kanji: '番',
-        meanings: ['number in a series', 'turn'],
-        onReadings: ['バン'],
-        kunReadings: ['つが.い'],
-        strokeCount: 12,
-        jlpt: 3
-      },
-      {
-        kanji: '組',
-        meanings: ['assemble', 'association', 'braid', 'construct', 'cooperate', 'grapple', 'plait', 'unite'],
-        onReadings: ['ソ'],
-        kunReadings: ['-ぐみ', 'く.む', 'くみ'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '捕まえる',
-    furigana: 'つかまえる',
-    meaning: 'to seize'
-,
-    kanjiDetails: [
-      {
-        kanji: '捕',
-        meanings: ['capture', 'catch'],
-        onReadings: ['ホ'],
-        kunReadings: ['つか.まえる', 'つか.まる', 'と.らえる', 'と.らわれる', 'と.る', 'とら.える', 'とら.われる'],
-        strokeCount: 10,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'タイプ',
-    meaning: 'type, style'
-  },
-  {
-    level: 'N3',
-    word: '毛',
-    furigana: 'け',
-    meaning: 'hair or fur'
-,
-    kanjiDetails: [
-      {
-        kanji: '毛',
-        meanings: ['down', 'feather', 'fur', 'hair'],
-        onReadings: ['モウ'],
-        kunReadings: ['け'],
-        strokeCount: 4,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '落る',
-    furigana: 'おちる',
-    meaning: 'to fall or drop'
-,
-    kanjiDetails: [
-      {
-        kanji: '落',
-        meanings: ['come down', 'drop', 'fall', 'hamlet', 'village'],
-        onReadings: ['ラク'],
-        kunReadings: ['お.ち', 'お.ちる', 'お.とす'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '場合',
-    furigana: 'ばあい',
-    meaning: 'situation'
-,
-    kanjiDetails: [
-      {
-        kanji: '場',
-        meanings: ['location', 'place'],
-        onReadings: ['ジョウ', 'チョウ'],
-        kunReadings: ['ば'],
-        strokeCount: 12,
-        jlpt: 4
-      },
-      {
-        kanji: '合',
-        meanings: ['0.1', 'fit', 'join', 'suit'],
-        onReadings: ['カッ', 'ガッ', 'ゴウ'],
-        kunReadings: ['-あ.い', '-あ.う', '-あ.わせる', '-あい', 'あ.い', 'あ.う', 'あ.わす', 'あ.わせる', 'あい-'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '意見',
-    furigana: 'いけん',
-    meaning: 'opinion'
-,
-    kanjiDetails: [
-      {
-        kanji: '意',
-        meanings: ['care', 'desire', 'heart', 'idea', 'liking', 'mind', 'taste', 'thought'],
-        onReadings: ['イ'],
-        strokeCount: 13,
-        jlpt: 4
-      },
-      {
-        kanji: '見',
-        meanings: ['chances', 'hopes', 'idea', 'look at', 'opinion', 'see', 'visible'],
-        onReadings: ['ケン'],
-        kunReadings: ['み.える', 'み.せる', 'み.る'],
-        strokeCount: 7,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '通る',
-    furigana: 'とおる',
-    meaning: 'to go through'
-,
-    kanjiDetails: [
-      {
-        kanji: '通',
-        meanings: ['avenue', 'commute', 'counter for letters, notes, documents, etc.', 'pass through', 'traffic'],
-        onReadings: ['ツ', 'ツウ'],
-        kunReadings: ['-とお.り', '-どお.し', '-どお.り', 'かよ.う', 'とお.し', 'とお.す', 'とお.り', 'とお.る'],
-        strokeCount: 10,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '着物',
-    furigana: 'きもの',
-    meaning: 'kimono'
-,
-    kanjiDetails: [
-      {
-        kanji: '着',
-        meanings: ['arrive', 'counter for suits of clothing', 'don', 'wear'],
-        onReadings: ['ジャク', 'チャク'],
-        kunReadings: ['き.せる', 'き.る', 'つ.く', 'つ.ける'],
-        strokeCount: 12,
-        jlpt: 4
-      },
-      {
-        kanji: '物',
-        meanings: ['matter', 'object', 'thing'],
-        onReadings: ['ブツ', 'モツ'],
-        kunReadings: ['もの', 'もの-'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '森',
-    furigana: 'もり',
-    meaning: 'forest'
-,
-    kanjiDetails: [
-      {
-        kanji: '森',
-        meanings: ['forest', 'woods'],
-        onReadings: ['シン'],
-        kunReadings: ['もり'],
-        strokeCount: 12,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '市',
-    furigana: 'し',
-    meaning: 'city'
-,
-    kanjiDetails: [
-      {
-        kanji: '市',
-        meanings: ['city', 'market', 'town'],
-        onReadings: ['シ'],
-        kunReadings: ['いち'],
-        strokeCount: 5,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ほど',
-    meaning: 'extent'
-  },
-  {
-    level: 'N3',
-    word: '入院',
-    furigana: 'にゅういん・する',
-    meaning: 'to hospitalise'
-,
-    kanjiDetails: [
-      {
-        kanji: '入',
-        meanings: ['enter', 'insert'],
-        onReadings: ['ジュ', 'ニュウ'],
-        kunReadings: ['-い.り', '-い.る', '-い.れ', 'い.る', 'い.れる', 'はい.る'],
-        strokeCount: 2,
-        jlpt: 5
-      },
-      {
-        kanji: '院',
-        meanings: ['Inst.', 'institution', 'mansion', 'school', 'temple'],
-        onReadings: ['イン'],
-        strokeCount: 10,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'カーテン',
-    meaning: 'curtain'
-  },
-  {
-    level: 'N3',
-    word: '動く',
-    furigana: 'うごく',
-    meaning: 'to move'
-,
-    kanjiDetails: [
-      {
-        kanji: '動',
-        meanings: ['change', 'confusion', 'motion', 'move', 'shake', 'shift'],
-        onReadings: ['ドウ'],
-        kunReadings: ['うご.かす', 'うご.く'],
-        strokeCount: 11,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ぜひ',
-    meaning: 'without fail'
-  },
-  {
-    level: 'N3',
-    word: 'すばらしい',
-    meaning: 'wonderful'
-  },
-  {
-    level: 'N3',
-    word: '参る',
-    furigana: 'まいる',
-    meaning: '(humble) to go, to come'
-,
-    kanjiDetails: [
-      {
-        kanji: '参',
-        meanings: ['be defeated', 'be madly in love', 'coming', 'die', 'going', 'nonplussed', 'participate', 'take part in', 'three (in documents)', 'visit', 'visiting'],
-        onReadings: ['サン', 'シン'],
-        kunReadings: ['まい-', 'まい.る', 'まじわる', 'みつ'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ねっしん',
-    meaning: 'enthusiasm'
-  },
-  {
-    level: 'N3',
-    word: '講堂',
-    furigana: 'こうどう',
-    meaning: 'auditorium'
-,
-    kanjiDetails: [
-      {
-        kanji: '講',
-        meanings: ['association', 'club', 'lecture'],
-        onReadings: ['コウ'],
-        strokeCount: 17,
-        jlpt: 2
-      },
-      {
-        kanji: '堂',
-        meanings: ['hall', 'public chamber'],
-        onReadings: ['ドウ'],
-        strokeCount: 11,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'もし',
-    meaning: 'if'
-  },
-  {
-    level: 'N3',
-    word: 'ぬれる',
-    meaning: 'to get wet'
-  },
-  {
-    level: 'N3',
-    word: '非常に',
-    furigana: 'ひじょうに',
-    meaning: 'extremely'
-,
-    kanjiDetails: [
-      {
-        kanji: '非',
-        meanings: ['injustice', 'mistake', 'negative', 'non-', 'un-'],
-        onReadings: ['ヒ'],
-        kunReadings: ['あら.ず'],
-        strokeCount: 8,
-        jlpt: 3
-      },
-      {
-        kanji: '常',
-        meanings: ['always', 'common', 'continually', 'long-lasting', 'normal', 'ordinary', 'regular', 'usual'],
-        onReadings: ['ジョウ'],
-        kunReadings: ['つね', 'とこ-'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '文法',
-    furigana: 'ぶんぽう',
-    meaning: 'grammar'
-,
-    kanjiDetails: [
-      {
-        kanji: '文',
-        meanings: ['art', 'decoration', 'figures', 'literary radical (no. 67)', 'literature', 'plan', 'sentence', 'style'],
-        onReadings: ['ブン', 'モン'],
-        kunReadings: ['あや', 'ふみ'],
-        strokeCount: 4,
-        jlpt: 4
-      },
-      {
-        kanji: '法',
-        meanings: ['law', 'method', 'model', 'principle', 'rule', 'system'],
-        onReadings: ['ハッ', 'フラン', 'ホウ', 'ホッ'],
-        kunReadings: ['のり'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '表',
-    furigana: 'おもて',
-    meaning: 'the front'
-,
-    kanjiDetails: [
-      {
-        kanji: '表',
-        meanings: ['chart', 'diagram', 'surface', 'table'],
-        onReadings: ['ヒョウ'],
-        kunReadings: ['-おもて', 'あら.わす', 'あらわ.す', 'あらわ.れる', 'おもて'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'おっしゃる',
-    meaning: '(respectful) to say'
-  },
-  {
-    level: 'N3',
-    word: '西洋',
-    furigana: 'せいよう',
-    meaning: 'western countries'
-,
-    kanjiDetails: [
-      {
-        kanji: '西',
-        meanings: ['Spain', 'west'],
-        onReadings: ['サイ', 'ス', 'セイ'],
-        kunReadings: ['にし'],
-        strokeCount: 6,
-        jlpt: 5
-      },
-      {
-        kanji: '洋',
-        meanings: ['Western style', 'foreign', 'ocean', 'sea'],
-        onReadings: ['ヨウ'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '両方',
-    furigana: 'りょうほう',
-    meaning: 'both sides'
-,
-    kanjiDetails: [
-      {
-        kanji: '両',
-        meanings: ['both', 'counter for carriages (e.g., in a train)', 'old Japanese coin', 'two'],
-        onReadings: ['リョウ'],
-        kunReadings: ['てる', 'ふたつ'],
-        strokeCount: 6,
-        jlpt: 3
-      },
-      {
-        kanji: '方',
-        meanings: ['alternative', 'direction', 'person'],
-        onReadings: ['ホウ'],
-        kunReadings: ['-かた', '-がた', 'かた'],
-        strokeCount: 4,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '払う',
-    furigana: 'はらう',
-    meaning: 'to pay'
-,
-    kanjiDetails: [
-      {
-        kanji: '払',
-        meanings: ['banish', 'clear out', 'dispose of', 'pay', 'prune'],
-        onReadings: ['ヒツ', 'フツ', 'ホツ'],
-        kunReadings: ['-はら.い', '-ばら.い', 'はら.う'],
-        strokeCount: 5,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '地理',
-    furigana: 'ちり',
-    meaning: 'geography'
-,
-    kanjiDetails: [
-      {
-        kanji: '地',
-        meanings: ['earth', 'ground'],
-        onReadings: ['ジ', 'チ'],
-        strokeCount: 6,
-        jlpt: 4
-      },
-      {
-        kanji: '理',
-        meanings: ['arrangement', 'justice', 'logic', 'reason', 'truth'],
-        onReadings: ['リ'],
-        kunReadings: ['ことわり'],
-        strokeCount: 11,
-        jlpt: 4
-      }
-    ]
+        part: "동사",
+        means: ["육아"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いくじ",
+    category3: null
   },
-  {
-    level: 'N3',
-    word: 'あかちゃん',
-    meaning: 'infant'
-  },
-  {
-    level: 'N3',
-    word: '似る',
-    furigana: 'にる',
-    meaning: 'to be similar'
-,
-    kanjiDetails: [
-      {
-        kanji: '似',
-        meanings: ['becoming', 'counterfeit', 'imitate', 'resemble', 'suitable'],
-        onReadings: ['ジ'],
-        kunReadings: ['に.る', 'ひ.る'],
-        strokeCount: 7,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '踊る',
-    furigana: 'おどる',
-    meaning: 'to dance'
-,
-    kanjiDetails: [
-      {
-        kanji: '踊',
-        meanings: ['dance', 'jump', 'leap', 'skip'],
-        onReadings: ['ヨウ'],
-        kunReadings: ['おど.る'],
-        strokeCount: 14,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'うれしい',
-    meaning: 'glad'
-  },
-  {
-    level: 'N3',
-    word: '事故',
-    furigana: 'じこ',
-    meaning: 'accident'
-,
-    kanjiDetails: [
-      {
-        kanji: '事',
-        meanings: ['business', 'fact', 'matter', 'possibly', 'reason', 'thing'],
-        onReadings: ['ジ', 'ズ'],
-        kunReadings: ['こと', 'つか.う', 'つか.える'],
-        strokeCount: 8,
-        jlpt: 4
-      },
-      {
-        kanji: '故',
-        meanings: ['cause', 'circumstances', 'consequently', 'especially', 'happenstance', 'intentionally', 'reason', 'the late', 'therefore'],
-        onReadings: ['コ'],
-        kunReadings: ['ふる.い', 'もと', 'ゆえ'],
-        strokeCount: 9,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'さっき',
-    meaning: 'some time ago'
-  },
-  {
-    level: 'N3',
-    word: '赤ん坊',
-    furigana: 'あかんぼう',
-    meaning: 'baby'
-,
-    kanjiDetails: [
-      {
-        kanji: '赤',
-        meanings: ['red'],
-        onReadings: ['シャク', 'セキ'],
-        kunReadings: ['あか', 'あか-', 'あか.い', 'あか.らむ', 'あか.らめる'],
-        strokeCount: 7,
-        jlpt: 4
-      },
-      {
-        kanji: '坊',
-        meanings: ['boy', 'priest', 'priest\'s residence'],
-        onReadings: ['ボウ', 'ボッ'],
-        strokeCount: 7,
-        jlpt: null
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '寂しい',
-    furigana: 'さびしい',
-    meaning: 'lonely'
-,
-    kanjiDetails: [
-      {
-        kanji: '寂',
-        meanings: ['death of a priest', 'loneliness', 'mature', 'mellow', 'quietly'],
-        onReadings: ['ジャク', 'セキ'],
-        kunReadings: ['さび', 'さび.しい', 'さび.れる', 'さみ.しい'],
-        strokeCount: 11,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '複雑',
-    furigana: 'ふくざつ',
-    meaning: 'complexity, complication'
-,
-    kanjiDetails: [
-      {
-        kanji: '複',
-        meanings: ['compound', 'double', 'duplicate', 'multiple'],
-        onReadings: ['フク'],
-        strokeCount: 14,
-        jlpt: 2
-      },
-      {
-        kanji: '雑',
-        meanings: ['miscellaneous'],
-        onReadings: ['ザツ', 'ゾウ'],
-        kunReadings: ['まじ.える', 'まじ.る'],
-        strokeCount: 14,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '眠る',
-    furigana: 'ねむる',
-    meaning: 'to sleep'
-,
-    kanjiDetails: [
+  {
+    entry_id: "ff917c16119b42718e221db554c0e3a6",
+    origin_entry_id: "JK000000003827",
+    entry: "いご",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '眠',
-        meanings: ['die', 'sleep', 'sleepy'],
-        onReadings: ['ミン'],
-        kunReadings: ['ねむ.い', 'ねむ.る'],
-        strokeCount: 10,
-        jlpt: 3
+        part: "명사",
+        means: ["이후"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "いご",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '近所',
-    furigana: 'きんじょ',
-    meaning: 'neighbourhood'
-,
-    kanjiDetails: [
-      {
-        kanji: '近',
-        meanings: ['akin', 'early', 'near', 'tantamount'],
-        onReadings: ['キン', 'コン'],
-        kunReadings: ['ちか.い'],
-        strokeCount: 7,
-        jlpt: 4
-      },
+    entry_id: "2e59461ff4f84b7bb68477b2532dd71d",
+    origin_entry_id: "JK000000003925",
+    entry: "いし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '所',
-        meanings: ['extent', 'place'],
-        onReadings: ['ショ'],
-        kunReadings: ['-ところ', 'とこ', 'ところ', 'どころ'],
-        strokeCount: 8,
-        jlpt: 3
+        part: "명사",
+        means: ["의사"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "いし",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'ごみ',
-    meaning: 'rubbish'
+    entry_id: "9de827681e39448397f51faf13256850",
+    origin_entry_id: "JK100003929006",
+    entry: "いじわる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["심술궂음;짓궂음;또, 심술쟁이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いじわる",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '例えば',
-    furigana: 'たとえば',
-    meaning: 'for example'
-,
-    kanjiDetails: [
+    entry_id: "05993ad6acd04499b20078d7830e0560",
+    origin_entry_id: "JK000000004141",
+    entry: "いぜん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '例',
-        meanings: ['custom', 'example', 'precedent', 'usage'],
-        onReadings: ['レイ'],
-        kunReadings: ['たと.える'],
-        strokeCount: 8,
-        jlpt: 3
+        part: "명사",
+        means: ["이전"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "いぜん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'チェック・する',
-    meaning: 'to check'
+    entry_id: "a91d1f8558fd46c3b0b40521e0748cb8",
+    origin_entry_id: "JK000000004200",
+    entry: "いた",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["판자;널"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いた",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '御主人',
-    furigana: 'ごしゅじん',
-    meaning: '(honorable) your husband'
-,
-    kanjiDetails: [
-      {
-        kanji: '御',
-        meanings: ['govern', 'honorable', 'manipulate'],
-        onReadings: ['ギョ', 'ゴ'],
-        kunReadings: ['お-', 'おん-', 'み-'],
-        strokeCount: 12,
-        jlpt: 3
-      },
-      {
-        kanji: '主',
-        meanings: ['chief', 'lord', 'main thing', 'master', 'principal'],
-        onReadings: ['シュ', 'シュウ', 'ス'],
-        kunReadings: ['あるじ', 'おも', 'ぬし'],
-        strokeCount: 5,
-        jlpt: 4
-      },
+    entry_id: "62ecf91813e2425091e81d4b329e3a9f",
+    origin_entry_id: "JK000000004306",
+    entry: "いたみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '人',
-        meanings: ['person'],
-        onReadings: ['ジン', 'ニン'],
-        kunReadings: ['-と', '-り', 'ひと'],
-        strokeCount: 2,
-        jlpt: 5
+        part: "명사",
+        means: ["아픔"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "いたみ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'テキスト',
-    meaning: 'text, text book'
+    entry_id: "3d3995130ac943fe9b73ccea3cc1a2ff",
+    origin_entry_id: "JK000000004488",
+    entry: "いちば",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["시장;저자;장"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いちば",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'ごちそう',
-    meaning: 'a feast'
+    entry_id: "6818f37e534d4850a22b804e18b189e8",
+    origin_entry_id: "JK000000004503",
+    entry: "いちぶ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["일부"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いちぶ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '起す',
-    furigana: 'おこす',
-    meaning: 'to wake'
-,
-    kanjiDetails: [
+    entry_id: "590df2fd749a4047902f620e6b3dd300",
+    origin_entry_id: "JK000000004626",
+    entry: "いっかげつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '起',
-        meanings: ['get up', 'rouse', 'wake up'],
-        onReadings: ['キ'],
-        kunReadings: ['お.きる', 'お.こす', 'お.こる', 'おこ.す', 'た.つ'],
-        strokeCount: 10,
-        jlpt: 4
+        part: "명사",
+        means: ["일개월;한 달"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "いっかげつ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'テニス',
-    meaning: 'tennis'
+    entry_id: "bd055f29605b47a39ba8439df3741457",
+    origin_entry_id: "JK000000004783",
+    entry: "いっしょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["일생"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いっしょう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'パソコン',
-    meaning: 'personal computer'
+    entry_id: "bdcc66512c7a429db693d51d6238b121",
+    origin_entry_id: "JK000000004811",
+    entry: "いっせい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["일제"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いっせい",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '研究',
-    furigana: 'けんきゅう',
-    meaning: 'research'
-,
-    kanjiDetails: [
-      {
-        kanji: '研',
-        meanings: ['polish', 'sharpen', 'study of'],
-        onReadings: ['ケン'],
-        kunReadings: ['と.ぐ'],
-        strokeCount: 9,
-        jlpt: 4
-      },
+    entry_id: "9d6a405b3ff8448e9da2b134e4176e4f",
+    origin_entry_id: "JK100004963002",
+    entry: "いっぽうつうこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '究',
-        meanings: ['research', 'study'],
-        onReadings: ['キュウ', 'ク'],
-        kunReadings: ['きわ.める'],
-        strokeCount: 7,
-        jlpt: 4
+        part: "명사",
+        means: ["일방통행"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "いっぽうつうこう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '聞こえる',
-    furigana: 'きこえる',
-    meaning: 'to be heard'
-,
-    kanjiDetails: [
+    entry_id: "d94c8335d5184136aa8ae6f4b729a49b",
+    origin_entry_id: "JK000000005041",
+    entry: "いとこ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '聞',
-        meanings: ['ask', 'hear', 'listen'],
-        onReadings: ['ブン', 'モン'],
-        kunReadings: ['き.く', 'き.こえる'],
-        strokeCount: 14,
-        jlpt: 5
+        part: "명사",
+        means: ["사촌;종형제"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "いとこ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '間違える',
-    furigana: 'まちがえる',
-    meaning: 'to make a mistake'
-,
-    kanjiDetails: [
+    entry_id: "914a350cceaf411a8c6d7202aba3d779",
+    origin_entry_id: "JK000000005188",
+    entry: "いねむり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '間',
-        meanings: ['interval', 'space'],
-        onReadings: ['カン', 'ケン'],
-        kunReadings: ['あい', 'あいだ', 'ま'],
-        strokeCount: 12,
-        jlpt: 5
+        part: "명사",
+        means: ["앉아 졺;말뚝잠"]
       },
       {
-        kanji: '違',
-        meanings: ['differ', 'difference'],
-        onReadings: ['イ'],
-        kunReadings: ['-ちが.える', 'たが.う', 'たが.える', 'ちが.い', 'ちが.う', 'ちが.える'],
-        strokeCount: 13,
-        jlpt: 3
+        part: "동사",
+        means: ["앉아 졺;말뚝잠"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "いねむり",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '看護婦',
-    furigana: 'かんごふ',
-    meaning: 'female nurse'
-,
-    kanjiDetails: [
+    entry_id: "db5bd3b789514537b9aeded446c1b55e",
+    origin_entry_id: "JK000000005243",
+    entry: "いはん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '看',
-        meanings: ['see', 'watch over'],
-        onReadings: ['カン'],
-        kunReadings: ['み.る'],
-        strokeCount: 9,
-        jlpt: 1
+        part: "명사",
+        means: ["위반"]
       },
       {
-        kanji: '護',
-        meanings: ['protect', 'safeguard'],
-        onReadings: ['ゴ'],
-        kunReadings: ['まも.る'],
-        strokeCount: 20,
-        jlpt: 1
-      },
-      {
-        kanji: '婦',
-        meanings: ['bride', 'lady', 'wife', 'woman'],
-        onReadings: ['フ'],
-        kunReadings: ['よめ'],
-        strokeCount: 11,
-        jlpt: 3
+        part: "동사",
+        means: ["위반"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "いはん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '会議室',
-    furigana: 'かいぎしつ',
-    meaning: 'meeting room'
-,
-    kanjiDetails: [
+    entry_id: "128d178fea3e4f1f86ca8daeddca9a4b",
+    origin_entry_id: "JK000000005534",
+    entry: "いらいら",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '会',
-        meanings: ['association', 'interview', 'join', 'meet', 'meeting', 'party'],
-        onReadings: ['エ', 'カイ'],
-        kunReadings: ['あ.う', 'あ.わせる', 'あつ.まる'],
-        strokeCount: 6,
-        jlpt: 4
+        part: "명사",
+        means: ["안달복달하는 모양"]
       },
       {
-        kanji: '議',
-        meanings: ['consideration', 'consultation', 'debate', 'deliberation'],
-        onReadings: ['ギ'],
-        strokeCount: 20,
-        jlpt: 3
+        part: "동사",
+        means: ["까칫까칫;따끔따끔"]
       },
       {
-        kanji: '室',
-        meanings: ['apartment', 'cellar', 'chamber', 'greenhouse', 'room'],
-        onReadings: ['シツ'],
-        kunReadings: ['むろ'],
-        strokeCount: 9,
-        jlpt: 4
+        part: "부사",
+        means: ["조바심;안달"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'とこや',
-    meaning: 'barber'
+    ],
+    category1: "jlpt",
+    category2: "いらいら",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '試合',
-    furigana: 'しあい',
-    meaning: 'match, game'
-,
-    kanjiDetails: [
+    entry_id: "fc089e7f0ae14f44b5348fee78204097",
+    origin_entry_id: "JK000000005631",
+    entry: "いりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '試',
-        meanings: ['attempt', 'experiment', 'ordeal', 'test', 'try'],
-        onReadings: ['シ'],
-        kunReadings: ['こころ.みる', 'ため.す'],
-        strokeCount: 13,
-        jlpt: 4
-      },
-      {
-        kanji: '合',
-        meanings: ['0.1', 'fit', 'join', 'suit'],
-        onReadings: ['カッ', 'ガッ', 'ゴウ'],
-        kunReadings: ['-あ.い', '-あ.う', '-あ.わせる', '-あい', 'あ.い', 'あ.う', 'あ.わす', 'あ.わせる', 'あい-'],
-        strokeCount: 6,
-        jlpt: 3
+        part: "명사",
+        means: ["의료"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "いりょう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '止む',
-    furigana: 'やむ',
-    meaning: 'to stop'
-,
-    kanjiDetails: [
+    entry_id: "cb7dca6482ad4693b75d0750f1bd70ba",
+    origin_entry_id: "JK000000005792",
+    entry: "いわ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '止',
-        meanings: ['halt', 'stop'],
-        onReadings: ['シ'],
-        kunReadings: ['-さ.し', '-さ.す', '-と.める', '-ど.まり', '-ど.め', '-や.む', 'と.まる', 'と.める', 'とど.まる', 'とど.め', 'とど.める', 'や.む', 'や.める', 'よ.す'],
-        strokeCount: 4,
-        jlpt: 4
+        part: "명사",
+        means: ["바위"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'のど',
-    meaning: 'throat'
+    ],
+    category1: "jlpt",
+    category2: "いわ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '戦争',
-    furigana: 'せんそう',
-    meaning: 'war'
-,
-    kanjiDetails: [
+    entry_id: "5193aaf51f3b47ff859836367e489482",
+    origin_entry_id: "JK000000006057",
+    entry: "いんしょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '戦',
-        meanings: ['battle', 'match', 'war'],
-        onReadings: ['セン'],
-        kunReadings: ['いくさ', 'おのの.く', 'そよ.ぐ', 'たたか.う', 'わなな.く'],
-        strokeCount: 13,
-        jlpt: 3
-      },
-      {
-        kanji: '争',
-        meanings: ['argue', 'contend', 'dispute'],
-        onReadings: ['ソウ'],
-        kunReadings: ['あらそ.う', 'いか.でか'],
-        strokeCount: 6,
-        jlpt: 3
+        part: "명사",
+        means: ["인상"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "いんしょう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '降り出す',
-    furigana: 'ふりだす',
-    meaning: 'to start to rain'
-,
-    kanjiDetails: [
+    entry_id: "2cd873bbb30d4d4c8565cbc4f13512ee",
+    origin_entry_id: "JK000000006508",
+    entry: "うがい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '降',
-        meanings: ['descend', 'fall', 'precipitate', 'surrender'],
-        onReadings: ['コウ', 'ゴ'],
-        kunReadings: ['お.りる', 'お.ろす', 'くだ.す', 'くだ.る', 'ふ.り', 'ふ.る'],
-        strokeCount: 10,
-        jlpt: 3
+        part: "명사",
+        means: ["양치질"]
       },
       {
-        kanji: '出',
-        meanings: ['come out', 'exit', 'go out', 'leave', 'protrude', 'put out'],
-        onReadings: ['シュツ', 'スイ'],
-        kunReadings: ['-だ.す', '-で', 'い.だす', 'い.でる', 'だ.す', 'で.る'],
-        strokeCount: 5,
-        jlpt: 5
+        part: "동사",
+        means: ["양치질"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'コンピュータ / コンピューター',
-    meaning: 'computer'
+    ],
+    category1: "jlpt",
+    category2: "うがい",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '盛ん',
-    furigana: 'さかん',
-    meaning: 'popularity, prosperous'
-,
-    kanjiDetails: [
+    entry_id: "52f6ce7288124fa29ea4db27000a7856",
+    origin_entry_id: "JK100006652004",
+    entry: "うけとりにん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '盛',
-        meanings: ['boom', 'copulate', 'prosper'],
-        onReadings: ['ジョウ', 'セイ'],
-        kunReadings: ['さか.る', 'さか.ん', 'も.る'],
-        strokeCount: 11,
-        jlpt: 1
+        part: "명사",
+        means: ["받는 사람;수취인"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "うけとりにん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '取り替える',
-    furigana: 'とりかえる',
-    meaning: 'to exchange'
-,
-    kanjiDetails: [
+    entry_id: "fa60b6c56e9e4f3fbfcc6a2c440bdbc1",
+    origin_entry_id: "JK000000006695",
+    entry: "うさぎ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '取',
-        meanings: ['fetch', 'take', 'take up'],
-        onReadings: ['シュ'],
-        kunReadings: ['-ど.り', 'と.り', 'と.り-', 'と.る', 'とり'],
-        strokeCount: 8,
-        jlpt: 3
-      },
-      {
-        kanji: '替',
-        meanings: ['exchange', 'per-', 'spare', 'substitute'],
-        onReadings: ['タイ'],
-        kunReadings: ['か.え-', 'か.える', 'か.わる'],
-        strokeCount: 12,
-        jlpt: 2
+        part: "명사",
+        means: ["토끼"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "うさぎ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '支度',
-    furigana: 'したく・する',
-    meaning: 'to prepare'
-,
-    kanjiDetails: [
-      {
-        kanji: '支',
-        meanings: ['branch', 'branch radical (no. 65)', 'support', 'sustain'],
-        onReadings: ['シ'],
-        kunReadings: ['か.う', 'ささ.える', 'つか.える'],
-        strokeCount: 4,
-        jlpt: 3
-      },
+    entry_id: "cd071aecfe7a455999186fd88d7dee8a",
+    origin_entry_id: "JK000000006702",
+    entry: "うし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '度',
-        meanings: ['attitude', 'consider', 'counter for occurrences', 'degrees', 'occurrence', 'time'],
-        onReadings: ['タク', 'ト', 'ド'],
-        kunReadings: ['-た.い', 'たび'],
-        strokeCount: 9,
-        jlpt: 4
+        part: "명사",
+        means: ["소"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "うし",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '社会',
-    furigana: 'しゃかい',
-    meaning: 'society, public'
-,
-    kanjiDetails: [
+    entry_id: "821d1b55e6bd4db498aab005902462e7",
+    origin_entry_id: "JK000000006901",
+    entry: "うせつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '社',
-        meanings: ['association', 'company', 'firm', 'office', 'shrine'],
-        onReadings: ['シャ'],
-        kunReadings: ['やしろ'],
-        strokeCount: 7,
-        jlpt: 4
+        part: "명사",
+        means: ["우회전"]
       },
       {
-        kanji: '会',
-        meanings: ['association', 'interview', 'join', 'meet', 'meeting', 'party'],
-        onReadings: ['エ', 'カイ'],
-        kunReadings: ['あ.う', 'あ.わせる', 'あつ.まる'],
-        strokeCount: 6,
-        jlpt: 4
+        part: "동사",
+        means: ["우회전"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "うせつ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '沸く',
-    furigana: 'わく',
-    meaning: 'to boil, to grow hot, to get excited'
-,
-    kanjiDetails: [
+    entry_id: "ccabb76511c84ee8b12a1b17e221043a",
+    origin_entry_id: "JK000000100304",
+    entry: "うそつ",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
       {
-        kanji: '沸',
-        meanings: ['boil', 'breed', 'ferment', 'seethe', 'uproar'],
-        onReadings: ['フツ'],
-        kunReadings: ['わ.かす', 'わ.く'],
-        strokeCount: 8,
-        jlpt: 2
+        part: "명사",
+        means: ["거짓말쟁이"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "うそつ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'ちっとも',
-    meaning: 'not at all (used with a negative verb)'
+    entry_id: "bc95ae932b724bb5bc76b1b23e614dfe",
+    origin_entry_id: "JK000000007420",
+    entry: "うま",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["말"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うま",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'おかげ',
-    meaning: 'owing to'
+    entry_id: "1f69c4daf8934e7282ebdec676bb50cf",
+    origin_entry_id: "JK000000007476",
+    entry: "うまれ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["탄생;출생"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うまれ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'ステーキ',
-    meaning: 'steak'
+    entry_id: "097c6fccff474d9480b1ba0c0bb33f87",
+    origin_entry_id: "JK000000007550",
+    entry: "うめ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["매화나무"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うめ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '消しゴム',
-    furigana: 'けしゴム',
-    meaning: 'eraser'
-,
-    kanjiDetails: [
+    entry_id: "51d0249d8e864034bce01ee0456fe558",
+    origin_entry_id: "JK000000007723",
+    entry: "うりあげ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '消',
-        meanings: ['blow out', 'cancel', 'extinguish', 'neutralize', 'turn off'],
-        onReadings: ['ショウ'],
-        kunReadings: ['き.える', 'け.す'],
-        strokeCount: 10,
-        jlpt: 3
+        part: "명사",
+        means: ["매상고;매상"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "うりあげ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '遠慮',
-    furigana: 'えんりょ・する',
-    meaning: 'to be reserved, to be restrained'
-,
-    kanjiDetails: [
-      {
-        kanji: '遠',
-        meanings: ['distant', 'far'],
-        onReadings: ['エン', 'オン'],
-        kunReadings: ['とお.い'],
-        strokeCount: 13,
-        jlpt: 3
-      },
+    entry_id: "61299c662bda4728b1cf540b6e640d2e",
+    origin_entry_id: "JK000000007740",
+    entry: "うりきれ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '慮',
-        meanings: ['concern', 'consider', 'deliberate', 'fear', 'prudence', 'thought'],
-        onReadings: ['リョ'],
-        kunReadings: ['おもんぱか.る', 'おもんぱく.る'],
-        strokeCount: 15,
-        jlpt: 1
+        part: "명사",
+        means: ["품절;매진"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "うりきれ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '工場',
-    furigana: 'こうじょう',
-    meaning: 'factory'
-,
-    kanjiDetails: [
+    entry_id: "4d7529c277fc46588f98575e56216d80",
+    origin_entry_id: "JK000000007908",
+    entry: "うわさ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '工',
-        meanings: ['construction', 'craft', 'katakana e radical (no. 48)'],
-        onReadings: ['ク', 'グ', 'コウ'],
-        strokeCount: 3,
-        jlpt: 4
+        part: "명사",
+        means: ["어떤 사람이나 일에 대한 말"]
       },
       {
-        kanji: '場',
-        meanings: ['location', 'place'],
-        onReadings: ['ジョウ', 'チョウ'],
-        kunReadings: ['ば'],
-        strokeCount: 12,
-        jlpt: 4
+        part: "동사",
+        means: ["세간의 평판;풍설"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "うわさ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '僕',
-    furigana: 'ぼく',
-    meaning: 'I (used by males)'
-,
-    kanjiDetails: [
+    entry_id: "d50920e861d94c4087a595aadf90592b",
+    origin_entry_id: "JK000000007982",
+    entry: "うんが",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '僕',
-        meanings: ['I (male)', 'manservant', 'me', 'servant'],
-        onReadings: ['ボク'],
-        kunReadings: ['しもべ'],
-        strokeCount: 14,
-        jlpt: 1
+        part: "명사",
+        means: ["운하"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "うんが",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '招待',
-    furigana: 'しょうたい・する',
-    meaning: 'to invite'
-,
-    kanjiDetails: [
+    entry_id: "874ecbb339a545ce83e1b92d9cdb6c17",
+    origin_entry_id: "JK000000008034",
+    entry: "うんちん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '招',
-        meanings: ['beckon', 'engage', 'invite', 'summon'],
-        onReadings: ['ショウ'],
-        kunReadings: ['まね.く'],
-        strokeCount: 8,
-        jlpt: 3
-      },
-      {
-        kanji: '待',
-        meanings: ['depend on', 'wait'],
-        onReadings: ['タイ'],
-        kunReadings: ['-ま.ち', 'ま.つ'],
-        strokeCount: 9,
-        jlpt: 4
+        part: "명사",
+        means: ["운임;삯"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "うんちん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '彼',
-    furigana: 'かれ',
-    meaning: 'he, boyfriend'
-,
-    kanjiDetails: [
+    entry_id: "c4088bf617d34e9c99d9b61cb8efde22",
+    origin_entry_id: "JK000000100160",
+    entry: "うんてんせき",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
       {
-        kanji: '彼',
-        meanings: ['he', 'that', 'the'],
-        onReadings: ['ヒ'],
-        kunReadings: ['か.の', 'かの', 'かれ'],
-        strokeCount: 8,
-        jlpt: 3
+        part: "명사",
+        means: ["운전석"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "うんてんせき",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '妻',
-    furigana: 'つま',
-    meaning: '(humble) wife'
-,
-    kanjiDetails: [
+    entry_id: "16992baa888549b3a22e6a7a1b6dd40e",
+    origin_entry_id: "JK000000100159",
+    entry: "うんてんめんきょしょう",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
       {
-        kanji: '妻',
-        meanings: ['spouse', 'wife'],
-        onReadings: ['サイ'],
-        kunReadings: ['つま'],
-        strokeCount: 8,
-        jlpt: 3
+        part: "명사",
+        means: ["운전면허증"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "うんてんめんきょしょう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '石',
-    furigana: 'いし',
-    meaning: 'stone'
-,
-    kanjiDetails: [
+    entry_id: "ababfcbf221f4cd8bcedbd8b84e347e1",
+    origin_entry_id: "JK000000008121",
+    entry: "えいえん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '石',
-        meanings: ['stone'],
-        onReadings: ['コク', 'シャク', 'セキ'],
-        kunReadings: ['いし'],
-        strokeCount: 5,
-        jlpt: 3
+        part: "명사",
+        means: ["영원"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "えいえん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '簡単',
-    furigana: 'かんたん',
-    meaning: 'simple'
-,
-    kanjiDetails: [
-      {
-        kanji: '簡',
-        meanings: ['brevity', 'simplicity'],
-        onReadings: ['カン', 'ケン'],
-        kunReadings: ['えら.ぶ', 'ふだ'],
-        strokeCount: 18,
-        jlpt: 2
-      },
+    entry_id: "fa788710249e43749773720c7986db5b",
+    origin_entry_id: "JK000000008161",
+    entry: "えいこく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '単',
-        meanings: ['merely', 'one', 'simple', 'single'],
-        onReadings: ['タン'],
-        kunReadings: ['ひとえ'],
-        strokeCount: 9,
-        jlpt: 3
+        part: "명사",
+        means: ["영국"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "えいこく",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '残念',
-    furigana: 'ざんねん',
-    meaning: 'disappointment'
-,
-    kanjiDetails: [
+    entry_id: "1a79618f245a4ed68390bad5006e69b5",
+    origin_entry_id: "JK000000008261",
+    entry: "えいぶん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '残',
-        meanings: ['balance', 'leftover', 'remainder'],
-        onReadings: ['サン', 'ザン'],
-        kunReadings: ['そこな.う', 'のこ.す', 'のこ.り', 'のこ.る'],
-        strokeCount: 10,
-        jlpt: 3
-      },
-      {
-        kanji: '念',
-        meanings: ['attention', 'desire', 'feeling', 'idea', 'sense', 'thought', 'wish'],
-        onReadings: ['ネン'],
-        strokeCount: 8,
-        jlpt: 3
+        part: "명사",
+        means: ["영문"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "えいぶん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '血',
-    furigana: 'ち',
-    meaning: 'blood'
-,
-    kanjiDetails: [
+    entry_id: "d07d120d572f44e9822431f0ec193654",
+    origin_entry_id: "JK000000008280",
+    entry: "えいよう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '血',
-        meanings: ['blood'],
-        onReadings: ['ケツ'],
-        kunReadings: ['ち'],
-        strokeCount: 6,
-        jlpt: 2
+        part: "명사",
+        means: ["영양"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ピアノ',
-    meaning: 'piano'
+    ],
+    category1: "jlpt",
+    category2: "えいよう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'おかしい',
-    meaning: 'strange or funny'
+    entry_id: "b2665b932aa948529fc21410427ffd70",
+    origin_entry_id: "JK000000008355",
+    entry: "えがお",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["웃는 얼굴;웃음 띤 얼굴"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "えがお",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '家内',
-    furigana: 'かない',
-    meaning: 'housewife'
-,
-    kanjiDetails: [
-      {
-        kanji: '家',
-        meanings: ['expert', 'family', 'home', 'house', 'performer', 'professional'],
-        onReadings: ['カ', 'ケ'],
-        kunReadings: ['いえ', 'うち', 'や'],
-        strokeCount: 10,
-        jlpt: 4
-      },
+    entry_id: "637431842bbb4448969e479de3c0f5cf",
+    origin_entry_id: "JK000000009067",
+    entry: "えんかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '内',
-        meanings: ['among', 'between', 'home', 'house', 'inside', 'within'],
-        onReadings: ['ダイ', 'ナイ'],
-        kunReadings: ['うち'],
-        strokeCount: 4,
-        jlpt: 3
+        part: "명사",
+        means: ["연회"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "えんかい",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '試験',
-    furigana: 'しけん',
-    meaning: 'examination'
-,
-    kanjiDetails: [
+    entry_id: "91c7d174194144c5ba7cba965cba8205",
+    origin_entry_id: "JK000000009123",
+    entry: "えんげき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '試',
-        meanings: ['attempt', 'experiment', 'ordeal', 'test', 'try'],
-        onReadings: ['シ'],
-        kunReadings: ['こころ.みる', 'ため.す'],
-        strokeCount: 13,
-        jlpt: 4
-      },
-      {
-        kanji: '験',
-        meanings: ['effect', 'testing', 'verification'],
-        onReadings: ['ケン', 'ゲン'],
-        kunReadings: ['あかし', 'しるし', 'ため.す', 'ためし'],
-        strokeCount: 18,
-        jlpt: 4
+        part: "명사",
+        means: ["연극"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "えんげき",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '布団',
-    furigana: 'ふとん',
-    meaning: 'Japanese bedding, futon'
-,
-    kanjiDetails: [
+    entry_id: "dd4a14660259457997b390a95fab4d13",
+    origin_entry_id: "JK000000009266",
+    entry: "えんそう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '布',
-        meanings: ['cloth', 'distribute', 'linen', 'spread'],
-        onReadings: ['フ', 'ホ'],
-        kunReadings: ['きれ', 'し.く', 'ぬの'],
-        strokeCount: 5,
-        jlpt: 2
+        part: "명사",
+        means: ["연주"]
       },
       {
-        kanji: '団',
-        meanings: ['association', 'group'],
-        onReadings: ['ダン', 'トン'],
-        kunReadings: ['かたまり', 'まる.い'],
-        strokeCount: 6,
-        jlpt: 2
-      }
-    ]
+        part: "동사",
+        means: ["연주"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "えんそう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '枝',
-    furigana: 'えだ',
-    meaning: 'branch, twig'
-,
-    kanjiDetails: [
+    entry_id: "73e52491a66a43e59cb54f79911393cd",
+    origin_entry_id: "JK000000009272",
+    entry: "えんそく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '枝',
-        meanings: ['bough', 'branch', 'counter for branches', 'limb', 'twig'],
-        onReadings: ['シ'],
-        kunReadings: ['えだ'],
-        strokeCount: 8,
-        jlpt: 2
-      }
-    ]
+        part: "명사",
+        means: ["소풍"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "えんそく",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '二階建て',
-    furigana: 'にかいだて',
-    meaning: 'two storied'
-,
-    kanjiDetails: [
+    entry_id: "083107331feb48d7a75f7b39ed1f1024",
+    origin_entry_id: "JK000000009661",
+    entry: "おうさま",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '二',
-        meanings: ['two', 'two radical (no. 7)'],
-        onReadings: ['ジ', 'ニ'],
-        kunReadings: ['ふた', 'ふた.つ', 'ふたたび'],
-        strokeCount: 2,
-        jlpt: 5
-      },
-      {
-        kanji: '階',
-        meanings: ['counter for storeys of a building', 'stair', 'storey'],
-        onReadings: ['カイ'],
-        kunReadings: ['きざはし'],
-        strokeCount: 12,
-        jlpt: 2
-      },
-      {
-        kanji: '建',
-        meanings: ['build'],
-        onReadings: ['ケン', 'コン'],
-        kunReadings: ['-だ.て', 'た.つ', 'た.て', 'た.てる'],
-        strokeCount: 9,
-        jlpt: 4
+        part: "명사",
+        means: ["임금님;왕"]
       }
-    ]
-  },
+    ],
+    category1: "jlpt",
+    category2: "おうさま",
+    category3: null
+  },
   {
-    level: 'N3',
-    word: '大学生',
-    furigana: 'だいがくせい',
-    meaning: 'university student'
-,
-    kanjiDetails: [
-      {
-        kanji: '大',
-        meanings: ['big', 'large'],
-        onReadings: ['タイ', 'ダイ'],
-        kunReadings: ['-おお.いに', 'おお-', 'おお.きい'],
-        strokeCount: 3,
-        jlpt: 5
-      },
+    entry_id: "13518b61f9184096b14d27362ae09dca",
+    origin_entry_id: "JK000000009671",
+    entry: "おうじ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '学',
-        meanings: ['learning', 'science', 'study'],
-        onReadings: ['ガク'],
-        kunReadings: ['まな.ぶ'],
-        strokeCount: 8,
-        jlpt: 5
-      },
-      {
-        kanji: '生',
-        meanings: ['birth', 'genuine', 'life'],
-        onReadings: ['ショウ', 'セイ'],
-        kunReadings: ['-う', 'い.かす', 'い.きる', 'い.ける', 'う.まれ', 'う.まれる', 'う.む', 'うま.れる', 'うまれ', 'お.う', 'き', 'な.す', 'な.る', 'なま', 'なま-', 'は.える', 'は.やす', 'む.す'],
-        strokeCount: 5,
-        jlpt: 5
+        part: "명사",
+        means: ["왕자"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おうじ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '楽む',
-    furigana: 'たのしむ',
-    meaning: 'to enjoy oneself'
-,
-    kanjiDetails: [
+    entry_id: "aac234f8f1a04241ba5079691d3f0929",
+    origin_entry_id: "JK100009719001",
+    entry: "おうせつま",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '楽',
-        meanings: ['comfort', 'ease', 'music'],
-        onReadings: ['ガク', 'ゴウ', 'ラク'],
-        kunReadings: ['この.む', 'たの.しい', 'たの.しむ'],
-        strokeCount: 13,
-        jlpt: 4
+        part: "명사",
+        means: ["응접실"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おうせつま",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '遠く',
-    furigana: 'とおく',
-    meaning: 'distant'
-,
-    kanjiDetails: [
+    entry_id: "cd973edd45cc4cc7a73c19c1c5b9a3e7",
+    origin_entry_id: "JK000000009739",
+    entry: "おうだん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["횡단"]
+      },
       {
-        kanji: '遠',
-        meanings: ['distant', 'far'],
-        onReadings: ['エン', 'オン'],
-        kunReadings: ['とお.い'],
-        strokeCount: 13,
-        jlpt: 3
+        part: "동사",
+        means: ["횡단"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おうだん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '今夜',
-    furigana: 'こんや',
-    meaning: 'tonight'
-,
-    kanjiDetails: [
+    entry_id: "a509946613ac4da596f092308fcf9331",
+    origin_entry_id: "JK000000009787",
+    entry: "おうふく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '今',
-        meanings: ['now'],
-        onReadings: ['キン', 'コン'],
-        kunReadings: ['いま'],
-        strokeCount: 4,
-        jlpt: 5
+        part: "명사",
+        means: ["왕복"]
       },
       {
-        kanji: '夜',
-        meanings: ['evening', 'night'],
-        onReadings: ['ヤ'],
-        kunReadings: ['よ', 'よる'],
-        strokeCount: 8,
-        jlpt: 4
+        part: "동사",
+        means: ["왕래"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '決める',
-    furigana: 'きめる',
-    meaning: 'to decide'
-,
-    kanjiDetails: [
-      {
-        kanji: '決',
-        meanings: ['agree upon', 'appoint', 'decide', 'fix'],
-        onReadings: ['ケツ'],
-        kunReadings: ['-ぎ.め', 'き.まる', 'き.める', 'さ.く'],
-        strokeCount: 7,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'なるべく',
-    meaning: 'as much as possible'
-  },
-  {
-    level: 'N3',
-    word: '引き出す',
-    furigana: 'ひきだす',
-    meaning: 'to withdraw'
-,
-    kanjiDetails: [
-      {
-        kanji: '引',
-        meanings: ['admit', 'install', 'jerk', 'pull', 'quote', 'refer to', 'tug'],
-        onReadings: ['イン'],
-        kunReadings: ['ひ.く', 'ひ.ける'],
-        strokeCount: 4,
-        jlpt: 3
-      },
-      {
-        kanji: '出',
-        meanings: ['come out', 'exit', 'go out', 'leave', 'protrude', 'put out'],
-        onReadings: ['シュツ', 'スイ'],
-        kunReadings: ['-だ.す', '-で', 'い.だす', 'い.でる', 'だ.す', 'で.る'],
-        strokeCount: 5,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '明日',
-    furigana: 'あす',
-    meaning: 'tomorrow'
-,
-    kanjiDetails: [
-      {
-        kanji: '明',
-        meanings: ['bright', 'light'],
-        onReadings: ['ミョウ', 'ミン', 'メイ'],
-        kunReadings: ['-あ.け', 'あ.かす', 'あ.かり', 'あ.く', 'あ.くる', 'あ.ける', 'あか.らむ', 'あか.るい', 'あか.るむ', 'あき.らか'],
-        strokeCount: 8,
-        jlpt: 4
-      },
-      {
-        kanji: '日',
-        meanings: ['Japan', 'counter for days', 'day', 'sun'],
-        onReadings: ['ジツ', 'ニチ'],
-        kunReadings: ['-か', '-び', 'ひ'],
-        strokeCount: 4,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '割れる',
-    furigana: 'われる',
-    meaning: 'to break'
-,
-    kanjiDetails: [
-      {
-        kanji: '割',
-        meanings: ['comparatively', 'cut', 'divide', 'proportion', 'separate', 'split'],
-        onReadings: ['カツ'],
-        kunReadings: ['さ.く', 'わ.り', 'わ.る', 'わ.れる', 'わり'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '田舎',
-    furigana: 'いなか',
-    meaning: 'countryside'
-,
-    kanjiDetails: [
-      {
-        kanji: '田',
-        meanings: ['rice field', 'rice paddy'],
-        onReadings: ['デン'],
-        kunReadings: ['た'],
-        strokeCount: 5,
-        jlpt: 4
-      },
-      {
-        kanji: '舎',
-        meanings: ['cottage', 'house', 'hut', 'inn', 'mansion'],
-        onReadings: ['シャ', 'セキ'],
-        kunReadings: ['やど.る'],
-        strokeCount: 8,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '寺',
-    furigana: 'てら',
-    meaning: 'temple'
-,
-    kanjiDetails: [
-      {
-        kanji: '寺',
-        meanings: ['Buddhist temple'],
-        onReadings: ['ジ'],
-        kunReadings: ['てら'],
-        strokeCount: 6,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '釣る',
-    furigana: 'つる',
-    meaning: 'to fish'
-,
-    kanjiDetails: [
-      {
-        kanji: '釣',
-        meanings: ['allure', 'angling', 'catch', 'ensnare', 'fish'],
-        onReadings: ['チョウ'],
-        kunReadings: ['つ.り', 'つ.り-', 'つ.る'],
-        strokeCount: 11,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '建てる',
-    furigana: 'たてる',
-    meaning: 'to build'
-,
-    kanjiDetails: [
-      {
-        kanji: '建',
-        meanings: ['build'],
-        onReadings: ['ケン', 'コン'],
-        kunReadings: ['-だ.て', 'た.つ', 'た.て', 'た.てる'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '久しぶり',
-    furigana: 'ひさしぶり',
-    meaning: 'after a long time'
-,
-    kanjiDetails: [
-      {
-        kanji: '久',
-        meanings: ['long time', 'old story'],
-        onReadings: ['キュウ', 'ク'],
-        kunReadings: ['ひさ.しい'],
-        strokeCount: 3,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '男性',
-    furigana: 'だんせい',
-    meaning: 'male'
-,
-    kanjiDetails: [
-      {
-        kanji: '男',
-        meanings: ['male'],
-        onReadings: ['ダン', 'ナン'],
-        kunReadings: ['お', 'おとこ'],
-        strokeCount: 7,
-        jlpt: 5
-      },
-      {
-        kanji: '性',
-        meanings: ['gender', 'nature', 'sex'],
-        onReadings: ['ショウ', 'セイ'],
-        kunReadings: ['さが'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '割合',
-    furigana: 'わりあい',
-    meaning: 'rate, ratio, percentage'
-,
-    kanjiDetails: [
-      {
-        kanji: '割',
-        meanings: ['comparatively', 'cut', 'divide', 'proportion', 'separate', 'split'],
-        onReadings: ['カツ'],
-        kunReadings: ['さ.く', 'わ.り', 'わ.る', 'わ.れる', 'わり'],
-        strokeCount: 12,
-        jlpt: 3
-      },
-      {
-        kanji: '合',
-        meanings: ['0.1', 'fit', 'join', 'suit'],
-        onReadings: ['カッ', 'ガッ', 'ゴウ'],
-        kunReadings: ['-あ.い', '-あ.う', '-あ.わせる', '-あい', 'あ.い', 'あ.う', 'あ.わす', 'あ.わせる', 'あい-'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '相談',
-    furigana: 'そうだん・する',
-    meaning: 'to discuss'
-,
-    kanjiDetails: [
-      {
-        kanji: '相',
-        meanings: ['aspect', 'councillor', 'each other', 'inter-', 'minister of state', 'mutual', 'phase', 'physiognomy', 'together'],
-        onReadings: ['ショウ', 'ソウ'],
-        kunReadings: ['あい-'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '談',
-        meanings: ['discuss', 'talk'],
-        onReadings: ['ダン'],
-        strokeCount: 15,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '足す',
-    furigana: 'たす',
-    meaning: 'to add a number'
-,
-    kanjiDetails: [
-      {
-        kanji: '足',
-        meanings: ['be sufficient', 'counter for pairs of footwear', 'foot', 'leg'],
-        onReadings: ['ソク'],
-        kunReadings: ['あし', 'た.す', 'た.りる', 'た.る'],
-        strokeCount: 7,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '社長',
-    furigana: 'しゃちょう',
-    meaning: 'company president'
-,
-    kanjiDetails: [
-      {
-        kanji: '社',
-        meanings: ['association', 'company', 'firm', 'office', 'shrine'],
-        onReadings: ['シャ'],
-        kunReadings: ['やしろ'],
-        strokeCount: 7,
-        jlpt: 4
-      },
-      {
-        kanji: '長',
-        meanings: ['leader', 'long', 'senior', 'superior'],
-        onReadings: ['チョウ'],
-        kunReadings: ['おさ', 'なが.い'],
-        strokeCount: 8,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '経験',
-    furigana: 'けいけん・する',
-    meaning: 'to experience'
-,
-    kanjiDetails: [
-      {
-        kanji: '経',
-        meanings: ['expire', 'longitude', 'pass thru', 'sutra', 'warp'],
-        onReadings: ['キョウ', 'キン', 'ケイ'],
-        kunReadings: ['た.つ', 'たていと', 'のり', 'はか.る', 'へ.る'],
-        strokeCount: 11,
-        jlpt: 3
-      },
-      {
-        kanji: '験',
-        meanings: ['effect', 'testing', 'verification'],
-        onReadings: ['ケン', 'ゲン'],
-        kunReadings: ['あかし', 'しるし', 'ため.す', 'ためし'],
-        strokeCount: 18,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '訳',
-    furigana: 'わけ',
-    meaning: 'meaning, reason'
-,
-    kanjiDetails: [
-      {
-        kanji: '訳',
-        meanings: ['case', 'circumstance', 'reason', 'translate'],
-        onReadings: ['ヤク'],
-        kunReadings: ['わけ'],
-        strokeCount: 11,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '足りる',
-    furigana: 'たりる',
-    meaning: 'to be enough'
-,
-    kanjiDetails: [
-      {
-        kanji: '足',
-        meanings: ['be sufficient', 'counter for pairs of footwear', 'foot', 'leg'],
-        onReadings: ['ソク'],
-        kunReadings: ['あし', 'た.す', 'た.りる', 'た.る'],
-        strokeCount: 7,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '味噌',
-    furigana: 'みそ',
-    meaning: 'bean paste'
-,
-    kanjiDetails: [
-      {
-        kanji: '味',
-        meanings: ['flavor', 'taste'],
-        onReadings: ['ミ'],
-        kunReadings: ['あじ', 'あじ.わう'],
-        strokeCount: 8,
-        jlpt: 4
-      },
-      {
-        kanji: '噌',
-        meanings: ['boisterous'],
-        onReadings: ['ショウ', 'ソ', 'ソウ'],
-        kunReadings: ['かまびす.しい'],
-        strokeCount: 14,
-        jlpt: null
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'もらう',
-    meaning: 'to receive'
+    ],
+    category1: "jlpt",
+    category2: "おうふく",
+    category3: null
   },
-  {
-    level: 'N3',
-    word: 'どんどん',
-    meaning: 'more and more'
-  },
   {
-    level: 'N3',
-    word: '工業',
-    furigana: 'こうぎょう',
-    meaning: 'the manufacturing industry'
-,
-    kanjiDetails: [
+    entry_id: "c38327c794de45fbaac0074da415191b",
+    origin_entry_id: "JK000000009795",
+    entry: "おうぼ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '工',
-        meanings: ['construction', 'craft', 'katakana e radical (no. 48)'],
-        onReadings: ['ク', 'グ', 'コウ'],
-        strokeCount: 3,
-        jlpt: 4
+        part: "명사",
+        means: ["응모"]
       },
       {
-        kanji: '業',
-        meanings: ['arts', 'business', 'performance', 'vocation'],
-        onReadings: ['ギョウ', 'ゴウ'],
-        kunReadings: ['わざ'],
-        strokeCount: 13,
-        jlpt: 4
+        part: "동사",
+        means: ["응모"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おうぼ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '終わり',
-    furigana: 'おわり',
-    meaning: 'the end'
-,
-    kanjiDetails: [
+    entry_id: "c7098d8668c348578777c7938582a5b9",
+    origin_entry_id: "JK000000010053",
+    entry: "おおどおり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '終',
-        meanings: ['end', 'finish'],
-        onReadings: ['シュウ'],
-        kunReadings: ['-お.わる', 'お.える', 'お.わる', 'おわ.る', 'つい', 'つい.に'],
-        strokeCount: 11,
-        jlpt: 4
+        part: "명사",
+        means: ["넓은 길;큰 거리"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おおどおり",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'いじめる',
-    meaning: 'to tease'
+    entry_id: "87576c67cf2748b585f9d34bc60b080a",
+    origin_entry_id: "JK000000010159",
+    entry: "おおや",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["셋집 주인"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おおや",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '立てる',
-    furigana: 'たてる',
-    meaning: 'to stand something up'
-,
-    kanjiDetails: [
+    entry_id: "c524e30044864efc9520d22867d35cec",
+    origin_entry_id: "JK000000010351",
+    entry: "おく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '立',
-        meanings: ['erect', 'rise', 'set up', 'stand up'],
-        onReadings: ['リットル', 'リツ', 'リュウ'],
-        kunReadings: ['-た.つ', '-た.て', '-た.てる', '-だ.て', '-だ.てる', 'た.ち-', 'た.つ', 'た.て-', 'た.てる', 'たて-'],
-        strokeCount: 5,
-        jlpt: 4
+        part: "명사",
+        means: ["깊숙한 곳"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おく",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '歴史',
-    furigana: 'れきし',
-    meaning: 'history'
-,
-    kanjiDetails: [
-      {
-        kanji: '歴',
-        meanings: ['continuation', 'curriculum', 'passage of time'],
-        onReadings: ['レキ', 'レッキ'],
-        strokeCount: 14,
-        jlpt: 2
-      },
+    entry_id: "72b0899b3e644be6953e3a5ec073a79c",
+    origin_entry_id: "JK000000010360",
+    entry: "おくがい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '史',
-        meanings: ['chronicle', 'history'],
-        onReadings: ['シ'],
-        strokeCount: 5,
-        jlpt: 2
+        part: "명사",
+        means: ["옥외;집의 바깥"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おくがい",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'おいでになる',
-    meaning: '(respectful) to be'
+    entry_id: "63d078800ed745fc9f662862b7aeed9f",
+    origin_entry_id: "JK000000010393",
+    entry: "おくない",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["옥내;집의 안;실내"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おくない",
+    category3: null
   },
-  {
-    level: 'N3',
-    word: 'うち',
-    meaning: 'within'
-  },
   {
-    level: 'N3',
-    word: 'それで',
-    meaning: 'because of that'
+    entry_id: "8fd74d70dfe346c4bae17ed7f2aee3b7",
+    origin_entry_id: "JK000000010728",
+    entry: "おしゃれ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["멋을 냄;또, 멋쟁이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おしゃれ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'ワープロ',
-    meaning: 'word processor'
+    entry_id: "dd13778620244962a13b9347ee878e69",
+    origin_entry_id: "JK000000100273",
+    entry: "おしり",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["엉덩이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おしり",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '漫画',
-    furigana: 'まんが',
-    meaning: 'comic'
-,
-    kanjiDetails: [
+    entry_id: "32406a89de82464a83a8a682edc41bed",
+    origin_entry_id: "JK000000100286",
+    entry: "おすすめ",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
       {
-        kanji: '漫',
-        meanings: ['cartoon', 'corrupt', 'in spite of oneself', 'involuntarily', 'unrestrained'],
-        onReadings: ['マン'],
-        kunReadings: ['そぞ.ろ', 'みだり.に'],
-        strokeCount: 14,
-        jlpt: 1
-      },
-      {
-        kanji: '画',
-        meanings: ['brush-stroke', 'picture'],
-        onReadings: ['エ', 'カイ', 'カク', 'ガ'],
-        kunReadings: ['えが.く', 'かぎ.る', 'かく.する', 'はか.る', 'はかりごと'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
+        part: "명사",
+        means: ["추천"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おすすめ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '親',
-    furigana: 'おや',
-    meaning: 'parents'
-,
-    kanjiDetails: [
+    entry_id: "81d2e6ed6dc142b8b92cd1d294358282",
+    origin_entry_id: "JK000000100288",
+    entry: "おたがい",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
       {
-        kanji: '親',
-        meanings: ['dealer (cards)', 'familiarity', 'intimacy', 'parent', 'relative'],
-        onReadings: ['シン'],
-        kunReadings: ['おや', 'おや-', 'した.しい', 'した.しむ'],
-        strokeCount: 16,
-        jlpt: 4
+        part: "명사",
+        means: ["서로, 상호간"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おたがい",
+    category3: null
   },
-  {
-    level: 'N3',
-    word: '安全',
-    furigana: 'あんぜん',
-    meaning: 'safety'
-,
-    kanjiDetails: [
-      {
-        kanji: '安',
-        meanings: ['cheap', 'contented', 'low', 'peaceful', 'quiet', 'relax', 'rested'],
-        onReadings: ['アン'],
-        kunReadings: ['やす', 'やす.い', 'やす.まる', 'やす.らか'],
-        strokeCount: 6,
-        jlpt: 4
-      },
-      {
-        kanji: '全',
-        meanings: ['all', 'complete', 'entire', 'fulfill', 'whole'],
-        onReadings: ['ゼン'],
-        kunReadings: ['すべ.て', 'まった.く'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '案内',
-    furigana: 'あんない・する',
-    meaning: 'to guide'
-,
-    kanjiDetails: [
-      {
-        kanji: '案',
-        meanings: ['bench', 'draft', 'expectation', 'fear', 'idea', 'plan', 'ponder', 'proposition', 'suggestion', 'table', 'worry'],
-        onReadings: ['アン'],
-        kunReadings: ['つくえ'],
-        strokeCount: 10,
-        jlpt: 1
-      },
-      {
-        kanji: '内',
-        meanings: ['among', 'between', 'home', 'house', 'inside', 'within'],
-        onReadings: ['ダイ', 'ナイ'],
-        kunReadings: ['うち'],
-        strokeCount: 4,
-        jlpt: 3
-      }
-    ]
-  },
   {
-    level: 'N3',
-    word: '棚',
-    furigana: 'たな',
-    meaning: 'shelves'
-,
-    kanjiDetails: [
-      {
-        kanji: '棚',
-        meanings: ['ledge', 'mantle', 'mount', 'rack', 'shelf', 'trellis'],
-        onReadings: ['ホウ'],
-        kunReadings: ['-だな', 'たな'],
-        strokeCount: 12,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '不便',
-    furigana: 'ふべん',
-    meaning: 'inconvenience'
-,
-    kanjiDetails: [
-      {
-        kanji: '不',
-        meanings: ['bad', 'clumsy', 'negative', 'non-', 'ugly'],
-        onReadings: ['フ', 'ブ'],
-        strokeCount: 4,
-        jlpt: 4
-      },
-      {
-        kanji: '便',
-        meanings: ['chance', 'convenience', 'excrement', 'facility', 'feces', 'letter'],
-        onReadings: ['ビン', 'ベン'],
-        kunReadings: ['たよ.り'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '間',
-    furigana: 'あいだ',
-    meaning: 'a space'
-,
-    kanjiDetails: [
-      {
-        kanji: '間',
-        meanings: ['interval', 'space'],
-        onReadings: ['カン', 'ケン'],
-        kunReadings: ['あい', 'あいだ', 'ま'],
-        strokeCount: 12,
-        jlpt: 5
-      }
-    ]
+    entry_id: "2fc97765846b4738842454f5d20393aa",
+    origin_entry_id: "JK000000100276",
+    entry: "おちゃわん",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["밥공기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おちゃわん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '恥ずかしい',
-    furigana: 'はずかしい',
-    meaning: 'embarrassed'
-,
-    kanjiDetails: [
+    entry_id: "5cc2a445053448518d4ab03b01719789",
+    origin_entry_id: "JK000000100272",
+    entry: "おみあい",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
       {
-        kanji: '恥',
-        meanings: ['dishonor', 'shame'],
-        onReadings: ['チ'],
-        kunReadings: ['は.じらう', 'は.じる', 'は.ずかしい', 'はじ'],
-        strokeCount: 10,
-        jlpt: 3
+        part: "명사",
+        means: ["맞선"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '打つ',
-    furigana: 'うつ',
-    meaning: 'to hit'
-,
-    kanjiDetails: [
-      {
-        kanji: '打',
-        meanings: ['dozen', 'hit', 'knock', 'pound', 'strike'],
-        onReadings: ['ダ', 'ダース'],
-        kunReadings: ['う.ち-', 'う.つ', 'ぶ.つ'],
-        strokeCount: 5,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '倒れる',
-    furigana: 'たおれる',
-    meaning: 'to break down'
-,
-    kanjiDetails: [
+    ],
+    category1: "jlpt",
+    category2: "おみあい",
+    category3: null
+  },
+  {
+    entry_id: "6eb9467a443c4339ac8164d093508a0e",
+    origin_entry_id: "JK000000011567",
+    entry: "おみやげ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '倒',
-        meanings: ['break down', 'collapse', 'drop', 'fall', 'overthrow'],
-        onReadings: ['トウ'],
-        kunReadings: ['-だお.れ', 'さかさ', 'さかさま', 'さかしま', 'たお.す', 'たお.れる'],
-        strokeCount: 10,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '光',
-    furigana: 'ひかり',
-    meaning: 'light'
-,
-    kanjiDetails: [
-      {
-        kanji: '光',
-        meanings: ['light', 'ray'],
-        onReadings: ['コウ'],
-        kunReadings: ['ひか.る', 'ひかり'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '交通',
-    furigana: 'こうつう',
-    meaning: 'traffic, transportation'
-,
-    kanjiDetails: [
-      {
-        kanji: '交',
-        meanings: ['association', 'coming & going', 'mingle', 'mixing'],
-        onReadings: ['コウ'],
-        kunReadings: ['-か.う', 'か.わす', 'かわ.す', 'こもごも', 'ま.ざる', 'ま.じる', 'ま.ぜる', 'まじ.える', 'まじ.る', 'まじ.わる'],
-        strokeCount: 6,
-        jlpt: 3
-      },
-      {
-        kanji: '通',
-        meanings: ['avenue', 'commute', 'counter for letters, notes, documents, etc.', 'pass through', 'traffic'],
-        onReadings: ['ツ', 'ツウ'],
-        kunReadings: ['-とお.り', '-どお.し', '-どお.り', 'かよ.う', 'とお.し', 'とお.す', 'とお.り', 'とお.る'],
-        strokeCount: 10,
-        jlpt: 4
+        part: "명사",
+        means: ["선물"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おみやげ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'やはり / やっぱり',
-    meaning: 'as I thought, absolutely'
+    entry_id: "dc623d24ee034e74b6001e4abc231ae3",
+    origin_entry_id: "JK000000011652",
+    entry: "おもいで",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["추억;추상"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おもいで",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'スクリーン',
-    meaning: 'screen'
-  },
-  {
-    level: 'N3',
-    word: '細かい',
-    furigana: 'こまかい',
-    meaning: 'small, fine'
-,
-    kanjiDetails: [
+    entry_id: "cd57320082fd4f2ba6d58c368000046b",
+    origin_entry_id: "JK000000011848",
+    entry: "おやゆび",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '細',
-        meanings: ['dainty', 'detailed', 'get thin', 'narrow', 'precise', 'slender', 'taper'],
-        onReadings: ['サイ'],
-        kunReadings: ['こま.か', 'こま.かい', 'ほそ.い', 'ほそ.る'],
-        strokeCount: 11,
-        jlpt: 2
+        part: "명사",
+        means: ["엄지가락;엄지 손가락"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '夫',
-    furigana: 'おっと',
-    meaning: 'husband'
-,
-    kanjiDetails: [
-      {
-        kanji: '夫',
-        meanings: ['husband', 'man'],
-        onReadings: ['フ', 'フウ', 'ブ'],
-        kunReadings: ['おっと', 'それ'],
-        strokeCount: 4,
-        jlpt: 3
-      }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おやゆび",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '差し上げる',
-    furigana: 'さしあげる',
-    meaning: '(polite) to give'
-,
-    kanjiDetails: [
-      {
-        kanji: '差',
-        meanings: ['balance', 'difference', 'discrepancy', 'distinction', 'margin', 'variation'],
-        onReadings: ['サ'],
-        kunReadings: ['さ.し', 'さ.す'],
-        strokeCount: 10,
-        jlpt: 3
+    entry_id: "9be9144920ff44a4996890a2d79e5b61",
+    origin_entry_id: "JK000000011855",
+    entry: "およそ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["대강;대충"]
       },
       {
-        kanji: '上',
-        meanings: ['above', 'up'],
-        onReadings: ['シャン', 'ショウ', 'ジョウ'],
-        kunReadings: ['-あ.がり', '-あ.がる', '-あ.げる', '-うえ', 'あ.がり', 'あ.がる', 'あ.げる', 'うえ', 'うわ-', 'かみ', 'たてまつ.る', 'のぼ.す', 'のぼ.せる', 'のぼ.り', 'のぼ.る'],
-        strokeCount: 3,
-        jlpt: 5
+        part: "부사",
+        means: ["무릇;일반적으로"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "およそ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '壊す',
-    furigana: 'こわす',
-    meaning: 'to break'
-,
-    kanjiDetails: [
+    entry_id: "de026110608e4294bf80a01d00585e90",
+    origin_entry_id: "JK000000011984",
+    entry: "おれい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '壊',
-        meanings: ['break', 'demolition', 'destroy'],
-        onReadings: ['エ', 'カイ'],
-        kunReadings: ['こわ.す', 'こわ.れる', 'やぶ.る'],
-        strokeCount: 16,
-        jlpt: 1
+        part: "명사",
+        means: ["사례;사례의 선물"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'そんな',
-    meaning: 'that sort of'
+    ],
+    category1: "jlpt",
+    category2: "おれい",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'レジ',
-    meaning: 'register'
-  },
-  {
-    level: 'N3',
-    word: '戻る',
-    furigana: 'もどる',
-    meaning: 'to turn back'
-,
-    kanjiDetails: [
+    entry_id: "28e4fb26868d42a5800fea955b1dce47",
+    origin_entry_id: "JK100012064001",
+    entry: "おんがくか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '戻',
-        meanings: ['go backwards', 're-', 'restore', 'resume', 'return', 'revert'],
-        onReadings: ['レイ'],
-        kunReadings: ['もど.す', 'もど.る'],
-        strokeCount: 7,
-        jlpt: 3
+        part: "명사",
+        means: ["음악가"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おんがくか",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '国際',
-    furigana: 'こくさい',
-    meaning: 'international'
-,
-    kanjiDetails: [
-      {
-        kanji: '国',
-        meanings: ['country'],
-        onReadings: ['コク'],
-        kunReadings: ['くに'],
-        strokeCount: 8,
-        jlpt: 5
-      },
+    entry_id: "7cbd50af71c84d97abcc4786f44c2488",
+    origin_entry_id: "JK000000012103",
+    entry: "おんしつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '際',
-        meanings: ['adventurous', 'dangerous', 'edge', 'indecent', 'occasion', 'side', 'time', 'verge', 'when'],
-        onReadings: ['サイ'],
-        kunReadings: ['-ぎわ', 'きわ'],
-        strokeCount: 14,
-        jlpt: 3
+        part: "명사",
+        means: ["온실"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おんしつ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '音',
-    furigana: 'おと',
-    meaning: 'sound, note'
-,
-    kanjiDetails: [
+    entry_id: "b07515000f694236b2d3e2a72e07648e",
+    origin_entry_id: "JK000000012131",
+    entry: "おんせん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '音',
-        meanings: ['noise', 'sound'],
-        onReadings: ['-ノン', 'イン', 'オン'],
-        kunReadings: ['おと', 'ね'],
-        strokeCount: 9,
-        jlpt: 4
+        part: "명사",
+        means: ["온천"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おんせん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'はず',
-    meaning: 'it should be so'
-  },
-  {
-    level: 'N3',
-    word: '必要',
-    furigana: 'ひつよう',
-    meaning: 'necessary'
-,
-    kanjiDetails: [
-      {
-        kanji: '必',
-        meanings: ['certain', 'inevitable', 'invariably'],
-        onReadings: ['ヒツ'],
-        kunReadings: ['かなら.ず'],
-        strokeCount: 5,
-        jlpt: 3
-      },
+    entry_id: "82b5eacef0594877b63045bd530583ca",
+    origin_entry_id: "JK000000012160",
+    entry: "おんど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '要',
-        meanings: ['essence', 'key to', 'main point', 'need', 'pivot'],
-        onReadings: ['ヨウ'],
-        kunReadings: ['い.る', 'かなめ'],
-        strokeCount: 9,
-        jlpt: 3
+        part: "명사",
+        means: ["온도"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おんど",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '産業',
-    furigana: 'さんぎょう',
-    meaning: 'industry'
-,
-    kanjiDetails: [
+    entry_id: "af2816f3d7e44541ae79ccec5ad1df1b",
+    origin_entry_id: "JK000000012240",
+    entry: "おんぶ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '産',
-        meanings: ['bear', 'childbirth', 'give birth', 'native', 'products', 'property', 'yield'],
-        onReadings: ['サン'],
-        kunReadings: ['う.まれる', 'う.む', 'うぶ-', 'む.す'],
-        strokeCount: 11,
-        jlpt: 3
+        part: "명사",
+        means: ["어부바;업음"]
       },
       {
-        kanji: '業',
-        meanings: ['arts', 'business', 'performance', 'vocation'],
-        onReadings: ['ギョウ', 'ゴウ'],
-        kunReadings: ['わざ'],
-        strokeCount: 13,
-        jlpt: 4
+        part: "동사",
+        means: ["남에게 의지함;특히 비용을 부담시킴"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "おんぶ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '進む',
-    furigana: 'すすむ',
-    meaning: 'to make progress'
-,
-    kanjiDetails: [
+    entry_id: "b09d353342bd41c6af857a5dd2f74d0c",
+    origin_entry_id: "JK000000012529",
+    entry: "かいいん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '進',
-        meanings: ['advance', 'proceed', 'progress', 'promote'],
-        onReadings: ['シン'],
-        kunReadings: ['すす.む', 'すす.める'],
-        strokeCount: 11,
-        jlpt: 3
+        part: "명사",
+        means: ["회원"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かいいん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'しばらく',
-    meaning: 'little while'
-  },
-  {
-    level: 'N3',
-    word: '鏡',
-    furigana: 'かがみ',
-    meaning: 'mirror'
-,
-    kanjiDetails: [
+    entry_id: "a1305eb9fc96404eb3ab2d9a1708328b",
+    origin_entry_id: "JK000000012621",
+    entry: "かいかん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '鏡',
-        meanings: ['barrel-head', 'mirror', 'round rice-cake offering', 'speculum'],
-        onReadings: ['キョウ', 'ケイ'],
-        kunReadings: ['かがみ'],
-        strokeCount: 19,
-        jlpt: 1
+        part: "명사",
+        means: ["회관"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ソフト',
-    meaning: 'soft'
+    ],
+    category1: "jlpt",
+    category2: "かいかん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'ちゃん',
-    meaning: 'suffix for familiar female person'
-  },
-  {
-    level: 'N3',
-    word: '日',
-    furigana: 'ひ',
-    meaning: 'day, sun'
-,
-    kanjiDetails: [
+    entry_id: "e1a6c7519ce34c478f089ac939cca756",
+    origin_entry_id: "JK000000012579",
+    entry: "かいが",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '日',
-        meanings: ['Japan', 'counter for days', 'day', 'sun'],
-        onReadings: ['ジツ', 'ニチ'],
-        kunReadings: ['-か', '-び', 'ひ'],
-        strokeCount: 4,
-        jlpt: 5
+        part: "명사",
+        means: ["회화;그림"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かいが",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '珍しい',
-    furigana: 'めずらしい',
-    meaning: 'rare'
-,
-    kanjiDetails: [
+    entry_id: "f752cda6ef6a4ac283aa501fa0e0338b",
+    origin_entry_id: "JK000000012587",
+    entry: "かいがい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '珍',
-        meanings: ['curious', 'rare', 'strange'],
-        onReadings: ['チン'],
-        kunReadings: ['たから', 'めずら.しい'],
-        strokeCount: 9,
-        jlpt: 2
-      }
-    ]
+        part: "명사",
+        means: ["해외"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かいがい",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '都合',
-    furigana: 'つごう',
-    meaning: 'circumstances, convenience'
-,
-    kanjiDetails: [
+    entry_id: "478fef64cc37424fa868d72199ef7e07",
+    origin_entry_id: "JK000000012722",
+    entry: "かいけつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '都',
-        meanings: ['all', 'capital', 'everything', 'metropolis'],
-        onReadings: ['ツ', 'ト'],
-        kunReadings: ['みやこ'],
-        strokeCount: 11,
-        jlpt: 3
+        part: "명사",
+        means: ["해결"]
       },
       {
-        kanji: '合',
-        meanings: ['0.1', 'fit', 'join', 'suit'],
-        onReadings: ['カッ', 'ガッ', 'ゴウ'],
-        kunReadings: ['-あ.い', '-あ.う', '-あ.わせる', '-あい', 'あ.い', 'あ.う', 'あ.わす', 'あ.わせる', 'あい-'],
-        strokeCount: 6,
-        jlpt: 3
+        part: "동사",
+        means: ["해결"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かいけつ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '忘れ物',
-    furigana: 'わすれもの',
-    meaning: 'lost article'
-,
-    kanjiDetails: [
+    entry_id: "c0e788e5eaf942a7a2a19141b1e4f661",
+    origin_entry_id: "JK000000012768",
+    entry: "かいごう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '忘',
-        meanings: ['forget'],
-        onReadings: ['ボウ'],
-        kunReadings: ['わす.れる'],
-        strokeCount: 7,
-        jlpt: 3
+        part: "명사",
+        means: ["회합"]
       },
       {
-        kanji: '物',
-        meanings: ['matter', 'object', 'thing'],
-        onReadings: ['ブツ', 'モツ'],
-        kunReadings: ['もの', 'もの-'],
-        strokeCount: 8,
-        jlpt: 4
+        part: "동사",
+        means: ["회합"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かいごう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '驚く',
-    furigana: 'おどろく',
-    meaning: 'to be surprised'
-,
-    kanjiDetails: [
+    entry_id: "503906458bbc44449df31469d1e9564a",
+    origin_entry_id: "JK100012819001",
+    entry: "かいさつぐち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '驚',
-        meanings: ['amazed', 'be surprised', 'frightened', 'wonder'],
-        onReadings: ['キョウ'],
-        kunReadings: ['おどろ.かす', 'おどろ.く'],
-        strokeCount: 22,
-        jlpt: 1
+        part: "명사",
+        means: ["개찰구"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かいさつぐち",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '逃げる',
-    furigana: 'にげる',
-    meaning: 'to escape'
-,
-    kanjiDetails: [
+    entry_id: "7b0ade38b76140a694dd8d806f06fe17",
+    origin_entry_id: "JK000000012876",
+    entry: "かいしゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["회수"]
+      },
       {
-        kanji: '逃',
-        meanings: ['escape', 'evade', 'flee', 'set free', 'shirk'],
-        onReadings: ['トウ'],
-        kunReadings: ['に.がす', 'に.げる', 'のが.す', 'のが.れる'],
-        strokeCount: 9,
-        jlpt: 3
+        part: "동사",
+        means: ["회수"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かいしゅう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '心',
-    furigana: 'こころ',
-    meaning: 'core, heart'
-,
-    kanjiDetails: [
+    entry_id: "3565c9e157ca49e68f8d4baa80d44c3c",
+    origin_entry_id: "JK100012984004",
+    entry: "かいすいよく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '心',
-        meanings: ['heart', 'heart radical (no. 61)', 'mind', 'spirit'],
-        onReadings: ['シン'],
-        kunReadings: ['-ごころ', 'こころ'],
-        strokeCount: 4,
-        jlpt: 4
+        part: "명사",
+        means: ["해수욕"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かいすいよく",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'つもり',
-    meaning: 'intention'
+    entry_id: "e89c85fc53884a3db58aff7b2d5d0e0f",
+    origin_entry_id: "JK100012985001",
+    entry: "かいすうけん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["회수권"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かいすうけん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '中学校',
-    furigana: 'ちゅうがっこう',
-    meaning: 'junior high school, middle school'
-,
-    kanjiDetails: [
-      {
-        kanji: '中',
-        meanings: ['center', 'in', 'inside', 'mean', 'middle'],
-        onReadings: ['チュウ'],
-        kunReadings: ['あた.る', 'うち', 'なか'],
-        strokeCount: 4,
-        jlpt: 5
-      },
+    entry_id: "e715dc4a9912468c9f6ebdc0ca6b5b09",
+    origin_entry_id: "JK000000013022",
+    entry: "かいせつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '学',
-        meanings: ['learning', 'science', 'study'],
-        onReadings: ['ガク'],
-        kunReadings: ['まな.ぶ'],
-        strokeCount: 8,
-        jlpt: 5
+        part: "명사",
+        means: ["해설"]
       },
       {
-        kanji: '校',
-        meanings: ['correction', 'exam', 'printing', 'proof', 'school'],
-        onReadings: ['キョウ', 'コウ'],
-        strokeCount: 10,
-        jlpt: 5
+        part: "동사",
+        means: ["해설"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かいせつ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '隅',
-    furigana: 'すみ',
-    meaning: 'corner, nook'
-,
-    kanjiDetails: [
+    entry_id: "22ae66c0c6a5487190aa31e0f6dada29",
+    origin_entry_id: "JK000000013144",
+    entry: "かいちょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '隅',
-        meanings: ['corner', 'nook'],
-        onReadings: ['グウ'],
-        kunReadings: ['すみ'],
-        strokeCount: 12,
-        jlpt: 2
+        part: "명사",
+        means: ["회장"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かいちょう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '開く',
-    furigana: 'ひらく',
-    meaning: 'to open an event'
-,
-    kanjiDetails: [
+    entry_id: "77227c7f738d4835867bab2e6b347408",
+    origin_entry_id: "JK000000013661",
+    entry: "かかく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '開',
-        meanings: ['open', 'unfold', 'unseal'],
-        onReadings: ['カイ'],
-        kunReadings: ['-びら.き', 'あ.く', 'あ.ける', 'ひら.き', 'ひら.く', 'ひら.ける'],
-        strokeCount: 12,
-        jlpt: 4
+        part: "명사",
+        means: ["가격"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ジャム',
-    meaning: 'jam'
+    ],
+    category1: "jlpt",
+    category2: "かかく",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '決る',
-    furigana: 'きまる',
-    meaning: 'to be decided'
-,
-    kanjiDetails: [
+    entry_id: "7d2b96ba18dc4ddcbc1d3a349b0d6231",
+    origin_entry_id: "JK000000013713",
+    entry: "かかり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '決',
-        meanings: ['agree upon', 'appoint', 'decide', 'fix'],
-        onReadings: ['ケツ'],
-        kunReadings: ['-ぎ.め', 'き.まる', 'き.める', 'さ.く'],
-        strokeCount: 7,
-        jlpt: 3
+        part: "명사",
+        means: ["담당;계"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かかり",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '力',
-    furigana: 'ちから',
-    meaning: 'strength, power'
-,
-    kanjiDetails: [
+    entry_id: "2d71ab1b831f4c298c439ffe546c5694",
+    origin_entry_id: "JK000000013669",
+    entry: "かがく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '力',
-        meanings: ['bear up', 'exert', 'power', 'strain', 'strength', 'strong'],
-        onReadings: ['リイ', 'リキ', 'リョク'],
-        kunReadings: ['ちから'],
-        strokeCount: 2,
-        jlpt: 4
+        part: "명사",
+        means: ["화학"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かがく",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'ねだん',
-    meaning: 'price'
+    entry_id: "a5a5ae0842724a33961e50f25f82bf0a",
+    origin_entry_id: "JK000000013890",
+    entry: "かきとめ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["써 둠;또, 그 문서"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かきとめ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '太る',
-    furigana: 'ふとる',
-    meaning: 'to become fat'
-,
-    kanjiDetails: [
+    entry_id: "d944536aca7e4a4d903e3ea84fa9adcc",
+    origin_entry_id: "JK000000013892",
+    entry: "かきとり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '太',
-        meanings: ['big around', 'plump', 'thick'],
-        onReadings: ['タ', 'タイ'],
-        kunReadings: ['ふと.い', 'ふと.る'],
-        strokeCount: 4,
-        jlpt: 3
-      }
-    ]
+        part: "명사",
+        means: ["베껴 씀;또, 그 글"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かきとり",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '計画',
-    furigana: 'けいかく・する',
-    meaning: 'to plan'
-,
-    kanjiDetails: [
+    entry_id: "e3df9e8fa8bc4cccbb656e7c72ef2219",
+    origin_entry_id: "JK000000014059",
+    entry: "かくえきていしゃ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '計',
-        meanings: ['measure', 'plan', 'plot', 'scheme'],
-        onReadings: ['ケイ'],
-        kunReadings: ['はか.らう', 'はか.る'],
-        strokeCount: 9,
-        jlpt: 4
+        part: "명사",
+        means: ["정거장마다 정거함"]
       },
       {
-        kanji: '画',
-        meanings: ['brush-stroke', 'picture'],
-        onReadings: ['エ', 'カイ', 'カク', 'ガ'],
-        kunReadings: ['えが.く', 'かぎ.る', 'かく.する', 'はか.る', 'はかりごと'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '勝つ',
-    furigana: 'かつ',
-    meaning: 'to win'
-,
-    kanjiDetails: [
-      {
-        kanji: '勝',
-        meanings: ['excel', 'prevail', 'victory', 'win'],
-        onReadings: ['ショウ'],
-        kunReadings: ['-が.ち', 'か.つ', 'かつ', 'すぐ.れる', 'まさ.る'],
-        strokeCount: 12,
-        jlpt: 3
+        part: "동사",
+        means: ["정거장마다 정거함"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '眠い',
-    furigana: 'ねむい',
-    meaning: 'sleepy'
-,
-    kanjiDetails: [
-      {
-        kanji: '眠',
-        meanings: ['die', 'sleep', 'sleepy'],
-        onReadings: ['ミン'],
-        kunReadings: ['ねむ.い', 'ねむ.る'],
-        strokeCount: 10,
-        jlpt: 3
-      }
-    ]
-  },
+    ],
+    category1: "jlpt",
+    category2: "かくえきていしゃ",
+    category3: null
+  },
   {
-    level: 'N3',
-    word: '先輩',
-    furigana: 'せんぱい',
-    meaning: 'senior'
-,
-    kanjiDetails: [
-      {
-        kanji: '先',
-        meanings: ['ahead', 'before', 'future', 'precedence', 'previous'],
-        onReadings: ['セン'],
-        kunReadings: ['さき', 'ま.ず'],
-        strokeCount: 6,
-        jlpt: 5
+    entry_id: "668a5b12f7cc4e74b702230b1cb0bb28",
+    origin_entry_id: "JK000000014121",
+    entry: "かくご",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["각오"]
       },
       {
-        kanji: '輩',
-        meanings: ['companions', 'comrade', 'fellow', 'people'],
-        onReadings: ['ハイ'],
-        kunReadings: ['-ばら', 'ともがら', 'やかい', 'やから'],
-        strokeCount: 15,
-        jlpt: 1
+        part: "동사",
+        means: ["체념하고 마음을 정함"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かくご",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '翻訳',
-    furigana: 'ほんやく',
-    meaning: 'translation'
-,
-    kanjiDetails: [
+    entry_id: "a1e503188ebe48d19111736868323caf",
+    origin_entry_id: "JK000000014297",
+    entry: "かくだい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '翻',
-        meanings: ['change (mind)', 'flip', 'flutter', 'turn over', 'wave'],
-        onReadings: ['ハン', 'ホン'],
-        kunReadings: ['ひるがえ.す', 'ひるがえ.る'],
-        strokeCount: 18,
-        jlpt: 1
+        part: "명사",
+        means: ["확대"]
       },
       {
-        kanji: '訳',
-        meanings: ['case', 'circumstance', 'reason', 'translate'],
-        onReadings: ['ヤク'],
-        kunReadings: ['わけ'],
-        strokeCount: 11,
-        jlpt: 1
+        part: "동사",
+        means: ["확대"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '女性',
-    furigana: 'じょせい',
-    meaning: 'woman'
-,
-    kanjiDetails: [
+    ],
+    category1: "jlpt",
+    category2: "かくだい",
+    category3: null
+  },
+  {
+    entry_id: "f974796af8774d5b8ed9217367852764",
+    origin_entry_id: "JK000000014369",
+    entry: "かくにん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '女',
-        meanings: ['female', 'woman'],
-        onReadings: ['ジョ', 'ニョ', 'ニョウ'],
-        kunReadings: ['おんな', 'め'],
-        strokeCount: 3,
-        jlpt: 5
+        part: "명사",
+        means: ["확인"]
       },
-      {
-        kanji: '性',
-        meanings: ['gender', 'nature', 'sex'],
-        onReadings: ['ショウ', 'セイ'],
-        kunReadings: ['さが'],
-        strokeCount: 8,
-        jlpt: 3
+      {
+        part: "동사",
+        means: ["확인"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かくにん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '形',
-    furigana: 'かたち',
-    meaning: 'shape'
-,
-    kanjiDetails: [
-      {
-        kanji: '形',
-        meanings: ['form', 'shape', 'style'],
-        onReadings: ['ギョウ', 'ケイ'],
-        kunReadings: ['-がた', 'かた', 'かたち', 'なり'],
-        strokeCount: 7,
-        jlpt: 3
+    entry_id: "2e664dd8934f4d30818c6cea5c3211d1",
+    origin_entry_id: "JK000000014021",
+    entry: "かぐ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["가구"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ご存じ',
-    furigana: 'ごぞんじ',
-    meaning: 'knowing, acquaintance'
-,
-    kanjiDetails: [
-      {
-        kanji: '存',
-        meanings: ['be aware of', 'believe', 'exist', 'feel', 'suppose'],
-        onReadings: ['ソン', 'ゾン'],
-        kunReadings: ['あ.る', 'たも.つ', 'と.う', 'ながら.える'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'あんな',
-    meaning: 'such'
-  },
-  {
-    level: 'N3',
-    word: 'このごろ',
-    meaning: 'these days, nowadays'
-  },
-  {
-    level: 'N3',
-    word: '滑る',
-    furigana: 'すべる',
-    meaning: 'to slide, to slip'
-,
-    kanjiDetails: [
-      {
-        kanji: '滑',
-        meanings: ['fail exam', 'slide', 'slip', 'slippery'],
-        onReadings: ['カツ', 'コツ'],
-        kunReadings: ['すべ.る', 'なめ.らか'],
-        strokeCount: 13,
-        jlpt: 1
-      }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かぐ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '沸かす',
-    furigana: 'わかす',
-    meaning: 'to boil, to heat'
-,
-    kanjiDetails: [
+    entry_id: "ccc751deb9804c8190affdf622101156",
+    origin_entry_id: "JK000000014606",
+    entry: "かけざん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '沸',
-        meanings: ['boil', 'breed', 'ferment', 'seethe', 'uproar'],
-        onReadings: ['フツ'],
-        kunReadings: ['わ.かす', 'わ.く'],
-        strokeCount: 8,
-        jlpt: 2
+        part: "명사",
+        means: ["곱셈"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かけざん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '移る',
-    furigana: 'うつる',
-    meaning: 'to move house or transfer'
-,
-    kanjiDetails: [
+    entry_id: "2fa9ff25a05b45468d4ba66ebe70c318",
+    origin_entry_id: "JK000000014831",
+    entry: "かさい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '移',
-        meanings: ['catch (cold, fire)', 'change', 'drift', 'move', 'pass into', 'shift'],
-        onReadings: ['イ'],
-        kunReadings: ['うつ.す', 'うつ.る'],
-        strokeCount: 11,
-        jlpt: 2
+        part: "명사",
+        means: ["화재;불"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かさい",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '選ぶ',
-    furigana: 'えらぶ',
-    meaning: 'to choose'
-,
-    kanjiDetails: [
-      {
-        kanji: '選',
-        meanings: ['choose', 'elect', 'prefer', 'select'],
-        onReadings: ['セン'],
-        kunReadings: ['え.る', 'えら.ぶ', 'よ.る'],
-        strokeCount: 15,
-        jlpt: 3
+    entry_id: "bf5ec7b8f69c463c919f1a7cc181a7d6",
+    origin_entry_id: "JK000000015035",
+    entry: "かしだし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["대출"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かしだし",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '高校生',
-    furigana: 'こうこうせい',
-    meaning: 'high school student'
-,
-    kanjiDetails: [
-      {
-        kanji: '高',
-        meanings: ['expensive', 'high', 'tall'],
-        onReadings: ['コウ'],
-        kunReadings: ['-だか', 'たか', 'たか.い', 'たか.まる', 'たか.める'],
-        strokeCount: 10,
-        jlpt: 5
-      },
+    entry_id: "d3960112be6d49f59bbb690d047325f2",
+    origin_entry_id: "JK000000015396",
+    entry: "かせん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '校',
-        meanings: ['correction', 'exam', 'printing', 'proof', 'school'],
-        onReadings: ['キョウ', 'コウ'],
-        strokeCount: 10,
-        jlpt: 5
-      },
-      {
-        kanji: '生',
-        meanings: ['birth', 'genuine', 'life'],
-        onReadings: ['ショウ', 'セイ'],
-        kunReadings: ['-う', 'い.かす', 'い.きる', 'い.ける', 'う.まれ', 'う.まれる', 'う.む', 'うま.れる', 'うまれ', 'お.う', 'き', 'な.す', 'な.る', 'なま', 'なま-', 'は.える', 'は.やす', 'む.す'],
-        strokeCount: 5,
-        jlpt: 5
+        part: "명사",
+        means: ["하천"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かせん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'さ来週',
-    furigana: 'さらいしゅう',
-    meaning: 'the week after next'
-,
-    kanjiDetails: [
+    entry_id: "1808a72439a14b9a9888635112ed92b5",
+    origin_entry_id: "JK000000015521",
+    entry: "かたがた",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '来',
-        meanings: ['become', 'cause', 'come', 'due', 'next'],
-        onReadings: ['タイ', 'ライ'],
-        kunReadings: ['き', 'き.たす', 'き.たる', 'きた.す', 'きた.る', 'く.る', 'こ'],
-        strokeCount: 7,
-        jlpt: 5
-      },
-      {
-        kanji: '週',
-        meanings: ['week'],
-        onReadings: ['シュウ'],
-        strokeCount: 11,
-        jlpt: 4
+        part: "명사",
+        means: ["제현;여러분"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'うん',
-    meaning: '(informal) yes'
+    ],
+    category1: "jlpt",
+    category2: "かたがた",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '帰り',
-    furigana: 'かえり',
-    meaning: 'return'
-,
-    kanjiDetails: [
+    entry_id: "2b26745f8bee4c73993a848f9261f403",
+    origin_entry_id: "JK000000015707",
+    entry: "かたみち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '帰',
-        meanings: ['arrive at', 'homecoming', 'lead to', 'result in'],
-        onReadings: ['キ'],
-        kunReadings: ['おく.る', 'かえ.す', 'かえ.る', 'とつ.ぐ'],
-        strokeCount: 10,
-        jlpt: 4
-      }
-    ]
+        part: "명사",
+        means: ["편도;한쪽;일방"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かたみち",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '湯',
-    furigana: 'ゆ',
-    meaning: 'hot water'
-,
-    kanjiDetails: [
+    entry_id: "6093407a719240ada1ff868615260954",
+    origin_entry_id: "JK000000015483",
+    entry: "かだい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '湯',
-        meanings: ['bath', 'hot spring', 'hot water'],
-        onReadings: ['トウ'],
-        kunReadings: ['ゆ'],
-        strokeCount: 12,
-        jlpt: 2
+        part: "명사",
+        means: ["과제;제목;문제"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '昔',
-    furigana: 'むかし',
-    meaning: 'olden days, former'
-,
-    kanjiDetails: [
+    ],
+    category1: "jlpt",
+    category2: "かだい",
+    category3: null
+  },
+  {
+    entry_id: "3efbb56f9b564c5f88bab8f970bdf02c",
+    origin_entry_id: "JK000000015783",
+    entry: "かち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '昔',
-        meanings: ['antiquity', 'old times', 'once upon a time'],
-        onReadings: ['シャク', 'セキ'],
-        kunReadings: ['むかし'],
-        strokeCount: 8,
-        jlpt: 3
+        part: "명사",
+        means: ["가치;값"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かち",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '味',
-    furigana: 'あじ',
-    meaning: 'flavour'
-,
-    kanjiDetails: [
+    entry_id: "6411c073dda7448f823bff8315749a58",
+    origin_entry_id: "JK000000015917",
+    entry: "かっき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '味',
-        meanings: ['flavor', 'taste'],
-        onReadings: ['ミ'],
-        kunReadings: ['あじ', 'あじ.わう'],
-        strokeCount: 8,
-        jlpt: 4
+        part: "명사",
+        means: ["활기"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かっき",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'アジア',
-    meaning: 'Asia'
+    entry_id: "0a807ddcf2434aa5976a527b2edb48ad",
+    origin_entry_id: "JK000000015961",
+    entry: "かっこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["각항;각 항목"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かっこう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '人形',
-    furigana: 'にんぎょう',
-    meaning: 'doll, figure'
-,
-    kanjiDetails: [
+    entry_id: "3c569d6cde4a44f4abc7fd3cefc05679",
+    origin_entry_id: "JK000000016047",
+    entry: "かつどう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '人',
-        meanings: ['person'],
-        onReadings: ['ジン', 'ニン'],
-        kunReadings: ['-と', '-り', 'ひと'],
-        strokeCount: 2,
-        jlpt: 5
+        part: "명사",
+        means: ["활동"]
       },
       {
-        kanji: '形',
-        meanings: ['form', 'shape', 'style'],
-        onReadings: ['ギョウ', 'ケイ'],
-        kunReadings: ['-がた', 'かた', 'かたち', 'なり'],
-        strokeCount: 7,
-        jlpt: 3
+        part: "동사",
+        means: ["‘活動写真’의 준말"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かつどう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '治る',
-    furigana: 'なおる',
-    meaning: 'to be cured, to heal'
-,
-    kanjiDetails: [
-      {
-        kanji: '治',
-        meanings: ['be at peace', 'calm down', 'conserve', 'cure', 'govt', 'heal', 'quell', 'reign', 'rule', 'subdue'],
-        onReadings: ['ジ', 'チ'],
-        kunReadings: ['おさ.まる', 'おさ.める', 'なお.す', 'なお.る'],
-        strokeCount: 8,
-        jlpt: 3
+    entry_id: "2cc06d57bc854476a9563835e1bdac53",
+    origin_entry_id: "JK000000016246",
+    entry: "かなしみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["슬픔;비애"]
       }
-    ]
-  },
+    ],
+    category1: "jlpt",
+    category2: "かなしみ",
+    category3: null
+  },
   {
-    level: 'N3',
-    word: '自由',
-    furigana: 'じゆう',
-    meaning: 'freedom'
-,
-    kanjiDetails: [
+    entry_id: "817b021199584c12b93be34bfe7242c7",
+    origin_entry_id: "JK000000016686",
+    entry: "かみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '自',
-        meanings: ['oneself'],
-        onReadings: ['シ', 'ジ'],
-        kunReadings: ['おの.ずから', 'おの.ずと', 'みずか.ら'],
-        strokeCount: 6,
-        jlpt: 4
-      },
+        part: "명사",
+        means: ["신"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かみ",
+    category3: null
+  },
+  {
+    entry_id: "da30aa430f6349b1ab10e1a484805ba9",
+    origin_entry_id: "JK000000016875",
+    entry: "かもく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '由',
-        meanings: ['a reason', 'wherefore'],
-        onReadings: ['ユ', 'ユイ', 'ユウ'],
-        kunReadings: ['よ.る', 'よし'],
-        strokeCount: 5,
-        jlpt: 3
+        part: "명사",
+        means: ["과목"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かもく",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'パート',
-    meaning: 'part time'
+    entry_id: "77bcbed0ce464cd49703f40ee43e8da0",
+    origin_entry_id: "JK000000016947",
+    entry: "から",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["빔;공"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "から",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'ガラス',
-    meaning: 'a glass pane'
+    entry_id: "dd4907b63ae342809ed3b8bc6f843be7",
+    origin_entry_id: "JK000000017093",
+    entry: "からっぽ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["텅 빔;아무것도 없음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "からっぽ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '大事',
-    furigana: 'だいじ',
-    meaning: 'important, valuable, serious matter'
-,
-    kanjiDetails: [
+    entry_id: "20b01d1a015747abb5d7aecbe91cf758",
+    origin_entry_id: "JK000000017691",
+    entry: "かん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '大',
-        meanings: ['big', 'large'],
-        onReadings: ['タイ', 'ダイ'],
-        kunReadings: ['-おお.いに', 'おお-', 'おお.きい'],
-        strokeCount: 3,
-        jlpt: 5
+        part: "명사",
+        means: ["금속제 용기;깡통"]
       },
       {
-        kanji: '事',
-        meanings: ['business', 'fact', 'matter', 'possibly', 'reason', 'thing'],
-        onReadings: ['ジ', 'ズ'],
-        kunReadings: ['こと', 'つか.う', 'つか.える'],
-        strokeCount: 8,
-        jlpt: 4
+        part: "접사",
+        means: ["…통;통 등을 세는 말"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '遅れる',
-    furigana: 'おくれる',
-    meaning: 'to be late'
-,
-    kanjiDetails: [
+    entry_id: "263c07250b9b495abff6894fb36a9ded",
+    origin_entry_id: "JK000000017906",
+    entry: "かんかく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '遅',
-        meanings: ['back', 'late', 'later', 'slow'],
-        onReadings: ['チ'],
-        kunReadings: ['おく.らす', 'おく.れる', 'おそ.い'],
-        strokeCount: 12,
-        jlpt: 3
+        part: "명사",
+        means: ["감각;→ちかく·ごかん"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かんかく",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '会場',
-    furigana: 'かいじょう',
-    meaning: 'assembly hall or meeting place'
-,
-    kanjiDetails: [
-      {
-        kanji: '会',
-        meanings: ['association', 'interview', 'join', 'meet', 'meeting', 'party'],
-        onReadings: ['エ', 'カイ'],
-        kunReadings: ['あ.う', 'あ.わせる', 'あつ.まる'],
-        strokeCount: 6,
-        jlpt: 4
-      },
+    entry_id: "45b0b50245064ef0b1042874ac1f2ae2",
+    origin_entry_id: "JK000000017891",
+    entry: "かんがえ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '場',
-        meanings: ['location', 'place'],
-        onReadings: ['ジョウ', 'チョウ'],
-        kunReadings: ['ば'],
-        strokeCount: 12,
-        jlpt: 4
+        part: "명사",
+        means: ["생각"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かんがえ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'あげる',
-    meaning: 'to give'
+    entry_id: "014d36060a0e4549bbb17f73c41c0f63",
+    origin_entry_id: "JK000000017985",
+    entry: "かんきょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["환경"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かんきょう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '利用',
-    furigana: 'りよう',
-    meaning: 'utilization'
-,
-    kanjiDetails: [
-      {
-        kanji: '利',
-        meanings: ['advantage', 'benefit', 'profit'],
-        onReadings: ['リ'],
-        kunReadings: ['き.く'],
-        strokeCount: 7,
-        jlpt: 3
-      },
+    entry_id: "da2c28184f534d8fb1457a8d3f71ad24",
+    origin_entry_id: "JK000000100259",
+    entry: "かんげいかい",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
       {
-        kanji: '用',
-        meanings: ['business', 'employ', 'service', 'use', 'utilize'],
-        onReadings: ['ヨウ'],
-        kunReadings: ['もち.いる'],
-        strokeCount: 5,
-        jlpt: 4
+        part: "명사",
+        means: ["환영회"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かんげいかい",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '泳ぎ方',
-    furigana: 'およぎかた',
-    meaning: 'way of swimming'
-,
-    kanjiDetails: [
-      {
-        kanji: '泳',
-        meanings: ['swim'],
-        onReadings: ['エイ'],
-        kunReadings: ['およ.ぐ'],
-        strokeCount: 8,
-        jlpt: 3
-      },
+    entry_id: "57ec55046e5545ef94178ae76d40b868",
+    origin_entry_id: "JK100018074002",
+    entry: "かんごふ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '方',
-        meanings: ['alternative', 'direction', 'person'],
-        onReadings: ['ホウ'],
-        kunReadings: ['-かた', '-がた', 'かた'],
-        strokeCount: 4,
-        jlpt: 4
+        part: "명사",
+        means: ["간호사"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かんごふ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '普通',
-    furigana: 'ふつう',
-    meaning: 'usually, or a train that stops at every station'
-,
-    kanjiDetails: [
+    entry_id: "0fe0c1d4d5454fbc8808f58588a3ebe9",
+    origin_entry_id: "JK000000018221",
+    entry: "かんしゃ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '普',
-        meanings: ['Prussia', 'generally', 'universal', 'wide(ly)'],
-        onReadings: ['フ'],
-        kunReadings: ['あまね.く', 'あまねし'],
-        strokeCount: 12,
-        jlpt: 2
+        part: "명사",
+        means: ["감사"]
       },
       {
-        kanji: '通',
-        meanings: ['avenue', 'commute', 'counter for letters, notes, documents, etc.', 'pass through', 'traffic'],
-        onReadings: ['ツ', 'ツウ'],
-        kunReadings: ['-とお.り', '-どお.し', '-どお.り', 'かよ.う', 'とお.し', 'とお.す', 'とお.り', 'とお.る'],
-        strokeCount: 10,
-        jlpt: 4
+        part: "동사",
+        means: ["감사"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かんしゃ",
+    category3: null
   },
-  {
-    level: 'N3',
-    word: 'ガス',
-    meaning: 'petrol'
-  },
-  {
-    level: 'N3',
-    word: '必ず',
-    furigana: 'かならず',
-    meaning: 'certainly, necessarily'
-,
-    kanjiDetails: [
-      {
-        kanji: '必',
-        meanings: ['certain', 'inevitable', 'invariably'],
-        onReadings: ['ヒツ'],
-        kunReadings: ['かなら.ず'],
-        strokeCount: 5,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '競争',
-    furigana: 'きょうそう',
-    meaning: 'competition'
-,
-    kanjiDetails: [
-      {
-        kanji: '競',
-        meanings: ['bid', 'bout', 'compete with', 'contest', 'emulate', 'race', 'sell at auction'],
-        onReadings: ['キョウ', 'ケイ'],
-        kunReadings: ['きそ.う', 'くら.べる', 'せ.る'],
-        strokeCount: 20,
-        jlpt: 2
-      },
-      {
-        kanji: '争',
-        meanings: ['argue', 'contend', 'dispute'],
-        onReadings: ['ソウ'],
-        kunReadings: ['あらそ.う', 'いか.でか'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '承知',
-    furigana: 'しょうち・する',
-    meaning: 'to consent'
-,
-    kanjiDetails: [
+  {
+    entry_id: "90402b47482048b19ef0bd14000b90d7",
+    origin_entry_id: "JK000000018331",
+    entry: "かんしん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '承',
-        meanings: ['acquiesce', 'be informed', 'hear', 'listen to', 'receive'],
-        onReadings: ['ショウ', 'ジョウ'],
-        kunReadings: ['う.ける', 'うけたまわ.る'],
-        strokeCount: 8,
-        jlpt: 2
+        part: "명사",
+        means: ["감심;감탄"]
       },
       {
-        kanji: '知',
-        meanings: ['know', 'wisdom'],
-        onReadings: ['チ'],
-        kunReadings: ['し.らせる', 'し.る'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
+        part: "동사",
+        means: ["질림;어이없음"]
+      },
+      {
+        part: "형용동사",
+        means: ["기특함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かんしん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '焼く',
-    furigana: 'やく',
-    meaning: 'to bake, to grill'
-,
-    kanjiDetails: [
+    entry_id: "016abffdf4dd4bf98f2bbeb8920f5c25",
+    origin_entry_id: "JK000000018191",
+    entry: "かんじ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '焼',
-        meanings: ['bake', 'burning'],
-        onReadings: ['ショウ'],
-        kunReadings: ['-や.き', 'や.き', 'や.き-', 'や.く', 'や.ける'],
-        strokeCount: 12,
-        jlpt: 2
-      }
-    ]
+        part: "명사",
+        means: ["느낌"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かんじ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '別',
-    furigana: 'べつ',
-    meaning: 'different'
-,
-    kanjiDetails: [
-      {
-        kanji: '別',
-        meanings: ['another', 'branch off', 'diverge', 'extra', 'fork', 'separate', 'specially'],
-        onReadings: ['ベツ'],
-        kunReadings: ['わ.ける', 'わか.れる'],
-        strokeCount: 7,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '過ぎる',
-    furigana: 'すぎる',
-    meaning: 'to exceed'
-,
-    kanjiDetails: [
-      {
-        kanji: '過',
-        meanings: ['error', 'exceed', 'go beyond', 'overdo'],
-        onReadings: ['カ'],
-        kunReadings: ['あやま.ち', 'あやま.つ', 'す.ぎる', 'す.ごす', 'よ.ぎる', 'よぎ.る'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '連絡',
-    furigana: 'れんらく',
-    meaning: 'contact'
-,
-    kanjiDetails: [
-      {
-        kanji: '連',
-        meanings: ['clique', 'connect', 'gang', 'join', 'lead', 'party', 'take along'],
-        onReadings: ['レン'],
-        kunReadings: ['-づ.れ', 'つ.れる', 'つら.なる', 'つら.ねる'],
-        strokeCount: 10,
-        jlpt: 3
-      },
+    entry_id: "b902f4d2ec52479f83a0d3906ff884d8",
+    origin_entry_id: "JK000000018226",
+    entry: "かんじゃ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '絡',
-        meanings: ['coil around', 'entwine', 'get caught in'],
-        onReadings: ['ラク'],
-        kunReadings: ['から.まる', 'から.む'],
-        strokeCount: 12,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'すると',
-    meaning: 'then'
-  },
-  {
-    level: 'N3',
-    word: '暮れる',
-    furigana: 'くれる',
-    meaning: 'to get dark, to come to an end'
-,
-    kanjiDetails: [
-      {
-        kanji: '暮',
-        meanings: ['evening', 'livelihood', 'make a living', 'season\'s end', 'spend time', 'twilight'],
-        onReadings: ['ボ'],
-        kunReadings: ['く.らす', 'く.れる'],
-        strokeCount: 14,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '喜ぶ',
-    furigana: 'よろこぶ',
-    meaning: 'to be delighted'
-,
-    kanjiDetails: [
-      {
-        kanji: '喜',
-        meanings: ['rejoice', 'take pleasure in'],
-        onReadings: ['キ'],
-        kunReadings: ['よろこ.ばす', 'よろこ.ぶ'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
+        part: "명사",
+        means: ["환자"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かんじゃ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '習慣',
-    furigana: 'しゅうかん',
-    meaning: 'custom, manners'
-,
-    kanjiDetails: [
-      {
-        kanji: '習',
-        meanings: ['learn'],
-        onReadings: ['シュウ', 'ジュ'],
-        kunReadings: ['なら.い', 'なら.う'],
-        strokeCount: 11,
-        jlpt: 4
-      },
-      {
-        kanji: '慣',
-        meanings: ['accustomed', 'become experienced', 'get used to'],
-        onReadings: ['カン'],
-        kunReadings: ['な.らす', 'な.れる'],
-        strokeCount: 14,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '部長',
-    furigana: 'ぶちょう',
-    meaning: 'head of a section'
-,
-    kanjiDetails: [
+    entry_id: "2e0fc891bd89491f856842c427090346",
+    origin_entry_id: "JK000000018296",
+    entry: "かんじょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '部',
-        meanings: ['bureau', 'class', 'copy', 'counter for copies of a newspaper or magazine', 'dept', 'part', 'portion', 'section'],
-        onReadings: ['ブ'],
-        kunReadings: ['-べ'],
-        strokeCount: 11,
-        jlpt: 3
-      },
-      {
-        kanji: '長',
-        meanings: ['leader', 'long', 'senior', 'superior'],
-        onReadings: ['チョウ'],
-        kunReadings: ['おさ', 'なが.い'],
-        strokeCount: 8,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '祈る',
-    furigana: 'いのる',
-    meaning: 'to pray'
-,
-    kanjiDetails: [
-      {
-        kanji: '祈',
-        meanings: ['pray', 'wish'],
-        onReadings: ['キ'],
-        kunReadings: ['いの.る'],
-        strokeCount: 8,
-        jlpt: 2
+        part: "명사",
+        means: ["감정"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かんじょう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '水道',
-    furigana: 'すいどう',
-    meaning: 'water supply'
-,
-    kanjiDetails: [
+    entry_id: "9b3265a18ac94d68b244a34c67a51c6a",
+    origin_entry_id: "JK000000018379",
+    entry: "かんせい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '水',
-        meanings: ['water'],
-        onReadings: ['スイ'],
-        kunReadings: ['みず', 'みず-'],
-        strokeCount: 4,
-        jlpt: 5
+        part: "명사",
+        means: ["완성"]
       },
       {
-        kanji: '道',
-        meanings: ['course', 'district', 'journey', 'moral', 'road-way', 'street', 'teachings'],
-        onReadings: ['トウ', 'ドウ'],
-        kunReadings: ['いう', 'みち'],
-        strokeCount: 12,
-        jlpt: 4
+        part: "동사",
+        means: ["완성"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'とうとう',
-    meaning: 'finally, after all'
+    ],
+    category1: "jlpt",
+    category2: "かんせい",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '道具',
-    furigana: 'どうぐ',
-    meaning: 'tool, means'
-,
-    kanjiDetails: [
+    entry_id: "87ece3f5028d4ffcad3881953ccbb8cb",
+    origin_entry_id: "JK000000018412",
+    entry: "かんせつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '道',
-        meanings: ['course', 'district', 'journey', 'moral', 'road-way', 'street', 'teachings'],
-        onReadings: ['トウ', 'ドウ'],
-        kunReadings: ['いう', 'みち'],
-        strokeCount: 12,
-        jlpt: 4
+        part: "명사",
+        means: ["간접;에두름"]
       },
       {
-        kanji: '具',
-        meanings: ['counter for armor, suits, sets of furniture', 'ingredients', 'means', 'possess', 'tool', 'utensil'],
-        onReadings: ['グ'],
-        kunReadings: ['そな.える', 'つぶさ.に'],
-        strokeCount: 8,
-        jlpt: 3
+        part: "형용동사",
+        means: ["간접;에두름"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ケーキ',
-    meaning: 'cake'
+    ],
+    category1: "jlpt",
+    category2: "かんせつ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '郊外',
-    furigana: 'こうがい',
-    meaning: 'outskirts'
-,
-    kanjiDetails: [
+    entry_id: "4128cdd300b248c0a1154efe2bd250f8",
+    origin_entry_id: "JK000000018428",
+    entry: "かんぜん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '郊',
-        meanings: ['outskirts', 'rural area', 'suburbs'],
-        onReadings: ['コウ'],
-        strokeCount: 9,
-        jlpt: 2
+        part: "명사",
+        means: ["완전"]
       },
-      {
-        kanji: '外',
-        meanings: ['outside'],
-        onReadings: ['ガイ', 'ゲ'],
-        kunReadings: ['そと', 'と-', 'はず.す', 'はず.れる', 'ほか'],
-        strokeCount: 5,
-        jlpt: 5
+      {
+        part: "형용동사",
+        means: ["완전"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かんぜん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'おもちゃ',
-    meaning: 'toy'
+    entry_id: "8cd0e64b8ff9457ba481da8ac8c73b46",
+    origin_entry_id: "JK000000018445",
+    entry: "かんそう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["감상"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かんそう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '最近',
-    furigana: 'さいきん',
-    meaning: 'latest, nowadays'
-,
-    kanjiDetails: [
+    entry_id: "8a1e2a1f05a44f8d9d801e37ab032a3d",
+    origin_entry_id: "JK000000018606",
+    entry: "かんどう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '最',
-        meanings: ['extreme', 'most', 'utmost'],
-        onReadings: ['サイ', 'シュ'],
-        kunReadings: ['つま', 'もっと.も'],
-        strokeCount: 12,
-        jlpt: 3
+        part: "명사",
+        means: ["감동"]
       },
       {
-        kanji: '近',
-        meanings: ['akin', 'early', 'near', 'tantamount'],
-        onReadings: ['キン', 'コン'],
-        kunReadings: ['ちか.い'],
-        strokeCount: 7,
-        jlpt: 4
+        part: "동사",
+        means: ["감동"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かんどう",
+    category3: null
   },
-  {
-    level: 'N3',
-    word: 'もちろん',
-    meaning: 'of course'
-  },
   {
-    level: 'N3',
-    word: '天気予報',
-    furigana: 'てんきよほう',
-    meaning: 'weather forecast'
-,
-    kanjiDetails: [
-      {
-        kanji: '天',
-        meanings: ['heavens', 'imperial', 'sky'],
-        onReadings: ['テン'],
-        kunReadings: ['あま-', 'あまつ', 'あめ'],
-        strokeCount: 4,
-        jlpt: 5
-      },
-      {
-        kanji: '気',
-        meanings: ['air', 'atmosphere', 'mind', 'mood', 'spirit'],
-        onReadings: ['キ', 'ケ'],
-        kunReadings: ['き'],
-        strokeCount: 6,
-        jlpt: 5
+    entry_id: "bdcaacf298814ab2855d4d242f56406e",
+    origin_entry_id: "JK000000018695",
+    entry: "かんぱい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["건배;축배"]
       },
-      {
-        kanji: '予',
-        meanings: ['I', 'beforehand', 'myself', 'previous'],
-        onReadings: ['シャ', 'ヨ'],
-        kunReadings: ['あらかじ.め'],
-        strokeCount: 4,
-        jlpt: 3
-      },
-      {
-        kanji: '報',
-        meanings: ['news', 'report', 'retribution', 'reward'],
-        onReadings: ['ホウ'],
-        kunReadings: ['むく.いる'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '乗り物',
-    furigana: 'のりもの',
-    meaning: 'vehicle'
-,
-    kanjiDetails: [
-      {
-        kanji: '乗',
-        meanings: ['board', 'counter for vehicles', 'join', 'mount', 'multiplication', 'power', 'record', 'ride'],
-        onReadings: ['ショウ', 'ジョウ'],
-        kunReadings: ['-の.り', 'の.せる', 'の.る'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '物',
-        meanings: ['matter', 'object', 'thing'],
-        onReadings: ['ブツ', 'モツ'],
-        kunReadings: ['もの', 'もの-'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '亡くなる',
-    furigana: 'なくなる',
-    meaning: 'to die'
-,
-    kanjiDetails: [
-      {
-        kanji: '亡',
-        meanings: ['deceased', 'dying', 'perish', 'the late'],
-        onReadings: ['ボウ', 'モウ'],
-        kunReadings: ['な.い', 'な.き-', 'ほろ.びる', 'ほろ.ぶ', 'ほろ.ぼす'],
-        strokeCount: 3,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '尋ねる',
-    furigana: 'たずねる',
-    meaning: 'to ask'
-,
-    kanjiDetails: [
-      {
-        kanji: '尋',
-        meanings: ['fathom', 'inquire', 'look for'],
-        onReadings: ['ジン'],
-        kunReadings: ['たず.ねる', 'ひろ'],
-        strokeCount: 12,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '髪',
-    furigana: 'かみ',
-    meaning: 'hair'
-,
-    kanjiDetails: [
-      {
-        kanji: '髪',
-        meanings: ['hair of the head'],
-        onReadings: ['ハツ'],
-        kunReadings: ['かみ'],
-        strokeCount: 14,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '売り場',
-    furigana: 'うりば',
-    meaning: 'place where things are sold'
-,
-    kanjiDetails: [
-      {
-        kanji: '売',
-        meanings: ['sell'],
-        onReadings: ['バイ'],
-        kunReadings: ['う.る', 'う.れる'],
-        strokeCount: 7,
-        jlpt: 4
-      },
-      {
-        kanji: '場',
-        meanings: ['location', 'place'],
-        onReadings: ['ジョウ', 'チョウ'],
-        kunReadings: ['ば'],
-        strokeCount: 12,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '下着',
-    furigana: 'したぎ',
-    meaning: 'underwear'
-,
-    kanjiDetails: [
-      {
-        kanji: '下',
-        meanings: ['below', 'descend', 'down', 'give', 'inferior', 'low'],
-        onReadings: ['カ', 'ゲ'],
-        kunReadings: ['-くだ.す', 'お.りる', 'お.ろす', 'くだ.さる', 'くだ.す', 'くだ.り', 'くだ.る', 'さ.がる', 'さ.げる', 'した', 'しも', 'もと'],
-        strokeCount: 3,
-        jlpt: 5
-      },
-      {
-        kanji: '着',
-        meanings: ['arrive', 'counter for suits of clothing', 'don', 'wear'],
-        onReadings: ['ジャク', 'チャク'],
-        kunReadings: ['き.せる', 'き.る', 'つ.く', 'つ.ける'],
-        strokeCount: 12,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '鳴る',
-    furigana: 'なる',
-    meaning: 'to sound'
-,
-    kanjiDetails: [
-      {
-        kanji: '鳴',
-        meanings: ['bark', 'chirp', 'cry', 'echo', 'honk', 'ring', 'sound'],
-        onReadings: ['メイ'],
-        kunReadings: ['な.く', 'な.らす', 'な.る'],
-        strokeCount: 14,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '飛行場',
-    furigana: 'ひこうじょう',
-    meaning: 'airport'
-,
-    kanjiDetails: [
-      {
-        kanji: '飛',
-        meanings: ['fly', 'scatter', 'skip (pages)'],
-        onReadings: ['ヒ'],
-        kunReadings: ['-と.ばす', 'と.ばす', 'と.ぶ'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '行',
-        meanings: ['act', 'bank', 'carry out', 'conduct', 'going', 'journey', 'line', 'row'],
-        onReadings: ['アン', 'ギョウ', 'コウ'],
-        kunReadings: ['-い.き', '-いき', '-ゆ.き', '-ゆき', 'い.く', 'おこ.なう', 'おこな.う', 'ゆ.く'],
-        strokeCount: 6,
-        jlpt: 5
-      },
-      {
-        kanji: '場',
-        meanings: ['location', 'place'],
-        onReadings: ['ジョウ', 'チョウ'],
-        kunReadings: ['ば'],
-        strokeCount: 12,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '都',
-    furigana: 'と',
-    meaning: 'metropolitan'
-,
-    kanjiDetails: [
-      {
-        kanji: '都',
-        meanings: ['all', 'capital', 'everything', 'metropolis'],
-        onReadings: ['ツ', 'ト'],
-        kunReadings: ['みやこ'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '親切',
-    furigana: 'しんせつ',
-    meaning: 'kindness'
-,
-    kanjiDetails: [
-      {
-        kanji: '親',
-        meanings: ['dealer (cards)', 'familiarity', 'intimacy', 'parent', 'relative'],
-        onReadings: ['シン'],
-        kunReadings: ['おや', 'おや-', 'した.しい', 'した.しむ'],
-        strokeCount: 16,
-        jlpt: 4
-      },
-      {
-        kanji: '切',
-        meanings: ['be sharp', 'cut', 'cutoff'],
-        onReadings: ['サイ', 'セツ'],
-        kunReadings: ['-き.り', '-き.る', '-き.れ', '-き.れる', '-ぎ.り', '-ぎ.れ', 'き.り', 'き.る', 'き.れ', 'き.れる'],
-        strokeCount: 4,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '政治',
-    furigana: 'せいじ',
-    meaning: 'politics, government'
-,
-    kanjiDetails: [
-      {
-        kanji: '政',
-        meanings: ['government', 'politics'],
-        onReadings: ['ショウ', 'セイ'],
-        kunReadings: ['まつりごと', 'まん'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '治',
-        meanings: ['be at peace', 'calm down', 'conserve', 'cure', 'govt', 'heal', 'quell', 'reign', 'rule', 'subdue'],
-        onReadings: ['ジ', 'チ'],
-        kunReadings: ['おさ.まる', 'おさ.める', 'なお.す', 'なお.る'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '予約',
-    furigana: 'よやく',
-    meaning: 'reservation'
-,
-    kanjiDetails: [
-      {
-        kanji: '予',
-        meanings: ['I', 'beforehand', 'myself', 'previous'],
-        onReadings: ['シャ', 'ヨ'],
-        kunReadings: ['あらかじ.め'],
-        strokeCount: 4,
-        jlpt: 3
-      },
-      {
-        kanji: '約',
-        meanings: ['approximately', 'promise', 'shrink'],
-        onReadings: ['ヤク'],
-        kunReadings: ['つづ.まる', 'つづ.める', 'つづま.やか'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '泣く',
-    furigana: 'なく',
-    meaning: 'to weep'
-,
-    kanjiDetails: [
-      {
-        kanji: '泣',
-        meanings: ['cry', 'moan', 'weep'],
-        onReadings: ['キュウ'],
-        kunReadings: ['な.く'],
-        strokeCount: 8,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'すっと',
-    meaning: 'straight, all of a sudden'
-  },
-  {
-    level: 'N3',
-    word: '君',
-    furigana: 'きみ',
-    meaning: '(informal) You (used by men towards women)'
-,
-    kanjiDetails: [
-      {
-        kanji: '君',
-        meanings: ['male name suffix', 'mister', 'ruler', 'you'],
-        onReadings: ['クン'],
-        kunReadings: ['-ぎみ', 'きみ'],
-        strokeCount: 7,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '娘',
-    furigana: 'むすめ',
-    meaning: '(humble) daughter'
-,
-    kanjiDetails: [
-      {
-        kanji: '娘',
-        meanings: ['daughter', 'girl'],
-        onReadings: ['ジョウ'],
-        kunReadings: ['こ', 'むすめ'],
-        strokeCount: 10,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '踏む',
-    furigana: 'ふむ',
-    meaning: 'to step on'
-,
-    kanjiDetails: [
-      {
-        kanji: '踏',
-        meanings: ['appraise', 'carry through', 'evade payment', 'step', 'trample'],
-        onReadings: ['トウ'],
-        kunReadings: ['ふ.まえる', 'ふ.む'],
-        strokeCount: 15,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '店員',
-    furigana: 'てんいん',
-    meaning: 'shop assistant'
-,
-    kanjiDetails: [
-      {
-        kanji: '店',
-        meanings: ['shop', 'store'],
-        onReadings: ['テン'],
-        kunReadings: ['たな', 'みせ'],
-        strokeCount: 8,
-        jlpt: 4
-      },
-      {
-        kanji: '員',
-        meanings: ['employee', 'member', 'number', 'the one in charge'],
-        onReadings: ['イン'],
-        strokeCount: 10,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '通う',
-    furigana: 'かよう',
-    meaning: 'to commute'
-,
-    kanjiDetails: [
-      {
-        kanji: '通',
-        meanings: ['avenue', 'commute', 'counter for letters, notes, documents, etc.', 'pass through', 'traffic'],
-        onReadings: ['ツ', 'ツウ'],
-        kunReadings: ['-とお.り', '-どお.し', '-どお.り', 'かよ.う', 'とお.し', 'とお.す', 'とお.り', 'とお.る'],
-        strokeCount: 10,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '彼女',
-    furigana: 'かのじょ',
-    meaning: 'she, girlfriend'
-,
-    kanjiDetails: [
-      {
-        kanji: '彼',
-        meanings: ['he', 'that', 'the'],
-        onReadings: ['ヒ'],
-        kunReadings: ['か.の', 'かの', 'かれ'],
-        strokeCount: 8,
-        jlpt: 3
-      },
-      {
-        kanji: '女',
-        meanings: ['female', 'woman'],
-        onReadings: ['ジョ', 'ニョ', 'ニョウ'],
-        kunReadings: ['おんな', 'め'],
-        strokeCount: 3,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '場所',
-    furigana: 'ばしょ',
-    meaning: 'location'
-,
-    kanjiDetails: [
-      {
-        kanji: '場',
-        meanings: ['location', 'place'],
-        onReadings: ['ジョウ', 'チョウ'],
-        kunReadings: ['ば'],
-        strokeCount: 12,
-        jlpt: 4
-      },
-      {
-        kanji: '所',
-        meanings: ['extent', 'place'],
-        onReadings: ['ショ'],
-        kunReadings: ['-ところ', 'とこ', 'ところ', 'どころ'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '木綿',
-    furigana: 'もめん',
-    meaning: 'cotton'
-,
-    kanjiDetails: [
-      {
-        kanji: '木',
-        meanings: ['tree', 'wood'],
-        onReadings: ['ボク', 'モク'],
-        kunReadings: ['き', 'こ-'],
-        strokeCount: 4,
-        jlpt: 5
-      },
-      {
-        kanji: '綿',
-        meanings: ['cotton'],
-        onReadings: ['メン'],
-        kunReadings: ['わた'],
-        strokeCount: 14,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '畳',
-    furigana: 'たたみ',
-    meaning: 'Japanese straw mat'
-,
-    kanjiDetails: [
-      {
-        kanji: '畳',
-        meanings: ['counter for tatami mats', 'do away with', 'fold', 'shut up', 'tatami mat'],
-        onReadings: ['ジョウ', 'チョウ'],
-        kunReadings: ['かさ.なる', 'たた.む', 'たたみ'],
-        strokeCount: 12,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '裏',
-    furigana: 'うら',
-    meaning: 'reverse side'
-,
-    kanjiDetails: [
-      {
-        kanji: '裏',
-        meanings: ['amidst', 'back', 'in', 'inside', 'lining', 'palm', 'rear', 'reverse', 'sole', 'wrong side'],
-        onReadings: ['リ'],
-        kunReadings: ['うら'],
-        strokeCount: 13,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'びっくり・する',
-    meaning: 'to be surprised'
-  },
-  {
-    level: 'N3',
-    word: '地震',
-    furigana: 'じしん',
-    meaning: 'earthquake'
-,
-    kanjiDetails: [
-      {
-        kanji: '地',
-        meanings: ['earth', 'ground'],
-        onReadings: ['ジ', 'チ'],
-        strokeCount: 6,
-        jlpt: 4
-      },
-      {
-        kanji: '震',
-        meanings: ['quake', 'quiver', 'shake', 'shiver', 'tremble'],
-        onReadings: ['シン'],
-        kunReadings: ['ふる.う', 'ふる.える', 'ふる.わす', 'ふる.わせる'],
-        strokeCount: 15,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '湖',
-    furigana: 'みずうみ',
-    meaning: 'lake'
-,
-    kanjiDetails: [
-      {
-        kanji: '湖',
-        meanings: ['lake'],
-        onReadings: ['コ'],
-        kunReadings: ['みずうみ'],
-        strokeCount: 12,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '危険',
-    furigana: 'きけん',
-    meaning: 'danger'
-,
-    kanjiDetails: [
-      {
-        kanji: '危',
-        meanings: ['dangerous', 'fear', 'uneasy'],
-        onReadings: ['キ'],
-        kunReadings: ['あぶ.ない', 'あや.うい', 'あや.ぶむ'],
-        strokeCount: 6,
-        jlpt: 3
-      },
-      {
-        kanji: '険',
-        meanings: ['impregnable position', 'inaccessible place', 'precipitous', 'sharp eyes', 'steep place'],
-        onReadings: ['ケン'],
-        kunReadings: ['けわ.しい'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '出発',
-    furigana: 'しゅっぱつ・する',
-    meaning: 'to depart'
-,
-    kanjiDetails: [
-      {
-        kanji: '出',
-        meanings: ['come out', 'exit', 'go out', 'leave', 'protrude', 'put out'],
-        onReadings: ['シュツ', 'スイ'],
-        kunReadings: ['-だ.す', '-で', 'い.だす', 'い.でる', 'だ.す', 'で.る'],
-        strokeCount: 5,
-        jlpt: 5
-      },
-      {
-        kanji: '発',
-        meanings: ['counter for gunshots', 'departure', 'discharge', 'disclose', 'emit', 'publish', 'start from'],
-        onReadings: ['ハツ', 'ホツ'],
-        kunReadings: ['あば.く', 'おこ.る', 'た.つ', 'つか.わす', 'はな.つ'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '予習',
-    furigana: 'よしゅう',
-    meaning: 'preparation for a lesson'
-,
-    kanjiDetails: [
-      {
-        kanji: '予',
-        meanings: ['I', 'beforehand', 'myself', 'previous'],
-        onReadings: ['シャ', 'ヨ'],
-        kunReadings: ['あらかじ.め'],
-        strokeCount: 4,
-        jlpt: 3
-      },
-      {
-        kanji: '習',
-        meanings: ['learn'],
-        onReadings: ['シュウ', 'ジュ'],
-        kunReadings: ['なら.い', 'なら.う'],
-        strokeCount: 11,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '将来',
-    furigana: 'しょうらい',
-    meaning: 'future, prospects'
-,
-    kanjiDetails: [
-      {
-        kanji: '将',
-        meanings: ['admiral', 'and again', 'commander', 'from now on', 'general', 'just about', 'leader', 'or', 'soon'],
-        onReadings: ['ショウ', 'ソウ'],
-        kunReadings: ['はた', 'ひきい.る', 'まさ', 'まさ.に', 'もって'],
-        strokeCount: 10,
-        jlpt: 2
-      },
-      {
-        kanji: '来',
-        meanings: ['become', 'cause', 'come', 'due', 'next'],
-        onReadings: ['タイ', 'ライ'],
-        kunReadings: ['き', 'き.たす', 'き.たる', 'きた.す', 'きた.る', 'く.る', 'こ'],
-        strokeCount: 7,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '遊び',
-    furigana: 'あそび',
-    meaning: 'play'
-,
-    kanjiDetails: [
-      {
-        kanji: '遊',
-        meanings: ['play'],
-        onReadings: ['ユ', 'ユウ'],
-        kunReadings: ['あそ.ばす', 'あそ.ぶ'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '変わる',
-    furigana: 'かわる',
-    meaning: 'to change'
-,
-    kanjiDetails: [
-      {
-        kanji: '変',
-        meanings: ['change', 'strange', 'unusual'],
-        onReadings: ['ヘン'],
-        kunReadings: ['か.える', 'か.わり', 'か.わる'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '柔道',
-    furigana: 'じゅうどう',
-    meaning: 'judo'
-,
-    kanjiDetails: [
-      {
-        kanji: '柔',
-        meanings: ['gentleness', 'softness', 'tender', 'weakness'],
-        onReadings: ['ジュウ', 'ニュウ'],
-        kunReadings: ['やわ', 'やわ.ら', 'やわ.らか', 'やわ.らかい'],
-        strokeCount: 9,
-        jlpt: 2
-      },
-      {
-        kanji: '道',
-        meanings: ['course', 'district', 'journey', 'moral', 'road-way', 'street', 'teachings'],
-        onReadings: ['トウ', 'ドウ'],
-        kunReadings: ['いう', 'みち'],
-        strokeCount: 12,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '説明',
-    furigana: 'せつめい',
-    meaning: 'explanation'
-,
-    kanjiDetails: [
-      {
-        kanji: '説',
-        meanings: ['explanation', 'opinion', 'rumor', 'theory'],
-        onReadings: ['セツ', 'ゼイ'],
-        kunReadings: ['と.く'],
-        strokeCount: 14,
-        jlpt: 3
-      },
-      {
-        kanji: '明',
-        meanings: ['bright', 'light'],
-        onReadings: ['ミョウ', 'ミン', 'メイ'],
-        kunReadings: ['-あ.け', 'あ.かす', 'あ.かり', 'あ.く', 'あ.くる', 'あ.ける', 'あか.らむ', 'あか.るい', 'あか.るむ', 'あき.らか'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '返事',
-    furigana: 'へんじ',
-    meaning: 'reply'
-,
-    kanjiDetails: [
-      {
-        kanji: '返',
-        meanings: ['answer', 'fade', 'repay', 'return'],
-        onReadings: ['ヘン'],
-        kunReadings: ['-かえ.す', '-かえ.る', 'かえ.す', 'かえ.る'],
-        strokeCount: 7,
-        jlpt: 3
-      },
-      {
-        kanji: '事',
-        meanings: ['business', 'fact', 'matter', 'possibly', 'reason', 'thing'],
-        onReadings: ['ジ', 'ズ'],
-        kunReadings: ['こと', 'つか.う', 'つか.える'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '特別',
-    furigana: 'とくべつ',
-    meaning: 'special'
-,
-    kanjiDetails: [
-      {
-        kanji: '特',
-        meanings: ['special'],
-        onReadings: ['トク'],
-        strokeCount: 10,
-        jlpt: 4
-      },
-      {
-        kanji: '別',
-        meanings: ['another', 'branch off', 'diverge', 'extra', 'fork', 'separate', 'specially'],
-        onReadings: ['ベツ'],
-        kunReadings: ['わ.ける', 'わか.れる'],
-        strokeCount: 7,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '下りる',
-    furigana: 'おりる',
-    meaning: 'to get off'
-,
-    kanjiDetails: [
-      {
-        kanji: '下',
-        meanings: ['below', 'descend', 'down', 'give', 'inferior', 'low'],
-        onReadings: ['カ', 'ゲ'],
-        kunReadings: ['-くだ.す', 'お.りる', 'お.ろす', 'くだ.さる', 'くだ.す', 'くだ.り', 'くだ.る', 'さ.がる', 'さ.げる', 'した', 'しも', 'もと'],
-        strokeCount: 3,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '暖房',
-    furigana: 'だんぼう',
-    meaning: 'heating'
-,
-    kanjiDetails: [
-      {
-        kanji: '暖',
-        meanings: ['warmth'],
-        onReadings: ['ダン', 'ノン'],
-        kunReadings: ['あたた.か', 'あたた.かい', 'あたた.まる', 'あたた.める'],
-        strokeCount: 13,
-        jlpt: 1
-      },
-      {
-        kanji: '房',
-        meanings: ['bunch', 'fringe', 'house', 'lock (hair)', 'room', 'segment (orange)', 'tassel', 'tuft'],
-        onReadings: ['ボウ'],
-        kunReadings: ['ふさ'],
-        strokeCount: 8,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '伝える',
-    furigana: 'つたえる',
-    meaning: 'to report'
-,
-    kanjiDetails: [
-      {
-        kanji: '伝',
-        meanings: ['communicate', 'follow', 'go along', 'legend', 'report', 'tradition', 'transmit', 'walk along'],
-        onReadings: ['テン', 'デン'],
-        kunReadings: ['-づた.い', 'つた.う', 'つた.える', 'つた.わる', 'つだ.う', 'つて'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '展覧会',
-    furigana: 'てんらんかい',
-    meaning: 'exhibition'
-,
-    kanjiDetails: [
-      {
-        kanji: '展',
-        meanings: ['expand', 'unfold'],
-        onReadings: ['テン'],
-        strokeCount: 10,
-        jlpt: 1
-      },
-      {
-        kanji: '覧',
-        meanings: ['perusal', 'see'],
-        onReadings: ['ラン'],
-        kunReadings: ['み.る'],
-        strokeCount: 17,
-        jlpt: 1
-      },
-      {
-        kanji: '会',
-        meanings: ['association', 'interview', 'join', 'meet', 'meeting', 'party'],
-        onReadings: ['エ', 'カイ'],
-        kunReadings: ['あ.う', 'あ.わせる', 'あつ.まる'],
-        strokeCount: 6,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ガソリン',
-    meaning: 'petrol'
-  },
-  {
-    level: 'N3',
-    word: '中々',
-    furigana: 'なかなか',
-    meaning: 'considerably'
-,
-    kanjiDetails: [
-      {
-        kanji: '中',
-        meanings: ['center', 'in', 'inside', 'mean', 'middle'],
-        onReadings: ['チュウ'],
-        kunReadings: ['あた.る', 'うち', 'なか'],
-        strokeCount: 4,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '糸',
-    furigana: 'いと',
-    meaning: 'thread'
-,
-    kanjiDetails: [
-      {
-        kanji: '糸',
-        meanings: ['thread'],
-        onReadings: ['シ'],
-        kunReadings: ['いと'],
-        strokeCount: 6,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '倍',
-    furigana: 'ばい',
-    meaning: 'double'
-,
-    kanjiDetails: [
-      {
-        kanji: '倍',
-        meanings: ['double', 'fold', 'times', 'twice'],
-        onReadings: ['バイ'],
-        strokeCount: 10,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '課長',
-    furigana: 'かちょう',
-    meaning: 'section manager'
-,
-    kanjiDetails: [
-      {
-        kanji: '課',
-        meanings: ['chapter', 'counter for chapters (of a book)', 'department', 'division', 'lesson', 'section'],
-        onReadings: ['カ'],
-        strokeCount: 15,
-        jlpt: 2
-      },
-      {
-        kanji: '長',
-        meanings: ['leader', 'long', 'senior', 'superior'],
-        onReadings: ['チョウ'],
-        kunReadings: ['おさ', 'なが.い'],
-        strokeCount: 8,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '見物',
-    furigana: 'けんぶつ',
-    meaning: 'sightseeing'
-,
-    kanjiDetails: [
-      {
-        kanji: '見',
-        meanings: ['chances', 'hopes', 'idea', 'look at', 'opinion', 'see', 'visible'],
-        onReadings: ['ケン'],
-        kunReadings: ['み.える', 'み.せる', 'み.る'],
-        strokeCount: 7,
-        jlpt: 5
-      },
-      {
-        kanji: '物',
-        meanings: ['matter', 'object', 'thing'],
-        onReadings: ['ブツ', 'モツ'],
-        kunReadings: ['もの', 'もの-'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ガソリンスタンド',
-    meaning: 'petrol station'
-  },
-  {
-    level: 'N3',
-    word: '席',
-    furigana: 'せき',
-    meaning: 'seat'
-,
-    kanjiDetails: [
-      {
-        kanji: '席',
-        meanings: ['mat', 'occasion', 'place', 'seat'],
-        onReadings: ['セキ'],
-        kunReadings: ['むしろ'],
-        strokeCount: 10,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '関係',
-    furigana: 'かんけい',
-    meaning: 'relationship'
-,
-    kanjiDetails: [
-      {
-        kanji: '関',
-        meanings: ['barrier', 'concerning', 'connection', 'gateway', 'involve'],
-        onReadings: ['カン'],
-        kunReadings: ['-ぜき', 'かか.わる', 'からくり', 'かんぬき', 'せき'],
-        strokeCount: 14,
-        jlpt: 3
-      },
-      {
-        kanji: '係',
-        meanings: ['concern oneself', 'connection', 'duty', 'person in charge'],
-        onReadings: ['ケイ'],
-        kunReadings: ['-がかり', 'かか.る', 'かか.わる', 'かかり'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '拝見',
-    furigana: 'はいけん・する',
-    meaning: '(humble) to look at'
-,
-    kanjiDetails: [
-      {
-        kanji: '拝',
-        meanings: ['adore', 'pray to', 'worship'],
-        onReadings: ['ハイ'],
-        kunReadings: ['おが.む', 'おろが.む'],
-        strokeCount: 8,
-        jlpt: 2
-      },
-      {
-        kanji: '見',
-        meanings: ['chances', 'hopes', 'idea', 'look at', 'opinion', 'see', 'visible'],
-        onReadings: ['ケン'],
-        kunReadings: ['み.える', 'み.せる', 'み.る'],
-        strokeCount: 7,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '台風',
-    furigana: 'たいふう',
-    meaning: 'typhoon'
-,
-    kanjiDetails: [
-      {
-        kanji: '台',
-        meanings: ['a stand', 'counter for machines and vehicles', 'pedestal'],
-        onReadings: ['タイ', 'ダイ'],
-        kunReadings: ['うてな', 'つかさ', 'われ'],
-        strokeCount: 5,
-        jlpt: 4
-      },
-      {
-        kanji: '風',
-        meanings: ['air', 'manner', 'style', 'wind'],
-        onReadings: ['フ', 'フウ'],
-        kunReadings: ['かざ-', 'かぜ'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '片付ける',
-    furigana: 'かたづける',
-    meaning: 'to tidy up'
-,
-    kanjiDetails: [
-      {
-        kanji: '片',
-        meanings: ['leaf', 'one-sided', 'right-side kata radical (no. 91)', 'sheet'],
-        onReadings: ['ヘン'],
-        kunReadings: ['かた', 'かた-'],
-        strokeCount: 4,
-        jlpt: 2
-      },
-      {
-        kanji: '付',
-        meanings: ['adhere', 'append', 'attach', 'refer to'],
-        onReadings: ['フ'],
-        kunReadings: ['-つ.き', '-つ.け', '-つ.ける', '-つき', '-づ.き', '-づ.く', '-づ.け', '-づ.ける', '-づき', '-づけ', 'つ.き', 'つ.く', 'つ.け', 'つ.け-', 'つ.ける'],
-        strokeCount: 5,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '舟',
-    furigana: 'ふね',
-    meaning: 'ship'
-,
-    kanjiDetails: [
-      {
-        kanji: '舟',
-        meanings: ['boat', 'ship'],
-        onReadings: ['シュウ'],
-        kunReadings: ['-ぶね', 'ふな-', 'ふね'],
-        strokeCount: 6,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'または',
-    meaning: 'or, otherwise'
-  },
-  {
-    level: 'N3',
-    word: '教育',
-    furigana: 'きょういく',
-    meaning: 'education'
-,
-    kanjiDetails: [
-      {
-        kanji: '教',
-        meanings: ['doctrine', 'faith', 'teach'],
-        onReadings: ['キョウ'],
-        kunReadings: ['おし.える', 'おそ.わる'],
-        strokeCount: 11,
-        jlpt: 4
-      },
-      {
-        kanji: '育',
-        meanings: ['bring up', 'grow up', 'raise', 'rear'],
-        onReadings: ['イク'],
-        kunReadings: ['そだ.ち', 'そだ.つ', 'そだ.てる', 'はぐく.む'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '引っ越す',
-    furigana: 'ひっこす',
-    meaning: 'to move house'
-,
-    kanjiDetails: [
-      {
-        kanji: '引',
-        meanings: ['admit', 'install', 'jerk', 'pull', 'quote', 'refer to', 'tug'],
-        onReadings: ['イン'],
-        kunReadings: ['ひ.く', 'ひ.ける'],
-        strokeCount: 4,
-        jlpt: 3
-      },
-      {
-        kanji: '越',
-        meanings: ['Vietnam', 'cross over', 'exceed', 'move to', 'surpass'],
-        onReadings: ['エツ', 'オツ'],
-        kunReadings: ['-こ.す', '-ご.え', '-ご.し', 'こ.える', 'こ.す'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '会議',
-    furigana: 'かいぎ',
-    meaning: 'meeting'
-,
-    kanjiDetails: [
-      {
-        kanji: '会',
-        meanings: ['association', 'interview', 'join', 'meet', 'meeting', 'party'],
-        onReadings: ['エ', 'カイ'],
-        kunReadings: ['あ.う', 'あ.わせる', 'あつ.まる'],
-        strokeCount: 6,
-        jlpt: 4
-      },
-      {
-        kanji: '議',
-        meanings: ['consideration', 'consultation', 'debate', 'deliberation'],
-        onReadings: ['ギ'],
-        strokeCount: 20,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '米',
-    furigana: 'こめ',
-    meaning: 'uncooked rice'
-,
-    kanjiDetails: [
-      {
-        kanji: '米',
-        meanings: ['USA', 'metre', 'rice'],
-        onReadings: ['ベイ', 'マイ', 'メエトル'],
-        kunReadings: ['こめ', 'よね'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'もっとも',
-    meaning: 'extremely'
-  },
-  {
-    level: 'N3',
-    word: 'かまう',
-    meaning: 'to mind'
-  },
-  {
-    level: 'N3',
-    word: '教会',
-    furigana: 'きょうかい',
-    meaning: 'church'
-,
-    kanjiDetails: [
-      {
-        kanji: '教',
-        meanings: ['doctrine', 'faith', 'teach'],
-        onReadings: ['キョウ'],
-        kunReadings: ['おし.える', 'おそ.わる'],
-        strokeCount: 11,
-        jlpt: 4
-      },
-      {
-        kanji: '会',
-        meanings: ['association', 'interview', 'join', 'meet', 'meeting', 'party'],
-        onReadings: ['エ', 'カイ'],
-        kunReadings: ['あ.う', 'あ.わせる', 'あつ.まる'],
-        strokeCount: 6,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '落す',
-    furigana: 'おとす',
-    meaning: 'to drop'
-,
-    kanjiDetails: [
-      {
-        kanji: '落',
-        meanings: ['come down', 'drop', 'fall', 'hamlet', 'village'],
-        onReadings: ['ラク'],
-        kunReadings: ['お.ち', 'お.ちる', 'お.とす'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'まじめ',
-    meaning: 'serious'
-  },
-  {
-    level: 'N3',
-    word: '謝る',
-    furigana: 'あやまる',
-    meaning: 'to apologize'
-,
-    kanjiDetails: [
-      {
-        kanji: '謝',
-        meanings: ['apologize', 'refuse', 'thank'],
-        onReadings: ['シャ'],
-        kunReadings: ['あやま.る'],
-        strokeCount: 17,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'におい',
-    meaning: 'a smell'
-  },
-  {
-    level: 'N3',
-    word: '騒ぐ',
-    furigana: 'さわぐ',
-    meaning: 'to make noise, to be excited'
-,
-    kanjiDetails: [
-      {
-        kanji: '騒',
-        meanings: ['boisterous', 'clamor', 'disturb', 'excite', 'make noise'],
-        onReadings: ['ソウ'],
-        kunReadings: ['うれい', 'さわ.がしい', 'さわ.ぐ'],
-        strokeCount: 18,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '島',
-    furigana: 'しま',
-    meaning: 'island'
-,
-    kanjiDetails: [
-      {
-        kanji: '島',
-        meanings: ['island'],
-        onReadings: ['トウ'],
-        kunReadings: ['しま'],
-        strokeCount: 10,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'すっかり',
-    meaning: 'completely'
-  },
-  {
-    level: 'N3',
-    word: '答',
-    furigana: 'こたえ',
-    meaning: 'response'
-,
-    kanjiDetails: [
-      {
-        kanji: '答',
-        meanings: ['answer', 'solution'],
-        onReadings: ['トウ'],
-        kunReadings: ['こた.え', 'こた.える'],
-        strokeCount: 12,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '原因',
-    furigana: 'げんいん',
-    meaning: 'cause, source'
-,
-    kanjiDetails: [
-      {
-        kanji: '原',
-        meanings: ['field', 'meadow', 'original', 'plain', 'prairie', 'primitive', 'tundra', 'wilderness'],
-        onReadings: ['ゲン'],
-        kunReadings: ['はら'],
-        strokeCount: 10,
-        jlpt: 3
-      },
-      {
-        kanji: '因',
-        meanings: ['be associated with', 'be limited to', 'cause', 'depend on', 'factor'],
-        onReadings: ['イン'],
-        kunReadings: ['ちな.む', 'よ.る'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '動物園',
-    furigana: 'どうぶつえん',
-    meaning: 'zoo'
-,
-    kanjiDetails: [
-      {
-        kanji: '動',
-        meanings: ['change', 'confusion', 'motion', 'move', 'shake', 'shift'],
-        onReadings: ['ドウ'],
-        kunReadings: ['うご.かす', 'うご.く'],
-        strokeCount: 11,
-        jlpt: 4
-      },
-      {
-        kanji: '物',
-        meanings: ['matter', 'object', 'thing'],
-        onReadings: ['ブツ', 'モツ'],
-        kunReadings: ['もの', 'もの-'],
-        strokeCount: 8,
-        jlpt: 4
-      },
-      {
-        kanji: '園',
-        meanings: ['farm', 'garden', 'park', 'yard'],
-        onReadings: ['エン'],
-        kunReadings: ['その'],
-        strokeCount: 13,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'スーツ',
-    meaning: 'suit'
-  },
-  {
-    level: 'N3',
-    word: 'ああ',
-    meaning: 'like that'
-  },
-  {
-    level: 'N3',
-    word: '最後',
-    furigana: 'さいご',
-    meaning: 'last, end'
-,
-    kanjiDetails: [
-      {
-        kanji: '最',
-        meanings: ['extreme', 'most', 'utmost'],
-        onReadings: ['サイ', 'シュ'],
-        kunReadings: ['つま', 'もっと.も'],
-        strokeCount: 12,
-        jlpt: 3
-      },
-      {
-        kanji: '後',
-        meanings: ['back', 'behind', 'later'],
-        onReadings: ['コウ', 'ゴ'],
-        kunReadings: ['あと', 'うし.ろ', 'うしろ', 'おく.れる', 'のち'],
-        strokeCount: 9,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'うかがう',
-    meaning: 'to visit'
-  },
-  {
-    level: 'N3',
-    word: 'ほとんど',
-    meaning: 'mostly'
-  },
-  {
-    level: 'N3',
-    word: '夢',
-    furigana: 'ゆめ',
-    meaning: 'dream'
-,
-    kanjiDetails: [
-      {
-        kanji: '夢',
-        meanings: ['dream', 'illusion', 'vision'],
-        onReadings: ['ボウ', 'ム'],
-        kunReadings: ['くら.い', 'ゆめ', 'ゆめ.みる'],
-        strokeCount: 13,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'つき',
-    meaning: 'moon'
-  },
-  {
-    level: 'N3',
-    word: '高校',
-    furigana: 'こうこう',
-    meaning: 'high school'
-,
-    kanjiDetails: [
-      {
-        kanji: '高',
-        meanings: ['expensive', 'high', 'tall'],
-        onReadings: ['コウ'],
-        kunReadings: ['-だか', 'たか', 'たか.い', 'たか.まる', 'たか.める'],
-        strokeCount: 10,
-        jlpt: 5
-      },
-      {
-        kanji: '校',
-        meanings: ['correction', 'exam', 'printing', 'proof', 'school'],
-        onReadings: ['キョウ', 'コウ'],
-        strokeCount: 10,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '気',
-    furigana: 'き',
-    meaning: 'spirit, mood'
-,
-    kanjiDetails: [
-      {
-        kanji: '気',
-        meanings: ['air', 'atmosphere', 'mind', 'mood', 'spirit'],
-        onReadings: ['キ', 'ケ'],
-        kunReadings: ['き'],
-        strokeCount: 6,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '正しい',
-    furigana: 'ただしい',
-    meaning: 'correct'
-,
-    kanjiDetails: [
-      {
-        kanji: '正',
-        meanings: ['10**40', 'correct', 'justice', 'righteous'],
-        onReadings: ['ショウ', 'セイ'],
-        kunReadings: ['ただ.しい', 'ただ.す', 'まさ', 'まさ.に'],
-        strokeCount: 5,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '輸出',
-    furigana: 'ゆしゅつ・する',
-    meaning: 'to export'
-,
-    kanjiDetails: [
-      {
-        kanji: '輸',
-        meanings: ['be inferior', 'send', 'transport'],
-        onReadings: ['シュ', 'ユ'],
-        strokeCount: 16,
-        jlpt: 2
-      },
-      {
-        kanji: '出',
-        meanings: ['come out', 'exit', 'go out', 'leave', 'protrude', 'put out'],
-        onReadings: ['シュツ', 'スイ'],
-        kunReadings: ['-だ.す', '-で', 'い.だす', 'い.でる', 'だ.す', 'で.る'],
-        strokeCount: 5,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '文化',
-    furigana: 'ぶんか',
-    meaning: 'culture'
-,
-    kanjiDetails: [
-      {
-        kanji: '文',
-        meanings: ['art', 'decoration', 'figures', 'literary radical (no. 67)', 'literature', 'plan', 'sentence', 'style'],
-        onReadings: ['ブン', 'モン'],
-        kunReadings: ['あや', 'ふみ'],
-        strokeCount: 4,
-        jlpt: 4
-      },
-      {
-        kanji: '化',
-        meanings: ['-ization', 'change', 'delude', 'enchant', 'influence', 'take the form of'],
-        onReadings: ['カ', 'ケ'],
-        kunReadings: ['け.する', 'ば.かす', 'ば.ける', 'ふ.ける'],
-        strokeCount: 4,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'だめ',
-    meaning: 'no good'
-  },
-  {
-    level: 'N3',
-    word: 'けれど / けれども',
-    meaning: 'however'
-  },
-  {
-    level: 'N3',
-    word: '飾る',
-    furigana: 'かざる',
-    meaning: 'to decorate'
-,
-    kanjiDetails: [
-      {
-        kanji: '飾',
-        meanings: ['adorn', 'decorate', 'embellish', 'ornament'],
-        onReadings: ['ショク'],
-        kunReadings: ['かざ.り', 'かざ.る'],
-        strokeCount: 13,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '準備',
-    furigana: 'じゅんび・する',
-    meaning: 'to prepare'
-,
-    kanjiDetails: [
-      {
-        kanji: '準',
-        meanings: ['conform', 'correspond to', 'imitate', 'proportionate to', 'semi-'],
-        onReadings: ['ジュン'],
-        kunReadings: ['じゅん.じる', 'じゅん.ずる', 'なぞら.える', 'のり', 'ひと.しい', 'みずもり'],
-        strokeCount: 13,
-        jlpt: 2
-      },
-      {
-        kanji: '備',
-        meanings: ['equip', 'preparation', 'provision'],
-        onReadings: ['ビ'],
-        kunReadings: ['そな.える', 'そな.わる', 'つぶさ.に'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '卒業',
-    furigana: 'そつぎょう',
-    meaning: 'graduation'
-,
-    kanjiDetails: [
-      {
-        kanji: '卒',
-        meanings: ['die', 'graduate', 'private', 'soldier'],
-        onReadings: ['シュツ', 'ソツ'],
-        kunReadings: ['お.える', 'お.わる', 'そっ.する', 'ついに', 'にわか'],
-        strokeCount: 8,
-        jlpt: 2
-      },
-      {
-        kanji: '業',
-        meanings: ['arts', 'business', 'performance', 'vocation'],
-        onReadings: ['ギョウ', 'ゴウ'],
-        kunReadings: ['わざ'],
-        strokeCount: 13,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '間に合う',
-    furigana: 'まにあう',
-    meaning: 'to be in time for'
-,
-    kanjiDetails: [
-      {
-        kanji: '間',
-        meanings: ['interval', 'space'],
-        onReadings: ['カン', 'ケン'],
-        kunReadings: ['あい', 'あいだ', 'ま'],
-        strokeCount: 12,
-        jlpt: 5
-      },
-      {
-        kanji: '合',
-        meanings: ['0.1', 'fit', 'join', 'suit'],
-        onReadings: ['カッ', 'ガッ', 'ゴウ'],
-        kunReadings: ['-あ.い', '-あ.う', '-あ.わせる', '-あい', 'あ.い', 'あ.う', 'あ.わす', 'あ.わせる', 'あい-'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'それに',
-    meaning: 'moreover'
-  },
-  {
-    level: 'N3',
-    word: '具合',
-    furigana: 'ぐあい',
-    meaning: 'condition, health'
-,
-    kanjiDetails: [
-      {
-        kanji: '具',
-        meanings: ['counter for armor, suits, sets of furniture', 'ingredients', 'means', 'possess', 'tool', 'utensil'],
-        onReadings: ['グ'],
-        kunReadings: ['そな.える', 'つぶさ.に'],
-        strokeCount: 8,
-        jlpt: 3
-      },
-      {
-        kanji: '合',
-        meanings: ['0.1', 'fit', 'join', 'suit'],
-        onReadings: ['カッ', 'ガッ', 'ゴウ'],
-        kunReadings: ['-あ.い', '-あ.う', '-あ.わせる', '-あい', 'あ.い', 'あ.う', 'あ.わす', 'あ.わせる', 'あい-'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '贈り物',
-    furigana: 'おくりもの',
-    meaning: 'gift'
-,
-    kanjiDetails: [
-      {
-        kanji: '贈',
-        meanings: ['award to', 'confer on', 'give to', 'presenting something', 'presents', 'send'],
-        onReadings: ['ソウ', 'ゾウ'],
-        kunReadings: ['おく.る'],
-        strokeCount: 18,
-        jlpt: 2
-      },
-      {
-        kanji: '物',
-        meanings: ['matter', 'object', 'thing'],
-        onReadings: ['ブツ', 'モツ'],
-        kunReadings: ['もの', 'もの-'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '堅 / 硬/固い',
-    furigana: 'かたい',
-    meaning: 'hard'
-,
-    kanjiDetails: [
-      {
-        kanji: '堅',
-        meanings: ['hard', 'reliable', 'solid', 'strict', 'tight', 'tough'],
-        onReadings: ['ケン'],
-        kunReadings: ['-がた.い', 'かた.い'],
-        strokeCount: 12,
-        jlpt: 1
-      },
-      {
-        kanji: '硬',
-        meanings: ['hard', 'stiff'],
-        onReadings: ['コウ'],
-        kunReadings: ['かた.い'],
-        strokeCount: 12,
-        jlpt: 2
-      },
-      {
-        kanji: '固',
-        meanings: ['clot', 'curdle', 'harden', 'set'],
-        onReadings: ['コ'],
-        kunReadings: ['かた.い', 'かた.まり', 'かた.まる', 'かた.める'],
-        strokeCount: 8,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '貿易',
-    furigana: 'ぼうえき',
-    meaning: 'trade'
-,
-    kanjiDetails: [
-      {
-        kanji: '貿',
-        meanings: ['exchange', 'trade'],
-        onReadings: ['ボウ'],
-        strokeCount: 12,
-        jlpt: 2
-      },
-      {
-        kanji: '易',
-        meanings: ['divination', 'easy', 'fortune-telling', 'ready to', 'simple'],
-        onReadings: ['イ', 'エキ'],
-        kunReadings: ['やさ.しい', 'やす.い'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '考える',
-    furigana: 'かんがえる',
-    meaning: 'to consider'
-,
-    kanjiDetails: [
-      {
-        kanji: '考',
-        meanings: ['consider', 'think over'],
-        onReadings: ['コウ'],
-        kunReadings: ['かんが.え', 'かんが.える'],
-        strokeCount: 6,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '別れる',
-    furigana: 'わかれる',
-    meaning: 'to separate'
-,
-    kanjiDetails: [
-      {
-        kanji: '別',
-        meanings: ['another', 'branch off', 'diverge', 'extra', 'fork', 'separate', 'specially'],
-        onReadings: ['ベツ'],
-        kunReadings: ['わ.ける', 'わか.れる'],
-        strokeCount: 7,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'サラダ',
-    meaning: 'salad'
-  },
-  {
-    level: 'N3',
-    word: '寝坊',
-    furigana: 'ねぼう',
-    meaning: 'sleeping in late'
-,
-    kanjiDetails: [
-      {
-        kanji: '寝',
-        meanings: ['bed', 'lie down', 'remain unsold', 'rest', 'sleep'],
-        onReadings: ['シン'],
-        kunReadings: ['い.ぬ', 'ね.かす', 'ね.る', 'みたまや', 'や.める'],
-        strokeCount: 13,
-        jlpt: 3
-      },
-      {
-        kanji: '坊',
-        meanings: ['boy', 'priest', 'priest\'s residence'],
-        onReadings: ['ボウ', 'ボッ'],
-        strokeCount: 7,
-        jlpt: null
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '科学',
-    furigana: 'かがく',
-    meaning: 'science'
-,
-    kanjiDetails: [
-      {
-        kanji: '科',
-        meanings: ['course', 'department', 'section'],
-        onReadings: ['カ'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '学',
-        meanings: ['learning', 'science', 'study'],
-        onReadings: ['ガク'],
-        kunReadings: ['まな.ぶ'],
-        strokeCount: 8,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'こう',
-    meaning: 'this way'
-  },
-  {
-    level: 'N3',
-    word: '光る',
-    furigana: 'ひかる',
-    meaning: 'to shine, to glitter'
-,
-    kanjiDetails: [
-      {
-        kanji: '光',
-        meanings: ['light', 'ray'],
-        onReadings: ['コウ'],
-        kunReadings: ['ひか.る', 'ひかり'],
-        strokeCount: 6,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '息子',
-    furigana: 'むすこ',
-    meaning: '(humble) son'
-,
-    kanjiDetails: [
-      {
-        kanji: '息',
-        meanings: ['breath', 'coming to an end', 'interest (on money)', 'nuture', 'respiration', 'rest', 'son'],
-        onReadings: ['ソク'],
-        kunReadings: ['いき'],
-        strokeCount: 10,
-        jlpt: 3
-      },
-      {
-        kanji: '子',
-        meanings: ['11PM-1AM', 'child', 'first sign of Chinese zodiac', 'sign of the rat'],
-        onReadings: ['シ', 'ス', 'ツ'],
-        kunReadings: ['-こ', 'こ', 'ね'],
-        strokeCount: 3,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '育てる',
-    furigana: 'そだてる',
-    meaning: 'to rear, to bring up'
-,
-    kanjiDetails: [
-      {
-        kanji: '育',
-        meanings: ['bring up', 'grow up', 'raise', 'rear'],
-        onReadings: ['イク'],
-        kunReadings: ['そだ.ち', 'そだ.つ', 'そだ.てる', 'はぐく.む'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'きっと',
-    meaning: 'surely'
-  },
-  {
-    level: 'N3',
-    word: '空く',
-    furigana: 'あく',
-    meaning: 'to open, to become empty'
-,
-    kanjiDetails: [
-      {
-        kanji: '空',
-        meanings: ['empty', 'sky', 'vacant', 'vacuum', 'void'],
-        onReadings: ['クウ'],
-        kunReadings: ['あ.き', 'あ.く', 'あ.ける', 'から', 'す.かす', 'す.く', 'そら', 'むな.しい'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '冷房',
-    furigana: 'れいぼう',
-    meaning: 'air conditioning'
-,
-    kanjiDetails: [
-      {
-        kanji: '冷',
-        meanings: ['chill', 'cold (beer, person)', 'cool'],
-        onReadings: ['レイ'],
-        kunReadings: ['さ.ます', 'さ.める', 'つめ.たい', 'ひ.える', 'ひ.や', 'ひ.やかす', 'ひ.やす', 'ひ.ややか'],
-        strokeCount: 7,
-        jlpt: 3
-      },
-      {
-        kanji: '房',
-        meanings: ['bunch', 'fringe', 'house', 'lock (hair)', 'room', 'segment (orange)', 'tassel', 'tuft'],
-        onReadings: ['ボウ'],
-        kunReadings: ['ふさ'],
-        strokeCount: 8,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'コンサート',
-    meaning: 'concert'
-  },
-  {
-    level: 'N3',
-    word: '始める',
-    furigana: 'はじめる',
-    meaning: 'to begin'
-,
-    kanjiDetails: [
-      {
-        kanji: '始',
-        meanings: ['begin', 'commence'],
-        onReadings: ['シ'],
-        kunReadings: ['-はじ.める', 'はじ.まる', 'はじ.める'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '電灯',
-    furigana: 'でんとう',
-    meaning: 'electric light'
-,
-    kanjiDetails: [
-      {
-        kanji: '電',
-        meanings: ['electricity'],
-        onReadings: ['デン'],
-        strokeCount: 13,
-        jlpt: 5
-      },
-      {
-        kanji: '灯',
-        meanings: ['a light', 'counter for lights', 'lamp', 'light'],
-        onReadings: ['トウ'],
-        kunReadings: ['あかり', 'とも.す', 'ともしび', 'ひ', 'ほ-'],
-        strokeCount: 6,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '医学',
-    furigana: 'いがく',
-    meaning: 'medical science'
-,
-    kanjiDetails: [
-      {
-        kanji: '医',
-        meanings: ['doctor', 'medicine'],
-        onReadings: ['イ'],
-        kunReadings: ['い.する', 'い.やす', 'くすし'],
-        strokeCount: 7,
-        jlpt: 4
-      },
-      {
-        kanji: '学',
-        meanings: ['learning', 'science', 'study'],
-        onReadings: ['ガク'],
-        kunReadings: ['まな.ぶ'],
-        strokeCount: 8,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '柔らかい',
-    furigana: 'やわらかい',
-    meaning: 'soft'
-,
-    kanjiDetails: [
-      {
-        kanji: '柔',
-        meanings: ['gentleness', 'softness', 'tender', 'weakness'],
-        onReadings: ['ジュウ', 'ニュウ'],
-        kunReadings: ['やわ', 'やわ.ら', 'やわ.らか', 'やわ.らかい'],
-        strokeCount: 9,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '下げる',
-    furigana: 'さげる',
-    meaning: 'to hang, to lower, to move back'
-,
-    kanjiDetails: [
-      {
-        kanji: '下',
-        meanings: ['below', 'descend', 'down', 'give', 'inferior', 'low'],
-        onReadings: ['カ', 'ゲ'],
-        kunReadings: ['-くだ.す', 'お.りる', 'お.ろす', 'くだ.さる', 'くだ.す', 'くだ.り', 'くだ.る', 'さ.がる', 'さ.げる', 'した', 'しも', 'もと'],
-        strokeCount: 3,
-        jlpt: 5
+      {
+        part: "동사",
+        means: ["건배;축배"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かんぱい",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '校長',
-    furigana: 'こうちょう',
-    meaning: 'headmaster'
-,
-    kanjiDetails: [
+    entry_id: "90160243ca59410cac2c4ec430b5bca9",
+    origin_entry_id: "JK000000018936",
+    entry: "かんりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '校',
-        meanings: ['correction', 'exam', 'printing', 'proof', 'school'],
-        onReadings: ['キョウ', 'コウ'],
-        strokeCount: 10,
-        jlpt: 5
+        part: "명사",
+        means: ["완료"]
       },
-      {
-        kanji: '長',
-        meanings: ['leader', 'long', 'senior', 'superior'],
-        onReadings: ['チョウ'],
-        kunReadings: ['おさ', 'なが.い'],
-        strokeCount: 8,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '新聞社',
-    furigana: 'しんぶんしゃ',
-    meaning: 'newspaper company'
-,
-    kanjiDetails: [
       {
-        kanji: '新',
-        meanings: ['new'],
-        onReadings: ['シン'],
-        kunReadings: ['あたら.しい', 'あら-', 'あら.た', 'にい-'],
-        strokeCount: 13,
-        jlpt: 4
-      },
-      {
-        kanji: '聞',
-        meanings: ['ask', 'hear', 'listen'],
-        onReadings: ['ブン', 'モン'],
-        kunReadings: ['き.く', 'き.こえる'],
-        strokeCount: 14,
-        jlpt: 5
-      },
-      {
-        kanji: '社',
-        meanings: ['association', 'company', 'firm', 'office', 'shrine'],
-        onReadings: ['シャ'],
-        kunReadings: ['やしろ'],
-        strokeCount: 7,
-        jlpt: 4
+        part: "동사",
+        means: ["동작이 끝났거나 동작·상태의 결과가 현재도 계속되고 있음을 나타내는 어법"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "かんりょう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'ファックス',
-    meaning: 'fax'
-  },
-  {
-    level: 'N3',
-    word: '放送',
-    furigana: 'ほうそう・する',
-    meaning: 'to broadcast'
-,
-    kanjiDetails: [
+    entry_id: "1423a5c0e33a44cc8c9912945388cad2",
+    origin_entry_id: "JK000000012893",
+    entry: "がいしゅつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '放',
-        meanings: ['banish', 'emit', 'fire', 'liberate', 'release', 'set free', 'shoot'],
-        onReadings: ['ホウ'],
-        kunReadings: ['-っぱな.し', 'こ.く', 'はな.す', 'はな.つ', 'はな.れる', 'ほう.る'],
-        strokeCount: 8,
-        jlpt: 3
-      },
+        part: "명사",
+        means: ["외출;나들이"]
+      },
       {
-        kanji: '送',
-        meanings: ['escort', 'send'],
-        onReadings: ['ソウ'],
-        kunReadings: ['おく.る'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'やっと',
-    meaning: 'at last'
-  },
-  {
-    level: 'N3',
-    word: 'オートバイ',
-    meaning: 'motorcycle'
-  },
-  {
-    level: 'N3',
-    word: 'レポート / リポート',
-    meaning: 'report'
-  },
-  {
-    level: 'N3',
-    word: '心配',
-    furigana: 'しんぱい・する',
-    meaning: 'to worry'
-,
-    kanjiDetails: [
-      {
-        kanji: '心',
-        meanings: ['heart', 'heart radical (no. 61)', 'mind', 'spirit'],
-        onReadings: ['シン'],
-        kunReadings: ['-ごころ', 'こころ'],
-        strokeCount: 4,
-        jlpt: 4
-      },
-      {
-        kanji: '配',
-        meanings: ['distribute', 'exile', 'rationing', 'spouse'],
-        onReadings: ['ハイ'],
-        kunReadings: ['くば.る'],
-        strokeCount: 10,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '急行',
-    furigana: 'きゅうこう',
-    meaning: 'speedy, express'
-,
-    kanjiDetails: [
-      {
-        kanji: '急',
-        meanings: ['emergency', 'hurry', 'steep', 'sudden'],
-        onReadings: ['キュウ'],
-        kunReadings: ['いそ.ぎ', 'いそ.ぐ', 'せ.く'],
-        strokeCount: 9,
-        jlpt: 4
-      },
-      {
-        kanji: '行',
-        meanings: ['act', 'bank', 'carry out', 'conduct', 'going', 'journey', 'line', 'row'],
-        onReadings: ['アン', 'ギョウ', 'コウ'],
-        kunReadings: ['-い.き', '-いき', '-ゆ.き', '-ゆき', 'い.く', 'おこ.なう', 'おこな.う', 'ゆ.く'],
-        strokeCount: 6,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '拾う',
-    furigana: 'ひろう',
-    meaning: 'to pick up, to gather'
-,
-    kanjiDetails: [
-      {
-        kanji: '拾',
-        meanings: ['find', 'gather', 'go on foot', 'pick up', 'ten'],
-        onReadings: ['シュウ', 'ジュウ'],
-        kunReadings: ['ひろ.う'],
-        strokeCount: 9,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '塗る',
-    furigana: 'ぬる',
-    meaning: 'to paint, to plaster'
-,
-    kanjiDetails: [
-      {
-        kanji: '塗',
-        meanings: ['coating', 'daub', 'paint', 'plaster', 'smear'],
-        onReadings: ['ト'],
-        kunReadings: ['ぬ.り', 'ぬ.る', 'まみ.れる'],
-        strokeCount: 13,
-        jlpt: 2
+        part: "동사",
+        means: ["외출;나들이"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "がいしゅつ",
+    category3: null
   },
-  {
-    level: 'N3',
-    word: '線',
-    furigana: 'せん',
-    meaning: 'line'
-,
-    kanjiDetails: [
-      {
-        kanji: '線',
-        meanings: ['line', 'track'],
-        onReadings: ['セン'],
-        kunReadings: ['すじ'],
-        strokeCount: 15,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '用意',
-    furigana: 'ようい',
-    meaning: 'preparation'
-,
-    kanjiDetails: [
-      {
-        kanji: '用',
-        meanings: ['business', 'employ', 'service', 'use', 'utilize'],
-        onReadings: ['ヨウ'],
-        kunReadings: ['もち.いる'],
-        strokeCount: 5,
-        jlpt: 4
-      },
-      {
-        kanji: '意',
-        meanings: ['care', 'desire', 'heart', 'idea', 'liking', 'mind', 'taste', 'thought'],
-        onReadings: ['イ'],
-        strokeCount: 13,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '生活',
-    furigana: 'せいかつ・する',
-    meaning: 'to live'
-,
-    kanjiDetails: [
-      {
-        kanji: '生',
-        meanings: ['birth', 'genuine', 'life'],
-        onReadings: ['ショウ', 'セイ'],
-        kunReadings: ['-う', 'い.かす', 'い.きる', 'い.ける', 'う.まれ', 'う.まれる', 'う.む', 'うま.れる', 'うまれ', 'お.う', 'き', 'な.す', 'な.る', 'なま', 'なま-', 'は.える', 'は.やす', 'む.す'],
-        strokeCount: 5,
-        jlpt: 5
-      },
-      {
-        kanji: '活',
-        meanings: ['being helped', 'lively', 'living', 'resuscitation'],
-        onReadings: ['カツ'],
-        kunReadings: ['い.かす', 'い.きる', 'い.ける'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '退院',
-    furigana: 'たいいん・する',
-    meaning: 'to leave hospital'
-,
-    kanjiDetails: [
-      {
-        kanji: '退',
-        meanings: ['expel', 'reject', 'repel', 'resign', 'retire', 'retreat', 'withdraw'],
-        onReadings: ['タイ'],
-        kunReadings: ['しりぞ.く', 'しりぞ.ける', 'ど.く', 'の.く', 'の.ける', 'ひ.く'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '院',
-        meanings: ['Inst.', 'institution', 'mansion', 'school', 'temple'],
-        onReadings: ['イン'],
-        strokeCount: 10,
-        jlpt: 4
+  {
+    entry_id: "49dd3205de254856b178123f0d7f9bf9",
+    origin_entry_id: "JK000000013637",
+    entry: "がか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["화가"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "がか",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'けが・する',
-    meaning: 'to injure'
+    entry_id: "28d25c9028804fdfa8c2860ae3e7a6f0",
+    origin_entry_id: "JK000000014204",
+    entry: "がくしゃ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["학자"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "がくしゃ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '揺れる',
-    furigana: 'ゆれる',
-    meaning: 'to shake, to sway'
-,
-    kanjiDetails: [
-      {
-        kanji: '揺',
-        meanings: ['rock', 'shake', 'sway', 'swing', 'tremble', 'vibrate'],
-        onReadings: ['ヨウ'],
-        kunReadings: ['うご.く', 'ゆ.さぶる', 'ゆ.すぶる', 'ゆ.する', 'ゆ.らぐ', 'ゆ.る', 'ゆ.るぐ', 'ゆ.れる'],
-        strokeCount: 12,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '入学',
-    furigana: 'にゅうがく・する',
-    meaning: 'to enter school or university'
-,
-    kanjiDetails: [
+    entry_id: "7eb78f11d1f041ac87bbb9707aff6013",
+    origin_entry_id: "JK000000014224",
+    entry: "がくしゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '入',
-        meanings: ['enter', 'insert'],
-        onReadings: ['ジュ', 'ニュウ'],
-        kunReadings: ['-い.り', '-い.る', '-い.れ', 'い.る', 'い.れる', 'はい.る'],
-        strokeCount: 2,
-        jlpt: 5
-      },
-      {
-        kanji: '学',
-        meanings: ['learning', 'science', 'study'],
-        onReadings: ['ガク'],
-        kunReadings: ['まな.ぶ'],
-        strokeCount: 8,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '数学',
-    furigana: 'すうがく',
-    meaning: 'mathematics, arithmetic'
-,
-    kanjiDetails: [
-      {
-        kanji: '数',
-        meanings: ['fate', 'figures', 'law', 'number', 'strength'],
-        onReadings: ['サク', 'シュ', 'ス', 'スウ', 'ソク'],
-        kunReadings: ['かず', 'かぞ.える', 'しばしば', 'せ.める', 'わずらわ.しい'],
-        strokeCount: 13,
-        jlpt: 3
+        part: "명사",
+        means: ["학습"]
       },
-      {
-        kanji: '学',
-        meanings: ['learning', 'science', 'study'],
-        onReadings: ['ガク'],
-        kunReadings: ['まな.ぶ'],
-        strokeCount: 8,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ぜんぜん',
-    meaning: 'not entirely (used in a negative sentence)'
-  },
-  {
-    level: 'N3',
-    word: '急ぐ',
-    furigana: 'いそぐ',
-    meaning: 'to hurry'
-,
-    kanjiDetails: [
       {
-        kanji: '急',
-        meanings: ['emergency', 'hurry', 'steep', 'sudden'],
-        onReadings: ['キュウ'],
-        kunReadings: ['いそ.ぎ', 'いそ.ぐ', 'せ.く'],
-        strokeCount: 9,
-        jlpt: 4
+        part: "동사",
+        means: ["학습"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "がくしゅう",
+    category3: null
   },
-  {
-    level: 'N3',
-    word: 'ひどい',
-    meaning: 'awful'
-  },
-  {
-    level: 'N3',
-    word: '品物',
-    furigana: 'しなもの',
-    meaning: 'goods'
-,
-    kanjiDetails: [
+  {
+    entry_id: "c78fb098228f4c7a95667cb933e2bbe9",
+    origin_entry_id: "JK000000014400",
+    entry: "がくひ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '品',
-        meanings: ['article', 'counter for meal courses', 'dignity', 'goods', 'refinement'],
-        onReadings: ['ヒン', 'ホン'],
-        kunReadings: ['しな'],
-        strokeCount: 9,
-        jlpt: 4
-      },
-      {
-        kanji: '物',
-        meanings: ['matter', 'object', 'thing'],
-        onReadings: ['ブツ', 'モツ'],
-        kunReadings: ['もの', 'もの-'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
+        part: "명사",
+        means: ["학비"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "がくひ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '比べる',
-    furigana: 'くらべる',
-    meaning: 'to compare'
-,
-    kanjiDetails: [
-      {
-        kanji: '比',
-        meanings: ['Philippines', 'compare', 'race', 'ratio'],
-        onReadings: ['ヒ'],
-        kunReadings: ['くら.べる'],
-        strokeCount: 4,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '包む',
-    furigana: 'つつむ',
-    meaning: 'to wrap'
-,
-    kanjiDetails: [
+    entry_id: "46a1e1cf2b94415e8df87e82b1bff1bc",
+    origin_entry_id: "JK000000014410",
+    entry: "がくぶ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '包',
-        meanings: ['conceal', 'cover', 'pack up', 'wrap'],
-        onReadings: ['ホウ'],
-        kunReadings: ['くる.む', 'つつ.む'],
-        strokeCount: 5,
-        jlpt: 2
+        part: "명사",
+        means: ["학부;단과 대학"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "がくぶ",
+    category3: null
   },
-  {
-    level: 'N3',
-    word: '十分',
-    furigana: 'じゅうぶん',
-    meaning: 'enough'
-,
-    kanjiDetails: [
-      {
-        kanji: '十',
-        meanings: ['ten'],
-        onReadings: ['ジッ', 'ジュウ', 'ジュッ'],
-        kunReadings: ['そ', 'と', 'とお'],
-        strokeCount: 2,
-        jlpt: 5
+  {
+    entry_id: "d5df2f7da9c4461d811a2e35cbe46151",
+    origin_entry_id: "JK000000014454",
+    entry: "がくもん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["학문"]
       },
       {
-        kanji: '分',
-        meanings: ['1%', 'chances', 'degree', 'duty', 'know', 'minute of time', 'one\'s lot', 'part', 'rate', 'segment', 'shaku/100', 'share', 'understand'],
-        onReadings: ['フン', 'ブ', 'ブン'],
-        kunReadings: ['わ.かつ', 'わ.かる', 'わ.かれる', 'わ.け', 'わ.ける'],
-        strokeCount: 4,
-        jlpt: null
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ハンドバッグ',
-    meaning: 'handbag　'
+        part: "동사",
+        means: ["학문"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "がくもん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '決して',
-    furigana: 'けっして',
-    meaning: 'never'
-,
-    kanjiDetails: [
+    entry_id: "97e9b2342710423bbc9f29a202bb26d0",
+    origin_entry_id: "JK000000014485",
+    entry: "がくりょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '決',
-        meanings: ['agree upon', 'appoint', 'decide', 'fix'],
-        onReadings: ['ケツ'],
-        kunReadings: ['-ぎ.め', 'き.まる', 'き.める', 'さ.く'],
-        strokeCount: 7,
-        jlpt: 3
-      }
-    ]
+        part: "명사",
+        means: ["학력"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "がくりょく",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '無くなる',
-    furigana: 'なくなる',
-    meaning: 'to disappear, to get lost'
-,
-    kanjiDetails: [
+    entry_id: "22b9407b5fd54888b19b7b2e46d21550",
+    origin_entry_id: "JK000000015924",
+    entry: "がっき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '無',
-        meanings: ['ain\'t', 'nil', 'none', 'not', 'nothing', 'nothingness'],
-        onReadings: ['ブ', 'ム'],
-        kunReadings: ['な.い'],
-        strokeCount: 12,
-        jlpt: null
-      }
-    ]
+        part: "명사",
+        means: ["악기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "がっき",
+    category3: null
+  },
+  {
+    entry_id: "b5298529395b4e85ac15e8baa55d6f1c",
+    origin_entry_id: "JK000000016869",
+    entry: "がめん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["화면"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "がめん",
+    category3: null
+  },
+  {
+    entry_id: "d5dcb52147824b4382585a2025c9f13c",
+    origin_entry_id: "JK000000016997",
+    entry: "がらがら",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["텅텅 비어 있는 모양"]
+      },
+      {
+        part: "부사",
+        means: ["딸랑이"]
+      },
+      {
+        part: "형용동사",
+        means: ["와르르;드르륵"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "がらがら",
+    category3: null
+  },
+  {
+    entry_id: "23074f01e0644ce1be7f46f35cea8ea5",
+    origin_entry_id: "JK000000019177",
+    entry: "きおん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["기온"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きおん",
+    category3: null
+  },
+  {
+    entry_id: "feeba1cd65d24aa8801a88c0539aebed",
+    origin_entry_id: "JK000000019201",
+    entry: "きかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["기회"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きかい",
+    category3: null
+  },
+  {
+    entry_id: "901851ffb2e842e0ac53ee7ccf4f70f6",
+    origin_entry_id: "JK000000019601",
+    entry: "きこく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["귀국"]
+      },
+      {
+        part: "동사",
+        means: ["귀향"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きこく",
+    category3: null
+  },
+  {
+    entry_id: "7e782892274c442fb76bab8a8de1da39",
+    origin_entry_id: "JK000000019713",
+    entry: "きじ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["기사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きじ",
+    category3: null
+  },
+  {
+    entry_id: "5f0308f226b14a4da5dc01d1611e84b2",
+    origin_entry_id: "JK000000019882",
+    entry: "きず",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["상처"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きず",
+    category3: null
+  },
+  {
+    entry_id: "3ac0ae53889f4aa3a536f18697a4a194",
+    origin_entry_id: "JK000000020035",
+    entry: "きたい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["기체;→じょうき"]
+      },
+      {
+        part: "동사",
+        means: ["기대"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きたい",
+    category3: null
+  },
+  {
+    entry_id: "bdc87ccf7acf4990874dbb04d598e43e",
+    origin_entry_id: "JK000000020055",
+    entry: "きたく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["귀가"]
+      },
+      {
+        part: "동사",
+        means: ["귀가"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きたく",
+    category3: null
+  },
+  {
+    entry_id: "345477f5b4254431b862d07ede5de450",
+    origin_entry_id: "JK000000100047",
+    entry: "きつえんせき",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["흡연석"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きつえんせき",
+    category3: null
+  },
+  {
+    entry_id: "dac2d55d82464aaebaf9ba1797fdd89d",
+    origin_entry_id: "JK000000020338",
+    entry: "きにゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["기입"]
+      },
+      {
+        part: "동사",
+        means: ["기입"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きにゅう",
+    category3: null
+  },
+  {
+    entry_id: "3877b7f6943f4f0e8ccafefe2a2275f4",
+    origin_entry_id: "JK000000020385",
+    entry: "きねん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["기념"]
+      },
+      {
+        part: "동사",
+        means: ["기념"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きねん",
+    category3: null
+  },
+  {
+    entry_id: "92c820d5744641578bc040664bf2d084",
+    origin_entry_id: "JK000000020570",
+    entry: "きぼう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["희망"]
+      },
+      {
+        part: "동사",
+        means: ["희망"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きぼう",
+    category3: null
+  },
+  {
+    entry_id: "1de63c75e7dc483897a98a25c7636535",
+    origin_entry_id: "JK000000020600",
+    entry: "きまり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정해진 바;결정"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きまり",
+    category3: null
+  },
+  {
+    entry_id: "fccad4a1ced64397b7755c7c36688761",
+    origin_entry_id: "JK000000020898",
+    entry: "きゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["위급;긴급"]
+      },
+      {
+        part: "형용동사",
+        means: ["갑작스러움;불의"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きゅう",
+    category3: null
+  },
+  {
+    entry_id: "00c9d02a572c4ef0a2e679072fdf96dd",
+    origin_entry_id: "JK000000020953",
+    entry: "きゅうか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["휴가"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きゅうか",
+    category3: null
+  },
+  {
+    entry_id: "8dd7accd25a14f74bc701fb7fb2bde3d",
+    origin_entry_id: "JK000000021004",
+    entry: "きゅうぎょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["휴업"]
+      },
+      {
+        part: "동사",
+        means: ["휴업"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きゅうぎょう",
+    category3: null
+  },
+  {
+    entry_id: "6b297c06e1bf413597993bbf278d5880",
+    origin_entry_id: "JK000000021019",
+    entry: "きゅうけい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["휴게;휴식"]
+      },
+      {
+        part: "동사",
+        means: ["휴게;휴식"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きゅうけい",
+    category3: null
+  },
+  {
+    entry_id: "542860c9a9264d40915ffce9a555773d",
+    origin_entry_id: "JK000000021140",
+    entry: "きゅうしょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["급식"]
+      },
+      {
+        part: "동사",
+        means: ["급식"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きゅうしょく",
+    category3: null
+  },
+  {
+    entry_id: "e2428d75ad6e4f568a222df673338b0a",
+    origin_entry_id: "JK000000021098",
+    entry: "きゅうじつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["휴일"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きゅうじつ",
+    category3: null
+  },
+  {
+    entry_id: "166dbad5665249c9af9ca60da489c846",
+    origin_entry_id: "JK000000021365",
+    entry: "きゅうよ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["급여;급료"]
+      },
+      {
+        part: "동사",
+        means: ["급여;급료"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きゅうよ",
+    category3: null
+  },
+  {
+    entry_id: "252ff3133bcd4e01b22572391b6a321b",
+    origin_entry_id: "JK000000021367",
+    entry: "きゅうよう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["휴양"]
+      },
+      {
+        part: "동사",
+        means: ["휴양"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きゅうよう",
+    category3: null
+  },
+  {
+    entry_id: "79d96180e8e84833836d138db58a1982",
+    origin_entry_id: "JK000000021386",
+    entry: "きゅうりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["급료;봉급"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きゅうりょう",
+    category3: null
+  },
+  {
+    entry_id: "c7bae121388142e38ec5de3c08b60b77",
+    origin_entry_id: "JK000000100045",
+    entry: "きゅうブレーキ",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["급브레이크"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きゅうブレーキ",
+    category3: null
+  },
+  {
+    entry_id: "1aea58dc79f643d69ba0ea7a5d468a6b",
+    origin_entry_id: "JK000000021563",
+    entry: "きょうか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["강화"]
+      },
+      {
+        part: "동사",
+        means: ["강화"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きょうか",
+    category3: null
+  },
+  {
+    entry_id: "e6b9b05f646849d797789c7488fbbd7e",
+    origin_entry_id: "JK100021565003",
+    entry: "きょうかしょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["교과서"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きょうかしょ",
+    category3: null
+  },
+  {
+    entry_id: "03cee2209dc446ffb480df7cffb24d86",
+    origin_entry_id: "JK000000021740",
+    entry: "きょうし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["교사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きょうし",
+    category3: null
+  },
+  {
+    entry_id: "36062823e96b4518830622c6b13bcca7",
+    origin_entry_id: "JK000000021783",
+    entry: "きょうじゅ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["교수"]
+      },
+      {
+        part: "동사",
+        means: ["대학·고등 전문학교의 교원 중 직위가 가장 높은 사람;또, 그 직위"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きょうじゅ",
+    category3: null
+  },
+  {
+    entry_id: "ac417091aefc4d4681f0bdb556651e1a",
+    origin_entry_id: "JK000000021884",
+    entry: "きょうそう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["경쟁"]
+      },
+      {
+        part: "동사",
+        means: ["경쟁"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きょうそう",
+    category3: null
+  },
+  {
+    entry_id: "ff81eb67982d40ddb4089748722bfa86",
+    origin_entry_id: "JK000000021929",
+    entry: "きょうちょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["강조;역설"]
+      },
+      {
+        part: "동사",
+        means: ["시세가 고정되어 하락되지 않는 일;경조"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きょうちょう",
+    category3: null
+  },
+  {
+    entry_id: "cb41493bf7b84d7db89dc2b225b8fbf0",
+    origin_entry_id: "JK000000021933",
+    entry: "きょうつう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["공통"]
+      },
+      {
+        part: "동사",
+        means: ["공통"]
+      },
+      {
+        part: "형용동사",
+        means: ["공통"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きょうつう",
+    category3: null
+  },
+  {
+    entry_id: "7ac5f0c220b548379aa52885e6ca1639",
+    origin_entry_id: "JK000000022105",
+    entry: "きょうりょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["협력"]
+      },
+      {
+        part: "동사",
+        means: ["협력"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きょうりょく",
+    category3: null
+  },
+  {
+    entry_id: "56540c96d2be48768039763efa6706b1",
+    origin_entry_id: "JK000000022134",
+    entry: "きょか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["허가"]
+      },
+      {
+        part: "동사",
+        means: ["허가"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きょか",
+    category3: null
+  },
+  {
+    entry_id: "d403e0f9a7dd486d9dff98414cc4a298",
+    origin_entry_id: "JK000000022551",
+    entry: "きょり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["거리"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きょり",
+    category3: null
+  },
+  {
+    entry_id: "533d3f2cd6684228a58d1c6b3d51ae74",
+    origin_entry_id: "JK000000022585",
+    entry: "きらく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["마음이 편함"]
+      },
+      {
+        part: "형용동사",
+        means: ["홀가분함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きらく",
+    category3: null
+  },
+  {
+    entry_id: "86ef94b2f7514b48be0f8ff54fcb3911",
+    origin_entry_id: "JK000000022839",
+    entry: "きろく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["기록"]
+      },
+      {
+        part: "동사",
+        means: ["기록"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きろく",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '用事',
-    furigana: 'ようじ',
-    meaning: 'things to do'
-,
-    kanjiDetails: [
+    entry_id: "b0b91b8803984cf29f3279f8eba46650",
+    origin_entry_id: "JK000000022930",
+    entry: "きんえん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '用',
-        meanings: ['business', 'employ', 'service', 'use', 'utilize'],
-        onReadings: ['ヨウ'],
-        kunReadings: ['もち.いる'],
-        strokeCount: 5,
-        jlpt: 4
+        part: "명사",
+        means: ["금연"]
       },
+      {
+        part: "동사",
+        means: ["금연"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きんえん",
+    category3: null
+  },
+  {
+    entry_id: "dee35ff9990b44d6a757a9584e450cae",
+    origin_entry_id: "JK000000100043",
+    entry: "きんえんせき",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
       {
-        kanji: '事',
-        meanings: ['business', 'fact', 'matter', 'possibly', 'reason', 'thing'],
-        onReadings: ['ジ', 'ズ'],
-        kunReadings: ['こと', 'つか.う', 'つか.える'],
-        strokeCount: 8,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'なさる',
-    meaning: '(respectful) to do'
+        part: "명사",
+        means: ["금연석"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きんえんせき",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '億',
-    furigana: 'おく',
-    meaning: 'one hundred million'
-,
-    kanjiDetails: [
-      {
-        kanji: '億',
-        meanings: ['10**8', 'hundred million'],
-        onReadings: ['オク'],
-        strokeCount: 15,
-        jlpt: 2
+    entry_id: "a0b01d6d7d5c4d52bf8870408c18fa93",
+    origin_entry_id: "JK000000023071",
+    entry: "きんし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["근시"]
+      },
+      {
+        part: "동사",
+        means: ["금지"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '楽しみ',
-    furigana: 'たのしみ',
-    meaning: 'joy'
-,
-    kanjiDetails: [
+    ],
+    category1: "jlpt",
+    category2: "きんし",
+    category3: null
+  },
+  {
+    entry_id: "3a6c52ce0f0e4a12809c871a20e8312f",
+    origin_entry_id: "JK000000023326",
+    entry: "きんむ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["근무"]
+      },
       {
-        kanji: '楽',
-        meanings: ['comfort', 'ease', 'music'],
-        onReadings: ['ガク', 'ゴウ', 'ラク'],
-        kunReadings: ['この.む', 'たの.しい', 'たの.しむ'],
-        strokeCount: 13,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'サンダル',
-    meaning: 'sandal'
-  },
-  {
-    level: 'N3',
-    word: '客',
-    furigana: 'きゃく',
-    meaning: 'guest, customer'
-,
-    kanjiDetails: [
-      {
-        kanji: '客',
-        meanings: ['client', 'customer', 'guest', 'visitor'],
-        onReadings: ['カク', 'キャク'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '反対',
-    furigana: 'はんたい',
-    meaning: 'opposition'
-,
-    kanjiDetails: [
-      {
-        kanji: '反',
-        meanings: ['anti-'],
-        onReadings: ['タン', 'ハン', 'ホ', 'ホン'],
-        kunReadings: ['-かえ.る', 'かえ.す', 'かえ.る', 'そ.らす', 'そ.る'],
-        strokeCount: 4,
-        jlpt: 3
-      },
-      {
-        kanji: '対',
-        meanings: ['anti-', 'compare', 'equal', 'even', 'opposite', 'versus', 'vis-a-vis'],
-        onReadings: ['タイ', 'ツイ'],
-        kunReadings: ['あいて', 'こた.える', 'そろ.い', 'つれあ.い', 'なら.ぶ', 'むか.う'],
-        strokeCount: 7,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '火',
-    furigana: 'ひ',
-    meaning: 'fire'
-,
-    kanjiDetails: [
-      {
-        kanji: '火',
-        meanings: ['fire'],
-        onReadings: ['カ'],
-        kunReadings: ['-び', 'ひ', 'ほ-'],
-        strokeCount: 4,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '空港',
-    furigana: 'くうこう',
-    meaning: 'airport'
-,
-    kanjiDetails: [
-      {
-        kanji: '空',
-        meanings: ['empty', 'sky', 'vacant', 'vacuum', 'void'],
-        onReadings: ['クウ'],
-        kunReadings: ['あ.き', 'あ.く', 'あ.ける', 'から', 'す.かす', 'す.く', 'そら', 'むな.しい'],
-        strokeCount: 8,
-        jlpt: 4
-      },
-      {
-        kanji: '港',
-        meanings: ['harbor'],
-        onReadings: ['コウ'],
-        kunReadings: ['みなと'],
-        strokeCount: 12,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '慣れる',
-    furigana: 'なれる',
-    meaning: 'to grow accustomed to'
-,
-    kanjiDetails: [
-      {
-        kanji: '慣',
-        meanings: ['accustomed', 'become experienced', 'get used to'],
-        onReadings: ['カン'],
-        kunReadings: ['な.らす', 'な.れる'],
-        strokeCount: 14,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '旅館',
-    furigana: 'りょかん',
-    meaning: 'Japanese hotel'
-,
-    kanjiDetails: [
-      {
-        kanji: '旅',
-        meanings: ['travel', 'trip'],
-        onReadings: ['リョ'],
-        kunReadings: ['たび'],
-        strokeCount: 10,
-        jlpt: 4
-      },
-      {
-        kanji: '館',
-        meanings: ['building', 'large building', 'mansion', 'palace'],
-        onReadings: ['カン'],
-        kunReadings: ['たて', 'やかた'],
-        strokeCount: 16,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '噛む',
-    furigana: 'かむ',
-    meaning: 'to bite, to chew'
-,
-    kanjiDetails: [
-      {
-        kanji: '噛',
-        meanings: ['bite', 'chew', 'gnaw'],
-        onReadings: ['コウ', 'ゴウ'],
-        kunReadings: ['か.じる', 'か.む'],
-        strokeCount: 15,
-        jlpt: null
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '漬ける',
-    furigana: 'つける',
-    meaning: 'to soak, to pickle'
-,
-    kanjiDetails: [
-      {
-        kanji: '漬',
-        meanings: ['moisten', 'pickling', 'soak', 'steep'],
-        onReadings: ['シ'],
-        kunReadings: ['-づ.け', '-づけ', 'つ.かる', 'つ.ける'],
-        strokeCount: 14,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '踊り',
-    furigana: 'おどり',
-    meaning: 'a dance'
-,
-    kanjiDetails: [
-      {
-        kanji: '踊',
-        meanings: ['dance', 'jump', 'leap', 'skip'],
-        onReadings: ['ヨウ'],
-        kunReadings: ['おど.る'],
-        strokeCount: 14,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '講義',
-    furigana: 'こうぎ',
-    meaning: 'lecture'
-,
-    kanjiDetails: [
-      {
-        kanji: '講',
-        meanings: ['association', 'club', 'lecture'],
-        onReadings: ['コウ'],
-        strokeCount: 17,
-        jlpt: 2
-      },
-      {
-        kanji: '義',
-        meanings: ['honor', 'justice', 'loyalty', 'meaning', 'morality', 'righteousness'],
-        onReadings: ['ギ'],
-        strokeCount: 13,
-        jlpt: 1
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '送る',
-    furigana: 'おくる',
-    meaning: 'to send'
-,
-    kanjiDetails: [
-      {
-        kanji: '送',
-        meanings: ['escort', 'send'],
-        onReadings: ['ソウ'],
-        kunReadings: ['おく.る'],
-        strokeCount: 9,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '迎える',
-    furigana: 'むかえる',
-    meaning: 'to go out to meet'
-,
-    kanjiDetails: [
-      {
-        kanji: '迎',
-        meanings: ['greet', 'meet', 'welcome'],
-        onReadings: ['ゲイ'],
-        kunReadings: ['むか.える'],
-        strokeCount: 7,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '凄い',
-    furigana: 'すごい',
-    meaning: 'terrific'
-,
-    kanjiDetails: [
-      {
-        kanji: '凄',
-        meanings: ['horrible', 'threatening', 'uncanny', 'weird'],
-        onReadings: ['サイ', 'セイ'],
-        kunReadings: ['さむ.い', 'すご.い', 'すさ.まじい'],
-        strokeCount: 10,
-        jlpt: null
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '以内',
-    furigana: 'いない',
-    meaning: 'within'
-,
-    kanjiDetails: [
-      {
-        kanji: '以',
-        meanings: ['because', 'by means of', 'compared with', 'in view of'],
-        onReadings: ['イ'],
-        kunReadings: ['もっ.て'],
-        strokeCount: 5,
-        jlpt: 4
-      },
-      {
-        kanji: '内',
-        meanings: ['among', 'between', 'home', 'house', 'inside', 'within'],
-        onReadings: ['ダイ', 'ナイ'],
-        kunReadings: ['うち'],
-        strokeCount: 4,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '探す',
-    furigana: 'さがす',
-    meaning: 'to look for'
-,
-    kanjiDetails: [
-      {
-        kanji: '探',
-        meanings: ['grope', 'look for', 'search'],
-        onReadings: ['タン'],
-        kunReadings: ['さが.す', 'さぐ.る'],
-        strokeCount: 11,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '行う',
-    furigana: 'おこなう',
-    meaning: 'to do'
-,
-    kanjiDetails: [
-      {
-        kanji: '行',
-        meanings: ['act', 'bank', 'carry out', 'conduct', 'going', 'journey', 'line', 'row'],
-        onReadings: ['アン', 'ギョウ', 'コウ'],
-        kunReadings: ['-い.き', '-いき', '-ゆ.き', '-ゆき', 'い.く', 'おこ.なう', 'おこな.う', 'ゆ.く'],
-        strokeCount: 6,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '引き出し',
-    furigana: 'ひきだし',
-    meaning: 'drawer, drawing out'
-,
-    kanjiDetails: [
-      {
-        kanji: '引',
-        meanings: ['admit', 'install', 'jerk', 'pull', 'quote', 'refer to', 'tug'],
-        onReadings: ['イン'],
-        kunReadings: ['ひ.く', 'ひ.ける'],
-        strokeCount: 4,
-        jlpt: 3
-      },
-      {
-        kanji: '出',
-        meanings: ['come out', 'exit', 'go out', 'leave', 'protrude', 'put out'],
-        onReadings: ['シュツ', 'スイ'],
-        kunReadings: ['-だ.す', '-で', 'い.だす', 'い.でる', 'だ.す', 'で.る'],
-        strokeCount: 5,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '焼ける',
-    furigana: 'やける',
-    meaning: 'to burn, to be roasted'
-,
-    kanjiDetails: [
-      {
-        kanji: '焼',
-        meanings: ['bake', 'burning'],
-        onReadings: ['ショウ'],
-        kunReadings: ['-や.き', 'や.き', 'や.き-', 'や.く', 'や.ける'],
-        strokeCount: 12,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'けんか・する',
-    meaning: 'to quarrel'
-  },
-  {
-    level: 'N3',
-    word: '背中',
-    furigana: 'せなか',
-    meaning: 'back of the body'
-,
-    kanjiDetails: [
+        part: "동사",
+        means: ["근무"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きんむ",
+    category3: null
+  },
+  {
+    entry_id: "0a4b0a1d8ffd433daefa2f5e5c9a8be8",
+    origin_entry_id: "JK000000020671",
+    entry: "ぎもん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '背',
-        meanings: ['back', 'behind', 'defy', 'disobey', 'go back on', 'height', 'rebel', 'stature'],
-        onReadings: ['ハイ'],
-        kunReadings: ['せ', 'せい', 'そむ.く', 'そむ.ける'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '中',
-        meanings: ['center', 'in', 'inside', 'mean', 'middle'],
-        onReadings: ['チュウ'],
-        kunReadings: ['あた.る', 'うち', 'なか'],
-        strokeCount: 4,
-        jlpt: 5
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '込む',
-    furigana: 'こむ',
-    meaning: 'to be crowded'
-,
-    kanjiDetails: [
-      {
-        kanji: '込',
-        meanings: ['(kokuji)', 'crowded', 'in bulk', 'included', 'mixture'],
-        kunReadings: ['-こ.み', '-こ.む', 'こ.み', 'こ.む', 'こ.める'],
-        strokeCount: 5,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'あいさつ・する',
-    meaning: 'to greet'
+        part: "명사",
+        means: ["의문"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぎもん",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '負ける',
-    furigana: 'まける',
-    meaning: 'to lose'
-,
-    kanjiDetails: [
-      {
-        kanji: '負',
-        meanings: ['-', 'assume a responsibility', 'bear', 'defeat', 'minus', 'negative', 'owe'],
-        onReadings: ['フ'],
-        kunReadings: ['お.う', 'ま.かす', 'ま.ける'],
-        strokeCount: 9,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'ごらんになる',
-    meaning: '(respectful) to see'
-  },
-  {
-    level: 'N3',
-    word: '事務所',
-    furigana: 'じむしょ',
-    meaning: 'office'
-,
-    kanjiDetails: [
+    entry_id: "33d3c996255a4d1094f892984092281b",
+    origin_entry_id: "JK000000020683",
+    entry: "ぎゃく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '事',
-        meanings: ['business', 'fact', 'matter', 'possibly', 'reason', 'thing'],
-        onReadings: ['ジ', 'ズ'],
-        kunReadings: ['こと', 'つか.う', 'つか.える'],
-        strokeCount: 8,
-        jlpt: 4
+        part: "명사",
+        means: ["반대;거꾸로임"]
       },
+      {
+        part: "형용동사",
+        means: ["‘逆手’의 준말"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぎゃく",
+    category3: null
+  },
+  {
+    entry_id: "54733787600b4786bfaecaf509ce27fa",
+    origin_entry_id: "JK000000021504",
+    entry: "ぎょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["행"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぎょう",
+    category3: null
+  },
+  {
+    entry_id: "588989c69f3b4743a9f000836ecf14d2",
+    origin_entry_id: "JK000000021755",
+    entry: "ぎょうじ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["행사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぎょうじ",
+    category3: null
+  },
+  {
+    entry_id: "8322bc70e62645838e8d095ca331c304",
+    origin_entry_id: "JK000000022650",
+    entry: "ぎりぎり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '務',
-        meanings: ['duties', 'task'],
-        onReadings: ['ム'],
-        kunReadings: ['つと.める'],
-        strokeCount: 11,
-        jlpt: 3
+        part: "명사",
+        means: ["‘切り’를 두 개 겹친 힘줌말"]
       },
+      {
+        part: "부사",
+        means: ["빠듯빠듯함;빠듯함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぎりぎり",
+    category3: null
+  },
+  {
+    entry_id: "80a82aeecc304068b0b264a6441fa0a3",
+    origin_entry_id: "JK000000023445",
+    entry: "くいき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["구역"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くいき",
+    category3: null
+  },
+  {
+    entry_id: "b2e3fbd8d89d49ad87058cb8265be2aa",
+    origin_entry_id: "JK000000023591",
+    entry: "くうせき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["공석"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くうせき",
+    category3: null
+  },
+  {
+    entry_id: "84d807be0c5b45f5a4f32fcfa3f0fe1a",
+    origin_entry_id: "JK000000023703",
+    entry: "くかん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["구간"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くかん",
+    category3: null
+  },
+  {
+    entry_id: "f7276ae850424e6e8bd3778fe3897c85",
+    origin_entry_id: "JK000000023961",
+    entry: "くしゃみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["재채기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くしゃみ",
+    category3: null
+  },
+  {
+    entry_id: "78ab4626ba574c4aa8c94c73c40760ec",
+    origin_entry_id: "JK000000023920",
+    entry: "くじ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '所',
-        meanings: ['extent', 'place'],
-        onReadings: ['ショ'],
-        kunReadings: ['-ところ', 'とこ', 'ところ', 'どころ'],
-        strokeCount: 8,
-        jlpt: 3
-      }
-    ]
+        part: "명사",
+        means: ["제비;추첨"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くじ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'そろそろ',
-    meaning: 'gradually, soon'
-  },
-  {
-    level: 'N3',
-    word: '美術館',
-    furigana: 'びじゅつかん',
-    meaning: 'art gallery'
-,
-    kanjiDetails: [
-      {
-        kanji: '美',
-        meanings: ['beautiful', 'beauty'],
-        onReadings: ['ビ', 'ミ'],
-        kunReadings: ['うつく.しい'],
-        strokeCount: 9,
-        jlpt: 3
-      },
-      {
-        kanji: '術',
-        meanings: ['art', 'magic', 'means', 'resources', 'skill', 'technique', 'trick'],
-        onReadings: ['ジュツ'],
-        kunReadings: ['すべ'],
-        strokeCount: 11,
-        jlpt: 3
-      },
-      {
-        kanji: '館',
-        meanings: ['building', 'large building', 'mansion', 'palace'],
-        onReadings: ['カン'],
-        kunReadings: ['たて', 'やかた'],
-        strokeCount: 16,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'あ',
-    meaning: 'Ah'
-  },
-  {
-    level: 'N3',
-    word: '以外',
-    furigana: 'いがい',
-    meaning: 'with the exception of'
-,
-    kanjiDetails: [
-      {
-        kanji: '以',
-        meanings: ['because', 'by means of', 'compared with', 'in view of'],
-        onReadings: ['イ'],
-        kunReadings: ['もっ.て'],
-        strokeCount: 5,
-        jlpt: 4
-      },
-      {
-        kanji: '外',
-        meanings: ['outside'],
-        onReadings: ['ガイ', 'ゲ'],
-        kunReadings: ['そと', 'と-', 'はず.す', 'はず.れる', 'ほか'],
-        strokeCount: 5,
-        jlpt: 5
+    entry_id: "e4c2a001692b4cfb828f2ac77ade7b2c",
+    origin_entry_id: "JK000000024072",
+    entry: "くすりゆび",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["무명지;약손가락"]
       }
-    ]
-  },
-  {
-    level: 'N3',
-    word: 'じゃま',
-    meaning: 'hindrance, intrusion'
-  },
-  {
-    level: 'N3',
-    word: '安心',
-    furigana: 'あんしん',
-    meaning: 'relief'
-,
-    kanjiDetails: [
-      {
-        kanji: '安',
-        meanings: ['cheap', 'contented', 'low', 'peaceful', 'quiet', 'relax', 'rested'],
-        onReadings: ['アン'],
-        kunReadings: ['やす', 'やす.い', 'やす.まる', 'やす.らか'],
-        strokeCount: 6,
-        jlpt: 4
-      },
-      {
-        kanji: '心',
-        meanings: ['heart', 'heart radical (no. 61)', 'mind', 'spirit'],
-        onReadings: ['シン'],
-        kunReadings: ['-ごころ', 'こころ'],
-        strokeCount: 4,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '集める',
-    furigana: 'あつめる',
-    meaning: 'to collect something'
-,
-    kanjiDetails: [
-      {
-        kanji: '集',
-        meanings: ['congregate', 'flock', 'gather', 'meet', 'swarm'],
-        onReadings: ['シュウ'],
-        kunReadings: ['あつ.まる', 'あつ.める', 'つど.う'],
-        strokeCount: 12,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '捨てる',
-    furigana: 'すてる',
-    meaning: 'to throw away'
-,
-    kanjiDetails: [
-      {
-        kanji: '捨',
-        meanings: ['abandon', 'discard', 'reject', 'resign', 'sacrifice', 'throw away'],
-        onReadings: ['シャ'],
-        kunReadings: ['す.てる'],
-        strokeCount: 11,
-        jlpt: 2
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '駐車場',
-    furigana: 'ちゅうしゃじょう',
-    meaning: 'parking lot'
-,
-    kanjiDetails: [
-      {
-        kanji: '駐',
-        meanings: ['reside in', 'resident', 'stop-over'],
-        onReadings: ['チュウ'],
-        strokeCount: 15,
-        jlpt: 2
-      },
-      {
-        kanji: '車',
-        meanings: ['car'],
-        onReadings: ['シャ'],
-        kunReadings: ['くるま'],
-        strokeCount: 7,
-        jlpt: 5
-      },
-      {
-        kanji: '場',
-        meanings: ['location', 'place'],
-        onReadings: ['ジョウ', 'チョウ'],
-        kunReadings: ['ば'],
-        strokeCount: 12,
-        jlpt: 4
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '確か',
-    furigana: 'たしか',
-    meaning: 'definite'
-,
-    kanjiDetails: [
-      {
-        kanji: '確',
-        meanings: ['assurance', 'clear', 'confirm', 'evident', 'firm', 'hard', 'solid', 'tight'],
-        onReadings: ['カク', 'コウ'],
-        kunReadings: ['たし.か', 'たし.かめる'],
-        strokeCount: 15,
-        jlpt: 3
-      }
-    ]
-  },
-  {
-    level: 'N3',
-    word: '手袋',
-    furigana: 'てぶくろ',
-    meaning: 'glove'
-,
-    kanjiDetails: [
-      {
-        kanji: '手',
-        meanings: ['hand'],
-        onReadings: ['シュ', 'ズ'],
-        kunReadings: ['-て', 'た-', 'て', 'て-'],
-        strokeCount: 4,
-        jlpt: 4
-      },
-      {
-        kanji: '袋',
-        meanings: ['bag', 'pouch', 'sack'],
-        onReadings: ['タイ', 'ダイ'],
-        kunReadings: ['ふくろ'],
-        strokeCount: 11,
-        jlpt: 2
-      }
-    ]
-  },
+    ],
+    category1: "jlpt",
+    category2: "くすりゆび",
+    category3: null
+  },
   {
-    level: 'N3',
-    word: '熱',
-    furigana: 'ねつ',
-    meaning: 'fever'
-,
-    kanjiDetails: [
+    entry_id: "de639a295175457ea46afc6b65e832d1",
+    origin_entry_id: "JK000000024083",
+    entry: "くせ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '熱',
-        meanings: ['fever', 'heat', 'mania', 'passion', 'temperature'],
-        onReadings: ['ネツ'],
-        kunReadings: ['あつ.い'],
-        strokeCount: 15,
-        jlpt: 3
+        part: "명사",
+        means: ["버릇;습관"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "くせ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '指',
-    furigana: 'ゆび',
-    meaning: 'finger'
-,
-    kanjiDetails: [
+    entry_id: "62ac1d49e30449819c5652dc3e1886f9",
+    origin_entry_id: "JK000000024163",
+    entry: "くだり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '指',
-        meanings: ['finger', 'indicate', 'measure (ruler)', 'play (chess)', 'point to', 'put into'],
-        onReadings: ['シ'],
-        kunReadings: ['-さ.し', 'さ.す', 'ゆび'],
-        strokeCount: 9,
-        jlpt: 3
+        part: "명사",
+        means: ["내려감"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "くだり",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '止める',
-    furigana: 'とめる',
-    meaning: 'to stop something'
-,
-    kanjiDetails: [
+    entry_id: "ff4afd294bd442aaa6063c682cee31d6",
+    origin_entry_id: "JK000000024295",
+    entry: "くちべに",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '止',
-        meanings: ['halt', 'stop'],
-        onReadings: ['シ'],
-        kunReadings: ['-さ.し', '-さ.す', '-と.める', '-ど.まり', '-ど.め', '-や.む', 'と.まる', 'と.める', 'とど.まる', 'とど.め', 'とど.める', 'や.む', 'や.める', 'よ.す'],
-        strokeCount: 4,
-        jlpt: 4
+        part: "명사",
+        means: ["입술연지"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "くちべに",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'アクセサリー',
-    meaning: 'accessory'
+    entry_id: "2fc595ae64f049fb8d3f67808cb619c1",
+    origin_entry_id: "JK000000024575",
+    entry: "くべつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["구별"]
+      },
+      {
+        part: "동사",
+        means: ["구별"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くべつ",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '下る',
-    furigana: 'さがる',
-    meaning: 'to get down, to descend'
-,
-    kanjiDetails: [
+    entry_id: "34657c40c12141c1b6139b987fe702e6",
+    origin_entry_id: "JK000000024802",
+    entry: "くらし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
       {
-        kanji: '下',
-        meanings: ['below', 'descend', 'down', 'give', 'inferior', 'low'],
-        onReadings: ['カ', 'ゲ'],
-        kunReadings: ['-くだ.す', 'お.りる', 'お.ろす', 'くだ.さる', 'くだ.す', 'くだ.り', 'くだ.る', 'さ.がる', 'さ.げる', 'した', 'しも', 'もと'],
-        strokeCount: 3,
-        jlpt: 5
+        part: "명사",
+        means: ["살림"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "くらし",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'ほめる',
-    meaning: 'to praise'
+    entry_id: "1b07ef509cf54ba39113b2b9e9945ce0",
+    origin_entry_id: "JK000000024915",
+    entry: "くりかえし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["반복함;되풀이함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くりかえし",
+    category3: null
   },
   {
-    level: 'N3',
-    word: '回る',
-    furigana: 'まわる',
-    meaning: 'to go around'
-,
-    kanjiDetails: [
+    entry_id: "670d838a1892470d8c956123ac7a3d05",
+    origin_entry_id: "JK000000025148",
+    entry: "くろう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["노고;고생;애씀"]
+      },
       {
-        kanji: '回',
-        meanings: ['-times', 'counter for occurrences', 'game', 'revolve', 'round'],
-        onReadings: ['エ', 'カイ'],
-        kunReadings: ['-まわ.し', '-まわ.す', '-まわ.り', '-まわ.る', 'か.える', 'まわ.し-', 'まわ.す', 'まわ.る', 'もとお.る'],
-        strokeCount: 6,
-        jlpt: 3
+        part: "동사",
+        means: ["노고;고생;애씀"]
       }
-    ]
+    ],
+    category1: "jlpt",
+    category2: "くろう",
+    category3: null
   },
   {
-    level: 'N3',
-    word: 'くださる',
-    meaning: '(respectful) to give'
+    entry_id: "bf458facf7e74ef0bf27e8117230bbec",
+    origin_entry_id: "JK000000025640",
+    entry: "けいえい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["경영"]
+      },
+      {
+        part: "동사",
+        means: ["경영"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けいえい",
+    category3: null
   },
+  {
+    entry_id: "aa6951a19f774afcbca730e4765829ae",
+    origin_entry_id: "JK100025764001",
+    entry: "けいさつかん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["경찰관"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けいさつかん",
+    category3: null
+  },
+  {
+    entry_id: "67634d7f858a480b95a418b2a9677413",
+    origin_entry_id: "JK100025764005",
+    entry: "けいさつしょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["경찰서"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けいさつしょ",
+    category3: null
+  },
+  {
+    entry_id: "7d16f13d1cee40dfa92e2314c4637e60",
+    origin_entry_id: "JK000000025767",
+    entry: "けいさん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["계산;셈"]
+      },
+      {
+        part: "동사",
+        means: ["결과나 과정 등을 예측함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けいさん",
+    category3: null
+  },
+  {
+    entry_id: "a29ac4397d144bfca1f4818d56059a89",
+    origin_entry_id: "JK000000025902",
+    entry: "けいたい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["휴대"]
+      },
+      {
+        part: "동사",
+        means: ["휴대"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けいたい",
+    category3: null
+  },
+  {
+    entry_id: "97895893b1954363b68e60100016859a",
+    origin_entry_id: "JK000000025938",
+    entry: "けいと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["모사;털실"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けいと",
+    category3: null
+  },
+  {
+    entry_id: "5e90e2a1019841e7b3db294aca673790",
+    origin_entry_id: "JK000000025947",
+    entry: "けいとう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["계통"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けいとう",
+    category3: null
+  },
+  {
+    entry_id: "24b5f31c8d654fa699711f44f686d6e3",
+    origin_entry_id: "JK000000026036",
+    entry: "けいやく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["계약"]
+      },
+      {
+        part: "동사",
+        means: ["계약"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けいやく",
+    category3: null
+  },
+  {
+    entry_id: "ba8133bd8b6f475f95d55376206701ba",
+    origin_entry_id: "JK000000026301",
+    entry: "けしょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["화장;겉을 아름답게 꾸밈"]
+      },
+      {
+        part: "동사",
+        means: ["외양만 그럴듯하게 꾸밈"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けしょう",
+    category3: null
+  },
+  {
+    entry_id: "5e190b5128cf465b8bd1b3b4dfd302ef",
+    origin_entry_id: "JK000000026370",
+    entry: "けち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["인색함;다라움"]
+      },
+      {
+        part: "형용동사",
+        means: ["초라함;보잘것없음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けち",
+    category3: null
+  },
+  {
+    entry_id: "2ed3c06da86a4f5f90869d263248c832",
+    origin_entry_id: "JK000000026414",
+    entry: "けっか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["결과"]
+      },
+      {
+        part: "동사",
+        means: ["어떤 원인으로 생기는 상태"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けっか",
+    category3: null
+  },
+  {
+    entry_id: "cb9dadb3c75a4418bcb5273a6d7d3879",
+    origin_entry_id: "JK000000026446",
+    entry: "けっきょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["결국"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けっきょく",
+    category3: null
+  },
+  {
+    entry_id: "487827a1efed4e9f83eb32120f98e05f",
+    origin_entry_id: "JK000000026464",
+    entry: "けっこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["결행"]
+      },
+      {
+        part: "동사",
+        means: ["결행"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けっこう",
+    category3: null
+  },
+  {
+    entry_id: "51a497e68ee44ba687f8d31d9852f4e9",
+    origin_entry_id: "JK000000026521",
+    entry: "けっしん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["결심"]
+      },
+      {
+        part: "동사",
+        means: ["결심"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けっしん",
+    category3: null
+  },
+  {
+    entry_id: "0ad0190f054747d08000c0fee2780bad",
+    origin_entry_id: "JK000000026575",
+    entry: "けってい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["결정"]
+      },
+      {
+        part: "동사",
+        means: ["결정"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けってい",
+    category3: null
+  },
+  {
+    entry_id: "dded8fb8a98b4ff29e5332f0d9e9719a",
+    origin_entry_id: "JK000000026579",
+    entry: "けってん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["결점;단점"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けってん",
+    category3: null
+  },
+  {
+    entry_id: "78379e1fd34b4506b9cf2c11e90bf96f",
+    origin_entry_id: "JK000000026408",
+    entry: "けつえき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["혈액"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けつえき",
+    category3: null
+  },
+  {
+    entry_id: "a43e9b62a43e4dc0aa5e3465e800919c",
+    origin_entry_id: "JK000000026648",
+    entry: "けつろん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["결론"]
+      },
+      {
+        part: "동사",
+        means: ["결론"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けつろん",
+    category3: null
+  },
+  {
+    entry_id: "ef2d9de97ec54a0eb5d98b65eb2857f4",
+    origin_entry_id: "JK000000026750",
+    entry: "けむり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["연기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けむり",
+    category3: null
+  },
+  {
+    entry_id: "6859eccc887a4d86a88bbb0067605236",
+    origin_entry_id: "JK000000026951",
+    entry: "けんか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["감화;비누화"]
+      },
+      {
+        part: "동사",
+        means: ["감화;비누화"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けんか",
+    category3: null
+  },
+  {
+    entry_id: "acc2a899ac864e1cb8e608aa56b70535",
+    origin_entry_id: "JK000000027018",
+    entry: "けんきゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["연구"]
+      },
+      {
+        part: "동사",
+        means: ["연구"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けんきゅう",
+    category3: null
+  },
+  {
+    entry_id: "5a7e4bc3c41240bb94879baf29ea6b6b",
+    origin_entry_id: "JK000000027093",
+    entry: "けんこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["건강"]
+      },
+      {
+        part: "형용동사",
+        means: ["몸에 탈이 없이 튼튼함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けんこう",
+    category3: null
+  },
+  {
+    entry_id: "52e542b6be6848658621dbdc3263a94e",
+    origin_entry_id: "JK000000027125",
+    entry: "けんさ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["검사"]
+      },
+      {
+        part: "동사",
+        means: ["검사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けんさ",
+    category3: null
+  },
+  {
+    entry_id: "a21012743ec94ee4bfb71252323d6d04",
+    origin_entry_id: "JK000000027357",
+    entry: "けんせつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["건설"]
+      },
+      {
+        part: "동사",
+        means: ["건설"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けんせつ",
+    category3: null
+  },
+  {
+    entry_id: "2f37a7bd4f7c4eac81ace328eb0e7c3a",
+    origin_entry_id: "JK000000025814",
+    entry: "げいじゅつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["예술"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "げいじゅつ",
+    category3: null
+  },
+  {
+    entry_id: "0a3c8c24714d479eacf9de67c6a85a06",
+    origin_entry_id: "JK000000026298",
+    entry: "げじゅん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["하순"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "げじゅん",
+    category3: null
+  },
+  {
+    entry_id: "ac79c2babe0b47d9b40b4d177b5dc69d",
+    origin_entry_id: "JK000000026315",
+    entry: "げすい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["하수;수챗물"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "げすい",
+    category3: null
+  },
+  {
+    entry_id: "a0d3c0ed9faa434e8368862e899e2d8c",
+    origin_entry_id: "JK000000026711",
+    entry: "げひん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["하품;하치"]
+      },
+      {
+        part: "형용동사",
+        means: ["인품이 천함;품위가 없음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "げひん",
+    category3: null
+  },
+  {
+    entry_id: "416bff77c2484e8690a436667851d707",
+    origin_entry_id: "JK000000026971",
+    entry: "げんかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["한계"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "げんかい",
+    category3: null
+  },
+  {
+    entry_id: "40b22bc34b004f49b82532da1156370f",
+    origin_entry_id: "JK000000027047",
+    entry: "げんきん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["현금;현찰"]
+      },
+      {
+        part: "형용동사",
+        means: ["타산적임"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "げんきん",
+    category3: null
+  },
+  {
+    entry_id: "d9c109bf6df04a419a751743f3c34300",
+    origin_entry_id: "JK000000027091",
+    entry: "げんご",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["언어;말"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "げんご",
+    category3: null
+  },
+  {
+    entry_id: "3daa281d322e4d60a512e953af8e6750",
+    origin_entry_id: "JK000000027136",
+    entry: "げんざい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["현재"]
+      },
+      {
+        part: "동사",
+        means: ["지금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "げんざい",
+    category3: null
+  },
+  {
+    entry_id: "f5368b5a200342a19d21bb1ed7580e41",
+    origin_entry_id: "JK000000027200",
+    entry: "げんじつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["현실"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "げんじつ",
+    category3: null
+  },
+  {
+    entry_id: "db359f92a5dc4aa4b3bf8ad1bf1a986d",
+    origin_entry_id: "JK000000027415",
+    entry: "げんだい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["현대"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "げんだい",
+    category3: null
+  },
+  {
+    entry_id: "03e8fefafbaa407392bcfc5ebe2b06f4",
+    origin_entry_id: "JK000000027479",
+    entry: "げんど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["한도;한계"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "げんど",
+    category3: null
+  },
+  {
+    entry_id: "e1b37170d7ee481ea3e734c7dd3ab16b",
+    origin_entry_id: "JK000000027823",
+    entry: "こい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사랑;연애"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こい",
+    category3: null
+  },
+  {
+    entry_id: "a9f1bfcef36540fba930bc3e8845d8da",
+    origin_entry_id: "JK000000027869",
+    entry: "こいびと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["연인;애인"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こいびと",
+    category3: null
+  },
+  {
+    entry_id: "7891ea06f39d4fcaab767be438e2e669",
+    origin_entry_id: "JK000000028072",
+    entry: "こううん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["행운;호운"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こううん",
+    category3: null
+  },
+  {
+    entry_id: "8b35427253da4a7fb9979b28f42d88d1",
+    origin_entry_id: "JK000000028125",
+    entry: "こうか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["효과"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうか",
+    category3: null
+  },
+  {
+    entry_id: "d9ddcc5de72c45b4b1ced65d06c7fe4d",
+    origin_entry_id: "JK000000028198",
+    entry: "こうがく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["공학"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうがく",
+    category3: null
+  },
+  {
+    entry_id: "310ee513a84e48f5bd418c7b9123c279",
+    origin_entry_id: "JK000000028303",
+    entry: "こうきゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["고급"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうきゅう",
+    category3: null
+  },
+  {
+    entry_id: "feb977a2f4a74bc39f1d3624de4a62ba",
+    origin_entry_id: "JK100028321012",
+    entry: "こうきょうりょうきん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["공공 요금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうきょうりょうきん",
+    category3: null
+  },
+  {
+    entry_id: "ffe8bd2c009448d0b97650fa070889b3",
+    origin_entry_id: "JK000000028454",
+    entry: "こうこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["효행;효도"]
+      },
+      {
+        part: "동사",
+        means: ["효행;효도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうこう",
+    category3: null
+  },
+  {
+    entry_id: "5518ca36ae2442c9ada71034449406da",
+    origin_entry_id: "JK000000028495",
+    entry: "こうこく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["광고"]
+      },
+      {
+        part: "동사",
+        means: ["광고"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうこく",
+    category3: null
+  },
+  {
+    entry_id: "b972149b67284827b565a487b4265010",
+    origin_entry_id: "JK000000028517",
+    entry: "こうさい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["교제"]
+      },
+      {
+        part: "동사",
+        means: ["교제"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうさい",
+    category3: null
+  },
+  {
+    entry_id: "5e258258713b402dbf3c5d19f7d2cba8",
+    origin_entry_id: "JK100028946004",
+    entry: "こうそくどうろ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["고속도로"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうそくどうろ",
+    category3: null
+  },
+  {
+    entry_id: "991a589d49104406a7e2b74b09072a89",
+    origin_entry_id: "JK000000029041",
+    entry: "こうちょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["호조;순조"]
+      },
+      {
+        part: "형용동사",
+        means: ["호조;순조"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうちょう",
+    category3: null
+  },
+  {
+    entry_id: "422e87ff401a4a27932f83d3a4a35b4e",
+    origin_entry_id: "JK100029060006",
+    entry: "こうつうじこ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["교통사고"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうつうじこ",
+    category3: null
+  },
+  {
+    entry_id: "5244e66bceea4fb38cd1d83cbb47e0f3",
+    origin_entry_id: "JK000000100026",
+    entry: "こうつうひ",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["교통비"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうつうひ",
+    category3: null
+  },
+  {
+    entry_id: "4550c59066dd424793b8851501a7e03a",
+    origin_entry_id: "JK000000029080",
+    entry: "こうてい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["교정;학교 마당"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうてい",
+    category3: null
+  },
+  {
+    entry_id: "7d7a37860acd4d1bac3863105f4fe438",
+    origin_entry_id: "JK100029144001",
+    entry: "こうとうがっこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["고등학교"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうとうがっこう",
+    category3: null
+  },
+  {
+    entry_id: "2b3d29ca924843978ab9adfec7a4b7e5",
+    origin_entry_id: "JK000000029151",
+    entry: "こうどう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["행동;행위;→こうい"]
+      },
+      {
+        part: "동사",
+        means: ["행동;행위;→こうい"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうどう",
+    category3: null
+  },
+  {
+    entry_id: "ea65a59e93214863a4d0c839aafa4c3e",
+    origin_entry_id: "JK000000029227",
+    entry: "こうはい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["후배"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうはい",
+    category3: null
+  },
+  {
+    entry_id: "ed39c1b978f04c62828ee1364da0d7c6",
+    origin_entry_id: "JK000000029254",
+    entry: "こうはん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["후반"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうはん",
+    category3: null
+  },
+  {
+    entry_id: "1d98fc20f14f4da8a0bdc00b3c2d0921",
+    origin_entry_id: "JK000000029315",
+    entry: "こうふく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["행복"]
+      },
+      {
+        part: "형용동사",
+        means: ["행복"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうふく",
+    category3: null
+  },
+  {
+    entry_id: "f6440c89333145368564ac8aa15fbad6",
+    origin_entry_id: "JK000000029479",
+    entry: "こうよう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["홍엽;단풍이 듦;또, 그 잎"]
+      },
+      {
+        part: "동사",
+        means: ["홍엽;단풍이 듦;또, 그 잎"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうよう",
+    category3: null
+  },
+  {
+    entry_id: "dd8acf7e99ff423c95ba67e60b8cece5",
+    origin_entry_id: "JK000000029509",
+    entry: "こうりつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["공립"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうりつ",
+    category3: null
+  },
+  {
+    entry_id: "46219e0d015b4f3f98c267a385daffdc",
+    origin_entry_id: "JK000000029550",
+    entry: "こうりょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["효력"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうりょく",
+    category3: null
+  },
+  {
+    entry_id: "ddcd17f7350949fb86a31806ea9e91f8",
+    origin_entry_id: "JK000000100023",
+    entry: "こうれいしゃ",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["고령자"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうれいしゃ",
+    category3: null
+  },
+  {
+    entry_id: "d3687bb595954f06ba03168b77690f69",
+    origin_entry_id: "JK000000029866",
+    entry: "こきょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["고향"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こきょう",
+    category3: null
+  },
+  {
+    entry_id: "50e8d5a89c504ff9b857a764700e4a2d",
+    origin_entry_id: "JK000000029952",
+    entry: "こくご",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["국어"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こくご",
+    category3: null
+  },
+  {
+    entry_id: "6d7ad33f61c64b628ae4ac396b0f390d",
+    origin_entry_id: "JK000000030086",
+    entry: "こくばん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["흑판;칠판"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こくばん",
+    category3: null
+  },
+  {
+    entry_id: "24401f17b80640b6b8e68053e02cc089",
+    origin_entry_id: "JK000000030458",
+    entry: "こし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["허리"]
+      },
+      {
+        part: "접사",
+        means: ["허리에 비유한 사물의 중간 부분"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こし",
+    category3: null
+  },
+  {
+    entry_id: "d60f65dd8de84633ac2c71f5513c7afa",
+    origin_entry_id: "JK000000100179",
+    entry: "こそだて",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["육아"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こそだて",
+    category3: null
+  },
+  {
+    entry_id: "19861cf582234b228c1a87933271cc3e",
+    origin_entry_id: "JK000000030916",
+    entry: "こっかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["국회"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こっかい",
+    category3: null
+  },
+  {
+    entry_id: "f1163b00fe96469ebb7b6cb5bf4072a5",
+    origin_entry_id: "JK000000030995",
+    entry: "こづつみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소포"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こづつみ",
+    category3: null
+  },
+  {
+    entry_id: "5c311144ffd945f684f8ed88436bc73e",
+    origin_entry_id: "JK000000031332",
+    entry: "このみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["좋아함;취미"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "このみ",
+    category3: null
+  },
+  {
+    entry_id: "0c809d03da214c4e8250ca0aa7665301",
+    origin_entry_id: "JK000000031778",
+    entry: "こゆび",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소지;새끼가락"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こゆび",
+    category3: null
+  },
+  {
+    entry_id: "5c07c79f0f3645b2be9a7f0ea4dc4ebf",
+    origin_entry_id: "JK000000032141",
+    entry: "こんご",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["금후;차후;앞으로"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こんご",
+    category3: null
+  },
+  {
+    entry_id: "8711ecf671af41878465696ba81a3e40",
+    origin_entry_id: "JK000000032170",
+    entry: "こんざつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["혼잡"]
+      },
+      {
+        part: "동사",
+        means: ["혼잡"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こんざつ",
+    category3: null
+  },
+  {
+    entry_id: "9d72c06fb85f4e51a1f5419a61ab2310",
+    origin_entry_id: "JK000000032410",
+    entry: "こんらん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["혼란"]
+      },
+      {
+        part: "동사",
+        means: ["혼란"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こんらん",
+    category3: null
+  },
+  {
+    entry_id: "70e3771caf014e5e8f2622a838d3fafb",
+    origin_entry_id: "JK000000028207",
+    entry: "ごうかく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["합격"]
+      },
+      {
+        part: "동사",
+        means: ["합격"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ごうかく",
+    category3: null
+  },
+  {
+    entry_id: "ed09f39385364b9094a43bd90103d6c6",
+    origin_entry_id: "JK000000029163",
+    entry: "ごうどう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["합동"]
+      },
+      {
+        part: "동사",
+        means: ["둘 이상이 하나가 됨;둘 이상을 하나로 함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ごうどう",
+    category3: null
+  },
+  {
+    entry_id: "de82fadf833a40d9aa33578d221fb3ad",
+    origin_entry_id: "JK000000029525",
+    entry: "ごうりゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["합류"]
+      },
+      {
+        part: "동사",
+        means: ["합류"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ごうりゅう",
+    category3: null
+  },
+  {
+    entry_id: "56990551642e415d811ba09b138bd93d",
+    origin_entry_id: "JK000000029753",
+    entry: "ごかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["오해"]
+      },
+      {
+        part: "동사",
+        means: ["오해"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ごかい",
+    category3: null
+  },
+  {
+    entry_id: "a5f38c76209648aaa5e081ab5600e15c",
+    origin_entry_id: "JK000000029770",
+    entry: "ごがく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["어학"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ごがく",
+    category3: null
+  },
+  {
+    entry_id: "3903fa1d0f8149beacaf46087ceaba09",
+    origin_entry_id: "JK000000031627",
+    entry: "ごみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["오미"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ごみ",
+    category3: null
+  },
+  {
+    entry_id: "a7e572653d564c6781327afeefbaf1b1",
+    origin_entry_id: "JK000000031966",
+    entry: "ごろごろ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["우르르"]
+      },
+      {
+        part: "동사",
+        means: ["크고 묵직한 물건이 구르는 모양;데굴데굴"]
+      },
+      {
+        part: "부사",
+        means: ["천둥;우레"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ごろごろ",
+    category3: null
+  },
+  {
+    entry_id: "584c2215b2e34396850bee40b4f5d5e7",
+    origin_entry_id: "JK000000032711",
+    entry: "さいこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["최고"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さいこう",
+    category3: null
+  },
+  {
+    entry_id: "22e59d149f864fae84f74619adcf0c86",
+    origin_entry_id: "JK000000032770",
+    entry: "さいじつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["제일"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さいじつ",
+    category3: null
+  },
+  {
+    entry_id: "a89a80a28076461aa9a77ec08d4e1dad",
+    origin_entry_id: "JK000000032845",
+    entry: "さいせい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["재생;회생;갱생"]
+      },
+      {
+        part: "동사",
+        means: ["재생;회생;갱생"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さいせい",
+    category3: null
+  },
+  {
+    entry_id: "f634710eecca46018b082e61be894596",
+    origin_entry_id: "JK000000032938",
+    entry: "さいてい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["최저;최하"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さいてい",
+    category3: null
+  },
+  {
+    entry_id: "711968443a20434f97f0efe51b4a8bea",
+    origin_entry_id: "JK000000032945",
+    entry: "さいてん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["채점"]
+      },
+      {
+        part: "동사",
+        means: ["채점"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さいてん",
+    category3: null
+  },
+  {
+    entry_id: "d4ff9930e3754b4284472e1a2214797f",
+    origin_entry_id: "JK000000032989",
+    entry: "さいのう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["재능"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さいのう",
+    category3: null
+  },
+  {
+    entry_id: "e70605963f3846968c9528bb3e7c7766",
+    origin_entry_id: "JK000000033130",
+    entry: "さいりよう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["재활용"]
+      },
+      {
+        part: "동사",
+        means: ["재활용"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さいりよう",
+    category3: null
+  },
+  {
+    entry_id: "7ab85660d0f34877a1a0ea8576d00385",
+    origin_entry_id: "JK000000033358",
+    entry: "さきおととい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["그끄저께"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さきおととい",
+    category3: null
+  },
+  {
+    entry_id: "f6bf61a751e44fbfa87050192188a73b",
+    origin_entry_id: "JK000000033439",
+    entry: "さぎょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["작업"]
+      },
+      {
+        part: "동사",
+        means: ["작업"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さぎょう",
+    category3: null
+  },
+  {
+    entry_id: "9302e24745e54990b31c8afe465fe919",
+    origin_entry_id: "JK000000033522",
+    entry: "さくしゃ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["작자;만든 사람"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さくしゃ",
+    category3: null
+  },
+  {
+    entry_id: "ecefc34792324d6b87b41a7603134986",
+    origin_entry_id: "JK000000033576",
+    entry: "さくねん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["작년;지난 해"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さくねん",
+    category3: null
+  },
+  {
+    entry_id: "0398b6e18a5c4295afe65c148e746a9f",
+    origin_entry_id: "JK000000033605",
+    entry: "さくや",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["작야;어젯밤;간밤"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さくや",
+    category3: null
+  },
+  {
+    entry_id: "a5a337c639df49b1a0719240d7e93abb",
+    origin_entry_id: "JK100033907001",
+    entry: "さしだしにん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["발신인;발송인"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さしだしにん",
+    category3: null
+  },
+  {
+    entry_id: "17cd4f48598f4ae5b8fc5c2f66161352",
+    origin_entry_id: "JK000000034058",
+    entry: "させつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["좌회전;진로를 왼쪽으로 꺾음"]
+      },
+      {
+        part: "동사",
+        means: ["좌회전;진로를 왼쪽으로 꺾음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "させつ",
+    category3: null
+  },
+  {
+    entry_id: "e91854ea63be4bff9cbf776b4f9600d1",
+    origin_entry_id: "JK000000034143",
+    entry: "さっか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["작가"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さっか",
+    category3: null
+  },
+  {
+    entry_id: "e4312ae37abc472482e2ccdab4f253a6",
+    origin_entry_id: "JK000000034179",
+    entry: "さっきょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["작곡"]
+      },
+      {
+        part: "동사",
+        means: ["작곡"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さっきょく",
+    category3: null
+  },
+  {
+    entry_id: "9040a8c9ac7a4fc98aca2b12e3aeed87",
+    origin_entry_id: "JK000000034602",
+    entry: "さら",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["접시"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さら",
+    category3: null
+  },
+  {
+    entry_id: "c84354d062664c4db8391828f0d5273f",
+    origin_entry_id: "JK000000034699",
+    entry: "さる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["원숭이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さる",
+    category3: null
+  },
+  {
+    entry_id: "8389755326554857a21b44de6b48cd03",
+    origin_entry_id: "JK000000034780",
+    entry: "さわぎ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소동;소란"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さわぎ",
+    category3: null
+  },
+  {
+    entry_id: "a1ae7386b8b04237837513bc3fafdcce",
+    origin_entry_id: "JK000000034813",
+    entry: "さん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["낳음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さん",
+    category3: null
+  },
+  {
+    entry_id: "ff4a38a737de43088e4106e3d505fd20",
+    origin_entry_id: "JK000000034877",
+    entry: "さんか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["참가"]
+      },
+      {
+        part: "동사",
+        means: ["참가"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さんか",
+    category3: null
+  },
+  {
+    entry_id: "3845c30807dc4f1cab82c6752cec83dc",
+    origin_entry_id: "JK000000033131",
+    entry: "ざいりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["재료"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ざいりょう",
+    category3: null
+  },
+  {
+    entry_id: "62c8772ec6794eac96ed353288408261",
+    origin_entry_id: "JK000000034057",
+    entry: "ざせき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["좌석;자리"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ざせき",
+    category3: null
+  },
+  {
+    entry_id: "161b3c68fcd6401c89ef645f3c2dcdac",
+    origin_entry_id: "JK000000034958",
+    entry: "ざんぎょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["잔업"]
+      },
+      {
+        part: "동사",
+        means: ["잔업"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ざんぎょう",
+    category3: null
+  },
+  {
+    entry_id: "b72b0d3275644bc993257833ea16cedf",
+    origin_entry_id: "JK000000035603",
+    entry: "し",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["시"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "し",
+    category3: null
+  },
+  {
+    entry_id: "5d3167682a8f4ef78e5840ac9d5cf9d5",
+    origin_entry_id: "JK000000035744",
+    entry: "しあわせ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["운수;운"]
+      },
+      {
+        part: "형용동사",
+        means: ["운이 좋음;행운"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しあわせ",
+    category3: null
+  },
+  {
+    entry_id: "6a07175fe7144df1ad28b5ea219fbfe7",
+    origin_entry_id: "JK000000036097",
+    entry: "しかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사회"]
+      },
+      {
+        part: "동사",
+        means: ["사회"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しかい",
+    category3: null
+  },
+  {
+    entry_id: "4063ca3fff1749dba3034121167fedf2",
+    origin_entry_id: "JK000000036261",
+    entry: "しき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사계;네 계절;사철"]
+      },
+      {
+        part: "접사",
+        means: ["의식"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しき",
+    category3: null
+  },
+  {
+    entry_id: "f8861cc40bd546a8b3f089fe91e92cd3",
+    origin_entry_id: "JK000000036632",
+    entry: "しご",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사후;죽은 뒤"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しご",
+    category3: null
+  },
+  {
+    entry_id: "5d8b4996d6d04af78b03725567eece16",
+    origin_entry_id: "JK000000036880",
+    entry: "ししゃ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ししゃ",
+    category3: null
+  },
+  {
+    entry_id: "94da4f06588a43ab94e15c62c283ca4b",
+    origin_entry_id: "JK000000036823",
+    entry: "しじ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지시"]
+      },
+      {
+        part: "동사",
+        means: ["지시"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しじ",
+    category3: null
+  },
+  {
+    entry_id: "8ae75a5c2f4e414490dbb3dcd031ebc1",
+    origin_entry_id: "JK000000037060",
+    entry: "しじん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["시인"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しじん",
+    category3: null
+  },
+  {
+    entry_id: "73281c78c3574653b16ed4f15c0108be",
+    origin_entry_id: "JK000000037229",
+    entry: "しぜん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["자연"]
+      },
+      {
+        part: "형용동사",
+        means: ["천지 만물"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しぜん",
+    category3: null
+  },
+  {
+    entry_id: "9489e5d2a4904adc8bb75d171147a609",
+    origin_entry_id: "JK000000037358",
+    entry: "したがき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["초를 잡음;또, 초잡은 글;초고"]
+      },
+      {
+        part: "동사",
+        means: ["초를 잡음;또, 초잡은 글;초고"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "したがき",
+    category3: null
+  },
+  {
+    entry_id: "71a21cfadcf944a290a7ae3e27a369cd",
+    origin_entry_id: "JK000000037729",
+    entry: "しっけ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["습기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しっけ",
+    category3: null
+  },
+  {
+    entry_id: "546e6f77843e42749ace4300072e202e",
+    origin_entry_id: "JK000000037715",
+    entry: "しつぎょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["실업"]
+      },
+      {
+        part: "동사",
+        means: ["실업"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しつぎょう",
+    category3: null
+  },
+  {
+    entry_id: "04a2c6bb88d347688438b3599c6863d1",
+    origin_entry_id: "JK000000037895",
+    entry: "しつど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["습도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しつど",
+    category3: null
+  },
+  {
+    entry_id: "cc8f76ba2e4546a191dcb8f7ee4a343e",
+    origin_entry_id: "JK000000037980",
+    entry: "しつれん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["실연"]
+      },
+      {
+        part: "동사",
+        means: ["실연"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しつれん",
+    category3: null
+  },
+  {
+    entry_id: "6538885db13c483397f6d3dcbcd9bf96",
+    origin_entry_id: "JK000000037993",
+    entry: "してい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지정"]
+      },
+      {
+        part: "동사",
+        means: ["지정"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "してい",
+    category3: null
+  },
+  {
+    entry_id: "521c28db97864fefbd028764a7cd0ce0",
+    origin_entry_id: "JK000000100198",
+    entry: "していせき",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지정석"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "していせき",
+    category3: null
+  },
+  {
+    entry_id: "c6a11d44d4b4498094918c8ac6f7eeb2",
+    origin_entry_id: "JK000000038007",
+    entry: "してつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사철;민영 철도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "してつ",
+    category3: null
+  },
+  {
+    entry_id: "84605ff50e9a4c6baf830ae5f003232a",
+    origin_entry_id: "JK000000038017",
+    entry: "してん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지점"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "してん",
+    category3: null
+  },
+  {
+    entry_id: "cba3a57c327d4cf4a21e1203dbb246ab",
+    origin_entry_id: "JK000000038053",
+    entry: "しどう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지도"]
+      },
+      {
+        part: "동사",
+        means: ["지도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しどう",
+    category3: null
+  },
+  {
+    entry_id: "baee3b2a15fd4546a686a94cc44fedd3",
+    origin_entry_id: "JK000000038101",
+    entry: "しな",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["물건"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しな",
+    category3: null
+  },
+  {
+    entry_id: "0a4893c4f56c49088cadf03ec4befdc7",
+    origin_entry_id: "JK100038332001",
+    entry: "しはつえき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["시발역"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しはつえき",
+    category3: null
+  },
+  {
+    entry_id: "3471ab361a874fcd9e36100238557d00",
+    origin_entry_id: "JK000000038554",
+    entry: "しぼう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사망"]
+      },
+      {
+        part: "동사",
+        means: ["사망"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しぼう",
+    category3: null
+  },
+  {
+    entry_id: "6a4f1a52cf584da6a2bff0c85e73654d",
+    origin_entry_id: "JK000000038709",
+    entry: "しめい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["씨명;성명"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しめい",
+    category3: null
+  },
+  {
+    entry_id: "e8276d581d02404daa5036f6d13ed67a",
+    origin_entry_id: "JK000000038722",
+    entry: "しめきり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["마감;마감 날짜"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しめきり",
+    category3: null
+  },
+  {
+    entry_id: "d112819217724179a69fbd77cb49fad0",
+    origin_entry_id: "JK000000038857",
+    entry: "しゃ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["차;수레"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゃ",
+    category3: null
+  },
+  {
+    entry_id: "688e005287834dc9a0611d28fda356ee",
+    origin_entry_id: "JK000000039139",
+    entry: "しゃこ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["차고"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゃこ",
+    category3: null
+  },
+  {
+    entry_id: "456024f2375145fb90f7fa9afc2f5b4b",
+    origin_entry_id: "JK000000039220",
+    entry: "しゃせつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사설"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゃせつ",
+    category3: null
+  },
+  {
+    entry_id: "1a5fd1a406d844a1895de9efb6248a5e",
+    origin_entry_id: "JK000000039414",
+    entry: "しゃりん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["차륜;수레바퀴"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゃりん",
+    category3: null
+  },
+  {
+    entry_id: "cddc4f6c121c4e4fbffeb9a12e8d7af2",
+    origin_entry_id: "JK000000039600",
+    entry: "しゅうい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주위"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅうい",
+    category3: null
+  },
+  {
+    entry_id: "5775c0c875954f47aab9312a11261128",
+    origin_entry_id: "JK100039685001",
+    entry: "しゅうかんし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주간지"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅうかんし",
+    category3: null
+  },
+  {
+    entry_id: "054aa13082484cb9b1a9f61091fa7122",
+    origin_entry_id: "JK000000039915",
+    entry: "しゅうしょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["취직"]
+      },
+      {
+        part: "동사",
+        means: ["취직"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅうしょく",
+    category3: null
+  },
+  {
+    entry_id: "bffa6d3b0d5e4a62b68ae25933aa9c5c",
+    origin_entry_id: "JK000000040089",
+    entry: "しゅうてん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["종점"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅうてん",
+    category3: null
+  },
+  {
+    entry_id: "35c32aeb0cac42f3b6709fd1e757ee2c",
+    origin_entry_id: "JK000000040146",
+    entry: "しゅうにゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수입"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅうにゅう",
+    category3: null
+  },
+  {
+    entry_id: "17d1e8a108f24fdeadcceb029f4e5c07",
+    origin_entry_id: "JK000000040238",
+    entry: "しゅうへん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주변"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅうへん",
+    category3: null
+  },
+  {
+    entry_id: "9e10a9bd9f344622b640d2fe1231d18e",
+    origin_entry_id: "JK000000040264",
+    entry: "しゅうまつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주말"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅうまつ",
+    category3: null
+  },
+  {
+    entry_id: "cdce96950397445ba13340bd35da267a",
+    origin_entry_id: "JK000000040320",
+    entry: "しゅうり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수리"]
+      },
+      {
+        part: "동사",
+        means: ["수리"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅうり",
+    category3: null
+  },
+  {
+    entry_id: "3951316318384ff1aa20c06f56833792",
+    origin_entry_id: "JK000000040544",
+    entry: "しゅくしょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["축소"]
+      },
+      {
+        part: "동사",
+        means: ["축소"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅくしょう",
+    category3: null
+  },
+  {
+    entry_id: "bf3eac60c80e4e208a670f5645cb0178",
+    origin_entry_id: "JK000000040531",
+    entry: "しゅくじつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["축일;→さいじつ"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅくじつ",
+    category3: null
+  },
+  {
+    entry_id: "62b35451e6ca4a9281b1a5506adfbc7b",
+    origin_entry_id: "JK000000040595",
+    entry: "しゅくはく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["숙박"]
+      },
+      {
+        part: "동사",
+        means: ["숙박"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅくはく",
+    category3: null
+  },
+  {
+    entry_id: "394d76dd94bc45dd9cc31dad68753f17",
+    origin_entry_id: "JK000000040721",
+    entry: "しゅじゅつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수술"]
+      },
+      {
+        part: "동사",
+        means: ["수술"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅじゅつ",
+    category3: null
+  },
+  {
+    entry_id: "5c0ff38df4d84b72af84407841a226d9",
+    origin_entry_id: "JK000000040829",
+    entry: "しゅだん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수단"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅだん",
+    category3: null
+  },
+  {
+    entry_id: "74067a42742942da82b90e74385377ac",
+    origin_entry_id: "JK000000040844",
+    entry: "しゅちょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주장;지론"]
+      },
+      {
+        part: "동사",
+        means: ["주장;지론"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅちょう",
+    category3: null
+  },
+  {
+    entry_id: "ae76f61ce09b4a1185a88b6cc9dee19b",
+    origin_entry_id: "JK000000040874",
+    entry: "しゅっきん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["출근"]
+      },
+      {
+        part: "동사",
+        means: ["출근"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅっきん",
+    category3: null
+  },
+  {
+    entry_id: "508395cab2274ec9b368103c40a81fbc",
+    origin_entry_id: "JK000000040884",
+    entry: "しゅっけつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["출혈"]
+      },
+      {
+        part: "동사",
+        means: ["출혈"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅっけつ",
+    category3: null
+  },
+  {
+    entry_id: "b3fba0d63e1d4bea8ee7d5cfc1e28966",
+    origin_entry_id: "JK000000040925",
+    entry: "しゅっしん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["출신"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅっしん",
+    category3: null
+  },
+  {
+    entry_id: "a5ade60c5e0f405d9c7237ec040aae1f",
+    origin_entry_id: "JK000000040967",
+    entry: "しゅっぱん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["출판"]
+      },
+      {
+        part: "동사",
+        means: ["출판"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅっぱん",
+    category3: null
+  },
+  {
+    entry_id: "8cc8cba154154f7fbf92be14022f1690",
+    origin_entry_id: "JK000000040885",
+    entry: "しゅつげん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["출현"]
+      },
+      {
+        part: "동사",
+        means: ["출현"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅつげん",
+    category3: null
+  },
+  {
+    entry_id: "c0e6817e3f584ceea48ae196b70c74ce",
+    origin_entry_id: "JK000000040922",
+    entry: "しゅつじょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["출장;경기·연기 등을 하�� 위해 그 장소에 나감"]
+      },
+      {
+        part: "동사",
+        means: ["역 구내 등에서 밖으로 나옴"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅつじょう",
+    category3: null
+  },
+  {
+    entry_id: "3b147715d5b8474a8586c5b127d1aa84",
+    origin_entry_id: "JK000000041001",
+    entry: "しゅと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅと",
+    category3: null
+  },
+  {
+    entry_id: "e4f3bab6f41646c191edb1f22718f957",
+    origin_entry_id: "JK000000041063",
+    entry: "しゅふ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주부"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅふ",
+    category3: null
+  },
+  {
+    entry_id: "452ef9b5b8184dfead6223902cddd100",
+    origin_entry_id: "JK000000041168",
+    entry: "しゅるい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["종류"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゅるい",
+    category3: null
+  },
+  {
+    entry_id: "b6ec7f71b6934a1080d65c0d8f7c0804",
+    origin_entry_id: "JK000000041825",
+    entry: "しょうか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소화"]
+      },
+      {
+        part: "동사",
+        means: ["음식물을 잘 삭임"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうか",
+    category3: null
+  },
+  {
+    entry_id: "1bdb499ae28046489006a421b5d91651",
+    origin_entry_id: "JK000000042055",
+    entry: "しょうご",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정오;한낮"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうご",
+    category3: null
+  },
+  {
+    entry_id: "1190f8ee5b4141f8aea862a15fd038ea",
+    origin_entry_id: "JK000000042332",
+    entry: "しょうしょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소소;조금;약간"]
+      },
+      {
+        part: "부사",
+        means: ["소소;조금;약간"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうしょう",
+    category3: null
+  },
+  {
+    entry_id: "0880515211c84aed9cf369245eb56471",
+    origin_entry_id: "JK000000042232",
+    entry: "しょうじき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정직"]
+      },
+      {
+        part: "부사",
+        means: ["사실은;솔직히 말해서"]
+      },
+      {
+        part: "형용동사",
+        means: ["연추"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうじき",
+    category3: null
+  },
+  {
+    entry_id: "4a15072311734266a037905428532dba",
+    origin_entry_id: "JK000000042319",
+    entry: "しょうじょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소녀"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうじょ",
+    category3: null
+  },
+  {
+    entry_id: "b91ee44c80d446a59cbad6cf324ef4f2",
+    origin_entry_id: "JK000000042342",
+    entry: "しょうじょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["증상"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうじょう",
+    category3: null
+  },
+  {
+    entry_id: "5f898fe36cf340d9af09c50404a1ff35",
+    origin_entry_id: "JK000000042616",
+    entry: "しょうてん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["상점;가게"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうてん",
+    category3: null
+  },
+  {
+    entry_id: "6fd5a3b7a3a943e5a71c6b9104c82574",
+    origin_entry_id: "JK000000042717",
+    entry: "しょうにん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["상인;장사꾼"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうにん",
+    category3: null
+  },
+  {
+    entry_id: "522cc95912d64e45a8411b7ec7ae1f61",
+    origin_entry_id: "JK000000042732",
+    entry: "しょうねん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소년"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうねん",
+    category3: null
+  },
+  {
+    entry_id: "223ae7fdd1da4f5581cc965bcd3b480b",
+    origin_entry_id: "JK000000042760",
+    entry: "しょうばい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["장사"]
+      },
+      {
+        part: "동사",
+        means: ["직업;전문"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうばい",
+    category3: null
+  },
+  {
+    entry_id: "2d90505d9801470f99e019a0db88297b",
+    origin_entry_id: "JK000000042784",
+    entry: "しょうひ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소비"]
+      },
+      {
+        part: "동사",
+        means: ["소비"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうひ",
+    category3: null
+  },
+  {
+    entry_id: "203d06d12f9d4ff5892ecf8b21423535",
+    origin_entry_id: "JK000000042807",
+    entry: "しょうひん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["상품"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうひん",
+    category3: null
+  },
+  {
+    entry_id: "00eecc7897f54ce8acd37baff6dcbf76",
+    origin_entry_id: "JK000000042890",
+    entry: "しょうぼう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소방;또, 소방 직원"]
+      },
+      {
+        part: "동사",
+        means: ["소방;또, 소방 직원"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうぼう",
+    category3: null
+  },
+  {
+    entry_id: "7933c8359f9d49dea9437f0d7a2e81eb",
+    origin_entry_id: "JK100042890003",
+    entry: "しょうぼうしょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소방서"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうぼうしょ",
+    category3: null
+  },
+  {
+    entry_id: "05864cbd0eb54e5d915c20f0b3b6b461",
+    origin_entry_id: "JK000000042945",
+    entry: "しょうめい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["증명"]
+      },
+      {
+        part: "동사",
+        means: ["증명"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうめい",
+    category3: null
+  },
+  {
+    entry_id: "91e92c2b292449b68fa0736448d4a849",
+    origin_entry_id: "JK000000042949",
+    entry: "しょうめん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정면"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうめん",
+    category3: null
+  },
+  {
+    entry_id: "410eb87f5bd6422093917a807eaf3f9a",
+    origin_entry_id: "JK000000043166",
+    entry: "しょきゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["초급;최초의 등급"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょきゅう",
+    category3: null
+  },
+  {
+    entry_id: "53daba73c5644351825cf67e6ac7a63e",
+    origin_entry_id: "JK000000043221",
+    entry: "しょくぎょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["직업"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょくぎょう",
+    category3: null
+  },
+  {
+    entry_id: "e38755a42c16437b92a0e0d2181adfc9",
+    origin_entry_id: "JK000000043227",
+    entry: "しょくご",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["식후"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょくご",
+    category3: null
+  },
+  {
+    entry_id: "ddad99e372544a738649f4b581eda0f1",
+    origin_entry_id: "JK000000100115",
+    entry: "しょくじだい",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["식사비"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょくじだい",
+    category3: null
+  },
+  {
+    entry_id: "aacfe767d0db4888882da9cf0e7f427e",
+    origin_entry_id: "JK000000043293",
+    entry: "しょくば",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["직장"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょくば",
+    category3: null
+  },
+  {
+    entry_id: "1ed677624b924d45bf7e3b03ef752a3e",
+    origin_entry_id: "JK000000043298",
+    entry: "しょくひ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["식비"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょくひ",
+    category3: null
+  },
+  {
+    entry_id: "835238bfdab04950a8dce9f05ddd88e6",
+    origin_entry_id: "JK000000043299",
+    entry: "しょくひん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["식품;식료품"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょくひん",
+    category3: null
+  },
+  {
+    entry_id: "1dcc0e35f0c9475b844da7d6f19ee4ec",
+    origin_entry_id: "JK000000043305",
+    entry: "しょくぶつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["식물"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょくぶつ",
+    category3: null
+  },
+  {
+    entry_id: "d3af1c99e2414a988697d5d5953f5d51",
+    origin_entry_id: "JK000000043330",
+    entry: "しょくよく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["식욕"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょくよく",
+    category3: null
+  },
+  {
+    entry_id: "a0da1e9b19d54c6881a0c498c799dce1",
+    origin_entry_id: "JK000000100203",
+    entry: "しょしんしゃ",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["초심자, 초보자"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょしんしゃ",
+    category3: null
+  },
+  {
+    entry_id: "79f286a4f83347f68aaa3e26fac0493f",
+    origin_entry_id: "JK000000043605",
+    entry: "しょっき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["식기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょっき",
+    category3: null
+  },
+  {
+    entry_id: "5af7ad25a3d34d5997ec7c84c1625900",
+    origin_entry_id: "JK000000043647",
+    entry: "しょてん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["서점;책방;또, 출판사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょてん",
+    category3: null
+  },
+  {
+    entry_id: "9f6595b90aa34f8088c82190caf2be45",
+    origin_entry_id: "JK000000043783",
+    entry: "しょるい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["서류"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょるい",
+    category3: null
+  },
+  {
+    entry_id: "b5665957e7f943efbaa331415edc9d8d",
+    origin_entry_id: "JK100041559005",
+    entry: "しようりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사용료"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しようりょう",
+    category3: null
+  },
+  {
+    entry_id: "b6202ef9475d4c8d9244e6165d5cd02a",
+    origin_entry_id: "JK000000043859",
+    entry: "しらせ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["알림;통지"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しらせ",
+    category3: null
+  },
+  {
+    entry_id: "496e9f2d5c5f41a99be60dd6b3ad6feb",
+    origin_entry_id: "JK000000043935",
+    entry: "しりあい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["아는 사이;친지"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しりあい",
+    category3: null
+  },
+  {
+    entry_id: "e95aa269e94c4bedbc5fd4b4421240a9",
+    origin_entry_id: "JK000000043984",
+    entry: "しりつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사립"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しりつ",
+    category3: null
+  },
+  {
+    entry_id: "09fb1a63a16c4f429d0b6188cdb4e10b",
+    origin_entry_id: "JK000000044025",
+    entry: "しりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["자료"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しりょう",
+    category3: null
+  },
+  {
+    entry_id: "be0857a68a3e4e7c9b6b8b51fd660ab4",
+    origin_entry_id: "JK000000044059",
+    entry: "しるし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["표;표지"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しるし",
+    category3: null
+  },
+  {
+    entry_id: "159c375e870844b08f33b57542aae13b",
+    origin_entry_id: "JK000000044471",
+    entry: "しんかんせん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["신간선"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しんかんせん",
+    category3: null
+  },
+  {
+    entry_id: "7382d0a51e33459390a67207b8c901fb",
+    origin_entry_id: "JK000000044440",
+    entry: "しんがく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["진학"]
+      },
+      {
+        part: "동사",
+        means: ["진학"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しんがく",
+    category3: null
+  },
+  {
+    entry_id: "13c247de406d4ec2803359afbd6e044e",
+    origin_entry_id: "JK000000044640",
+    entry: "しんごう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["신호"]
+      },
+      {
+        part: "동사",
+        means: ["신호 장치"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しんごう",
+    category3: null
+  },
+  {
+    entry_id: "8f4606c3fa774a8cb460b39e58e11e1c",
+    origin_entry_id: "JK000000044692",
+    entry: "しんさつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["진찰"]
+      },
+      {
+        part: "동사",
+        means: ["진찰"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しんさつ",
+    category3: null
+  },
+  {
+    entry_id: "721dd0a717a345a292f4933fc48696ff",
+    origin_entry_id: "JK000000044891",
+    entry: "しんせい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["신청"]
+      },
+      {
+        part: "동사",
+        means: ["신청"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しんせい",
+    category3: null
+  },
+  {
+    entry_id: "0c92ba88cde145abb3b1ac831d23b5d4",
+    origin_entry_id: "JK000000044926",
+    entry: "しんせき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["친척;집안"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しんせき",
+    category3: null
+  },
+  {
+    entry_id: "44528973a58f445f945213ae9dba38cd",
+    origin_entry_id: "JK000000044938",
+    entry: "しんせつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["친절"]
+      },
+      {
+        part: "형용동사",
+        means: ["친절"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しんせつ",
+    category3: null
+  },
+  {
+    entry_id: "a08c1d3008874f9c8cbc3a626af1d7c2",
+    origin_entry_id: "JK000000045068",
+    entry: "しんちょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["신장;키"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しんちょう",
+    category3: null
+  },
+  {
+    entry_id: "bbe58671cb3d49d18d57b69650c98e01",
+    origin_entry_id: "JK000000045294",
+    entry: "しんぽ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["진보"]
+      },
+      {
+        part: "동사",
+        means: ["진보"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しんぽ",
+    category3: null
+  },
+  {
+    entry_id: "37529638b8404328bf0b9e5788cc1742",
+    origin_entry_id: "JK000000045378",
+    entry: "しんや",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["심야"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しんや",
+    category3: null
+  },
+  {
+    entry_id: "3a4b9f64a2b64fd88f694a619ef04803",
+    origin_entry_id: "JK000000045392",
+    entry: "しんゆう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["친우;친구;벗"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しんゆう",
+    category3: null
+  },
+  {
+    entry_id: "ce7b9be92609406fb9a8e88b42e8aef9",
+    origin_entry_id: "JK000000045412",
+    entry: "しんり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["심리"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しんり",
+    category3: null
+  },
+  {
+    entry_id: "766e4b47983f4e31a05c0559b6bbe71a",
+    origin_entry_id: "JK000000045442",
+    entry: "しんるい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["친척;일가"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しんるい",
+    category3: null
+  },
+  {
+    entry_id: "dad6d8136c6145e6bfb8d39d6bead2e3",
+    origin_entry_id: "JK000000035875",
+    entry: "じいん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사원;사찰;절"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じいん",
+    category3: null
+  },
+  {
+    entry_id: "b2ccbb4ffefd4e919aeebefc9260c154",
+    origin_entry_id: "JK000000036110",
+    entry: "じかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["차회;다음 회"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じかい",
+    category3: null
+  },
+  {
+    entry_id: "d0bb4659d65541bf816f593aa534463c",
+    origin_entry_id: "JK100036255009",
+    entry: "じかんわり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수업 시간표"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じかんわり",
+    category3: null
+  },
+  {
+    entry_id: "c507b39299034070b18b0e3600ec853b",
+    origin_entry_id: "JK000000036616",
+    entry: "じけん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사건"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じけん",
+    category3: null
+  },
+  {
+    entry_id: "aa0d80ab6da94e03bde6cce91b6b121d",
+    origin_entry_id: "JK000000036702",
+    entry: "じこく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["시각;때;시간"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じこく",
+    category3: null
+  },
+  {
+    entry_id: "db88583545294edf86807536279d7d37",
+    origin_entry_id: "JK100036702002",
+    entry: "じこくひょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["시간표"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じこくひょう",
+    category3: null
+  },
+  {
+    entry_id: "b8598b0797e94a4986022d53e486fb12",
+    origin_entry_id: "JK000000036639",
+    entry: "じご",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사후"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じご",
+    category3: null
+  },
+  {
+    entry_id: "7bf0e07c0b8740d79be6206b4c300e1e",
+    origin_entry_id: "JK000000036918",
+    entry: "じしゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["자습"]
+      },
+      {
+        part: "동사",
+        means: ["자습"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じしゅう",
+    category3: null
+  },
+  {
+    entry_id: "14afdefbce74442db9e4b94f6f3db8f0",
+    origin_entry_id: "JK000000037068",
+    entry: "じしん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["자신"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じしん",
+    category3: null
+  },
+  {
+    entry_id: "dccaf33e2748433687d7eab3551f9f61",
+    origin_entry_id: "JK000000036967",
+    entry: "じじょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["차녀;둘째 딸"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じじょ",
+    category3: null
+  },
+  {
+    entry_id: "302becb1ef584db6845031ed6c85b7f3",
+    origin_entry_id: "JK000000037017",
+    entry: "じじょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사정"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じじょう",
+    category3: null
+  },
+  {
+    entry_id: "83f79337a90a4f66909875d78e35b7ab",
+    origin_entry_id: "JK000000037233",
+    entry: "じぜん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사전"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じぜん",
+    category3: null
+  },
+  {
+    entry_id: "89f6122d5cf2441da72f7cb11528c7cb",
+    origin_entry_id: "JK000000037283",
+    entry: "じそく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["시속"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じそく",
+    category3: null
+  },
+  {
+    entry_id: "c3f252ad10a74d0591a1d476afcc231c",
+    origin_entry_id: "JK000000037762",
+    entry: "じっこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["실행"]
+      },
+      {
+        part: "동사",
+        means: ["실행"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じっこう",
+    category3: null
+  },
+  {
+    entry_id: "a5a3f9a4ee304c709456a4b27fa257f9",
+    origin_entry_id: "JK000000037750",
+    entry: "じつげん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["실현"]
+      },
+      {
+        part: "동사",
+        means: ["실현"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じつげん",
+    category3: null
+  },
+  {
+    entry_id: "93e7e7b5c46b47298b2d7c20489d4435",
+    origin_entry_id: "JK000000037976",
+    entry: "じつりょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["실력"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じつりょく",
+    category3: null
+  },
+  {
+    entry_id: "3e74b25ec5234857b8a2cbda4a9d1122",
+    origin_entry_id: "JK100038066015",
+    entry: "じどうはんばいき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["자동 판매기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じどうはんばいき",
+    category3: null
+  },
+  {
+    entry_id: "469f6e38e9194f99afaeef290510c1d0",
+    origin_entry_id: "JK000000038154",
+    entry: "じなん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["차남;이남;→ちょうなん·さんなん"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じなん",
+    category3: null
+  },
+  {
+    entry_id: "8177f217ac8d47fa8479e85734031961",
+    origin_entry_id: "JK000000038649",
+    entry: "じまん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["자랑"]
+      },
+      {
+        part: "동사",
+        means: ["자랑"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じまん",
+    category3: null
+  },
+  {
+    entry_id: "a4ac6b9163104565bc60b3e9ee5e0cc6",
+    origin_entry_id: "JK000000038693",
+    entry: "じむ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사무"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じむ",
+    category3: null
+  },
+  {
+    entry_id: "3147f1c3a99e44b4b0412d5769c0b843",
+    origin_entry_id: "JK000000038773",
+    entry: "じめん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["땅"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じめん",
+    category3: null
+  },
+  {
+    entry_id: "fe4e72dd78604e139536008b423895f8",
+    origin_entry_id: "JK000000039060",
+    entry: "じゃぐち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수도꼭지"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じゃぐち",
+    category3: null
+  },
+  {
+    entry_id: "0ba37db626ad4f4f974b73e6004cd0f4",
+    origin_entry_id: "JK000000039720",
+    entry: "じゅうきょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주거"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じゅうきょ",
+    category3: null
+  },
+  {
+    entry_id: "6720daa70d5c440c851e65df52ec4ef7",
+    origin_entry_id: "JK000000039851",
+    entry: "じゅうし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["중시"]
+      },
+      {
+        part: "동사",
+        means: ["중시"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じゅうし",
+    category3: null
+  },
+  {
+    entry_id: "4d9f29ef8ccb44279f9d9bee123e8bfd",
+    origin_entry_id: "JK000000040272",
+    entry: "じゅうみん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주민"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じゅうみん",
+    category3: null
+  },
+  {
+    entry_id: "e5049cdc7f434ced82f3a97a6c454d02",
+    origin_entry_id: "JK000000040311",
+    entry: "じゅうよう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["중요"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じゅうよう",
+    category3: null
+  },
+  {
+    entry_id: "80c4f95d73844e539319bfc181b621ae",
+    origin_entry_id: "JK100040461001",
+    entry: "じゅぎょうりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수업료"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じゅぎょうりょう",
+    category3: null
+  },
+  {
+    entry_id: "5296ba421e854432bd928e2cac73136d",
+    origin_entry_id: "JK000000040643",
+    entry: "じゅけん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수험"]
+      },
+      {
+        part: "동사",
+        means: ["수험"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じゅけん",
+    category3: null
+  },
+  {
+    entry_id: "3af23900df8645be92144704a5c9ac22",
+    origin_entry_id: "JK000000040757",
+    entry: "じゅしん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수신"]
+      },
+      {
+        part: "동사",
+        means: ["무선 전신·무선 전화를 받음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じゅしん",
+    category3: null
+  },
+  {
+    entry_id: "cab321a304ed467a88e9b809d9a138a0",
+    origin_entry_id: "JK000000041109",
+    entry: "じゅみょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수명"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じゅみょう",
+    category3: null
+  },
+  {
+    entry_id: "19e7b5f6586947de8a2104977e8ac670",
+    origin_entry_id: "JK100041186001",
+    entry: "じゅわき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수화기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じゅわき",
+    category3: null
+  },
+  {
+    entry_id: "d6258702b7d34f10ad8dedfc3b490b19",
+    origin_entry_id: "JK000000041429",
+    entry: "じゅんばん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["순번;차례"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じゅんばん",
+    category3: null
+  },
+  {
+    entry_id: "6fdec9c406f94784a2f108a736d5cb6b",
+    origin_entry_id: "JK000000100178",
+    entry: "じゆうせき",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["자유석"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じゆうせき",
+    category3: null
+  },
+  {
+    entry_id: "c9c4641192a84f3db648f05af0d147a2",
+    origin_entry_id: "JK000000041958",
+    entry: "じょうきゃく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["승객"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょうきゃく",
+    category3: null
+  },
+  {
+    entry_id: "a0334956120d4b9e9451b0e038e79a5b",
+    origin_entry_id: "JK000000041963",
+    entry: "じょうきゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["상급"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょうきゅう",
+    category3: null
+  },
+  {
+    entry_id: "583a38c1ab744b93bcbae79a0b958f35",
+    origin_entry_id: "JK000000042041",
+    entry: "じょうけん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["조건"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょうけん",
+    category3: null
+  },
+  {
+    entry_id: "d3c2fb71d5eb464f805240cde3bb40e8",
+    origin_entry_id: "JK000000042004",
+    entry: "じょうげ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["상하"]
+      },
+      {
+        part: "동사",
+        means: ["위와 아래;위아래 전부"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょうげ",
+    category3: null
+  },
+  {
+    entry_id: "b8a00d3f12ee43fc84287de59ab81557",
+    origin_entry_id: "JK000000042214",
+    entry: "じょうし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["상사;상급 관청;직장의 윗사람"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょうし",
+    category3: null
+  },
+  {
+    entry_id: "fd014811ea844e54b3a6c1435a76b6b2",
+    origin_entry_id: "JK000000042235",
+    entry: "じょうしき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["상식"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょうしき",
+    category3: null
+  },
+  {
+    entry_id: "178b4d6c7b0a4da1be411b7d67fd0815",
+    origin_entry_id: "JK000000042263",
+    entry: "じょうしゃ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["승차"]
+      },
+      {
+        part: "동사",
+        means: ["승차"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょうしゃ",
+    category3: null
+  },
+  {
+    entry_id: "b768d49e06db43cbaa8f178ec98936c8",
+    origin_entry_id: "JK100042263002",
+    entry: "じょうしゃけん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["승차권"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょうしゃけん",
+    category3: null
+  },
+  {
+    entry_id: "2050f54ce8444f248ae7c85721dee173",
+    origin_entry_id: "JK000000042308",
+    entry: "じょうじゅん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["상순"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょうじゅん",
+    category3: null
+  },
+  {
+    entry_id: "8c67da86bfe34ef99d46c774526bd5bc",
+    origin_entry_id: "JK000000042554",
+    entry: "じょうだん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["농담;농"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょうだん",
+    category3: null
+  },
+  {
+    entry_id: "724d2b0618864369999ae53953c5cbfa",
+    origin_entry_id: "JK000000042897",
+    entry: "じょうほう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정보"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょうほう",
+    category3: null
+  },
+  {
+    entry_id: "18e83f8a62fb462ea87ba6e7a954bffe",
+    origin_entry_id: "JK000000043437",
+    entry: "じょし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["여자"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょし",
+    category3: null
+  },
+  {
+    entry_id: "0e33dbcc98724063abe1ddc3ad23ab84",
+    origin_entry_id: "JK000000043768",
+    entry: "じょゆう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["여우;여배우"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょゆう",
+    category3: null
+  },
+  {
+    entry_id: "5b5ebb1a21424a37bd32b44d012c890f",
+    origin_entry_id: "JK000000044775",
+    entry: "じんしゅ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["인종"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じんしゅ",
+    category3: null
+  },
+  {
+    entry_id: "02a4a4ce0267490baca7177aeee67d7d",
+    origin_entry_id: "JK000000044909",
+    entry: "じんせい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["인생"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じんせい",
+    category3: null
+  },
+  {
+    entry_id: "790ab7a01f6b45c5ba7fd51a0759ece5",
+    origin_entry_id: "JK000000045478",
+    entry: "す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["초;식초"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "す",
+    category3: null
+  },
+  {
+    entry_id: "c3bdd6afc6e648dda18cda0131d3ed63",
+    origin_entry_id: "JK000000045764",
+    entry: "すいてき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수적"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すいてき",
+    category3: null
+  },
+  {
+    entry_id: "c79cd4e23fec4c8ba6305aa45234c2cb",
+    origin_entry_id: "JK000000100110",
+    entry: "すいどうりょうきん",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수도 요금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すいどうりょうきん",
+    category3: null
+  },
+  {
+    entry_id: "17d338cd54e0401892425a0b19a1b294",
+    origin_entry_id: "JK000000045846",
+    entry: "すいみん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수면"]
+      },
+      {
+        part: "동사",
+        means: ["수면"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すいみん",
+    category3: null
+  },
+  {
+    entry_id: "802ebb63ced74959a0bafbf649c90afd",
+    origin_entry_id: "JK000000045929",
+    entry: "すうしき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수식"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すうしき",
+    category3: null
+  },
+  {
+    entry_id: "7a8a48e1a97147de93cce27fd32fa59c",
+    origin_entry_id: "JK000000045989",
+    entry: "すえっこ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["막내;막내둥이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すえっこ",
+    category3: null
+  },
+  {
+    entry_id: "fc16d39356074db893a401a00eb35cda",
+    origin_entry_id: "JK000000046117",
+    entry: "すききらい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["호불호;좋아함과 싫어함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すききらい",
+    category3: null
+  },
+  {
+    entry_id: "2e8e0b851f864a8a94d76efe94624f16",
+    origin_entry_id: "JK000000046938",
+    entry: "すまい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주거;주소;사는 일"]
+      },
+      {
+        part: "동사",
+        means: ["주거;주소;사는 일"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すまい",
+    category3: null
+  },
+  {
+    entry_id: "6a04c9a121694e7ab626f29084e72833",
+    origin_entry_id: "JK000000046957",
+    entry: "すみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["모퉁이;귀퉁이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すみ",
+    category3: null
+  },
+  {
+    entry_id: "012768b026364e968eda4a6cefba7668",
+    origin_entry_id: "JK000000047092",
+    entry: "すり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["인쇄;쇄"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すり",
+    category3: null
+  },
+  {
+    entry_id: "d12aae66188c48d1acab056f554a5edf",
+    origin_entry_id: "JK000000047035",
+    entry: "ずめん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["도면;설계도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ずめん",
+    category3: null
+  },
+  {
+    entry_id: "11b3808c3a6a40029c05cb747839a596",
+    origin_entry_id: "JK000000047465",
+    entry: "せいかく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["성격"]
+      },
+      {
+        part: "형용동사",
+        means: ["정확"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいかく",
+    category3: null
+  },
+  {
+    entry_id: "e46ff96053ae482493f28f9c16400927",
+    origin_entry_id: "JK100047485017",
+    entry: "せいかつひ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["생활비"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいかつひ",
+    category3: null
+  },
+  {
+    entry_id: "2e5aa1f97f7b4c5390311d020d8021d0",
+    origin_entry_id: "JK100047532002",
+    entry: "せいきゅうしょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["청구서"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいきゅうしょ",
+    category3: null
+  },
+  {
+    entry_id: "f60c4de4c80c4f42a9fd6d2f319e7ee5",
+    origin_entry_id: "JK000000047615",
+    entry: "せいこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["성공"]
+      },
+      {
+        part: "동사",
+        means: ["성공"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいこう",
+    category3: null
+  },
+  {
+    entry_id: "ce6439315d504e6caa9f463611754691",
+    origin_entry_id: "JK000000047650",
+    entry: "せいざ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정좌;무릎을 꿇고 단정하게 앉음"]
+      },
+      {
+        part: "동사",
+        means: ["정좌;무릎을 꿇고 단정하게 앉음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいざ",
+    category3: null
+  },
+  {
+    entry_id: "7630693a1fe449e78398a842c520a0fe",
+    origin_entry_id: "JK000000047712",
+    entry: "せいしき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정식"]
+      },
+      {
+        part: "형용동사",
+        means: ["정식"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいしき",
+    category3: null
+  },
+  {
+    entry_id: "45e6f83f2195411083a329a621111729",
+    origin_entry_id: "JK000000047716",
+    entry: "せいしつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["성질"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいしつ",
+    category3: null
+  },
+  {
+    entry_id: "e35d148dfde148a184585cc7ab3f89bb",
+    origin_entry_id: "JK000000047750",
+    entry: "せいしゅん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["청춘"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいしゅん",
+    category3: null
+  },
+  {
+    entry_id: "894b9d3a97c640e0927e9cc8463e93e9",
+    origin_entry_id: "JK000000047784",
+    entry: "せいしょうねん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["청소년"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいしょうねん",
+    category3: null
+  },
+  {
+    entry_id: "0872a2e3bb79447da0d0e0fe46687585",
+    origin_entry_id: "JK100047706003",
+    entry: "せいじか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정치가"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいじか",
+    category3: null
+  },
+  {
+    entry_id: "565fc7cbb6414b9d80b156753bf23bf5",
+    origin_entry_id: "JK000000047778",
+    entry: "せいじょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정상"]
+      },
+      {
+        part: "형용동사",
+        means: ["정상"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいじょう",
+    category3: null
+  },
+  {
+    entry_id: "a9b1944d2b104390a59f0fbbd6f0e235",
+    origin_entry_id: "JK000000047810",
+    entry: "せいじん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["성인"]
+      },
+      {
+        part: "동사",
+        means: ["어른"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいじん",
+    category3: null
+  },
+  {
+    entry_id: "f4215f3ecd6142ca89d08de574e70f42",
+    origin_entry_id: "JK000000047847",
+    entry: "せいせき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["성적"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいせき",
+    category3: null
+  },
+  {
+    entry_id: "4de0a872bff04a92b2c6f6bc3892cdc4",
+    origin_entry_id: "JK000000047876",
+    entry: "せいそう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["청소"]
+      },
+      {
+        part: "동사",
+        means: ["쓰레기나 분뇨 따위를 처리함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいそう",
+    category3: null
+  },
+  {
+    entry_id: "7ffbe3b1abc04b8a855d2750b4b3357a",
+    origin_entry_id: "JK000000047949",
+    entry: "せいちょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["성장"]
+      },
+      {
+        part: "동사",
+        means: ["성장"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいちょう",
+    category3: null
+  },
+  {
+    entry_id: "c7e1a6a8f8534c39bd9742a7b7cf0917",
+    origin_entry_id: "JK000000048044",
+    entry: "せいねん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["청년"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいねん",
+    category3: null
+  },
+  {
+    entry_id: "aa7b8e1ba3e9476e980066e99ba1c1c1",
+    origin_entry_id: "JK100048042001",
+    entry: "せいねんがっぴ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["생년월일"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいねんがっぴ",
+    category3: null
+  },
+  {
+    entry_id: "72b1b03125fe438087d1192b50bd0e3f",
+    origin_entry_id: "JK000000048094",
+    entry: "せいひん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["제품"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいひん",
+    category3: null
+  },
+  {
+    entry_id: "423e6f78ad064334ad8c1ebda38cbed5",
+    origin_entry_id: "JK000000048103",
+    entry: "せいふく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["제복"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいふく",
+    category3: null
+  },
+  {
+    entry_id: "a07a2a3afd9e4ce3a0c7763db2a56233",
+    origin_entry_id: "JK000000048176",
+    entry: "せいもん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정문"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいもん",
+    category3: null
+  },
+  {
+    entry_id: "bef860f9c7e8446bbdb41024117654ad",
+    origin_entry_id: "JK000000048214",
+    entry: "せいり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정리"]
+      },
+      {
+        part: "동사",
+        means: ["질서를 바로잡음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せいり",
+    category3: null
+  },
+  {
+    entry_id: "ef68e2d822184b78b90c9a1497d052a6",
+    origin_entry_id: "JK000000048304",
+    entry: "せき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["기침"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せき",
+    category3: null
+  },
+  {
+    entry_id: "09605725243c478cb14eaa4905a54613",
+    origin_entry_id: "JK000000048450",
+    entry: "せきにん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["책임"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せきにん",
+    category3: null
+  },
+  {
+    entry_id: "4f6748ebd1d84e94aede81819bfdef75",
+    origin_entry_id: "JK000000048489",
+    entry: "せきゆ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["석유;→げんゆ"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せきゆ",
+    category3: null
+  },
+  {
+    entry_id: "f63ba67a467642b2b08deb61f0ca44b5",
+    origin_entry_id: "JK000000048922",
+    entry: "せつやく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["절약"]
+      },
+      {
+        part: "동사",
+        means: ["절약"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せつやく",
+    category3: null
+  },
+  {
+    entry_id: "6f326484b6c440cab9b098bd9e7e2ba6",
+    origin_entry_id: "JK000000049379",
+    entry: "せんきょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["선거"]
+      },
+      {
+        part: "동사",
+        means: ["선거"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せんきょ",
+    category3: null
+  },
+  {
+    entry_id: "4836b446da0049598b9371c9d0a86288",
+    origin_entry_id: "JK000000049486",
+    entry: "せんこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전공"]
+      },
+      {
+        part: "동사",
+        means: ["전공"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せんこう",
+    category3: null
+  },
+  {
+    entry_id: "611e116caf014adf876372255bf90412",
+    origin_entry_id: "JK000000049542",
+    entry: "せんざい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["세제"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せんざい",
+    category3: null
+  },
+  {
+    entry_id: "c8c9e7ca31734888a8b570a6f8390f86",
+    origin_entry_id: "JK000000049598",
+    entry: "せんじつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["요전"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せんじつ",
+    category3: null
+  },
+  {
+    entry_id: "8ecef60f08a44e1ea213130ed77179b0",
+    origin_entry_id: "JK000000049858",
+    entry: "せんたく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["선택"]
+      },
+      {
+        part: "동사",
+        means: ["선택"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せんたく",
+    category3: null
+  },
+  {
+    entry_id: "ddb7ed0a777149c292bfff199762c3cc",
+    origin_entry_id: "JK000000100106",
+    entry: "せんたくき",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["세탁기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せんたくき",
+    category3: null
+  },
+  {
+    entry_id: "5be8fc843ed54bc49f86452990f1cebe",
+    origin_entry_id: "JK000000100107",
+    entry: "せんたくもの",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["세탁물"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せんたくもの",
+    category3: null
+  },
+  {
+    entry_id: "3bcf53e0d5114ad9bce8a911d19ceab9",
+    origin_entry_id: "JK000000049939",
+    entry: "せんでん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["선전"]
+      },
+      {
+        part: "동사",
+        means: ["선전"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せんでん",
+    category3: null
+  },
+  {
+    entry_id: "f3fd9ecaff2643e6a488d392842a8c99",
+    origin_entry_id: "JK000000050118",
+    entry: "せんぷうき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["선풍기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せんぷうき",
+    category3: null
+  },
+  {
+    entry_id: "f5c84d2423164634afc900d9e25c8416",
+    origin_entry_id: "JK100050203002",
+    entry: "せんめんじょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["세면소;화장실"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せんめんじょ",
+    category3: null
+  },
+  {
+    entry_id: "08ccead1b925405ea83334c2a96881b5",
+    origin_entry_id: "JK100050214002",
+    entry: "せんもんか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전문가"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せんもんか",
+    category3: null
+  },
+  {
+    entry_id: "94bf7528fa34457b9208ce5e9197414e",
+    origin_entry_id: "JK000000050306",
+    entry: "せんろ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["선로;궤도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "せんろ",
+    category3: null
+  },
+  {
+    entry_id: "01f9ec9496314b07a6b6b4b341d15a6b",
+    origin_entry_id: "JK000000047375",
+    entry: "ぜい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["세;세금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぜい",
+    category3: null
+  },
+  {
+    entry_id: "935fe2836c8b455bac7349e7f5742299",
+    origin_entry_id: "JK000000047569",
+    entry: "ぜいきん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["세금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぜいきん",
+    category3: null
+  },
+  {
+    entry_id: "0d7b5bf25a2e41ef9373dd5aa9402b71",
+    origin_entry_id: "JK000000047642",
+    entry: "ぜいこみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["세금을 포함한 액수"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぜいこみ",
+    category3: null
+  },
+  {
+    entry_id: "ebfbc1d4a55c4c288456db5f52771391",
+    origin_entry_id: "JK000000048989",
+    entry: "ぜひ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["시비;옳고 그름"]
+      },
+      {
+        part: "동사",
+        means: ["사물의 시비를 가림"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぜひ",
+    category3: null
+  },
+  {
+    entry_id: "1456f9535723413faf37232370c3b7f6",
+    origin_entry_id: "JK000000049253",
+    entry: "ぜんいん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전원"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぜんいん",
+    category3: null
+  },
+  {
+    entry_id: "1a990720430d4646b371b815b324cc35",
+    origin_entry_id: "JK000000049731",
+    entry: "ぜんしん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전신;온몸"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぜんしん",
+    category3: null
+  },
+  {
+    entry_id: "4b742af4d63d4e7b9cc76416942694dd",
+    origin_entry_id: "JK000000049813",
+    entry: "ぜんぜん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["점점"]
+      },
+      {
+        part: "부사",
+        means: ["차례차례;차차"]
+      },
+      {
+        part: "기타",
+        means: ["차례로 나아가는 모양"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぜんぜん",
+    category3: null
+  },
+  {
+    entry_id: "1e421d99219e4e9891f24f2d238db624",
+    origin_entry_id: "JK000000050067",
+    entry: "ぜんはん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전반"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぜんはん",
+    category3: null
+  },
+  {
+    entry_id: "ad1b1f9e3fcf4f91bd1e7ff65001910e",
+    origin_entry_id: "JK000000050506",
+    entry: "そうおん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そうおん",
+    category3: null
+  },
+  {
+    entry_id: "2f4677cb52a145559e33d72f3a02e8e5",
+    origin_entry_id: "JK000000050614",
+    entry: "そうきん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["송금"]
+      },
+      {
+        part: "동사",
+        means: ["송금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そうきん",
+    category3: null
+  },
+  {
+    entry_id: "e4c394518d6e4386b8240e1122649b6f",
+    origin_entry_id: "JK000000050697",
+    entry: "そうごう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["종합"]
+      },
+      {
+        part: "동사",
+        means: ["종합"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そうごう",
+    category3: null
+  },
+  {
+    entry_id: "721e73b93e2649c5b2d5f456f43de1e5",
+    origin_entry_id: "JK000000050858",
+    entry: "そうしん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["송신"]
+      },
+      {
+        part: "동사",
+        means: ["송신"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そうしん",
+    category3: null
+  },
+  {
+    entry_id: "043e234ca6bc4b049b7c5e4984793ae4",
+    origin_entry_id: "JK000000100108",
+    entry: "そうじき",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["청소기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そうじき",
+    category3: null
+  },
+  {
+    entry_id: "e54dad686f864527971817f55d93e0d6",
+    origin_entry_id: "JK000000050935",
+    entry: "そうぞう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["상상"]
+      },
+      {
+        part: "동사",
+        means: ["상상"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そうぞう",
+    category3: null
+  },
+  {
+    entry_id: "139cc5779ea940b9a5f555d8a7cc4a9c",
+    origin_entry_id: "JK000000050943",
+    entry: "そうぞく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["상속"]
+      },
+      {
+        part: "동사",
+        means: ["상속"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そうぞく",
+    category3: null
+  },
+  {
+    entry_id: "db47c86d99164e90a3ba3ed63c991e67",
+    origin_entry_id: "JK000000051040",
+    entry: "そうとう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["상당;상응"]
+      },
+      {
+        part: "동사",
+        means: ["상당히;상당함"]
+      },
+      {
+        part: "부사",
+        means: ["상당;상응","상당히;상당함"]
+      },
+      {
+        part: "형용동사",
+        means: ["상당;상응","상당히;상당함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そうとう",
+    category3: null
+  },
+  {
+    entry_id: "ba10daa46871407aa6fb3482d7c89b52",
+    origin_entry_id: "JK000000100109",
+    entry: "そうべつかい",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["송별회"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そうべつかい",
+    category3: null
+  },
+  {
+    entry_id: "67dc02acfe2d41cea3c6003aea7d9e19",
+    origin_entry_id: "JK000000051249",
+    entry: "そうりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["송료"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そうりょう",
+    category3: null
+  },
+  {
+    entry_id: "1a6960093aa24a55938a43b342854408",
+    origin_entry_id: "JK000000051537",
+    entry: "そくたつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["속달"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そくたつ",
+    category3: null
+  },
+  {
+    entry_id: "37bd85b049624fbbbd7a1737fbea9c54",
+    origin_entry_id: "JK000000051552",
+    entry: "そくてい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["측정"]
+      },
+      {
+        part: "동사",
+        means: ["측정"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そくてい",
+    category3: null
+  },
+  {
+    entry_id: "2dd46fe9110b4894b64de95f88cb4ed3",
+    origin_entry_id: "JK000000051558",
+    entry: "そくど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["속도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そくど",
+    category3: null
+  },
+  {
+    entry_id: "18f38a0d0a634caaa6b7263b4139aaa9",
+    origin_entry_id: "JK000000051633",
+    entry: "そくりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["측량"]
+      },
+      {
+        part: "동사",
+        means: ["측량"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そくりょう",
+    category3: null
+  },
+  {
+    entry_id: "58f7dc61f895467383647fea3230893d",
+    origin_entry_id: "JK000000051662",
+    entry: "そこ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["바닥"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そこ",
+    category3: null
+  },
+  {
+    entry_id: "2e60ae71c0964e0baae7f854d6924cbb",
+    origin_entry_id: "JK000000051878",
+    entry: "そっくり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전부;몽땅"]
+      },
+      {
+        part: "동사",
+        means: ["꼭 닮음"]
+      },
+      {
+        part: "부사",
+        means: ["전부;몽땅","꼭 닮음","그대로임;고스란함"]
+      },
+      {
+        part: "형용동사",
+        means: ["그대로임;고스란함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そっくり",
+    category3: null
+  },
+  {
+    entry_id: "cc2fbd09329a4f49b62e4b5c9a0712ff",
+    origin_entry_id: "JK000000100195",
+    entry: "そつぎょうしき",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["졸업식"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そつぎょうしき",
+    category3: null
+  },
+  {
+    entry_id: "79aaa0e1c2464e59bc4b977ace8329d8",
+    origin_entry_id: "JK000000051926",
+    entry: "そで",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소매"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そで",
+    category3: null
+  },
+  {
+    entry_id: "37c8014312434b54a323786524e229e4",
+    origin_entry_id: "JK000000052362",
+    entry: "それぞれ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["각기;각각;각자"]
+      },
+      {
+        part: "부사",
+        means: ["각기;각각;각자"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "それぞれ",
+    category3: null
+  },
+  {
+    entry_id: "33c5f0b333994eb3948c972699aaea11",
+    origin_entry_id: "JK000000052721",
+    entry: "たいいく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["체육"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たいいく",
+    category3: null
+  },
+  {
+    entry_id: "979f30e783c4475ab700c7abab0c84ce",
+    origin_entry_id: "JK000000052767",
+    entry: "たいおん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["체온"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たいおん",
+    category3: null
+  },
+  {
+    entry_id: "cd51cb5c1f93434e92d8d48ede7085b0",
+    origin_entry_id: "JK000000052793",
+    entry: "たいかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["대회"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たいかい",
+    category3: null
+  },
+  {
+    entry_id: "8cd594024f0e4f1893794d1b7fc3c09e",
+    origin_entry_id: "JK000000052809",
+    entry: "たいがく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["퇴학"]
+      },
+      {
+        part: "동사",
+        means: ["퇴학"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たいがく",
+    category3: null
+  },
+  {
+    entry_id: "814bdfc0d88548e9b8167be39f7e0960",
+    origin_entry_id: "JK000000053035",
+    entry: "たいさく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["대책"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たいさく",
+    category3: null
+  },
+  {
+    entry_id: "8213dc3031d047abbca93018815eca09",
+    origin_entry_id: "JK000000053179",
+    entry: "たいしょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["퇴직"]
+      },
+      {
+        part: "동사",
+        means: ["퇴직"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たいしょく",
+    category3: null
+  },
+  {
+    entry_id: "10140c92fa6c4d61815c91189388062a",
+    origin_entry_id: "JK000000053117",
+    entry: "たいじゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["체중;몸무게"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たいじゅう",
+    category3: null
+  },
+  {
+    entry_id: "fa5f22e71e5f4a6fad8a760234864529",
+    origin_entry_id: "JK000000053361",
+    entry: "たいど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["태도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たいど",
+    category3: null
+  },
+  {
+    entry_id: "05d2a1a6dd98438382a10191cbb3563a",
+    origin_entry_id: "JK000000053522",
+    entry: "たいほ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["체포"]
+      },
+      {
+        part: "동사",
+        means: ["체포"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たいほ",
+    category3: null
+  },
+  {
+    entry_id: "5bd304afe8d545598da054982c55ce5b",
+    origin_entry_id: "JK000000053639",
+    entry: "たいりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["대량"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たいりょう",
+    category3: null
+  },
+  {
+    entry_id: "5275601365d54511b7e0512aeaa04283",
+    origin_entry_id: "JK000000053643",
+    entry: "たいりょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["체력"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たいりょく",
+    category3: null
+  },
+  {
+    entry_id: "120535ff2c4c4844adf160f79a820ece",
+    origin_entry_id: "JK000000053830",
+    entry: "たから",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["보물;보배"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たから",
+    category3: null
+  },
+  {
+    entry_id: "1c546884435a4196844d2f6e34951983",
+    origin_entry_id: "JK000000054195",
+    entry: "たしざん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["덧셈;가산"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たしざん",
+    category3: null
+  },
+  {
+    entry_id: "31d101a9c53b43b2ad11755944ac18b1",
+    origin_entry_id: "JK000000054241",
+    entry: "たしょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["많음과 적음"]
+      },
+      {
+        part: "부사",
+        means: ["좀;약간"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たしょう",
+    category3: null
+  },
+  {
+    entry_id: "03f8fb586be246b09a2e1a13beffc089",
+    origin_entry_id: "JK000000054328",
+    entry: "たたかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["싸움"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たたかい",
+    category3: null
+  },
+  {
+    entry_id: "267bad8f3735456cb6fa2db6161db671",
+    origin_entry_id: "JK000000054311",
+    entry: "ただ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["무료;공짜;거저"]
+      },
+      {
+        part: "기타",
+        means: ["헛됨;헛…"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ただ",
+    category3: null
+  },
+  {
+    entry_id: "32d8008e67644bf7afd4d0054210735c",
+    origin_entry_id: "JK000000054905",
+    entry: "たね",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["종자;씨"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たね",
+    category3: null
+  },
+  {
+    entry_id: "66d1db15a2f948359bfdad7748652829",
+    origin_entry_id: "JK000000054949",
+    entry: "たのみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["부탁;청"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たのみ",
+    category3: null
+  },
+  {
+    entry_id: "2a5b013e4b73474ca189abd8bd74dbd2",
+    origin_entry_id: "JK000000054981",
+    entry: "たび",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["여행"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たび",
+    category3: null
+  },
+  {
+    entry_id: "d03c3e955e9c4d5ba8677457114911fd",
+    origin_entry_id: "JK000000055257",
+    entry: "ため",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["모아 둠;그 장소"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ため",
+    category3: null
+  },
+  {
+    entry_id: "178bd0eb58f94dde965df83ca922aee8",
+    origin_entry_id: "JK000000055602",
+    entry: "たんき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["단기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たんき",
+    category3: null
+  },
+  {
+    entry_id: "37cdd67f117f44f383de263ace0e318a",
+    origin_entry_id: "JK000000055653",
+    entry: "たんご",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["단어;낱말"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たんご",
+    category3: null
+  },
+  {
+    entry_id: "e788ef9dc7244cfa94cb809ea85d1abf",
+    origin_entry_id: "JK000000055779",
+    entry: "たんじょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["탄생"]
+      },
+      {
+        part: "동사",
+        means: ["첫돌"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たんじょう",
+    category3: null
+  },
+  {
+    entry_id: "a517467ca96649a087d038eab67f3a04",
+    origin_entry_id: "JK000000055930",
+    entry: "たんとう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["담당"]
+      },
+      {
+        part: "동사",
+        means: ["담당"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たんとう",
+    category3: null
+  },
+  {
+    entry_id: "b874216d0a434bde9d2836891cfa3b13",
+    origin_entry_id: "JK000000052682",
+    entry: "だい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["대"]
+      },
+      {
+        part: "접사",
+        means: ["제왕·가구주·경영자 등이 그 지위에 있는 동안"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だい",
+    category3: null
+  },
+  {
+    entry_id: "55c16a49cd524f5aa1b563b03ffe85e1",
+    origin_entry_id: "JK000000052905",
+    entry: "だいきん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["대금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だいきん",
+    category3: null
+  },
+  {
+    entry_id: "2663332dbb2341e396a5874e42b5c3b4",
+    origin_entry_id: "JK000000053301",
+    entry: "だいたい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["대퇴;넓적다리"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だいたい",
+    category3: null
+  },
+  {
+    entry_id: "76f25a0cb9ef450db11e90e20160f613",
+    origin_entry_id: "JK000000053379",
+    entry: "だいとうりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["대통령"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だいとうりょう",
+    category3: null
+  },
+  {
+    entry_id: "4f45dd59cfd745f2aececfee2927183f",
+    origin_entry_id: "JK000000053475",
+    entry: "だいひょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["대표"]
+      },
+      {
+        part: "동사",
+        means: ["대표"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だいひょう",
+    category3: null
+  },
+  {
+    entry_id: "348adeda46154191a2678e53f8646fd2",
+    origin_entry_id: "JK000000053486",
+    entry: "だいぶ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["일본의 令 제도 아래서 職 및 坊라는 이름의 관청의 장;→たいふ"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だいぶ",
+    category3: null
+  },
+  {
+    entry_id: "1f73d36007c54b30a8faef1ee86eb106",
+    origin_entry_id: "JK000000053577",
+    entry: "だいめい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["제명;제목"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だいめい",
+    category3: null
+  },
+  {
+    entry_id: "c065d8792f7f43aba237ecdb360687b0",
+    origin_entry_id: "JK000000053629",
+    entry: "だいり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["대리"]
+      },
+      {
+        part: "동사",
+        means: ["대리"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だいり",
+    category3: null
+  },
+  {
+    entry_id: "92545cb598554a808b1a8178625b5c70",
+    origin_entry_id: "JK000000054596",
+    entry: "だっこ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["안음;안김"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だっこ",
+    category3: null
+  },
+  {
+    entry_id: "6dd2d106ea244a3d8c2dd548f1c0a84d",
+    origin_entry_id: "JK000000055719",
+    entry: "だんし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사내아이;아들"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だんし",
+    category3: null
+  },
+  {
+    entry_id: "b70cc504a60e41a090a5a38f9f8b0be2",
+    origin_entry_id: "JK000000055820",
+    entry: "だんすい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["단수"]
+      },
+      {
+        part: "동사",
+        means: ["단수"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だんすい",
+    category3: null
+  },
+  {
+    entry_id: "1627b77eac954c85bb4d255c114d171b",
+    origin_entry_id: "JK000000055879",
+    entry: "だんたい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["단체"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だんたい",
+    category3: null
+  },
+  {
+    entry_id: "cf082786514647d09277a160161a5867",
+    origin_entry_id: "JK000000056030",
+    entry: "だんぼう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["난방"]
+      },
+      {
+        part: "동사",
+        means: ["난방"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だんぼう",
+    category3: null
+  },
+  {
+    entry_id: "b909c773c96544b5bfec77a20de853e2",
+    origin_entry_id: "JK000000056173",
+    entry: "ちか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지하"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちか",
+    category3: null
+  },
+  {
+    entry_id: "f4fb008eacf34494aa93cb4888bb8de9",
+    origin_entry_id: "JK100056173008",
+    entry: "ちかすい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지하수"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちかすい",
+    category3: null
+  },
+  {
+    entry_id: "9d81d7538c5a4befa2e9c80f17be0884",
+    origin_entry_id: "JK000000056221",
+    entry: "ちかみち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지름길"]
+      },
+      {
+        part: "동사",
+        means: ["가까운 길;샛길"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちかみち",
+    category3: null
+  },
+  {
+    entry_id: "941f63c0fd304914a32c7f69fb0c3780",
+    origin_entry_id: "JK000000056182",
+    entry: "ちがい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["틀림;차이;상이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちがい",
+    category3: null
+  },
+  {
+    entry_id: "5e85e7750b86419bab7d71614c5215d7",
+    origin_entry_id: "JK000000056274",
+    entry: "ちきゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지구"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちきゅう",
+    category3: null
+  },
+  {
+    entry_id: "605926bc6e284ae6a765b02bc4e030f0",
+    origin_entry_id: "JK000000056381",
+    entry: "ちこく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지각"]
+      },
+      {
+        part: "동사",
+        means: ["지각"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちこく",
+    category3: null
+  },
+  {
+    entry_id: "f6124d52e15342648988a2226f13f6c3",
+    origin_entry_id: "JK000000056434",
+    entry: "ちじん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지인;지기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちじん",
+    category3: null
+  },
+  {
+    entry_id: "fe6bb3bcb3c4487b9733cbe8fc37238a",
+    origin_entry_id: "JK000000056663",
+    entry: "ちほう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지방"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちほう",
+    category3: null
+  },
+  {
+    entry_id: "a2b8f0a3ff8246c08a3ba5a5ccd9ea61",
+    origin_entry_id: "JK000000056690",
+    entry: "ちめい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지명"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちめい",
+    category3: null
+  },
+  {
+    entry_id: "3728c4ad0c924c20bf4e6fb9a54eb3fe",
+    origin_entry_id: "JK000000057004",
+    entry: "ちゅうおう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["중앙"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうおう",
+    category3: null
+  },
+  {
+    entry_id: "9288bfaeb9e54fe6bb69ab751904a3e3",
+    origin_entry_id: "JK000000057028",
+    entry: "ちゅうかん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["중간"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうかん",
+    category3: null
+  },
+  {
+    entry_id: "b68865c4c901479cb25e05d0c18f3462",
+    origin_entry_id: "JK000000057022",
+    entry: "ちゅうがく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["중학;‘中学校’의 준말"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうがく",
+    category3: null
+  },
+  {
+    entry_id: "98db2f250a8f4154870bb153d39c80de",
+    origin_entry_id: "JK000000057039",
+    entry: "ちゅうきゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["중급"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうきゅう",
+    category3: null
+  },
+  {
+    entry_id: "3dbea994ac1a4307a3a4fb16e95df973",
+    origin_entry_id: "JK000000057063",
+    entry: "ちゅうこ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["중고"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうこ",
+    category3: null
+  },
+  {
+    entry_id: "84b48bd7dcc3485ab0f9dd10ad7efead",
+    origin_entry_id: "JK000000057075",
+    entry: "ちゅうごく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["나라의 중앙부"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうごく",
+    category3: null
+  },
+  {
+    entry_id: "af39f3b6a8e643428aaaa7f95600be38",
+    origin_entry_id: "JK000000057097",
+    entry: "ちゅうしゃ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주사"]
+      },
+      {
+        part: "동사",
+        means: ["주사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうしゃ",
+    category3: null
+  },
+  {
+    entry_id: "29d7338377094fa6b87733794bab56d0",
+    origin_entry_id: "JK000000100196",
+    entry: "ちゅうしゃいはん",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주차 위반"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうしゃいはん",
+    category3: null
+  },
+  {
+    entry_id: "28f77f9723d14cbd9f016526c048c0ae",
+    origin_entry_id: "JK000000057115",
+    entry: "ちゅうしょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주식;점심"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうしょく",
+    category3: null
+  },
+  {
+    entry_id: "1c42debc86b34cb5a6805a8a0181f9e5",
+    origin_entry_id: "JK000000057116",
+    entry: "ちゅうしん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["중심"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうしん",
+    category3: null
+  },
+  {
+    entry_id: "5fe44b48ca3f4a83b21258296aa13274",
+    origin_entry_id: "JK000000057104",
+    entry: "ちゅうじゅん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["중순"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうじゅん",
+    category3: null
+  },
+  {
+    entry_id: "5f44b36294134c2ca565836e265df405",
+    origin_entry_id: "JK000000057211",
+    entry: "ちゅうねん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["중년"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうねん",
+    category3: null
+  },
+  {
+    entry_id: "ed14467013c947f98534db0e3109f324",
+    origin_entry_id: "JK000000057254",
+    entry: "ちゅうもく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주목"]
+      },
+      {
+        part: "동사",
+        means: ["주목"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうもく",
+    category3: null
+  },
+  {
+    entry_id: "d90cb97b6bf74db39e7e1e426941ecd6",
+    origin_entry_id: "JK000000057256",
+    entry: "ちゅうもん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주문"]
+      },
+      {
+        part: "동사",
+        means: ["맞춤"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゅうもん",
+    category3: null
+  },
+  {
+    entry_id: "2a516210886940598dfd07b8e4bc1190",
+    origin_entry_id: "JK000000057314",
+    entry: "ちょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["장"]
+      },
+      {
+        part: "접사",
+        means: ["긴;기다란"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょう",
+    category3: null
+  },
+  {
+    entry_id: "3ce092ce854843e1a803a0f5819f518e",
+    origin_entry_id: "JK000000057397",
+    entry: "ちょうか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["초과"]
+      },
+      {
+        part: "동사",
+        means: ["초과"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょうか",
+    category3: null
+  },
+  {
+    entry_id: "287203a95b714dccb6d1ace39be2ea2a",
+    origin_entry_id: "JK000000057499",
+    entry: "ちょうさ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["조사"]
+      },
+      {
+        part: "동사",
+        means: ["조사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょうさ",
+    category3: null
+  },
+  {
+    entry_id: "7b0afff4a5464afca459b61d765ebb58",
+    origin_entry_id: "JK000000057513",
+    entry: "ちょうし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["가락"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょうし",
+    category3: null
+  },
+  {
+    entry_id: "59fdf3d6ae844348b86ab9d0b6a73ea1",
+    origin_entry_id: "JK000000057555",
+    entry: "ちょうしょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["장점;미점"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょうしょ",
+    category3: null
+  },
+  {
+    entry_id: "d0f04f0a4de84dfc984ba19191429436",
+    origin_entry_id: "JK000000057556",
+    entry: "ちょうじょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["장녀;맏딸"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょうじょ",
+    category3: null
+  },
+  {
+    entry_id: "e99003e375064c189060b2b2ea8dff3a",
+    origin_entry_id: "JK000000057601",
+    entry: "ちょうせい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["조정"]
+      },
+      {
+        part: "동사",
+        means: ["컨디션을 조절함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょうせい",
+    category3: null
+  },
+  {
+    entry_id: "426e587cd1004ab7816a1d71d1cb21d2",
+    origin_entry_id: "JK000000057699",
+    entry: "ちょうなん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["장남"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょうなん",
+    category3: null
+  },
+  {
+    entry_id: "5336442db67042bd91b8e12636d842f6",
+    origin_entry_id: "JK100057759001",
+    entry: "ちょうみりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["조미료"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょうみりょう",
+    category3: null
+  },
+  {
+    entry_id: "eda454632d1c4aea945c8abf621fc236",
+    origin_entry_id: "JK000000057823",
+    entry: "ちょきん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["저금"]
+      },
+      {
+        part: "동사",
+        means: ["저금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょきん",
+    category3: null
+  },
+  {
+    entry_id: "91733ffb7e004ce7b268330e0f59ac7a",
+    origin_entry_id: "JK000000057841",
+    entry: "ちょくご",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["직후"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょくご",
+    category3: null
+  },
+  {
+    entry_id: "7419622063864c10ac68885b1d717d61",
+    origin_entry_id: "JK000000057862",
+    entry: "ちょくせつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["직접"]
+      },
+      {
+        part: "동사",
+        means: ["사이에 아무것도 끼지 않고 접함"]
+      },
+      {
+        part: "형용동사",
+        means: ["딴 것을 거치지 않고 곧바로"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょくせつ",
+    category3: null
+  },
+  {
+    entry_id: "eb384dcfa41a48dfbe3ab6642a980ca1",
+    origin_entry_id: "JK000000057866",
+    entry: "ちょくせん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["직선"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょくせん",
+    category3: null
+  },
+  {
+    entry_id: "e07a3913d11d487fa0883f15aa2469e4",
+    origin_entry_id: "JK000000057867",
+    entry: "ちょくぜん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["직전"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょくぜん",
+    category3: null
+  },
+  {
+    entry_id: "202aedfd5950403792695c02f4c0a7d4",
+    origin_entry_id: "JK000000057874",
+    entry: "ちょくつう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["직통"]
+      },
+      {
+        part: "동사",
+        means: ["직통"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちょくつう",
+    category3: null
+  },
+  {
+    entry_id: "8bd2e65e7c8b4b37b11967cb16d008be",
+    origin_entry_id: "JK000000058231",
+    entry: "つい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["쌍;짝"]
+      },
+      {
+        part: "접사",
+        means: ["→ついく"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つい",
+    category3: null
+  },
+  {
+    entry_id: "c8d623d3f0bc4a91af2bcbf7907547fb",
+    origin_entry_id: "JK000000058340",
+    entry: "つうか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["통과"]
+      },
+      {
+        part: "동사",
+        means: ["그대로 지나감"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つうか",
+    category3: null
+  },
+  {
+    entry_id: "cd0aa866eb5d453ebd366669ed5a645f",
+    origin_entry_id: "JK000000058357",
+    entry: "つうきん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["통근"]
+      },
+      {
+        part: "동사",
+        means: ["근무처에 다님"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つうきん",
+    category3: null
+  },
+  {
+    entry_id: "5785c8220cf54b22b66ce673b82bfc76",
+    origin_entry_id: "JK000000058367",
+    entry: "つうこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["통행"]
+      },
+      {
+        part: "동사",
+        means: ["왕래"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つうこう",
+    category3: null
+  },
+  {
+    entry_id: "05ef91c0210c495aa04f1ff525063d8c",
+    origin_entry_id: "JK000000058391",
+    entry: "つうしん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["통신"]
+      },
+      {
+        part: "동사",
+        means: ["상황을 알림;소식"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つうしん",
+    category3: null
+  },
+  {
+    entry_id: "82cbf2ed15244772ac11828eab6c1520",
+    origin_entry_id: "JK000000058406",
+    entry: "つうちょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["통장"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つうちょう",
+    category3: null
+  },
+  {
+    entry_id: "9f7c6d1ca1fd4222a9f5c5ba32217d12",
+    origin_entry_id: "JK000000058443",
+    entry: "つうやく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["통역"]
+      },
+      {
+        part: "동사",
+        means: ["통역"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つうやく",
+    category3: null
+  },
+  {
+    entry_id: "f5dd1f9190f44e49b596feb9ea5eba0b",
+    origin_entry_id: "JK000000058704",
+    entry: "つきひ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["월일"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つきひ",
+    category3: null
+  },
+  {
+    entry_id: "f8ba69bbfd6f40359fe10a566d243af0",
+    origin_entry_id: "JK000000058664",
+    entry: "つぎつぎ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["차례차례;계속함;잇닮"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つぎつぎ",
+    category3: null
+  },
+  {
+    entry_id: "afcb7bcb88304909ac1eacc7d9356b55",
+    origin_entry_id: "JK000000058961",
+    entry: "つち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["땅"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つち",
+    category3: null
+  },
+  {
+    entry_id: "99b2cf507aab4145bad10b66611fc6ef",
+    origin_entry_id: "JK000000059070",
+    entry: "つつみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["싸는 일;싼 물건"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つつみ",
+    category3: null
+  },
+  {
+    entry_id: "6d96f9d823b944c69e451d9e57ac62d0",
+    origin_entry_id: "JK000000059744",
+    entry: "ていあん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["제안"]
+      },
+      {
+        part: "동사",
+        means: ["제안"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ていあん",
+    category3: null
+  },
+  {
+    entry_id: "0fb0321ac3b44fbd87f0733560764547",
+    origin_entry_id: "JK000000059788",
+    entry: "ていいん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정원"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ていいん",
+    category3: null
+  },
+  {
+    entry_id: "d24824fcb97547d1a5e56f64ed2160c0",
+    origin_entry_id: "JK000000059799",
+    entry: "ていか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["저하"]
+      },
+      {
+        part: "동사",
+        means: ["내려감"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ていか",
+    category3: null
+  },
+  {
+    entry_id: "915f022d1fd24788bc0abc792e41c3c3",
+    origin_entry_id: "JK000000059822",
+    entry: "ていき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ていき",
+    category3: null
+  },
+  {
+    entry_id: "9c33f27094bb480cb95a1a2af4106504",
+    origin_entry_id: "JK100059822003",
+    entry: "ていきけん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["‘定期乗車券’의 준말"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ていきけん",
+    category3: null
+  },
+  {
+    entry_id: "336db58a717748dd94b62a87181dceb2",
+    origin_entry_id: "JK000000059904",
+    entry: "ていしゃ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정차;정거"]
+      },
+      {
+        part: "동사",
+        means: ["정차;정거"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ていしゃ",
+    category3: null
+  },
+  {
+    entry_id: "b2510fe70d1b43cdb12cfb6379c46b4d",
+    origin_entry_id: "JK000000059916",
+    entry: "ていしゅつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["제출"]
+      },
+      {
+        part: "동사",
+        means: ["제출"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ていしゅつ",
+    category3: null
+  },
+  {
+    entry_id: "8c8ab2d135ea4d08ae84679c9ad90d8d",
+    origin_entry_id: "JK000000060020",
+    entry: "ていでん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["정전"]
+      },
+      {
+        part: "동사",
+        means: ["정전"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ていでん",
+    category3: null
+  },
+  {
+    entry_id: "08c1b1c13791403d9d123b81552ab330",
+    origin_entry_id: "JK000000060411",
+    entry: "てくび",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["손목"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "てくび",
+    category3: null
+  },
+  {
+    entry_id: "21f81c256bbf4fc9947ab349700d1f43",
+    origin_entry_id: "JK000000060485",
+    entry: "てじな",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["요술"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "てじな",
+    category3: null
+  },
+  {
+    entry_id: "7433a56cfcca4fbf90adb0aeceac781b",
+    origin_entry_id: "JK000000060696",
+    entry: "てつだい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["도와줌;심부름;또, 그 사람"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "てつだい",
+    category3: null
+  },
+  {
+    entry_id: "1266a20ec4f54afe8969a1ea16d9348f",
+    origin_entry_id: "JK000000100281",
+    entry: "てつだいさん",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["가사 도우미"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "てつだいさん",
+    category3: null
+  },
+  {
+    entry_id: "7f0b90e422014031b9453a04849a586d",
+    origin_entry_id: "JK000000060715",
+    entry: "てつどう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["철도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "てつどう",
+    category3: null
+  },
+  {
+    entry_id: "78739ad346654d888b4d8ec4346a4c9d",
+    origin_entry_id: "JK000000061327",
+    entry: "てんごく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["천국;낙원"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "てんごく",
+    category3: null
+  },
+  {
+    entry_id: "4ca7dfc7562f485da2747b4d08d23bdb",
+    origin_entry_id: "JK000000061357",
+    entry: "てんじ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전시"]
+      },
+      {
+        part: "동사",
+        means: ["전시"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "てんじ",
+    category3: null
+  },
+  {
+    entry_id: "172a74678dae4ccdaa297818f9ce30c9",
+    origin_entry_id: "JK000000059668",
+    entry: "であい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["처음으로 만남;마주침"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "であい",
+    category3: null
+  },
+  {
+    entry_id: "4c99080c18494c7a9b2d82ab674e6b3e",
+    origin_entry_id: "JK000000060090",
+    entry: "でいり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["출입;드나듦"]
+      },
+      {
+        part: "동사",
+        means: ["단골"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "でいり",
+    category3: null
+  },
+  {
+    entry_id: "086ffb9064c149d3ba61db745b44f84d",
+    origin_entry_id: "JK000000060255",
+    entry: "できごと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사건;일"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "できごと",
+    category3: null
+  },
+  {
+    entry_id: "091e4838afa04385ba8ba93cb80be5df",
+    origin_entry_id: "JK000000061273",
+    entry: "でんきゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전구"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "でんきゅう",
+    category3: null
+  },
+  {
+    entry_id: "c21a2273ce434ec9badfa55b5e8e546f",
+    origin_entry_id: "JK000000100187",
+    entry: "でんきりょうきん",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전기 요금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "でんきりょうきん",
+    category3: null
+  },
+  {
+    entry_id: "129e3eb8edd1487d87ba5fed3ee727bb",
+    origin_entry_id: "JK000000061330",
+    entry: "でんごん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전언"]
+      },
+      {
+        part: "동사",
+        means: ["전언"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "でんごん",
+    category3: null
+  },
+  {
+    entry_id: "035c27d263354f75a3f10f30f5683bb4",
+    origin_entry_id: "JK000000100184",
+    entry: "でんしゃだい",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전철 요금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "でんしゃだい",
+    category3: null
+  },
+  {
+    entry_id: "5bcb01eb6ec04689a8c45a5755801d41",
+    origin_entry_id: "JK000000061470",
+    entry: "でんせん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전염"]
+      },
+      {
+        part: "동사",
+        means: ["전염"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "でんせん",
+    category3: null
+  },
+  {
+    entry_id: "88f2e8cdf8e6412fa19b777c07fcd5d8",
+    origin_entry_id: "JK000000061523",
+    entry: "でんちゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전주;전신주"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "でんちゅう",
+    category3: null
+  },
+  {
+    entry_id: "f6ebd07c2fbf4028835b784587f9904f",
+    origin_entry_id: "JK000000100185",
+    entry: "でんわだい",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["전화 요금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "でんわだい",
+    category3: null
+  },
+  {
+    entry_id: "376f8993c00d4fae80809e21e15e576b",
+    origin_entry_id: "JK000000061772",
+    entry: "といあわせ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["조회;문의"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "といあわせ",
+    category3: null
+  },
+  {
+    entry_id: "710291e7ba104796b9cc0987e01ac50d",
+    origin_entry_id: "JK000000061888",
+    entry: "とうあん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["답안"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とうあん",
+    category3: null
+  },
+  {
+    entry_id: "bd387cd41ae04e05927c10aae4ff9ab9",
+    origin_entry_id: "JK000000062084",
+    entry: "とうけい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["통계"]
+      },
+      {
+        part: "동사",
+        means: ["통계"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とうけい",
+    category3: null
+  },
+  {
+    entry_id: "df586e44f13e408f8428d0269da35dc9",
+    origin_entry_id: "JK000000062307",
+    entry: "とうじょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["등장"]
+      },
+      {
+        part: "동사",
+        means: ["등장"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とうじょう",
+    category3: null
+  },
+  {
+    entry_id: "7136c7ccd2a943abb5f566cf75902051",
+    origin_entry_id: "JK000000100256",
+    entry: "とうぜん",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["당연"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とうぜん",
+    category3: null
+  },
+  {
+    entry_id: "9adc3e5739d24e6cb20fd9fbf46667ad",
+    origin_entry_id: "JK000000062453",
+    entry: "とうだい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["등대"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とうだい",
+    category3: null
+  },
+  {
+    entry_id: "a7a3dc5453da4ca49fdf75cddfa8c548",
+    origin_entry_id: "JK000000062477",
+    entry: "とうちゃく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["도착"]
+      },
+      {
+        part: "동사",
+        means: ["도착"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とうちゃく",
+    category3: null
+  },
+  {
+    entry_id: "96f3cd926aed4253adcf4a90a9aac087",
+    origin_entry_id: "JK100062565001",
+    entry: "とうなんアジア",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["동남 아시아"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とうなんアジア",
+    category3: null
+  },
+  {
+    entry_id: "8afe9b2848874a109ef1f3e8252cb644",
+    origin_entry_id: "JK000000062759",
+    entry: "とうよう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["동양"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とうよう",
+    category3: null
+  },
+  {
+    entry_id: "2a74099a085747dd9209a82425d505cf",
+    origin_entry_id: "JK000000062887",
+    entry: "とおまわり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["멀리 돌아감;우회함"]
+      },
+      {
+        part: "동사",
+        means: ["번거롭고 답답함;우회적임"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とおまわり",
+    category3: null
+  },
+  {
+    entry_id: "cba96deabbd246ee887b06c660856552",
+    origin_entry_id: "JK000000062976",
+    entry: "とき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사기의 고무나 전투 개시의 신호로 부르짖던 함성"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とき",
+    category3: null
+  },
+  {
+    entry_id: "900f48ac53b94d5f9f0cbe43b7b79a24",
+    origin_entry_id: "JK000000063106",
+    entry: "とくい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["득의"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とくい",
+    category3: null
+  },
+  {
+    entry_id: "27468594b8f440ed9c7a2ae17c9ef644",
+    origin_entry_id: "JK000000063186",
+    entry: "とくしょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["특색"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とくしょく",
+    category3: null
+  },
+  {
+    entry_id: "8c517068abbd4c1f9565be3560c5eca6",
+    origin_entry_id: "JK000000063284",
+    entry: "とくばい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["특매"]
+      },
+      {
+        part: "동사",
+        means: ["특별히 싸게 판매함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とくばい",
+    category3: null
+  },
+  {
+    entry_id: "f72d97e5d28f47e794e8a6f4f60a5198",
+    origin_entry_id: "JK000000063404",
+    entry: "とこのま",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["일본식 방의 상좌에 바닥을 한층 높게 만든 곳"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とこのま",
+    category3: null
+  },
+  {
+    entry_id: "b41294fb7e314bd88ad45d472effa9b1",
+    origin_entry_id: "JK000000063462",
+    entry: "とざん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["등산"]
+      },
+      {
+        part: "동사",
+        means: ["등산"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とざん",
+    category3: null
+  },
+  {
+    entry_id: "103bedd2053a4d5b9e6a541e2962403b",
+    origin_entry_id: "JK000000063472",
+    entry: "とし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["도시"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とし",
+    category3: null
+  },
+  {
+    entry_id: "0635ce3ad894459fa3618e882efc4a14",
+    origin_entry_id: "JK000000063484",
+    entry: "としうえ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["연상;연장"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "としうえ",
+    category3: null
+  },
+  {
+    entry_id: "d16f604ffc9d48ee9664db2cd2315779",
+    origin_entry_id: "JK000000063593",
+    entry: "としより",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["늙은이;노인"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "としより",
+    category3: null
+  },
+  {
+    entry_id: "00dadc5a653945a8875832f468ff5c62",
+    origin_entry_id: "JK000000063672",
+    entry: "とち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["토지;땅"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とち",
+    category3: null
+  },
+  {
+    entry_id: "ae7582ad8fbe4dffb658b9c83e9371df",
+    origin_entry_id: "JK000000064104",
+    entry: "とほ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["도보"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とほ",
+    category3: null
+  },
+  {
+    entry_id: "9c44ca83622e498abff4e8064e3285d9",
+    origin_entry_id: "JK000000064198",
+    entry: "とも",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["친구;벗"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とも",
+    category3: null
+  },
+  {
+    entry_id: "c60ae12d82784448a4218a3b8243bbf3",
+    origin_entry_id: "JK000000064292",
+    entry: "とら",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["호랑이;범"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とら",
+    category3: null
+  },
+  {
+    entry_id: "48507eeae9e6452ea5609de02ec00bcb",
+    origin_entry_id: "JK000000064576",
+    entry: "とりひき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["거래;흥정"]
+      },
+      {
+        part: "동사",
+        means: ["상행위"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とりひき",
+    category3: null
+  },
+  {
+    entry_id: "f9ed1e8518334bce8db59ed039332f6d",
+    origin_entry_id: "JK000000062814",
+    entry: "どうろ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["도로"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "どうろ",
+    category3: null
+  },
+  {
+    entry_id: "4efb7c3627244b0e9fae7751929533dd",
+    origin_entry_id: "JK000000063099",
+    entry: "どく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["독"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "どく",
+    category3: null
+  },
+  {
+    entry_id: "bf800a41d1b548caa72e6e0001438209",
+    origin_entry_id: "JK000000063179",
+    entry: "どくしょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["독서"]
+      },
+      {
+        part: "동사",
+        means: ["독서"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "どくしょ",
+    category3: null
+  },
+  {
+    entry_id: "ee6f14b98cd840949c2e502568ecc012",
+    origin_entry_id: "JK000000063195",
+    entry: "どくしん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["독신;단신"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "どくしん",
+    category3: null
+  },
+  {
+    entry_id: "25e6ac8e1c4041428121bf76512e17e7",
+    origin_entry_id: "JK000000063335",
+    entry: "どくりつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["독립"]
+      },
+      {
+        part: "동사",
+        means: ["독립"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "どくりつ",
+    category3: null
+  },
+  {
+    entry_id: "75ad6f11f841415ea5e2c8446e23acec",
+    origin_entry_id: "JK000000064631",
+    entry: "どりょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["노력;애씀"]
+      },
+      {
+        part: "동사",
+        means: ["노력;애씀"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "どりょく",
+    category3: null
+  },
+  {
+    entry_id: "7215e6093c3e42a4a50e4685c2f9594d",
+    origin_entry_id: "JK000000064704",
+    entry: "どろ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["진흙;흙"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "どろ",
+    category3: null
+  },
+  {
+    entry_id: "47d376624e6a4dcdafd63e9f694157ce",
+    origin_entry_id: "JK000000064915",
+    entry: "な",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["이름"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "な",
+    category3: null
+  },
+  {
+    entry_id: "72773b66456842b68e013e8bdc2874f0",
+    origin_entry_id: "JK000000064954",
+    entry: "ないか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["내과"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ないか",
+    category3: null
+  },
+  {
+    entry_id: "5b423a3123f44d9e9d5bc1d21f9e71ba",
+    origin_entry_id: "JK000000065044",
+    entry: "ないせん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["내선"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ないせん",
+    category3: null
+  },
+  {
+    entry_id: "5e97e2a353cb46c6b40e9a5763bcdf75",
+    origin_entry_id: "JK000000065118",
+    entry: "ないよう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["내용"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ないよう",
+    category3: null
+  },
+  {
+    entry_id: "d800b7285572480991c8ffed77b73af0",
+    origin_entry_id: "JK000000065171",
+    entry: "なか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "なか",
+    category3: null
+  },
+  {
+    entry_id: "8a34bb6b9b8a4c44b197186a83164a4f",
+    origin_entry_id: "JK000000065300",
+    entry: "なかなおり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["화해"]
+      },
+      {
+        part: "동사",
+        means: ["오랜 병으로 죽게 된 환자가 일시 돌린 듯이 보이는 일"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "なかなおり",
+    category3: null
+  },
+  {
+    entry_id: "ffcf5d52733849f8b7e840fe5320538f",
+    origin_entry_id: "JK000000065371",
+    entry: "なかゆび",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["중지;가운뎃손가락"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "なかゆび",
+    category3: null
+  },
+  {
+    entry_id: "14fecda20fe249d482a5c872053d6b9e",
+    origin_entry_id: "JK000000065375",
+    entry: "なかよし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사이가 좋음;또, 그런 친구"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "なかよし",
+    category3: null
+  },
+  {
+    entry_id: "0e4d2ae3c4ea4b32a2e3a27a19228987",
+    origin_entry_id: "JK000000065810",
+    entry: "ななめ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["기욺;경사짐"]
+      },
+      {
+        part: "형용동사",
+        means: ["바르지 않음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ななめ",
+    category3: null
+  },
+  {
+    entry_id: "c294bc160921456093a31e2774d8771d",
+    origin_entry_id: "JK000000065919",
+    entry: "なま",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["가공하지 않음;자연 그대로임"]
+      },
+      {
+        part: "접사",
+        means: ["불충분함;불완전함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "なま",
+    category3: null
+  },
+  {
+    entry_id: "93c5b9e31c4547de960d701be4e841ac",
+    origin_entry_id: "JK000000066034",
+    entry: "なみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["파도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "なみ",
+    category3: null
+  },
+  {
+    entry_id: "47d158fc1f534d9187ca482a4ff3d398",
+    origin_entry_id: "JK000000066044",
+    entry: "なみき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["가로수"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "なみき",
+    category3: null
+  },
+  {
+    entry_id: "dcbcc43367b5402db01aedef560cb96a",
+    origin_entry_id: "JK000000066049",
+    entry: "なみだ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["눈물"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "なみだ",
+    category3: null
+  },
+  {
+    entry_id: "a8e4e0ba9e39495aa05eb5d0d27f16d1",
+    origin_entry_id: "JK000000066448",
+    entry: "なんぼく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["남북"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "なんぼく",
+    category3: null
+  },
+  {
+    entry_id: "14c24ee1df974d8ab5a4c56094352c6a",
+    origin_entry_id: "JK000000066898",
+    entry: "にちじ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["일시;시일"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にちじ",
+    category3: null
+  },
+  {
+    entry_id: "3426c317f80c4188bf1347304435f419",
+    origin_entry_id: "JK000000066899",
+    entry: "にちじょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["일상"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にちじょう",
+    category3: null
+  },
+  {
+    entry_id: "0794e5ac20dd4efbb9bea9b37f1e3607",
+    origin_entry_id: "JK000000100174",
+    entry: "にちようひん",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["일용품"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にちようひん",
+    category3: null
+  },
+  {
+    entry_id: "ab53f7c7381e435b9414801511443dec",
+    origin_entry_id: "JK000000066988",
+    entry: "にっちゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["주간;낮"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にっちゅう",
+    category3: null
+  },
+  {
+    entry_id: "193edf4065694771a6f0c683833e5fd0",
+    origin_entry_id: "JK000000066992",
+    entry: "にってい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["일정"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にってい",
+    category3: null
+  },
+  {
+    entry_id: "a129bc41b8204c13a101f9578a0c23b5",
+    origin_entry_id: "JK000000067245",
+    entry: "にゅうじょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["입장"]
+      },
+      {
+        part: "동사",
+        means: ["입장"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にゅうじょう",
+    category3: null
+  },
+  {
+    entry_id: "f8ce2ab4ce4340bfbf7d066dd66f9507",
+    origin_entry_id: "JK000000100177",
+    entry: "にゅうじょうりょう",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["입장료"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にゅうじょうりょう",
+    category3: null
+  },
+  {
+    entry_id: "59138bb52d024deb9566982199e7f1c0",
+    origin_entry_id: "JK000000067301",
+    entry: "にゅうよく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["입욕"]
+      },
+      {
+        part: "동사",
+        means: ["입욕"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にゅうよく",
+    category3: null
+  },
+  {
+    entry_id: "196f75ad37ac410fa5d7c4497c2f0467",
+    origin_entry_id: "JK000000067310",
+    entry: "にゅうりょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["입력;기계·기구 등에 넣어 주는 에너지나 신호;특히, 컴퓨터의 중앙 처리 장치에 넣어 줌"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にゅうりょく",
+    category3: null
+  },
+  {
+    entry_id: "561e816df3c94c7cb4d63820f2fcdeef",
+    origin_entry_id: "JK000000067426",
+    entry: "にわとり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["닭"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にわとり",
+    category3: null
+  },
+  {
+    entry_id: "29dcfffee42d45dab273744f1338af0a",
+    origin_entry_id: "JK000000067447",
+    entry: "にん���",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["인기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にんき",
+    category3: null
+  },
+  {
+    entry_id: "c9003e86e8284e7c842b0b18283d60dc",
+    origin_entry_id: "JK000000067456",
+    entry: "にんげん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["인간"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にんげん",
+    category3: null
+  },
+  {
+    entry_id: "2330b4935f1f42b28a25fa582c966df2",
+    origin_entry_id: "JK000000067827",
+    entry: "ねあげ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["값을 올림;가격 인상"]
+      },
+      {
+        part: "동사",
+        means: ["값을 올림;가격 인상"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ねあげ",
+    category3: null
+  },
+  {
+    entry_id: "dc3cf2ce895a46ca98837f3a8001dbbe",
+    origin_entry_id: "JK000000067871",
+    entry: "ねがい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["원함;소원"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ねがい",
+    category3: null
+  },
+  {
+    entry_id: "c344517089624e8ab0b3c56efc476033",
+    origin_entry_id: "JK000000067971",
+    entry: "ねさげ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["가격 인하"]
+      },
+      {
+        part: "동사",
+        means: ["가격 인하"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ねさげ",
+    category3: null
+  },
+  {
+    entry_id: "2ddea501a15246a29519377976279e91",
+    origin_entry_id: "JK000000068029",
+    entry: "ねずみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["쥐"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ねずみ",
+    category3: null
+  },
+  {
+    entry_id: "7ea02f67fecd4a12ba6ad19833e416a8",
+    origin_entry_id: "JK000000068131",
+    entry: "ねっしん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["열심"]
+      },
+      {
+        part: "형용동사",
+        means: ["열심"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ねっしん",
+    category3: null
+  },
+  {
+    entry_id: "6c978d160c754ec6980cfe0b680b2546",
+    origin_entry_id: "JK000000068145",
+    entry: "ねっちゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["열중"]
+      },
+      {
+        part: "동사",
+        means: ["열중"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ねっちゅう",
+    category3: null
+  },
+  {
+    entry_id: "28f0cca40c7a4941b7dcaf5863b3f03f",
+    origin_entry_id: "JK000000068383",
+    entry: "ねんかん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["연간"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ねんかん",
+    category3: null
+  },
+  {
+    entry_id: "2cacf76cce6d4396afc0c05ce0131713",
+    origin_entry_id: "JK100068374001",
+    entry: "ねんがじょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["연하장"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ねんがじょう",
+    category3: null
+  },
+  {
+    entry_id: "68f385d69d6948cb8d3b5137ab97aede",
+    origin_entry_id: "JK000000068397",
+    entry: "ねんげつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["연월;세월"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ねんげつ",
+    category3: null
+  },
+  {
+    entry_id: "b97c606b520f40779b8ac94425f24369",
+    origin_entry_id: "JK000000068423",
+    entry: "ねんじゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["연중"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ねんじゅう",
+    category3: null
+  },
+  {
+    entry_id: "1d4425787c0a495bae007c54e2c1a52c",
+    origin_entry_id: "JK000000100051",
+    entry: "ねんせい",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["~학년"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ねんせい",
+    category3: null
+  },
+  {
+    entry_id: "2d130ed9c0e240618fbb55aea6bb20fe",
+    origin_entry_id: "JK000000068479",
+    entry: "ねんまつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["연말;세말"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ねんまつ",
+    category3: null
+  },
+  {
+    entry_id: "0f193f125f394942afcf505db39609a3",
+    origin_entry_id: "JK000000068495",
+    entry: "の",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["들"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "の",
+    category3: null
+  },
+  {
+    entry_id: "eb8e48491fae444db852f267da28e1dc",
+    origin_entry_id: "JK000000068623",
+    entry: "のうそん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["농촌"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のうそん",
+    category3: null
+  },
+  {
+    entry_id: "5e650a9d03a44bc2b1e6b5cd9230f95a",
+    origin_entry_id: "JK000000068680",
+    entry: "のうみん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["농민"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のうみん",
+    category3: null
+  },
+  {
+    entry_id: "3edc1e55aead4a2c8b191b900cfbdae6",
+    origin_entry_id: "JK000000068695",
+    entry: "のうりょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["능력"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のうりょく",
+    category3: null
+  },
+  {
+    entry_id: "a9ad08f9da764ab3a3485d75dc857890",
+    origin_entry_id: "JK000000069006",
+    entry: "のぼり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["오름;올라감"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のぼり",
+    category3: null
+  },
+  {
+    entry_id: "2dd727d810fa4bf395881138c01fa89f",
+    origin_entry_id: "JK000000100262",
+    entry: "のみかい",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["회식"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のみかい",
+    category3: null
+  },
+  {
+    entry_id: "2198d07da42c446caa9daa71520c7b65",
+    origin_entry_id: "JK000000069102",
+    entry: "のり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수중의 암석에 붙어서 이끼 모양을 이룬 해초의 총칭;특히, あさくさのり"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のり",
+    category3: null
+  },
+  {
+    entry_id: "5d9a31388ecf471baf35184b4cd19474",
+    origin_entry_id: "JK000000069128",
+    entry: "のりこし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["타고 가다가 목적지를 지나침"]
+      },
+      {
+        part: "동사",
+        means: ["타고 가다가 목적지를 지나침"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のりこし",
+    category3: null
+  },
+  {
+    entry_id: "a39f1d67bc9d431d8f5c88e9528db5db",
+    origin_entry_id: "JK000000069390",
+    entry: "はいいろ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["회색;잿빛"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はいいろ",
+    category3: null
+  },
+  {
+    entry_id: "ee49ec32388a4b70a81af1a74c932736",
+    origin_entry_id: "JK000000069518",
+    entry: "はいけん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["배견;삼가 봄"]
+      },
+      {
+        part: "동사",
+        means: ["배견;삼가 봄"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はいけん",
+    category3: null
+  },
+  {
+    entry_id: "224ed0c2d39c44fcadbd4d6b7783d199",
+    origin_entry_id: "JK000000069688",
+    entry: "はいたつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["배달"]
+      },
+      {
+        part: "동사",
+        means: ["배달"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はいたつ",
+    category3: null
+  },
+  {
+    entry_id: "86ea455a858f44999e55e3b9d4529905",
+    origin_entry_id: "JK000000070220",
+    entry: "はくしゅ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["박수;신불을 배례할 때 손뼉을 침"]
+      },
+      {
+        part: "동사",
+        means: ["박수;신불을 배례할 때 손뼉을 침"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はくしゅ",
+    category3: null
+  },
+  {
+    entry_id: "08a553ae315a46a0b7920a1eef44933d",
+    origin_entry_id: "JK000000070330",
+    entry: "はくぶつかん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["박물관"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はくぶつかん",
+    category3: null
+  },
+  {
+    entry_id: "5990a647cb114f30800be0b46b15ea27",
+    origin_entry_id: "JK000000070532",
+    entry: "はし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["젓가락"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はし",
+    category3: null
+  },
+  {
+    entry_id: "9e546c898a234e9ab27704d8b2f22367",
+    origin_entry_id: "JK000000070635",
+    entry: "はしら",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["기둥;또, 기둥이 되는 사람"]
+      },
+      {
+        part: "접사",
+        means: ["패주;조개 관자"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はしら",
+    category3: null
+  },
+  {
+    entry_id: "cb66161833284fb792aa1a8a83b00460",
+    origin_entry_id: "JK000000070818",
+    entry: "はたけ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["밭"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はたけ",
+    category3: null
+  },
+  {
+    entry_id: "498b70d30c41486aa549452f9a073f5d",
+    origin_entry_id: "JK000000070882",
+    entry: "はたらき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["움직여서 일·구실을 함;작동"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はたらき",
+    category3: null
+  },
+  {
+    entry_id: "54adae237b5a43af8e50d74e6b66debf",
+    origin_entry_id: "JK000000070891",
+    entry: "はたらきもの",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["부지런한 사람"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はたらきもの",
+    category3: null
+  },
+  {
+    entry_id: "721ae5d57d924b859a253ccba0937f68",
+    origin_entry_id: "JK000000071105",
+    entry: "はっけん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["발견"]
+      },
+      {
+        part: "동사",
+        means: ["발견"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はっけん",
+    category3: null
+  },
+  {
+    entry_id: "2b597d0c43ea4c84bcebc0727fd36c21",
+    origin_entry_id: "JK000000071156",
+    entry: "はっしゃ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["발차"]
+      },
+      {
+        part: "동사",
+        means: ["발차"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はっしゃ",
+    category3: null
+  },
+  {
+    entry_id: "392b53d10eb947949d94ef4c72095228",
+    origin_entry_id: "JK000000071203",
+    entry: "はっそう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["발상"]
+      },
+      {
+        part: "동사",
+        means: ["생각;생각해 냄"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はっそう",
+    category3: null
+  },
+  {
+    entry_id: "668685ad25734610a4ab5e5af4608894",
+    origin_entry_id: "JK000000071218",
+    entry: "はったつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["발달"]
+      },
+      {
+        part: "동사",
+        means: ["발달"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はったつ",
+    category3: null
+  },
+  {
+    entry_id: "eeb3497db2514cbe9e26d80d2c5dc70a",
+    origin_entry_id: "JK000000071246",
+    entry: "はってん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["발전"]
+      },
+      {
+        part: "동사",
+        means: ["맹렬히 활약함;특히, 주색에 빠지는 일"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はってん",
+    category3: null
+  },
+  {
+    entry_id: "f68fbb6ec20041d2adbc525ae2770e1c",
+    origin_entry_id: "JK000000071299",
+    entry: "はっぴょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["발표"]
+      },
+      {
+        part: "동사",
+        means: ["발표"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はっぴょう",
+    category3: null
+  },
+  {
+    entry_id: "cf898835b18e460f8edc425fea783397",
+    origin_entry_id: "JK000000071247",
+    entry: "はつでん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["발전"]
+      },
+      {
+        part: "동사",
+        means: ["전기를 일으킴"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はつでん",
+    category3: null
+  },
+  {
+    entry_id: "46a945dfee57488c990354e32e655e1f",
+    origin_entry_id: "JK000000071283",
+    entry: "はつばい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["발매"]
+      },
+      {
+        part: "동사",
+        means: ["발매"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はつばい",
+    category3: null
+  },
+  {
+    entry_id: "2fab264e91fd4efe8791a72a6d3c71a2",
+    origin_entry_id: "JK000000071330",
+    entry: "はつめい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["발명"]
+      },
+      {
+        part: "동사",
+        means: ["영리한 모양;총명함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はつめい",
+    category3: null
+  },
+  {
+    entry_id: "0b1c70a12ed941859b8b893b5c19b767",
+    origin_entry_id: "JK000000071476",
+    entry: "はなしあい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["의논;교섭;상담"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はなしあい",
+    category3: null
+  },
+  {
+    entry_id: "f7b536cd70184bac944981d468459e8e",
+    origin_entry_id: "JK000000071491",
+    entry: "はなしちゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["한창 이야기하고 있는 중;면담 중"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はなしちゅう",
+    category3: null
+  },
+  {
+    entry_id: "6ac90a010019403a91d3db1e3d53f877",
+    origin_entry_id: "JK000000071564",
+    entry: "はなび",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["꽃불;연화;화포"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はなび",
+    category3: null
+  },
+  {
+    entry_id: "761db572de3a4eb78d0995a7f8e06b8e",
+    origin_entry_id: "JK000000071581",
+    entry: "はなみず",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["콧물"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はなみず",
+    category3: null
+  },
+  {
+    entry_id: "a7ee88aaa596445dbd9e6f32863f15b9",
+    origin_entry_id: "JK000000071713",
+    entry: "ははおや",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["모친;어머니"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ははおや",
+    category3: null
+  },
+  {
+    entry_id: "099ebbdce47f4fe2858d78c7feedf41e",
+    origin_entry_id: "JK000000071702",
+    entry: "はば",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["폭;나비"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はば",
+    category3: null
+  },
+  {
+    entry_id: "b94c14e3079f464a87f84ee8b544e690",
+    origin_entry_id: "JK000000071847",
+    entry: "はみがき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["이를 닦음;이닦기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はみがき",
+    category3: null
+  },
+  {
+    entry_id: "9092c5e5f85343be9e5816b334e4b7a7",
+    origin_entry_id: "JK000000071920",
+    entry: "はやくち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["말이 빠름"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はやくち",
+    category3: null
+  },
+  {
+    entry_id: "3074885f602a49e6a411722ebfbf5227",
+    origin_entry_id: "JK000000100191",
+    entry: "はやねはやおき",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["일찍 자고 일찍 일어남"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はやねはやおき",
+    category3: null
+  },
+  {
+    entry_id: "ec7c082a5f884326ba9d79394779cde4",
+    origin_entry_id: "JK000000072005",
+    entry: "はら",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["배"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はら",
+    category3: null
+  },
+  {
+    entry_id: "34898fb541a9463686708abe0bfa7c89",
+    origin_entry_id: "JK000000072166",
+    entry: "はり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["바늘"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はり",
+    category3: null
+  },
+  {
+    entry_id: "7e51499994b04019ad501d81d0cb4676",
+    origin_entry_id: "JK000000072463",
+    entry: "はんい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["범위"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はんい",
+    category3: null
+  },
+  {
+    entry_id: "64076569df354eae8987fc7238d3a7dc",
+    origin_entry_id: "JK000000072767",
+    entry: "はんせい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["반성"]
+      },
+      {
+        part: "동사",
+        means: ["반성"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はんせい",
+    category3: null
+  },
+  {
+    entry_id: "b3937818a547488cb112110aefb47115",
+    origin_entry_id: "JK000000072912",
+    entry: "はんとし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["반년"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はんとし",
+    category3: null
+  },
+  {
+    entry_id: "5ec7760f549f498f83b70775184040ea",
+    origin_entry_id: "JK000000072930",
+    entry: "はんにち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["반일;반날;한나절"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はんにち",
+    category3: null
+  },
+  {
+    entry_id: "a974deebb3b14f4d9a36d7d0aa65ef6e",
+    origin_entry_id: "JK000000072933",
+    entry: "はんにん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["범인"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はんにん",
+    category3: null
+  },
+  {
+    entry_id: "8df10059e42a4611b6252fa851edd5a5",
+    origin_entry_id: "JK000000072958",
+    entry: "はんばい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["판매"]
+      },
+      {
+        part: "동사",
+        means: ["판매"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はんばい",
+    category3: null
+  },
+  {
+    entry_id: "da93948739394ab5800987ae4dd6c719",
+    origin_entry_id: "JK000000069363",
+    entry: "ばい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["배;2배"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ばい",
+    category3: null
+  },
+  {
+    entry_id: "ec78bc83794b4c248988fd8c33f0bee6",
+    origin_entry_id: "JK000000069394",
+    entry: "ばいう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["장마"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ばいう",
+    category3: null
+  },
+  {
+    entry_id: "5f508c31d06b40d382a2778a700d0b57",
+    origin_entry_id: "JK000000069731",
+    entry: "ばいてん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["매점"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ばいてん",
+    category3: null
+  },
+  {
+    entry_id: "0442de08e10f406891f76b453345bf93",
+    origin_entry_id: "JK000000069769",
+    entry: "ばいばい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["매매"]
+      },
+      {
+        part: "동사",
+        means: ["매매"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ばいばい",
+    category3: null
+  },
+  {
+    entry_id: "f79271657fcf45bfac6e69b1e7f7ca30",
+    origin_entry_id: "JK000000071877",
+    entry: "ばめん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["장면"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ばめん",
+    category3: null
+  },
+  {
+    entry_id: "2d70179ef0884bb2b75ac78a881d1e29",
+    origin_entry_id: "JK000000073122",
+    entry: "ひ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["불;→ひのけ·ひのこ·ひのて"]
+      },
+      {
+        part: "접사",
+        means: ["좋지 않음;나쁨"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひ",
+    category3: null
+  },
+  {
+    entry_id: "745cbd03c111429fac1dabea490a8c09",
+    origin_entry_id: "JK000000073183",
+    entry: "ひあたり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["볕이 듦;또, 그 모양·정도;양지"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひあたり",
+    category3: null
+  },
+  {
+    entry_id: "af60ad8dba424015ab64ad9319867fd0",
+    origin_entry_id: "JK000000073363",
+    entry: "ひがい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["피해"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひがい",
+    category3: null
+  },
+  {
+    entry_id: "ce517ee331ea4332b78e0146ea1f40fd",
+    origin_entry_id: "JK000000073372",
+    entry: "ひがえり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["당일치기 왕복"]
+      },
+      {
+        part: "동사",
+        means: ["당일치기 왕복"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひがえり",
+    category3: null
+  },
+  {
+    entry_id: "8a5118cc63874d48b09652346ccc6dbb",
+    origin_entry_id: "JK000000073555",
+    entry: "ひきざん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["뺄셈;감산"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひきざん",
+    category3: null
+  },
+  {
+    entry_id: "e7e9338aa7784899a3cccf04d3ace4d1",
+    origin_entry_id: "JK000000073752",
+    entry: "ひげ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["비하;스스로를 낮춤;겸비"]
+      },
+      {
+        part: "동사",
+        means: ["비하;스스로를 낮춤;겸비"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひげ",
+    category3: null
+  },
+  {
+    entry_id: "d9895965bf4d4bbbb58e63b2dbf7fc8f",
+    origin_entry_id: "JK000000073815",
+    entry: "ひこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["비행"]
+      },
+      {
+        part: "동사",
+        means: ["비행"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひこう",
+    category3: null
+  },
+  {
+    entry_id: "4f667acb27734db984fd655351ad7eb2",
+    origin_entry_id: "JK000000074292",
+    entry: "ひっき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["필기"]
+      },
+      {
+        part: "동사",
+        means: ["필기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひっき",
+    category3: null
+  },
+  {
+    entry_id: "0cd4849d2f1347d4b5eef886d3bb1994",
+    origin_entry_id: "JK000000074315",
+    entry: "ひっこし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["이사;이전"]
+      },
+      {
+        part: "동사",
+        means: ["이사;이전"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひっこし",
+    category3: null
+  },
+  {
+    entry_id: "cefe5e883567493aba76a82a6b72803e",
+    origin_entry_id: "JK000000074307",
+    entry: "ひづけ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["일부;날짜;문서 따위에, 그것의 작성·발송·접수 등의 연월일을 기입함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひづけ",
+    category3: null
+  },
+  {
+    entry_id: "a1dd5ab38a514ac0a45f7c44df6cddd0",
+    origin_entry_id: "JK000000074591",
+    entry: "ひとさしゆび",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["집게손가락;식지"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひとさしゆび",
+    category3: null
+  },
+  {
+    entry_id: "6d2a237d0009427e9c0e3b0bfae1e17f",
+    origin_entry_id: "JK000000074714",
+    entry: "ひとびと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사람들"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひとびと",
+    category3: null
+  },
+  {
+    entry_id: "8a5e01ce7fa6400b8f2a3f9599605ce4",
+    origin_entry_id: "JK000000074812",
+    entry: "ひとりむすこ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["외아들"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひとりむすこ",
+    category3: null
+  },
+  {
+    entry_id: "6b1bef3df0864b9eab69727d992abbf1",
+    origin_entry_id: "JK000000074813",
+    entry: "ひとりむすめ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["외딸"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひとりむすめ",
+    category3: null
+  },
+  {
+    entry_id: "2973f5a17d78441b94f7f32be7eaa011",
+    origin_entry_id: "JK000000075107",
+    entry: "ひも",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["끈"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひも",
+    category3: null
+  },
+  {
+    entry_id: "86443369bcc84fb9937a00c6c5be0e25",
+    origin_entry_id: "JK000000075276",
+    entry: "ひょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["표"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひょう",
+    category3: null
+  },
+  {
+    entry_id: "fb42b5cfa7e94efba5be9caafd849b7a",
+    origin_entry_id: "JK000000075364",
+    entry: "ひょうげん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["표현"]
+      },
+      {
+        part: "동사",
+        means: ["표현"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひょうげん",
+    category3: null
+  },
+  {
+    entry_id: "42ae1751647d4544a62ee4123765485a",
+    origin_entry_id: "JK000000075384",
+    entry: "ひょうし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["표지"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひょうし",
+    category3: null
+  },
+  {
+    entry_id: "190078fa10214e3b8abdefffa60a7f80",
+    origin_entry_id: "JK000000075423",
+    entry: "ひょうじょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["표정"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひょうじょう",
+    category3: null
+  },
+  {
+    entry_id: "85a88b3cdbf7462f8a098704f5497aea",
+    origin_entry_id: "JK000000075537",
+    entry: "ひょうめん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["표면;겉"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひょうめん",
+    category3: null
+  },
+  {
+    entry_id: "a0c9a3d213fe409f8a882dfeecb6dada",
+    origin_entry_id: "JK000000075274",
+    entry: "ひよう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["비용"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひよう",
+    category3: null
+  },
+  {
+    entry_id: "368c550301a84944b85bb8f012fb4ebb",
+    origin_entry_id: "JK000000075756",
+    entry: "ひるね",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["낮잠"]
+      },
+      {
+        part: "동사",
+        means: ["낮잠"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひるね",
+    category3: null
+  },
+  {
+    entry_id: "11a8bf9a147f49f88ebe9d3b02170868",
+    origin_entry_id: "JK000000073988",
+    entry: "びじゅつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["미술"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "びじゅつ",
+    category3: null
+  },
+  {
+    entry_id: "6a7048f93a4a4f4388a5495d1a4edf24",
+    origin_entry_id: "JK000000074044",
+    entry: "びじん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["미인"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "びじん",
+    category3: null
+  },
+  {
+    entry_id: "69e022231835418cb910e1dccb61d0f0",
+    origin_entry_id: "JK000000075291",
+    entry: "びよう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["미용"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "びよう",
+    category3: null
+  },
+  {
+    entry_id: "203353e21404435fbf09394aad03fb31",
+    origin_entry_id: "JK000000075952",
+    entry: "びんづめ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["병조림;병에 담음;또, 그것"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "びんづめ",
+    category3: null
+  },
+  {
+    entry_id: "56f161d4d880428e96b2ec1c5cfda5e5",
+    origin_entry_id: "JK000000076254",
+    entry: "ふうけい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["풍경;풍광"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふうけい",
+    category3: null
+  },
+  {
+    entry_id: "f537afebb416419a85b771d0d6ae385f",
+    origin_entry_id: "JK000000076363",
+    entry: "ふうふ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["부부"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふうふ",
+    category3: null
+  },
+  {
+    entry_id: "15056aaa2d0b4fdcb53916c3a8442a54",
+    origin_entry_id: "JK000000076578",
+    entry: "ふかのう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["불가능"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふかのう",
+    category3: null
+  },
+  {
+    entry_id: "eff75f8f7fb94c16b22b65daf2579d2c",
+    origin_entry_id: "JK000000077140",
+    entry: "ふごうかく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["불합격"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふごうかく",
+    category3: null
+  },
+  {
+    entry_id: "a4eabd0cbff44e939eca9b01f34067ac",
+    origin_entry_id: "JK000000077158",
+    entry: "ふさい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["부처;부부"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふさい",
+    category3: null
+  },
+  {
+    entry_id: "ab85cc1abb084f04ae5a36ca0397e0ee",
+    origin_entry_id: "JK000000077471",
+    entry: "ふそく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["부족"]
+      },
+      {
+        part: "동사",
+        means: ["불만;불평"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふそく",
+    category3: null
+  },
+  {
+    entry_id: "253cd59407e24957a8381147eed4f25b",
+    origin_entry_id: "JK000000077483",
+    entry: "ふた",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["뚜껑;덮개"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふた",
+    category3: null
+  },
+  {
+    entry_id: "73098d6d71dc434bb7a76c2cafa2886a",
+    origin_entry_id: "JK000000077565",
+    entry: "ふだん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["항상;평상시;평소"]
+      },
+      {
+        part: "부사",
+        means: ["항상;평상시;평소"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふだん",
+    category3: null
+  },
+  {
+    entry_id: "b826addfa5d943a3a69f84e10f6c57bf",
+    origin_entry_id: "JK000000077569",
+    entry: "ふち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["가장자리;테두리;전"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふち",
+    category3: null
+  },
+  {
+    entry_id: "e7c403e4da2a4455adab26ff70568163",
+    origin_entry_id: "JK000000077886",
+    entry: "ふで",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["붓;비유적으로, 글을 쓰는 일"]
+      },
+      {
+        part: "접사",
+        means: ["필"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふで",
+    category3: null
+  },
+  {
+    entry_id: "db56d957d0854bc0bab4a5d0bb9c096e",
+    origin_entry_id: "JK000000078217",
+    entry: "ふまん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["불만"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふまん",
+    category3: null
+  },
+  {
+    entry_id: "f81a54b046b64b2c90d65487d3ac358d",
+    origin_entry_id: "JK000000078235",
+    entry: "ふみきり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["건널목"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふみきり",
+    category3: null
+  },
+  {
+    entry_id: "40866ec2d485475b92d1feafdb2e5d04",
+    origin_entry_id: "JK000000078570",
+    entry: "ふりこみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["납입"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふりこみ",
+    category3: null
+  },
+  {
+    entry_id: "86eb1f7e2d6a4adfa9d38cf710277518",
+    origin_entry_id: "JK000000078989",
+    entry: "ふんいき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["분위기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふんいき",
+    category3: null
+  },
+  {
+    entry_id: "923bd598fa3b47bc886f59a619677dd5",
+    origin_entry_id: "JK000000076518",
+    entry: "ぶか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["부하"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぶか",
+    category3: null
+  },
+  {
+    entry_id: "6215c2f2853344ff8237136903e372e8",
+    origin_entry_id: "JK000000077495",
+    entry: "ぶたい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["무대"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぶたい",
+    category3: null
+  },
+  {
+    entry_id: "dd041cc6ccdf4b1093c08b2f41f4761c",
+    origin_entry_id: "JK000000077641",
+    entry: "ぶっか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["물가"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぶっか",
+    category3: null
+  },
+  {
+    entry_id: "026b142ada444dfeb01b5ddeaa0057a3",
+    origin_entry_id: "JK000000077856",
+    entry: "ぶつぶつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["낮은 소리로 무엇인가 중얼거리는 모양;중얼중얼"]
+      },
+      {
+        part: "부사",
+        means: ["→ふつふつ1"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぶつぶつ",
+    category3: null
+  },
+  {
+    entry_id: "414a3ee0d188473eb0a3708515cd44d4",
+    origin_entry_id: "JK000000077875",
+    entry: "ぶつり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["물리"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぶつり",
+    category3: null
+  },
+  {
+    entry_id: "9d25afd19a2041b89ef966eb073bd888",
+    origin_entry_id: "JK000000078174",
+    entry: "ぶひん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["부품"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぶひん",
+    category3: null
+  },
+  {
+    entry_id: "dafb367861b64898861fde684589cee3",
+    origin_entry_id: "JK000000078185",
+    entry: "ぶぶん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["부분"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぶぶん",
+    category3: null
+  },
+  {
+    entry_id: "516a8f39f5044206967db0999512f1d9",
+    origin_entry_id: "JK000000079050",
+    entry: "ぶんけん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["문헌"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぶんけん",
+    category3: null
+  },
+  {
+    entry_id: "35fbe5d541bf4cd0a028d913d1d7f4d0",
+    origin_entry_id: "JK000000079129",
+    entry: "ぶんすう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["분수"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぶんすう",
+    category3: null
+  },
+  {
+    entry_id: "535ec56b2d29460297468b9e7d2908c9",
+    origin_entry_id: "JK100079249001",
+    entry: "ぶんぼうぐ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["문방구"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぶんぼうぐ",
+    category3: null
+  },
+  {
+    entry_id: "58c7b53adf174aeea333b687ce38e3ee",
+    origin_entry_id: "JK000000079395",
+    entry: "へいき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["아무렇지도 않음;걱정 없음;태연함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "へいき",
+    category3: null
+  },
+  {
+    entry_id: "aa52701b850e4ad09e149a8dc47e885e",
+    origin_entry_id: "JK000000079404",
+    entry: "へいきん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["평균;여럿이 고름"]
+      },
+      {
+        part: "동사",
+        means: ["균형;평형"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "へいきん",
+    category3: null
+  },
+  {
+    entry_id: "48dd95036b2d4456adebf08b001a4a23",
+    origin_entry_id: "JK000000079420",
+    entry: "へいこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["병행"]
+      },
+      {
+        part: "동사",
+        means: ["나란히 감"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "へいこう",
+    category3: null
+  },
+  {
+    entry_id: "980b3b39a63b4ea7bb3cb4a97a9a4ac2",
+    origin_entry_id: "JK000000079452",
+    entry: "へいじつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["평일"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "へいじつ",
+    category3: null
+  },
+  {
+    entry_id: "62cfa13e9cae4a318511d9f038465b00",
+    origin_entry_id: "JK000000079571",
+    entry: "へいぼん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["평범"]
+      },
+      {
+        part: "형용동사",
+        means: ["평범"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "へいぼん",
+    category3: null
+  },
+  {
+    entry_id: "a15dab2216c1408cb086cc5e33e5de04",
+    origin_entry_id: "JK000000079599",
+    entry: "へいわ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["평화"]
+      },
+      {
+        part: "형용동사",
+        means: ["평화"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "へいわ",
+    category3: null
+  },
+  {
+    entry_id: "428bcba0c6714e77893d03812d2dfa64",
+    origin_entry_id: "JK000000080155",
+    entry: "へんか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["변화"]
+      },
+      {
+        part: "동사",
+        means: ["변화"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "へんか",
+    category3: null
+  },
+  {
+    entry_id: "a0645a8dfc4348a59093f21160bc3429",
+    origin_entry_id: "JK000000080207",
+    entry: "へんこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["변경"]
+      },
+      {
+        part: "동사",
+        means: ["변경"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "へんこう",
+    category3: null
+  },
+  {
+    entry_id: "de900dae183a469489ede3c126f85bcd",
+    origin_entry_id: "JK000000080252",
+    entry: "へんしゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["편집;편찬"]
+      },
+      {
+        part: "동사",
+        means: ["편집;편찬"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "へんしゅう",
+    category3: null
+  },
+  {
+    entry_id: "f1a0eb5e26294ed1904cb00ec0ebd74e",
+    origin_entry_id: "JK000000079426",
+    entry: "べいこく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["미국;미합중국"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "べいこく",
+    category3: null
+  },
+  {
+    entry_id: "9f80965636ee4f1181c90c36ac1c22eb",
+    origin_entry_id: "JK100080206001",
+    entry: "べんごし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["변호사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "べんごし",
+    category3: null
+  },
+  {
+    entry_id: "2db6aeba8d0d465e8b9441aaffee1e23",
+    origin_entry_id: "JK000000080795",
+    entry: "ほうこく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["보고"]
+      },
+      {
+        part: "동사",
+        means: ["복명"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほうこく",
+    category3: null
+  },
+  {
+    entry_id: "0a5b5277a022404990a6c9f5edc14a91",
+    origin_entry_id: "JK000000080996",
+    entry: "ほうせき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["보석"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほうせき",
+    category3: null
+  },
+  {
+    entry_id: "7f63a1c9ecbd43a9939b210aa87a0b21",
+    origin_entry_id: "JK000000081032",
+    entry: "ほうそく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["법칙"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほうそく",
+    category3: null
+  },
+  {
+    entry_id: "1a1f0a6192894441ad199b759d0bb716",
+    origin_entry_id: "JK000000081076",
+    entry: "ほうちょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["식칼"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほうちょう",
+    category3: null
+  },
+  {
+    entry_id: "276bb6e412cc4aa3b6c4de14d09b1132",
+    origin_entry_id: "JK000000081211",
+    entry: "ほうほう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["방법"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほうほう",
+    category3: null
+  },
+  {
+    entry_id: "fb45f0b07e7c419f84293469e0cb7593",
+    origin_entry_id: "JK000000081214",
+    entry: "ほうぼう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["여기저기;여러 곳"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほうぼう",
+    category3: null
+  },
+  {
+    entry_id: "0501afac0f124134b8aed68082276fab",
+    origin_entry_id: "JK000000081239",
+    entry: "ほうめん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["방면"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほうめん",
+    category3: null
+  },
+  {
+    entry_id: "8490a5abb9254c4787e85dd39cb4ea2b",
+    origin_entry_id: "JK000000081643",
+    entry: "ほこり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["먼지"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほこり",
+    category3: null
+  },
+  {
+    entry_id: "3063f689ef7142f0a3db7ebc88b08cbd",
+    origin_entry_id: "JK000000081833",
+    entry: "ほぞん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["보존"]
+      },
+      {
+        part: "동사",
+        means: ["보존"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほぞん",
+    category3: null
+  },
+  {
+    entry_id: "0cd460d1bcfa43c6b7f1fbff8d8c10ac",
+    origin_entry_id: "JK000000082056",
+    entry: "ほど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["보도;걸음걸이의 속도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほど",
+    category3: null
+  },
+  {
+    entry_id: "fac5580cb5aa45c1beb409162da0eb91",
+    origin_entry_id: "JK000000082058",
+    entry: "ほどう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["보도;인도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほどう",
+    category3: null
+  },
+  {
+    entry_id: "20a25f4e6cc3450e9ff258f1129100c6",
+    origin_entry_id: "JK100082058001",
+    entry: "ほどうきょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["인도교;육교"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほどうきょう",
+    category3: null
+  },
+  {
+    entry_id: "34d6ee8dba994e22b1b00b656e41ef83",
+    origin_entry_id: "JK000000082510",
+    entry: "ほんしゃ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["본사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほんしゃ",
+    category3: null
+  },
+  {
+    entry_id: "3c656024317f43379f88158142c10681",
+    origin_entry_id: "JK000000082508",
+    entry: "ほんじつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["본일;금일;오늘"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほんじつ",
+    category3: null
+  },
+  {
+    entry_id: "38c87a7e2e7445faa3034495cbb8ae2b",
+    origin_entry_id: "JK000000082619",
+    entry: "ほんてん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["본점"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほんてん",
+    category3: null
+  },
+  {
+    entry_id: "5aed0250c68b4a5da71d0647165adaac",
+    origin_entry_id: "JK000000082644",
+    entry: "ほんにん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["본인;당자"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほんにん",
+    category3: null
+  },
+  {
+    entry_id: "7196df36f1a24e718ce2a770bc418b84",
+    origin_entry_id: "JK000000082669",
+    entry: "ほんぶ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["본부"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほんぶ",
+    category3: null
+  },
+  {
+    entry_id: "455928afafdc44bf9ba82f2442e6a7de",
+    origin_entry_id: "JK000000082713",
+    entry: "ほんもの",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["진짜"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほんもの",
+    category3: null
+  },
+  {
+    entry_id: "866eeb50f52c4ec4ac7e57baafe226d7",
+    origin_entry_id: "JK000000082717",
+    entry: "ほんやく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["번역"]
+      },
+      {
+        part: "동사",
+        means: ["번역"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほんやく",
+    category3: null
+  },
+  {
+    entry_id: "fdc9a9127be3480a9ee55c2a9cc846f2",
+    origin_entry_id: "JK100081147001",
+    entry: "ぼうねんかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["망년회;송년회"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぼうねんかい",
+    category3: null
+  },
+  {
+    entry_id: "072aff9b3bdf4a49b31258843c0e2ca2",
+    origin_entry_id: "JK000000081977",
+    entry: "ぼっちゃん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["도련님;도령"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぼっちゃん",
+    category3: null
+  },
+  {
+    entry_id: "47d9ac7abff7463ea8cb68eb22b7a0c0",
+    origin_entry_id: "JK000000082744",
+    entry: "ま",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사이"]
+      },
+      {
+        part: "접사",
+        means: ["간격"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ま",
+    category3: null
+  },
+  {
+    entry_id: "f3b7d27fbaf94e79b224e82de26c74f7",
+    origin_entry_id: "JK000000082812",
+    entry: "まいご",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["미아;길 잃은 아이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まいご",
+    category3: null
+  },
+  {
+    entry_id: "191793b229ba426eb7cdb72d2f9860b4",
+    origin_entry_id: "JK000000082840",
+    entry: "まいど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["매번;항상;번번이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まいど",
+    category3: null
+  },
+  {
+    entry_id: "17e892505c36499385bb2e70cf051f50",
+    origin_entry_id: "JK000000083160",
+    entry: "まけ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["짐;패배"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まけ",
+    category3: null
+  },
+  {
+    entry_id: "079f949edbf94a7693fc40ce50c137a2",
+    origin_entry_id: "JK000000083216",
+    entry: "まさか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["위급한 사태에 직면함"]
+      },
+      {
+        part: "부사",
+        means: ["설마;아무리 그렇다고 하더라도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まさか",
+    category3: null
+  },
+  {
+    entry_id: "5debe844940f46e0b9deb9e5376dd29b",
+    origin_entry_id: "JK000000083431",
+    entry: "まち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["상가 따위가 밀집된 곳;번화한 거리"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まち",
+    category3: null
+  },
+  {
+    entry_id: "b8a2bff718ad4729a46753a6d00ac19a",
+    origin_entry_id: "JK000000083440",
+    entry: "まちあわせ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["약속하여 만나기로 함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まちあわせ",
+    category3: null
+  },
+  {
+    entry_id: "9f2ffbc299f341f28ed5e0b9e1768d1d",
+    origin_entry_id: "JK000000083452",
+    entry: "まちかど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["길모퉁이;길목"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まちかど",
+    category3: null
+  },
+  {
+    entry_id: "f0581fb402334917bd055ddb2ab4aedd",
+    origin_entry_id: "JK000000083447",
+    entry: "まちがい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["틀림;잘못"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まちがい",
+    category3: null
+  },
+  {
+    entry_id: "4e470092195d47169a1f3c82202819b2",
+    origin_entry_id: "JK000000083513",
+    entry: "まっか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["새빨감"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まっか",
+    category3: null
+  },
+  {
+    entry_id: "9dfdd3906dff4b07820ff6a5e6257342",
+    origin_entry_id: "JK000000083525",
+    entry: "まっくら",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["아주 캄캄함;암흑"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まっくら",
+    category3: null
+  },
+  {
+    entry_id: "30e93e6a01874e459f9a30e8b4ccaf09",
+    origin_entry_id: "JK000000083527",
+    entry: "まっくろ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["새까맘;시커멈"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まっくろ",
+    category3: null
+  },
+  {
+    entry_id: "160c66ea1f23444e94e6c18f077b4523",
+    origin_entry_id: "JK000000083540",
+    entry: "まっさお",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["새���람"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まっさお",
+    category3: null
+  },
+  {
+    entry_id: "9d3963187baa475b874ad93fb6413940",
+    origin_entry_id: "JK000000083559",
+    entry: "まっしろ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["새하얌"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まっしろ",
+    category3: null
+  },
+  {
+    entry_id: "b54b720826fb42a19fa0e01ff343cfd7",
+    origin_entry_id: "JK000000083503",
+    entry: "まつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소나무"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まつ",
+    category3: null
+  },
+  {
+    entry_id: "e8f00d51373643c98ef55e06a1e0851a",
+    origin_entry_id: "JK000000083632",
+    entry: "まつり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["제사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まつり",
+    category3: null
+  },
+  {
+    entry_id: "629376ef54314cc18c47327a15f35f62",
+    origin_entry_id: "JK000000100202",
+    entry: "まどがわ",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["창가, 창 쪽"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まどがわ",
+    category3: null
+  },
+  {
+    entry_id: "6ba21fc4e2914e06a7d92839c0714dec",
+    origin_entry_id: "JK000000083712",
+    entry: "まないた",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["도마"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まないた",
+    category3: null
+  },
+  {
+    entry_id: "f28fde87af174a139438a28c2770b584",
+    origin_entry_id: "JK000000083752",
+    entry: "まね",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["흉내"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まね",
+    category3: null
+  },
+  {
+    entry_id: "7ef3253a35ae4262b7e4c8ffa11fd6c8",
+    origin_entry_id: "JK000000083810",
+    entry: "まま",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["…대로"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まま",
+    category3: null
+  },
+  {
+    entry_id: "30d3edf66bd3435a8412068dac70d855",
+    origin_entry_id: "JK000000083843",
+    entry: "まめ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["콩;특히, 대두"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まめ",
+    category3: null
+  },
+  {
+    entry_id: "a0ea2db92c2447a1ad5aee08094046b5",
+    origin_entry_id: "JK000000083908",
+    entry: "まよなか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["한밤중;심야"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まよなか",
+    category3: null
+  },
+  {
+    entry_id: "e6b62a65242e4dc585c6462475268eb2",
+    origin_entry_id: "JK000000083940",
+    entry: "まる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["동그라미;공"]
+      },
+      {
+        part: "접사",
+        means: ["數詞 앞에 붙여 그 수가 꼭 참을 나타냄;만"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まる",
+    category3: null
+  },
+  {
+    entry_id: "caf45c1e1b0449ca9aec8c4c10f92864",
+    origin_entry_id: "JK000000084074",
+    entry: "まわり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사물의 둘레;주위;주변"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まわり",
+    category3: null
+  },
+  {
+    entry_id: "410fd4d97e754922ac1e53c82648ecee",
+    origin_entry_id: "JK000000084090",
+    entry: "まわりみち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["길을 돌아서 감;또, 그 길"]
+      },
+      {
+        part: "동사",
+        means: ["길을 돌아서 감;또, 그 길"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まわりみち",
+    category3: null
+  },
+  {
+    entry_id: "e1016261d8574d9b9355394414cf63f0",
+    origin_entry_id: "JK000000084109",
+    entry: "まんいん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["만원"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まんいん",
+    category3: null
+  },
+  {
+    entry_id: "6740d26e7b8f4a5da59aac1da098d54d",
+    origin_entry_id: "JK000000084183",
+    entry: "まんぞく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["만족"]
+      },
+      {
+        part: "동사",
+        means: ["완전함;부족함이 없음"]
+      },
+      {
+        part: "형용동사",
+        means: ["바람이 충족되어 불평 불만이 없음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まんぞく",
+    category3: null
+  },
+  {
+    entry_id: "d88d87c1ced84f12a439762833f16cbe",
+    origin_entry_id: "JK000000084197",
+    entry: "まんてん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["만점"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まんてん",
+    category3: null
+  },
+  {
+    entry_id: "52e00c2c313145ffa501d7c2db802b1a",
+    origin_entry_id: "JK000000084276",
+    entry: "み",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["몸"]
+      },
+      {
+        part: "대명사",
+        means: ["신체;일신"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "み",
+    category3: null
+  },
+  {
+    entry_id: "c41d69b8b3a646f09bc59e94fd0e56af",
+    origin_entry_id: "JK000000084343",
+    entry: "みおくり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["송별;배웅"]
+      },
+      {
+        part: "동사",
+        means: ["보기만 하고 그냥 보냄"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みおくり",
+    category3: null
+  },
+  {
+    entry_id: "2a8a3ca5547b4adeade51142994155d6",
+    origin_entry_id: "JK000000084388",
+    entry: "みかた",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["자기 편;아군"]
+      },
+      {
+        part: "동사",
+        means: ["편듦;가세함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みかた",
+    category3: null
+  },
+  {
+    entry_id: "fa1ea7130f434ce98b100cb9e4da87af",
+    origin_entry_id: "JK000000084571",
+    entry: "みずうみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["호수"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みずうみ",
+    category3: null
+  },
+  {
+    entry_id: "7717cc38713e46eda1e19d034ba66dbb",
+    origin_entry_id: "JK000000084607",
+    entry: "みずぎ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["수영복"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みずぎ",
+    category3: null
+  },
+  {
+    entry_id: "ed6baca943e34d4f8e3208a668289a33",
+    origin_entry_id: "JK000000084830",
+    entry: "みだし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["표제;표제어"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みだし",
+    category3: null
+  },
+  {
+    entry_id: "4aa9c8acf2ef45dfb1c57c2c18cbd33e",
+    origin_entry_id: "JK000000085085",
+    entry: "みなおし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["다시 봄;재검토"]
+      },
+      {
+        part: "동사",
+        means: ["다시 봄;재검토"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みなおし",
+    category3: null
+  },
+  {
+    entry_id: "454dd2f540f3422ba8be88164ab2f4bf",
+    origin_entry_id: "JK000000085214",
+    entry: "みまい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["문안;문병"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みまい",
+    category3: null
+  },
+  {
+    entry_id: "c23077d6fa23489d8991d1b96de7dd03",
+    origin_entry_id: "JK000000085304",
+    entry: "みやげ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["여행지에서 가족·친지를 위해 선물로 사가지고 가는 토산물"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みやげ",
+    category3: null
+  },
+  {
+    entry_id: "61f9a0e8438945928c735924022d702e",
+    origin_entry_id: "JK100085395001",
+    entry: "みょうご-にち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["명후일;모레"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みょうごにち",
+    category3: null
+  },
+  {
+    entry_id: "b95343aee1364f38b0829a5a264f094e",
+    origin_entry_id: "JK000000085452",
+    entry: "みらい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["미래"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みらい",
+    category3: null
+  },
+  {
+    entry_id: "8b212ed60a7e43018183c126520da6f0",
+    origin_entry_id: "JK000000085501",
+    entry: "みんかん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["민간"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みんかん",
+    category3: null
+  },
+  {
+    entry_id: "fe29cca50615461b8270f259bbb43a46",
+    origin_entry_id: "JK000000085557",
+    entry: "む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["무"]
+      },
+      {
+        part: "접사",
+        means: ["없음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "む",
+    category3: null
+  },
+  {
+    entry_id: "14416bfadac348159416dc73d4bb9267",
+    origin_entry_id: "JK000000085603",
+    entry: "むかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["마주 봄;정면;맞은편"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むかい",
+    category3: null
+  },
+  {
+    entry_id: "e07701d0e7a04c04ac79a2d33007cb92",
+    origin_entry_id: "JK000000085619",
+    entry: "むかえ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["맞이함;마중"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むかえ",
+    category3: null
+  },
+  {
+    entry_id: "7f9f5b0d442a44a49df236577f48be6c",
+    origin_entry_id: "JK000000085668",
+    entry: "むき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["방향"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むき",
+    category3: null
+  },
+  {
+    entry_id: "df1c70d91eef4948927f5bce2c040da0",
+    origin_entry_id: "JK000000085715",
+    entry: "むきゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["무휴"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むきゅう",
+    category3: null
+  },
+  {
+    entry_id: "87b6a82399c1499bae0418bcfaa5a20e",
+    origin_entry_id: "JK000000085852",
+    entry: "むし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["무시"]
+      },
+      {
+        part: "동사",
+        means: ["무시"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むし",
+    category3: null
+  },
+  {
+    entry_id: "8b3b5c7cfc95445ebb1617df32e6ea85",
+    origin_entry_id: "JK000000085902",
+    entry: "むしば",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["충치"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むしば",
+    category3: null
+  },
+  {
+    entry_id: "468d94deca2a4667b43f7689ed614335",
+    origin_entry_id: "JK000000085857",
+    entry: "むじ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["무지;전체가 한 빛깔로 무늬가 없음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むじ",
+    category3: null
+  },
+  {
+    entry_id: "6690789ec76e467da7054ef9fdcaea70",
+    origin_entry_id: "JK000000085973",
+    entry: "むすこ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["아들;자식"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むすこ",
+    category3: null
+  },
+  {
+    entry_id: "70cf50f7c75645e6bae93e63878b90a9",
+    origin_entry_id: "JK000000086024",
+    entry: "むせん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["무선"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むせん",
+    category3: null
+  },
+  {
+    entry_id: "ccc454536343448faa10e1275c9ebf8f",
+    origin_entry_id: "JK000000086048",
+    entry: "むだづかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["낭비;돈 따위를 보람 없이 씀"]
+      },
+      {
+        part: "동사",
+        means: ["낭비;돈 따위를 보람 없이 씀"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むだづかい",
+    category3: null
+  },
+  {
+    entry_id: "ad5e54fffa8346deb1eefb439c4280d0",
+    origin_entry_id: "JK000000086067",
+    entry: "むちゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["몽중;꿈속"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むちゅう",
+    category3: null
+  },
+  {
+    entry_id: "c031d65547b24c3c97aa4406879d343e",
+    origin_entry_id: "JK000000086163",
+    entry: "むね",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["가슴"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むね",
+    category3: null
+  },
+  {
+    entry_id: "456b731da6db4fb193c9a539deaafbde",
+    origin_entry_id: "JK000000086280",
+    entry: "むりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["무료"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むりょう",
+    category3: null
+  },
+  {
+    entry_id: "1c8fececa258462689ede9e06bfbe855",
+    origin_entry_id: "JK000000086405",
+    entry: "めいさく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["명작"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めいさく",
+    category3: null
+  },
+  {
+    entry_id: "851f0a9fb69348a3b70e5c64a6d6c93f",
+    origin_entry_id: "JK000000086411",
+    entry: "めいし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["명함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めいし",
+    category3: null
+  },
+  {
+    entry_id: "53563df5c3074eaba88377ec7416d041",
+    origin_entry_id: "JK000000086455",
+    entry: "めいじん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["명인"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めいじん",
+    category3: null
+  },
+  {
+    entry_id: "af3baac8acdf4328acd090ba81b07fe5",
+    origin_entry_id: "JK000000086576",
+    entry: "めいわく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["귀찮음;성가심;괴로움"]
+      },
+      {
+        part: "동사",
+        means: ["귀찮음;성가심;괴로움"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めいわく",
+    category3: null
+  },
+  {
+    entry_id: "cc40b192354f44418f8259b1cb1f87ef",
+    origin_entry_id: "JK000000086578",
+    entry: "めうえ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["지위·나이가 위임;또, 윗사람;연장자"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めうえ",
+    category3: null
+  },
+  {
+    entry_id: "2dc43f86f09445fa8d1f591d8299b237",
+    origin_entry_id: "JK000000086691",
+    entry: "めざまし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["잠을 깸;잠을 깨게 함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めざまし",
+    category3: null
+  },
+  {
+    entry_id: "9d042976b9d54c218eaf41bfa4d2d344",
+    origin_entry_id: "JK000000086699",
+    entry: "めし",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["밥;식사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めし",
+    category3: null
+  },
+  {
+    entry_id: "9e064f7e7f04458c882f7d6c10e3f1b5",
+    origin_entry_id: "JK000000086720",
+    entry: "めした",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["아랫사람;손아래"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めした",
+    category3: null
+  },
+  {
+    entry_id: "3c58db881ba54e218ba81614ef795737",
+    origin_entry_id: "JK000000086941",
+    entry: "めまい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["현훈;현기증;어찔함"]
+      },
+      {
+        part: "동사",
+        means: ["현훈;현기증;어찔함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めまい",
+    category3: null
+  },
+  {
+    entry_id: "921876cf133949ada05dcee4300f2c91",
+    origin_entry_id: "JK000000087019",
+    entry: "めんかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["면회"]
+      },
+      {
+        part: "동사",
+        means: ["면회"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めんかい",
+    category3: null
+  },
+  {
+    entry_id: "7e06cf677d7245e6a5b5fc8618611b40",
+    origin_entry_id: "JK000000087026",
+    entry: "めんきょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["면허"]
+      },
+      {
+        part: "동사",
+        means: ["스승이 제자에게 그 도의 오의를 전수함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めんきょ",
+    category3: null
+  },
+  {
+    entry_id: "33c55ca7d6f74f689bd2674da1114585",
+    origin_entry_id: "JK000000087062",
+    entry: "めんせつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["면접"]
+      },
+      {
+        part: "동사",
+        means: ["면접"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めんせつ",
+    category3: null
+  },
+  {
+    entry_id: "b231d262885a477b8fe2e1dd49abbb22",
+    origin_entry_id: "JK000000087055",
+    entry: "めんぜい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["면세"]
+      },
+      {
+        part: "동사",
+        means: ["면세"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めんぜい",
+    category3: null
+  },
+  {
+    entry_id: "b225f728ba3b450dbef270fdecde24ef",
+    origin_entry_id: "JK000000087087",
+    entry: "めんどう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["번잡하고 성가심"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めんどう",
+    category3: null
+  },
+  {
+    entry_id: "b075901d6ec14e5b9a3482f1dc77be71",
+    origin_entry_id: "JK000000100117",
+    entry: "もうしこみしゃ",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["신청자"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もうしこみしゃ",
+    category3: null
+  },
+  {
+    entry_id: "7bd92fd77ad646d6ae4d4348c7d7bf93",
+    origin_entry_id: "JK000000087291",
+    entry: "もうふ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["모포;담요"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もうふ",
+    category3: null
+  },
+  {
+    entry_id: "ed06ae9cf05647b39ce499c124505373",
+    origin_entry_id: "JK000000087430",
+    entry: "もくてき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["목적"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もくてき",
+    category3: null
+  },
+  {
+    entry_id: "56840287333e4d439887140b9188df22",
+    origin_entry_id: "JK000000087447",
+    entry: "もくひょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["목표"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もくひょう",
+    category3: null
+  },
+  {
+    entry_id: "2a7b2649104a418b814bf03429bdc08a",
+    origin_entry_id: "JK000000087496",
+    entry: "もじ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["글자;문자"]
+      },
+      {
+        part: "접사",
+        means: ["문장;말"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もじ",
+    category3: null
+  },
+  {
+    entry_id: "4b6acbbf8fec4c42ad6808e6f17eef8e",
+    origin_entry_id: "JK000000087822",
+    entry: "もの",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["자;사람;것"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もの",
+    category3: null
+  },
+  {
+    entry_id: "832d8c8ec6834803aa927296d9759656",
+    origin_entry_id: "JK000000087839",
+    entry: "ものおき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["헛간;곳간;광"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ものおき",
+    category3: null
+  },
+  {
+    entry_id: "1808a34035854aee8476940347570f43",
+    origin_entry_id: "JK000000087857",
+    entry: "ものがたり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["이야기;또, 그 내용"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ものがたり",
+    category3: null
+  },
+  {
+    entry_id: "ce56929548464bd7bbd5bbe4116e3a5b",
+    origin_entry_id: "JK000000087960",
+    entry: "ものわすれ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사물을 잊음;건망;실념"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ものわすれ",
+    category3: null
+  },
+  {
+    entry_id: "dc0e4f1af18c4ae9aa05557c21fd4088",
+    origin_entry_id: "JK000000088056",
+    entry: "もよう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["무늬;도안"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もよう",
+    category3: null
+  },
+  {
+    entry_id: "4793a94376f449998c362aebe12adc4c",
+    origin_entry_id: "JK000000088193",
+    entry: "もんく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["문구"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もんく",
+    category3: null
+  },
+  {
+    entry_id: "e312b20bdf2f46e4baab902ccf90efec",
+    origin_entry_id: "JK000000088433",
+    entry: "やきゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["야구"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "やきゅう",
+    category3: null
+  },
+  {
+    entry_id: "5b7e388e481a45f7a56d179c3a4992db",
+    origin_entry_id: "JK000000088629",
+    entry: "やけど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["화상;뎀"]
+      },
+      {
+        part: "동사",
+        means: ["피해를 봄;타격을 입음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "やけど",
+    category3: null
+  },
+  {
+    entry_id: "d644fdaeb75f42d3a01159a8b5b0f24d",
+    origin_entry_id: "JK000000088824",
+    entry: "やちん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["집세"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "やちん",
+    category3: null
+  },
+  {
+    entry_id: "ee6ffb47027144ce9884895219075b3c",
+    origin_entry_id: "JK000000088846",
+    entry: "やっきょく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["약국;약방"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "やっきょく",
+    category3: null
+  },
+  {
+    entry_id: "0b574cc57c7240a89c563116e4fe4d4a",
+    origin_entry_id: "JK000000089350",
+    entry: "やるき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["…을 할 마음;하고 싶은 기분"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "やるき",
+    category3: null
+  },
+  {
+    entry_id: "edcde37483144889872850243f12de08",
+    origin_entry_id: "JK000000089546",
+    entry: "ゆうき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["용기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆうき",
+    category3: null
+  },
+  {
+    entry_id: "24960d392de54377bfe8adaee584fcce",
+    origin_entry_id: "JK000000089689",
+    entry: "ゆうじょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["우정"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆうじょう",
+    category3: null
+  },
+  {
+    entry_id: "8b6ed20a16514002b528604e96965b8a",
+    origin_entry_id: "JK000000089699",
+    entry: "ゆうじん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["우인;친구"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆうじん",
+    category3: null
+  },
+  {
+    entry_id: "71f8fd782a4a435c9ecf239b9efa9d1f",
+    origin_entry_id: "JK000000089749",
+    entry: "ゆうそう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["우송"]
+      },
+      {
+        part: "동사",
+        means: ["우송"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆうそう",
+    category3: null
+  },
+  {
+    entry_id: "7d61f11ad2304059b036a4febda89790",
+    origin_entry_id: "JK000000100157",
+    entry: "ゆうそうりょう",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["우송료"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆうそうりょう",
+    category3: null
+  },
+  {
+    entry_id: "865493969ad14360b205cd7d9b907609",
+    origin_entry_id: "JK000000089765",
+    entry: "ゆうだち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소나기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆうだち",
+    category3: null
+  },
+  {
+    entry_id: "b06e80556ef549f09f7db94de4abb805",
+    origin_entry_id: "JK000000089808",
+    entry: "ゆうひ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["석양"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆうひ",
+    category3: null
+  },
+  {
+    entry_id: "bff21941f6e94630bad2459485006ed6",
+    origin_entry_id: "JK000000089820",
+    entry: "ゆうびん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["우편"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆうびん",
+    category3: null
+  },
+  {
+    entry_id: "03f0db90b2e24186a63bcece799b24f8",
+    origin_entry_id: "JK000000089863",
+    entry: "ゆうやけ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["저녁놀"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆうやけ",
+    category3: null
+  },
+  {
+    entry_id: "4a00b87e6f7140b38a577d6f646e0049",
+    origin_entry_id: "JK000000089888",
+    entry: "ゆうりょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["유료"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆうりょう",
+    category3: null
+  },
+  {
+    entry_id: "39aadafa34d545539c039b1c459b06fd",
+    origin_entry_id: "JK000000089916",
+    entry: "ゆか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["마루"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆか",
+    category3: null
+  },
+  {
+    entry_id: "d851259f66a44116a3b1ad953f212c54",
+    origin_entry_id: "JK000000089945",
+    entry: "ゆき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["감;특히, 목적지를 향해 감"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆき",
+    category3: null
+  },
+  {
+    entry_id: "f30406b298774b86bae592a6fa0d7ea2",
+    origin_entry_id: "JK000000090396",
+    entry: "よあけ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["새벽"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よあけ",
+    category3: null
+  },
+  {
+    entry_id: "36277b7afab84877a8bfe9167fdc6790",
+    origin_entry_id: "JK000000090452",
+    entry: "よう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["용도;소용"]
+      },
+      {
+        part: "접사",
+        means: ["용무;용건"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よう",
+    category3: null
+  },
+  {
+    entry_id: "f41a2c3e09ea47eead1cd45c86e08a6d",
+    origin_entry_id: "JK000000090568",
+    entry: "ようきゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["요구"]
+      },
+      {
+        part: "동사",
+        means: ["요구"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ようきゅう",
+    category3: null
+  },
+  {
+    entry_id: "3d82fd069801448ba3a5df9c9e0da993",
+    origin_entry_id: "JK000000090591",
+    entry: "ようけん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["용건"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ようけん",
+    category3: null
+  },
+  {
+    entry_id: "1c5278a1eaaf46e5a28ae8d79e01fef2",
+    origin_entry_id: "JK000000090646",
+    entry: "ようじ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["유아"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ようじ",
+    category3: null
+  },
+  {
+    entry_id: "b441cd7e735a45d08212a7a169d07b01",
+    origin_entry_id: "JK100090755001",
+    entry: "ようちえん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["유치원"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ようちえん",
+    category3: null
+  },
+  {
+    entry_id: "8d8e8feaf71f4d36b5aed9e76e9869a1",
+    origin_entry_id: "JK000000090780",
+    entry: "ようと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["용도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ようと",
+    category3: null
+  },
+  {
+    entry_id: "d1fdf36d2a804147a6644674ab18662c",
+    origin_entry_id: "JK000000091028",
+    entry: "よくばり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["욕심이 많음;욕심꾸러기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よくばり",
+    category3: null
+  },
+  {
+    entry_id: "16fdaba6eceb4e52b33eda97fc96e263",
+    origin_entry_id: "JK000000091186",
+    entry: "よさん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["예산"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よさん",
+    category3: null
+  },
+  {
+    entry_id: "c1df50b52645415ab976e6290f5a59e5",
+    origin_entry_id: "JK000000091288",
+    entry: "よそう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["예상"]
+      },
+      {
+        part: "동사",
+        means: ["예상"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よそう",
+    category3: null
+  },
+  {
+    entry_id: "a5676a0e154a42b9891bbf36491a83f9",
+    origin_entry_id: "JK000000091341",
+    entry: "よつかど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["네 귀;네 모퉁이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よつかど",
+    category3: null
+  },
+  {
+    entry_id: "9570d320aebb47909c15812149bf8e02",
+    origin_entry_id: "JK000000091403",
+    entry: "よなか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["밤중;한밤중"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よなか",
+    category3: null
+  },
+  {
+    entry_id: "6b9fb06a759449e5b59a8a50cbaa93be",
+    origin_entry_id: "JK000000091436",
+    entry: "よのなか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["세상"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よのなか",
+    category3: null
+  },
+  {
+    entry_id: "55f06d99b0df44d38c1253eb6c84eb3f",
+    origin_entry_id: "JK000000091516",
+    entry: "よほう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["예보"]
+      },
+      {
+        part: "동사",
+        means: ["예보"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よほう",
+    category3: null
+  },
+  {
+    entry_id: "b0c89746191d470ca1a3bac8864e510a",
+    origin_entry_id: "JK000000091519",
+    entry: "よぼう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["예방"]
+      },
+      {
+        part: "동사",
+        means: ["예방"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よぼう",
+    category3: null
+  },
+  {
+    entry_id: "61447342ef634b6dbcc6e0b3796aa6e3",
+    origin_entry_id: "JK000000091748",
+    entry: "よろこび",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["기쁨"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よろこび",
+    category3: null
+  },
+  {
+    entry_id: "873425bdfd9242c8bad41d166fe57c24",
+    origin_entry_id: "JK000000091982",
+    entry: "らく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["편안함;안락함"]
+      },
+      {
+        part: "형용동사",
+        means: ["용이함;쉬움."]
+      }
+    ],
+    category1: "jlpt",
+    category2: "らく",
+    category3: null
+  },
+  {
+    entry_id: "0870e697f6144b35835fd7a2f1e376d1",
+    origin_entry_id: "JK000000092451",
+    entry: "りか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["이과"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "りか",
+    category3: null
+  },
+  {
+    entry_id: "59eeceaee16642f894094c49d103c205",
+    origin_entry_id: "JK000000092453",
+    entry: "りかい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["이해"]
+      },
+      {
+        part: "동사",
+        means: ["이해"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "りかい",
+    category3: null
+  },
+  {
+    entry_id: "9c01a9936b8a46c180a06cf9b503a84c",
+    origin_entry_id: "JK000000092579",
+    entry: "りこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["영리함;똑똑함"]
+      },
+      {
+        part: "형용동사",
+        means: ["요령이 좋음;빈틈없음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "りこう",
+    category3: null
+  },
+  {
+    entry_id: "1510b94890e7416484a7ec391ff6490b",
+    origin_entry_id: "JK000000092588",
+    entry: "りこん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["이혼"]
+      },
+      {
+        part: "동사",
+        means: ["이혼"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "りこん",
+    category3: null
+  },
+  {
+    entry_id: "880e7c78e29a40a49181033e89357bd2",
+    origin_entry_id: "JK000000092649",
+    entry: "りそう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["이상"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "りそう",
+    category3: null
+  },
+  {
+    entry_id: "68901c99f5174764ab3d7557653f3a66",
+    origin_entry_id: "JK000000092932",
+    entry: "りゅうがく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["유학"]
+      },
+      {
+        part: "동사",
+        means: ["유학"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "りゅうがく",
+    category3: null
+  },
+  {
+    entry_id: "0c06b5f6e9c94fcca4ead8268a914e24",
+    origin_entry_id: "JK000000092951",
+    entry: "りゅうこう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["유행;→ふえきりゅうこう"]
+      },
+      {
+        part: "동사",
+        means: ["유행;→ふえきりゅうこう"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "りゅうこう",
+    category3: null
+  },
+  {
+    entry_id: "ba83c21f788f45c490e8700c4bb4a69a",
+    origin_entry_id: "JK000000093072",
+    entry: "りょう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["양;분량"]
+      },
+      {
+        part: "접사",
+        means: ["마음의 크기;도량"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "りょう",
+    category3: null
+  },
+  {
+    entry_id: "80295396c3f24ed399a78890c14c5982",
+    origin_entry_id: "JK000000093141",
+    entry: "りょうがえ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["환전;돈을 바꿈"]
+      },
+      {
+        part: "동사",
+        means: ["유가 증권을 돈으로 바꿈"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "りょうがえ",
+    category3: null
+  },
+  {
+    entry_id: "26fd0294a2ab4d189cfdf55b06b3481b",
+    origin_entry_id: "JK000000093143",
+    entry: "りょうがわ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["양측;양편"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "りょうがわ",
+    category3: null
+  },
+  {
+    entry_id: "e0071479432443c3b39b5b6f1fc6870f",
+    origin_entry_id: "JK000000093168",
+    entry: "りょうきん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["요금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "りょうきん",
+    category3: null
+  },
+  {
+    entry_id: "64275d1bd146440f953aaa0b53c44024",
+    origin_entry_id: "JK100093514001",
+    entry: "りれきしょ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["이력서"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "りれきしょ",
+    category3: null
+  },
+  {
+    entry_id: "a66733bcb822451580f298bc7da81a8a",
+    origin_entry_id: "JK100093827004",
+    entry: "るすばん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["→るす2"]
+      },
+      {
+        part: "동사",
+        means: ["→るす2"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "るすばん",
+    category3: null
+  },
+  {
+    entry_id: "e04fb84bda344243a8a0e80d6f600124",
+    origin_entry_id: "JK000000093930",
+    entry: "れいがい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["예외"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "れいがい",
+    category3: null
+  },
+  {
+    entry_id: "a2edecd0b03c4172b915893ab5c369cd",
+    origin_entry_id: "JK000000094038",
+    entry: "れいせい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["냉정"]
+      },
+      {
+        part: "형용동사",
+        means: ["냉정"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "れいせい",
+    category3: null
+  },
+  {
+    entry_id: "ca703ff19ffa48889fbda4aa9ca75ccb",
+    origin_entry_id: "JK000000094083",
+    entry: "れいとう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["냉동"]
+      },
+      {
+        part: "동사",
+        means: ["냉동"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "れいとう",
+    category3: null
+  },
+  {
+    entry_id: "fca0881ea89d46048687f0e83a20340e",
+    origin_entry_id: "JK000000094279",
+    entry: "れつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["열;행렬"]
+      },
+      {
+        part: "접사",
+        means: ["신분·지위 따위의 상하 관계의 단계;반열"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "れつ",
+    category3: null
+  },
+  {
+    entry_id: "6c95e9f20c854aae9751babaa4a41eb1",
+    origin_entry_id: "JK000000094401",
+    entry: "れんきゅう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["연휴"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "れんきゅう",
+    category3: null
+  },
+  {
+    entry_id: "2d90a29c37fe4d3a8210ec19751b0eb5",
+    origin_entry_id: "JK000000094911",
+    entry: "ろくおん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["녹음"]
+      },
+      {
+        part: "동사",
+        means: ["녹음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ろくおん",
+    category3: null
+  },
+  {
+    entry_id: "d4f60d8dd62e4972b1cedb7a5797052c",
+    origin_entry_id: "JK000000094912",
+    entry: "ろくが",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["녹화"]
+      },
+      {
+        part: "동사",
+        means: ["녹화"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ろくが",
+    category3: null
+  },
+  {
+    entry_id: "2101e5854c234dfb844995fb19259685",
+    origin_entry_id: "JK000000095107",
+    entry: "ろめん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["노면;도로 위"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ろめん",
+    category3: null
+  },
+  {
+    entry_id: "ca7c11dd907c433f884c4eadf332b0c1",
+    origin_entry_id: "JK000000095177",
+    entry: "わ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["고리;원형"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わ",
+    category3: null
+  },
+  {
+    entry_id: "ad3f983f9c504485925cd5b766f67eb9",
+    origin_entry_id: "JK000000095337",
+    entry: "わかもの",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["젊은이;청년"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わかもの",
+    category3: null
+  },
+  {
+    entry_id: "a6eb90e4a72643ea9563a8b7cd42b508",
+    origin_entry_id: "JK000000095358",
+    entry: "わかれ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["헤어짐;이별"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わかれ",
+    category3: null
+  },
+  {
+    entry_id: "18dbdcebc8094d12ac0342092c42138e",
+    origin_entry_id: "JK000000095659",
+    entry: "わたりどり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["철새;후조"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わたりどり",
+    category3: null
+  },
+  {
+    entry_id: "6a2c2f03061948dbafbfc626928c858e",
+    origin_entry_id: "JK000000095600",
+    entry: "わだい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["화제"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わだい",
+    category3: null
+  },
+  {
+    entry_id: "5f46e5743a884fb7bbec3fbf98c1ce93",
+    origin_entry_id: "JK000000095730",
+    entry: "わび",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사죄;사과"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わび",
+    category3: null
+  },
+  {
+    entry_id: "f40d186e5aed433787a9d208d5d22e54",
+    origin_entry_id: "JK000000095771",
+    entry: "わらい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["웃음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わらい",
+    category3: null
+  },
+  {
+    entry_id: "b6d642d8da514fc9b4c6ac6fc030fbc0",
+    origin_entry_id: "JK000000095832",
+    entry: "わり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["할;십분의 일"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わり",
+    category3: null
+  },
+  {
+    entry_id: "7aa1dfa2813c4ed495deabbad0872eb6",
+    origin_entry_id: "JK000000095862",
+    entry: "わりざん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["나눗셈"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わりざん",
+    category3: null
+  },
+  {
+    entry_id: "8a746c2d7b604529937decac90743393",
+    origin_entry_id: "JK000000095883",
+    entry: "わりびき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["할인"]
+      },
+      {
+        part: "동사",
+        means: ["줄잡음;에누리함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わりびき",
+    category3: null
+  },
+  {
+    entry_id: "229c12fd649a47ceb4444d7d220db1a6",
+    origin_entry_id: "JK100000175002",
+    entry: "アイスクリーム",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["아이스크림"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "アイスクリーム",
+    category3: null
+  },
+  {
+    entry_id: "67eb173e953d4836aa2c670eeacb0f68",
+    origin_entry_id: "JK000000000333",
+    entry: "アウト",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["아웃"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "アウト",
+    category3: null
+  },
+  {
+    entry_id: "57f5739f1ab046cf8d34b1e3baa5734b",
+    origin_entry_id: "JK000000001762",
+    entry: "アドバイス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["어드바이스;조언;충고"]
+      },
+      {
+        part: "동사",
+        means: ["어드바이스;조언;충고"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "アドバイス",
+    category3: null
+  },
+  {
+    entry_id: "eec8d714b85e400a8b7a30b655f14a04",
+    origin_entry_id: "JK000000001797",
+    entry: "アドレス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["어드레스"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "アドレス",
+    category3: null
+  },
+  {
+    entry_id: "aa65a8a53f924c14905356e3f4efcf1a",
+    origin_entry_id: "JK000000001809",
+    entry: "アナウンス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["아나운스;방송함"]
+      },
+      {
+        part: "동사",
+        means: ["아나운스;방송함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "アナウンス",
+    category3: null
+  },
+  {
+    entry_id: "6625fcac0aad4d7891c92de6ac03fdeb",
+    origin_entry_id: "JK000000002163",
+    entry: "アマチュア",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["아마추어;호사가"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "アマチュア",
+    category3: null
+  },
+  {
+    entry_id: "1811671694a34785bc979ae645748b7a",
+    origin_entry_id: "JK000000002697",
+    entry: "アルバム",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["앨범"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "アルバム",
+    category3: null
+  },
+  {
+    entry_id: "7ea54c4d95ca44f9874b3fd2348d29c2",
+    origin_entry_id: "JK100002718001",
+    entry: "アルミホイル",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["가정용의 알루미늄박"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "アルミホイル",
+    category3: null
+  },
+  {
+    entry_id: "96ffe7ca5faf4ff387d8de1372b6937a",
+    origin_entry_id: "JK000000002752",
+    entry: "アレルギー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["알레르기;앨러지;거부 반응"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "アレルギー",
+    category3: null
+  },
+  {
+    entry_id: "6ae6b140e9c84e02a3d53690e536deaa",
+    origin_entry_id: "JK000000002875",
+    entry: "アンケート",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["앙케트;질문;조사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "アンケート",
+    category3: null
+  },
+  {
+    entry_id: "dc9868a5980d4e0a88d48a5aad8f6271",
+    origin_entry_id: "JK000000002982",
+    entry: "アンテナ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["안테나;공중선"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "アンテナ",
+    category3: null
+  },
+  {
+    entry_id: "441069aee3c84caabcca6e244668c82a",
+    origin_entry_id: "JK000000003844",
+    entry: "イコール",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["등호"]
+      },
+      {
+        part: "형용동사",
+        means: ["같음;동등함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "イコール",
+    category3: null
+  },
+  {
+    entry_id: "9ab95f7778994ce4b3a4fa897b4f2dbe",
+    origin_entry_id: "JK000000005439",
+    entry: "イメージ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["이미지;인상;심상"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "イメージ",
+    category3: null
+  },
+  {
+    entry_id: "ad7eaa2873a04f8f933af504372c388c",
+    origin_entry_id: "JK000000005979",
+    entry: "インク",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["→インキ"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "インク",
+    category3: null
+  },
+  {
+    entry_id: "723b84f563e34c0c84eb965270c1dcdb",
+    origin_entry_id: "JK000000006071",
+    entry: "インスタント",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["인스턴트;즉석"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "インスタント",
+    category3: null
+  },
+  {
+    entry_id: "f5aef701d9314d028e0b40843327aecd",
+    origin_entry_id: "JK000000006120",
+    entry: "インタビュー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["인터뷰;면접;특히, 기자의 취재를 위한 면회"]
+      },
+      {
+        part: "동사",
+        means: ["인터뷰;면접;특히, 기자의 취재를 위한 면회"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "インタビュー",
+    category3: null
+  },
+  {
+    entry_id: "0c3bfe1a775c41848af83fa604a1637d",
+    origin_entry_id: "JK100006109007",
+    entry: "インターネット",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["인터넷"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "インターネット",
+    category3: null
+  },
+  {
+    entry_id: "1e56c28792ca4440baeb8d89d91c427e",
+    origin_entry_id: "JK000000006375",
+    entry: "ウイルス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["비루스;바이러스;여과성 병원체"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ウイルス",
+    category3: null
+  },
+  {
+    entry_id: "a98d0b9a2375425e9d077603babe45df",
+    origin_entry_id: "JK000000008761",
+    entry: "エネルギー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["에네르기;에너지"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "エネルギー",
+    category3: null
+  },
+  {
+    entry_id: "5c1550a3b88a4b5595d1b8ff98b7d06c",
+    origin_entry_id: "JK000000009227",
+    entry: "エンジン",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["엔진"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "エンジン",
+    category3: null
+  },
+  {
+    entry_id: "77b9ae17324149d0bc6532166f2a2efc",
+    origin_entry_id: "JK000000011433",
+    entry: "オフィス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["오피스;사무소;회사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "オフィス",
+    category3: null
+  },
+  {
+    entry_id: "cf00383a33c9440983ee7476dfdb57a8",
+    origin_entry_id: "JK000000011471",
+    entry: "オペラ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["오페라;가극"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "オペラ",
+    category3: null
+  },
+  {
+    entry_id: "3af7afc431d54fd99c71f6b43cb7559d",
+    origin_entry_id: "JK000000015759",
+    entry: "カタログ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["카탈로그"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "カタログ",
+    category3: null
+  },
+  {
+    entry_id: "c520985d88ef4bc98b6d0d58cb9109f5",
+    origin_entry_id: "JK000000016403",
+    entry: "カバー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["커버"]
+      },
+      {
+        part: "동사",
+        means: ["덮개;뚜껑"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "カバー",
+    category3: null
+  },
+  {
+    entry_id: "c7796f69c39b40beb256a08f2e72d2b2",
+    origin_entry_id: "JK000000016958",
+    entry: "カラー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["컬러"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "カラー",
+    category3: null
+  },
+  {
+    entry_id: "d54221c0bef5468ebc3637bb1d74d39e",
+    origin_entry_id: "JK000000017503",
+    entry: "カロリー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["칼로리"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "カロリー",
+    category3: null
+  },
+  {
+    entry_id: "3979b7a4bd4e46619e2c3da9f75ffd96",
+    origin_entry_id: "JK000000012383",
+    entry: "カード",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["카드"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "カード",
+    category3: null
+  },
+  {
+    entry_id: "23aa21f999ea4d50881550228ba6f108",
+    origin_entry_id: "JK000000012391",
+    entry: "カーナビ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["→カーナビゲーションシステム"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "カーナビ",
+    category3: null
+  },
+  {
+    entry_id: "0900f7da2cb3420aa3f7130e0d573ce4",
+    origin_entry_id: "JK000000012400",
+    entry: "カーブ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["커브"]
+      },
+      {
+        part: "동사",
+        means: ["곡선"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "カーブ",
+    category3: null
+  },
+  {
+    entry_id: "f3f4d03763b44533a12d936786cde07a",
+    origin_entry_id: "JK000000012401",
+    entry: "カーペット",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["카펫;융단;양탄자"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "カーペット",
+    category3: null
+  },
+  {
+    entry_id: "64bffecccd7547ca8e3a5be09557cfa1",
+    origin_entry_id: "JK000000020874",
+    entry: "キャンセル",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["캔슬;매매 계약 또는 예약의 취소;해약"]
+      },
+      {
+        part: "동사",
+        means: ["캔슬;매매 계약 또는 예약의 취소;해약"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "キャンセル",
+    category3: null
+  },
+  {
+    entry_id: "b70b20e214944effa288a1ce6a5f47a9",
+    origin_entry_id: "JK000000020880",
+    entry: "キャンパス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["캠퍼스;구내;교정"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "キャンパス",
+    category3: null
+  },
+  {
+    entry_id: "7a064d0270b8481d867742f94f0878d7",
+    origin_entry_id: "JK000000020882",
+    entry: "キャンプ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["캠프"]
+      },
+      {
+        part: "동사",
+        means: ["야영 막사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "キャンプ",
+    category3: null
+  },
+  {
+    entry_id: "d8a40b192d5d4d949a625d8a77c9941f",
+    origin_entry_id: "JK000000023461",
+    entry: "クイズ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["퀴즈"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "クイズ",
+    category3: null
+  },
+  {
+    entry_id: "b065b13bb5ba496cb8f3a455943434e8",
+    origin_entry_id: "JK100024813004",
+    entry: "クラスメート",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["클래스메이트;동급생;급우"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "クラスメート",
+    category3: null
+  },
+  {
+    entry_id: "1344840d180b42bb9befbcfa1a982a0c",
+    origin_entry_id: "JK000000024943",
+    entry: "クリック",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["클릭"]
+      },
+      {
+        part: "동사",
+        means: ["짤까닥 소리가 남;또, 그 소리"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "クリック",
+    category3: null
+  },
+  {
+    entry_id: "6f4bc1b574b24fbeb4b99d4236019eb7",
+    origin_entry_id: "JK000000024902",
+    entry: "クリーニング",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["클리닝"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "クリーニング",
+    category3: null
+  },
+  {
+    entry_id: "d0905126e33142c1b3c425df66abdafd",
+    origin_entry_id: "JK000000023647",
+    entry: "クーラー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["쿨러"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "クーラー",
+    category3: null
+  },
+  {
+    entry_id: "24dc54b3c57e4bd3871ddd29abe8d8be",
+    origin_entry_id: "JK000000025005",
+    entry: "グループ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["그룹;무리;집단"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "グループ",
+    category3: null
+  },
+  {
+    entry_id: "dc3ac8f3a18f49e19fa2eab519ad6a80",
+    origin_entry_id: "JK000000026098",
+    entry: "ケース",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["케이스"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ケース",
+    category3: null
+  },
+  {
+    entry_id: "5e10180148f345d7857135c299848bbe",
+    origin_entry_id: "JK000000032351",
+    entry: "コンビニ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["‘コンビニエンス·ストア’의 준말"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "コンビニ",
+    category3: null
+  },
+  {
+    entry_id: "2848622ddb3d4986ae291e936ada3bce",
+    origin_entry_id: "JK000000032837",
+    entry: "サイズ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["사이즈;크기;치수"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "サイズ",
+    category3: null
+  },
+  {
+    entry_id: "667f50f23ce5445b9ba4e9b05873118b",
+    origin_entry_id: "JK000000034148",
+    entry: "サッカー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["서커;오글무명의 일종"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "サッカー",
+    category3: null
+  },
+  {
+    entry_id: "15332d85d62942debd5d43ee5b1f35cc",
+    origin_entry_id: "JK100034672002",
+    entry: "サラリーマン",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["샐러리맨;봉급 생활자;월급쟁이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "サラリーマン",
+    category3: null
+  },
+  {
+    entry_id: "6924304fd83242b7bb6aadd68f7b0c18",
+    origin_entry_id: "JK000000032478",
+    entry: "サービス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["서비스"]
+      },
+      {
+        part: "동사",
+        means: ["봉사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "サービス",
+    category3: null
+  },
+  {
+    entry_id: "d2b5e6d89f354edb8bf8ee131f9a0c08",
+    origin_entry_id: "JK000000043638",
+    entry: "ショップ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["숍;상점;가게"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ショップ",
+    category3: null
+  },
+  {
+    entry_id: "3097928016b543c89d96cfdca0aa1c0f",
+    origin_entry_id: "JK000000046015",
+    entry: "スカーフ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["스카프;목도리"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "スカーフ",
+    category3: null
+  },
+  {
+    entry_id: "76bbe1a83b934b309dcbb918e04d0a11",
+    origin_entry_id: "JK000000046225",
+    entry: "スクール",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["스쿨"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "スクール",
+    category3: null
+  },
+  {
+    entry_id: "9cae08d6c1b649379ab897fd96c20f81",
+    origin_entry_id: "JK000000046288",
+    entry: "スケジュール",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["스케줄;일정;예정"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "スケジュール",
+    category3: null
+  },
+  {
+    entry_id: "3c9e116537da47b881050a50625896a1",
+    origin_entry_id: "JK000000046279",
+    entry: "スケート",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["스케이트"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "スケート",
+    category3: null
+  },
+  {
+    entry_id: "c99a9e58e129468cad3393d178f8dbfb",
+    origin_entry_id: "JK000000046502",
+    entry: "スタイル",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["스타일"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "スタイル",
+    category3: null
+  },
+  {
+    entry_id: "30aaa4d5a9ed4e8084bf85be142a8e1a",
+    origin_entry_id: "JK000000046691",
+    entry: "ストップ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["스톱;정지"]
+      },
+      {
+        part: "동사",
+        means: ["정류소"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ストップ",
+    category3: null
+  },
+  {
+    entry_id: "13090dc8372b42119314effc7c1e724a",
+    origin_entry_id: "JK000000046713",
+    entry: "ストレス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["스트레스"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ストレス",
+    category3: null
+  },
+  {
+    entry_id: "de1879a3059047be90b6aa8afaea27b8",
+    origin_entry_id: "JK000000046680",
+    entry: "ストーリー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["스토리;이야기;소설·각본 따위의 줄거리"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ストーリー",
+    category3: null
+  },
+  {
+    entry_id: "5bf9908a539b42ada791a47e2da0e752",
+    origin_entry_id: "JK000000049842",
+    entry: "センター",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["센터"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "センター",
+    category3: null
+  },
+  {
+    entry_id: "c374547bcbfe403fb9ce99d31b1fe5e6",
+    origin_entry_id: "JK000000048282",
+    entry: "セール",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["세일;매출"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "セール",
+    category3: null
+  },
+  {
+    entry_id: "332ade0eec4d4e2796e3f8c7eb85d49f",
+    origin_entry_id: "JK000000052122",
+    entry: "ソファー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소파;긴의자;→ベンチ"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ソファー",
+    category3: null
+  },
+  {
+    entry_id: "c9befc6853b54f609351116eacc14220",
+    origin_entry_id: "JK000000051324",
+    entry: "ソース",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["소스"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ソース",
+    category3: null
+  },
+  {
+    entry_id: "b0cc587edb7e4732b7576d425977e206",
+    origin_entry_id: "JK000000053711",
+    entry: "タオル",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["타월;수건;또, 그 천"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "タオル",
+    category3: null
+  },
+  {
+    entry_id: "9fc74bbb8af24fd9b3dab6792d4d9e50",
+    origin_entry_id: "JK000000052752",
+    entry: "ダイエット",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["다이어트;식이 제한"]
+      },
+      {
+        part: "동사",
+        means: ["다이어트;식이 제한"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ダイエット",
+    category3: null
+  },
+  {
+    entry_id: "4b11e666959143f09efebc699db4e66a",
+    origin_entry_id: "JK000000053599",
+    entry: "ダイヤモンド",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["다이아몬드"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ダイヤモンド",
+    category3: null
+  },
+  {
+    entry_id: "72af818d1de3468aa4c770d638ac4a6e",
+    origin_entry_id: "JK000000053601",
+    entry: "ダイヤル",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["다이얼"]
+      },
+      {
+        part: "동사",
+        means: ["라디오 수신기의 눈금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ダイヤル",
+    category3: null
+  },
+  {
+    entry_id: "ec0227f36c39440797ebc5c78252e7c8",
+    origin_entry_id: "JK000000055247",
+    entry: "ダム",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["댐"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ダム",
+    category3: null
+  },
+  {
+    entry_id: "65cccb2188334468a769c06616cc6fdd",
+    origin_entry_id: "JK000000056556",
+    entry: "チップ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["칩"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "チップ",
+    category3: null
+  },
+  {
+    entry_id: "4a06be75b2814bf9af3f75149f7f7397",
+    origin_entry_id: "JK000000056947",
+    entry: "チャンス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["찬스;기회;호기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "チャンス",
+    category3: null
+  },
+  {
+    entry_id: "a09c40e65c0343bea2a9ed68165b7dcf",
+    origin_entry_id: "JK100060817001",
+    entry: "テニスコート",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["테니스 코트"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "テニスコート",
+    category3: null
+  },
+  {
+    entry_id: "4f169e280e5c41989133cd3c0a98df6d",
+    origin_entry_id: "JK000000060454",
+    entry: "デザート",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["디저트;식후의 다과"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "デザート",
+    category3: null
+  },
+  {
+    entry_id: "9760511ab5ec418097eb027d823767a7",
+    origin_entry_id: "JK000000060135",
+    entry: "データ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["데이터"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "データ",
+    category3: null
+  },
+  {
+    entry_id: "0749d0ef8bef4c8d964ff7f0ef0be6a6",
+    origin_entry_id: "JK000000063836",
+    entry: "トップ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["톱"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "トップ",
+    category3: null
+  },
+  {
+    entry_id: "34ef3f9f2efa4e4c945421dce0077b94",
+    origin_entry_id: "JK000000064676",
+    entry: "トレーニング",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["트레이닝;훈련;연습"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "トレーニング",
+    category3: null
+  },
+  {
+    entry_id: "05fbf3336ef64c98845ab3fab9ef5d43",
+    origin_entry_id: "JK000000064883",
+    entry: "トンネル",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["굴"]
+      },
+      {
+        part: "동사",
+        means: ["야수가 땅볼을 가랑이 사이로 놓침"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "トンネル",
+    category3: null
+  },
+  {
+    entry_id: "537273e7e9004a768ffa3c329936bf20",
+    origin_entry_id: "JK000000064303",
+    entry: "ドライブ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["드라이브"]
+      },
+      {
+        part: "동사",
+        means: ["몰고 멀리 달리는 일"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ドライブ",
+    category3: null
+  },
+  {
+    entry_id: "cc14a37d6b8e49f7a3393e49f2766f88",
+    origin_entry_id: "JK000000064304",
+    entry: "ドライヤー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["드라이어;건조기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ドライヤー",
+    category3: null
+  },
+  {
+    entry_id: "88f04fce16944ae880310687562146db",
+    origin_entry_id: "JK100068108001",
+    entry: "ネックレス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["네클리스;목걸이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ネックレス",
+    category3: null
+  },
+  {
+    entry_id: "2d8627b72ce54dafac1bd8640293a7ed",
+    origin_entry_id: "JK000000068155",
+    entry: "ネット",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["네트"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ネット",
+    category3: null
+  },
+  {
+    entry_id: "0f935d0d128e40d19e60742d256a8387",
+    origin_entry_id: "JK000000068871",
+    entry: "ノック",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["노크"]
+      },
+      {
+        part: "동사",
+        means: ["두드림"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ノック",
+    category3: null
+  },
+  {
+    entry_id: "d24bcce1fd01425a82ba22da1a7bf511",
+    origin_entry_id: "JK000000069498",
+    entry: "ハイキング",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["하이킹"]
+      },
+      {
+        part: "동사",
+        means: ["하이킹"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ハイキング",
+    category3: null
+  },
+  {
+    entry_id: "ab986cc8ee2a48cdb81f1fb39848650e",
+    origin_entry_id: "JK100072888002",
+    entry: "ハンドバッグ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["핸드백"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ハンドバッグ",
+    category3: null
+  },
+  {
+    entry_id: "4479e419e7434c08af1e819ef7f72d23",
+    origin_entry_id: "JK000000069289",
+    entry: "ハート",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["하트"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ハート",
+    category3: null
+  },
+  {
+    entry_id: "90400d50978a477ab93d92931923f982",
+    origin_entry_id: "JK000000069503",
+    entry: "バイク",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["바이크"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "バイク",
+    category3: null
+  },
+  {
+    entry_id: "ee3bf4006537449da24629d971ea0d4d",
+    origin_entry_id: "JK000000069736",
+    entry: "バイト",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["‘アルバイト’의 준말"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "バイト",
+    category3: null
+  },
+  {
+    entry_id: "7b4f7ea6939842478d8e142d73ab8e99",
+    origin_entry_id: "LW181688",
+    entry: "バスてい",
+    level: "3",
+    source: "001056A2",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["버스 정류장"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "バスてい",
+    category3: null
+  },
+  {
+    entry_id: "57520dc717734081b1c411f4f03f7a9a",
+    origin_entry_id: "JK000000070679",
+    entry: "パス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["무료 승차권;또, 정기 승차권"]
+      },
+      {
+        part: "동사",
+        means: ["통과함;합격"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "パス",
+    category3: null
+  },
+  {
+    entry_id: "b38125ab38d74c8b95ca77a17f799246",
+    origin_entry_id: "JK100070679001",
+    entry: "パスポート",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["패스포트;여권"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "パスポート",
+    category3: null
+  },
+  {
+    entry_id: "5342bc4dd68e4b2094b991c2f7878e1a",
+    origin_entry_id: "JK000000069278",
+    entry: "パーセント",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["퍼센트;백분율"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "パーセント",
+    category3: null
+  },
+  {
+    entry_id: "336361d1e97e4bcea15c3c9bf1abc76f",
+    origin_entry_id: "JK000000074204",
+    entry: "ビタミン",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["비타민;바이타민"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ビタミン",
+    category3: null
+  },
+  {
+    entry_id: "ed0c7528a16b4f558e0ce556bd8a2f21",
+    origin_entry_id: "JK000000074456",
+    entry: "ビデオ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["비디오"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ビデオ",
+    category3: null
+  },
+  {
+    entry_id: "3fe36c58b3c34415a487b0911952de0d",
+    origin_entry_id: "JK000000075727",
+    entry: "ビル",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["빌"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ビル",
+    category3: null
+  },
+  {
+    entry_id: "945de448fdd049349ae08d40ffac0564",
+    origin_entry_id: "JK000000076076",
+    entry: "ファイル",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["파일"]
+      },
+      {
+        part: "동사",
+        means: ["서류철"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ファイル",
+    category3: null
+  },
+  {
+    entry_id: "e94aa86b58d5470591a39685189ab2d6",
+    origin_entry_id: "JK000000076096",
+    entry: "ファスナー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["파스너;지퍼"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ファスナー",
+    category3: null
+  },
+  {
+    entry_id: "e4ddd49816f440038c8aad6a48b5ceff",
+    origin_entry_id: "JK000000076102",
+    entry: "ファックス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["팩스"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ファックス",
+    category3: null
+  },
+  {
+    entry_id: "9cd3309aa17d44f981b055e74e1d5c4b",
+    origin_entry_id: "JK000000076058",
+    entry: "ファーストフード",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["패스트 푸드;즉석 식품"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ファーストフード",
+    category3: null
+  },
+  {
+    entry_id: "5acd6471ae2c42048536e367503074f0",
+    origin_entry_id: "JK000000078415",
+    entry: "ブラウス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["블라우스;헐렁한 셔츠 모양의 윗옷"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ブラウス",
+    category3: null
+  },
+  {
+    entry_id: "c0922f9ab2f04f60af7f0d269cb5797d",
+    origin_entry_id: "JK000000078434",
+    entry: "ブラシ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["브러시;솔"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ブラシ",
+    category3: null
+  },
+  {
+    entry_id: "3e8ca30238fc49b4a6c6785588090fa6",
+    origin_entry_id: "JK000000078789",
+    entry: "ブレーキ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["브레이크;제동"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ブレーキ",
+    category3: null
+  },
+  {
+    entry_id: "31a3a14cca194f8088784f94710f269a",
+    origin_entry_id: "JK000000078440",
+    entry: "プラス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["플러스"]
+      },
+      {
+        part: "동사",
+        means: ["양수"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "プラス",
+    category3: null
+  },
+  {
+    entry_id: "7c03edf9b8ea43dd9b265ce0de599330",
+    origin_entry_id: "JK000000078491",
+    entry: "プラン",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["플랜"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "プラン",
+    category3: null
+  },
+  {
+    entry_id: "bcf2557a36294c2cb89f844e92fecb33",
+    origin_entry_id: "JK000000080088",
+    entry: "ベルト",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["벨트"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ベルト",
+    category3: null
+  },
+  {
+    entry_id: "8070f34ea8b04b50b03fcb1a79233b4a",
+    origin_entry_id: "JK100081402017",
+    entry: "ホームページ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["홈페이지;인터넷으로 단체·개인간에 정보 교환을 하는 시스템"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ホームページ",
+    category3: null
+  },
+  {
+    entry_id: "026ce7e51a6b4d6ba465339d19b4d88c",
+    origin_entry_id: "JK000000081390",
+    entry: "ボーナス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["보너스"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ボーナス",
+    category3: null
+  },
+  {
+    entry_id: "59a49fdf31314d7c99334d7bdf69cbab",
+    origin_entry_id: "JK000000081765",
+    entry: "ポスター",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["포스터"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ポスター",
+    category3: null
+  },
+  {
+    entry_id: "ffc0c1b2787742a9bd833318c84e72d2",
+    origin_entry_id: "JK000000082844",
+    entry: "マイナス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["마이너스"]
+      },
+      {
+        part: "동사",
+        means: ["음수;음수의 기호"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "マイナス",
+    category3: null
+  },
+  {
+    entry_id: "0a1d94e9d1be45f2b74339abaaf3f7dd",
+    origin_entry_id: "JK000000083797",
+    entry: "マフラー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["머플러"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "マフラー",
+    category3: null
+  },
+  {
+    entry_id: "5563a1e3282d432f8c3c67e025549b41",
+    origin_entry_id: "JK000000083919",
+    entry: "マラソン",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["마라톤"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "マラソン",
+    category3: null
+  },
+  {
+    entry_id: "fb78ded1962045509c2062711a5dd181",
+    origin_entry_id: "JK000000084168",
+    entry: "マンション",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["맨션;큰 저택;전하여, 중·고층의 분양 아파트"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "マンション",
+    category3: null
+  },
+  {
+    entry_id: "261e82ec59e946e4a978301087f50421",
+    origin_entry_id: "JK000000084547",
+    entry: "ミス",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["미스"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ミス",
+    category3: null
+  },
+  {
+    entry_id: "f37b4ef5d5f849fc820c55557118f0c1",
+    origin_entry_id: "JK000000085476",
+    entry: "ミルク",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["밀크"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ミルク",
+    category3: null
+  },
+  {
+    entry_id: "5cffdd98071c46e8a876ee1879223c4c",
+    origin_entry_id: "JK000000086891",
+    entry: "メニュー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["메뉴;식단;차림표"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "メニュー",
+    category3: null
+  },
+  {
+    entry_id: "19991937dc09461abf9a03cfbc91c655",
+    origin_entry_id: "JK000000087096",
+    entry: "メンバー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["멤버;단체의 일원"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "メンバー",
+    category3: null
+  },
+  {
+    entry_id: "85e12905330e4025a68adeeffdb1cf72",
+    origin_entry_id: "JK000000090928",
+    entry: "ヨーロッパ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["유럽;구라파"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ヨーロッパ",
+    category3: null
+  },
+  {
+    entry_id: "1f703fe29550476c949a84ab984551cb",
+    origin_entry_id: "JK000000091844",
+    entry: "ライオン",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["라이온;사자"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ライオン",
+    category3: null
+  },
+  {
+    entry_id: "500c966de549457da8a96925aa3f673c",
+    origin_entry_id: "JK000000091924",
+    entry: "ライト",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["라이트"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ライト",
+    category3: null
+  },
+  {
+    entry_id: "43511fa8fa6a4b85878eeff6b245251e",
+    origin_entry_id: "JK000000092320",
+    entry: "ランチ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["런치;간단한 서양 식사"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ランチ",
+    category3: null
+  },
+  {
+    entry_id: "f0611bad0f0449dab9aec92d38f5be1f",
+    origin_entry_id: "JK000000092342",
+    entry: "ランニング",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["러닝"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ランニング",
+    category3: null
+  },
+  {
+    entry_id: "b8ac0be0520a4307b77d42073c24a4d1",
+    origin_entry_id: "JK000000092596",
+    entry: "リサイクル",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["리사이클;→しげんリサイクル"]
+      },
+      {
+        part: "동사",
+        means: ["리사이클;→しげんリサイクル"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "リサイクル",
+    category3: null
+  },
+  {
+    entry_id: "9db419e875f94a1fb0181f45a43ec179",
+    origin_entry_id: "JK000000092731",
+    entry: "リットル",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["리터;미터법의 용적 단위"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "リットル",
+    category3: null
+  },
+  {
+    entry_id: "555585da18a54d109cb4ffc93e3be2e5",
+    origin_entry_id: "JK000000092839",
+    entry: "リボン",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["리본"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "リボン",
+    category3: null
+  },
+  {
+    entry_id: "befc9f401da44e76af6eda34471b56b6",
+    origin_entry_id: "JK000000092425",
+    entry: "リーダー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["리더;지도자"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "リーダー",
+    category3: null
+  },
+  {
+    entry_id: "53b46efa64784aeeb811c274a7eb1704",
+    origin_entry_id: "LW182772",
+    entry: "レインコート",
+    level: "3",
+    source: "001056A2",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["레인코트"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "レインコート",
+    category3: null
+  },
+  {
+    entry_id: "e72daf2230164e81a96db14afdb9a1c8",
+    origin_entry_id: "JK000000094455",
+    entry: "レンズ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["렌즈"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "レンズ",
+    category3: null
+  },
+  {
+    entry_id: "b2924f79bc934afa82bbfcb56f5d14f8",
+    origin_entry_id: "JK000000095074",
+    entry: "ロビー",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["로비"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ロビー",
+    category3: null
+  },
+  {
+    entry_id: "b1eaea6eb22b486baa5f607bd615b0ea",
+    origin_entry_id: "JK000000095093",
+    entry: "ロボット",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "명사",
+        means: ["로봇"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ロボット",
+    category3: null
+  },
+  {
+    entry_id: "910c5e967d9d409e8dd1bee313cba23e",
+    origin_entry_id: "JK000000030987",
+    entry: "こっち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "대명사",
+        means: ["이쪽;여기;이리"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こっち",
+    category3: null
+  },
+  {
+    entry_id: "210e1abc215245399d4c3b83dcee5581",
+    origin_entry_id: "JK000000063793",
+    entry: "どっち",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "대명사",
+        means: ["‘どちら’의 막된 말씨"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "どっち",
+    category3: null
+  },
+  {
+    entry_id: "eef5621636ea46d1ad39a94dfab79518",
+    origin_entry_id: "JK000000000180",
+    entry: "あい-する",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["사랑하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あいする",
+    category3: null
+  },
+  {
+    entry_id: "66ee0c61076a49bf832fa106c808e1c2",
+    origin_entry_id: "JK000000000767",
+    entry: "あきら-める",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["체념하다;단념하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あきらめる",
+    category3: null
+  },
+  {
+    entry_id: "ca794418ea7b49fca5b394a7eda2e3db",
+    origin_entry_id: "JK000000000768",
+    entry: "あ-きる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["싫증나다;물리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あきる",
+    category3: null
+  },
+  {
+    entry_id: "2eb8a7f0311a48f39bfa8987d5693f18",
+    origin_entry_id: "JK000000001019",
+    entry: "あ-ける",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["비우다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あける",
+    category3: null
+  },
+  {
+    entry_id: "3917941b35794f9ba552390518361fb5",
+    origin_entry_id: "JK000000001024",
+    entry: "あ-げる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["팔을 쳐들다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あげる",
+    category3: null
+  },
+  {
+    entry_id: "d91a7376f60145bc96782ab13922943d",
+    origin_entry_id: "JK000000001038",
+    entry: "あこが-れる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["동경하다;그리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あこがれる",
+    category3: null
+  },
+  {
+    entry_id: "f1380bae91bd4e80880aa98e07922970",
+    origin_entry_id: "JK000000001291",
+    entry: "あじわ-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["맛보다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あじわう",
+    category3: null
+  },
+  {
+    entry_id: "a2a33cc808b44fdfb6f3a4b1d3bf0ca8",
+    origin_entry_id: "JK000000001302",
+    entry: "あずか-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["맡다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あずかる",
+    category3: null
+  },
+  {
+    entry_id: "613ef0ef791145e0a6e8203bc0309a05",
+    origin_entry_id: "JK000000001311",
+    entry: "あず-ける",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["맡기다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あずける",
+    category3: null
+  },
+  {
+    entry_id: "a6510a629f9d40429869f3a2c1ddc017",
+    origin_entry_id: "JK000000001435",
+    entry: "あた-える",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["주다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あたえる",
+    category3: null
+  },
+  {
+    entry_id: "94f98b50760b4c8f8cb00a77246a8101",
+    origin_entry_id: "JK000000001453",
+    entry: "あたたま-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["따뜻해지다;훈훈해지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あたたまる",
+    category3: null
+  },
+  {
+    entry_id: "557e57751c2846bd88264445b32ce965",
+    origin_entry_id: "JK000000001455",
+    entry: "あたた-める",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["따뜻하게 하다;덥게 하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あたためる",
+    category3: null
+  },
+  {
+    entry_id: "23b42d0a149348c9904eaca047255a65",
+    origin_entry_id: "JK000000001549",
+    entry: "あつか-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["다루다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あつかう",
+    category3: null
+  },
+  {
+    entry_id: "9a8868cd57304132b843b508ca64e7e5",
+    origin_entry_id: "JK000000002056",
+    entry: "あふ-れる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["넘치다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あふれる",
+    category3: null
+  },
+  {
+    entry_id: "3ff6b74b19fc4c36a60a84869e3415e9",
+    origin_entry_id: "JK000000002557",
+    entry: "あらわ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["나타내다;증명하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あらわす",
+    category3: null
+  },
+  {
+    entry_id: "61d452bdae5a4f53841386d67632caff",
+    origin_entry_id: "JK000000002561",
+    entry: "あらわ-れる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["나타나다;드러나다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あらわれる",
+    category3: null
+  },
+  {
+    entry_id: "bc7fc96c89684884bf6a04f6775d0c18",
+    origin_entry_id: "JK000000002789",
+    entry: "あわ-せる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["맞추다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あわせる",
+    category3: null
+  },
+  {
+    entry_id: "a3ae39e9b8fc4e2cbef5703d5c170de0",
+    origin_entry_id: "JK000000002804",
+    entry: "あわ-てる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["당황하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あわてる",
+    category3: null
+  },
+  {
+    entry_id: "efe3bf35909a42cab13df5352cf74d1e",
+    origin_entry_id: "JK000000003250",
+    entry: "いいだ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["말을 꺼내다;말을 시작하다;처음으로 말하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いいだす",
+    category3: null
+  },
+  {
+    entry_id: "0e58e13f4d35491482d8a072cab1eb84",
+    origin_entry_id: "JK000000003561",
+    entry: "いきいき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["생생한 모양;싱싱한 모양;생기가 넘치는 모양"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いきいき",
+    category3: null
+  },
+  {
+    entry_id: "3340b98e91444820a9e4c9bce176e153",
+    origin_entry_id: "JK000000004310",
+    entry: "いた-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["아프다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いたむ",
+    category3: null
+  },
+  {
+    entry_id: "49b88b794cb94afeb4074ed1363e5cc8",
+    origin_entry_id: "JK000000004318",
+    entry: "いた-める",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["기름에 볶다;지지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いためる",
+    category3: null
+  },
+  {
+    entry_id: "71557102560546e4a5c3572cba2f20c8",
+    origin_entry_id: "JK000000005488",
+    entry: "いやが-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["싫어하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いやがる",
+    category3: null
+  },
+  {
+    entry_id: "d614f3ce54e34460a2531651357b1117",
+    origin_entry_id: "JK000000006529",
+    entry: "うか-べる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["뜨게 하다;띄우다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うかべる",
+    category3: null
+  },
+  {
+    entry_id: "6668414a83174625b9e94a3bca1c7462",
+    origin_entry_id: "JK000000006531",
+    entry: "うか-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["합격되다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うかる",
+    category3: null
+  },
+  {
+    entry_id: "c1b6b2e37a4f42bcb8cf4a59d44793d4",
+    origin_entry_id: "JK000000006605",
+    entry: "う-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["뜨다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うく",
+    category3: null
+  },
+  {
+    entry_id: "903e61991bc646ba8f3c8d7d8ddf1c81",
+    origin_entry_id: "JK000000006653",
+    entry: "うけと-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["수취하다;받다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うけとる",
+    category3: null
+  },
+  {
+    entry_id: "3c74f33e01dd443cb59e88e10d86e9ca",
+    origin_entry_id: "JK000000006680",
+    entry: "うごか-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["움직이다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うごかす",
+    category3: null
+  },
+  {
+    entry_id: "42fe87a8db8a4956adc905073312a52a",
+    origin_entry_id: "JK000000007184",
+    entry: "うっかり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["무심코;멍청히;깜박"]
+      },
+      {
+        part: "부사",
+        means: ["무심코;멍청히;깜박"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うっかり",
+    category3: null
+  },
+  {
+    entry_id: "ee78c940e47a453887736c1245e6d233",
+    origin_entry_id: "JK000000007209",
+    entry: "うつ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["비치게 하다;투영하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うつす",
+    category3: null
+  },
+  {
+    entry_id: "1a178f5d9ef44b9381a47612e277202b",
+    origin_entry_id: "JK000000007271",
+    entry: "うつ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["옮기다;이동하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うつる",
+    category3: null
+  },
+  {
+    entry_id: "1b5b05b513f24ae494e78b4d168ca81b",
+    origin_entry_id: "JK000000007475",
+    entry: "うま-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["→うずもれる"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うまる",
+    category3: null
+  },
+  {
+    entry_id: "ebaba0ef216b47f696561755d35253e6",
+    origin_entry_id: "JK000000007544",
+    entry: "う-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["낳다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うむ",
+    category3: null
+  },
+  {
+    entry_id: "90636b07cd9943728085bb899b6728a5",
+    origin_entry_id: "JK000000007575",
+    entry: "う-める",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["묻다;메우다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うめる",
+    category3: null
+  },
+  {
+    entry_id: "369158d396004bf8bc3c588f63d56086",
+    origin_entry_id: "JK000000007864",
+    entry: "う-れる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["팔리다;전하여,  결혼하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うれる",
+    category3: null
+  },
+  {
+    entry_id: "9d1dba3d396f48328ef41487b9896e6f",
+    origin_entry_id: "JK000000007872",
+    entry: "うろうろ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["어정버정"]
+      },
+      {
+        part: "부사",
+        means: ["허둥지둥"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うろうろ",
+    category3: null
+  },
+  {
+    entry_id: "c0fece3ea2c14222bb166dc38052f348",
+    origin_entry_id: "JK000000008940",
+    entry: "える",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["얻다;획득하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "える",
+    category3: null
+  },
+  {
+    entry_id: "671ddb23008e47e9874be6fc389ed5f6",
+    origin_entry_id: "JK000000009494",
+    entry: "おいこ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["앞지르다;추월하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おいこす",
+    category3: null
+  },
+  {
+    entry_id: "195dec8350584a279f9783f0289de8db",
+    origin_entry_id: "JK000000009570",
+    entry: "お-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["좇다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おう",
+    category3: null
+  },
+  {
+    entry_id: "3f95a882858940d7aa3bbcda16fc399f",
+    origin_entry_id: "JK000000009834",
+    entry: "お-える",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["마치다;종결짓다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おえる",
+    category3: null
+  },
+  {
+    entry_id: "f8e79e31fdfc48ec9e5a8eeda39e6cfb",
+    origin_entry_id: "JK000000010501",
+    entry: "おこな-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["하다;행하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おこなう",
+    category3: null
+  },
+  {
+    entry_id: "fc74d56fe5964e5586955ccdfce7a7be",
+    origin_entry_id: "JK000000010516",
+    entry: "おこ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["일어나다;발생하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おこる",
+    category3: null
+  },
+  {
+    entry_id: "0d9bc56cbeba425e9e9793cdcbda6e64",
+    origin_entry_id: "JK000000010519",
+    entry: "おご-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["사치하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おごる",
+    category3: null
+  },
+  {
+    entry_id: "b485eeff0f574976961be0bf091ce9d1",
+    origin_entry_id: "JK000000010833",
+    entry: "おそわ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["가르침을 받다;배우다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おそわる",
+    category3: null
+  },
+  {
+    entry_id: "f086eaf4ef964946a50fd4b29b511860",
+    origin_entry_id: "JK000000010911",
+    entry: "おちつ-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["자리잡다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おちつく",
+    category3: null
+  },
+  {
+    entry_id: "f8e22288896245c9bff4b96d5e4c22b8",
+    origin_entry_id: "JK000000011236",
+    entry: "おどろか-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["놀래다;놀라게 하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おどろかす",
+    category3: null
+  },
+  {
+    entry_id: "da287b72853b405791d9a180fbaccfc8",
+    origin_entry_id: "JK000000011634",
+    entry: "おもいこ-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["깊이 마음먹다;굳게 결심하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おもいこむ",
+    category3: null
+  },
+  {
+    entry_id: "49b6c355f79949289720aa8b20711cd8",
+    origin_entry_id: "JK000000011649",
+    entry: "おもいつ-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["문득 생각이 떠오르다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おもいつく",
+    category3: null
+  },
+  {
+    entry_id: "687d2c875e8e424da07163c7cf334b3a",
+    origin_entry_id: "JK000000011970",
+    entry: "お-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["접다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おる",
+    category3: null
+  },
+  {
+    entry_id: "8d202b5feccf4ddc85640839706f5fa8",
+    origin_entry_id: "JK000000012022",
+    entry: "おろ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["내리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おろす",
+    category3: null
+  },
+  {
+    entry_id: "88bc0220744642aebaea90943bb9bbfe",
+    origin_entry_id: "JK000000013564",
+    entry: "かえ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["돌아가다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かえる",
+    category3: null
+  },
+  {
+    entry_id: "53481a207211400981678b428b703b87",
+    origin_entry_id: "JK000000013710",
+    entry: "かがや-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["빛나다;반짝이다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かがやく",
+    category3: null
+  },
+  {
+    entry_id: "89122cef9507420cad1e6f2251bb5feb",
+    origin_entry_id: "JK000000013896",
+    entry: "かきなお-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["고쳐 쓰다;개서하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かきなおす",
+    category3: null
+  },
+  {
+    entry_id: "07a3421559964038b5fb7917b1749d5d",
+    origin_entry_id: "JK000000014250",
+    entry: "かく-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["감추다;숨기다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かくす",
+    category3: null
+  },
+  {
+    entry_id: "def3838c0ca44de8934db75f05a51448",
+    origin_entry_id: "JK000000014509",
+    entry: "かく-れる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["숨다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かくれる",
+    category3: null
+  },
+  {
+    entry_id: "f86a3bf3c6bd45a79a22f84d29064860",
+    origin_entry_id: "JK000000014807",
+    entry: "かこ-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["두르다;둘러싸다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かこむ",
+    category3: null
+  },
+  {
+    entry_id: "31866fa2ef044861a9dbed562e171a7d",
+    origin_entry_id: "JK000000014885",
+    entry: "かさな-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["포개지다;겹치다;거듭되다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かさなる",
+    category3: null
+  },
+  {
+    entry_id: "5a940a0603ac4495b177a47c819110e8",
+    origin_entry_id: "JK000000014897",
+    entry: "かさ-ねる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["포개다;쌓아 올리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かさねる",
+    category3: null
+  },
+  {
+    entry_id: "32027547e1164974ab4dbc4518e2520a",
+    origin_entry_id: "JK000000015358",
+    entry: "かせ-ぐ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["돈벌이하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かせぐ",
+    category3: null
+  },
+  {
+    entry_id: "88ef3a16185c42648bce4871a6348f3c",
+    origin_entry_id: "JK000000015435",
+    entry: "かぞ-える",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["세다;셈하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かぞえる",
+    category3: null
+  },
+  {
+    entry_id: "eb4f9a1532bf4f68986625f58df24860",
+    origin_entry_id: "JK000000015615",
+    entry: "かたづ-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["정돈되다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かたづく",
+    category3: null
+  },
+  {
+    entry_id: "8bc62c51d581495dbdd48ec388a3a0c3",
+    origin_entry_id: "JK000000016247",
+    entry: "かなし-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["슬퍼하다;마음 아파하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かなしむ",
+    category3: null
+  },
+  {
+    entry_id: "32bb4eef6a1844ab9ffedefab155178e",
+    origin_entry_id: "JK000000016827",
+    entry: "か-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["풀다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かむ",
+    category3: null
+  },
+  {
+    entry_id: "61cc1cef3a114d03b0415a0a5bdf7d64",
+    origin_entry_id: "JK000000017478",
+    entry: "か-れる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["마르다;시들다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かれる",
+    category3: null
+  },
+  {
+    entry_id: "a055482d2bd64878aba478e7d0d32e20",
+    origin_entry_id: "JK000000017537",
+    entry: "かわか-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["말리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かわかす",
+    category3: null
+  },
+  {
+    entry_id: "a5ec27a5814c4efab4ab2a9773abf1a4",
+    origin_entry_id: "JK000000018320",
+    entry: "かん-じる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["→かんずる"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かんじる",
+    category3: null
+  },
+  {
+    entry_id: "b57d6a31a18e4a4bbbbba4fd922d2d45",
+    origin_entry_id: "JK000000100260",
+    entry: "きがする",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["생각이 들다, 느낌이 들다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きがする",
+    category3: null
+  },
+  {
+    entry_id: "c526087db3454518b73ddd25114b909c",
+    origin_entry_id: "JK000000019372",
+    entry: "ききなお-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["되묻다;다시 물어 보다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ききなおす",
+    category3: null
+  },
+  {
+    entry_id: "3da6f9deaf5d4a99a7ecaa03c7b3d34c",
+    origin_entry_id: "JK000000019438",
+    entry: "き-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["듣다;효과가 있다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きく",
+    category3: null
+  },
+  {
+    entry_id: "5ae72bf7b0744155a9fd6ba3a26d60d1",
+    origin_entry_id: "JK000000019679",
+    entry: "きざ-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["잘게 썰다;썰어서 잘게 하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きざむ",
+    category3: null
+  },
+  {
+    entry_id: "5dd3b5fb758b4c62815b88f89a3f89fe",
+    origin_entry_id: "JK000000020164",
+    entry: "きづ-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["깨닫다;눈치 채다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きづく",
+    category3: null
+  },
+  {
+    entry_id: "ce9c70ed14c5445b8f408874de8af823",
+    origin_entry_id: "JK000000023900",
+    entry: "くさ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["썩다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くさる",
+    category3: null
+  },
+  {
+    entry_id: "813b184173ac49a1b679f2a19375ee70",
+    origin_entry_id: "JK000000024157",
+    entry: "くたび-れる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["지치다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くたびれる",
+    category3: null
+  },
+  {
+    entry_id: "fd5f218438fb4dfaa7c3c54efbe231f5",
+    origin_entry_id: "JK000000024176",
+    entry: "くだ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["내리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くだる",
+    category3: null
+  },
+  {
+    entry_id: "5531f978fcb84bad844bae620cda2235",
+    origin_entry_id: "JK000000024514",
+    entry: "くば-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["나누�� 주다;도르다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くばる",
+    category3: null
+  },
+  {
+    entry_id: "225b6c07197a4c3097ac3c032a961689",
+    origin_entry_id: "JK000000024812",
+    entry: "くら-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["하루를 보내다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くらす",
+    category3: null
+  },
+  {
+    entry_id: "c8a279fb5f4746babe8b07f6276abfac",
+    origin_entry_id: "JK000000024916",
+    entry: "くりかえ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["되풀이하다;반복하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くりかえす",
+    category3: null
+  },
+  {
+    entry_id: "9e821b987b6f43af8a66e4fe20dcd7b3",
+    origin_entry_id: "JK000000025016",
+    entry: "くるし-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["괴로워하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くるしむ",
+    category3: null
+  },
+  {
+    entry_id: "438f266fe8a142d9adb09cbc851837bd",
+    origin_entry_id: "JK000000025302",
+    entry: "くわ-える",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["가하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くわえる",
+    category3: null
+  },
+  {
+    entry_id: "8bb07a790a1f4438bfb7799aa395d97d",
+    origin_entry_id: "JK000000025327",
+    entry: "くわわ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["가해지다;더해지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くわわる",
+    category3: null
+  },
+  {
+    entry_id: "708402d98b3d44a593d8c1aec677beac",
+    origin_entry_id: "JK000000026792",
+    entry: "け-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["차다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ける",
+    category3: null
+  },
+  {
+    entry_id: "8666d76270fd4e7dbd37a17836582edf",
+    origin_entry_id: "JK000000031213",
+    entry: "ことわ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["거절하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ことわる",
+    category3: null
+  },
+  {
+    entry_id: "8f843754a8a042e0a4127ea210ab6797",
+    origin_entry_id: "JK000000031334",
+    entry: "この-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["좋아하다;즐기다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "このむ",
+    category3: null
+  },
+  {
+    entry_id: "721999f7e01a42a8a2871ad45c9de18b",
+    origin_entry_id: "JK000000031523",
+    entry: "こぼ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["흘리다;엎지르다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こぼす",
+    category3: null
+  },
+  {
+    entry_id: "3802be99b7224549aca7f643bdabceef",
+    origin_entry_id: "JK000000031536",
+    entry: "こぼ-れる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["넘치다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こぼれる",
+    category3: null
+  },
+  {
+    entry_id: "71d713eae31a4693bf8e346a31107847",
+    origin_entry_id: "JK000000031952",
+    entry: "ころが-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["굴리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ころがす",
+    category3: null
+  },
+  {
+    entry_id: "2834ed433eaf45f893511ac6c357a7ac",
+    origin_entry_id: "JK000000031956",
+    entry: "ころが-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["구르다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ころがる",
+    category3: null
+  },
+  {
+    entry_id: "9216c28b65bf4c168185c842405e68ea",
+    origin_entry_id: "JK000000031975",
+    entry: "ころ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["죽이다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ころす",
+    category3: null
+  },
+  {
+    entry_id: "0c1ce0ccf6d24fc8b6da42dd6ba8d6f9",
+    origin_entry_id: "JK000000033693",
+    entry: "さけ-ぶ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["외치다;부르짖다;강하게 주장하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さけぶ",
+    category3: null
+  },
+  {
+    entry_id: "90c04eecd154424a8fab7b80e9817297",
+    origin_entry_id: "JK000000033703",
+    entry: "さ-ける",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["피하다;꺼리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さける",
+    category3: null
+  },
+  {
+    entry_id: "b0dfb356b23a4819aeb41e7836111953",
+    origin_entry_id: "JK000000034079",
+    entry: "さそ-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["꾀다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さそう",
+    category3: null
+  },
+  {
+    entry_id: "883db1838682472eacfe29acac7624e6",
+    origin_entry_id: "JK000000034498",
+    entry: "さま-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["식히다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さます",
+    category3: null
+  },
+  {
+    entry_id: "07da691c6f004cc2b2e9a41285f17306",
+    origin_entry_id: "JK000000034550",
+    entry: "さ-める",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["식다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さめる",
+    category3: null
+  },
+  {
+    entry_id: "99a5f70c589942939c90a6fdf964232f",
+    origin_entry_id: "JK000000034698",
+    entry: "さ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["떠나다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さる",
+    category3: null
+  },
+  {
+    entry_id: "a48c1246b2ef43388bfb4b07aecdcf83",
+    origin_entry_id: "JK000000035725",
+    entry: "しあが-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["마무리되다;다 되다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しあがる",
+    category3: null
+  },
+  {
+    entry_id: "322257ffc142484c88cf8080cfa97bb9",
+    origin_entry_id: "JK000000035730",
+    entry: "しあ-げる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["일을 끝내다;마무르다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しあげる",
+    category3: null
+  },
+  {
+    entry_id: "29ff3d6b17944e1a8fcae7dbd21b9826",
+    origin_entry_id: "JK000000037127",
+    entry: "しず-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["가라앉다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しずむ",
+    category3: null
+  },
+  {
+    entry_id: "ed3b47bee9b645f6b4a5e53f66a9fdac",
+    origin_entry_id: "JK000000037356",
+    entry: "したが-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["따르다;좇다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "したがう",
+    category3: null
+  },
+  {
+    entry_id: "977a1296e7624c3fa20983168964010c",
+    origin_entry_id: "JK000000038352",
+    entry: "しはら-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["지불하다;치르다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しはらう",
+    category3: null
+  },
+  {
+    entry_id: "a6f88d2bbb924f9c8e378340cc4cebb8",
+    origin_entry_id: "JK000000038360",
+    entry: "しば-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["묶다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しばる",
+    category3: null
+  },
+  {
+    entry_id: "a135c11461dc474b8ad85658955d5a41",
+    origin_entry_id: "JK000000038739",
+    entry: "しめ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["가리키다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しめす",
+    category3: null
+  },
+  {
+    entry_id: "1eefdc7388e445c49660295068a2daef",
+    origin_entry_id: "JK000000038951",
+    entry: "しゃが-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["웅크리다;쭈그리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しゃがむ",
+    category3: null
+  },
+  {
+    entry_id: "ff6709d0e6184f438c896908001f290d",
+    origin_entry_id: "JK000000046192",
+    entry: "す-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["틈이 나다;틈새가 벌다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すく",
+    category3: null
+  },
+  {
+    entry_id: "0a19031494f040f2a868e046ec3559c0",
+    origin_entry_id: "JK000000046327",
+    entry: "すご-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["보내다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すごす",
+    category3: null
+  },
+  {
+    entry_id: "6cb3295aa799472e812ef076d39fc3d6",
+    origin_entry_id: "JK000000046453",
+    entry: "すす-める",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["권하다;권고하다;권유하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すすめる",
+    category3: null
+  },
+  {
+    entry_id: "d000f594b8344185b90ae16b4742664e",
+    origin_entry_id: "JK000000046906",
+    entry: "す-べる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["총괄하다;통합하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すべる",
+    category3: null
+  },
+  {
+    entry_id: "91d3458991ff4040814ab17e0d340bea",
+    origin_entry_id: "JK000000046948",
+    entry: "すま-せる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["→すます"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すませる",
+    category3: null
+  },
+  {
+    entry_id: "fce4f1dc4c4c445db0ae9733425b3e38",
+    origin_entry_id: "JK000000047022",
+    entry: "す-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["완료되다;끝나다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すむ",
+    category3: null
+  },
+  {
+    entry_id: "a8de2762b8b6418993ad164bae0fcd3f",
+    origin_entry_id: "JK000000051800",
+    entry: "そそ-ぐ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["흘러 들어가다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そそぐ",
+    category3: null
+  },
+  {
+    entry_id: "64d0c706060b4012a477267d9e8571a5",
+    origin_entry_id: "JK000000051820",
+    entry: "そだ-つ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["자라다;성장하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そだつ",
+    category3: null
+  },
+  {
+    entry_id: "4e8a87a1746742e79b180b96b1f7351c",
+    origin_entry_id: "JK000000052402",
+    entry: "そろ-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["갖추어지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そろう",
+    category3: null
+  },
+  {
+    entry_id: "d1466f12d56b46baaaf0dba7971178ad",
+    origin_entry_id: "JK000000052404",
+    entry: "そろ-える",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["가지런히 하다;같게 하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そろえる",
+    category3: null
+  },
+  {
+    entry_id: "d0d41d1cf3884b0c9e06f6f3ed6c9f82",
+    origin_entry_id: "JK000000053707",
+    entry: "たお-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["쓰러뜨리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たおす",
+    category3: null
+  },
+  {
+    entry_id: "ad6ca87088354cf38f60209bfd9675ec",
+    origin_entry_id: "JK000000053816",
+    entry: "たかま-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["높아지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たかまる",
+    category3: null
+  },
+  {
+    entry_id: "19d2a9987b284816bcff5b38d561d050",
+    origin_entry_id: "JK000000053823",
+    entry: "たか-める",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["높이다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たかめる",
+    category3: null
+  },
+  {
+    entry_id: "fc829d97ae2e44fe9c5ac524ee5e1681",
+    origin_entry_id: "JK000000054185",
+    entry: "たしか-める",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["확실히 하다;확인하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たしかめる",
+    category3: null
+  },
+  {
+    entry_id: "f1a4066fe0cd4cfea447038eadd467dd",
+    origin_entry_id: "JK000000054264",
+    entry: "たすか-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["살아나다;면하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たすかる",
+    category3: null
+  },
+  {
+    entry_id: "dc5a96ec9e6d47f490cfc811168f4c0f",
+    origin_entry_id: "JK000000054273",
+    entry: "たす-ける",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["구조하다;살리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たすける",
+    category3: null
+  },
+  {
+    entry_id: "b90fc6f0a4c74d12946eebe7df7af041",
+    origin_entry_id: "JK000000054333",
+    entry: "たたか-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["싸우다;극복하려고 노력하거나 맞서다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たたかう",
+    category3: null
+  },
+  {
+    entry_id: "84224770cc304acd834d80b85b40c839",
+    origin_entry_id: "JK000000054355",
+    entry: "たた-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["치다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たたく",
+    category3: null
+  },
+  {
+    entry_id: "bb32951a3ec5427cbcf9f51d728eec58",
+    origin_entry_id: "JK000000054397",
+    entry: "たた-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["접다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たたむ",
+    category3: null
+  },
+  {
+    entry_id: "27f0e64c6f774951af25c1439f1dccde",
+    origin_entry_id: "JK000000054433",
+    entry: "たちあが-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["일어서다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たちあがる",
+    category3: null
+  },
+  {
+    entry_id: "9456fedb32e142dcbb214ee142503466",
+    origin_entry_id: "JK000000054498",
+    entry: "たちどま-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["멈추어 서다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たちどまる",
+    category3: null
+  },
+  {
+    entry_id: "ac36e7fe97d34aea85e6801d7a4be712",
+    origin_entry_id: "JK000000054800",
+    entry: "た-てる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["누운 것을 곧추 서게 하다"]
+      },
+      {
+        part: "접사",
+        means: ["세우다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たてる",
+    category3: null
+  },
+  {
+    entry_id: "a12834c05dda4efc9a5b85c860b9f050",
+    origin_entry_id: "JK000000054945",
+    entry: "たのし-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["즐기다;좋아하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たのしむ",
+    category3: null
+  },
+  {
+    entry_id: "8dd70656ec6d4f4d9056cd7d81de8d25",
+    origin_entry_id: "JK000000055236",
+    entry: "たま-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["모이다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たまる",
+    category3: null
+  },
+  {
+    entry_id: "86d92bdf16524f02a9c9c6e431f277ca",
+    origin_entry_id: "JK000000055285",
+    entry: "た-める",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["모으다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ためる",
+    category3: null
+  },
+  {
+    entry_id: "7fe37324af4c4c708879151d6d7f4baa",
+    origin_entry_id: "JK000000053927",
+    entry: "だ-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["안다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だく",
+    category3: null
+  },
+  {
+    entry_id: "b5cf2b1361a24e05ba2fb66d4dac0222",
+    origin_entry_id: "JK000000054261",
+    entry: "だ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["→だする"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だす",
+    category3: null
+  },
+  {
+    entry_id: "0899a0b1d10c446ea79be352a0eb293a",
+    origin_entry_id: "JK000000055183",
+    entry: "だま-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["속이다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だます",
+    category3: null
+  },
+  {
+    entry_id: "dc079362a4354f308f263fcebd7ca5f5",
+    origin_entry_id: "JK000000056209",
+    entry: "ちかづ-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["접근하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちかづく",
+    category3: null
+  },
+  {
+    entry_id: "83a0bf3e62574223bfed720219c59dcc",
+    origin_entry_id: "JK000000056210",
+    entry: "ちかづ-ける",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["가까이 하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちかづける",
+    category3: null
+  },
+  {
+    entry_id: "4e07a00c4d3e4607ab7f1ea1c13db572",
+    origin_entry_id: "JK000000057992",
+    entry: "ちらか-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["흩뜨리다;어지르다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちらかす",
+    category3: null
+  },
+  {
+    entry_id: "5640c529324f44a3b44dc9033326ea05",
+    origin_entry_id: "JK000000057993",
+    entry: "ちらか-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["흩어지다;어지러지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちらかる",
+    category3: null
+  },
+  {
+    entry_id: "8636adada102448daabbb4e6434c7574",
+    origin_entry_id: "JK000000058052",
+    entry: "ち-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["떨어지다;꽃잎이 지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちる",
+    category3: null
+  },
+  {
+    entry_id: "12d0037cde994b5db87a6429df562710",
+    origin_entry_id: "JK000000058389",
+    entry: "つう-じる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["통하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つうじる",
+    category3: null
+  },
+  {
+    entry_id: "89336d936bc74558832ed548dc05d6ab",
+    origin_entry_id: "JK000000058534",
+    entry: "つかま-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["잡히다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つかまる",
+    category3: null
+  },
+  {
+    entry_id: "43a11557bcf94ba483d6f6acbbcc60a4",
+    origin_entry_id: "JK000000058549",
+    entry: "つか-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["잡다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つかむ",
+    category3: null
+  },
+  {
+    entry_id: "9401147a39614d68ad3281a9e2ad26f6",
+    origin_entry_id: "JK000000058578",
+    entry: "つきあ-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["교제하다;사귀다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つきあう",
+    category3: null
+  },
+  {
+    entry_id: "cf61beaade534874a04595d8160a1c28",
+    origin_entry_id: "JK000000058911",
+    entry: "つ-ける",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["담그다;절이다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つける",
+    category3: null
+  },
+  {
+    entry_id: "d33326aeaa8b40a9a6cc731bd9f6c787",
+    origin_entry_id: "JK000000058960",
+    entry: "つたわ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["전해지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つたわる",
+    category3: null
+  },
+  {
+    entry_id: "5a4af9f5a7ba4eeb913b6778983f21d7",
+    origin_entry_id: "JK000000059202",
+    entry: "つぶ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["찌부러뜨리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つぶす",
+    category3: null
+  },
+  {
+    entry_id: "5a08186470934fd9aa83bb0170200f8d",
+    origin_entry_id: "JK000000059217",
+    entry: "つぶ-れる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["찌부러지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つぶれる",
+    category3: null
+  },
+  {
+    entry_id: "4699838422c747b2bf820dffe206f43c",
+    origin_entry_id: "JK000000059345",
+    entry: "つ-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["쌓다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つむ",
+    category3: null
+  },
+  {
+    entry_id: "1ff3151d16394d43a14af74b2be3876c",
+    origin_entry_id: "JK000000059465",
+    entry: "つよま-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["강해지다;세지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つよまる",
+    category3: null
+  },
+  {
+    entry_id: "7c4eea7728d64d4f8eb03efb6e408141",
+    origin_entry_id: "JK000000059468",
+    entry: "つよ-める",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["강하게 하다;세게 하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つよめる",
+    category3: null
+  },
+  {
+    entry_id: "3a08c7cecee54e96aac8e06ffda2a111",
+    origin_entry_id: "JK000000060319",
+    entry: "てきとう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["적당;꼭 들어맞음"]
+      },
+      {
+        part: "형용동사",
+        means: ["꼭 알맞은 모양"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "てきとう",
+    category3: null
+  },
+  {
+    entry_id: "ab3d4d451639494ca858e69119fc52e9",
+    origin_entry_id: "JK000000059669",
+    entry: "であ-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["우연히 만나다;마주치다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "であう",
+    category3: null
+  },
+  {
+    entry_id: "f8e464081c324ee18f62a22238ff5a3c",
+    origin_entry_id: "JK000000060227",
+    entry: "できあが-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["물건이 완성되다;이루어지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "できあがる",
+    category3: null
+  },
+  {
+    entry_id: "5a6ea4a5393e406fab73fcb0d4c354e3",
+    origin_entry_id: "JK000000060990",
+    entry: "でむか-える",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["출영하다;마중 나가다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "でむかえる",
+    category3: null
+  },
+  {
+    entry_id: "58241f2570664f92aae53cf6101e70d5",
+    origin_entry_id: "JK000000062915",
+    entry: "とおりす-ぎる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["지나가다;통과하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とおりすぎる",
+    category3: null
+  },
+  {
+    entry_id: "6dee9adbe07d4d4387950ecf23d2bec3",
+    origin_entry_id: "JK000000062947",
+    entry: "とか-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["녹이다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とかす",
+    category3: null
+  },
+  {
+    entry_id: "775ab32782b04e5f8f4b7ff160484ba1",
+    origin_entry_id: "JK000000063083",
+    entry: "と-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["풀다;개다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とく",
+    category3: null
+  },
+  {
+    entry_id: "8aa107ac8f0f43f6a28e37ac397a19e0",
+    origin_entry_id: "JK000000063988",
+    entry: "とば-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["날리다;날게 하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とばす",
+    category3: null
+  },
+  {
+    entry_id: "95647ba422c6427795e3362f531e172d",
+    origin_entry_id: "JK000000064035",
+    entry: "とびこ-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["뛰어들다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とびこむ",
+    category3: null
+  },
+  {
+    entry_id: "66bc15dec53f4ee1849598c9ac0763f3",
+    origin_entry_id: "JK000000064043",
+    entry: "とびだ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["뛰어나가다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とびだす",
+    category3: null
+  },
+  {
+    entry_id: "36031bc79059469c91eebf4dbcec11eb",
+    origin_entry_id: "JK000000064461",
+    entry: "とりけ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["취소하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とりけす",
+    category3: null
+  },
+  {
+    entry_id: "93ceaa0fd3c842ddbd57f0d5c0bf6e0a",
+    origin_entry_id: "JK000000064501",
+    entry: "とりだ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["꺼내다;집어내다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とりだす",
+    category3: null
+  },
+  {
+    entry_id: "381eccc6ed904138a9799d467b9897ec",
+    origin_entry_id: "JK000000064696",
+    entry: "と-れる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["떨어지다;빠지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とれる",
+    category3: null
+  },
+  {
+    entry_id: "1374947232cc445f89c1aa425707a378",
+    origin_entry_id: "JK000000063024",
+    entry: "どきどき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["두근두근;울렁울렁"]
+      },
+      {
+        part: "부사",
+        means: ["두근두근;울렁울렁"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "どきどき",
+    category3: null
+  },
+  {
+    entry_id: "adf6ecbf6fbc4c32aab1513dcb4eabbe",
+    origin_entry_id: "JK000000065254",
+    entry: "なが-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["흘리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ながす",
+    category3: null
+  },
+  {
+    entry_id: "bf7c07e03f5b437797203d6210489d34",
+    origin_entry_id: "JK000000065501",
+    entry: "なく-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["잃다;여의다;사별하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "なくす",
+    category3: null
+  },
+  {
+    entry_id: "42ce2e3c29de4e7d90059e1668331d74",
+    origin_entry_id: "JK000000065958",
+    entry: "なま-ける",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["게으름 피우다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "なまける",
+    category3: null
+  },
+  {
+    entry_id: "c9a4ff3c6ae745bc84d7be4ce60189df",
+    origin_entry_id: "JK000000066109",
+    entry: "なや-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["괴로워하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "なやむ",
+    category3: null
+  },
+  {
+    entry_id: "f5f0a58b263e4e65ad5e84270b47d803",
+    origin_entry_id: "JK000000066130",
+    entry: "なら-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["소리를 내다;울리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ならす",
+    category3: null
+  },
+  {
+    entry_id: "11a319c5d0a14fa6b8b8ec793622159c",
+    origin_entry_id: "JK000000066614",
+    entry: "にぎ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["쥐다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にぎる",
+    category3: null
+  },
+  {
+    entry_id: "d3457b3d4d9c47c390cda52e18cf59b6",
+    origin_entry_id: "JK000000066962",
+    entry: "にっこり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["생긋;방긋"]
+      },
+      {
+        part: "부사",
+        means: ["생긋;방긋"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にっこり",
+    category3: null
+  },
+  {
+    entry_id: "4de7e0c8357044a3ac785b76f4aaa36a",
+    origin_entry_id: "JK000000067389",
+    entry: "にる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["익히다;삶다;끓이다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にる",
+    category3: null
+  },
+  {
+    entry_id: "22ae5b40d3404917a293ea878e36a8b1",
+    origin_entry_id: "JK000000067632",
+    entry: "ぬ-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["뽑다;빼내다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぬく",
+    category3: null
+  },
+  {
+    entry_id: "37986ae6f2004a03acf9f83afd461f5e",
+    origin_entry_id: "JK000000067679",
+    entry: "ぬ-ける",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["빠지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぬける",
+    category3: null
+  },
+  {
+    entry_id: "3d189e9bfcb747738f5774cebc0282ef",
+    origin_entry_id: "JK000000067733",
+    entry: "ぬら-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["적시다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぬらす",
+    category3: null
+  },
+  {
+    entry_id: "74ae0a3b6855462facdf2c7cf9923cff",
+    origin_entry_id: "JK000000068759",
+    entry: "のこ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["남기다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のこす",
+    category3: null
+  },
+  {
+    entry_id: "e2c50100869b4b319f8f596045fc2149",
+    origin_entry_id: "JK000000068812",
+    entry: "の-せる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["위에 놓다;얹다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のせる",
+    category3: null
+  },
+  {
+    entry_id: "a8d937bf35d34120b1ef31cf8a246149",
+    origin_entry_id: "JK000000068823",
+    entry: "のぞ-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["���거하다;없애다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のぞく",
+    category3: null
+  },
+  {
+    entry_id: "c1a711c6a10a4a6489c005165656c5e4",
+    origin_entry_id: "JK000000068933",
+    entry: "のば-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["연장시키다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のばす",
+    category3: null
+  },
+  {
+    entry_id: "ee30519e72ca442594f122c2e460fab9",
+    origin_entry_id: "JK000000068954",
+    entry: "の-びる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["펴지다;자라다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のびる",
+    category3: null
+  },
+  {
+    entry_id: "3aa6798769674b668c016fc834a59a89",
+    origin_entry_id: "JK000000069020",
+    entry: "のぼ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["오르다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のぼる",
+    category3: null
+  },
+  {
+    entry_id: "e65d26e5295e47d695c4833d3f40e8eb",
+    origin_entry_id: "JK000000069114",
+    entry: "のりおく-れる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["놓치다;시간이 늦어 못 타다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のりおくれる",
+    category3: null
+  },
+  {
+    entry_id: "631f895579bd4f25817571add0cf2066",
+    origin_entry_id: "JK000000069129",
+    entry: "のりこ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["타고 가다가  지나치다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のりこす",
+    category3: null
+  },
+  {
+    entry_id: "5c1e3ee465a649d3a4e503c11b1da8fc",
+    origin_entry_id: "JK000000069174",
+    entry: "の-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["놓이다;얹히다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のる",
+    category3: null
+  },
+  {
+    entry_id: "d9691eebb9e04de2a2be47621cf5d13a",
+    origin_entry_id: "JK000000069196",
+    entry: "のろのろ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["느릿느릿;꾸물꾸물"]
+      },
+      {
+        part: "부사",
+        means: ["느릿느릿;꾸물꾸물"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のろのろ",
+    category3: null
+  },
+  {
+    entry_id: "4697efc480d3492eb6f2554e1db7c229",
+    origin_entry_id: "JK000000069213",
+    entry: "のんびり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["유유히;한가로이;태평스럽게"]
+      },
+      {
+        part: "부사",
+        means: ["유유히;한가로이;태평스럽게"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "のんびり",
+    category3: null
+  },
+  {
+    entry_id: "4584fa9617684d8a8ddadcae7797fbeb",
+    origin_entry_id: "JK000000070048",
+    entry: "はか-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["무게·길이·깊이·넓이 등을 재다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はかる",
+    category3: null
+  },
+  {
+    entry_id: "ff8d6907ae9648bdb13bab6a211de444",
+    origin_entry_id: "JK000000070097",
+    entry: "はきはき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["시원시원;또깡또깡"]
+      },
+      {
+        part: "부사",
+        means: ["시원시원;또깡또깡"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はきはき",
+    category3: null
+  },
+  {
+    entry_id: "e15914cfa6e047babfcdd3a384e09577",
+    origin_entry_id: "JK000000070113",
+    entry: "は-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["쓸다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はく",
+    category3: null
+  },
+  {
+    entry_id: "a75afeee076e40f3a267cbecee0bb85c",
+    origin_entry_id: "JK000000070706",
+    entry: "はず-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["떼다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はずす",
+    category3: null
+  },
+  {
+    entry_id: "258f35cc23ba41b5abe7c0b94a7043a5",
+    origin_entry_id: "JK000000070722",
+    entry: "はず-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["튀다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はずむ",
+    category3: null
+  },
+  {
+    entry_id: "f3aad0bb9853437182a9a82c1af2bc21",
+    origin_entry_id: "JK000000071478",
+    entry: "はなしあ-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["서로 이야기하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はなしあう",
+    category3: null
+  },
+  {
+    entry_id: "8e66c0a91ed342fbb8168d0600e04bd5",
+    origin_entry_id: "JK000000072038",
+    entry: "はらいもど-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["돌려 주다;환불하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はらいもどす",
+    category3: null
+  },
+  {
+    entry_id: "01b72c314fec4fc795ac3962dc4b2e6e",
+    origin_entry_id: "JK000000072761",
+    entry: "はん-する",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["어그러지다;반하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はんする",
+    category3: null
+  },
+  {
+    entry_id: "d01fa579e4544e4fa92883dba3eabef1",
+    origin_entry_id: "JK000000073509",
+    entry: "ひきう-ける",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["떠맡다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひきうける",
+    category3: null
+  },
+  {
+    entry_id: "e5c4fbb849eb4141a8e63ba9068e5e68",
+    origin_entry_id: "JK000000073578",
+    entry: "ひきだ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["꺼내다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひきだす",
+    category3: null
+  },
+  {
+    entry_id: "72f1c156eaf044309de581ffcfc1f338",
+    origin_entry_id: "JK000000075200",
+    entry: "ひや-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["차게 하다;식히다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひやす",
+    category3: null
+  },
+  {
+    entry_id: "e14a03fbb6b943658dc34b905acc701d",
+    origin_entry_id: "JK000000075804",
+    entry: "ひろが-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["넓어지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひろがる",
+    category3: null
+  },
+  {
+    entry_id: "f24805e1ab384d4e8b0d88bab5c9cc32",
+    origin_entry_id: "JK000000075809",
+    entry: "ひろ-げる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["펴다;펼치다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ひろげる",
+    category3: null
+  },
+  {
+    entry_id: "c84327490a814731bf9b13ed7a4b6390",
+    origin_entry_id: "JK000000076591",
+    entry: "ふかま-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["깊어지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふかまる",
+    category3: null
+  },
+  {
+    entry_id: "94be5f75237e4ab98ab6b1ff66c80269",
+    origin_entry_id: "JK000000076600",
+    entry: "ふか-める",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["깊게 하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふかめる",
+    category3: null
+  },
+  {
+    entry_id: "8e1fac573aad450f8bd5fee84c40bd67",
+    origin_entry_id: "JK000000076757",
+    entry: "ふ-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["닦다;훔치다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふく",
+    category3: null
+  },
+  {
+    entry_id: "7eb721eff01e4bfb8cf93902235c87d1",
+    origin_entry_id: "JK000000078319",
+    entry: "ふや-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["늘리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふやす",
+    category3: null
+  },
+  {
+    entry_id: "02a58f61cbd74ffd8e136fc9eb50d542",
+    origin_entry_id: "JK000000078571",
+    entry: "ふりこ-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["흔들어 넣다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふりこむ",
+    category3: null
+  },
+  {
+    entry_id: "48c2b737e464448b994e660a95fc8696",
+    origin_entry_id: "JK000000078660",
+    entry: "ふ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["흔들다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふる",
+    category3: null
+  },
+  {
+    entry_id: "8cbdfd78be5f41c5b3cded5d7654e095",
+    origin_entry_id: "JK000000078702",
+    entry: "ふる-える",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["흔들리다;진동하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ふるえる",
+    category3: null
+  },
+  {
+    entry_id: "ed1030f10b4a490693eb2f6f491b5e9c",
+    origin_entry_id: "JK000000077700",
+    entry: "ぶつ-ける",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["부딪다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぶつける",
+    category3: null
+  },
+  {
+    entry_id: "12f2517975c64cfc834be929cc4b6a07",
+    origin_entry_id: "JK000000078473",
+    entry: "ぶらぶら",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["흔들흔들"]
+      },
+      {
+        part: "부사",
+        means: ["어슬렁어슬렁"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぶらぶら",
+    category3: null
+  },
+  {
+    entry_id: "a573450e360f48a1a79fc81ddecd1b47",
+    origin_entry_id: "JK000000080037",
+    entry: "へら-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["줄이다;감하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "へらす",
+    category3: null
+  },
+  {
+    entry_id: "dec3e02ff0f946459f877c20e701a54e",
+    origin_entry_id: "JK000000080073",
+    entry: "へ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["줄다;적어지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "へる",
+    category3: null
+  },
+  {
+    entry_id: "a22aa486f7504ee3b269bc3937e16c58",
+    origin_entry_id: "JK000000081757",
+    entry: "ほ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["말리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほす",
+    category3: null
+  },
+  {
+    entry_id: "0e704b18b8864191956f93ba02b63de4",
+    origin_entry_id: "JK000000081991",
+    entry: "ほっと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["한숨 쉬는 모양;후유"]
+      },
+      {
+        part: "부사",
+        means: ["한숨 쉬는 모양;후유"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほっと",
+    category3: null
+  },
+  {
+    entry_id: "bac430e999764096b0c59b96d26fc406",
+    origin_entry_id: "JK000000082188",
+    entry: "ほほえ-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["미소짓다;비유적으로, 꽃망울이 조금 벌어지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほほえむ",
+    category3: null
+  },
+  {
+    entry_id: "6b237087e68a4453aa8724e5feaab664",
+    origin_entry_id: "JK000000082969",
+    entry: "まか-せる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["맡기다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まかせる",
+    category3: null
+  },
+  {
+    entry_id: "8d8e0e58428c4ee1a556b0d033246c9b",
+    origin_entry_id: "JK000000083076",
+    entry: "ま-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["감다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まく",
+    category3: null
+  },
+  {
+    entry_id: "94de7cc71f2c4d7895fdab7a0d8839b8",
+    origin_entry_id: "JK000000083187",
+    entry: "ま-げる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["구부리다;굽히다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まげる",
+    category3: null
+  },
+  {
+    entry_id: "513f9a53d4574fde892ae2a9be8a7359",
+    origin_entry_id: "JK000000083239",
+    entry: "まざ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["섞이다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まざる",
+    category3: null
+  },
+  {
+    entry_id: "c692bc5914ca4900a244eeeaae638845",
+    origin_entry_id: "JK000000083365",
+    entry: "ま-ぜる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["넣어 섞다;혼합하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まぜる",
+    category3: null
+  },
+  {
+    entry_id: "39bfc7a2b7b94660b172009365758257",
+    origin_entry_id: "JK000000083449",
+    entry: "まちが-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["잘못되다;틀리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まちがう",
+    category3: null
+  },
+  {
+    entry_id: "7460b942e9af4d6bb45ebbb3cdb8e5b6",
+    origin_entry_id: "JK000000083683",
+    entry: "まとま-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["뿔뿔이 된 것이 하나로 정리되다;하나로 뭉치다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まとまる",
+    category3: null
+  },
+  {
+    entry_id: "619fc5293cb04f8495dda96ccbcb5b65",
+    origin_entry_id: "JK000000083685",
+    entry: "まと-める",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["뿔뿔이 되어 있는 것을 하나로 정리하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まとめる",
+    category3: null
+  },
+  {
+    entry_id: "71f5bcebdb5644d7bf1acab522863af2",
+    origin_entry_id: "JK000000083727",
+    entry: "まな-ぶ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["배우다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まなぶ",
+    category3: null
+  },
+  {
+    entry_id: "596d8903fa0f46728a68825798574021",
+    origin_entry_id: "JK000000083761",
+    entry: "まね-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["손짓하여 부르다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まねく",
+    category3: null
+  },
+  {
+    entry_id: "11c3ceee36b640c0ab3830d0c6b4adc3",
+    origin_entry_id: "JK000000083905",
+    entry: "まよ-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["갈피를 못 잡다;결단을 내리지 못하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まよう",
+    category3: null
+  },
+  {
+    entry_id: "3449d33fae8c43f2b821b1ad6c0b35af",
+    origin_entry_id: "JK000000084295",
+    entry: "みあ-げる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["우러러 보다;올려다 보다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みあげる",
+    category3: null
+  },
+  {
+    entry_id: "700a0abb6edf47b9a1b9f2b43902834d",
+    origin_entry_id: "JK000000084344",
+    entry: "みおく-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["배웅하다;전송하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みおくる",
+    category3: null
+  },
+  {
+    entry_id: "3770790a67fd4f818f80f1fc4c22e503",
+    origin_entry_id: "JK000000084356",
+    entry: "みおろ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["내려다보다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みおろす",
+    category3: null
+  },
+  {
+    entry_id: "31cf1ad0815a41ca885060906770375a",
+    origin_entry_id: "JK000000084385",
+    entry: "みか-ける",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["눈에 띄다;가끔 보다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みかける",
+    category3: null
+  },
+  {
+    entry_id: "d4b915e803d14ffbb4075bbbc92585d1",
+    origin_entry_id: "JK000000085086",
+    entry: "みなお-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["다시 보다;재검토하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みなおす",
+    category3: null
+  },
+  {
+    entry_id: "21964d76244b4a008c9fd966204e72dd",
+    origin_entry_id: "JK000000085215",
+    entry: "みま-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["문안하다;위문하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みまう",
+    category3: null
+  },
+  {
+    entry_id: "7d7549296ff54cc0a6c084c20b4c9556",
+    origin_entry_id: "JK000000085470",
+    entry: "みる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["보다;진찰하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みる",
+    category3: null
+  },
+  {
+    entry_id: "7032885e049443c8a0e60c75eae89ebc",
+    origin_entry_id: "JK000000085729",
+    entry: "む-く",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["향하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むく",
+    category3: null
+  },
+  {
+    entry_id: "38469e03d7154b00935329fc34da0432",
+    origin_entry_id: "JK000000085965",
+    entry: "む-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["무덥다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むす",
+    category3: null
+  },
+  {
+    entry_id: "d9647d059a1b4fa584a4161f0da8c342",
+    origin_entry_id: "JK000000085988",
+    entry: "むす-ぶ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["잇다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むすぶ",
+    category3: null
+  },
+  {
+    entry_id: "c8d0b732160a4ce7a8d4ee908e6be4be",
+    origin_entry_id: "JK000000086788",
+    entry: "めだ-つ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["눈에 띄다;두드러지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めだつ",
+    category3: null
+  },
+  {
+    entry_id: "c9c4eeb7ecd74386bfbe861c71c48910",
+    origin_entry_id: "JK000000087215",
+    entry: "もうしこ-む",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["신청하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もうしこむ",
+    category3: null
+  },
+  {
+    entry_id: "993dd8b588a84c5c988f4637e389ed0a",
+    origin_entry_id: "JK000000087325",
+    entry: "も-える",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["타다;불길이 일다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もえる",
+    category3: null
+  },
+  {
+    entry_id: "848e2ce71dc44d19b7ae73bc45552174",
+    origin_entry_id: "JK000000088051",
+    entry: "もや-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["불태우다;연소시키다;→やく"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もやす",
+    category3: null
+  },
+  {
+    entry_id: "0d375cea06ea4b7886f5872839f09a42",
+    origin_entry_id: "JK000000088123",
+    entry: "も-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["높이 쌓아 올리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もる",
+    category3: null
+  },
+  {
+    entry_id: "674eb3457e0f451e988bbb8da7e757b0",
+    origin_entry_id: "JK000000088534",
+    entry: "やくだ-つ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["쓸모가 있다;도움이 되다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "やくだつ",
+    category3: null
+  },
+  {
+    entry_id: "17ce55c25e2542d58bb2e8cf49c50b34",
+    origin_entry_id: "JK000000089004",
+    entry: "やぶ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["깨다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "やぶる",
+    category3: null
+  },
+  {
+    entry_id: "9e5638bc0c374440b40bb3b2c1dd9a49",
+    origin_entry_id: "JK000000089010",
+    entry: "やぶ-れる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["찢어지다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "やぶれる",
+    category3: null
+  },
+  {
+    entry_id: "9aad5dc91daf434ba1bf1942f06121f9",
+    origin_entry_id: "JK000000089263",
+    entry: "や-める",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["아프다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "やめる",
+    category3: null
+  },
+  {
+    entry_id: "17b0f8fd97ac46a5ab7fd80ec29f75a5",
+    origin_entry_id: "JK000000089336",
+    entry: "やりなお-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["다시 하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "やりなおす",
+    category3: null
+  },
+  {
+    entry_id: "b2f16947cc3646099445a02e5cff679a",
+    origin_entry_id: "JK000000090204",
+    entry: "ゆ-でる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["데치다;삶다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆでる",
+    category3: null
+  },
+  {
+    entry_id: "73bf2acd19c34c9f82dda927f8560946",
+    origin_entry_id: "JK000000090355",
+    entry: "ゆる-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["허가하다;허락하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆるす",
+    category3: null
+  },
+  {
+    entry_id: "793a2bfcfd8a401a971e247259505140",
+    origin_entry_id: "JK000000090447",
+    entry: "よ-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["술에 취하다;술기가 돌다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よう",
+    category3: null
+  },
+  {
+    entry_id: "46ddac178107454096ca0806574252d2",
+    origin_entry_id: "JK000000091082",
+    entry: "よこぎ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["가로지르다;횡단하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よこぎる",
+    category3: null
+  },
+  {
+    entry_id: "78d43b5d1b5b45229ae82467b912f94a",
+    origin_entry_id: "JK000000091104",
+    entry: "よこ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["보내다;넘겨주다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よこす",
+    category3: null
+  },
+  {
+    entry_id: "de90bcb9e1604c6090244feb980a6606",
+    origin_entry_id: "JK000000091105",
+    entry: "よご-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["더럽히다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よごす",
+    category3: null
+  },
+  {
+    entry_id: "96e78dbc8d2a46e39cfd4dd3df883818",
+    origin_entry_id: "JK000000091369",
+    entry: "よっぱら-う",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["몹시 취하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よっぱらう",
+    category3: null
+  },
+  {
+    entry_id: "caef3a87f1044be4ab843f202c8c33dd",
+    origin_entry_id: "JK000000091480",
+    entry: "よびだ-す",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["호출하다;불러내다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "よびだす",
+    category3: null
+  },
+  {
+    entry_id: "411aaf8358774b6e8d40f5982ec62560",
+    origin_entry_id: "JK000000095369",
+    entry: "わか-れる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["갈라지다;나누이다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わかれる",
+    category3: null
+  },
+  {
+    entry_id: "d02080e5341847988dab7734a739c8ed",
+    origin_entry_id: "JK000000095485",
+    entry: "わ-ける",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["나누다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わける",
+    category3: null
+  },
+  {
+    entry_id: "d56e1084ea46454b85538473d63e3f30",
+    origin_entry_id: "JK000000034485",
+    entry: "サボ-る",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "동사",
+        means: ["사보타주하다;게으름 피우다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "サボる",
+    category3: null
+  },
+  {
+    entry_id: "c2caeffcde884dd397737aeb392cd50e",
+    origin_entry_id: "JK000000025545",
+    entry: "け",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "조사",
+        means: ["…었지;…었던가"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "け",
+    category3: null
+  },
+  {
+    entry_id: "f528c1fee122406a829a6fbc7b89e1dc",
+    origin_entry_id: "JK000000026804",
+    entry: "けれど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "조사",
+        means: ["→けれども"]
+      },
+      {
+        part: "기타",
+        means: ["→けれども"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けれど",
+    category3: null
+  },
+  {
+    entry_id: "8f687fc7f472467fbce6f05256fbfd2a",
+    origin_entry_id: "JK000000031083",
+    entry: "こと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "조사",
+        means: ["감동·의문·동의·권유를 나타냄"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こと",
+    category3: null
+  },
+  {
+    entry_id: "a423bbc4f157413db666540c7543bc17",
+    origin_entry_id: "JK000000065377",
+    entry: "ながら",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "조사",
+        means: ["…면서"]
+      },
+      {
+        part: "접사",
+        means: ["동작 따위가 공존하는 뜻을 나타낼 때에 씀"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ながら",
+    category3: null
+  },
+  {
+    entry_id: "044e2855539a471593fdd6a4d965094b",
+    origin_entry_id: "JK000000000413",
+    entry: "あおじろ-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["파르께하다;특히, 얼굴빛이 핏기가 없다;해쓱하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あおじろい",
+    category3: null
+  },
+  {
+    entry_id: "affc1aadc33b4f90b0b06edec1f9faf1",
+    origin_entry_id: "JK000000001452",
+    entry: "あたたか-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["따뜻하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あたたかい",
+    category3: null
+  },
+  {
+    entry_id: "0b24f2f0428040daab43999e17c1510b",
+    origin_entry_id: "JK000000002336",
+    entry: "あやし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["수상하다;괴이하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あやしい",
+    category3: null
+  },
+  {
+    entry_id: "a35ef3cbf36a4638b6908f9064e342bb",
+    origin_entry_id: "JK000000002584",
+    entry: "ありがた-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["감사하다;고맙다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ありがたい",
+    category3: null
+  },
+  {
+    entry_id: "0d6ee677bbb24ba0b39a875b5ca16387",
+    origin_entry_id: "JK000000003893",
+    entry: "いさまし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["용감하다;용맹스럽다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いさましい",
+    category3: null
+  },
+  {
+    entry_id: "2beb7f6d96d04bf8b243c021a40d0a7c",
+    origin_entry_id: "JK000000006816",
+    entry: "うすぐら-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["좀 어둡다;어스레하다;어둑어둑하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うすぐらい",
+    category3: null
+  },
+  {
+    entry_id: "d4073900b9db45ffa61b6095b6f725f7",
+    origin_entry_id: "JK000000007709",
+    entry: "うらやまし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["부럽다;샘이 나다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うらやましい",
+    category3: null
+  },
+  {
+    entry_id: "f1919ee94e4f4b628eebd1f03d6f784e",
+    origin_entry_id: "JK000000010547",
+    entry: "おさな-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["어리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おさない",
+    category3: null
+  },
+  {
+    entry_id: "a1d5c9d0f1c04b6e84860c61751e8104",
+    origin_entry_id: "JK000000010831",
+    entry: "おそろし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["두렵다;무섭다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おそろしい",
+    category3: null
+  },
+  {
+    entry_id: "6c3b6f1809944e838831e61ecff5ef4c",
+    origin_entry_id: "JK000000011709",
+    entry: "おもた-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["무겁다;묵직하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おもたい",
+    category3: null
+  },
+  {
+    entry_id: "e5a8be224fba45f7872563ed3fe4d599",
+    origin_entry_id: "JK000000015017",
+    entry: "かしこ-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["현명하다;영리하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かしこい",
+    category3: null
+  },
+  {
+    entry_id: "88c1c0a13bb8498a8725b37df9719e57",
+    origin_entry_id: "JK000000016917",
+    entry: "かゆ-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["가렵다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かゆい",
+    category3: null
+  },
+  {
+    entry_id: "7e17ae4868b54d2fb94bc70f7e6c943f",
+    origin_entry_id: "JK000000017528",
+    entry: "かわいらし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["귀엽다;사랑스럽다;작고 예쁘장스럽다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かわいらしい",
+    category3: null
+  },
+  {
+    entry_id: "00ce9ae54d3749a2abd629521642657a",
+    origin_entry_id: "JK100016681001",
+    entry: "がまんづよ-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["인내력이 세다;참을성이 많다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "がまんづよい",
+    category3: null
+  },
+  {
+    entry_id: "49b6fbe7726b48909fdfa7799158fc64",
+    origin_entry_id: "JK000000020145",
+    entry: "きつ-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["심하다;되다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きつい",
+    category3: null
+  },
+  {
+    entry_id: "e846f228f3a14a99be105aae41a4c3db",
+    origin_entry_id: "JK000000023803",
+    entry: "くさ-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["고약한 냄새가 나다;구리다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くさい",
+    category3: null
+  },
+  {
+    entry_id: "0e7484e8c9be44fc91387265a70b5de7",
+    origin_entry_id: "JK000000024161",
+    entry: "くだらな-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["하찮다;시시하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くだらない",
+    category3: null
+  },
+  {
+    entry_id: "f64ccf8758c9421c940697d680847ad9",
+    origin_entry_id: "JK000000024738",
+    entry: "くやし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["분하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くやしい",
+    category3: null
+  },
+  {
+    entry_id: "0692b2f2160241569c317ac9bc0a4f01",
+    origin_entry_id: "JK000000025307",
+    entry: "くわし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["상세하다;소상하다;자세히 알고 있다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "くわしい",
+    category3: null
+  },
+  {
+    entry_id: "c6910497271f4d929e9afc023d817d34",
+    origin_entry_id: "JK000000026821",
+    entry: "けわし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["험하다;험상궂다;험악하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "けわしい",
+    category3: null
+  },
+  {
+    entry_id: "7e61a37919424aff875cf7ab2bb53156",
+    origin_entry_id: "JK000000027821",
+    entry: "こ-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["짙다;진하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こい",
+    category3: null
+  },
+  {
+    entry_id: "ffa6abce500a4fc8a15a066f5dcd3c53",
+    origin_entry_id: "JK000000035968",
+    entry: "しおから-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["짜다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しおからい",
+    category3: null
+  },
+  {
+    entry_id: "915c6ff81b5f435b8dbb64df4a52864b",
+    origin_entry_id: "JK000000037754",
+    entry: "しつこ-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["끈덕지다;끈질기다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しつこい",
+    category3: null
+  },
+  {
+    entry_id: "968f2558d8c44bbea8ee4bd0b15dc949",
+    origin_entry_id: "JK000000047189",
+    entry: "するど-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["날카롭다;예리하다;예민하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "するどい",
+    category3: null
+  },
+  {
+    entry_id: "63eeb62b3e974f7eae35184c830776eb",
+    origin_entry_id: "JK000000045933",
+    entry: "ずうずうし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["뻔뻔스럽다;넉살 좋다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ずうずうしい",
+    category3: null
+  },
+  {
+    entry_id: "f761ac2727bf41efb1370a83eac995f0",
+    origin_entry_id: "JK000000051807",
+    entry: "そそっかし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["경솔하다;덜렁덜렁하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そそっかしい",
+    category3: null
+  },
+  {
+    entry_id: "f1896fdc5f3a4d2386ef074bdc0bbc93",
+    origin_entry_id: "JK000000054958",
+    entry: "たのもし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["믿음직하다;미덥다;기대할 만하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たのもしい",
+    category3: null
+  },
+  {
+    entry_id: "7c4fc259b7624a6caa3ab4981d29370d",
+    origin_entry_id: "JK000000100052",
+    entry: "ちゃいろい",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["갈색이다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゃいろい",
+    category3: null
+  },
+  {
+    entry_id: "a58c1d9cbddf476792e9e63324ed44b0",
+    origin_entry_id: "JK000000059473",
+    entry: "つら-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["고통스럽다;괴롭다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つらい",
+    category3: null
+  },
+  {
+    entry_id: "c3e8ad88453246348365f201473e045d",
+    origin_entry_id: "JK000000064866",
+    entry: "とんでもな-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["터무니없다;당치도 않다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とんでもない",
+    category3: null
+  },
+  {
+    entry_id: "276d9490141c4624876a1f2bed0759be",
+    origin_entry_id: "JK000000066625",
+    entry: "にく-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["밉다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "にくい",
+    category3: null
+  },
+  {
+    entry_id: "6f995d85999b42aeb33ab0b6344567f1",
+    origin_entry_id: "JK000000070418",
+    entry: "はげし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["세차다;격심하다;잦다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はげしい",
+    category3: null
+  },
+  {
+    entry_id: "9890022cc290414ea0b9da3d814b4a57",
+    origin_entry_id: "JK000000081817",
+    entry: "ほそなが-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["길고 가느다랗다;홀쪽하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ほそながい",
+    category3: null
+  },
+  {
+    entry_id: "a8d6c87125fd4a0981b93da67515d415",
+    origin_entry_id: "JK000000083326",
+    entry: "まずし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["가난하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まずしい",
+    category3: null
+  },
+  {
+    entry_id: "dacacfaec34447a38d83c053afca37d4",
+    origin_entry_id: "JK000000083791",
+    entry: "まぶし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["눈부시다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まぶしい",
+    category3: null
+  },
+  {
+    entry_id: "3b96719eaa05492fbe79382050721c5d",
+    origin_entry_id: "JK000000085132",
+    entry: "みにく-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["추하다;보기 흉하다;못생기다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "みにくい",
+    category3: null
+  },
+  {
+    entry_id: "44f131694c0f4840bbbdafc3c46d65c8",
+    origin_entry_id: "JK000000085858",
+    entry: "むしあつ-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["무덥다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "むしあつい",
+    category3: null
+  },
+  {
+    entry_id: "d50fb084c915426c966caff477056420",
+    origin_entry_id: "JK100087087002",
+    entry: "めんどうくさ-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["아주 귀찮다;몹시 성가시다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めんどうくさい",
+    category3: null
+  },
+  {
+    entry_id: "0186958885b4428dad98d5ccee3d2733",
+    origin_entry_id: "JK100087245001",
+    entry: "もうしわけな-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["변명할 여지가 없다;미안하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もうしわけない",
+    category3: null
+  },
+  {
+    entry_id: "45b2af16ef64464c829c6cd1eeb4070b",
+    origin_entry_id: "JK100087698002",
+    entry: "もったいな-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["황송하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もったいない",
+    category3: null
+  },
+  {
+    entry_id: "e9686fc6040649369bdb571fd037819e",
+    origin_entry_id: "JK000000088347",
+    entry: "やかまし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["시끄럽다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "やかましい",
+    category3: null
+  },
+  {
+    entry_id: "67f62b8786b64c42b97b70e02773c4c1",
+    origin_entry_id: "JK000000090346",
+    entry: "ゆる-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["느슨하다;헐겁다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ゆるい",
+    category3: null
+  },
+  {
+    entry_id: "c135c6ed61534b219f1a151c4aea0ff6",
+    origin_entry_id: "JK000000095373",
+    entry: "わかわかし-い",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용사",
+        means: ["아주 젊다;젊디젊다;생기발랄하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わかわかしい",
+    category3: null
+  },
+  {
+    entry_id: "e759f82c89d44df6a2ef521eb2335fc1",
+    origin_entry_id: "JK000000100265",
+    entry: "あっというまに",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["눈 깜짝할 사이에"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あっというまに",
+    category3: null
+  },
+  {
+    entry_id: "965c03ae5adb48859037ac7c06098f0a",
+    origin_entry_id: "JK000000002850",
+    entry: "あんがい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["뜻밖에도;예상 외"]
+      },
+      {
+        part: "형용동사",
+        means: ["뜻밖에도;예상 외"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あんがい",
+    category3: null
+  },
+  {
+    entry_id: "4b1eb576beac47b8b4d7ea4bc0f5d9a0",
+    origin_entry_id: "JK000000003181",
+    entry: "いいかげん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["무책임한 모양;엉터리"]
+      },
+      {
+        part: "형용동사",
+        means: ["꽤;상당히"]
+      },
+      {
+        part: "기타",
+        means: ["적당함;알맞음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いいかげん",
+    category3: null
+  },
+  {
+    entry_id: "7b12b3f4cf434f39bc777fa68e17d227",
+    origin_entry_id: "JK000000100162",
+    entry: "いがいに",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["의외로"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いがいに",
+    category3: null
+  },
+  {
+    entry_id: "48aa5f5dbe0c4ccb8919fc66a9cfeeaf",
+    origin_entry_id: "JK000000003655",
+    entry: "いきなり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["갑자기;돌연;느닷없이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いきなり",
+    category3: null
+  },
+  {
+    entry_id: "1cc4209b2218497492962764a9988d2f",
+    origin_entry_id: "JK100004648002",
+    entry: "いっきに",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["단숨에;일거에"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いっきに",
+    category3: null
+  },
+  {
+    entry_id: "65366806084e480c9f157273d9508446",
+    origin_entry_id: "JK100004927015",
+    entry: "いっぱんに",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["대체로;일반적으로"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いっぱんに",
+    category3: null
+  },
+  {
+    entry_id: "e4490cce3db740bb981a148dde0cd584",
+    origin_entry_id: "JK000000100268",
+    entry: "いつのまにか",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["어느 새인가"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "いつのまにか",
+    category3: null
+  },
+  {
+    entry_id: "939c8bb8e42d4d1590e1a5004b24ea37",
+    origin_entry_id: "JK000000009871",
+    entry: "おおいに",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["대단히;크게;매우"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おおいに",
+    category3: null
+  },
+  {
+    entry_id: "93e40a3e18e648199fd48a5ae47c6f4b",
+    origin_entry_id: "JK000000100279",
+    entry: "おさきに",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["먼저"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おさきに",
+    category3: null
+  },
+  {
+    entry_id: "55d18a0fbf5647fab40d1bcf757f6025",
+    origin_entry_id: "JK000000016995",
+    entry: "からから",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["대그락대그락"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "からから",
+    category3: null
+  },
+  {
+    entry_id: "6089cc51b71346728d319720648e875a",
+    origin_entry_id: "JK000000015910",
+    entry: "がっかり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["실망·낙담하는 모양"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "がっかり",
+    category3: null
+  },
+  {
+    entry_id: "5cfae979420a453480d50e17ede0da3c",
+    origin_entry_id: "JK000000020140",
+    entry: "きちんと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["과부족 없이;정확히"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きちんと",
+    category3: null
+  },
+  {
+    entry_id: "bf60f91beea34508bc50d4648d592c16",
+    origin_entry_id: "JK000000020188",
+    entry: "ぎっしり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["가득;잔뜩"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぎっしり",
+    category3: null
+  },
+  {
+    entry_id: "e03de2ea3ea24eb2a063bb42a75ff7d0",
+    origin_entry_id: "JK000000024382",
+    entry: "ぐっすり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["푹"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぐっすり",
+    category3: null
+  },
+  {
+    entry_id: "e757bf9a6f3246f98f0877b915453972",
+    origin_entry_id: "JK000000027905",
+    entry: "こう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["이렇게;이와 같이"]
+      },
+      {
+        part: "감동사",
+        means: ["저어"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こう",
+    category3: null
+  },
+  {
+    entry_id: "6a4930adcbfc4817be87ff1f331f3d44",
+    origin_entry_id: "JK000000028626",
+    entry: "こうして",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["이렇게 해서"]
+      },
+      {
+        part: "기타",
+        means: ["이렇게;이와 같이"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こうして",
+    category3: null
+  },
+  {
+    entry_id: "4cb045abaa064a34af47e0911a73f604",
+    origin_entry_id: "JK000000030981",
+    entry: "こっそり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["가만히;살짝;몰래"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "こっそり",
+    category3: null
+  },
+  {
+    entry_id: "f9f47b47baad41bf8680c087c2d07083",
+    origin_entry_id: "JK000000034209",
+    entry: "さっさと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["빨랑빨랑;척척;데꺽"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さっさと",
+    category3: null
+  },
+  {
+    entry_id: "cf315c2de6ba4dc693ef6070ddf14fbf",
+    origin_entry_id: "JK000000034278",
+    entry: "さっぱり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["후련한 모양;산뜻한 모양"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "さっぱり",
+    category3: null
+  },
+  {
+    entry_id: "52833837be824dfaaa369572e5113ecc",
+    origin_entry_id: "JK000000034263",
+    entry: "ざっと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["휙;쏴"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ざっと",
+    category3: null
+  },
+  {
+    entry_id: "f4cfea2d4b384e77b9230a2e5caca753",
+    origin_entry_id: "JK000000035878",
+    entry: "しいんと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["쥐 죽은 듯이;찬물을 뿌린 듯;괴괴히"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しいんと",
+    category3: null
+  },
+  {
+    entry_id: "2771fb3d55d24dab8ce6b616edb116ff",
+    origin_entry_id: "JK000000038353",
+    entry: "しばらく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["잠깐"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しばらく",
+    category3: null
+  },
+  {
+    entry_id: "39409e87fe1c46daa4559cd1e1af8d7b",
+    origin_entry_id: "JK000000038662",
+    entry: "しみじみ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["마음속에 깊이 느끼는 모양"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しみじみ",
+    category3: null
+  },
+  {
+    entry_id: "dc2ffa66600144b698970c53250699a8",
+    origin_entry_id: "JK000000037896",
+    entry: "じっと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["꼼짝 않고"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じっと",
+    category3: null
+  },
+  {
+    entry_id: "28c72771c06c4c26afe6d079d8822275",
+    origin_entry_id: "JK000000043489",
+    entry: "じょじょに",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["서서히;천천히;점차"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょじょに",
+    category3: null
+  },
+  {
+    entry_id: "9d0d5cd971b547a88fbdb03bfbb0932a",
+    origin_entry_id: "JK000000046239",
+    entry: "すくなくとも",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["적어도"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すくなくとも",
+    category3: null
+  },
+  {
+    entry_id: "6449819518d54f9199d8b98b2425d0b0",
+    origin_entry_id: "JK000000046326",
+    entry: "すこしも",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["조금도;전혀"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すこしも",
+    category3: null
+  },
+  {
+    entry_id: "30d5c81595974587a45df6a209f6861a",
+    origin_entry_id: "JK000000046645",
+    entry: "すでに",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["이미;벌써"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すでに",
+    category3: null
+  },
+  {
+    entry_id: "8b7cfa5aae4c43758e0bea2af5774f32",
+    origin_entry_id: "JK100048832014",
+    entry: "ぜったいに",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["도저히"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぜったいに",
+    category3: null
+  },
+  {
+    entry_id: "c6ff627464b4476ba4f2c91172dea2b3",
+    origin_entry_id: "JK000000051916",
+    entry: "そっと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["살짝;가만히"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "そっと",
+    category3: null
+  },
+  {
+    entry_id: "e7ff23a863484ef1bc8961002b319f04",
+    origin_entry_id: "JK000000051530",
+    entry: "ぞくぞく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["속속;잇따라"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぞくぞく",
+    category3: null
+  },
+  {
+    entry_id: "315341dae2a24d3398158d2a2ea03ef2",
+    origin_entry_id: "JK000000053090",
+    entry: "たいして",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["그다지;별로"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たいして",
+    category3: null
+  },
+  {
+    entry_id: "c62c603be3fd4db9948b61d0664d30a4",
+    origin_entry_id: "JK000000100254",
+    entry: "たがいに",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["서로"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たがいに",
+    category3: null
+  },
+  {
+    entry_id: "66561d419e2c49b3bef5631cc6ceffb2",
+    origin_entry_id: "JK000000054676",
+    entry: "たっぷり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["충분한 모양;듬뿍"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たっぷり",
+    category3: null
+  },
+  {
+    entry_id: "9c6f61141b0d47a186b4ca1be266952d",
+    origin_entry_id: "JK000000055189",
+    entry: "たまたま",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["가끔;이따금"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たまたま",
+    category3: null
+  },
+  {
+    entry_id: "948de2f0de2d4a3e90b4b4f7212fc63e",
+    origin_entry_id: "JK000000055946",
+    entry: "たんに",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["단지;다만;그저"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たんに",
+    category3: null
+  },
+  {
+    entry_id: "f471f5b56fa94116b364500a806d1f67",
+    origin_entry_id: "JK000000056953",
+    entry: "ちゃんと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["정확하고 틀림이 없는 모양"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ちゃんと",
+    category3: null
+  },
+  {
+    entry_id: "7e26d087727f4f5aae17044747901e25",
+    origin_entry_id: "JK000000058309",
+    entry: "ついに",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["드디어;마침내"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ついに",
+    category3: null
+  },
+  {
+    entry_id: "0d8edc76ae094165a3228315b9d1fd5f",
+    origin_entry_id: "JK000000059145",
+    entry: "つねに",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["늘;항상;언제나"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "つねに",
+    category3: null
+  },
+  {
+    entry_id: "7e8945db5986491d94e5c78d6b1d0087",
+    origin_entry_id: "JK000000063788",
+    entry: "とつぜん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["돌연;갑자기"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "とつぜん",
+    category3: null
+  },
+  {
+    entry_id: "370e3d9edca541a487860543b876484c",
+    origin_entry_id: "JK100062237003",
+    entry: "どうじに",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["동시에"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "どうじに",
+    category3: null
+  },
+  {
+    entry_id: "d7d5221fd42242a882a710b7e1436b11",
+    origin_entry_id: "JK000000065302",
+    entry: "ながなが",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["오랫동안"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ながなが",
+    category3: null
+  },
+  {
+    entry_id: "f1a9f6dd1ddf43eea9b63a04527a6af4",
+    origin_entry_id: "JK000000100194",
+    entry: "はやめに",
+    level: "3",
+    source: "80198531",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["빨리, 일찌감치"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "はやめに",
+    category3: null
+  },
+  {
+    entry_id: "9e6069c16b814620883a4ae1ea69d318",
+    origin_entry_id: "JK000000071223",
+    entry: "ばったり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["푹"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ばったり",
+    category3: null
+  },
+  {
+    entry_id: "7c9e8b61ea874ba7aedfbb77d1d1dd60",
+    origin_entry_id: "JK000000073425",
+    entry: "ぴかぴか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["반짝반짝;번쩍번쩍"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぴかぴか",
+    category3: null
+  },
+  {
+    entry_id: "a1dcbe367c47484bbe03d1a4e5ac7e6a",
+    origin_entry_id: "JK000000074380",
+    entry: "ぴったり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["꼭;딱"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ぴったり",
+    category3: null
+  },
+  {
+    entry_id: "c6f935c7734a4c1ab728dd52fad7f254",
+    origin_entry_id: "JK000000079901",
+    entry: "べつに",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["별로;특별히"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "べつに",
+    category3: null
+  },
+  {
+    entry_id: "9bcc2e0cb2da49eaa557aa1923d8d79e",
+    origin_entry_id: "JK000000083209",
+    entry: "まごまご",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["우물쭈물"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "まごまご",
+    category3: null
+  },
+  {
+    entry_id: "f103c890641442ed81a07b435f7d867d",
+    origin_entry_id: "JK000000087712",
+    entry: "もっとも",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["가장"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "もっとも",
+    category3: null
+  },
+  {
+    entry_id: "48414736ec18451b9ee5e51e0c27ece2",
+    origin_entry_id: "JK000000088888",
+    entry: "やっぱり",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["→やはり"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "やっぱり",
+    category3: null
+  },
+  {
+    entry_id: "149fa3ea3cb141fcb80c52eb56647177",
+    origin_entry_id: "JK000000090879",
+    entry: "ようやく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["겨우;간���히"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ようやく",
+    category3: null
+  },
+  {
+    entry_id: "7765f6b666d141999218ded983fff189",
+    origin_entry_id: "JK000000095512",
+    entry: "わざと",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "부사",
+        means: ["고의로;일부러"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "わざと",
+    category3: null
+  },
+  {
+    entry_id: "4be95edc329a4c269bd5380b76ca8976",
+    origin_entry_id: "JK000000000006",
+    entry: "あ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "감동사",
+        means: ["아"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あ",
+    category3: null
+  },
+  {
+    entry_id: "7880eba98825405787af6e4adbe88d56",
+    origin_entry_id: "JK000000000013",
+    entry: "ああ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "감동사",
+        means: ["아"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ああ",
+    category3: null
+  },
+  {
+    entry_id: "b993478de131462b8bca71bbb6b3ebde",
+    origin_entry_id: "JK000000007968",
+    entry: "うん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "감동사",
+        means: ["응"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "うん",
+    category3: null
+  },
+  {
+    entry_id: "00c54769b1b4476e8664b8d1341f3837",
+    origin_entry_id: "JK000000009470",
+    entry: "おい",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "감동사",
+        means: ["여봐;이봐"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おい",
+    category3: null
+  },
+  {
+    entry_id: "f09d258ac01b40bdb983f084dce8d5f8",
+    origin_entry_id: "JK000000000763",
+    entry: "あきらか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용동사",
+        means: ["밝음;환함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あきらか",
+    category3: null
+  },
+  {
+    entry_id: "a80ac28e42a64f569387df3a3e17f5d9",
+    origin_entry_id: "JK000000001514",
+    entry: "あたりまえ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용동사",
+        means: ["당연함;마땅함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あたりまえ",
+    category3: null
+  },
+  {
+    entry_id: "77821a078cba457f8a7769939e823f0f",
+    origin_entry_id: "JK000000014459",
+    entry: "かくやす",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용동사",
+        means: ["품질에 비해서 값이 쌈"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かくやす",
+    category3: null
+  },
+  {
+    entry_id: "6ded09d6bd7044fe8c4e055f27376fad",
+    origin_entry_id: "JK000000017526",
+    entry: "かわいそう",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용동사",
+        means: ["불쌍한 모양;가엾은 모양"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かわいそう",
+    category3: null
+  },
+  {
+    entry_id: "04a8b6e123b441c2a09b9155999d94d4",
+    origin_entry_id: "JK100020584005",
+    entry: "きほんてき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용동사",
+        means: ["기본적"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "きほんてき",
+    category3: null
+  },
+  {
+    entry_id: "db739b8b04af44aca6ad61b385b096b9",
+    origin_entry_id: "JK100041976002",
+    entry: "しょうきょくてき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용동사",
+        means: ["소극적"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しょうきょくてき",
+    category3: null
+  },
+  {
+    entry_id: "19a0d6054a7d434697aae24bd577a5a8",
+    origin_entry_id: "JK000000042808",
+    entry: "じょうひん",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용동사",
+        means: ["고상함;품위가 있음"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じょうひん",
+    category3: null
+  },
+  {
+    entry_id: "d2b67c62435644d2844bd85e9257bdee",
+    origin_entry_id: "JK000000046632",
+    entry: "すてき",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용동사",
+        means: ["썩 뛰어남;매우 근사함;아주 멋짐"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すてき",
+    category3: null
+  },
+  {
+    entry_id: "024fa31d74a540e2850722e4bfc0f1c8",
+    origin_entry_id: "JK000000046731",
+    entry: "すなお",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용동사",
+        means: ["고분고분함;순직함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "すなお",
+    category3: null
+  },
+  {
+    entry_id: "794ebb25bbef4dad913593fa5f1bc022",
+    origin_entry_id: "JK000000065674",
+    entry: "なだらか",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용동사",
+        means: ["완만한 모양;가파르지 않은 모양"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "なだらか",
+    category3: null
+  },
+  {
+    entry_id: "cc59c7b51b9546e2a079be94b985d99a",
+    origin_entry_id: "JK000000079915",
+    entry: "べつべつ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용동사",
+        means: ["따로따로;각각"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "べつべつ",
+    category3: null
+  },
+  {
+    entry_id: "4f3da4ea8c084932beba8450184de871",
+    origin_entry_id: "JK000000086356",
+    entry: "めいかく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용동사",
+        means: ["명확"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めいかく",
+    category3: null
+  },
+  {
+    entry_id: "1f83b054ae174ec3b7e31384f555e02c",
+    origin_entry_id: "JK000000086515",
+    entry: "めいはく",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "형용동사",
+        means: ["명백;분명함"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "めいはく",
+    category3: null
+  },
+  {
+    entry_id: "162f95c0741d43a4bd4fc4d0cff98f11",
+    origin_entry_id: "JK000000000100",
+    entry: "あいかわらず",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["변함없이;여전히"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "あいかわらず",
+    category3: null
+  },
+  {
+    entry_id: "e8bf670604f84f84975affe123052d25",
+    origin_entry_id: "JK000000011593",
+    entry: "おめにかかる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["만나뵙다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おめにかかる",
+    category3: null
+  },
+  {
+    entry_id: "ad32fc94b35d4a2680ebf532ceaa23c6",
+    origin_entry_id: "JK000000011788",
+    entry: "おもわず",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["엉겁결에;뜻하지 않게;무의식 중에"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "おもわず",
+    category3: null
+  },
+  {
+    entry_id: "af1c30543e2a4904a7e103a8f1cd8129",
+    origin_entry_id: "JK000000016278",
+    entry: "かならずしも",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["반드시 …인 것은"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "かならずしも",
+    category3: null
+  },
+  {
+    entry_id: "86ed58dc036f4711b948c114e5f58dec",
+    origin_entry_id: "JK000000030418",
+    entry: "ございます",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["‘ある’‘である’의 공손한 말;→ござい"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ございます",
+    category3: null
+  },
+  {
+    entry_id: "93ca7f2b153b498a86253e649219662f",
+    origin_entry_id: "JK000000036217",
+    entry: "しかる",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["그러하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "しかる",
+    category3: null
+  },
+  {
+    entry_id: "7cfbcae5e66647bf9b5267e37bd6f205",
+    origin_entry_id: "JK000000037918",
+    entry: "じつは",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["실은;사실은;정말은"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "じつは",
+    category3: null
+  },
+  {
+    entry_id: "2a310a17117e4c7d8426e9c89ab6da1f",
+    origin_entry_id: "JK000000053082",
+    entry: "たいした",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["대단한"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "たいした",
+    category3: null
+  },
+  {
+    entry_id: "d7179aecd05247e99dd8a37ab8b61bed",
+    origin_entry_id: "JK000000053725",
+    entry: "だが",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["그러나;그렇지만"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だが",
+    category3: null
+  },
+  {
+    entry_id: "5c6ba8cf9c3646f5ad3e8a91fa487aa1",
+    origin_entry_id: "JK000000054070",
+    entry: "だけど",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["だけれど의 준말;그러나;그렇지만"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "だけど",
+    category3: null
+  },
+  {
+    entry_id: "09f2c2bb179841879f88a9e791b6c9cb",
+    origin_entry_id: "JK000000058296",
+    entry: "ついて",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["…에 관해서;…을 대상으로"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ついて",
+    category3: null
+  },
+  {
+    entry_id: "d9dacfd4189f4e329bc80c63cfe1c7eb",
+    origin_entry_id: "JK000000060371",
+    entry: "できれば",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["가능하면;될 수 있으면"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "できれば",
+    category3: null
+  },
+  {
+    entry_id: "cfc2fc0c164343a2ab32b3f56624e8e8",
+    origin_entry_id: "JK000000089259",
+    entry: "やむをえない",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["할 수 없다;어쩔 수 없다;부득이하다"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "やむをえない",
+    category3: null
+  },
+  {
+    entry_id: "bd178d55893c4a70a0cd8e4e1c86f9af",
+    origin_entry_id: "JK000000090620",
+    entry: "ようこそ",
+    level: "3",
+    source: "081341B9",
+    partsMeans: [
+      {
+        part: "기타",
+        means: ["노고에 대하여 감사의 뜻을 나타내는 말;또, 상대의 방문을 환영할 때 쓰는 말"]
+      }
+    ],
+    category1: "jlpt",
+    category2: "ようこそ",
+    category3: null
+  }
 ]

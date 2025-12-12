@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-12-12T08:46:03.443Z",
+  "totalEntries": 1506,
+  "successCount": 1506,
+  "errorCount": 0,
+  "chunkSize": 100,
+  "chunkFiles": [
+    "n3-details-chunk-0.json",
+    "n3-details-chunk-1.json",
+    "n3-details-chunk-2.json",
+    "n3-details-chunk-3.json",
+    "n3-details-chunk-4.json",
+    "n3-details-chunk-5.json",
+    "n3-details-chunk-6.json",
+    "n3-details-chunk-7.json",
+    "n3-details-chunk-8.json",
+    "n3-details-chunk-9.json",
+    "n3-details-chunk-10.json",
+    "n3-details-chunk-11.json",
+    "n3-details-chunk-12.json",
+    "n3-details-chunk-13.json",
+    "n3-details-chunk-14.json",
+    "n3-details-chunk-15.json"
+  ],
+  "detailsIndexFile": "n3-details-index.json",
+  "backupJsonFile": "n3-search-results-2025-12-12T08-46-03-105Z.json"
+}

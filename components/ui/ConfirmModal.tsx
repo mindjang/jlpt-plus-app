@@ -31,7 +31,11 @@ export function ConfirmModal({
   loading = false,
 }: ConfirmModalProps) {
   const handleConfirm = async () => {
-    await onConfirm()
+    try {
+      await onConfirm()
+    } catch (error) {
+      console.error('Confirm action failed:', error)
+    }
   }
 
   return (

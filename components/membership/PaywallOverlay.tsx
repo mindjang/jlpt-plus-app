@@ -1,8 +1,9 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '../auth/AuthProvider'
+import { logger } from '@/lib/utils/logger'
 
 interface PaywallOverlayProps {
   title?: string
@@ -32,6 +33,17 @@ export function PaywallOverlay({
   const [code, setCode] = useState('')
   const [redeemLoading, setRedeemLoading] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
+
+  // Track paywall view
+  useEffect(() => {
+    logger.info('[Paywall] Overlay shown', {
+      title,
+      hasUser: !!user,
+      showPlans,
+      showRedeem,
+      timestamp: Date.now(),
+    })
+  }, [])
 
   const handleRedeem = async () => {
     if (!onRedeem) return
@@ -70,22 +82,24 @@ export function PaywallOverlay({
         </div>
 
         {showPlans && (
-          <div className="grid grid-cols-2 gap-3">
+          <div className="space-y-3">
+            <div className="text-center">
+              <span className="inline-block px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-bold mb-2">
+                테스트 모드
+              </span>
+            </div>
             <button
-              className="w-full py-3 rounded-card bg-primary text-surface text-body font-semibold button-press"
+              className="w-full py-3 rounded-card bg-black text-white text-body font-semibold button-press hover:opacity-90 transition-opacity"
               onClick={() => {
-                setMessage('구독 결제 연동은 준비 중입니다.')
+                logger.info('[Paywall] CTA clicked - Navigate to payment', {
+                  destination: '/my?payment=true&tab=subscription',
+                  hasUser: !!user,
+                  timestamp: Date.now(),
+                })
+                router.push('/my?payment=true&tab=subscription')
               }}
             >
-              월 구독
-            </button>
-            <button
-              className="w-full py-3 rounded-card bg-blue-500 text-surface text-body font-semibold button-press"
-              onClick={() => {
-                setMessage('구독 결제 연동은 준비 중입니다.')
-              }}
-            >
-              연 구독
+              구독 플랜 보기
             </button>
           </div>
         )}

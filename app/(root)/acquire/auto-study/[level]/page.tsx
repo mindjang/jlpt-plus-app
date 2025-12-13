@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, Suspense, useMemo } from 'react'
+import { useState, Suspense, useMemo, useEffect } from 'react'
 import { useRouter, useParams, useSearchParams } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
@@ -32,6 +32,8 @@ function AutoStudyContent() {
   const [targetAmount, setTargetAmount] = useState(20)
   const typeParam = searchParams.get('type')
   const modeParam = searchParams.get('mode')
+  const tasteParam = searchParams.get('taste') // Guest taste mode
+  const isTasteMode = tasteParam === 'true'
   
   // URL 파라미터로 탭 및 모드 초기화 (useMemo로 동기화)
   const activeTab = useMemo(() => {
@@ -41,16 +43,43 @@ function AutoStudyContent() {
   const studyMode = useMemo(() => {
     return modeParam === 'chapter' ? 'chapter' : 'auto'
   }, [modeParam])
+  
+  // Guest taste mode: override target amount to 5
+  useEffect(() => {
+    if (isTasteMode) {
+      setTargetAmount(5)
+    }
+  }, [isTasteMode])
 
-  // 단어/한자 데이터 변환 (네이버 데이터 직접 사용)
-  const words: NaverWord[] = useMemo(() => {
-    if (activeTab !== 'word') return []
-    return getNaverWordsByLevel(level)
-  }, [level, activeTab])
+  // 단어/한자 데이터 상태 (지연 로딩)
+  const [words, setWords] = useState<NaverWord[]>([])
+  const [kanjis, setKanjis] = useState<KanjiAliveEntry[]>([])
+  const [dataLoading, setDataLoading] = useState(false)
 
-  const kanjis: KanjiAliveEntry[] = useMemo(() => {
-    if (activeTab !== 'kanji') return []
-    return getKanjiByLevel(level)
+  // 데이터 지연 로딩
+  useEffect(() => {
+    const loadData = async () => {
+      setDataLoading(true)
+      try {
+        if (activeTab === 'word') {
+          const { getNaverWordsByLevelAsync } = await import('@/data/words/index')
+          const loadedWords = await getNaverWordsByLevelAsync(level)
+          setWords(loadedWords)
+          setKanjis([])
+        } else {
+          const { getKanjiByLevelAsync } = await import('@/data/kanji/index')
+          const loadedKanjis = await getKanjiByLevelAsync(level)
+          setKanjis(loadedKanjis)
+          setWords([])
+        }
+      } catch (error) {
+        console.error('Failed to load data:', error)
+      } finally {
+        setDataLoading(false)
+      }
+    }
+
+    loadData()
   }, [level, activeTab])
 
   // 진행률 데이터를 커스텀 훅으로 관리
@@ -120,6 +149,18 @@ function AutoStudyContent() {
     refreshProgress()
   }
 
+  // Show loading when switching tabs or data is loading
+  if (dataLoading || (activeTab === 'word' && words.length === 0) || (activeTab === 'kanji' && kanjis.length === 0 && level !== 'N1')) {
+    return (
+      <div className="w-full min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-body text-text-sub">데이터를 불러오는 중...</p>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen relative bg-white">
       {/* 그라데이션 배경 (상단부터 40vh까지) */}
@@ -132,20 +173,42 @@ function AutoStudyContent() {
       />
 
       <AppBar
-        title={`${level} ${activeTab === 'word' ? '단어' : '한자'}`}
-        onBack={() => window.location.href = `/acquire`}
+        title={isTasteMode ? '무료 체험 (맛보기)' : `${level} ${activeTab === 'word' ? '단어' : '한자'}`}
+        onBack={() => window.location.href = isTasteMode ? '/home' : `/acquire`}
         rightAction={
-          <button
-            onClick={() => setShowModeModal(true)}
-            className="button-press w-8 h-8 flex items-center justify-center rounded-full hover:bg-black hover:bg-opacity-10 transition-colors"
-          >
-            <FontAwesomeIcon icon={faEllipsisVertical} className="text-text-main" />
-          </button>
+          !isTasteMode ? (
+            <button
+              onClick={() => setShowModeModal(true)}
+              className="button-press w-8 h-8 flex items-center justify-center rounded-full hover:bg-black hover:bg-opacity-10 transition-colors"
+            >
+              <FontAwesomeIcon icon={faEllipsisVertical} className="text-text-main" />
+            </button>
+          ) : undefined
         }
         className="bg-transparent border-none"
       />
 
       <div className="relative z-10 pb-20">
+        {isTasteMode && (
+          // Taste mode banner
+          <div className="px-4 pt-4">
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-4">
+              <h3 className="font-bold text-purple-900 mb-1 flex items-center gap-2">
+                <span className="text-xl">👋</span> 무료 체험 중입니다
+              </h3>
+              <p className="text-sm text-purple-700">
+                {level} 단어 5개를 맛보기로 학습해보세요. 진행 상황은 저장되지 않습니다.
+              </p>
+              <button
+                onClick={() => router.push('/login')}
+                className="mt-3 w-full py-2 bg-purple-600 text-white rounded-lg text-sm font-semibold hover:bg-purple-700 transition-colors"
+              >
+                로그인하고 진행 상황 저장하기
+              </button>
+            </div>
+          </div>
+        )}
+        
         {studyMode === 'auto' ? (
           // 자동 학습 모드
           <div className="px-4 pt-4 space-y-4">
@@ -153,9 +216,9 @@ function AutoStudyContent() {
               level={level}
               activeTab={activeTab}
               studyRound={studyRound}
-              targetAmount={targetAmount}
+              targetAmount={isTasteMode ? 5 : targetAmount}
               sessionProgress={sessionProgress}
-              sessionTotal={sessionTotal || targetAmount}
+              sessionTotal={sessionTotal || (isTasteMode ? 5 : targetAmount)}
               newWords={newWords}
               reviewWords={reviewWords}
               nextReviewDays={nextReviewDays}
@@ -187,11 +250,13 @@ function AutoStudyContent() {
         )}
       </div>
 
-      {/* 하단 네비게이션 */}
-      <StudyTabNavigation
-        activeTab={activeTab}
-        onTabChange={handleTabChange}
-      />
+      {/* 하단 네비게이션 (taste mode에서는 숨김) */}
+      {!isTasteMode && (
+        <StudyTabNavigation
+          activeTab={activeTab}
+          onTabChange={handleTabChange}
+        />
+      )}
 
       {/* 모드 선택 모달 */}
       <Modal

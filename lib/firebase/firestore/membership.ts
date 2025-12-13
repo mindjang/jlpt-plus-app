@@ -145,6 +145,9 @@ export async function redeemGiftCode(
 
 /**
  * 결제 정보 저장
+ * ⚠️ SERVER-ONLY: 이 함수는 서버 API 라우트에서만 호출해야 합니다.
+ * Firestore Rules에서 billing 컬렉션은 클라이언트 read/write가 차단되어 있습니다.
+ * billingKey와 같은 민감 정보를 보호하기 위한 조치입니다.
  */
 export async function saveBillingInfo(uid: string, billing: BillingInfo) {
   const dbInstance = getDbInstance()
@@ -154,6 +157,8 @@ export async function saveBillingInfo(uid: string, billing: BillingInfo) {
 
 /**
  * 결제 정보 가져오기
+ * ⚠️ SERVER-ONLY: 이 함수는 서버 API 라우트에서만 호출해야 합니다.
+ * Firestore Rules에서 billing 컬렉션은 클라이언트 read/write가 차단되어 있습니다.
  */
 export async function getBillingInfo(uid: string): Promise<BillingInfo | null> {
   const dbInstance = getDbInstance()

@@ -97,12 +97,14 @@ export default function HomePage() {
           <div>
             <motion.p variants={itemVariants} className="text-text-sub text-sm font-medium">{getGreeting()}</motion.p>
             <motion.h1 variants={itemVariants} className="text-3xl font-bold text-text-main mt-1">
-              {userName}님.
+              {user ? `${userName}님.` : '환영합니다!'}
             </motion.h1>
           </div>
-          <motion.div variants={itemVariants}>
-            <StreakChip count={0} />
-          </motion.div>
+          {user && (
+            <motion.div variants={itemVariants}>
+              <StreakChip count={0} />
+            </motion.div>
+          )}
         </motion.div>
 
         {/* Focus Card - The ONE main thing to do */}
@@ -112,7 +114,30 @@ export default function HomePage() {
           transition={{ delay: 0.2, type: "spring" }}
           className="relative overflow-hidden rounded-[2rem] shadow-xl"
         >
-          {reviewDueCount > 0 ? (
+          {!user ? (
+            // Guest Mode: Try Now
+            <div className="bg-gradient-to-br from-purple-500 to-pink-500 p-8 text-white relative">
+              <div className="absolute top-0 right-0 p-8 opacity-20">
+                <Zap size={120} />
+              </div>
+              <div className="relative z-10">
+                <div className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-bold mb-4 border border-white/30">
+                  무료 체험
+                </div>
+                <h2 className="text-3xl font-bold mb-2">3분 맛보기</h2>
+                <p className="opacity-90 mb-8 max-w-[80%]">
+                  로그인 없이 바로 학습을 시작해보세요. N5 단어 5개를 무료로 체험할 수 있습니다.
+                </p>
+                <button
+                  onClick={() => router.push('/acquire/auto-study/n5?taste=true')}
+                  className="w-full py-4 bg-white text-purple-600 rounded-lg font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+                >
+                  <Play size={20} fill="currentColor" />
+                  지금 바로 체험하기
+                </button>
+              </div>
+            </div>
+          ) : reviewDueCount > 0 ? (
             // Review Mode
             <div className="bg-gradient-to-br from-orange-400 to-red-500 p-8 text-white relative">
               <div className="absolute top-0 right-0 p-8 opacity-20">

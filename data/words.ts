@@ -5,14 +5,14 @@ import { WordData, SearchResult } from './types'
 import { 
   getNaverSearchResults,
   getTotalNaverWordCount,
-  findNaverWord,
-  getNaverWordsByLevel
+  findNaverWord
 } from './words/index'
 import type { NaverWord } from './types'
 import { 
   getKanjiEntry,
   searchKanji,
-  getTotalKanjiCount as getKanjiTotalCount
+  getTotalKanjiCount as getKanjiTotalCount,
+  getKanjiLevel
 } from './kanji/index'
 import {
   getKanjiCharacter,
@@ -24,8 +24,8 @@ import {
   getFirstMeaning,
 } from '../lib/data/kanji/kanjiHelpers'
 // 단어 검색 (레거시 호환 - 네이버 데이터 사용)
-export const getSearchResults = (query: string): SearchResult[] => {
-  const naverResults = getNaverSearchResults(query)
+export const getSearchResults = async (query: string): Promise<SearchResult[]> => {
+  const naverResults = await getNaverSearchResults(query)
   // NaverWord를 SearchResult 형식으로 변환
   return naverResults.map((w: NaverWord) => {
     const firstMean = w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0
@@ -48,8 +48,8 @@ export const getSearchResults = (query: string): SearchResult[] => {
 }
 
 // 특정 단어 찾기 (레거시 호환 - 네이버 데이터 사용)
-export const findWord = (word: string): SearchResult | null => {
-  const naverWord = findNaverWord(word)
+export const findWord = async (word: string): Promise<SearchResult | null> => {
+  const naverWord = await findNaverWord(word)
   if (!naverWord) return null
   
   const firstMean = naverWord.partsMeans && naverWord.partsMeans.length > 0 && naverWord.partsMeans[0].means && naverWord.partsMeans[0].means.length > 0
@@ -70,14 +70,15 @@ export const findWord = (word: string): SearchResult | null => {
   }
 }
 
-// 한자 데이터 가져오기 (레거시 호환)
+// 한자 데이터 가져오기 (레거시 호환, 비동기)
 // KanjiAliveEntry를 WordData로 변환하여 반환
-export const getWordData = (word: string): WordData | null => {
-  const entry = getKanjiEntry(word)
+export const getWordData = async (word: string): Promise<WordData | null> => {
+  const entry = await getKanjiEntry(word)
   if (!entry) return null
 
-  // 레벨 추정 (N5부터 확인)
-  const level = 'N5' // TODO: entry에서 레벨 정보 추출 필요
+  // 레벨 추정
+  const kanjiLevel = await getKanjiLevel(word)
+  const level = kanjiLevel || 'N5'
 
   return {
     level: level as any,
@@ -92,8 +93,8 @@ export const getWordData = (word: string): WordData | null => {
 }
 
 // 전체 단어 수 가져오기 (레거시 호환 - 네이버 데이터 사용)
-export const getTotalWordCount = (): number => {
-  return getTotalNaverWordCount()
+export const getTotalWordCount = async (): Promise<number> => {
+  return await getTotalNaverWordCount()
 }
 
 // 한자 검색 결과를 SearchResult 형식으로 변환
@@ -112,16 +113,16 @@ const convertKanjiToSearchResult = (entry: any, level: string): SearchResult => 
   }
 }
 
-// 한자 검색 (SearchResult 형식으로 반환)
-export const getKanjiSearchResults = (query: string): SearchResult[] => {
-  const kanjiResults = searchKanji(query)
+// 한자 검색 (SearchResult 형식으로 반환, 비동기)
+export const getKanjiSearchResults = async (query: string): Promise<SearchResult[]> => {
+  const kanjiResults = await searchKanji(query)
   // 레벨 추정 (N5부터 확인)
   const level = 'N5' // TODO: entry에서 레벨 정보 추출 필요
   return kanjiResults.map((entry) => convertKanjiToSearchResult(entry, level))
 }
 
-// 전체 한자 수 가져오기 (레거시 호환)
-export const getTotalKanjiCount = (): number => {
-  return getKanjiTotalCount()
+// 전체 한자 수 가져오기 (레거시 호환, 비동기)
+export const getTotalKanjiCount = async (): Promise<number> => {
+  return await getKanjiTotalCount()
 }
 

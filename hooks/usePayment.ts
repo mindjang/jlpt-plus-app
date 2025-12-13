@@ -83,6 +83,14 @@ export function usePayment({
     setLoading(plan)
     setPayMessage(null)
 
+    // Log payment attempt
+    console.info('[Payment] Attempting payment', {
+      plan,
+      method: config.issueIdPrefix === 'kko' ? 'kakao' : 'card',
+      testMode: true,
+      timestamp: Date.now(),
+    })
+
     try {
       const PortOne = await import('@portone/browser-sdk/v2')
       const uidShort = user.uid.replace(/[^A-Za-z0-9]/g, '').slice(0, 8) || 'user'
@@ -124,11 +132,22 @@ export function usePayment({
 
       const response = issueResponse as IssueResponse
       if (response.code !== undefined) {
+        console.warn('[Payment] Billing key issue failed', {
+          plan,
+          method: config.issueIdPrefix === 'kko' ? 'kakao' : 'card',
+          error: response.message,
+          timestamp: Date.now(),
+        })
         setPayMessage(response.message || config.errorMessage)
         return
       }
 
       const billingKey = response.billingKey as string
+      console.info('[Payment] Billing key issued successfully', {
+        plan,
+        method: config.issueIdPrefix === 'kko' ? 'kakao' : 'card',
+        timestamp: Date.now(),
+      })
       
       // Firebase ID 토큰 가져오기
       const idToken = await user.getIdToken()
@@ -143,9 +162,21 @@ export function usePayment({
       })
       const data = await resp.json()
       if (!resp.ok) {
+        console.error('[Payment] Subscription API failed', {
+          plan,
+          error: data?.error,
+          timestamp: Date.now(),
+        })
         setPayMessage(data?.error || '구독 결제에 실패했습니다.')
         return
       }
+      
+      console.info('[Payment] Subscription completed successfully', {
+        plan,
+        method: config.issueIdPrefix === 'kko' ? 'kakao' : 'card',
+        testMode: true,
+        timestamp: Date.now(),
+      })
       
       setPayMessage(config.successMessage)
       if (onRefresh) {

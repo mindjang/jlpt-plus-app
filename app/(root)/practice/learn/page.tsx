@@ -197,7 +197,7 @@ function LearnContent() {
         }}
         onConfirm={handleConfirmExit}
         title="학습 중단"
-        message="학습을 중단하시겠습니까? 지금까지의 진행 상황이 저장되지 않을 수 있습니다."
+        message="학습을 중단하시겠습니까?<br />지금까지의 진행 상황이 저장되지 않을 수 있습니다."
         confirmText="나가기"
         cancelText="계속 학습"
         confirmButtonColor="danger"

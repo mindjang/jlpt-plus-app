@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useMemo, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook, faLanguage } from '@fortawesome/free-solid-svg-icons'
@@ -9,8 +9,6 @@ import { ListItem } from '@/components/ui/ListItem'
 import {
   getNaverSearchResults,
   getSearchResults,
-  getTotalNaverWordCount,
-  getTotalWordCount,
 } from '@/data/words/index'
 import type { NaverWord } from '@/data/types'
 
@@ -39,46 +37,66 @@ export function SearchContent({
   const router = useRouter()
   const [searchQuery, setSearchQuery] = useState('')
   const [activeTab, setActiveTab] = useState<'word' | 'kanji'>('word')
+  const [results, setResults] = useState<Array<{
+    level: 'N1' | 'N2' | 'N3' | 'N4' | 'N5'
+    word: string
+    furigana?: string
+    meaning: string
+  }>>([])
+  const [loading, setLoading] = useState(false)
 
-  const results = useMemo(() => {
-    let allResults: Array<{
-      level: 'N1' | 'N2' | 'N3' | 'N4' | 'N5'
-      word: string
-      furigana?: string
-      meaning: string
-    }> = []
+  // Load results when tab or query changes
+  useEffect(() => {
+    const loadResults = async () => {
+      setLoading(true)
+      try {
+        let allResults: Array<{
+          level: 'N1' | 'N2' | 'N3' | 'N4' | 'N5'
+          word: string
+          furigana?: string
+          meaning: string
+        }> = []
 
-    if (activeTab === 'word') {
-      // 네이버 데이터를 SearchResult 형식으로 변환
-      const naverResults = getNaverSearchResults(searchQuery)
-      allResults = naverResults.map((w: NaverWord) => {
-        // 첫 번째 part의 첫 번째 의미 사용
-        const firstMean = w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0
-          ? w.partsMeans[0].means[0]
-          : ''
-        const levelMap: Record<string, 'N1' | 'N2' | 'N3' | 'N4' | 'N5'> = {
-          '1': 'N1',
-          '2': 'N2',
-          '3': 'N3',
-          '4': 'N4',
-          '5': 'N5',
+        if (activeTab === 'word') {
+          // 네이버 데이터를 SearchResult 형식으로 변환
+          const naverResults = await getNaverSearchResults(searchQuery)
+          allResults = naverResults.map((w: NaverWord) => {
+            // 첫 번째 part의 첫 번째 의미 사용
+            const firstMean = w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0
+              ? w.partsMeans[0].means[0]
+              : ''
+            const levelMap: Record<string, 'N1' | 'N2' | 'N3' | 'N4' | 'N5'> = {
+              '1': 'N1',
+              '2': 'N2',
+              '3': 'N3',
+              '4': 'N4',
+              '5': 'N5',
+            }
+            return {
+              level: levelMap[w.level] || 'N5',
+              word: w.entry,
+              furigana: undefined, // 네이버 데이터에는 furigana 정보가 없음
+              meaning: firstMean,
+            }
+          })
+        } else {
+          allResults = await getSearchResults(searchQuery)
         }
-        return {
-          level: levelMap[w.level] || 'N5',
-          word: w.entry,
-          furigana: undefined, // 네이버 데이터에는 furigana 정보가 없음
-          meaning: firstMean,
+
+        if (!searchQuery && allResults.length > INITIAL_DISPLAY_LIMIT) {
+          setResults(allResults.slice(0, INITIAL_DISPLAY_LIMIT))
+        } else {
+          setResults(allResults)
         }
-      })
-    } else {
-      allResults = getSearchResults(searchQuery)
+      } catch (error) {
+        console.error('Failed to load search results:', error)
+        setResults([])
+      } finally {
+        setLoading(false)
+      }
     }
 
-    if (!searchQuery && allResults.length > INITIAL_DISPLAY_LIMIT) {
-      return allResults.slice(0, INITIAL_DISPLAY_LIMIT)
-    }
-
-    return allResults
+    loadResults()
   }, [activeTab, searchQuery])
 
   const handleSearch = useCallback((query: string) => {
@@ -110,18 +128,7 @@ export function SearchContent({
     [activeTab, router, routingMode]
   )
 
-  const totalCount = useMemo(() => {
-    if (showTotalCount) {
-      return activeTab === 'word'
-        ? searchQuery
-          ? results.length
-          : getTotalNaverWordCount()
-        : searchQuery
-          ? results.length
-          : getTotalWordCount()
-    }
-    return null
-  }, [activeTab, searchQuery, results.length, showTotalCount])
+  const totalCount = searchQuery ? results.length : null
 
   return (
     <>
@@ -158,7 +165,7 @@ export function SearchContent({
               }`}
             >
               <FontAwesomeIcon icon={faBook} className="mr-2" />
-              단어 ({getTotalNaverWordCount()})
+              단어
             </button>
             <button
               onClick={() => handleTabChange('kanji')}
@@ -169,7 +176,7 @@ export function SearchContent({
               }`}
             >
               <FontAwesomeIcon icon={faLanguage} className="mr-2" />
-              한자 ({getTotalWordCount()})
+              한자
             </button>
           </div>
         </div>

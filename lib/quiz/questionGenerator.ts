@@ -10,8 +10,8 @@ import type {
   QuizSettings,
   ItemStats,
 } from '@/lib/types/quiz'
-import { getNaverWordsByLevel } from '@/data/words/index'
-import { getKanjiByLevel } from '@/data/kanji/index'
+import { getNaverWordsByLevelAsync } from '@/data/words/index'
+import { getKanjiByLevelAsync } from '@/data/kanji/index'
 import { getKanjiCharacter, getKanjiMeaning } from '@/lib/data/kanji/kanjiHelpers'
 import { getWordDetails } from '@/data/words/details'
 
@@ -29,11 +29,11 @@ export async function generateQuizQuestions(
 
   for (const level of levels) {
     if (includeWords) {
-      const words = getNaverWordsByLevel(level)
+      const words = await getNaverWordsByLevelAsync(level)
       words.forEach((word) => allItems.push({ data: word, type: 'word', level }))
     }
     if (includeKanji) {
-      const kanjis = getKanjiByLevel(level)
+      const kanjis = await getKanjiByLevelAsync(level)
       kanjis.forEach((kanji) => allItems.push({ data: kanji, type: 'kanji', level }))
     }
   }
@@ -292,24 +292,31 @@ async function createSentenceFillInQuestion(
     // 1. WordDetails 로드
     const details = await getWordDetails(word.entry, level)
     if (!details || details.examples.length === 0) {
-      // 예문이 없으면 일반 문제로 fallback
-      return null
+      // 예문이 없으면 일반 문제(word-to-meaning)로 fallback
+      console.log(`[Quiz] No examples for "${word.entry}", falling back to word-to-meaning`)
+      return createWordQuestion(word, level, 'word-to-meaning', allItems)
     }
 
     // 2. 랜덤 예문 선택
     const example = details.examples[Math.floor(Math.random() * details.examples.length)]
     
-    // 3. 빈칸 위치 찾기
-    const blankStart = example.expExample1.indexOf(example.expEntry)
+    // 3. 정답 단어 추출 (word.entry가 깨끗한 히라가나)
+    const answerWord = word.entry
+    
+    // 4. 빈칸 위치 찾기 (HTML 태그 제거한 버전에서 찾기)
+    const cleanExample = example.expExample1.replace(/<[^>]+>/g, '')
+    const blankStart = cleanExample.indexOf(answerWord)
+    
     if (blankStart === -1) {
-      // 예문에 해당 단어가 없으면 스킵
-      return null
+      // 예문에 해당 단어가 없으면 일반 문제로 fallback
+      console.log(`[Quiz] Word "${answerWord}" not found in example, falling back to word-to-meaning`)
+      return createWordQuestion(word, level, 'word-to-meaning', allItems)
     }
 
-    // 4. 품사 추출
+    // 5. 품사 추출
     const partOfSpeech = details.words[0]?.meansCollector[0]?.partOfSpeech
 
-    // 5. 오답 생성
+    // 6. 오답 생성
     const wrongAnswers = generateSimilarWords(word, partOfSpeech, level, allItems, 3)
 
     const itemId = `word:${word.entry}`
@@ -317,12 +324,12 @@ async function createSentenceFillInQuestion(
     return {
       id: `${itemId}-${Date.now()}-${Math.random()}`,
       type: 'sentence-fill-in',
-      question: example.expExample1.replace(example.expEntry, '___'),
-      answer: example.expEntry,
-      options: shuffle([example.expEntry, ...wrongAnswers]),
+      question: example.expExample1.replace(/<strong>[^<]*<\/strong>/, '___'),
+      answer: answerWord,
+      options: shuffle([answerWord, ...wrongAnswers]),
       sentenceJa: example.expExample1,
       sentenceKo: example.expExample2,
-      blankPosition: { start: blankStart, end: blankStart + example.expEntry.length },
+      blankPosition: { start: blankStart, end: blankStart + answerWord.length },
       itemId,
       itemType: 'word',
       level,
@@ -330,7 +337,8 @@ async function createSentenceFillInQuestion(
     }
   } catch (error) {
     console.error('[createSentenceFillInQuestion] Error:', error)
-    return null
+    // 에러 발생 시에도 일반 문제로 fallback
+    return createWordQuestion(word, level, 'word-to-meaning', allItems)
   }
 }
 

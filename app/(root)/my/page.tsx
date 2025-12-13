@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
 import { signOutUser } from '@/lib/firebase/auth'
@@ -10,6 +10,7 @@ import { useMembership } from '@/components/membership/MembershipProvider'
 import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
 import { FullScreenModal } from '@/components/ui/FullScreenModal'
 import { handleError } from '@/lib/utils/error/errorHandler'
+import { logger } from '@/lib/utils/logger'
 import { useUserSettings } from '@/hooks/useUserSettings'
 import { usePhoneModal } from '@/hooks/usePhoneModal'
 import { usePayment } from '@/hooks/usePayment'
@@ -36,6 +37,7 @@ import {
   CheckCircle2,
   Languages
 } from 'lucide-react'
+import { Suspense } from 'react'
 
 // --- Helper Components ---
 
@@ -84,8 +86,9 @@ const SectionTitle = ({ children }: { children: React.ReactNode }) => (
   </h3>
 )
 
-export default function MyPage() {
+function MyPageContent() {
   const router = useRouter()
+  const searchParams = useSearchParams()
   const { user } = useAuth()
   const { status: membershipStatus, membership, redeemCode, refresh } = useMembership()
   const { settings, loading: settingsLoading, updateDailyNewLimit } = useUserSettings(user)
@@ -108,6 +111,23 @@ export default function MyPage() {
   const [showPaymentModal, setShowPaymentModal] = useState(false)
   const [paymentTab, setPaymentTab] = useState<'subscription' | 'pass'>('subscription')
   const [selectedPlanId, setSelectedPlanId] = useState<string | null>(null)
+
+  // Check for payment query param to auto-open modal
+  useEffect(() => {
+    const shouldShowPayment = searchParams.get('payment')
+    const tab = searchParams.get('tab') as 'subscription' | 'pass' | null
+    if (shouldShowPayment === 'true' && user) {
+      logger.info('[Payment] Modal auto-opened from paywall', {
+        tab,
+        membershipStatus,
+        timestamp: Date.now(),
+      })
+      setShowPaymentModal(true)
+      if (tab) {
+        setPaymentTab(tab)
+      }
+    }
+  }, [searchParams, user, membershipStatus])
 
   // 전화번호 모달 관리
   const phoneModal = usePhoneModal({
@@ -212,8 +232,10 @@ export default function MyPage() {
   }
 
   const handlePlaceholderPayment = (planId: string) => {
-    // TODO: Implement actual One-Time Payment (Pass) logic here or via usePayment
-    alert(`'${planId}' 이용권 결제 기능은 준비 중입니다.\n구독을 이용해주세요!`)
+    // Redirect to subscription tab instead of showing alert
+    setShowPaymentModal(true)
+    setPaymentTab('subscription')
+    payment.setPayMessage('정기 구독을 이용해주세요. 일회성 이용권은 곧 출시됩니다.')
   }
 
   const loading = settingsLoading
@@ -469,17 +491,24 @@ export default function MyPage() {
             <div className="space-y-3">
               {isAutoRenewing ? (
                 <>
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-3">
+                    <p className="text-xs text-blue-700">
+                      💡 결제 수단 변경이나 구독 해지가 필요하신가요? 아래 방법을 이용해주세요:
+                    </p>
+                    <ul className="text-xs text-blue-700 mt-2 space-y-1 list-disc list-inside">
+                      <li>결제 수단 변경: 신규 결제 수단으로 재구독</li>
+                      <li>구독 해지: 마이페이지 하단 연락처로 문의</li>
+                    </ul>
+                  </div>
                   <button
-                    onClick={() => alert('결제 수단 변경 기능은 준비 중입니다.')}
+                    onClick={() => {
+                      setShowManageModal(false)
+                      setShowPaymentModal(true)
+                      setPaymentTab('subscription')
+                    }}
                     className="w-full py-4 rounded-lg bg-white border border-gray-200 text-gray-900 font-bold hover:bg-gray-50 transition-colors text-sm"
                   >
-                    결제 수단 변경
-                  </button>
-                  <button
-                    onClick={() => alert('구독 해지는 고객센터로 문의해주세요.\n(앱 내 해지 기능 준비 중)')}
-                    className="w-full py-4 rounded-lg bg-white border border-gray-200 text-red-500 font-bold hover:bg-red-50 transition-colors text-sm"
-                  >
-                    구독 해지 예약
+                    새 결제 수단으로 재구독
                   </button>
                 </>
               ) : (
@@ -504,9 +533,17 @@ export default function MyPage() {
             className="bg-surface w-full sm:rounded-[40px] rounded-t-[32px] shadow-2xl relative h-[85vh] sm:h-auto flex flex-col"
           >
             {/* Header */}
-            <div className="p-6 pb-2 flex justify-between items-center shrink-0">
-              <h2 className="text-2xl font-black text-gray-900">Premium Plan</h2>
-              <button onClick={() => setShowPaymentModal(false)} className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 transition-colors">✕</button>
+            <div className="p-6 pb-2 shrink-0">
+              <div className="flex justify-between items-center mb-2">
+                <h2 className="text-2xl font-black text-gray-900">Premium Plan</h2>
+                <button onClick={() => setShowPaymentModal(false)} className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 transition-colors">✕</button>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="inline-block px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-bold">
+                  테스트 모드
+                </span>
+                <span className="text-xs text-gray-500">실제 결제되지 않습니다</span>
+              </div>
             </div>
 
             {/* Tabs */}
@@ -670,5 +707,17 @@ export default function MyPage() {
 
       <ConfirmModal isOpen={showLogoutConfirm} onClose={() => setShowLogoutConfirm(false)} onConfirm={handleLogout} title="로그아웃" message="정말 로그아웃 하시겠습니까?" confirmText="로그아웃" cancelText="취소" confirmButtonColor="danger" />
     </div>
+  )
+}
+
+export default function MyPage() {
+  return (
+    <Suspense fallback={
+      <div className="w-full min-h-screen bg-page flex items-center justify-center">
+        <div className="animate-pulse text-primary font-bold">로딩 중...</div>
+      </div>
+    }>
+      <MyPageContent />
+    </Suspense>
   )
 }

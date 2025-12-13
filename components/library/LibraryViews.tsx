@@ -108,7 +108,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                             >
                                                 {!isEnabled(level, 'word') && (
                                                     <div className="absolute inset-0 bg-gray-500/10 backdrop-blur-[1px] flex items-center justify-center z-10">
-                                                        <span className="bg-black/60 text-white text-xs px-2 py-1 rounded-full">준비 중</span>
+                                                        <span className="bg-black/60 text-white text-xs px-2 py-1 rounded-full">곧 출시</span>
                                                     </div>
                                                 )}
                                                 <div className={`p-3 bg-white rounded-full shadow-sm text-orange-500 ${isEnabled(level, 'word') ? 'group-hover:scale-110' : 'opacity-50'} transition-transform`}>
@@ -133,7 +133,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                             >
                                                 {!isEnabled(level, 'kanji') && (
                                                     <div className="absolute inset-0 bg-gray-500/10 backdrop-blur-[1px] flex items-center justify-center z-10">
-                                                        <span className="bg-black/60 text-white text-xs px-2 py-1 rounded-full">준비 중</span>
+                                                        <span className="bg-black/60 text-white text-xs px-2 py-1 rounded-full">곧 출시</span>
                                                     </div>
                                                 )}
                                                 <div className={`p-3 bg-white rounded-full shadow-sm text-blue-500 ${isEnabled(level, 'kanji') ? 'group-hover:scale-110' : 'opacity-50'} transition-transform`}>
@@ -202,7 +202,7 @@ export const MinimalContentView: React.FC<ViewProps> = ({ onNavigate }) => {
                         <div className="flex-1">
                             <div className="text-base font-bold text-gray-900 flex items-center gap-2">
                                 {item.type === 'word' ? 'Vocabulary' : 'Kanji'}
-                                {!enabled && <span className="text-[10px] bg-gray-200 text-gray-500 px-1.5 py-0.5 rounded">준비 중</span>}
+                                {!enabled && <span className="text-[10px] bg-gray-200 text-gray-500 px-1.5 py-0.5 rounded">곧 출시</span>}
                             </div>
                             <div className="text-xs text-gray-400 font-mono mt-0.5">
                                 {count} CARDS

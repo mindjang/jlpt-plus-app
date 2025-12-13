@@ -133,15 +133,15 @@ export function QuizResultScreen({
                 >
                   <div className="text-body text-text-main mb-1">
                     <span className="font-semibold">Q: </span>
-                    {weak.question}
+                    <span dangerouslySetInnerHTML={{ __html: weak.question }} />
                   </div>
                   <div className="text-label text-red-700">
                     <span className="font-semibold">정답: </span>
-                    {weak.correctAnswer}
+                    <span dangerouslySetInnerHTML={{ __html: weak.correctAnswer }} />
                   </div>
                   <div className="text-label text-text-sub">
                     <span className="font-semibold">선택: </span>
-                    {weak.userAnswer}
+                    <span dangerouslySetInnerHTML={{ __html: weak.userAnswer }} />
                   </div>
                 </div>
               ))}

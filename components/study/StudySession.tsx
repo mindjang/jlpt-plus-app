@@ -103,16 +103,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
   const finishSession = async (finalQueue: StudyCard[]) => {
     setIsSaving(true)
     try {
-      // 비회원/만료 회원: 실제 세션 완료 시 1회차 소진 처리
-      if (user && membershipStatus !== 'member' && !sessionReserved) {
-        try {
-          await recordSession()
-          setSessionReserved(true) // 동일 세션 내 재확인용
-        } catch (error) {
-          logger.error('[StudySession] recordSession on finish failed:', error)
-        }
-      }
-
+      // 세션은 이미 시작 시 예약되었으므로 여기서는 저장만 수행
       if (pendingUpdates.size > 0 && user) {
         const emptyMap = await savePendingUpdates(user.uid, pendingUpdates)
         setPendingUpdates(emptyMap)
@@ -149,7 +140,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
     saveAndExit,
   }), [saveAndExit])
 
-  // 학습 큐 동기화
+  // 학습 큐 동기화 및 세션 예약
   useEffect(() => {
     if (initialQueue.length > 0 && queue.length === 0) {
       setQueue(initialQueue)
@@ -159,9 +150,21 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       setCurrentIndex(0)
       setIsCompleted(false)
       setCompletedStats(null)
+      
+      // 큐가 로드되면 즉시 세션 예약 (무료 회차 소진)
+      if (user && membershipStatus !== 'member' && !sessionReserved && canStartSession) {
+        recordSession()
+          .then(() => {
+            setSessionReserved(true)
+            logger.info('[StudySession] Free session reserved on queue load')
+          })
+          .catch((error) => {
+            logger.error('[StudySession] Failed to reserve session:', error)
+          })
+      }
     }
     setLoading(queueLoading)
-  }, [initialQueue, queueLoading, queue.length, initialCompleted])
+  }, [initialQueue, queueLoading, queue.length, initialCompleted, user, membershipStatus, sessionReserved, canStartSession, recordSession])
 
   // 타이머 시작
   useEffect(() => {

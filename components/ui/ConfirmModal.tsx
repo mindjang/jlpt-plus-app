@@ -41,7 +41,7 @@ export function ConfirmModal({
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={title}>
       <div className="space-y-4">
-        <p className="text-body text-text-main">{message}</p>
+        <p className="text-body text-text-main" dangerouslySetInnerHTML={{ __html: message }} />
         <div className="flex gap-2 pt-4">
           <button
             onClick={onClose}

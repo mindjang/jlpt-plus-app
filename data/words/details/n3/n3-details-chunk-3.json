@@ -16285,7 +16285,7 @@
         "rank": "4",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>初心</rb><rt>しょしん</rt></ruby><ruby><rb>者</rb><rt>しゃ</rt></ruby>が<ruby><rb>駐車</rb><rt>ちゅうしゃ</rt></ruby><ruby><rb>場</rb><rt>じょう</rt></ruby>で<ruby><rb>焦</rb><rt>あせ</rt></ruby>らず<車庫<strong>しゃこ</strong>><ruby><rb>入</rb><rt>い</rt></ruby>れする<ruby><rb>方法</rb><rt>ほうほう</rt></ruby>を<ruby><rb>紹介</rb><rt>しょうかい</rt></ruby>する",
+        "expExample1": "<ruby><rb>初心</rb><rt>しょしん</rt></ruby><ruby><rb>者</rb><rt>しゃ</rt></ruby>が<ruby><rb>駐車</rb><rt>ちゅうしゃ</rt></ruby><ruby><rb>場</rb><rt>じょう</rt></ruby>で<ruby><rb>焦</rb><rt>あせ</rt></ruby>らず<車庫<strong>しゃこ</strong><ruby><rb>入</rb><rt>い</rt></ruby>れする<ruby><rb>方法</rb><rt>ほうほう</rt></ruby>を<ruby><rb>紹介</rb><rt>しょうかい</rt></ruby>する",
         "example2Lang": "1",
         "expExample2": "초보자가 주차장에서 당황하지 않고 주차하는 방법을 소개하다",
         "expEntry": "<strong>しゃこ</strong>いれ[車庫入れ]"
@@ -16294,7 +16294,7 @@
         "rank": "5",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>車外</rb><rt>しゃがい</rt></ruby>からキーを<ruby><rb>操作</rb><rt>そうさ</rt></ruby>して<車庫<strong>しゃこ</strong>><ruby><rb>入</rb><rt>い</rt></ruby>れをしてくれるスマートキーシステムまで<ruby><rb>登場</rb><rt>とうじょう</rt></ruby>した",
+        "expExample1": "<ruby><rb>車外</rb><rt>しゃがい</rt></ruby>からキーを<ruby><rb>操作</rb><rt>そうさ</rt></ruby>して<車庫<strong>しゃこ</strong><ruby><rb>入</rb><rt>い</rt></ruby>れをしてくれるスマートキーシステムまで<ruby><rb>登場</rb><rt>とうじょう</rt></ruby>した",
         "example2Lang": "1",
         "expExample2": "차 외부에서 키를 조작하여 차고에 넣어 주는 스마트 키 시스템까지 등장했다",
         "expEntry": "スマートキー"

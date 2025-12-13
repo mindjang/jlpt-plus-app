@@ -14,9 +14,7 @@ export default function WordDetailPage() {
   const word = decodeURIComponent(params.id as string)
   const [wordDetails, setWordDetails] = useState<WordDetails | null>(null)
   const [loading, setLoading] = useState(true)
-
-  // 네이버 단어 데이터에서 찾기
-  const naverWord = findNaverWord(word)
+  const [naverWord, setNaverWord] = useState<any>(null)
 
   // 레벨 매핑
   const levelMap: Record<string, Level> = {
@@ -28,22 +26,28 @@ export default function WordDetailPage() {
   }
   const jlptLevel = naverWord ? (levelMap[naverWord.level] || 'N5') : 'N5'
 
-  // WordDetails 로드
+  // 네이버 단어 데이터 및 WordDetails 로드
   useEffect(() => {
-    const loadDetails = async () => {
+    const loadData = async () => {
       setLoading(true)
       try {
-        const details = await getWordDetails(word, jlptLevel)
+        // Load naver word first
+        const nWord = await findNaverWord(word)
+        setNaverWord(nWord)
+        
+        // Then load word details
+        const level = nWord ? (levelMap[nWord.level] || 'N5') : 'N5'
+        const details = await getWordDetails(word, level)
         setWordDetails(details)
       } catch (error) {
-        console.error('[WordDetailPage] Error loading word details:', error)
+        console.error('[WordDetailPage] Error loading word data:', error)
       } finally {
         setLoading(false)
       }
     }
 
-    loadDetails()
-  }, [word, jlptLevel])
+    loadData()
+  }, [word])
 
   // 첫 번째 단어 정보 (우선순위가 높은 것)
   const primaryWord = wordDetails?.words?.[0]
@@ -95,7 +99,7 @@ export default function WordDetailPage() {
               {/* 기본 의미 (NaverWord에서) */}
               {naverWord?.partsMeans && naverWord.partsMeans.length > 0 && (
                 <div className="space-y-3 pt-4 border-t border-divider">
-                  {naverWord.partsMeans.map((partMean, index) => (
+                  {naverWord.partsMeans.map((partMean: any, index: number) => (
                     <div key={index}>
                       {partMean.part && (
                         <span className="inline-block px-2 py-1 text-label font-medium text-text-sub bg-page rounded-md mb-2">
@@ -104,7 +108,7 @@ export default function WordDetailPage() {
                       )}
                       {partMean.means && partMean.means.length > 0 && (
                         <div className="space-y-1">
-                          {partMean.means.map((mean, meanIndex) => (
+                          {partMean.means.map((mean: string, meanIndex: number) => (
                             <p key={meanIndex} className="text-body text-text-main">
                               {mean}
                             </p>
@@ -222,7 +226,7 @@ export default function WordDetailPage() {
                           )}
                         </div>
                         {item.means && item.means.length > 0 && (
-                          <p className="text-body text-text-sub">{item.means[0]}</p>
+                          <p className="text-body text-text-sub" dangerouslySetInnerHTML={{ __html: item.means[0] }} />
                         )}
                       </div>
                     </div>

@@ -56,11 +56,11 @@ export function QuizCard({
 
     return (
       <>
-        <span>{before}</span>
+        <span dangerouslySetInnerHTML={{ __html: before }} />
         <span className="inline-block min-w-[80px] mx-1 px-3 py-1 border-2 border-dashed border-primary bg-primary bg-opacity-10 rounded text-center">
           {showResult ? blank : '　'}
         </span>
-        <span>{after}</span>
+        <span dangerouslySetInnerHTML={{ __html: after }} />
       </>
     )
   }
@@ -159,7 +159,7 @@ export function QuizCard({
                   {showResult && isCorrectAnswer && <span>✓</span>}
                   {showResult && isSelected && !isCorrect && <span>✗</span>}
                   <span className={question.type === 'meaning-to-word' || question.type === 'sentence-fill-in' ? 'text-jp' : ''}>
-                    {option}
+                    <span dangerouslySetInnerHTML={{ __html: option }} />
                   </span>
                 </div>
               </motion.button>

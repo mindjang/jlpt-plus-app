@@ -1,0 +1,73 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Users collection
+    match /users/{userId} {
+      // User profile: owner can read/write
+      allow read, write: if isOwner(userId);
+      
+      // User cards: owner can read/write
+      match /cards/{cardId} {
+        allow read, write: if isOwner(userId);
+      }
+      
+      // Membership info: owner can read, server-only write
+      match /membership/{doc} {
+        allow read: if isOwner(userId);
+        allow write: if false; // Server-only via Admin SDK
+      }
+      
+      // Daily usage: owner can read, server handles write
+      match /usage/{dateKey} {
+        allow read: if isOwner(userId);
+        allow write: if false; // Server-only via Admin SDK
+      }
+      
+      // Billing info: SERVER-ONLY (no client read/write)
+      match /billing/{doc} {
+        allow read, write: if false; // Server-only via Admin SDK
+      }
+      
+      // Stats: owner can read/write
+      match /stats/{doc} {
+        allow read, write: if isOwner(userId);
+      }
+      
+      // Daily activity: owner can read/write
+      match /dailyActivity/{dateKey} {
+        allow read, write: if isOwner(userId);
+      }
+      
+      // Quiz data: owner can read/write
+      match /quiz/{doc} {
+        allow read, write: if isOwner(userId);
+      }
+      
+      // Quiz sessions: owner can read/write
+      match /quizSessions/{sessionId} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+    
+    // Gift codes: read-only for authenticated users, server-only write
+    match /codes/{code} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Server-only via Admin SDK
+    }
+    
+    // Admin collection: no client access
+    match /admin/{document=**} {
+      allow read, write: if false; // Server-only via Admin SDK
+    }
+  }
+}

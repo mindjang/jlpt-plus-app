@@ -1,52 +1,83 @@
 import { KanjiAliveEntry, Level } from '../types'
-import { n5Kanji } from './n5'
-import { n4Kanji } from './n4'
-import { n3Kanji } from './n3'
-import { n2Kanji } from './n2'
-import { n1Kanji } from './n1'
 
-// 레벨별 한자 데이터 통합
-// N1은 WordData 형식이므로 나중에 변환 필요 (현재는 빈 배열)
-const allKanjiByLevel: Record<Level, KanjiAliveEntry[]> = {
-  N5: n5Kanji,
-  N4: n4Kanji,
-  N3: n3Kanji,
-  N2: n2Kanji,
-  N1: [], // TODO: n1Kanji를 KanjiAliveEntry로 변환 필요
-}
-
-// 모든 한자 통합 (검색용)
-const allKanji: KanjiAliveEntry[] = [
-  ...n5Kanji,
-  ...n4Kanji,
-  ...n3Kanji,
-  ...n2Kanji,
-  // ...n1Kanji, // TODO: 변환 후 추가
-]
+// Lazy-loaded cache for kanji data
+const kanjiCache: Partial<Record<Level, KanjiAliveEntry[]>> = {}
 
 /**
- * 레벨별 한자 가져오기
+ * 레벨별 한자 가져오기 (동기 - 레거시 호환)
+ * @deprecated getKanjiByLevelAsync 사용 권장 (번들 크기 절감)
  */
 export const getKanjiByLevel = (level: Level): KanjiAliveEntry[] => {
-  return allKanjiByLevel[level] || []
+  // For legacy code that expects sync data, return empty array
+  // New code should use async version
+  console.warn('getKanjiByLevel is deprecated. Use getKanjiByLevelAsync for better performance.')
+  return kanjiCache[level] || []
 }
 
 /**
- * 특정 한자 찾기
+ * 레벨별 한자 가져오기 (비동기 - 지연 로딩)
+ * 필요한 레벨 데이터만 동적으로 로드하여 초기 번들 크기를 줄입니다.
  */
-export const getKanjiEntry = (kanji: string): KanjiAliveEntry | null => {
-  return allKanji.find((item) => {
-    const character = item.kanji?.character || item.ka_utf
-    return character === kanji
-  }) || null
+export const getKanjiByLevelAsync = async (level: Level): Promise<KanjiAliveEntry[]> => {
+  // Check cache first
+  if (kanjiCache[level]) {
+    return kanjiCache[level]!
+  }
+
+  // Dynamic import based on level
+  let kanji: KanjiAliveEntry[]
+  switch (level) {
+    case 'N5':
+      const { n5Kanji } = await import('./n5')
+      kanji = n5Kanji
+      break
+    case 'N4':
+      const { n4Kanji } = await import('./n4')
+      kanji = n4Kanji
+      break
+    case 'N3':
+      const { n3Kanji } = await import('./n3')
+      kanji = n3Kanji
+      break
+    case 'N2':
+      const { n2Kanji } = await import('./n2')
+      kanji = n2Kanji
+      break
+    case 'N1':
+      const { n1Kanji } = await import('./n1')
+      kanji = n1Kanji
+      break
+    default:
+      kanji = []
+  }
+
+  // Cache for future use
+  kanjiCache[level] = kanji
+  return kanji
 }
 
 /**
- * 한자의 레벨 찾기
+ * 특정 한자 찾기 (비동기)
  */
-export const getKanjiLevel = (kanji: string): Level | null => {
+export const getKanjiEntry = async (kanji: string): Promise<KanjiAliveEntry | null> => {
+  const allLevels: Level[] = ['N5', 'N4', 'N3', 'N2', 'N1']
+  for (const level of allLevels) {
+    const entries = await getKanjiByLevelAsync(level)
+    const found = entries.find((item) => {
+      const character = item.kanji?.character || item.ka_utf
+      return character === kanji
+    })
+    if (found) return found
+  }
+  return null
+}
+
+/**
+ * 한자의 레벨 찾기 (비동기)
+ */
+export const getKanjiLevel = async (kanji: string): Promise<Level | null> => {
   for (const level of ['N5', 'N4', 'N3', 'N2', 'N1'] as Level[]) {
-    const entries = allKanjiByLevel[level]
+    const entries = await getKanjiByLevelAsync(level)
     const found = entries.find((item) => {
       const character = item.kanji?.character || item.ka_utf
       return character === kanji
@@ -57,10 +88,21 @@ export const getKanjiLevel = (kanji: string): Level | null => {
 }
 
 /**
- * 한자 검색
+ * 한자 검색 (비동기)
  */
-export const searchKanji = (query: string, level?: Level): KanjiAliveEntry[] => {
-  const targetKanji = level ? allKanjiByLevel[level] : allKanji
+export const searchKanji = async (query: string, level?: Level): Promise<KanjiAliveEntry[]> => {
+  let targetKanji: KanjiAliveEntry[] = []
+  
+  if (level) {
+    targetKanji = await getKanjiByLevelAsync(level)
+  } else {
+    // Load all levels
+    const allLevels: Level[] = ['N5', 'N4', 'N3', 'N2', 'N1']
+    const results = await Promise.all(
+      allLevels.map(lvl => getKanjiByLevelAsync(lvl))
+    )
+    targetKanji = results.flat()
+  }
   
   if (!query) {
     return targetKanji
@@ -90,11 +132,12 @@ export const searchKanji = (query: string, level?: Level): KanjiAliveEntry[] => 
 }
 
 /**
- * 전체 한자 수 가져오기
+ * 전체 한자 수 가져오기 (비동기)
  */
-export const getTotalKanjiCount = (): number => {
-  return allKanji.length
+export const getTotalKanjiCount = async (): Promise<number> => {
+  const allLevels: Level[] = ['N5', 'N4', 'N3', 'N2', 'N1']
+  const results = await Promise.all(
+    allLevels.map(lvl => getKanjiByLevelAsync(lvl))
+  )
+  return results.reduce((sum, kanji) => sum + kanji.length, 0)
 }
-
-// 레벨별 export
-export { n5Kanji, n4Kanji, n3Kanji, n2Kanji, n1Kanji }

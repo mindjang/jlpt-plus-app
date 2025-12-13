@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useMemo } from 'react'
+import React, { useMemo, useState, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { AppBar } from '@/components/ui/AppBar'
 import { LevelChip } from '@/components/ui/LevelChip'
@@ -20,9 +20,35 @@ export default function KanjiDetailPage() {
   const router = useRouter()
   const params = useParams()
   const kanji = decodeURIComponent(params.id as string)
+  const [kanjiEntry, setKanjiEntry] = useState<any>(null)
+  const [level, setLevel] = useState<string>('N5')
+  const [loading, setLoading] = useState(true)
 
-  // 데이터에서 가져오기
-  const kanjiEntry = getKanjiEntry(kanji)
+  // Load kanji data
+  useEffect(() => {
+    const loadKanji = async () => {
+      setLoading(true)
+      try {
+        const entry = await getKanjiEntry(kanji)
+        setKanjiEntry(entry)
+        const kanjiLevel = await getKanjiLevel(kanji)
+        setLevel(kanjiLevel || 'N5')
+      } catch (error) {
+        console.error('Failed to load kanji:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    loadKanji()
+  }, [kanji])
+
+  if (loading) {
+    return (
+      <div className="w-full min-h-screen bg-page flex items-center justify-center">
+        <div className="animate-pulse text-primary font-bold">로딩 중...</div>
+      </div>
+    )
+  }
 
   if (!kanjiEntry) {
     return (
@@ -40,8 +66,6 @@ export default function KanjiDetailPage() {
     )
   }
 
-  // 레벨 찾기
-  const level = getKanjiLevel(kanji) || 'N5'
   const character = getKanjiCharacter(kanjiEntry)
   const onYomi = getOnYomi(kanjiEntry)
   const kunYomi = getKunYomi(kanjiEntry)
@@ -50,26 +74,8 @@ export default function KanjiDetailPage() {
   const relatedWords = getRelatedWords(kanjiEntry, level)
   const meaning = getKanjiMeaning(kanjiEntry)
 
-  // 유사 한자 찾기 (같은 부수를 가진 한자, 최대 5개)
-  const similarKanji = useMemo(() => {
-    if (!radical) return []
-    const allKanji = searchKanji('')
-    return allKanji
-      .filter((entry) => {
-        const entryChar = getKanjiCharacter(entry)
-        const entryRadical = getRadical(entry)
-        return entryChar !== character && entryRadical === radical
-      })
-      .slice(0, 5)
-      .map((entry) => ({
-        character: getKanjiCharacter(entry),
-        level: getKanjiLevel(getKanjiCharacter(entry)) || 'N5',
-        meaning: getKanjiMeaning(entry),
-        onYomi: getOnYomi(entry),
-        kunYomi: getKunYomi(entry),
-        radical: getRadical(entry),
-      }))
-  }, [radical, character])
+  // 유사 한자는 skip (성능 문제로 인해 비활성화)
+  const similarKanji: any[] = []
 
   // 한자 구성 요소 (부수와 기본 구성)
   const components = useMemo(() => {
@@ -116,7 +122,7 @@ export default function KanjiDetailPage() {
             <h1 className="text-display-l text-jp font-medium text-text-main mb-4">
               {character}
             </h1>
-            <LevelChip level={level} />
+            <LevelChip level={level as any} />
             <div className="text-title text-text-main font-semibold mt-2">
               {meaning}
             </div>

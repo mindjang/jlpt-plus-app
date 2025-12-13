@@ -19,11 +19,37 @@ export default function KanjiStrokeOrderPage() {
   const params = useParams()
   const kanji = decodeURIComponent(params.id as string)
 
-  const kanjiEntry = getKanjiEntry(kanji)
-  const level = getKanjiLevel(kanji) || 'N5'
-
+  const [kanjiEntry, setKanjiEntry] = useState<any>(null)
+  const [level, setLevel] = useState<string>('N5')
+  const [loading, setLoading] = useState(true)
   const [currentStroke, setCurrentStroke] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
+
+  // Load kanji data
+  useEffect(() => {
+    const loadKanji = async () => {
+      setLoading(true)
+      try {
+        const entry = await getKanjiEntry(kanji)
+        setKanjiEntry(entry)
+        const kanjiLevel = await getKanjiLevel(kanji)
+        setLevel(kanjiLevel || 'N5')
+      } catch (error) {
+        console.error('Failed to load kanji:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    loadKanji()
+  }, [kanji])
+
+  if (loading) {
+    return (
+      <div className="w-full min-h-screen bg-page flex items-center justify-center">
+        <div className="animate-pulse text-primary font-bold">로딩 중...</div>
+      </div>
+    )
+  }
 
   if (!kanjiEntry) {
     return (
@@ -182,7 +208,7 @@ export default function KanjiStrokeOrderPage() {
             </div>
             <div className="flex-1">
               <div className="mb-2">
-                <LevelChip level={level} />
+                <LevelChip level={level as any} />
               </div>
               <div className="text-title text-text-main font-semibold">
                 {getKanjiMeaning(kanjiEntry)}

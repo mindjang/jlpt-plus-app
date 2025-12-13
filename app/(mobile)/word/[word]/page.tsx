@@ -1,23 +1,53 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { AppBar } from '@/components/ui/AppBar'
 import { KanjiDetail } from '@/components/ui/KanjiDetail'
 import { getWordData } from '@/data'
+import type { WordData } from '@/data/types'
 
 export default function WordDetailPage() {
   const router = useRouter()
   const params = useParams()
   const word = decodeURIComponent(params.word as string)
+  const [wordData, setWordData] = useState<WordData | null>(null)
+  const [loading, setLoading] = useState(true)
 
-  // 데이터에서 가져오기 (없으면 기본값)
-  const wordData = getWordData(word) || {
-    level: 'N5' as const,
-    kanji: word,
-    onYomi: [],
-    kunYomi: [],
-    relatedWords: [],
+  useEffect(() => {
+    const loadData = async () => {
+      setLoading(true)
+      try {
+        const data = await getWordData(word)
+        setWordData(data || {
+          level: 'N5' as const,
+          kanji: word,
+          onYomi: [],
+          kunYomi: [],
+          relatedWords: [],
+        })
+      } catch (error) {
+        console.error('Failed to load word data:', error)
+        setWordData({
+          level: 'N5' as const,
+          kanji: word,
+          onYomi: [],
+          kunYomi: [],
+          relatedWords: [],
+        })
+      } finally {
+        setLoading(false)
+      }
+    }
+    loadData()
+  }, [word])
+  
+  if (loading || !wordData) {
+    return (
+      <div className="w-full min-h-screen bg-page flex items-center justify-center">
+        <div className="animate-pulse text-primary font-bold">로딩 중...</div>
+      </div>
+    )
   }
 
   return (

@@ -54,26 +54,11 @@ function StatsContent() {
           >
             학습별
           </button>
-          <button
-            onClick={() => setActiveTab('vocabulary')}
-            className={`flex-1 py-2 rounded-card text-body font-medium transition-colors ${
-              activeTab === 'vocabulary'
-                ? 'bg-primary text-white'
-                : 'text-text-sub hover:bg-page'
-            }`}
-          >
-            어휘력
-          </button>
         </div>
 
         {/* 탭 컨텐츠 */}
         {activeTab === 'period' && <PeriodStats />}
         {activeTab === 'category' && <CategoryStats />}
-        {activeTab === 'vocabulary' && (
-          <div className="bg-surface rounded-card shadow-soft p-8 text-center">
-            <div className="text-body text-text-sub">어휘력 통계는 준비 중입니다</div>
-          </div>
-        )}
       </div>
     </div>
   )

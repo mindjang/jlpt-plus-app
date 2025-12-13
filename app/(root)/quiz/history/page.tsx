@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
+import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
 import type { QuizHistorySummary } from '@/lib/types/quiz'
 import { getQuizHistory } from '@/lib/firebase/firestore/quiz'
 import { motion } from 'framer-motion'
@@ -61,9 +62,12 @@ export default function QuizHistoryPage() {
 
   if (!user) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-body text-text-sub">로그인이 필요합니다.</div>
-      </div>
+      <LoginRequiredScreen
+        title="퀴즈 히스토리"
+        showBackButton
+        onBack={() => router.back()}
+        description="퀴즈 기록을 확인하려면\n로그인이 필요합니다."
+      />
     )
   }
 

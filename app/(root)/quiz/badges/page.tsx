@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
+import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
 import { BadgeGallery } from '@/components/quiz/BadgeGallery'
 import { getUserQuizLevel, getAllQuizStats } from '@/lib/firebase/firestore/quiz'
 import type { UserQuizLevel, QuizStats } from '@/lib/types/quiz'
@@ -50,9 +51,12 @@ export default function BadgesPage() {
 
   if (!user || !userLevel || !allStats) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-body text-text-sub">로그인이 필요합니다.</div>
-      </div>
+      <LoginRequiredScreen
+        title="배지 갤러리"
+        showBackButton
+        onBack={() => router.back()}
+        description="배지를 확인하려면\n로그인이 필요합니다."
+      />
     )
   }
 

@@ -48,7 +48,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                         key={level}
                         layout
                         onClick={() => setExpandedLevel(isExpanded ? null : level)}
-                        className={`relative rounded-2xl overflow-hidden cursor-pointer shadow-soft transition-all duration-500 ease-spring`}
+                        className={`relative rounded-lg overflow-hidden cursor-pointer shadow-soft transition-all duration-500 ease-spring`}
                         style={{
                             ...getGradientStyle(level),
                             height: isExpanded ? '280px' : '72px',
@@ -101,7 +101,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                                     e.stopPropagation();
                                                     if (isEnabled(level, 'word')) onNavigate(level, 'word');
                                                 }}
-                                                className={`flex flex-col items-center justify-center p-4 rounded-2xl gap-2 transition-colors group relative overflow-hidden ${isEnabled(level, 'word')
+                                                className={`flex flex-col items-center justify-center p-4 rounded-lg gap-2 transition-colors group relative overflow-hidden ${isEnabled(level, 'word')
                                                         ? 'bg-white/60 hover:bg-white'
                                                         : 'bg-white/30 cursor-not-allowed'
                                                     }`}
@@ -126,7 +126,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                                     e.stopPropagation();
                                                     if (isEnabled(level, 'kanji')) onNavigate(level, 'kanji');
                                                 }}
-                                                className={`flex flex-col items-center justify-center p-4 rounded-2xl gap-2 transition-colors group relative overflow-hidden ${isEnabled(level, 'kanji')
+                                                className={`flex flex-col items-center justify-center p-4 rounded-lg gap-2 transition-colors group relative overflow-hidden ${isEnabled(level, 'kanji')
                                                         ? 'bg-white/60 hover:bg-white'
                                                         : 'bg-white/30 cursor-not-allowed'
                                                     }`}

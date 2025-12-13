@@ -188,9 +188,10 @@ export default function WordDetailPage() {
                       </div>
                       {example.expEntry && (
                         <div className="mt-2">
-                          <span className="text-label text-text-sub">
-                            {example.expEntry}
-                          </span>
+                          <span
+                            className="text-label text-text-sub"
+                            dangerouslySetInnerHTML={{ __html: example.expEntry }}
+                          />
                         </div>
                       )}
                     </div>

@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import { PeriodStats } from '@/components/stats/PeriodStats'
 import { CategoryStats } from '@/components/stats/CategoryStats'
 import { useAuth } from '@/components/auth/AuthProvider'
+import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
 
 type TabType = 'period' | 'category' | 'vocabulary'
 
@@ -17,12 +18,12 @@ function StatsContent() {
 
   if (!user) {
     return (
-      <div className="w-full overflow-hidden">
-        <AppBar title="학습 통계" onBack={() => router.back()} />
-        <div className="flex items-center justify-center h-screen">
-          <p className="text-text-sub">로그인이 필요합니다</p>
-        </div>
-      </div>
+      <LoginRequiredScreen
+        title="학습 통계"
+        showBackButton
+        onBack={() => router.back()}
+        description="학습 통계를 확인하려면<br />로그인이 필요합니다."
+      />
     )
   }
 

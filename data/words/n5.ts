@@ -1056,7 +1056,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "156113e5813f40d682b7a017238a2318",
     origin_entry_id: "JK000000010198",
     entry: "おかあさん",
-    kanji: "お母<strong>さん</strong>∙御母<strong>さん</strong>",
+    kanji: "お母さん∙御母さん",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -1107,7 +1107,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "0073eec05a0f48b09bd56a49b92c06d8",
     origin_entry_id: "JK000000010337",
     entry: "おきゃくさん",
-    kanji: "お客<strong>さん</strong>·御客<strong>さん</strong>",
+    kanji: "お客さん·御客さん",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -1124,7 +1124,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "9086db7ff1db421f881c9356b0bebbce",
     origin_entry_id: "JK000000010370",
     entry: "おくさん",
-    kanji: "奥<strong>さん</strong>",
+    kanji: "奥さん",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -1175,7 +1175,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "98f8636daf764a80a352f507cf65a1ea",
     origin_entry_id: "JK000000010598",
     entry: "おじいさん",
-    kanji: "お祖父<strong>さん</strong>·お爺<strong>さん</strong>",
+    kanji: "お祖父さん·お爺さん",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -1192,7 +1192,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "53d8f278eece48fc8ce1bb62737e911d",
     origin_entry_id: "JK000000010644",
     entry: "おじさん",
-    kanji: "伯父<strong>さん</strong>·叔父<strong>さん</strong>·小父<strong>さん</strong>",
+    kanji: "伯父さん·叔父さん·小父さん",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -1226,7 +1226,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "5158c6a165b74537995c97cb8f40d772",
     origin_entry_id: "JK000000011065",
     entry: "おとうさん",
-    kanji: "お父<strong>さん</strong>",
+    kanji: "お父さん",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -1379,7 +1379,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "ef3233f797944d3d885fcde35c42a0b2",
     origin_entry_id: "JK000000011266",
     entry: "おにいさん",
-    kanji: "お兄<strong>さん</strong>",
+    kanji: "お兄さん",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -1396,7 +1396,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "d7b268f73f174924b066e689a84400a3",
     origin_entry_id: "JK000000011300",
     entry: "おねえさん",
-    kanji: "お姉<strong>さん</strong>·御姉<strong>さん</strong>",
+    kanji: "お姉さん·御姉さん",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -1413,7 +1413,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "d6312c00b2e94dbdaac59b6d2214627b",
     origin_entry_id: "JK000000011325",
     entry: "おばあさん",
-    kanji: "お祖母<strong>さん</strong>·お婆<strong>さん</strong>",
+    kanji: "お祖母さん·お婆さん",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -1430,7 +1430,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "61700a3be8854b29ad90c1cb02de293d",
     origin_entry_id: "JK000000011337",
     entry: "おばさん",
-    kanji: "伯母<strong>さん</strong>·叔母<strong>さん</strong>·小母<strong>さん</strong>",
+    kanji: "伯母さん·叔母さん·小母さん",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -6811,7 +6811,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "89d78a56ab8849599e56e60a83ae2b6d",
     origin_entry_id: "JK000000085096",
     entry: "みなさん",
-    kanji: "皆<strong>さん</strong>",
+    kanji: "皆さん",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -6896,7 +6896,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "05b8edb503994326b120f9899b2f4511",
     origin_entry_id: "JK000000001021",
     entry: "あ-ける",
-    kanji: "開<strong>ける</strong>",
+    kanji: "開ける",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -6913,7 +6913,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "6ecdd8383df041959c2ce020fed4a98e",
     origin_entry_id: "JK000000001022",
     entry: "あ-げる",
-    kanji: "上<strong>げる</strong>",
+    kanji: "上げる",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -6947,7 +6947,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "d60eda43a7c4424aa2e2f4fc4d49831e",
     origin_entry_id: "JK000000001949",
     entry: "あ-びる",
-    kanji: "浴<strong>びる</strong>",
+    kanji: "浴びる",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7083,7 +7083,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "edab787f997a46668e1f4da94fa88d7e",
     origin_entry_id: "JK000000005696",
     entry: "い-れる",
-    kanji: "入<strong>れる</strong>",
+    kanji: "入れる",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7117,7 +7117,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "b5787488d7214d2b956f8685b150870f",
     origin_entry_id: "JK000000007492",
     entry: "うま-れる",
-    kanji: "生(ま)<strong>れる</strong>·産(ま)<strong>れる</strong>",
+    kanji: "生(ま)れる·産(ま)れる",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7151,7 +7151,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "6cc3b426fa4c48578a82c6500d73a643",
     origin_entry_id: "JK000000010343",
     entry: "お-きる",
-    kanji: "起<strong>きる</strong>",
+    kanji: "起きる",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7185,7 +7185,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "bda71452196c494f8efdc31833aa4da7",
     origin_entry_id: "JK000000010610",
     entry: "おし-える",
-    kanji: "教<strong>える</strong>",
+    kanji: "教える",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7219,7 +7219,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "898bc1e6d187412da2bb13ed87ea6e19",
     origin_entry_id: "JK000000011489",
     entry: "おぼ-える",
-    kanji: "覚<strong>える</strong>",
+    kanji: "覚える",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7253,7 +7253,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "59852c4f92554e3591c91e09352ee278",
     origin_entry_id: "JK000000011964",
     entry: "お-りる",
-    kanji: "降<strong>りる</strong>",
+    kanji: "降りる",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7270,7 +7270,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "b433d11503a7497da724e3de3b19bfa5",
     origin_entry_id: "JK000000012038",
     entry: "おわ-る",
-    kanji: "終(わ)<strong>る</strong>",
+    kanji: "終(わ)る",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7338,7 +7338,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "26d8d5ed4c5e4cb6ae15ba3ac1564e33",
     origin_entry_id: "JK000000013738",
     entry: "かか-る",
-    kanji: "掛(か)<strong>る</strong>",
+    kanji: "掛(か)る",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7406,7 +7406,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "4803b56bdf03409cb4ed31238bfd0b20",
     origin_entry_id: "JK000000017363",
     entry: "か-りる",
-    kanji: "借<strong>りる</strong>",
+    kanji: "借りる",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7423,7 +7423,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "5652f65bd66f45f5ac1b9c53d10d8110",
     origin_entry_id: "JK000000019153",
     entry: "き-える",
-    kanji: "消<strong>える</strong>",
+    kanji: "消える",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7491,7 +7491,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "411b73aa0f684c10974ac2a09efbd9a2",
     origin_entry_id: "JK000000030819",
     entry: "こた-える",
-    kanji: "答<strong>える</strong>",
+    kanji: "答える",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7559,7 +7559,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "ff7e759d1563483fba43a6c351f8ec56",
     origin_entry_id: "JK000000038644",
     entry: "しま-る",
-    kanji: "閉(ま)<strong>る</strong>",
+    kanji: "閉(ま)る",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7576,7 +7576,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "db408676e50e48949aea5a1fc4228934",
     origin_entry_id: "JK000000038764",
     entry: "し-める",
-    kanji: "締<strong>める</strong>",
+    kanji: "締める",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7678,7 +7678,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "c650d30f378b49dca0ecd6ea85fcc258",
     origin_entry_id: "JK000000055103",
     entry: "た-べる",
-    kanji: "食<strong>べる</strong>",
+    kanji: "食べる",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -7950,7 +7950,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "7b83f56608ab49cca42c63bf8595e04f",
     origin_entry_id: "JK000000082998",
     entry: "まが-る",
-    kanji: "曲(<strong>が</strong>)<strong>る</strong>",
+    kanji: "曲(が)る",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -8001,7 +8001,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "6c14dc1a4c7e443e80a2c1adbebf3470",
     origin_entry_id: "JK000000084780",
     entry: "み-せる",
-    kanji: "見<strong>せる</strong>",
+    kanji: "見せる",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -8103,7 +8103,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "4cdbeaafddef42d4a31f0153ee67679d",
     origin_entry_id: "JK000000095354",
     entry: "わか-る",
-    kanji: "分(か)<strong>る</strong>∙判る∙解る",
+    kanji: "分(か)る∙判る∙解る",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -9280,7 +9280,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "62e3936f40fb49c893fc7d179c55e32b",
     origin_entry_id: "JK000000100303",
     entry: "もういちど",
-    kanji: "<strong>もう</strong>一度",
+    kanji: "もう一度",
     level: "5",
     source: "80198531",
     partsMeans: [
@@ -9621,7 +9621,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "e36f731211f54adb9da1eb019009b516",
     origin_entry_id: "JK110007",
     entry: "おやすみなさい",
-    kanji: "お休み<strong>なさい</strong>∙御休み<strong>なさい</strong>",
+    kanji: "お休みなさい∙御休みなさい",
     level: "5",
     source: "081341B9",
     partsMeans: [
@@ -10966,7 +10966,7 @@ export const n5Words: NaverWord[] = [
     entry_id: "08168b5e41af4b51b60c24f3d00825eb",
     origin_entry_id: "JK000000062251",
     entry: "どうして",
-    kanji: "如何<strong>して</strong>",
+    kanji: "如何して",
     level: "5",
     source: "081341B9",
     partsMeans: [

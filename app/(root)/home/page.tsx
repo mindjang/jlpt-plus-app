@@ -128,7 +128,7 @@ export default function HomePage() {
                 </p>
                 <button
                   onClick={handleStartReview}
-                  className="w-full py-4 bg-white text-orange-600 rounded-xl font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2 group"
+                  className="w-full py-4 bg-white text-orange-600 rounded-lg font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2 group"
                 >
                   <Play size={20} fill="currentColor" />
                   복습 시작하기
@@ -151,7 +151,7 @@ export default function HomePage() {
                 </p>
                 <button
                   onClick={handleStartNew}
-                  className="w-full py-4 bg-white text-blue-600 rounded-xl font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+                  className="w-full py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
                 >
                   <BookOpen size={20} />
                   {userLevel} 학습 시작
@@ -178,9 +178,9 @@ export default function HomePage() {
           <div className="grid grid-cols-2 gap-4">
             <button
               onClick={() => router.push(`/acquire/auto-study/${userLevel.toLowerCase()}`)}
-              className="p-5 bg-surface rounded-2xl shadow-soft hover:shadow-md transition-all text-left group border border-divider"
+              className="p-5 bg-surface rounded-lg shadow-soft hover:shadow-md transition-all text-left group border border-divider"
             >
-              <div className="p-3 bg-blue-50 text-blue-500 rounded-xl w-fit mb-3 group-hover:bg-blue-100 transition-colors">
+              <div className="p-3 bg-blue-50 text-blue-500 rounded-lg w-fit mb-3 group-hover:bg-blue-100 transition-colors">
                 <BookOpen size={24} />
               </div>
               <h4 className="font-bold text-text-main text-lg">단어/한자</h4>
@@ -189,9 +189,9 @@ export default function HomePage() {
 
             <button
               onClick={() => router.push('/practice/quiz')}
-              className="p-5 bg-surface rounded-2xl shadow-soft hover:shadow-md transition-all text-left group border border-divider"
+              className="p-5 bg-surface rounded-lg shadow-soft hover:shadow-md transition-all text-left group border border-divider"
             >
-              <div className="p-3 bg-purple-50 text-purple-500 rounded-xl w-fit mb-3 group-hover:bg-purple-100 transition-colors">
+              <div className="p-3 bg-purple-50 text-purple-500 rounded-lg w-fit mb-3 group-hover:bg-purple-100 transition-colors">
                 <Brain size={24} />
               </div>
               <h4 className="font-bold text-text-main text-lg">일일 퀴즈</h4>
@@ -200,10 +200,10 @@ export default function HomePage() {
 
             <button
               onClick={() => router.push('/stats')}
-              className="col-span-2 p-5 bg-surface rounded-2xl shadow-soft hover:shadow-md transition-all flex items-center justify-between group border border-divider"
+              className="col-span-2 p-5 bg-surface rounded-lg shadow-soft hover:shadow-md transition-all flex items-center justify-between group border border-divider"
             >
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-green-50 text-green-500 rounded-xl group-hover:bg-green-100 transition-colors">
+                <div className="p-3 bg-green-50 text-green-500 rounded-lg group-hover:bg-green-100 transition-colors">
                   <TrendingUp size={24} />
                 </div>
                 <div>

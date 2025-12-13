@@ -96,7 +96,7 @@ export default function BlastGamePage() {
                   <button
                     key={lvl}
                     onClick={() => setSelectedLevel(lvl)}
-                    className={`flex-1 py-3 rounded-xl font-bold transition-all relative overflow-hidden ${selectedLevel === lvl
+                    className={`flex-1 py-3 rounded-lg font-bold transition-all relative overflow-hidden ${selectedLevel === lvl
                         ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white shadow-[0_0_25px_rgba(251,191,36,0.6)] scale-105'
                         : 'bg-white/10 text-white/60 hover:bg-white/20'
                       }`}
@@ -113,7 +113,7 @@ export default function BlastGamePage() {
               <div className="grid grid-cols-2 gap-4">
                 <button
                   onClick={() => setGameMode('word')}
-                  className={`p-4 rounded-2xl border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'word'
+                  className={`p-4 rounded-lg border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'word'
                       ? 'border-pink-500 bg-pink-500/20 text-pink-300 shadow-[0_0_20px_rgba(236,72,153,0.4)]'
                       : 'border-white/20 bg-white/5 text-white/50 hover:border-white/40'
                     }`}
@@ -123,7 +123,7 @@ export default function BlastGamePage() {
                 </button>
                 <button
                   onClick={() => setGameMode('kanji')}
-                  className={`p-4 rounded-2xl border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'kanji'
+                  className={`p-4 rounded-lg border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'kanji'
                       ? 'border-pink-500 bg-pink-500/20 text-pink-300 shadow-[0_0_20px_rgba(236,72,153,0.4)]'
                       : 'border-white/20 bg-white/5 text-white/50 hover:border-white/40'
                     }`}
@@ -140,7 +140,7 @@ export default function BlastGamePage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={startGame}
-            className="w-full max-w-xs py-5 bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-2xl font-black text-2xl text-white shadow-[0_0_40px_rgba(251,191,36,0.6)] flex items-center justify-center gap-3 relative overflow-hidden group"
+            className="w-full max-w-xs py-5 bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-lg font-black text-2xl text-white shadow-[0_0_40px_rgba(251,191,36,0.6)] flex items-center justify-center gap-3 relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-white/30 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
             <Play fill="currentColor" size={28} />

@@ -42,7 +42,7 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
               <div className="flex flex-col h-full">
                 {/* 헤더 */}
                 <div className="flex items-center gap-3 px-6 py-5 border-b border-divider">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 via-green-500 via-orange-500 to-blue-500 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 via-green-500 via-orange-500 to-blue-500 flex items-center justify-center">
                     <span className="text-label font-bold text-surface">모구</span>
                   </div>
                   <div className="flex flex-col">

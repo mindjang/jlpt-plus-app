@@ -52,7 +52,7 @@ export default function MySettingsPage() {
     <div className="w-full min-h-screen bg-page">
       <AppBar title="일일 목표 설정" />
       <div className="p-5 space-y-4">
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 space-y-3">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-5 space-y-3">
           <div>
             <div className="text-title font-semibold text-text-main">일일 목표 학습량</div>
             <div className="text-body text-text-sub mt-1">자동 학습에서 새 카드/복습 카드 목표를 결정합니다.</div>
@@ -62,7 +62,7 @@ export default function MySettingsPage() {
               <button
                 key={opt}
                 onClick={() => setValue(opt)}
-                className={`px-4 py-2 rounded-xl border text-body font-medium transition-colors ${
+                className={`px-4 py-2 rounded-lg border text-body font-medium transition-colors ${
                   value === opt ? 'bg-black text-white border-black' : 'bg-white border-divider text-text-main hover:border-text-sub'
                 }`}
               >
@@ -74,13 +74,13 @@ export default function MySettingsPage() {
             <button
               onClick={handleSave}
               disabled={saving}
-              className="flex-1 py-3 rounded-xl bg-black text-white font-semibold disabled:opacity-60"
+              className="flex-1 py-3 rounded-lg bg-black text-white font-semibold disabled:opacity-60"
             >
               {saving ? '저장 중...' : '저장'}
             </button>
             <button
               onClick={() => router.back()}
-              className="flex-1 py-3 rounded-xl bg-white border border-divider text-text-main font-semibold"
+              className="flex-1 py-3 rounded-lg bg-white border border-divider text-text-main font-semibold"
             >
               돌아가기
             </button>

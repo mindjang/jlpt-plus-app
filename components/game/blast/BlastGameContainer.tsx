@@ -168,7 +168,7 @@ export function BlastGameContainer({ level, mode, onExit }: BlastGameContainerPr
               key={idx}
               whileTap={{ scale: 0.9 }}
               onClick={() => handleOptionClick(option)}
-              className="px-2 py-4 bg-gradient-to-br from-purple-600/80 to-pink-600/80 backdrop-blur-md border-2 border-white/30 rounded-xl font-bold text-white shadow-lg hover:shadow-[0_0_20px_rgba(236,72,153,0.6)] transition-all active:bg-yellow-500"
+              className="px-2 py-4 bg-gradient-to-br from-purple-600/80 to-pink-600/80 backdrop-blur-md border-2 border-white/30 rounded-lg font-bold text-white shadow-lg hover:shadow-[0_0_20px_rgba(236,72,153,0.6)] transition-all active:bg-yellow-500"
             >
               {option.split(',')[0]}
             </motion.button>
@@ -182,23 +182,23 @@ export function BlastGameContainer({ level, mode, onExit }: BlastGameContainerPr
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="bg-gradient-to-br from-purple-900 to-pink-900 p-8 rounded-3xl border-2 border-yellow-500/50 shadow-2xl text-center max-w-sm w-full"
+            className="bg-gradient-to-br from-purple-900 to-pink-900 p-8 rounded-lg border-2 border-yellow-500/50 shadow-2xl text-center max-w-sm w-full"
           >
             <h2 className="text-4xl font-black text-yellow-400 mb-4 drop-shadow-[0_0_10px_rgba(251,191,36,0.8)]">
               {gameState === 'gameover' ? 'GAME OVER' : 'PAUSED'}
             </h2>
 
             <div className="space-y-3 mb-6">
-              <div className="bg-black/40 py-3 rounded-xl">
+              <div className="bg-black/40 py-3 rounded-lg">
                 <div className="text-sm text-yellow-300">SCORE</div>
                 <div className="text-3xl font-mono text-white font-black">{score}</div>
               </div>
               <div className="grid grid-cols-2 gap-3">
-                <div className="bg-black/40 py-3 rounded-xl">
+                <div className="bg-black/40 py-3 rounded-lg">
                   <div className="text-xs text-pink-300">MAX COMBO</div>
                   <div className="text-2xl font-bold text-white">{maxCombo}</div>
                 </div>
-                <div className="bg-black/40 py-3 rounded-xl">
+                <div className="bg-black/40 py-3 rounded-lg">
                   <div className="text-xs text-purple-300">MULTIPLIER</div>
                   <div className="text-2xl font-bold text-white">x{Math.min(Math.floor(maxCombo / 5) + 1, 5)}</div>
                 </div>
@@ -208,14 +208,14 @@ export function BlastGameContainer({ level, mode, onExit }: BlastGameContainerPr
             <div className="space-y-3">
               <button
                 onClick={restartGame}
-                className="w-full py-3 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-white rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg"
+                className="w-full py-3 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-white rounded-lg font-bold flex items-center justify-center gap-2 shadow-lg"
               >
                 <RotateCcw size={20} />
                 RESTART
               </button>
               <button
                 onClick={onExit}
-                className="w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl font-bold"
+                className="w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-bold"
               >
                 EXIT MENU
               </button>

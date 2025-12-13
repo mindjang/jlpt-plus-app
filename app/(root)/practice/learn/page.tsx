@@ -4,7 +4,7 @@ import React, { useState, Suspense, useMemo, useEffect, useRef } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { StudySession, type StudySessionHandle } from '@/components/study/StudySession'
-import { LoginForm } from '@/components/auth/LoginForm'
+import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
 import { AppBar } from '@/components/ui/AppBar'
 import { ConfirmModal } from '@/components/ui/ConfirmModal'
 import { getNaverWordsByLevel } from '@/data/words/index'
@@ -103,9 +103,12 @@ function LearnContent() {
 
   if (!user) {
     return (
-      <div className="w-full min-h-screen flex items-center justify-center p-4">
-        <LoginForm />
-      </div>
+      <LoginRequiredScreen
+        title={`${level} ${typeParam === 'word' ? '단어' : '한자'} 학습`}
+        showBackButton
+        onBack={() => router.push(`/acquire/auto-study/${levelParam.toLowerCase()}?type=${typeParam}`)}
+        description="학습을 시작하려면\n로그인이 필요합니다."
+      />
     )
   }
 

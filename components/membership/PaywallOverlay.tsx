@@ -12,6 +12,8 @@ interface PaywallOverlayProps {
   showLogin?: boolean
   showPlans?: boolean
   onClose?: () => void
+  onBack?: () => void
+  showBackButton?: boolean
 }
 
 export function PaywallOverlay({
@@ -22,6 +24,8 @@ export function PaywallOverlay({
   showLogin = true,
   showPlans = true,
   onClose,
+  onBack,
+  showBackButton = false,
 }: PaywallOverlayProps) {
   const router = useRouter()
   const { user } = useAuth()
@@ -50,7 +54,7 @@ export function PaywallOverlay({
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="bg-surface w-full max-w-md rounded-2xl shadow-xl p-6 space-y-4 relative">
+      <div className="bg-surface w-full max-w-md rounded-lg shadow-xl p-6 space-y-4 relative">
         {onClose && (
           <button
             onClick={onClose}
@@ -62,7 +66,7 @@ export function PaywallOverlay({
         )}
         <div className="space-y-2">
           <h2 className="text-title font-semibold text-text-main">{title}</h2>
-          <p className="text-body text-text-sub">{description}</p>
+          <p className="text-body text-text-sub whitespace-pre-line" dangerouslySetInnerHTML={{ __html: description }} />
         </div>
 
         {showPlans && (
@@ -120,6 +124,15 @@ export function PaywallOverlay({
             }}
           >
             {user ? '계정으로 이동' : '로그인하기'}
+          </button>
+        )}
+
+        {showBackButton && onBack && (
+          <button
+            className="w-full py-3 rounded-card bg-gray-100 border border-gray-200 text-gray-700 text-body font-medium button-press"
+            onClick={onBack}
+          >
+            뒤로가기
           </button>
         )}
 

@@ -45,7 +45,7 @@ export function AdminSidebar({ activeSection, onNavigate }: AdminSidebarProps) {
             <button
               key={item.id}
               onClick={() => onNavigate(item.id as AdminSection)}
-              className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group relative ${isActive
+              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 group relative ${isActive
                   ? 'text-white shadow-soft font-bold'
                   : 'text-text-sub hover:bg-gray-100 hover:text-text-main'
                 }`}
@@ -53,7 +53,7 @@ export function AdminSidebar({ activeSection, onNavigate }: AdminSidebarProps) {
               {isActive && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 bg-primary rounded-xl"
+                  className="absolute inset-0 bg-primary rounded-lg"
                   initial={false}
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
@@ -67,7 +67,7 @@ export function AdminSidebar({ activeSection, onNavigate }: AdminSidebarProps) {
       </div>
 
       <div className="p-4 border-t border-divider">
-        <button className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-text-sub hover:bg-gray-100 hover:text-red-500 transition-colors">
+        <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-text-sub hover:bg-gray-100 hover:text-red-500 transition-colors">
           <LogOut size={20} />
           <span>나가기</span>
         </button>

@@ -1076,7 +1076,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "35915dc9b5614ec8ae9384aa29020bfd",
     origin_entry_id: "JK000000100282",
     entry: "おこさん",
-    kanji: "お子<strong>さん</strong>",
+    kanji: "お子さん",
     level: "4",
     source: "80198531",
     partsMeans: [
@@ -1144,7 +1144,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "b2c2330b54c3406f85d35b4e3a7c72c4",
     origin_entry_id: "JK000000100289",
     entry: "おじょうさん",
-    kanji: "お嬢<strong>さん</strong>",
+    kanji: "お嬢さん",
     level: "4",
     source: "80198531",
     partsMeans: [
@@ -2653,7 +2653,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "8b7557890cb74a9e9c0e89f2bc57b591",
     origin_entry_id: "JK000000026279",
     entry: "けしゴム",
-    kanji: "消し<strong>ゴム</strong>",
+    kanji: "消しゴム",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -3377,7 +3377,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "46d911a648d945838fb110ed09c1db06",
     origin_entry_id: "JK000000031293",
     entry: "このあいだ",
-    kanji: "<strong>この</strong>間·此の間",
+    kanji: "この間·此の間",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -3428,7 +3428,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "116ed87f80cb4387a98919c855ab8b57",
     origin_entry_id: "JK000000031324",
     entry: "このへん",
-    kanji: "<strong>この</strong>辺·此の辺",
+    kanji: "この辺·此の辺",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -6901,7 +6901,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "f460e01c0aa04e498682617991ad8964",
     origin_entry_id: "JK000000066006",
     entry: "なまビール",
-    kanji: "生<strong>ビール</strong>·生麦酒",
+    kanji: "生ビール·生麦酒",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -7773,7 +7773,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "7e83a6e4e746402495721d6d4c4f8f01",
     origin_entry_id: "JK000000073888",
     entry: "ひさしぶり",
-    kanji: "久し<strong>ぶり</strong>·久し振り",
+    kanji: "久しぶり·久し振り",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -8662,7 +8662,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "08671d6a6ae34519939d7cd002db8ce7",
     origin_entry_id: "JK000000083674",
     entry: "まどガラス",
-    kanji: "窓<strong>ガラス</strong>·窓硝子",
+    kanji: "窓ガラス·窓硝子",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -8840,7 +8840,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "27a4a36a1414497cad890aafc7f3c2b0",
     origin_entry_id: "JK000000100116",
     entry: "むすこさん",
-    kanji: "息子<strong>さん</strong>",
+    kanji: "息子さん",
     level: "4",
     source: "80198531",
     partsMeans: [
@@ -8874,7 +8874,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "8fa4294299e3439090cdf0befcd20c2d",
     origin_entry_id: "JK000000100049",
     entry: "むすめさん",
-    kanji: "娘<strong>さん</strong>",
+    kanji: "娘さん",
     level: "4",
     source: "80198531",
     partsMeans: [
@@ -10061,7 +10061,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "c00fa78aa64c4baf96cde59684d76517",
     origin_entry_id: "JK000000100296",
     entry: "ガスだい",
-    kanji: "<strong>ガス</strong>代",
+    kanji: "ガス代",
     level: "4",
     source: "80198531",
     partsMeans: [
@@ -10818,7 +10818,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "8aa9a88e66a74b89b7c80c7908e78ebb",
     origin_entry_id: "JK000000100302",
     entry: "パンや",
-    kanji: "<strong>パン</strong>屋",
+    kanji: "パン屋",
     level: "4",
     source: "80198531",
     partsMeans: [
@@ -11525,7 +11525,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "9808c17f727046a395c1bce43b3be194",
     origin_entry_id: "JK000000001648",
     entry: "あつ-める",
-    kanji: "集<strong>める</strong>",
+    kanji: "集める",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -11559,7 +11559,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "f8839b48643c45dc8e5fe0cc2b623791",
     origin_entry_id: "JK000000003702",
     entry: "い-きる",
-    kanji: "生<strong>きる</strong>·活<strong>きる</strong>",
+    kanji: "生きる·活きる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -11576,7 +11576,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "db0d49ba3b7046b6a5c300db106b791d",
     origin_entry_id: "JK000000004015",
     entry: "いじ-める",
-    kanji: "苛<strong>める</strong>·虐<strong>める</strong>",
+    kanji: "苛める·虐める",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -11694,7 +11694,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "7ba5192ed9994bc1861fda541d42a167",
     origin_entry_id: "JK000000006458",
     entry: "う-える",
-    kanji: "植<strong>える</strong>",
+    kanji: "植える",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -11728,7 +11728,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "5af4cf21266248639d425ca691727408",
     origin_entry_id: "JK000000006668",
     entry: "う-ける",
-    kanji: "受<strong>ける</strong>",
+    kanji: "受ける",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -11846,7 +11846,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "7d6f78e147b643b987a37db6b89f8e46",
     origin_entry_id: "JK000000010462",
     entry: "おく-れる",
-    kanji: "遅<strong>れる</strong>",
+    kanji: "遅れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -11863,7 +11863,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "4325047de3e046a3b25e4f76ad677c0c",
     origin_entry_id: "JK000000010486",
     entry: "おこ-す",
-    kanji: "起(こ)<strong>す</strong>",
+    kanji: "起(こ)す",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -11897,7 +11897,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "000feefef2a84de583a553e4b69987a4",
     origin_entry_id: "JK000000010942",
     entry: "お-ちる",
-    kanji: "落<strong>ちる</strong>·墜<strong>ちる</strong>",
+    kanji: "落ちる·墜ちる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -11931,7 +11931,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "7605bd216f8246c193ac87b357748840",
     origin_entry_id: "JK000000011173",
     entry: "おと-す",
-    kanji: "落(と)<strong>す</strong>",
+    kanji: "落(と)す",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12016,7 +12016,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "1e98bbb418874a4caad27146cefd2ea7",
     origin_entry_id: "JK000000100290",
     entry: "おやすみに なる",
-    kanji: "お休みに<strong>なる</strong>",
+    kanji: "お休みになる",
     level: "4",
     source: "80198531",
     partsMeans: [
@@ -12033,7 +12033,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "ea6e5e4504a548b3959ca6a62c6d0b21",
     origin_entry_id: "JK000000011963",
     entry: "お-りる",
-    kanji: "下<strong>りる</strong>·降<strong>りる</strong>",
+    kanji: "下りる·降りる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12067,7 +12067,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "0a6e4e1cf36b4987a83feecd2b59e668",
     origin_entry_id: "JK000000011998",
     entry: "お-れる",
-    kanji: "折<strong>れる</strong>",
+    kanji: "折れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12101,7 +12101,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "f7f7ece4121a4ed08d06b66056354afc",
     origin_entry_id: "JK000000013568",
     entry: "か-える",
-    kanji: "変<strong>える</strong>",
+    kanji: "変える",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12135,7 +12135,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "7dc112fd35f2417b88ea5f5db4d71fcb",
     origin_entry_id: "JK000000014715",
     entry: "か-ける",
-    kanji: "掛<strong>ける</strong>",
+    kanji: "掛ける",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12169,7 +12169,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "56c31813d3244a7dad141fd1399edee4",
     origin_entry_id: "JK000000015619",
     entry: "かたづ-ける",
-    kanji: "片付<strong>ける</strong>",
+    kanji: "片付ける",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12254,7 +12254,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "15b5d377ccbd4234b0d36799d84e5e3a",
     origin_entry_id: "JK000000017687",
     entry: "かわ-る",
-    kanji: "変(わ)<strong>る</strong>",
+    kanji: "変(わ)る",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12271,7 +12271,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "cde9712b4eea4289b95fff2a9064c25f",
     origin_entry_id: "JK000000017904",
     entry: "かんが-える",
-    kanji: "考<strong>える</strong>·勘<strong>える</strong>",
+    kanji: "考える·勘える",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12321,7 +12321,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "7fe57906b0264d83a458b23edc11cba5",
     origin_entry_id: "JK000000019600",
     entry: "きこ-える",
-    kanji: "聞(こ)<strong>える</strong>",
+    kanji: "聞(こ)える",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12338,7 +12338,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "ae8fd2fc7e354dc3a4b130dc6780c162",
     origin_entry_id: "JK000000020604",
     entry: "きま-る",
-    kanji: "決(ま)<strong>る</strong>·極る",
+    kanji: "決(ま)る·極る",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12355,7 +12355,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "86f2998f4e4346fa97d888e8a52d594c",
     origin_entry_id: "JK000000020653",
     entry: "き-める",
-    kanji: "決<strong>める</strong>·極<strong>める</strong>·定<strong>める</strong>",
+    kanji: "決める·極める·定める",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12440,7 +12440,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "72483d1956854109bd9feb844e92b169",
     origin_entry_id: "JK000000024851",
     entry: "くら-べる",
-    kanji: "比<strong>べる</strong>·較<strong>べる</strong>·競<strong>べる</strong>",
+    kanji: "比べる·較べる·競べる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12457,7 +12457,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "4c2bf38f491446c79ab842d85cd7c1d0",
     origin_entry_id: "JK000000025128",
     entry: "く-れる",
-    kanji: "呉<strong>れる</strong>",
+    kanji: "呉れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12525,7 +12525,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "f0a67281d0c345ba8881acd781b19a0f",
     origin_entry_id: "JK000000032050",
     entry: "こわ-れる",
-    kanji: "壊<strong>れる</strong>·毀<strong>れる</strong>",
+    kanji: "壊れる·毀れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12559,7 +12559,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "5ec32ce6352e4799ae6c241820223cee",
     origin_entry_id: "JK000000100298",
     entry: "ごらんになる",
-    kanji: "ご覧に<strong>なる</strong>",
+    kanji: "ご覧になる",
     level: "4",
     source: "80198531",
     partsMeans: [
@@ -12610,7 +12610,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "2fb1a1c902bf491b9869a5a8aef590ab",
     origin_entry_id: "JK000000033704",
     entry: "さ-げる",
-    kanji: "下<strong>げる</strong>",
+    kanji: "下げる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12627,7 +12627,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "a3add68470f04d80aff49ddc132d0b76",
     origin_entry_id: "JK000000033819",
     entry: "さしあ-げる",
-    kanji: "差(し)上<strong>げる</strong>",
+    kanji: "差(し)上げる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12754,7 +12754,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "ac9fc2f7f44445a7a02066dd5b0560f5",
     origin_entry_id: "JK000000043860",
     entry: "しら-せる",
-    kanji: "知ら<strong>せる</strong>·報<strong>せる</strong>",
+    kanji: "知らせる·報せる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12771,7 +12771,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "f586554a50fd47b7bf58c3491dd08015",
     origin_entry_id: "JK000000043910",
     entry: "しら-べる",
-    kanji: "調<strong>べる</strong>",
+    kanji: "調べる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12805,7 +12805,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "27d7c2c31aca47b0b3e1ef46f21aef99",
     origin_entry_id: "JK000000046185",
     entry: "す-ぎる",
-    kanji: "過<strong>ぎる</strong>",
+    kanji: "過ぎる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12856,7 +12856,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "3894b7bad06542fc817dac9f5b99a13e",
     origin_entry_id: "JK000000046654",
     entry: "す-てる",
-    kanji: "捨<strong>てる</strong>·棄<strong>てる</strong>",
+    kanji: "捨てる·棄てる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12907,7 +12907,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "7ae6d38d973c4fcc89df8488619556dc",
     origin_entry_id: "JK000000051824",
     entry: "そだ-てる",
-    kanji: "育<strong>てる</strong>",
+    kanji: "育てる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12924,7 +12924,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "10562b03daad431c8d1cc4573ad235fa",
     origin_entry_id: "JK000000052493",
     entry: "ぞん-じる",
-    kanji: "存<strong>じる</strong>",
+    kanji: "存じる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12941,7 +12941,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "123e05051db54f109f0c669826b6bd8d",
     origin_entry_id: "JK000000053715",
     entry: "たお-れる",
-    kanji: "倒<strong>れる</strong>",
+    kanji: "倒れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -12975,7 +12975,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "2b5c2cfa76074321a7de42d1e380eb96",
     origin_entry_id: "JK000000054284",
     entry: "たず-ねる",
-    kanji: "訪<strong>ねる</strong>",
+    kanji: "訪ねる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13009,7 +13009,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "888cc349ad904eecb2791ee19cd657bc",
     origin_entry_id: "JK000000054801",
     entry: "た-てる",
-    kanji: "建<strong>てる</strong>",
+    kanji: "建てる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13047,7 +13047,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "2affdbb8252f4e7b9cb5ec15cbe7d25c",
     origin_entry_id: "JK000000055393",
     entry: "た-りる",
-    kanji: "足<strong>りる</strong>",
+    kanji: "足りる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13081,7 +13081,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "949e5f2df7aa4ee6b72c5fd2789921f5",
     origin_entry_id: "JK000000058527",
     entry: "つかま-える",
-    kanji: "捕ま<strong>える</strong>·捉ま<strong>える</strong>",
+    kanji: "捕まえる·捉まえる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13098,7 +13098,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "b56c84494f124dbf9600c56b6c240a0b",
     origin_entry_id: "JK000000058558",
     entry: "つか-れる",
-    kanji: "疲<strong>れる</strong>",
+    kanji: "疲れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13132,7 +13132,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "5def8df288e44c99b71b0daf610963ad",
     origin_entry_id: "JK000000058907",
     entry: "つ-ける",
-    kanji: "付<strong>ける</strong>·附<strong>ける</strong>",
+    kanji: "付ける·附ける",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13153,7 +13153,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "161a53e9b679423291cb0f08bc876791",
     origin_entry_id: "JK000000058954",
     entry: "つた-える",
-    kanji: "伝<strong>える</strong>",
+    kanji: "伝える",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13204,7 +13204,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "513889d33caf4deabab7cc6b2702caaa",
     origin_entry_id: "JK000000059033",
     entry: "つづ-ける",
-    kanji: "続<strong>ける</strong>",
+    kanji: "続ける",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13221,7 +13221,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "5b9e0b1c9d05434aa2466e0f28830ac4",
     origin_entry_id: "JK000000059124",
     entry: "つと-める",
-    kanji: "勤<strong>める</strong>",
+    kanji: "勤める",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13238,7 +13238,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "de6d408a0dd844208587cc25048b0f5e",
     origin_entry_id: "JK000000059407",
     entry: "つも-る",
-    kanji: "積(<strong>も</strong>)<strong>る</strong>",
+    kanji: "積(も)る",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13272,7 +13272,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "9dc7b154ce09466d9a45e34873fcff8a",
     origin_entry_id: "JK000000059641",
     entry: "つ-れる",
-    kanji: "連<strong>れる</strong>",
+    kanji: "連れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13306,7 +13306,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "aa62d5b12aa54333bb785f54eb86aadc",
     origin_entry_id: "JK000000060180",
     entry: "でか-ける",
-    kanji: "出掛<strong>ける</strong>",
+    kanji: "出掛ける",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13357,7 +13357,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "a3be098351674a8a87aa9c387997aa23",
     origin_entry_id: "JK000000063599",
     entry: "と-じる",
-    kanji: "閉<strong>じる</strong>",
+    kanji: "閉じる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13391,7 +13391,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "35578308bb004d269d4ce1917c318aca",
     origin_entry_id: "JK000000063889",
     entry: "とど-ける",
-    kanji: "届<strong>ける</strong>",
+    kanji: "届ける",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13408,7 +13408,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "9a4b9324513c4dde890c4e4f79ea2fa2",
     origin_entry_id: "JK000000064141",
     entry: "とま-る",
-    kanji: "止(ま)<strong>る</strong>·停まる",
+    kanji: "止(ま)る·停まる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13425,7 +13425,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "f8e1aaf7bc2c494eb71e4af63e611656",
     origin_entry_id: "JK000000064195",
     entry: "と-める",
-    kanji: "止<strong>める</strong>·停<strong>める</strong>",
+    kanji: "止める·停める",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13442,7 +13442,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "c5e72438b717455b9954222d028408e3",
     origin_entry_id: "JK000000064435",
     entry: "とりか-える",
-    kanji: "取(り)替<strong>える</strong>·取(り)換<strong>える</strong>",
+    kanji: "取(り)替える·取(り)換える",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13544,7 +13544,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "11038d413be149e3a708d846036a8c9a",
     origin_entry_id: "JK000000065404",
     entry: "なが-れる",
-    kanji: "流<strong>れる</strong>",
+    kanji: "流れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13612,7 +13612,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "27cec24d8e32445991c7700968e97b69",
     origin_entry_id: "JK000000065567",
     entry: "な-げる",
-    kanji: "投<strong>げる</strong>",
+    kanji: "投げる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13663,7 +13663,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "ddfb6a29f65d431bbf9f989b4aefd7ce",
     origin_entry_id: "JK000000066148",
     entry: "なら-べる",
-    kanji: "並<strong>べる</strong>",
+    kanji: "並べる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13697,7 +13697,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "558f2841d96b4e9381fb04dbf72ecfe7",
     origin_entry_id: "JK000000066228",
     entry: "な-れる",
-    kanji: "慣<strong>れる</strong>·馴<strong>れる</strong>",
+    kanji: "慣れる·馴れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13731,7 +13731,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "6ed8643e6b9f4875b3b132048882f5c6",
     origin_entry_id: "JK000000066731",
     entry: "に-げる",
-    kanji: "逃<strong>げる</strong>",
+    kanji: "逃げる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13816,7 +13816,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "4af5239a1bc7466d964294c2fb6bf902",
     origin_entry_id: "JK000000067813",
     entry: "ぬ-れる",
-    kanji: "濡<strong>れる</strong>",
+    kanji: "濡れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13884,7 +13884,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "f1659bd8cff4441ea784179415a949ed",
     origin_entry_id: "JK000000069117",
     entry: "のりか-える",
-    kanji: "乗(り)換<strong>える</strong>·乗(り)替<strong>える</strong>",
+    kanji: "乗(り)換える·乗(り)替える",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -13901,7 +13901,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "5d49867b6f964d80a8a71d3e3e69abb7",
     origin_entry_id: "JK000000100258",
     entry: "はいけんする",
-    kanji: "拝見<strong>する</strong>",
+    kanji: "拝見する",
     level: "4",
     source: "80198531",
     partsMeans: [
@@ -13969,7 +13969,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "677100c5ece84633a03067d5e2af5177",
     origin_entry_id: "JK000000070607",
     entry: "はじ-める",
-    kanji: "始<strong>める</strong>·創<strong>める</strong>",
+    kanji: "始める·創める",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14037,7 +14037,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "6b966a7ccf484cab9cd0dbcba7042026",
     origin_entry_id: "JK000000072366",
     entry: "は-れる",
-    kanji: "晴<strong>れる</strong>·霽<strong>れる</strong>",
+    kanji: "晴れる·霽れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14054,7 +14054,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "4b99e4685d1d49678173d14c5ffa6ac4",
     origin_entry_id: "JK000000073325",
     entry: "ひ-える",
-    kanji: "冷<strong>える</strong>",
+    kanji: "冷える",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14156,7 +14156,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "0704f17831f44350b1e9dfd933d28dfa",
     origin_entry_id: "JK000000076444",
     entry: "ふ-える",
-    kanji: "増<strong>える</strong>∙殖<strong>える</strong>",
+    kanji: "増える∙殖える",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14240,7 +14240,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "e8054c96e34b41388045f7d7bc64b215",
     origin_entry_id: "JK000000082208",
     entry: "ほ-める",
-    kanji: "褒<strong>める</strong>·誉<strong>める</strong>",
+    kanji: "褒める·誉める",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14274,7 +14274,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "6f3c34e7732741eea04417f06d3d608c",
     origin_entry_id: "JK000000083186",
     entry: "ま-ける",
-    kanji: "負<strong>ける</strong>",
+    kanji: "負ける",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14291,7 +14291,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "c06a4cb83625467883a7da301b29e032",
     origin_entry_id: "JK000000083450",
     entry: "まちが-える",
-    kanji: "間違<strong>える</strong>",
+    kanji: "間違える",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14359,7 +14359,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "ecb047ab569f45f392025b4086562e15",
     origin_entry_id: "JK000000084341",
     entry: "み-える",
-    kanji: "見<strong>える</strong>",
+    kanji: "見える",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14393,7 +14393,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "e061becd52d0493a9b7070db26562316",
     origin_entry_id: "JK000000084955",
     entry: "みつ-ける",
-    kanji: "見つ<strong>ける</strong>·見付<strong>ける</strong>",
+    kanji: "見つける·見付ける",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14410,7 +14410,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "b354e9a3dedd4464b2f1942925d9a967",
     origin_entry_id: "JK000000085628",
     entry: "むか-える",
-    kanji: "迎<strong>える</strong>·邀<strong>える</strong>",
+    kanji: "迎える·邀える",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14427,7 +14427,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "51289ae354ae45248354501479fa82c0",
     origin_entry_id: "JK000000086706",
     entry: "めしあが-る",
-    kanji: "召し上(が)<strong>る</strong>",
+    kanji: "召し上(が)る",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14444,7 +14444,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "22029698b27940b08932f78a2e3e0ebd",
     origin_entry_id: "JK000000087195",
     entry: "もうしあ-げる",
-    kanji: "申(し)上<strong>げる</strong>",
+    kanji: "申(し)上げる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14546,7 +14546,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "59df2e46853f4d0a94fc93f6cd0187fc",
     origin_entry_id: "JK000000088645",
     entry: "や-ける",
-    kanji: "焼<strong>ける</strong>",
+    kanji: "焼ける",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14563,7 +14563,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "571a7756c7e0419db9dcafb1fda8026a",
     origin_entry_id: "JK000000088785",
     entry: "や-せる",
-    kanji: "痩<strong>せる</strong>·瘠<strong>せる</strong>",
+    kanji: "痩せる·瘠せる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14597,7 +14597,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "7a716eb2b002440189ead390c361a75e",
     origin_entry_id: "JK000000089261",
     entry: "や-める",
-    kanji: "止<strong>める</strong>·已<strong>める</strong>",
+    kanji: "止める·已める",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14648,7 +14648,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "9bdd9476ff3a46ea8d2f63b58dd4980c",
     origin_entry_id: "JK000000090367",
     entry: "ゆ-れる",
-    kanji: "揺<strong>れる</strong>",
+    kanji: "揺れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14665,7 +14665,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "64117f19b3f242fb9993a4ea7f86e03f",
     origin_entry_id: "JK000000091172",
     entry: "よご-れる",
-    kanji: "汚<strong>れる</strong>",
+    kanji: "汚れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14733,7 +14733,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "2ff2ab18aa7f4c349e75757b16ab6554",
     origin_entry_id: "JK000000095370",
     entry: "わか-れる",
-    kanji: "別<strong>れる</strong>",
+    kanji: "別れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14767,7 +14767,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "78c40cb7c3b74a5eae6d6f31fc1f3015",
     origin_entry_id: "JK000000095580",
     entry: "わす-れる",
-    kanji: "忘<strong>れる</strong>",
+    kanji: "忘れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -14852,7 +14852,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "fbdb4dae7439480c89f86fa008d8173a",
     origin_entry_id: "JK000000095971",
     entry: "わ-れる",
-    kanji: "割<strong>れる</strong>·破<strong>れる</strong>",
+    kanji: "割れる·破れる",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -15079,7 +15079,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "05c430281fa8484c881cb46f6dc57e19",
     origin_entry_id: "JK000000015959",
     entry: "かっこいい",
-    kanji: "<strong>かっこ</strong>好い",
+    kanji: "かっこ好い",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -15096,7 +15096,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "7942d8eef9524748a88baca183abc037",
     origin_entry_id: "JK000000100297",
     entry: "かっこわるい",
-    kanji: "<strong>かっこ</strong>悪い",
+    kanji: "かっこ悪い",
     level: "4",
     source: "80198531",
     partsMeans: [
@@ -16137,7 +16137,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "0158e60efff34b0ab684d91b9a181cf9",
     origin_entry_id: "JK000000060365",
     entry: "できるだけ",
-    kanji: "出来る<strong>だけ</strong>·出来る丈",
+    kanji: "出来るだけ·出来る丈",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -16469,7 +16469,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "7c49ab418351480a8b0b307faa614f40",
     origin_entry_id: "JK000000087288",
     entry: "もうひとつ",
-    kanji: "<strong>もう</strong>一つ",
+    kanji: "もう一つ",
     level: "4",
     source: "081341B9",
     partsMeans: [
@@ -16735,7 +16735,7 @@ export const n4Words: NaverWord[] = [
     entry_id: "0a723c45f85c44d7983cd8ab66697d0f",
     origin_entry_id: "JK000000031897",
     entry: "これから",
-    kanji: "此れ<strong>から</strong>·是<strong>から</strong>",
+    kanji: "此れから·是から",
     level: "4",
     source: "081341B9",
     partsMeans: [

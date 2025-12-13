@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
+import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
 import { getUserQuizLevel, getAllQuizStats, getWeakItems } from '@/lib/firebase/firestore/quiz'
 import type { UserQuizLevel, QuizStats, ItemStats } from '@/lib/types/quiz'
 import type { JlptLevel } from '@/lib/types/content'
@@ -69,9 +70,12 @@ export default function QuizStatsPage() {
 
   if (!user || !userLevel || !allStats) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-body text-text-sub">로그인이 필요합니다.</div>
-      </div>
+      <LoginRequiredScreen
+        title="퀴즈 통계"
+        showBackButton
+        onBack={() => router.back()}
+        description="퀴즈 통계를 확인하려면\n로그인이 필요합니다."
+      />
     )
   }
 

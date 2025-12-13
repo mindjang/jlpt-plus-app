@@ -116,7 +116,7 @@ export default function MatchGamePage() {
                   <button
                     key={diff}
                     onClick={() => setDifficulty(diff)}
-                    className={`py-3 rounded-xl font-bold transition-all ${difficulty === diff
+                    className={`py-3 rounded-lg font-bold transition-all ${difficulty === diff
                         ? 'bg-white text-purple-600 shadow-lg scale-105'
                         : 'bg-white/20 text-white hover:bg-white/30'
                       }`}
@@ -135,7 +135,7 @@ export default function MatchGamePage() {
                   <button
                     key={lvl}
                     onClick={() => setSelectedLevel(lvl)}
-                    className={`flex-1 py-3 rounded-xl font-bold transition-all ${selectedLevel === lvl
+                    className={`flex-1 py-3 rounded-lg font-bold transition-all ${selectedLevel === lvl
                         ? 'bg-white text-purple-600 shadow-lg scale-105'
                         : 'bg-white/20 text-white hover:bg-white/30'
                       }`}
@@ -152,7 +152,7 @@ export default function MatchGamePage() {
               <div className="grid grid-cols-2 gap-4">
                 <button
                   onClick={() => setGameMode('word')}
-                  className={`p-4 rounded-2xl border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'word'
+                  className={`p-4 rounded-lg border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'word'
                       ? 'border-white bg-white/20 text-white shadow-lg'
                       : 'border-white/30 bg-white/5 text-white/70 hover:bg-white/10'
                     }`}
@@ -162,7 +162,7 @@ export default function MatchGamePage() {
                 </button>
                 <button
                   onClick={() => setGameMode('kanji')}
-                  className={`p-4 rounded-2xl border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'kanji'
+                  className={`p-4 rounded-lg border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'kanji'
                       ? 'border-white bg-white/20 text-white shadow-lg'
                       : 'border-white/30 bg-white/5 text-white/70 hover:bg-white/10'
                     }`}
@@ -179,7 +179,7 @@ export default function MatchGamePage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={startGame}
-            className="w-full max-w-xs py-5 bg-white text-purple-600 rounded-2xl font-black text-2xl shadow-lg flex items-center justify-center gap-3 relative overflow-hidden group"
+            className="w-full max-w-xs py-5 bg-white text-purple-600 rounded-lg font-black text-2xl shadow-lg flex items-center justify-center gap-3 relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-pink-200 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12"></div>
             <Play fill="currentColor" size={28} />

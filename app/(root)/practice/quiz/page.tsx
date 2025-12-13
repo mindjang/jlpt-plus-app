@@ -3,7 +3,7 @@
 import React, { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
-import { LoginForm } from '@/components/auth/LoginForm'
+import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
 import { AppBar } from '@/components/ui/AppBar'
 import { QuizCard } from '@/components/study/QuizCard'
 import { QuizSettingsModal } from '@/components/quiz/QuizSettings'
@@ -365,9 +365,12 @@ function QuizContent() {
 
   if (!user) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-4">
-        <LoginForm />
-      </div>
+      <LoginRequiredScreen
+        title="퀴즈"
+        showBackButton
+        onBack={() => router.back()}
+        description="퀴즈를 시작하려면\n로그인이 필요합니다."
+      />
     )
   }
 

@@ -24,6 +24,7 @@ import { extractItemResults, calculateStreak, extractWrongAnswers } from '@/lib/
 import { checkNewBadges } from '@/lib/quiz/badgeSystem'
 import { getUserQuizLevel, updateQuizLevel, getQuizStats, updateQuizStats, saveQuizSession, getAllQuizStats } from '@/lib/firebase/firestore/quiz'
 import type { JlptLevel } from '@/lib/types/content'
+import { updateDailyActivity, updateStreak, isFirstStudyToday } from '@/lib/firebase/firestore/dailyActivity'
 
 import { QuizMenu } from '@/components/quiz/QuizMenu'
 
@@ -273,6 +274,29 @@ function QuizContent() {
         maxStreak: finalMaxStreak,
       }
       await saveQuizSession(user.uid, completedSession)
+
+      // 일별 활동 통계 업데이트
+      const totalTime = endTime - session.startTime
+      for (const answer of finalAnswers) {
+        const question = session.questions.find((q) => q.id === answer.questionId)
+        if (question) {
+          await updateDailyActivity(user.uid, {
+            mode: 'quiz',
+            questions: 1,
+            correct: answer.isCorrect ? 1 : 0,
+            timeSpent: answer.timeSpent,
+            contentType: question.itemType,
+            level: question.level,
+            quizType: question.type,
+          })
+        }
+      }
+
+      // 연속 일수 업데이트 (매일 첫 학습)
+      const isFirst = await isFirstStudyToday(user.uid)
+      if (isFirst) {
+        await updateStreak(user.uid)
+      }
 
       // 결과 생성
       const wrongAnswers = extractWrongAnswers(finalAnswers)

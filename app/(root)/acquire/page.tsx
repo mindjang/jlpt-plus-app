@@ -34,7 +34,6 @@ export default function AcquirePage() {
     <div className="w-full min-h-screen bg-page">
       <AppBar
         title="도서관"
-        showMenu
         rightAction={
           <button
             onClick={() => router.push('/stats')}

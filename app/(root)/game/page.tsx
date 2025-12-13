@@ -59,7 +59,7 @@ export default function GamePage() {
 
   return (
     <div className="w-full overflow-hidden">
-      <AppBar title="게임존" showMenu />
+      <AppBar title="게임존" />
 
       <div className="flex flex-col gap-6 p-4 pb-20">
         <div className="text-center mb-2">

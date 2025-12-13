@@ -33,7 +33,8 @@ import {
   Gift,
   Calendar,
   Clock,
-  CheckCircle2
+  CheckCircle2,
+  Languages
 } from 'lucide-react'
 
 // --- Helper Components ---
@@ -387,6 +388,8 @@ export default function MyPage() {
             }}
           />
           <MenuItem icon={BarChart2} label="나의 독서 기록" onClick={() => router.push('/stats')} />
+          <MenuItem icon={Star} label="배지 갤러리" onClick={() => router.push('/quiz/badges')} />
+          <MenuItem icon={Languages} label="카나" onClick={() => router.push('/kana')} />
 
           <SectionTitle>계정 설정</SectionTitle>
           <MenuItem icon={User} label="프로필 수정" onClick={() => phoneModal.setShowPhoneModal(true)} />

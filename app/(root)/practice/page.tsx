@@ -1,170 +1,58 @@
 'use client'
 
-import React, { useState, Suspense } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import React, { Suspense } from 'react'
+import { useRouter } from 'next/navigation'
 import { AppBar } from '@/components/ui/AppBar'
-import { LevelCard } from '@/components/ui/LevelCard'
-import { levels, Level } from '@/data'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation } from 'swiper/modules'
-import type { Swiper as SwiperType } from 'swiper'
-
-// Swiper CSS
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
+import { motion } from 'framer-motion'
 
 function PracticeContent() {
   const router = useRouter()
-  const searchParams = useSearchParams()
-  const [swiper, setSwiper] = useState<SwiperType | null>(null)
-  const [activeIndex, setActiveIndex] = useState(0)
-
-  const initialLevel = searchParams.get('level')
-  const initialIndex = initialLevel
-    ? levels.findIndex((l) => l.toLowerCase() === initialLevel)
-    : 0
-
-  const handleLevelClick = (level: Level) => {
-    router.push(`/practice/learn?level=${level.toLowerCase()}`)
-  }
 
   return (
     <div className="w-full overflow-hidden">
-      <AppBar title="퀴즈존" showMenu />
+      <AppBar title="퀴즈존" onBack={() => router.back()} />
 
-      <div className="flex flex-col gap-6 p-4">
-        {/* 학습 모드 선택 */}
-        <div className="space-y-3">
-          {/* 메인 버튼들 */}
-          <div className="grid grid-cols-2 gap-3">
-            <button
-              onClick={() => router.push('/practice/learn')}
-              className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-card shadow-lg p-6 text-center button-press hover:shadow-xl transition-all"
-            >
-              <div className="text-4xl mb-2">📖</div>
-              <div className="text-body font-semibold text-white mb-1">예문 학습</div>
-              <div className="text-label text-white text-opacity-90">SRS 기반 복습</div>
-            </button>
-            <button
-              onClick={() => router.push('/practice/quiz')}
-              className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-card shadow-lg p-6 text-center button-press hover:shadow-xl transition-all"
-            >
-              <div className="text-4xl mb-2">✏️</div>
-              <div className="text-body font-semibold text-white mb-1">퀴즈</div>
-              <div className="text-label text-white text-opacity-90">레벨업 시스템</div>
-            </button>
-          </div>
+      <div className="flex flex-col gap-6 p-4 pb-20">
+        {/* 퀴즈 시작 메인 버튼 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="space-y-4"
+        >
+          <button
+            onClick={() => router.push('/practice/quiz')}
+            className="w-full bg-gradient-to-br from-purple-500 to-purple-600 rounded-card shadow-lg p-8 text-center button-press hover:shadow-xl transition-all"
+          >
+            <div className="text-5xl mb-3">✏️</div>
+            <div className="text-title font-bold text-white mb-2">퀴즈 시작하기</div>
+            <div className="text-body text-white text-opacity-90">레벨업 시스템으로 즐겁게 학습하세요</div>
+          </button>
+        </motion.div>
 
-          {/* 서브 버튼들 */}
-          <div className="grid grid-cols-3 gap-3">
-            <button
-              onClick={() => router.push('/game')}
-              className="bg-surface rounded-card shadow-soft p-4 text-center button-press hover:border-2 hover:border-primary transition-all"
-            >
-              <div className="text-2xl mb-1">🎮</div>
-              <div className="text-label font-medium text-text-main">게임</div>
-            </button>
-            <button
-              onClick={() => router.push('/quiz/history')}
-              className="bg-surface rounded-card shadow-soft p-4 text-center button-press hover:border-2 hover:border-primary transition-all"
-            >
-              <div className="text-2xl mb-1">📊</div>
-              <div className="text-label font-medium text-text-main">기록</div>
-            </button>
-            <button
-              onClick={() => router.push('/quiz/badges')}
-              className="bg-surface rounded-card shadow-soft p-4 text-center button-press hover:border-2 hover:border-primary transition-all"
-            >
-              <div className="text-2xl mb-1">🏆</div>
-              <div className="text-label font-medium text-text-main">배지</div>
-            </button>
-          </div>
-        </div>
-
-        {/* 레벨 선택 */}
-        <div className="relative">
-          <h2 className="text-title font-semibold text-text-main mb-4">레벨 선택</h2>
-          <div className="w-full max-h-[400px] min-h-[300px] flex items-center justify-center overflow-hidden relative">
-            {/* 이전 화살표 */}
-            <button
-              className="swiper-button-prev-custom absolute left-2 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/80 hover:bg-white shadow-md transition-all disabled:opacity-30 disabled:cursor-not-allowed"
-              onClick={() => swiper?.slidePrev()}
-              disabled={activeIndex === 0}
-              aria-label="이전"
-            >
-              <svg className="w-6 h-6 text-text-main" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
-            <Swiper
-              onSwiper={setSwiper}
-              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-              grabCursor={true}
-              modules={[Pagination, Navigation]}
-              pagination={{
-                clickable: true,
-                enabled: false,
-              }}
-              navigation={{
-                nextEl: '.swiper-button-next-custom',
-                prevEl: '.swiper-button-prev-custom',
-              }}
-              className="w-full h-full swiper-simple"
-              centeredSlides={true}
-              initialSlide={initialIndex >= 0 ? initialIndex : 0}
-              loop={false}
-              slidesPerView={1}
-              spaceBetween={0}
-              touchRatio={1}
-              threshold={15}
-              resistance={true}
-              resistanceRatio={0.85}
-              speed={400}
-            >
-              {levels.map((level, index) => (
-                <SwiperSlide key={level} className="flex items-center justify-center">
-                  <div className="flex items-center justify-center w-full h-full py-4">
-                    <LevelCard
-                      level={level}
-                      onClick={() => handleLevelClick(level)}
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            
-            {/* 다음 화살표 */}
-            <button
-              className="swiper-button-next-custom absolute right-2 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/80 hover:bg-white shadow-md transition-all disabled:opacity-30 disabled:cursor-not-allowed"
-              onClick={() => swiper?.slideNext()}
-              disabled={activeIndex === levels.length - 1}
-              aria-label="다음"
-            >
-              <svg className="w-6 h-6 text-text-main" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-
-          {/* 페이지 인디케이터 */}
-          <div className="flex gap-2 justify-center mt-4">
-            {levels.map((_, index) => (
-              <button
-                key={index}
-                className={`rounded-full transition-all ${
-                  index === activeIndex
-                    ? 'bg-primary w-6 h-2'
-                    : 'bg-divider w-2 h-2'
-                }`}
-                onClick={() => {
-                  swiper?.slideTo(index)
-                }}
-              />
-            ))}
-          </div>
-        </div>
+        {/* 퀴즈 관련 서브 메뉴 */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="grid grid-cols-2 gap-3"
+        >
+          <button
+            onClick={() => router.push('/quiz/history')}
+            className="bg-surface rounded-card shadow-soft p-6 text-center button-press hover:border-2 hover:border-primary transition-all"
+          >
+            <div className="text-3xl mb-2">📊</div>
+            <div className="text-body font-semibold text-text-main mb-1">퀴즈 기록</div>
+            <div className="text-label text-text-sub">히스토리 확인</div>
+          </button>
+          <button
+            onClick={() => router.push('/quiz/badges')}
+            className="bg-surface rounded-card shadow-soft p-6 text-center button-press hover:border-2 hover:border-primary transition-all"
+          >
+            <div className="text-3xl mb-2">🏆</div>
+            <div className="text-body font-semibold text-text-main mb-1">배지 갤러리</div>
+            <div className="text-label text-text-sub">획득한 배지</div>
+          </button>
+        </motion.div>
       </div>
     </div>
   )

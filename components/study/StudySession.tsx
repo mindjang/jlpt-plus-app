@@ -214,11 +214,13 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
     }
   }, [user, membershipLoading, canStartSession, sessionReserved])
 
-  const handleGrade = (grade: Grade) => {
+  const handleGrade = async (grade: Grade) => {
     if (!user) return
 
     const currentCard = queue[currentIndex]
     if (!currentCard) return
+
+    const cardStartTime = Date.now()
 
     // 카드 평가 및 상태 업데이트
     const { updatedState, nextReviewInterval } = evaluateCard(currentCard, grade)
@@ -228,6 +230,28 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
 
     // 즉시 저장도 수행
     saveCardStateImmediate(user.uid, updatedState)
+
+    // 일별 활동 통계 업데이트
+    try {
+      const { updateDailyActivity, updateStreak, isFirstStudyToday } = await import('@/lib/firebase/firestore/dailyActivity')
+      
+      await updateDailyActivity(user.uid, {
+        mode: 'exampleStudy',
+        questions: 1,
+        correct: grade === 'good' || grade === 'easy' ? 1 : 0,
+        timeSpent: 1000, // 대략 1초 추정 (실제 시간 측정 필요 시 개선)
+        contentType: currentCard.type,
+        level: currentCard.level,
+      })
+
+      // 연속 일수 체크 (매일 첫 학습)
+      const isFirst = await isFirstStudyToday(user.uid)
+      if (isFirst) {
+        await updateStreak(user.uid)
+      }
+    } catch (error) {
+      console.error('[StudySession] Error updating stats:', error)
+    }
 
     // 상태 변경 콜백 호출 (UI 업데이트용)
     handleGradeStateChange(grade, nextReviewInterval)

@@ -60,13 +60,6 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
                     </h3>
                     <div className="space-y-1">
                       <button
-                        onClick={() => handleNavigate('/kana')}
-                        className="w-full flex items-center gap-3 px-6 py-3 text-left hover:bg-page transition-colors"
-                      >
-                        <span className="text-subtitle text-jp">あ</span>
-                        <span className="text-body text-text-main">카나</span>
-                      </button>
-                      <button
                         onClick={() => handleNavigate('/search')}
                         className="w-full flex items-center gap-3 px-6 py-3 text-left hover:bg-page transition-colors"
                       >
@@ -82,6 +75,13 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
                       관리
                     </h3>
                     <div className="space-y-1">
+                      <button
+                        onClick={() => handleNavigate('/kana')}
+                        className="w-full flex items-center gap-3 px-6 py-3 text-left hover:bg-page transition-colors"
+                      >
+                        <span className="text-subtitle text-jp">あ</span>
+                        <span className="text-body text-text-main">마이</span>
+                      </button>
                       <button
                         onClick={() => handleNavigate('/stats')}
                         className="w-full flex items-center gap-3 px-6 py-3 text-left hover:bg-page transition-colors"

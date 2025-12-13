@@ -2,8 +2,9 @@ import { useState, useEffect, useRef } from 'react'
 import { Level } from '@/data'
 import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji'
+import { recordGameResult } from '@/lib/stats/calculator'
 
-export type GameState = 'playing' | 'complete'
+export type GameState = 'playing' | 'paused' | 'complete'
 
 export interface Card {
   id: number
@@ -28,7 +29,26 @@ export function useMatchEngine(
   const [canFlip, setCanFlip] = useState(true)
 
   const timerRef = useRef<number>()
+  const gameStateRef = useRef<GameState>('playing')
   const totalPairs = difficulty === 'easy' ? 4 : difficulty === 'medium' ? 6 : 8
+
+  useEffect(() => {
+    gameStateRef.current = gameState
+    
+    // 게임 완료 시 통계 기록
+    if (gameState === 'complete') {
+      recordGameResult({
+        gameType: 'match',
+        level,
+        mode,
+        score: 0, // Match는 점수 없음
+        time: timeElapsed,
+        moves,
+        difficulty,
+        timestamp: Date.now(),
+      })
+    }
+  }, [gameState, level, mode, timeElapsed, moves, difficulty])
 
   // Timer
   useEffect(() => {
@@ -36,6 +56,8 @@ export function useMatchEngine(
       timerRef.current = window.setInterval(() => {
         setTimeElapsed(prev => prev + 1)
       }, 1000)
+    } else {
+      if (timerRef.current) clearInterval(timerRef.current)
     }
 
     return () => {
@@ -158,12 +180,30 @@ export function useMatchEngine(
   }
 
   const restartGame = () => {
-    // 카드 재생성을 위해 useEffect 트리거
     setCards([])
+    setFlippedCards([])
+    setMatchedPairs(0)
+    setMoves(0)
+    setTimeElapsed(0)
+    setCanFlip(true)
+    setGameState('playing')
+    gameStateRef.current = 'playing'
+    // 카드 재생성을 위해 useEffect 트리거
     setTimeout(() => {
       const event = new Event('restart')
       window.dispatchEvent(event)
     }, 100)
+  }
+
+  const togglePause = () => {
+    if (gameStateRef.current === 'playing') {
+      setGameState('paused')
+      gameStateRef.current = 'paused'
+      if (timerRef.current) clearInterval(timerRef.current)
+    } else if (gameStateRef.current === 'paused') {
+      setGameState('playing')
+      gameStateRef.current = 'playing'
+    }
   }
 
   return {
@@ -174,6 +214,7 @@ export function useMatchEngine(
     moves,
     timeElapsed,
     handleCardClick,
+    togglePause,
     restartGame
   }
 }

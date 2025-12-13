@@ -14,7 +14,7 @@ import {
 } from '@/lib/firebase/firestore'
 import { generateRandomCode, validateCodeFormat, formatCode } from '@/lib/utils/codeUtils'
 import type { GiftCode } from '@/lib/types/membership'
-import { handleFirestoreError } from '@/lib/utils/errorHandler'
+import { handleFirestoreError } from '@/lib/utils/error/errorHandler'
 
 interface CodeItem {
   code: string

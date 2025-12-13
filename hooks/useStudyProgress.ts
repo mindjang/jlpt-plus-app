@@ -3,16 +3,19 @@
  * 진행률 통계, 회차 진행률, 챕터별 진행률 등을 계산
  */
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { getLevelProgress, getTodayQueues } from '@/lib/srs/studyQueue'
+import { getLevelProgress, getTodayQueues } from '@/lib/srs/queue/studyQueue'
 import {
   calculateProgressStats,
   calculateRoundProgress,
   calculateChapterProgress,
-} from '@/lib/srs/progressCalculation'
+} from '@/lib/srs/progress/progressCalculation'
 import { getCardsByLevel } from '@/lib/firebase/firestore'
-import { nowAsMinutes, dayNumberToMinutes, minutesToDays } from '@/lib/utils/dateUtils'
-import { normalizeDue } from '@/lib/srs/cardMigration'
-import type { Word, Kanji, JlptLevel } from '@/lib/types/content'
+import { nowAsMinutes, minutesToDays } from '@/lib/utils/date/dateUtils'
+import { normalizeDue } from '@/lib/srs/migration/cardMigration'
+import type { JlptLevel } from '@/lib/types/content'
+import type { KanjiAliveEntry } from '@/data/types'
+import type { NaverWord } from '@/data/types'
+import { getKanjiId } from '@/lib/data/kanji/kanjiHelpers'
 import { logger } from '@/lib/utils/logger'
 
 interface UseStudyProgressOptions {
@@ -23,9 +26,9 @@ interface UseStudyProgressOptions {
   /** 활성 탭 (word | kanji) */
   activeTab: 'word' | 'kanji'
   /** 단어 목록 */
-  words: Word[]
+  words: NaverWord[]
   /** 한자 목록 */
-  kanjis: Kanji[]
+  kanjis: KanjiAliveEntry[]
   /** 전체 단어/한자 수 */
   totalWords: number
   /** 목표 학습량 */
@@ -197,7 +200,18 @@ export function useStudyProgress({
         const startIndex = i * targetAmount
         const endIndex = Math.min(startIndex + targetAmount, items.length)
         const chapterItems = items.slice(startIndex, endIndex)
-        const chapterItemIds = new Set(chapterItems.map((item) => item.id))
+        const chapterItemIds = new Set(
+          chapterItems.map((item, idx) => {
+            if (activeTab === 'word') {
+              return (item as NaverWord).entry_id
+            } else {
+              // KanjiAliveEntry의 경우 ID 생성
+              const kanji = item as KanjiAliveEntry
+              const globalIndex = startIndex + idx
+              return getKanjiId(kanji, level, globalIndex)
+            }
+          })
+        )
 
         const chapterProgress = calculateChapterProgress(
           levelCards,

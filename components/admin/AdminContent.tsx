@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { getStudySettings, updateStudySettings, StudySettings } from '@/lib/firebase/firestore'
 import { Level } from '@/data'
-import { handleFirestoreError } from '@/lib/utils/errorHandler'
+import { handleFirestoreError } from '@/lib/utils/error/errorHandler'
 import { ContentViewer } from './ContentViewer'
 
 const levels: Level[] = ['N5', 'N4', 'N3', 'N2', 'N1']

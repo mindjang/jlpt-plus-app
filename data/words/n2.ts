@@ -1,13 +1,14 @@
 // 네이버 일본어 사전 N2 단어 데이터 (2401개)
 // API: https://ja.dict.naver.com/api/jako/getJLPTList?level=2
 // 품사별 수집: 명사(189페이지), 대명사(2페이지), 동사(81페이지), 조사(1페이지), 형용사(5페이지), 접사(8페이지), 부사(13페이지), 감동사(3페이지), 형용동사(13페이지), 기타(7페이지)
-import type { Word } from '../types'
+import type { NaverWord } from '../types'
 
-export const n2Words: Word[] = [
+export const n2Words: NaverWord[] = [
   {
     entry_id: "92c9b8b4f9dd4c6e894bd412e910aab0",
     origin_entry_id: "JK000000046960",
     entry: "-ずみ",
+    kanji: "済み",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40,6 +41,7 @@ export const n2Words: Word[] = [
     entry_id: "f020bc3d78bc4a47808736a1667b1d61",
     origin_entry_id: "JK000000058471",
     entry: "-づかい",
+    kanji: "遣(い)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -56,6 +58,7 @@ export const n2Words: Word[] = [
     entry_id: "1fb0a7ab7c02411b9ad75250a559ea64",
     origin_entry_id: "JK000000000169",
     entry: "あいじょう",
+    kanji: "愛情",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -72,6 +75,7 @@ export const n2Words: Word[] = [
     entry_id: "c85af6d1d996400ebf034d25d0075342",
     origin_entry_id: "JK000000000176",
     entry: "あいず",
+    kanji: "合図",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -92,6 +96,7 @@ export const n2Words: Word[] = [
     entry_id: "1313e922fa5a40cbb18709406492b3ba",
     origin_entry_id: "JK000000000348",
     entry: "あお",
+    kanji: "青",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -112,6 +117,7 @@ export const n2Words: Word[] = [
     entry_id: "886aa842ba654f4a88c92a9fdf1c05f1",
     origin_entry_id: "JK000000000420",
     entry: "あおぞら",
+    kanji: "青空",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -128,6 +134,7 @@ export const n2Words: Word[] = [
     entry_id: "d96a5b684db84a2ea0ee42b56ff744ec",
     origin_entry_id: "JK000000000499",
     entry: "あか",
+    kanji: "赤",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -148,6 +155,7 @@ export const n2Words: Word[] = [
     entry_id: "a25180501d63408782e4531d2be846b2",
     origin_entry_id: "JK000000000553",
     entry: "あかじ",
+    kanji: "赤字",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -164,6 +172,7 @@ export const n2Words: Word[] = [
     entry_id: "c7bbeaa53a0747f992d7db2b3dff7c17",
     origin_entry_id: "JK000000000651",
     entry: "あかり",
+    kanji: "明(か)り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -180,6 +189,7 @@ export const n2Words: Word[] = [
     entry_id: "88b9e1e413d24b3d8f17a3a54cce08c1",
     origin_entry_id: "JK000000000685",
     entry: "あき",
+    kanji: "明き·空き",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -196,6 +206,7 @@ export const n2Words: Word[] = [
     entry_id: "97c6d113f5ca4325a2955a7600019a34",
     origin_entry_id: "JK000000100257",
     entry: "あくてんこう",
+    kanji: "悪天候",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -212,6 +223,7 @@ export const n2Words: Word[] = [
     entry_id: "585f837cde594ef98856665b5db80324",
     origin_entry_id: "JK000000000904",
     entry: "あくま",
+    kanji: "悪魔",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -228,6 +240,7 @@ export const n2Words: Word[] = [
     entry_id: "2c67027c9d3142de9421b52220abd05f",
     origin_entry_id: "JK000000000950",
     entry: "あけがた",
+    kanji: "明け方",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -244,6 +257,7 @@ export const n2Words: Word[] = [
     entry_id: "3999539ea5614384a5e921f7e126f251",
     origin_entry_id: "JK000000001503",
     entry: "あたり",
+    kanji: "辺り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -260,6 +274,7 @@ export const n2Words: Word[] = [
     entry_id: "2a354cfe7f844731a5abb5c625756cc9",
     origin_entry_id: "JK000000001590",
     entry: "あっしゅく",
+    kanji: "圧縮",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -280,6 +295,7 @@ export const n2Words: Word[] = [
     entry_id: "0a16636d5560440a98c21e89f00e8082",
     origin_entry_id: "JK000000001690",
     entry: "あてな",
+    kanji: "宛(て)名∙あて名",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -296,6 +312,7 @@ export const n2Words: Word[] = [
     entry_id: "79d8c48faccf4e3bb74aa1357cb07e80",
     origin_entry_id: "JK000000001711",
     entry: "あと",
+    kanji: "跡",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -312,6 +329,7 @@ export const n2Words: Word[] = [
     entry_id: "67dbe01dd6f54498aa7c163c47cf87aa",
     origin_entry_id: "JK000000001800",
     entry: "あな",
+    kanji: "穴·孔",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -328,6 +346,7 @@ export const n2Words: Word[] = [
     entry_id: "d72c2f96839b49ddb5400f1b69fb35cc",
     origin_entry_id: "JK000000001986",
     entry: "あぶら",
+    kanji: "脂·膏",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -344,6 +363,7 @@ export const n2Words: Word[] = [
     entry_id: "6f3a93fd465449ae99aefc29a4dec01e",
     origin_entry_id: "JK000000002262",
     entry: "あみもの",
+    kanji: "編(み)物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -360,6 +380,7 @@ export const n2Words: Word[] = [
     entry_id: "2d8df6d78089476ab1d7f7abc7591ce4",
     origin_entry_id: "JK000000002353",
     entry: "あやまち",
+    kanji: "過ち",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -376,6 +397,7 @@ export const n2Words: Word[] = [
     entry_id: "85f2302d940c4fb485a6dccb2d1e9a86",
     origin_entry_id: "JK000000002355",
     entry: "あやまり",
+    kanji: "誤り·謬り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -392,6 +414,7 @@ export const n2Words: Word[] = [
     entry_id: "21e48f4481964c0cb12100af6ed174b6",
     origin_entry_id: "JK000000002453",
     entry: "あらし",
+    kanji: "嵐",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -408,6 +431,7 @@ export const n2Words: Word[] = [
     entry_id: "fb06fb4284e44d899f468ea1815b8309",
     origin_entry_id: "JK000000002466",
     entry: "あらすじ",
+    kanji: "粗筋·荒筋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -424,6 +448,7 @@ export const n2Words: Word[] = [
     entry_id: "1179c96df06e41b2b273518b072b17c1",
     origin_entry_id: "JK000000002560",
     entry: "あらわれ",
+    kanji: "現(わ)れ·表(わ)れ·顕(わ)れ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -440,6 +465,7 @@ export const n2Words: Word[] = [
     entry_id: "c3d804f07e04467cb396c11f72e1fa0a",
     origin_entry_id: "JK000000002816",
     entry: "あわれ",
+    kanji: "哀れ·憐れ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -468,6 +494,7 @@ export const n2Words: Word[] = [
     entry_id: "526b06f0ae044dff86788e00105af13f",
     origin_entry_id: "JK000000002824",
     entry: "あん",
+    kanji: "案",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -484,6 +511,7 @@ export const n2Words: Word[] = [
     entry_id: "1d4abbbfbe6f47129d34b45c84934412",
     origin_entry_id: "JK000000002980",
     entry: "あんてい",
+    kanji: "安定",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -504,6 +532,7 @@ export const n2Words: Word[] = [
     entry_id: "5c20a28f81df4fa5b724de955fea160a",
     origin_entry_id: "JK000000003079",
     entry: "い",
+    kanji: "胃",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -520,6 +549,7 @@ export const n2Words: Word[] = [
     entry_id: "d9b7e8aa253445ecb26f3093089be924",
     origin_entry_id: "JK000000003341",
     entry: "いいん",
+    kanji: "委員",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -536,6 +566,7 @@ export const n2Words: Word[] = [
     entry_id: "9d93942a2305401a882b1e7ee185ca32",
     origin_entry_id: "JK000000003541",
     entry: "いき",
+    kanji: "息",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -552,6 +583,7 @@ export const n2Words: Word[] = [
     entry_id: "809f4a4a892c4499843909bd8968f487",
     origin_entry_id: "JK000000003766",
     entry: "いくぶん",
+    kanji: "幾分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -572,6 +604,7 @@ export const n2Words: Word[] = [
     entry_id: "1ae566975d85410f8e2897bdc86b5941",
     origin_entry_id: "JK000000003809",
     entry: "いけばな",
+    kanji: "生(け)花·活け花",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -588,6 +621,7 @@ export const n2Words: Word[] = [
     entry_id: "ba2f5a88fa2d498488822f64188bd2f1",
     origin_entry_id: "JK000000003831",
     entry: "いこう",
+    kanji: "以降·已降",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -604,6 +638,7 @@ export const n2Words: Word[] = [
     entry_id: "bebaeca59e5143f0a5ab108db1ae01ea",
     origin_entry_id: "JK000000003912",
     entry: "いさん",
+    kanji: "遺産",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -620,6 +655,7 @@ export const n2Words: Word[] = [
     entry_id: "2da40cc0da6048c58b5e33873351d4e6",
     origin_entry_id: "JK000000003870",
     entry: "いざかや",
+    kanji: "居酒屋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -652,6 +688,7 @@ export const n2Words: Word[] = [
     entry_id: "cb8a379d7dc2410fbc25a61ff97ab9ff",
     origin_entry_id: "JK000000003951",
     entry: "いしき",
+    kanji: "意識",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -672,6 +709,7 @@ export const n2Words: Word[] = [
     entry_id: "3a8c796adb554e009465b64af790327e",
     origin_entry_id: "JK100004058001",
     entry: "いしょくじゅう",
+    kanji: "衣食住",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -688,6 +726,7 @@ export const n2Words: Word[] = [
     entry_id: "932c7e7586e74c5097fb8bb82fdc8c9c",
     origin_entry_id: "JK000000003934",
     entry: "いじ",
+    kanji: "維持",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -708,6 +747,7 @@ export const n2Words: Word[] = [
     entry_id: "f0b6efc609874013ad95966f95456aa0",
     origin_entry_id: "JK000000004050",
     entry: "いじょう",
+    kanji: "異常",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -728,6 +768,7 @@ export const n2Words: Word[] = [
     entry_id: "800634987e6f4964909870c2f6a7b913",
     origin_entry_id: "JK000000004092",
     entry: "いずみ",
+    kanji: "泉",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -744,6 +785,7 @@ export const n2Words: Word[] = [
     entry_id: "6d8900973b08450b96a058fe71e6c525",
     origin_entry_id: "JK000000004252",
     entry: "いたずら",
+    kanji: "悪戯",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -760,6 +802,7 @@ export const n2Words: Word[] = [
     entry_id: "d43ad928da2a4cf88f2907cd60f174df",
     origin_entry_id: "JK000000004207",
     entry: "いだい",
+    kanji: "偉大",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -776,6 +819,7 @@ export const n2Words: Word[] = [
     entry_id: "cfdb56bfe09c4340823a92cf65f5b6f7",
     origin_entry_id: "JK000000004344",
     entry: "いち",
+    kanji: "位置",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -796,6 +840,7 @@ export const n2Words: Word[] = [
     entry_id: "ea99c8632d894566ad51832ad2717fc2",
     origin_entry_id: "JK000000004572",
     entry: "いちりゅう",
+    kanji: "一流",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -812,6 +857,7 @@ export const n2Words: Word[] = [
     entry_id: "f388048179b14cc2a6ad9a3bd814cb31",
     origin_entry_id: "JK000000004610",
     entry: "いっか",
+    kanji: "一家",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -828,6 +874,7 @@ export const n2Words: Word[] = [
     entry_id: "ed6e161746044f41834931942e9576f2",
     origin_entry_id: "JK000000004768",
     entry: "いっしゅ",
+    kanji: "一種",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -848,6 +895,7 @@ export const n2Words: Word[] = [
     entry_id: "37279a965e0e4e1e9d836e71b729ee6d",
     origin_entry_id: "JK000000004778",
     entry: "いっしゅん",
+    kanji: "一瞬",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -864,6 +912,7 @@ export const n2Words: Word[] = [
     entry_id: "d9ae21eddb9643d68e2f95396cc4fb84",
     origin_entry_id: "JK000000004804",
     entry: "いっすい",
+    kanji: "一睡",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -884,6 +933,7 @@ export const n2Words: Word[] = [
     entry_id: "65baf6b552d34fa5834e49ef06b42e38",
     origin_entry_id: "JK100004817001",
     entry: "いっせきにちょう",
+    kanji: "一石二鳥",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -900,6 +950,7 @@ export const n2Words: Word[] = [
     entry_id: "b0b9681454c748debe755174951c1496",
     origin_entry_id: "JK000000004852",
     entry: "いっち",
+    kanji: "一致",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -920,6 +971,7 @@ export const n2Words: Word[] = [
     entry_id: "13818534e7ee449496805e40d4da8df1",
     origin_entry_id: "JK000000004878",
     entry: "いってい",
+    kanji: "一定",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -940,6 +992,7 @@ export const n2Words: Word[] = [
     entry_id: "a972c11082e44e5688d021a409534255",
     origin_entry_id: "JK000000004927",
     entry: "いっぱん",
+    kanji: "一般",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -956,6 +1009,7 @@ export const n2Words: Word[] = [
     entry_id: "8c6c325420e84e5da65346410bd869b6",
     origin_entry_id: "JK000000004963",
     entry: "いっぽう",
+    kanji: "一方",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -972,6 +1026,7 @@ export const n2Words: Word[] = [
     entry_id: "a26d3e6942eb497f9ea6eea5bdcc1482",
     origin_entry_id: "JK000000005006",
     entry: "いてん",
+    kanji: "移転",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -992,6 +1047,7 @@ export const n2Words: Word[] = [
     entry_id: "1aeacfd10c8942f9b36ffa66e00548b5",
     origin_entry_id: "JK000000005016",
     entry: "いど",
+    kanji: "井戸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1008,6 +1064,7 @@ export const n2Words: Word[] = [
     entry_id: "991cca3fbfe84307904f3835b1464e92",
     origin_entry_id: "JK000000005023",
     entry: "いどう",
+    kanji: "移動",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1028,6 +1085,7 @@ export const n2Words: Word[] = [
     entry_id: "a2e65a49344f4976869a246f0c3e8f7b",
     origin_entry_id: "JK000000005181",
     entry: "いね",
+    kanji: "稲",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1044,6 +1102,7 @@ export const n2Words: Word[] = [
     entry_id: "162cdedf1add410abe8f65b5f6a74089",
     origin_entry_id: "JK000000005284",
     entry: "いふく",
+    kanji: "衣服",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1060,6 +1119,7 @@ export const n2Words: Word[] = [
     entry_id: "4b9f37bc0a524b6e9f6c17c6f1744974",
     origin_entry_id: "JK000000005293",
     entry: "いぶつ",
+    kanji: "遺物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1076,6 +1136,7 @@ export const n2Words: Word[] = [
     entry_id: "222f00c2dfb548248e790210c0faa64b",
     origin_entry_id: "JK000000005350",
     entry: "いまごろ",
+    kanji: "今頃",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1096,6 +1157,7 @@ export const n2Words: Word[] = [
     entry_id: "35a547fd7ea9441e8d7f1366c43048cd",
     origin_entry_id: "JK000000005532",
     entry: "いらい",
+    kanji: "以来",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1112,6 +1174,7 @@ export const n2Words: Word[] = [
     entry_id: "d24b853025a74f3a80200306fc168472",
     origin_entry_id: "JK000000005695",
     entry: "いれもの",
+    kanji: "入れ物·容れ物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1128,6 +1191,7 @@ export const n2Words: Word[] = [
     entry_id: "db9a14871853402fa69b7fe5a6c1c1eb",
     origin_entry_id: "JK000000005796",
     entry: "いわい",
+    kanji: "祝(い)·斎",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1144,6 +1208,7 @@ export const n2Words: Word[] = [
     entry_id: "02699ee27dec4e0da1c00086a18cf2b6",
     origin_entry_id: "JK000000006013",
     entry: "いんさつ",
+    kanji: "印刷",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1164,6 +1229,7 @@ export const n2Words: Word[] = [
     entry_id: "d19a57f6aa314d59953468c8c0aaa9b3",
     origin_entry_id: "JK000000006111",
     entry: "いんたい",
+    kanji: "引退",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1184,6 +1250,7 @@ export const n2Words: Word[] = [
     entry_id: "cc2b22e7ab784becb16bbd53a6dd7238",
     origin_entry_id: "JK000000006276",
     entry: "いんよう",
+    kanji: "引用",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1204,6 +1271,7 @@ export const n2Words: Word[] = [
     entry_id: "6ee3e5b516424fb399178e1a21c50152",
     origin_entry_id: "JK000000006288",
     entry: "いんりょく",
+    kanji: "引力",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1220,6 +1288,7 @@ export const n2Words: Word[] = [
     entry_id: "4f35a20485c949f68ff84377c62b069b",
     origin_entry_id: "JK000000006419",
     entry: "うえき",
+    kanji: "植木",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1236,6 +1305,7 @@ export const n2Words: Word[] = [
     entry_id: "d6a8517dd6844fa5bb4a49d149a69bd2",
     origin_entry_id: "JK000000006466",
     entry: "うお",
+    kanji: "魚",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1252,6 +1322,7 @@ export const n2Words: Word[] = [
     entry_id: "2425ddcbe599482f9e06ee5f105263b8",
     origin_entry_id: "JK000000006652",
     entry: "うけとり",
+    kanji: "受(け)取り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1268,6 +1339,7 @@ export const n2Words: Word[] = [
     entry_id: "ccc1e7ce4f254542a1ff3aeaf08da62c",
     origin_entry_id: "JK000000006996",
     entry: "うちあわせ",
+    kanji: "打ち合(わ)せ·打合せ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1288,6 +1360,7 @@ export const n2Words: Word[] = [
     entry_id: "6e301c504f754f8a95dd8fcb33e6c08b",
     origin_entry_id: "JK000000007329",
     entry: "うどん",
+    kanji: "饂飩",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1304,6 +1377,7 @@ export const n2Words: Word[] = [
     entry_id: "78b288b1c6534eaa860916ef7ac4506a",
     origin_entry_id: "JK000000100252",
     entry: "うみぞい",
+    kanji: "海沿い",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -1320,6 +1394,7 @@ export const n2Words: Word[] = [
     entry_id: "123739b241434cc49769489bea463069",
     origin_entry_id: "JK000000007533",
     entry: "うみべ",
+    kanji: "海辺",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1336,6 +1411,7 @@ export const n2Words: Word[] = [
     entry_id: "121f02332b414a5b8bb860e2b337e10b",
     origin_entry_id: "JK000000007547",
     entry: "うむ",
+    kanji: "有無",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1352,6 +1428,7 @@ export const n2Words: Word[] = [
     entry_id: "a7ec1fdad8ea424ea38c48c4b40df5d0",
     origin_entry_id: "JK000000007623",
     entry: "うらぐち",
+    kanji: "裏口",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1368,6 +1445,7 @@ export const n2Words: Word[] = [
     entry_id: "f42ce2366b1b47e6b121bbe89994af4b",
     origin_entry_id: "JK000000007685",
     entry: "うらみ",
+    kanji: "恨み·怨み·憾み",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1384,6 +1462,7 @@ export const n2Words: Word[] = [
     entry_id: "a9d33d8f52714855a406a193ca93b42f",
     origin_entry_id: "JK000000007862",
     entry: "うれゆき",
+    kanji: "売(れ)行き",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1400,6 +1479,7 @@ export const n2Words: Word[] = [
     entry_id: "5a8ca4dd21644a298bf6b6aa4d5192ce",
     origin_entry_id: "JK000000008139",
     entry: "えいきゅう",
+    kanji: "永久",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1420,6 +1500,7 @@ export const n2Words: Word[] = [
     entry_id: "75bef0d2855e44c48415b2e56f77c50b",
     origin_entry_id: "JK000000008142",
     entry: "えいきょう",
+    kanji: "影響",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1440,6 +1521,7 @@ export const n2Words: Word[] = [
     entry_id: "5cfaf73d20c444eaa063aa735c3bcdea",
     origin_entry_id: "JK000000008215",
     entry: "えいせい",
+    kanji: "衛生",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1456,6 +1538,7 @@ export const n2Words: Word[] = [
     entry_id: "fa9b3799507e48069c172060b13ff099",
     origin_entry_id: "JK000000008302",
     entry: "えいわ",
+    kanji: "英和",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1472,6 +1555,7 @@ export const n2Words: Word[] = [
     entry_id: "a9bef424996a48de8650830454cfe67c",
     origin_entry_id: "JK000000008430",
     entry: "えきたい",
+    kanji: "液体",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1488,6 +1572,7 @@ export const n2Words: Word[] = [
     entry_id: "5b31895497144826857e81e4281d7a9d",
     origin_entry_id: "JK000000008536",
     entry: "えさ",
+    kanji: "餌",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1504,6 +1589,7 @@ export const n2Words: Word[] = [
     entry_id: "c894ce1c992d477285a582adf408e495",
     origin_entry_id: "JK000000008712",
     entry: "えて",
+    kanji: "得手",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1520,6 +1606,7 @@ export const n2Words: Word[] = [
     entry_id: "c6a953f991864582ab8e5d934bc0b2a8",
     origin_entry_id: "JK000000008765",
     entry: "えのぐ",
+    kanji: "絵の具",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1536,6 +1623,7 @@ export const n2Words: Word[] = [
     entry_id: "ab8e3e76f7784045a806913d6b208ee4",
     origin_entry_id: "JK000000008848",
     entry: "えほん",
+    kanji: "絵本",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1568,6 +1656,7 @@ export const n2Words: Word[] = [
     entry_id: "18c2c348fd174cab80f9de82676e9245",
     origin_entry_id: "JK000000009095",
     entry: "えんき",
+    kanji: "延期",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1588,6 +1677,7 @@ export const n2Words: Word[] = [
     entry_id: "f1c564b8e6f54a63928598693f7e9443",
     origin_entry_id: "JK000000009099",
     entry: "えんぎ",
+    kanji: "演技",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1608,6 +1698,7 @@ export const n2Words: Word[] = [
     entry_id: "b0d1d4a99f4b4208ab2e9ebcbdc4c557",
     origin_entry_id: "JK000000009121",
     entry: "えんげい",
+    kanji: "園芸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1624,6 +1715,7 @@ export const n2Words: Word[] = [
     entry_id: "a66e68cf33be4ba1935e1f8fe75b7ee5",
     origin_entry_id: "JK000000009191",
     entry: "えんしゅう",
+    kanji: "演習",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1644,6 +1736,7 @@ export const n2Words: Word[] = [
     entry_id: "b4eaed3d8dd0430cb27fc9e4d014389a",
     origin_entry_id: "JK000000009202",
     entry: "えんじょ",
+    kanji: "援助",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1664,6 +1757,7 @@ export const n2Words: Word[] = [
     entry_id: "ce899faf3b2143f4a264fc720c6f2808",
     origin_entry_id: "JK000000009253",
     entry: "えんぜつ",
+    kanji: "演説",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1684,6 +1778,7 @@ export const n2Words: Word[] = [
     entry_id: "31c1f1f3956241c289ba2f4beedfe4eb",
     origin_entry_id: "JK000000009286",
     entry: "えんだか",
+    kanji: "円高",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1700,6 +1795,7 @@ export const n2Words: Word[] = [
     entry_id: "f2ffca0a635a49e29a05967a9ccaae60",
     origin_entry_id: "JK000000009301",
     entry: "えんちょう",
+    kanji: "延長",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1720,6 +1816,7 @@ export const n2Words: Word[] = [
     entry_id: "3f2338f6b04a408a8cbf52bb8f8fa69e",
     origin_entry_id: "JK000000009333",
     entry: "えんとつ",
+    kanji: "煙突",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1736,6 +1833,7 @@ export const n2Words: Word[] = [
     entry_id: "78395e531aaf48728ec07d74648db9b4",
     origin_entry_id: "JK000000009415",
     entry: "えんやす",
+    kanji: "円安",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1752,6 +1850,7 @@ export const n2Words: Word[] = [
     entry_id: "3a68556987cb46b5b2425023e0fb8ff2",
     origin_entry_id: "JK000000009573",
     entry: "おう",
+    kanji: "王",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1768,6 +1867,7 @@ export const n2Words: Word[] = [
     entry_id: "841027ec00ae4daf85f61e16bd062eaa",
     origin_entry_id: "JK000000009602",
     entry: "おうえん",
+    kanji: "応援",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1788,6 +1888,7 @@ export const n2Words: Word[] = [
     entry_id: "7613bc55f1d448d18de98a3f7a53c212",
     origin_entry_id: "JK000000009693",
     entry: "おうじょ",
+    kanji: "王女",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1804,6 +1905,7 @@ export const n2Words: Word[] = [
     entry_id: "f8b1c1a27bf04acdbb29648d274e911e",
     origin_entry_id: "JK000000009719",
     entry: "おうせつ",
+    kanji: "応接",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1824,6 +1926,7 @@ export const n2Words: Word[] = [
     entry_id: "85dd05f3f368434e9b2647b9d7d41df9",
     origin_entry_id: "JK000000009731",
     entry: "おうたい",
+    kanji: "応対",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1844,6 +1947,7 @@ export const n2Words: Word[] = [
     entry_id: "b69fe2017de84f90a8ea97f180c9ddaf",
     origin_entry_id: "JK000000009791",
     entry: "おうべい",
+    kanji: "欧米",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1860,6 +1964,7 @@ export const n2Words: Word[] = [
     entry_id: "3e9a2417dab643c38d9e9d73bb5319b5",
     origin_entry_id: "JK000000009812",
     entry: "おうよう",
+    kanji: "応用",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1880,6 +1985,7 @@ export const n2Words: Word[] = [
     entry_id: "94fe1bccc4c74ab49077cd2ab920ecea",
     origin_entry_id: "JK000000009816",
     entry: "おうらい",
+    kanji: "往来",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1900,6 +2006,7 @@ export const n2Words: Word[] = [
     entry_id: "5faeeb36a5c74c49a57dd405aa8a83af",
     origin_entry_id: "JK000000009909",
     entry: "おおがた",
+    kanji: "大型",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1916,6 +2023,7 @@ export const n2Words: Word[] = [
     entry_id: "80b2ed8673064d5fbe958f8c2d882103",
     origin_entry_id: "JK000000009952",
     entry: "おおげさ",
+    kanji: "大げさ·大袈裟",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1936,6 +2044,7 @@ export const n2Words: Word[] = [
     entry_id: "9e265fd29a6c4f59871a9bcca89822af",
     origin_entry_id: "JK000000009958",
     entry: "おおごえ",
+    kanji: "大声",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1952,6 +2061,7 @@ export const n2Words: Word[] = [
     entry_id: "9e74ebd8263e4fc68beea88be080b6d3",
     origin_entry_id: "JK000000010140",
     entry: "おおむかし",
+    kanji: "大昔",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1968,6 +2078,7 @@ export const n2Words: Word[] = [
     entry_id: "924c9b17d2f14f409fd188dbb7a3562e",
     origin_entry_id: "JK000000010148",
     entry: "おおめ",
+    kanji: "多め·多目",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -1988,6 +2099,7 @@ export const n2Words: Word[] = [
     entry_id: "11c949ad55fc4159af3e016a20c9ed06",
     origin_entry_id: "JK000000010170",
     entry: "おおよそ",
+    kanji: "大凡",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2008,6 +2120,7 @@ export const n2Words: Word[] = [
     entry_id: "3c53d598614944249ab2da0845679156",
     origin_entry_id: "JK000000010193",
     entry: "おか",
+    kanji: "丘·岡",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2024,6 +2137,7 @@ export const n2Words: Word[] = [
     entry_id: "1439716b1cd8475cb956740d3d7553a5",
     origin_entry_id: "JK000000010220",
     entry: "おかず",
+    kanji: "御数·御菜",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2040,6 +2154,7 @@ export const n2Words: Word[] = [
     entry_id: "327db113424d45c290820764891bf6d0",
     origin_entry_id: "JK000000010261",
     entry: "おかわり",
+    kanji: "お代(わ)り·御代(わ)り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2060,6 +2175,7 @@ export const n2Words: Word[] = [
     entry_id: "553f51d2bdf449c29b8b33acf59aad92",
     origin_entry_id: "JK000000010262",
     entry: "おかん",
+    kanji: "悪寒",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2076,6 +2192,7 @@ export const n2Words: Word[] = [
     entry_id: "e3b03bac032e43e689a75adda67c7eb0",
     origin_entry_id: "JK000000010264",
     entry: "おき",
+    kanji: "沖",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2092,6 +2209,7 @@ export const n2Words: Word[] = [
     entry_id: "80842a33f9d044968bef94b91feac220",
     origin_entry_id: "JK000000010321",
     entry: "おきにいり",
+    kanji: "お気に入り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2108,6 +2226,7 @@ export const n2Words: Word[] = [
     entry_id: "316222a595e9464a8b84c85b4d60d9ad",
     origin_entry_id: "JK000000010429",
     entry: "おくりがな",
+    kanji: "送り仮名",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2124,6 +2243,7 @@ export const n2Words: Word[] = [
     entry_id: "e33581abd8e04f46aac3ec2d8b692f0e",
     origin_entry_id: "JK000000010722",
     entry: "おしゃべり",
+    kanji: "お喋り·御喋り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2144,6 +2264,7 @@ export const n2Words: Word[] = [
     entry_id: "1124c2128442470f8c215f43e95714f1",
     origin_entry_id: "JK000000010627",
     entry: "おじぎ",
+    kanji: "お辞儀·御辞儀",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2164,6 +2285,7 @@ export const n2Words: Word[] = [
     entry_id: "1f66f152c9be449fbe707ca1e9ab6448",
     origin_entry_id: "JK000000010781",
     entry: "おせん",
+    kanji: "汚染",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2184,6 +2306,7 @@ export const n2Words: Word[] = [
     entry_id: "c843157ee42849e095934927c80fe8b6",
     origin_entry_id: "JK000000010823",
     entry: "おそれ",
+    kanji: "恐れ·怖れ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2200,6 +2323,7 @@ export const n2Words: Word[] = [
     entry_id: "d72986ed6d0d435d81df83e45482ef32",
     origin_entry_id: "JK000000011043",
     entry: "おてつだいさん",
+    kanji: "お手伝い<strong>さん</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2216,6 +2340,7 @@ export const n2Words: Word[] = [
     entry_id: "d156b481292b461e89ba4f7eda06d4cd",
     origin_entry_id: "JK000000011264",
     entry: "おに",
+    kanji: "鬼",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2232,6 +2357,7 @@ export const n2Words: Word[] = [
     entry_id: "b251b7d4dea54f77a14dd7532140cd55",
     origin_entry_id: "JK000000011311",
     entry: "おのおの",
+    kanji: "各∙各々",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2256,6 +2382,7 @@ export const n2Words: Word[] = [
     entry_id: "850387dfa2f9470396177bf068144ccc",
     origin_entry_id: "JK000000011421",
     entry: "おひる",
+    kanji: "お昼",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2272,6 +2399,7 @@ export const n2Words: Word[] = [
     entry_id: "2e0cc0b90b894158ad29957b54d15a88",
     origin_entry_id: "JK000000011365",
     entry: "おび",
+    kanji: "帯",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2288,6 +2416,7 @@ export const n2Words: Word[] = [
     entry_id: "650f10db782148d3ade0946c4f7ae23c",
     origin_entry_id: "JK000000011527",
     entry: "おまいり",
+    kanji: "お参り·御参り·御詣",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2304,6 +2433,7 @@ export const n2Words: Word[] = [
     entry_id: "01252b4a0f9c4af6851a401d803dd62f",
     origin_entry_id: "JK000000011530",
     entry: "おまけ",
+    kanji: "お負け·御負け",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2324,6 +2454,7 @@ export const n2Words: Word[] = [
     entry_id: "969123567fdb456b9214592a4335a147",
     origin_entry_id: "JK000000011629",
     entry: "おもいきり",
+    kanji: "思い切り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2344,6 +2475,7 @@ export const n2Words: Word[] = [
     entry_id: "870ba6717a894078b6a52ae050292612",
     origin_entry_id: "JK000000011797",
     entry: "おや",
+    kanji: "親·祖",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2360,6 +2492,7 @@ export const n2Words: Word[] = [
     entry_id: "38d9796cdb894242a9e8fc05f7d5ee5b",
     origin_entry_id: "JK000000011826",
     entry: "おやすみ",
+    kanji: "お休み·御休み",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2376,6 +2509,7 @@ export const n2Words: Word[] = [
     entry_id: "f46a1175849148619b61658166add9d4",
     origin_entry_id: "JK000000011830",
     entry: "おやつ",
+    kanji: "御八つ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2392,6 +2526,7 @@ export const n2Words: Word[] = [
     entry_id: "7dbfcfdbb75f498aadf4a0a28b13a496",
     origin_entry_id: "JK000000011852",
     entry: "およぎ",
+    kanji: "泳ぎ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2408,6 +2543,7 @@ export const n2Words: Word[] = [
     entry_id: "141e5f9652d44281bd907fdcc327cbeb",
     origin_entry_id: "JK000000012041",
     entry: "おん",
+    kanji: "音",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2424,6 +2560,7 @@ export const n2Words: Word[] = [
     entry_id: "58ffd03be0da4344b048d215284cfe88",
     origin_entry_id: "JK000000012084",
     entry: "おんけい",
+    kanji: "恩恵",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2440,6 +2577,7 @@ export const n2Words: Word[] = [
     entry_id: "6eb220e159164ffbab81558699444239",
     origin_entry_id: "JK000000012092",
     entry: "おんこう",
+    kanji: "温厚",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2456,6 +2594,7 @@ export const n2Words: Word[] = [
     entry_id: "97e8affcb7fe4ea09e1b2338068f34c0",
     origin_entry_id: "JK000000012140",
     entry: "おんたい",
+    kanji: "温帯",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2472,6 +2611,7 @@ export const n2Words: Word[] = [
     entry_id: "561fedf8a4384cb08a93eefd7518e376",
     origin_entry_id: "JK000000012143",
     entry: "おんだん",
+    kanji: "温暖",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2488,6 +2628,7 @@ export const n2Words: Word[] = [
     entry_id: "f37334846d67488b9f71ce8e0bb4aab9",
     origin_entry_id: "JK000000012146",
     entry: "おんちゅう",
+    kanji: "御中",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2504,6 +2645,7 @@ export const n2Words: Word[] = [
     entry_id: "9f611ea7bd184e32890bedb012ec0112",
     origin_entry_id: "JK000000012150",
     entry: "おんてい",
+    kanji: "音程",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2520,6 +2662,7 @@ export const n2Words: Word[] = [
     entry_id: "eda492f0e6074b329f8d78b666f6d7fa",
     origin_entry_id: "JK000000012288",
     entry: "か",
+    kanji: "可",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2552,6 +2695,7 @@ export const n2Words: Word[] = [
     entry_id: "04de0872b4864794a3cebeb5b0024eee",
     origin_entry_id: "JK000000012584",
     entry: "かいかい",
+    kanji: "開会",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2572,6 +2716,7 @@ export const n2Words: Word[] = [
     entry_id: "7f993814ac644e19964cf75623735f6a",
     origin_entry_id: "JK000000012714",
     entry: "かいけい",
+    kanji: "会計",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2592,6 +2737,7 @@ export const n2Words: Word[] = [
     entry_id: "8d4c7716f9cc42c09e5f9e84e5dbfba7",
     origin_entry_id: "JK000000012730",
     entry: "かいけん",
+    kanji: "会見",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2612,6 +2758,7 @@ export const n2Words: Word[] = [
     entry_id: "cce4b88968d9428895aaeed428560c48",
     origin_entry_id: "JK000000012803",
     entry: "かいさい",
+    kanji: "開催",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2632,6 +2779,7 @@ export const n2Words: Word[] = [
     entry_id: "43b7a1f7c9a74076b4c30672fc04de12",
     origin_entry_id: "JK000000012819",
     entry: "かいさつ",
+    kanji: "改札",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2652,6 +2800,7 @@ export const n2Words: Word[] = [
     entry_id: "18adbd60b9b5475882fd2cdda7a31764",
     origin_entry_id: "JK000000012824",
     entry: "かいさん",
+    kanji: "解散",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2672,6 +2821,7 @@ export const n2Words: Word[] = [
     entry_id: "ba31a44ef7a04d4ea97fa648065323bb",
     origin_entry_id: "JK000000012831",
     entry: "かいし",
+    kanji: "開始",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2692,6 +2842,7 @@ export const n2Words: Word[] = [
     entry_id: "d51ed34f4a654344ab415a347d831486",
     origin_entry_id: "JK000000012867",
     entry: "かいしゃく",
+    kanji: "解釈",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2712,6 +2863,7 @@ export const n2Words: Word[] = [
     entry_id: "b694b51e4d034fed8046489eb99f8908",
     origin_entry_id: "JK000000012923",
     entry: "かいじょう",
+    kanji: "海上",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2728,6 +2880,7 @@ export const n2Words: Word[] = [
     entry_id: "85e3e13a49604b56849d19234d010071",
     origin_entry_id: "JK000000012985",
     entry: "かいすう",
+    kanji: "回数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2744,6 +2897,7 @@ export const n2Words: Word[] = [
     entry_id: "bf9c2c9949254375b9be5fc3737d4009",
     origin_entry_id: "JK000000012997",
     entry: "かいせい",
+    kanji: "快晴",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2764,6 +2918,7 @@ export const n2Words: Word[] = [
     entry_id: "bd7f833c359e4d2bb8818039642de482",
     origin_entry_id: "JK000000013042",
     entry: "かいぜん",
+    kanji: "改善",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2784,6 +2939,7 @@ export const n2Words: Word[] = [
     entry_id: "1ad7f025f8c9452d949bb67830037036",
     origin_entry_id: "JK000000013082",
     entry: "かいそく",
+    kanji: "快速",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2800,6 +2956,7 @@ export const n2Words: Word[] = [
     entry_id: "7269595079d24081a3906a782a466adf",
     origin_entry_id: "JK000000013072",
     entry: "かいぞう",
+    kanji: "改造",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2820,6 +2977,7 @@ export const n2Words: Word[] = [
     entry_id: "e9c9bcae2de44fd8bdcf302c9e230132",
     origin_entry_id: "JK000000013161",
     entry: "かいつう",
+    kanji: "開通",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2840,6 +2998,7 @@ export const n2Words: Word[] = [
     entry_id: "741972b21d454f4e9ee7717892b4a6f0",
     origin_entry_id: "JK000000013184",
     entry: "かいてき",
+    kanji: "快適",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2860,6 +3019,7 @@ export const n2Words: Word[] = [
     entry_id: "e54f2e71059345a48fb32bfdbb2894df",
     origin_entry_id: "JK000000013190",
     entry: "かいてん",
+    kanji: "回転·廻転",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2880,6 +3040,7 @@ export const n2Words: Word[] = [
     entry_id: "d58a3ce92b99408abc6cf9a80fb002ac",
     origin_entry_id: "JK000000013204",
     entry: "かいとう",
+    kanji: "解答",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2900,6 +3061,7 @@ export const n2Words: Word[] = [
     entry_id: "656bb44d720141feb0dd56ca1eed9f33",
     origin_entry_id: "JK000000013250",
     entry: "かいぬし",
+    kanji: "飼(い)主",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2916,6 +3078,7 @@ export const n2Words: Word[] = [
     entry_id: "05ec8b6ddcf545eea86624cd96479c64",
     origin_entry_id: "JK000000013280",
     entry: "かいひ",
+    kanji: "会費",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2932,6 +3095,7 @@ export const n2Words: Word[] = [
     entry_id: "b94e4ab2f6f94ff4b22e95e99bad7131",
     origin_entry_id: "JK000000013306",
     entry: "かいふく",
+    kanji: "回復·恢復",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2952,6 +3116,7 @@ export const n2Words: Word[] = [
     entry_id: "e964b5a7a7eb445aa1072b86f15da39e",
     origin_entry_id: "JK000000013345",
     entry: "かいほう",
+    kanji: "解放",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2972,6 +3137,7 @@ export const n2Words: Word[] = [
     entry_id: "93e5c11582164ff19e615e5c6990481b",
     origin_entry_id: "JK000000013387",
     entry: "かいめん",
+    kanji: "海面",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -2988,6 +3154,7 @@ export const n2Words: Word[] = [
     entry_id: "05ab4df4cebf441785cf00969badcc67",
     origin_entry_id: "JK000000013414",
     entry: "かいよう",
+    kanji: "海洋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3004,6 +3171,7 @@ export const n2Words: Word[] = [
     entry_id: "2dba2a53c3ae4956b07038a7d9314731",
     origin_entry_id: "JK000000013597",
     entry: "かおく",
+    kanji: "家屋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3020,6 +3188,7 @@ export const n2Words: Word[] = [
     entry_id: "bb24d2399842414382a1e2d6a7601051",
     origin_entry_id: "JK000000013606",
     entry: "かおつき",
+    kanji: "顔つき·顔付き",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3036,6 +3205,7 @@ export const n2Words: Word[] = [
     entry_id: "622a388ca1a945ee972bf32326e8d342",
     origin_entry_id: "JK000000013622",
     entry: "かおり",
+    kanji: "香り·薫り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3052,6 +3222,7 @@ export const n2Words: Word[] = [
     entry_id: "e30963eb49f24438a85d9fc84ae36afc",
     origin_entry_id: "JK000000013907",
     entry: "かきね",
+    kanji: "垣根",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3068,6 +3239,7 @@ export const n2Words: Word[] = [
     entry_id: "dcb5d7334dbd4a61afc901f5151f4458",
     origin_entry_id: "JK000000013972",
     entry: "かぎり",
+    kanji: "限り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3084,6 +3256,7 @@ export const n2Words: Word[] = [
     entry_id: "c7da428def904aecb92796039dcd2ea4",
     origin_entry_id: "JK000000014053",
     entry: "かくう",
+    kanji: "架空",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3100,6 +3273,7 @@ export const n2Words: Word[] = [
     entry_id: "02bd837412fb4e71a4f8921c52e3c39d",
     origin_entry_id: "JK000000014243",
     entry: "かくしん",
+    kanji: "核心",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3116,6 +3290,7 @@ export const n2Words: Word[] = [
     entry_id: "c4a9f235e518454ab00d26bcb8c4dc81",
     origin_entry_id: "JK000000014155",
     entry: "かくじ",
+    kanji: "各自",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3132,6 +3307,7 @@ export const n2Words: Word[] = [
     entry_id: "e9300b2b73fa43cf99bdc5136ac4a85b",
     origin_entry_id: "JK000000014222",
     entry: "かくじゅう",
+    kanji: "拡充",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3152,6 +3328,7 @@ export const n2Words: Word[] = [
     entry_id: "43db2c2a3d064d758ab579a1af59d3d7",
     origin_entry_id: "JK000000014246",
     entry: "かくじん",
+    kanji: "各人",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3168,6 +3345,7 @@ export const n2Words: Word[] = [
     entry_id: "d4320daa802c444081f2c855a8dd9db3",
     origin_entry_id: "JK000000014310",
     entry: "かくち",
+    kanji: "各地",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3184,6 +3362,7 @@ export const n2Words: Word[] = [
     entry_id: "fd4b8d6a73834e1da57b94a695c9c47b",
     origin_entry_id: "JK000000014318",
     entry: "かくちょう",
+    kanji: "拡張",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3204,6 +3383,7 @@ export const n2Words: Word[] = [
     entry_id: "690e309dedf94464887a0f84647d9713",
     origin_entry_id: "JK000000014343",
     entry: "かくど",
+    kanji: "角度",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3220,6 +3400,7 @@ export const n2Words: Word[] = [
     entry_id: "572f365873fe4811b5b548e203acae75",
     origin_entry_id: "JK000000014427",
     entry: "かくほ",
+    kanji: "確保",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3240,6 +3421,7 @@ export const n2Words: Word[] = [
     entry_id: "afd98a68e03049edb6e67025ec04399a",
     origin_entry_id: "JK000000014477",
     entry: "かくりつ",
+    kanji: "確率",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3256,6 +3438,7 @@ export const n2Words: Word[] = [
     entry_id: "9ee46765df8049909df78cd31c94a9d9",
     origin_entry_id: "JK000000014634",
     entry: "かけつ",
+    kanji: "可決",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3276,6 +3459,7 @@ export const n2Words: Word[] = [
     entry_id: "f994a48b250749af8f46aa1ef4e43a4a",
     origin_entry_id: "JK000000014710",
     entry: "かけら",
+    kanji: "欠片·欠けら",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3292,6 +3476,7 @@ export const n2Words: Word[] = [
     entry_id: "a7f3e5eb61174bfcb75d280897303fc4",
     origin_entry_id: "JK000000014531",
     entry: "かげ",
+    kanji: "陰·蔭·翳",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3308,6 +3493,7 @@ export const n2Words: Word[] = [
     entry_id: "7e90d0db89fd456c9649d09f0ce37d06",
     origin_entry_id: "JK000000014730",
     entry: "かげん",
+    kanji: "加減",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3324,6 +3510,7 @@ export const n2Words: Word[] = [
     entry_id: "3d4b7f18e170471d8a9191745a6684c0",
     origin_entry_id: "JK000000014743",
     entry: "かこ",
+    kanji: "過去",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3340,6 +3527,7 @@ export const n2Words: Word[] = [
     entry_id: "10f9ac89f0f948d89f3fcad8546a27ea",
     origin_entry_id: "JK000000014763",
     entry: "かこう",
+    kanji: "火口",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3360,6 +3548,7 @@ export const n2Words: Word[] = [
     entry_id: "0eb61f5096a94dc889db43daee05aeb9",
     origin_entry_id: "JK000000014744",
     entry: "かご",
+    kanji: "籠",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3376,6 +3565,7 @@ export const n2Words: Word[] = [
     entry_id: "8346d26cc49846d097a307185f775792",
     origin_entry_id: "JK000000014942",
     entry: "かざん",
+    kanji: "火山",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3392,6 +3582,7 @@ export const n2Words: Word[] = [
     entry_id: "2a233ac6bb1045908a759a4b5f9c5245",
     origin_entry_id: "JK000000014948",
     entry: "かし",
+    kanji: "貸し",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3408,6 +3599,7 @@ export const n2Words: Word[] = [
     entry_id: "9e70ca61d01441f58541942d992f8cf4",
     origin_entry_id: "JK000000015042",
     entry: "かしつ",
+    kanji: "過失",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3424,6 +3616,7 @@ export const n2Words: Word[] = [
     entry_id: "90ab6848da4a4261afbdf23635587013",
     origin_entry_id: "JK000000015069",
     entry: "かしま",
+    kanji: "貸(し)間",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3440,6 +3633,7 @@ export const n2Words: Word[] = [
     entry_id: "31f2271e963347d7a2b003a0cc168d42",
     origin_entry_id: "JK000000015081",
     entry: "かしや",
+    kanji: "貸(し)家·貸(し)屋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3456,6 +3650,7 @@ export const n2Words: Word[] = [
     entry_id: "185739dbe36f4463bb415c5b3f1727dd",
     origin_entry_id: "JK000000015131",
     entry: "かしょ",
+    kanji: "箇所·個所",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3472,6 +3667,7 @@ export const n2Words: Word[] = [
     entry_id: "91154faf9a074d1d84aad3665d63fdc0",
     origin_entry_id: "JK000000014972",
     entry: "かじ",
+    kanji: "家事",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3488,6 +3684,7 @@ export const n2Words: Word[] = [
     entry_id: "b665d2c4f1134b3cb693609789647ca8",
     origin_entry_id: "JK000000015046",
     entry: "かじつ",
+    kanji: "果実",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3504,6 +3701,7 @@ export const n2Words: Word[] = [
     entry_id: "dcb522dcf89d4ad6b3b406c8a85b78e0",
     origin_entry_id: "JK000000015164",
     entry: "かじょう",
+    kanji: "過剰",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3520,6 +3718,7 @@ export const n2Words: Word[] = [
     entry_id: "723130d4d0e846d5b5bd43f4d030fa97",
     origin_entry_id: "JK000000015239",
     entry: "かず",
+    kanji: "数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3536,6 +3735,7 @@ export const n2Words: Word[] = [
     entry_id: "69c04cf8419f40cfb1b69aacc2a3981f",
     origin_entry_id: "JK000000015393",
     entry: "かせん",
+    kanji: "下線",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3552,6 +3752,7 @@ export const n2Words: Word[] = [
     entry_id: "3714539fe9de42289555d3576e34f358",
     origin_entry_id: "JK000000015337",
     entry: "かぜい",
+    kanji: "課税",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3572,6 +3773,7 @@ export const n2Words: Word[] = [
     entry_id: "f56f4a37f3484ae48998c62f81c36092",
     origin_entry_id: "JK000000015437",
     entry: "かそく",
+    kanji: "加速",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3592,6 +3794,7 @@ export const n2Words: Word[] = [
     entry_id: "63643b9665534a68a02ae9563c76e71b",
     origin_entry_id: "JK100015437002",
     entry: "かそくど",
+    kanji: "加速度",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3624,6 +3827,7 @@ export const n2Words: Word[] = [
     entry_id: "5c829fa686dc429f80a5252322ac749d",
     origin_entry_id: "JK000000015633",
     entry: "かたな",
+    kanji: "刀",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3640,6 +3844,7 @@ export const n2Words: Word[] = [
     entry_id: "e31c155726664b80bb144ff4e2759039",
     origin_entry_id: "JK000000015689",
     entry: "かたほう",
+    kanji: "片方",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3656,6 +3861,7 @@ export const n2Words: Word[] = [
     entry_id: "2292015829d74f2b835169ee7c2ba8d6",
     origin_entry_id: "JK000000015697",
     entry: "かたまり",
+    kanji: "固まり·塊(り)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3672,6 +3878,7 @@ export const n2Words: Word[] = [
     entry_id: "6acc908d3fac465b81f8027a26aa3d4e",
     origin_entry_id: "JK000000015484",
     entry: "かだい",
+    kanji: "過大",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3688,6 +3895,7 @@ export const n2Words: Word[] = [
     entry_id: "f8a8f333db3243619944f92d7585fe75",
     origin_entry_id: "JK000000015955",
     entry: "かっこ",
+    kanji: "括弧",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3708,6 +3916,7 @@ export const n2Words: Word[] = [
     entry_id: "4a69322af28246aaad1d67dc38eafd5e",
     origin_entry_id: "JK000000015969",
     entry: "かっこく",
+    kanji: "各国",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3724,6 +3933,7 @@ export const n2Words: Word[] = [
     entry_id: "077aa8b397ed43a5a24602242f0640a0",
     origin_entry_id: "JK000000016036",
     entry: "かって",
+    kanji: "勝手",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3744,6 +3954,7 @@ export const n2Words: Word[] = [
     entry_id: "0a8be28e4d944efaa42c9751e55ac7e6",
     origin_entry_id: "JK000000015982",
     entry: "かつじ",
+    kanji: "活字",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3760,6 +3971,7 @@ export const n2Words: Word[] = [
     entry_id: "bdf3f50ed5cf4c0ab48dc94d7b9a904b",
     origin_entry_id: "JK000000016087",
     entry: "かつやく",
+    kanji: "活躍",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3780,6 +3992,7 @@ export const n2Words: Word[] = [
     entry_id: "af8ffe87ccf74265a957dc8456710376",
     origin_entry_id: "JK000000016090",
     entry: "かつよう",
+    kanji: "活用",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3800,6 +4013,7 @@ export const n2Words: Word[] = [
     entry_id: "ea7b830ae96144dfb5f9766c8d528930",
     origin_entry_id: "JK000000016100",
     entry: "かつりょく",
+    kanji: "活力",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3816,6 +4030,7 @@ export const n2Words: Word[] = [
     entry_id: "a61c7592a59b4aa7a9205c8b8887365c",
     origin_entry_id: "JK000000016113",
     entry: "かてい",
+    kanji: "仮定",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3836,6 +4051,7 @@ export const n2Words: Word[] = [
     entry_id: "264baf340cf44193ac563eafd439b0f7",
     origin_entry_id: "JK000000016154",
     entry: "かどう",
+    kanji: "稼働·稼動",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3856,6 +4072,7 @@ export const n2Words: Word[] = [
     entry_id: "fc1386f9afa148439ccdb4d02ba17da0",
     origin_entry_id: "JK000000016199",
     entry: "かな",
+    kanji: "仮名·仮字",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3872,6 +4089,7 @@ export const n2Words: Word[] = [
     entry_id: "8240747338134890a8b0e2ba61cd59f6",
     origin_entry_id: "JK100016199005",
     entry: "かなづかい",
+    kanji: "仮名遣(い)·仮字遣(い)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3888,6 +4106,7 @@ export const n2Words: Word[] = [
     entry_id: "48ec6a319dbf47e38fda1a928f1989cd",
     origin_entry_id: "JK000000016316",
     entry: "かね",
+    kanji: "鐘",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3904,6 +4123,7 @@ export const n2Words: Word[] = [
     entry_id: "af7f905601f4428cbffd5de736fca775",
     origin_entry_id: "JK000000016347",
     entry: "かねつ",
+    kanji: "加熱",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3924,6 +4144,7 @@ export const n2Words: Word[] = [
     entry_id: "18e3cf833ef44f01ac428619471ebf93",
     origin_entry_id: "JK000000016383",
     entry: "かのう",
+    kanji: "可能",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3940,6 +4161,7 @@ export const n2Words: Word[] = [
     entry_id: "ae5c2a43b63549e39a1f40cdee89e0f1",
     origin_entry_id: "JK000000016445",
     entry: "かはんすう",
+    kanji: "過半数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3956,6 +4178,7 @@ export const n2Words: Word[] = [
     entry_id: "e78abed5cc9c438eabf682463216fe14",
     origin_entry_id: "JK000000016454",
     entry: "かび",
+    kanji: "黴",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3972,6 +4195,7 @@ export const n2Words: Word[] = [
     entry_id: "3c7de9eb50a04fc6adf30186f3da25f7",
     origin_entry_id: "JK000000016484",
     entry: "かぶ",
+    kanji: "株",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -3992,6 +4216,7 @@ export const n2Words: Word[] = [
     entry_id: "98cf0c30cf9144a1b4c60bdbadbed6ab",
     origin_entry_id: "JK000000016626",
     entry: "かま",
+    kanji: "釜",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4024,6 +4249,7 @@ export const n2Words: Word[] = [
     entry_id: "d65c5e791a534ae4a655ab17f0ebb23d",
     origin_entry_id: "JK000000016714",
     entry: "かみがた",
+    kanji: "髪型·髪形",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4040,6 +4266,7 @@ export const n2Words: Word[] = [
     entry_id: "718677a4e10b44f79aa7ff4e04412ec2",
     origin_entry_id: "JK000000016728",
     entry: "かみくず",
+    kanji: "紙くず·紙屑",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4056,6 +4283,7 @@ export const n2Words: Word[] = [
     entry_id: "df615cf21bae49a69f134f65b2654195",
     origin_entry_id: "JK000000016741",
     entry: "かみさま",
+    kanji: "神様",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4072,6 +4300,7 @@ export const n2Words: Word[] = [
     entry_id: "38a834825091403980e9a81b324262e6",
     origin_entry_id: "JK000000016760",
     entry: "かみそり",
+    kanji: "剃刀",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4088,6 +4317,7 @@ export const n2Words: Word[] = [
     entry_id: "09547a2896184ca5bbf7e23ed10b979c",
     origin_entry_id: "JK000000016781",
     entry: "かみなり",
+    kanji: "雷",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4104,6 +4334,7 @@ export const n2Words: Word[] = [
     entry_id: "7fec05245e7c4e139fb295a976f998db",
     origin_entry_id: "JK000000016793",
     entry: "かみのけ",
+    kanji: "髪の毛",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4120,6 +4351,7 @@ export const n2Words: Word[] = [
     entry_id: "566ecc2c2ddd450390d64c1f2f298234",
     origin_entry_id: "JK000000016883",
     entry: "かもつ",
+    kanji: "貨物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4136,6 +4368,7 @@ export const n2Words: Word[] = [
     entry_id: "664fc73516be45f5adea85d04e477129",
     origin_entry_id: "JK000000016934",
     entry: "かよう",
+    kanji: "歌謡",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4168,6 +4401,7 @@ export const n2Words: Word[] = [
     entry_id: "6c846108707a48ce9c2fe51d7e9a515a",
     origin_entry_id: "JK000000017094",
     entry: "からつゆ",
+    kanji: "空梅雨",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4184,6 +4418,7 @@ export const n2Words: Word[] = [
     entry_id: "22678c6baef64b90a4ee7f7bbb8147fb",
     origin_entry_id: "JK000000017513",
     entry: "かわ",
+    kanji: "皮",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4200,6 +4435,7 @@ export const n2Words: Word[] = [
     entry_id: "b006915e05ca491d82632d26720029df",
     origin_entry_id: "JK000000017546",
     entry: "かわぎし",
+    kanji: "川岸·河岸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4216,6 +4452,7 @@ export const n2Words: Word[] = [
     entry_id: "d8b8da242f1a4fd98e3d5db57d30f9c5",
     origin_entry_id: "JK000000017556",
     entry: "かわぐつ",
+    kanji: "皮靴·革靴",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4232,6 +4469,7 @@ export const n2Words: Word[] = [
     entry_id: "e9bf881364a84b579dd430c3d00b245d",
     origin_entry_id: "JK000000017583",
     entry: "かわせ",
+    kanji: "為替",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4248,6 +4486,7 @@ export const n2Words: Word[] = [
     entry_id: "d958fb5144c0491a9715464d13419581",
     origin_entry_id: "JK000000017655",
     entry: "かわら",
+    kanji: "瓦",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4264,6 +4503,7 @@ export const n2Words: Word[] = [
     entry_id: "0fae1108f83c48238e9c42f9c5d2415f",
     origin_entry_id: "JK000000017720",
     entry: "かん",
+    kanji: "間",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4284,6 +4524,7 @@ export const n2Words: Word[] = [
     entry_id: "019c8bb29e5f4da585173e82b602c7f5",
     origin_entry_id: "JK000000017958",
     entry: "かんき",
+    kanji: "換気",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4304,6 +4545,7 @@ export const n2Words: Word[] = [
     entry_id: "975fc1690d464000a684918d4595a026",
     origin_entry_id: "JK000000017967",
     entry: "かんきゃく",
+    kanji: "観客·看客",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4320,6 +4562,7 @@ export const n2Words: Word[] = [
     entry_id: "e0655048d7234ed0b53fe5eed952aa8e",
     origin_entry_id: "JK000000018031",
     entry: "かんげい",
+    kanji: "歓迎",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4340,6 +4583,7 @@ export const n2Words: Word[] = [
     entry_id: "d73fc65f9fa04237891ca364498f5dc0",
     origin_entry_id: "JK000000018035",
     entry: "かんげき",
+    kanji: "感激",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4360,6 +4604,7 @@ export const n2Words: Word[] = [
     entry_id: "9c82b636e15e48bfa229e5e732a2c738",
     origin_entry_id: "JK000000018145",
     entry: "かんさい",
+    kanji: "関西",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4376,6 +4621,7 @@ export const n2Words: Word[] = [
     entry_id: "b261d64afc464858a1e664276bb07f8e",
     origin_entry_id: "JK000000018162",
     entry: "かんさつ",
+    kanji: "観察",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4396,6 +4642,7 @@ export const n2Words: Word[] = [
     entry_id: "9c82d28e1b1848a68095f9bec1933398",
     origin_entry_id: "JK000000018185",
     entry: "かんし",
+    kanji: "監視",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4416,6 +4663,7 @@ export const n2Words: Word[] = [
     entry_id: "e5bec9a7db7542fabe769c823bd094ae",
     origin_entry_id: "JK000000018278",
     entry: "かんしょう",
+    kanji: "鑑賞",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4436,6 +4684,7 @@ export const n2Words: Word[] = [
     entry_id: "bb6dd557dee64e2badf9809c3928c294",
     origin_entry_id: "JK000000018442",
     entry: "かんそう",
+    kanji: "乾燥",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4456,6 +4705,7 @@ export const n2Words: Word[] = [
     entry_id: "afb988eb204045409326c16c8845ba56",
     origin_entry_id: "JK000000018460",
     entry: "かんそく",
+    kanji: "観測",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4476,6 +4726,7 @@ export const n2Words: Word[] = [
     entry_id: "61438c6630c94e4b865e241f42c46f22",
     origin_entry_id: "JK000000018474",
     entry: "かんたい",
+    kanji: "寒帯",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4492,6 +4743,7 @@ export const n2Words: Word[] = [
     entry_id: "6f23fd13a4e94ba6a229b909464d6c56",
     origin_entry_id: "JK000000018518",
     entry: "かんちがい",
+    kanji: "勘違い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4512,6 +4764,7 @@ export const n2Words: Word[] = [
     entry_id: "929b28bf664046149da5341df768d705",
     origin_entry_id: "JK000000018530",
     entry: "かんちょう",
+    kanji: "官庁",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4528,6 +4781,7 @@ export const n2Words: Word[] = [
     entry_id: "23023873c86f4649b81314b99927dfd5",
     origin_entry_id: "JK000000018553",
     entry: "かんづめ",
+    kanji: "缶詰(め)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4544,6 +4798,7 @@ export const n2Words: Word[] = [
     entry_id: "0bd6f4c035754ee488211107d2f466fd",
     origin_entry_id: "JK000000018583",
     entry: "かんでんち",
+    kanji: "乾電池",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4560,6 +4815,7 @@ export const n2Words: Word[] = [
     entry_id: "8f91adc4465f4abb98774c48689319b9",
     origin_entry_id: "JK000000018604",
     entry: "かんとう",
+    kanji: "関東",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4576,6 +4832,7 @@ export const n2Words: Word[] = [
     entry_id: "c42e7eedb243470fa3a355840264b78d",
     origin_entry_id: "JK000000018615",
     entry: "かんとく",
+    kanji: "監督",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4596,6 +4853,7 @@ export const n2Words: Word[] = [
     entry_id: "5651d2f3f0674f61846307e1701b4426",
     origin_entry_id: "JK000000018630",
     entry: "かんない",
+    kanji: "館内",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4612,6 +4870,7 @@ export const n2Words: Word[] = [
     entry_id: "7fa44d3446c24130b7953ff96359a8fe",
     origin_entry_id: "JK000000018662",
     entry: "かんねん",
+    kanji: "観念",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4632,6 +4891,7 @@ export const n2Words: Word[] = [
     entry_id: "8fe9e20d86f64ce8ab8c2c9425b06337",
     origin_entry_id: "JK000000018724",
     entry: "かんばん",
+    kanji: "看板",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4648,6 +4908,7 @@ export const n2Words: Word[] = [
     entry_id: "21afa015e4be4b88b06ab48ba5004109",
     origin_entry_id: "JK000000018743",
     entry: "かんびょう",
+    kanji: "看病",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4668,6 +4929,7 @@ export const n2Words: Word[] = [
     entry_id: "b49fd190c5ab4e898ef53820c5201dd9",
     origin_entry_id: "JK000000018846",
     entry: "かんむり",
+    kanji: "冠",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4684,6 +4946,7 @@ export const n2Words: Word[] = [
     entry_id: "bce1cad53a2646539b95c42084f0745f",
     origin_entry_id: "JK000000018922",
     entry: "かんり",
+    kanji: "管理",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4704,6 +4967,7 @@ export const n2Words: Word[] = [
     entry_id: "00e4ced4481c470799ba71c4c5fa571d",
     origin_entry_id: "JK000000018959",
     entry: "かんれん",
+    kanji: "関連·関聯",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4724,6 +4988,7 @@ export const n2Words: Word[] = [
     entry_id: "3fd9a6ee1b924bf997bdc3dc60263f28",
     origin_entry_id: "JK000000018971",
     entry: "かんわ",
+    kanji: "漢和",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4740,6 +5005,7 @@ export const n2Words: Word[] = [
     entry_id: "ebb757d6ddbb41b583a239efecae78b6",
     origin_entry_id: "JK000000012473",
     entry: "がい",
+    kanji: "害",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4756,6 +5022,7 @@ export const n2Words: Word[] = [
     entry_id: "870f4b75357d4ac4beb1977b5dc6dc43",
     origin_entry_id: "JK000000012736",
     entry: "がいけん",
+    kanji: "外見",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4772,6 +5039,7 @@ export const n2Words: Word[] = [
     entry_id: "c430631b03de453f809e4736dff1bcfc",
     origin_entry_id: "JK000000012770",
     entry: "がいこう",
+    kanji: "外交",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4788,6 +5056,7 @@ export const n2Words: Word[] = [
     entry_id: "09d6f5e713d443a38011f3c8a6eebd0b",
     origin_entry_id: "JK000000013471",
     entry: "がいろん",
+    kanji: "概論",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4808,6 +5077,7 @@ export const n2Words: Word[] = [
     entry_id: "8fd1a18dee984aa4897246789d875741",
     origin_entry_id: "JK000000014023",
     entry: "がく",
+    kanji: "学",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4824,6 +5094,7 @@ export const n2Words: Word[] = [
     entry_id: "9637031235ac4fb7ad9f7289a6e4144f",
     origin_entry_id: "JK000000014225",
     entry: "がくじゅつ",
+    kanji: "学術",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4840,6 +5111,7 @@ export const n2Words: Word[] = [
     entry_id: "89145467585047e9a479ca3950a41746",
     origin_entry_id: "JK000000014373",
     entry: "がくねん",
+    kanji: "学年",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4856,6 +5128,7 @@ export const n2Words: Word[] = [
     entry_id: "58f985f4e2634b3493d3901d2dec8db7",
     origin_entry_id: "JK000000015893",
     entry: "がっか",
+    kanji: "学科",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4872,6 +5145,7 @@ export const n2Words: Word[] = [
     entry_id: "4ac2c87bff604363a2d6436da847dfe0",
     origin_entry_id: "JK000000015898",
     entry: "がっかい",
+    kanji: "学会",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4888,6 +5162,7 @@ export const n2Words: Word[] = [
     entry_id: "d7bedd06b903404996cadb588db18029",
     origin_entry_id: "JK000000015922",
     entry: "がっき",
+    kanji: "学期",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4904,6 +5179,7 @@ export const n2Words: Word[] = [
     entry_id: "a9a9a14a8ad04dbeba5266dca5fcf6bc",
     origin_entry_id: "JK000000015931",
     entry: "がっきゅう",
+    kanji: "学級",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4920,6 +5196,7 @@ export const n2Words: Word[] = [
     entry_id: "fce238a4cba84283af66ad0839190dd1",
     origin_entry_id: "JK000000016681",
     entry: "がまん",
+    kanji: "我慢",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4940,6 +5217,7 @@ export const n2Words: Word[] = [
     entry_id: "c7c4b608037a4b9eab309dd59732a17e",
     origin_entry_id: "JK000000016956",
     entry: "がら",
+    kanji: "柄",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4960,6 +5238,7 @@ export const n2Words: Word[] = [
     entry_id: "dac4b71c9d2d4d03959ae18bc4bdc64f",
     origin_entry_id: "JK000000017788",
     entry: "がん",
+    kanji: "癌",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4976,6 +5255,7 @@ export const n2Words: Word[] = [
     entry_id: "03d6510ba1554ea49cf5644359363f53",
     origin_entry_id: "JK000000018216",
     entry: "がんじつ",
+    kanji: "元日",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -4992,6 +5272,7 @@ export const n2Words: Word[] = [
     entry_id: "ee240839bfb946209a354d1d79a2bccd",
     origin_entry_id: "JK000000018816",
     entry: "がんぼう",
+    kanji: "願望",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5032,6 +5313,7 @@ export const n2Words: Word[] = [
     entry_id: "db280a31df63441198b6ddfbc4e7aa88",
     origin_entry_id: "JK000000019082",
     entry: "きあつ",
+    kanji: "気圧",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5048,6 +5330,7 @@ export const n2Words: Word[] = [
     entry_id: "5ce109988ea4433b9f1f25ded77c9b64",
     origin_entry_id: "JK000000019113",
     entry: "きいろ",
+    kanji: "黄色",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5064,6 +5347,7 @@ export const n2Words: Word[] = [
     entry_id: "163729de983e4ae19b8341198a1469d3",
     origin_entry_id: "JK000000019170",
     entry: "きおく",
+    kanji: "記憶",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5084,6 +5368,7 @@ export const n2Words: Word[] = [
     entry_id: "e7530b948615434a910879ec1d1fbd27",
     origin_entry_id: "JK000000019257",
     entry: "きかん",
+    kanji: "機関",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5100,6 +5385,7 @@ export const n2Words: Word[] = [
     entry_id: "52bcf7f87dd94261b44a936e351aa688",
     origin_entry_id: "JK100019257006",
     entry: "きかんしゃ",
+    kanji: "機関車",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5116,6 +5402,7 @@ export const n2Words: Word[] = [
     entry_id: "d91266be32a84a11bb38df0ae2c8bd32",
     origin_entry_id: "JK000000019210",
     entry: "きがえ",
+    kanji: "着替え",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5136,6 +5423,7 @@ export const n2Words: Word[] = [
     entry_id: "715133db314d4cf280bcc0f94ddb7dbd",
     origin_entry_id: "JK000000019285",
     entry: "きき",
+    kanji: "危機",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5152,6 +5440,7 @@ export const n2Words: Word[] = [
     entry_id: "ce4e075b2fe34b56b0dc2290057a3e1e",
     origin_entry_id: "JK000000019433",
     entry: "ききん",
+    kanji: "飢饉·饑饉",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5168,6 +5457,7 @@ export const n2Words: Word[] = [
     entry_id: "d90907b3415f4829bf450487cc59664d",
     origin_entry_id: "JK000000019417",
     entry: "きぎょう",
+    kanji: "企業",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5184,6 +5474,7 @@ export const n2Words: Word[] = [
     entry_id: "83e9a62e3be14c0b92e24351f32cab20",
     origin_entry_id: "JK000000019451",
     entry: "きぐ",
+    kanji: "器具",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5200,6 +5491,7 @@ export const n2Words: Word[] = [
     entry_id: "11cf327bdbe64f5fb07f17f8c6d31787",
     origin_entry_id: "JK000000019545",
     entry: "きげん",
+    kanji: "機嫌",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5216,6 +5508,7 @@ export const n2Words: Word[] = [
     entry_id: "bc671040d940435b886c0fc65cfae1bb",
     origin_entry_id: "JK000000019566",
     entry: "きこう",
+    kanji: "気候",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5232,6 +5525,7 @@ export const n2Words: Word[] = [
     entry_id: "11fec7d36f924a34b58a26c62881f9b4",
     origin_entry_id: "JK000000019588",
     entry: "きごう",
+    kanji: "記号",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5248,6 +5542,7 @@ export const n2Words: Word[] = [
     entry_id: "ead0f9bec9c64bd09a25509e1d25df07",
     origin_entry_id: "JK000000019693",
     entry: "きし",
+    kanji: "岸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5280,6 +5575,7 @@ export const n2Words: Word[] = [
     entry_id: "2cf444b7de6d4b52b28215a4dd733a62",
     origin_entry_id: "JK000000019826",
     entry: "きしょう",
+    kanji: "起床",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5300,6 +5596,7 @@ export const n2Words: Word[] = [
     entry_id: "cdcca7f556c34353acbba523421c9b17",
     origin_entry_id: "JK000000019710",
     entry: "きじ",
+    kanji: "生地·素地",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5316,6 +5613,7 @@ export const n2Words: Word[] = [
     entry_id: "3ae2fe9e3cb040848e8bd27ca8bfce4f",
     origin_entry_id: "JK000000019804",
     entry: "きじゅん",
+    kanji: "規準",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5332,6 +5630,7 @@ export const n2Words: Word[] = [
     entry_id: "51e796edd3e24b3294636818e402e9d5",
     origin_entry_id: "JK000000019893",
     entry: "きすう",
+    kanji: "奇数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5348,6 +5647,7 @@ export const n2Words: Word[] = [
     entry_id: "05e0f44e74b044e98140c9711e957712",
     origin_entry_id: "JK000000019932",
     entry: "きせい",
+    kanji: "帰省",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5368,6 +5668,7 @@ export const n2Words: Word[] = [
     entry_id: "ed2011d12f7743cf8f040e45993ea00a",
     origin_entry_id: "JK000000019990",
     entry: "きそ",
+    kanji: "基礎",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5384,6 +5685,7 @@ export const n2Words: Word[] = [
     entry_id: "37ecf8d2bbfd40f693c466c5c4193c9f",
     origin_entry_id: "JK000000020094",
     entry: "きち",
+    kanji: "基地",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5400,6 +5702,7 @@ export const n2Words: Word[] = [
     entry_id: "05a53dd7a7f2445ab7ae22eb503cd27d",
     origin_entry_id: "JK000000020130",
     entry: "きちょう",
+    kanji: "貴重",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5416,6 +5719,7 @@ export const n2Words: Word[] = [
     entry_id: "7109d30a34b94b6a9bde767a2db17472",
     origin_entry_id: "JK000000020153",
     entry: "きっかけ",
+    kanji: "切っ掛け",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5432,6 +5736,7 @@ export const n2Words: Word[] = [
     entry_id: "91f640c8907c442da14686e106f40297",
     origin_entry_id: "JK000000020178",
     entry: "きっさ",
+    kanji: "喫茶",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5448,6 +5753,7 @@ export const n2Words: Word[] = [
     entry_id: "91cf65af88ae4371aa72c921d3381b30",
     origin_entry_id: "JK000000020392",
     entry: "きのう",
+    kanji: "機能",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5464,6 +5770,7 @@ export const n2Words: Word[] = [
     entry_id: "f5139d0241034a58b105eb69598789a1",
     origin_entry_id: "JK000000020410",
     entry: "きのどく",
+    kanji: "気の毒",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5480,6 +5787,7 @@ export const n2Words: Word[] = [
     entry_id: "051079676bb84feda23a2987a920695f",
     origin_entry_id: "JK000000020459",
     entry: "きばん",
+    kanji: "基盤",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5496,6 +5804,7 @@ export const n2Words: Word[] = [
     entry_id: "fc8c74fd70f04b08993805e47deee085",
     origin_entry_id: "JK000000020500",
     entry: "きふ",
+    kanji: "寄付·寄附",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5516,6 +5825,7 @@ export const n2Words: Word[] = [
     entry_id: "33183fdcae444884be646e8ab0f080e5",
     origin_entry_id: "JK000000020584",
     entry: "きほん",
+    kanji: "基本",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5532,6 +5842,7 @@ export const n2Words: Word[] = [
     entry_id: "a1ce940db8704c31993691cfeadbbe71",
     origin_entry_id: "JK000000020557",
     entry: "きぼ",
+    kanji: "規模",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5548,6 +5859,7 @@ export const n2Words: Word[] = [
     entry_id: "6e001acc56134e058c9d4523ca40243a",
     origin_entry_id: "JK000000020608",
     entry: "きみ",
+    kanji: "気味",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5564,6 +5876,7 @@ export const n2Words: Word[] = [
     entry_id: "76954d0d88ab4ad1a2c6d3fb3aada1ad",
     origin_entry_id: "JK000000020739",
     entry: "きゃくせき",
+    kanji: "客席",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5580,6 +5893,7 @@ export const n2Words: Word[] = [
     entry_id: "bb852a55e62a4a8ab2611a3b275f5a49",
     origin_entry_id: "JK000000020778",
     entry: "きゃくま",
+    kanji: "客間",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5596,6 +5910,7 @@ export const n2Words: Word[] = [
     entry_id: "31711494a41e4f85a28a5c9b8560577c",
     origin_entry_id: "JK100020809004",
     entry: "きゃっかんてき",
+    kanji: "客観的",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5636,6 +5951,7 @@ export const n2Words: Word[] = [
     entry_id: "6210c7a4c81c41e9a89eb99bf959fc79",
     origin_entry_id: "JK000000021037",
     entry: "きゅうこう",
+    kanji: "休講",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5656,6 +5972,7 @@ export const n2Words: Word[] = [
     entry_id: "03d4593f724b416b9975f2129e52544d",
     origin_entry_id: "JK000000021057",
     entry: "きゅうこん",
+    kanji: "求婚",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5676,6 +5993,7 @@ export const n2Words: Word[] = [
     entry_id: "6c23bde2ab464722b65767de2ed56a42",
     origin_entry_id: "JK000000021111",
     entry: "きゅうしゅう",
+    kanji: "吸収",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5696,6 +6014,7 @@ export const n2Words: Word[] = [
     entry_id: "095ae00b777c4a2fbb37b2ede888bf41",
     origin_entry_id: "JK000000021125",
     entry: "きゅうじょ",
+    kanji: "救助",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5716,6 +6035,7 @@ export const n2Words: Word[] = [
     entry_id: "327ed41bfd954e898aa655c53c82997b",
     origin_entry_id: "JK000000021204",
     entry: "きゅうそく",
+    kanji: "休息",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5736,6 +6056,7 @@ export const n2Words: Word[] = [
     entry_id: "c8899b722e554094bc291e69626ed78a",
     origin_entry_id: "JK000000021533",
     entry: "きょういん",
+    kanji: "教員",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5752,6 +6073,7 @@ export const n2Words: Word[] = [
     entry_id: "17e5fa40d2e44c19bc0ff7e69d4976a7",
     origin_entry_id: "JK000000021574",
     entry: "きょうかい",
+    kanji: "境界·疆界",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5768,6 +6090,7 @@ export const n2Words: Word[] = [
     entry_id: "72c1a1c7fb2f42e29e196d82fff317d4",
     origin_entry_id: "JK000000021632",
     entry: "きょうきゅう",
+    kanji: "供給",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5788,6 +6111,7 @@ export const n2Words: Word[] = [
     entry_id: "4b451ddae3a84f54af1ac126516c3202",
     origin_entry_id: "JK000000021626",
     entry: "きょうぎ",
+    kanji: "競技",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5808,6 +6132,7 @@ export const n2Words: Word[] = [
     entry_id: "ac0407b8e5c647c9ac6779ee91419f05",
     origin_entry_id: "JK000000021731",
     entry: "きょうさん",
+    kanji: "共産",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5824,6 +6149,7 @@ export const n2Words: Word[] = [
     entry_id: "823fd59195344b2fa293bce1822e5b7e",
     origin_entry_id: "JK000000021793",
     entry: "きょうしゅく",
+    kanji: "恐縮",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5844,6 +6170,7 @@ export const n2Words: Word[] = [
     entry_id: "b3bca0268818463989a1a6be35b339eb",
     origin_entry_id: "JK000000021928",
     entry: "きょうちょう",
+    kanji: "協調",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5864,6 +6191,7 @@ export const n2Words: Word[] = [
     entry_id: "2c772c2edb4042c3a85c0c171b017bef",
     origin_entry_id: "JK000000021972",
     entry: "きょうどう",
+    kanji: "共同",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5884,6 +6212,7 @@ export const n2Words: Word[] = [
     entry_id: "c2bc3f6afb224eeb9dfa4cd5465805fa",
     origin_entry_id: "JK000000022014",
     entry: "きょうふ",
+    kanji: "恐怖",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5904,6 +6233,7 @@ export const n2Words: Word[] = [
     entry_id: "f4a5e426126c44589e20b5c22263e40f",
     origin_entry_id: "JK000000022085",
     entry: "きょうよう",
+    kanji: "教養",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5924,6 +6254,7 @@ export const n2Words: Word[] = [
     entry_id: "05275cc8842346f888be8f2ccabbe85c",
     origin_entry_id: "JK000000022106",
     entry: "きょうりょく",
+    kanji: "強力",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5944,6 +6275,7 @@ export const n2Words: Word[] = [
     entry_id: "169769ed61924d52a1a807b0837f451c",
     origin_entry_id: "JK000000022169",
     entry: "きょく",
+    kanji: "局",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5960,6 +6292,7 @@ export const n2Words: Word[] = [
     entry_id: "55fba877e04848cea7bce0bfd3d5a916",
     origin_entry_id: "JK000000022250",
     entry: "きょくせん",
+    kanji: "曲線",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5976,6 +6309,7 @@ export const n2Words: Word[] = [
     entry_id: "907622b47b34476b93f1689adcd52588",
     origin_entry_id: "JK000000022439",
     entry: "きょだい",
+    kanji: "巨大",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -5992,6 +6326,7 @@ export const n2Words: Word[] = [
     entry_id: "ade721a82d114ed6a6d39b5ab4dc039e",
     origin_entry_id: "JK000000022608",
     entry: "きり",
+    kanji: "霧",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6008,6 +6343,7 @@ export const n2Words: Word[] = [
     entry_id: "d7416c9b689340d29009f481a60cfcd7",
     origin_entry_id: "JK000000022697",
     entry: "きりつ",
+    kanji: "規律·紀律",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6024,6 +6360,7 @@ export const n2Words: Word[] = [
     entry_id: "919173b8c48742cc966f41c71edda02e",
     origin_entry_id: "JK000000022802",
     entry: "きれ",
+    kanji: "切れ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6044,6 +6381,7 @@ export const n2Words: Word[] = [
     entry_id: "a0a1ed658998447181b25a054e2b5896",
     origin_entry_id: "JK000000022957",
     entry: "きんがく",
+    kanji: "金額",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6060,6 +6398,7 @@ export const n2Words: Word[] = [
     entry_id: "da7b7196f6f54a0abe7483d02d4635d5",
     origin_entry_id: "JK000000023028",
     entry: "きんこ",
+    kanji: "金庫",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6076,6 +6415,7 @@ export const n2Words: Word[] = [
     entry_id: "294f77937b6f430c854c8adcb8c4e3bc",
     origin_entry_id: "JK000000023174",
     entry: "きんせん",
+    kanji: "金銭",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6092,6 +6432,7 @@ export const n2Words: Word[] = [
     entry_id: "bb5e9064d1a9437d9723ea5222f94871",
     origin_entry_id: "JK000000023189",
     entry: "きんぞく",
+    kanji: "金属",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6108,6 +6449,7 @@ export const n2Words: Word[] = [
     entry_id: "49d528c15ffa40449f606f4655e3a7af",
     origin_entry_id: "JK000000023198",
     entry: "きんだい",
+    kanji: "近代",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6124,6 +6466,7 @@ export const n2Words: Word[] = [
     entry_id: "47cf0927b72443f1a6bbe107b9b9cb60",
     origin_entry_id: "JK000000023219",
     entry: "きんちょう",
+    kanji: "緊張",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6144,6 +6487,7 @@ export const n2Words: Word[] = [
     entry_id: "772641de72944e96922746f8bee7082c",
     origin_entry_id: "JK000000023242",
     entry: "きんとう",
+    kanji: "均等",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6160,6 +6504,7 @@ export const n2Words: Word[] = [
     entry_id: "1c0fdd48712c4c5aa4fa59e68a1172c2",
     origin_entry_id: "JK000000023251",
     entry: "きんにく",
+    kanji: "筋肉",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6176,6 +6521,7 @@ export const n2Words: Word[] = [
     entry_id: "ab4571f9dc2541409088d9fcba6b12d7",
     origin_entry_id: "JK000000023349",
     entry: "きんゆう",
+    kanji: "金融",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6196,6 +6542,7 @@ export const n2Words: Word[] = [
     entry_id: "4a7ad8a342084347bd63d1e64b295f93",
     origin_entry_id: "JK000000023352",
     entry: "きんよう",
+    kanji: "金曜",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6212,6 +6559,7 @@ export const n2Words: Word[] = [
     entry_id: "9756aeb4f2e84e27b09d1f292dc6e626",
     origin_entry_id: "JK000000019123",
     entry: "ぎいん",
+    kanji: "議員",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6228,6 +6576,7 @@ export const n2Words: Word[] = [
     entry_id: "7b6b6f98749f428da2e6889cc8ce5a20",
     origin_entry_id: "JK000000019208",
     entry: "ぎかい",
+    kanji: "議会",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6244,6 +6593,7 @@ export const n2Words: Word[] = [
     entry_id: "f0e9fdc4d89041599c48b04dcd038917",
     origin_entry_id: "JK000000019714",
     entry: "ぎし",
+    kanji: "技師",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6260,6 +6610,7 @@ export const n2Words: Word[] = [
     entry_id: "7d042c5723564c66b214eaba8dfe332d",
     origin_entry_id: "JK000000019728",
     entry: "ぎしき",
+    kanji: "儀式",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6276,6 +6627,7 @@ export const n2Words: Word[] = [
     entry_id: "1efad1b42cb144949e0e3ee5c93e8583",
     origin_entry_id: "JK000000020131",
     entry: "ぎちょう",
+    kanji: "議長",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6292,6 +6644,7 @@ export const n2Words: Word[] = [
     entry_id: "6f0601ac2c2b4abf85d116e9a7951675",
     origin_entry_id: "JK000000020629",
     entry: "ぎむ",
+    kanji: "義務",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6308,6 +6661,7 @@ export const n2Words: Word[] = [
     entry_id: "09c782fb24da4e7285684f73e2946b42",
     origin_entry_id: "JK000000021505",
     entry: "ぎょう",
+    kanji: "業",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6324,6 +6678,7 @@ export const n2Words: Word[] = [
     entry_id: "7d0265322d2e496bb8bc69529d945aa3",
     origin_entry_id: "JK000000021630",
     entry: "ぎょうぎ",
+    kanji: "行儀",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6340,6 +6695,7 @@ export const n2Words: Word[] = [
     entry_id: "5c3cc5311e81494b930c6747c64281e9",
     origin_entry_id: "JK000000022110",
     entry: "ぎょうれつ",
+    kanji: "行列",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6360,6 +6716,7 @@ export const n2Words: Word[] = [
     entry_id: "a7593f8db3ca4d05a44c9af9b69dd656",
     origin_entry_id: "JK000000022163",
     entry: "ぎょぎょう",
+    kanji: "漁業",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6376,6 +6733,7 @@ export const n2Words: Word[] = [
     entry_id: "55425fe71bfb4f83a58cb744c0e7da57",
     origin_entry_id: "JK000000022841",
     entry: "ぎろん",
+    kanji: "議論",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6396,6 +6754,7 @@ export const n2Words: Word[] = [
     entry_id: "e5471167b90f498a9e5ceaa309f50ae9",
     origin_entry_id: "JK000000022901",
     entry: "ぎん",
+    kanji: "銀",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6412,6 +6771,7 @@ export const n2Words: Word[] = [
     entry_id: "8f405008cdf7449e825def02b98acab0",
     origin_entry_id: "JK000000023383",
     entry: "く",
+    kanji: "句",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6432,6 +6792,7 @@ export const n2Words: Word[] = [
     entry_id: "5d2ad7508dbc4a3493836c159a67c6ae",
     origin_entry_id: "JK000000023516",
     entry: "くう",
+    kanji: "食う·喰う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6452,6 +6813,7 @@ export const n2Words: Word[] = [
     entry_id: "9bd1a2b538984ba08289b38bf7084a75",
     origin_entry_id: "JK000000023599",
     entry: "くうそう",
+    kanji: "空想",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6472,6 +6834,7 @@ export const n2Words: Word[] = [
     entry_id: "82fe2313a6e944378c349279fa32f04f",
     origin_entry_id: "JK000000023609",
     entry: "くうちゅう",
+    kanji: "空中",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6488,6 +6851,7 @@ export const n2Words: Word[] = [
     entry_id: "ae4e5b20220f49169470179dddeb417b",
     origin_entry_id: "JK000000023710",
     entry: "くぎ",
+    kanji: "釘",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6504,6 +6868,7 @@ export const n2Words: Word[] = [
     entry_id: "b0602172831b4ea39d99a88264c390af",
     origin_entry_id: "JK000000023894",
     entry: "くさり",
+    kanji: "鎖·鏈",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6520,6 +6885,7 @@ export const n2Words: Word[] = [
     entry_id: "7d8cb8af2f3f444f881781454a04230c",
     origin_entry_id: "JK000000023914",
     entry: "くし",
+    kanji: "櫛",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6536,6 +6902,7 @@ export const n2Words: Word[] = [
     entry_id: "706c149c5a05484d9b0db0bc1d03928a",
     origin_entry_id: "JK000000023995",
     entry: "くしん",
+    kanji: "苦心",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6556,6 +6923,7 @@ export const n2Words: Word[] = [
     entry_id: "323dec5ffef54f71af74c5d3ed2b37ed",
     origin_entry_id: "JK000000023977",
     entry: "くじょう",
+    kanji: "苦情",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6572,6 +6940,7 @@ export const n2Words: Word[] = [
     entry_id: "792a1cf9319e4f06a6906777dc47c4ed",
     origin_entry_id: "JK000000024002",
     entry: "くず",
+    kanji: "屑",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6588,6 +6957,7 @@ export const n2Words: Word[] = [
     entry_id: "97dc506c1d394648b9ac7e08d5609613",
     origin_entry_id: "JK000000024123",
     entry: "くだ",
+    kanji: "管",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6604,6 +6974,7 @@ export const n2Words: Word[] = [
     entry_id: "c19e86c9021648b6943a933a7451896a",
     origin_entry_id: "JK000000024286",
     entry: "くちびる",
+    kanji: "唇·脣",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6620,6 +6991,7 @@ export const n2Words: Word[] = [
     entry_id: "3fa14a085fde48f08bbe45ff8560b1f0",
     origin_entry_id: "JK000000024289",
     entry: "くちぶえ",
+    kanji: "口笛",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6636,6 +7008,7 @@ export const n2Words: Word[] = [
     entry_id: "9d4b89231b564cfdbac70db0935d48d0",
     origin_entry_id: "JK000000024340",
     entry: "くつう",
+    kanji: "苦痛",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6652,6 +7025,7 @@ export const n2Words: Word[] = [
     entry_id: "3032cdb4bb304e16b18e9561de38db0d",
     origin_entry_id: "JK100024426001",
     entry: "くとうてん",
+    kanji: "句読点",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6668,6 +7042,7 @@ export const n2Words: Word[] = [
     entry_id: "09d4fd4efccc4a66986fa1aa93d43ee0",
     origin_entry_id: "JK000000024448",
     entry: "くなん",
+    kanji: "苦難",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6684,6 +7059,7 @@ export const n2Words: Word[] = [
     entry_id: "c6449e3b6e684271a6fa3fa8742afaae",
     origin_entry_id: "JK000000024566",
     entry: "くふう",
+    kanji: "工夫·功夫",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6704,6 +7080,7 @@ export const n2Words: Word[] = [
     entry_id: "e2458c589906463598df609d023da84c",
     origin_entry_id: "JK000000024574",
     entry: "くぶん",
+    kanji: "区分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6724,6 +7101,7 @@ export const n2Words: Word[] = [
     entry_id: "a597558ab56e48eea10e00934c5b2523",
     origin_entry_id: "JK000000024619",
     entry: "くみ",
+    kanji: "組(み)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6740,6 +7118,7 @@ export const n2Words: Word[] = [
     entry_id: "c9e7a6456b714b6a99275065e2ab2605",
     origin_entry_id: "JK000000024622",
     entry: "くみあい",
+    kanji: "組合",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6756,6 +7135,7 @@ export const n2Words: Word[] = [
     entry_id: "754898151e71444d97325b8fa5723773",
     origin_entry_id: "JK000000024631",
     entry: "くみあわせ",
+    kanji: "組み合(わ)せ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6772,6 +7152,7 @@ export const n2Words: Word[] = [
     entry_id: "21d5e0f8421b4387b66bd99d4ae56234",
     origin_entry_id: "JK000000025071",
     entry: "くれ",
+    kanji: "暮(れ)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6788,6 +7169,7 @@ export const n2Words: Word[] = [
     entry_id: "11307aed3c3d4693abc96fc441b6f847",
     origin_entry_id: "JK000000025139",
     entry: "くろ",
+    kanji: "黒",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6804,6 +7186,7 @@ export const n2Words: Word[] = [
     entry_id: "4f5154af31b24f5c8af5f2cbd79dbf07",
     origin_entry_id: "JK000000025199",
     entry: "くろじ",
+    kanji: "黒字",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6820,6 +7203,7 @@ export const n2Words: Word[] = [
     entry_id: "654fe08373864bcea5079c8fbad993eb",
     origin_entry_id: "JK000000025328",
     entry: "くん",
+    kanji: "訓",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6836,6 +7220,7 @@ export const n2Words: Word[] = [
     entry_id: "b3dc4cc0d7114542b7883a80b1df466c",
     origin_entry_id: "JK000000025534",
     entry: "くんれん",
+    kanji: "訓練",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6856,6 +7241,7 @@ export const n2Words: Word[] = [
     entry_id: "7f543653881745ebb30e428d2c5bc89d",
     origin_entry_id: "JK000000023585",
     entry: "ぐうすう",
+    kanji: "偶数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6872,6 +7258,7 @@ export const n2Words: Word[] = [
     entry_id: "abdd15f9e0b44c94b3abe25883f9c6f7",
     origin_entry_id: "JK000000023596",
     entry: "ぐうぜん",
+    kanji: "偶然",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6896,6 +7283,7 @@ export const n2Words: Word[] = [
     entry_id: "8c6d5d9bbfda4fad874f8f2476066440",
     origin_entry_id: "JK000000024126",
     entry: "ぐたい",
+    kanji: "具体",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6912,6 +7300,7 @@ export const n2Words: Word[] = [
     entry_id: "2a633f4de37e471db2a1731956543d01",
     origin_entry_id: "JK000000025336",
     entry: "ぐん",
+    kanji: "軍",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6932,6 +7321,7 @@ export const n2Words: Word[] = [
     entry_id: "0c2fbcb4c81840de87db02831480214d",
     origin_entry_id: "JK000000025454",
     entry: "ぐんたい",
+    kanji: "軍隊",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6948,6 +7338,7 @@ export const n2Words: Word[] = [
     entry_id: "8a1f0c58670e4fd8bc94d29701b5737e",
     origin_entry_id: "JK000000025579",
     entry: "けい",
+    kanji: "計",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6964,6 +7355,7 @@ export const n2Words: Word[] = [
     entry_id: "9a0b4518ec0c4a1ba1cee16170563c4c",
     origin_entry_id: "JK000000025631",
     entry: "けいい",
+    kanji: "敬意",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6980,6 +7372,7 @@ export const n2Words: Word[] = [
     entry_id: "ee12bff50f394101b4c97271bf6d565e",
     origin_entry_id: "JK000000025689",
     entry: "けいき",
+    kanji: "景気",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -6996,6 +7389,7 @@ export const n2Words: Word[] = [
     entry_id: "5c3e9b3e81c74808a23f353d54f21532",
     origin_entry_id: "JK000000025723",
     entry: "けいこ",
+    kanji: "稽古",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7016,6 +7410,7 @@ export const n2Words: Word[] = [
     entry_id: "817c4beb6a714a08b2fa89f02ad12c96",
     origin_entry_id: "JK000000025731",
     entry: "けいこう",
+    kanji: "傾向",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7032,6 +7427,7 @@ export const n2Words: Word[] = [
     entry_id: "c60c7493ebee4c6db4b8c43302bc5cc6",
     origin_entry_id: "JK100025738003",
     entry: "けいこうとう",
+    kanji: "蛍光灯",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7048,6 +7444,7 @@ export const n2Words: Word[] = [
     entry_id: "5340f29dfd784b1fb07ef0a468fdf9de",
     origin_entry_id: "JK000000025748",
     entry: "けいこく",
+    kanji: "警告",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7068,6 +7465,7 @@ export const n2Words: Word[] = [
     entry_id: "538a123071004d528549a4a956095004",
     origin_entry_id: "JK000000025725",
     entry: "けいご",
+    kanji: "敬語",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7084,6 +7482,7 @@ export const n2Words: Word[] = [
     entry_id: "5f13397902604f26b13fec6ec41167fc",
     origin_entry_id: "JK000000025787",
     entry: "けいしき",
+    kanji: "形式",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7100,6 +7499,7 @@ export const n2Words: Word[] = [
     entry_id: "7075e00eea8a41c6b001f86b095b2690",
     origin_entry_id: "JK000000025782",
     entry: "けいじ",
+    kanji: "刑事",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7120,6 +7520,7 @@ export const n2Words: Word[] = [
     entry_id: "b25577a7006b4105a6bed260ed26a973",
     origin_entry_id: "JK000000025895",
     entry: "けいぞく",
+    kanji: "継続",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7140,6 +7541,7 @@ export const n2Words: Word[] = [
     entry_id: "cfba5d18ba0048c5965dc4ba5035f3dc",
     origin_entry_id: "JK000000025943",
     entry: "けいど",
+    kanji: "経度",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7156,6 +7558,7 @@ export const n2Words: Word[] = [
     entry_id: "893500144090446abf7f25a2177df7d8",
     origin_entry_id: "JK000000025962",
     entry: "けいば",
+    kanji: "競馬",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7172,6 +7575,7 @@ export const n2Words: Word[] = [
     entry_id: "debb7a6e877b48a8830cd5b5a95bbd61",
     origin_entry_id: "JK000000025983",
     entry: "けいび",
+    kanji: "警備",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7192,6 +7596,7 @@ export const n2Words: Word[] = [
     entry_id: "87fad0b452d2403a9d687ed8b997d844",
     origin_entry_id: "JK000000026037",
     entry: "けいゆ",
+    kanji: "経由",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7212,6 +7617,7 @@ export const n2Words: Word[] = [
     entry_id: "93208e7516c24df68b4a867a9ecbddc4",
     origin_entry_id: "JK100026042001",
     entry: "けいようし",
+    kanji: "形容詞",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7228,6 +7634,7 @@ export const n2Words: Word[] = [
     entry_id: "013a2159e0604e649301e10af0825b03",
     origin_entry_id: "JK100026042002",
     entry: "けいようどうし",
+    kanji: "形容動詞",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7244,6 +7651,7 @@ export const n2Words: Word[] = [
     entry_id: "cd5d8f29ac814337b9d760b9b16a0487",
     origin_entry_id: "JK000000026131",
     entry: "けがわ",
+    kanji: "毛皮",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7260,6 +7668,7 @@ export const n2Words: Word[] = [
     entry_id: "defed10008804429925ba6ca28ffa6e6",
     origin_entry_id: "JK000000026341",
     entry: "けた",
+    kanji: "桁",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7276,6 +7685,7 @@ export const n2Words: Word[] = [
     entry_id: "092787af048c4c3d84e0da51ff5a75fe",
     origin_entry_id: "JK000000026430",
     entry: "けっかん",
+    kanji: "欠陥·缺陥",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7292,6 +7702,7 @@ export const n2Words: Word[] = [
     entry_id: "819f3827705c482ab5c02dd5ebf16bc1",
     origin_entry_id: "JK000000100020",
     entry: "けっこんしき",
+    kanji: "結婚式",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -7308,6 +7719,7 @@ export const n2Words: Word[] = [
     entry_id: "2e05102c581649d1973025345a4c7740",
     origin_entry_id: "JK000000026481",
     entry: "けっさく",
+    kanji: "傑作",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7324,6 +7736,7 @@ export const n2Words: Word[] = [
     entry_id: "9d265ffa4f8e46faa80377e2bbdf2ba3",
     origin_entry_id: "JK000000026402",
     entry: "けつあつ",
+    kanji: "血圧",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7340,6 +7753,7 @@ export const n2Words: Word[] = [
     entry_id: "c31aec48c5454e1fa610e9db99a73b9c",
     origin_entry_id: "JK000000026621",
     entry: "けつまつ",
+    kanji: "結末",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7356,6 +7770,7 @@ export const n2Words: Word[] = [
     entry_id: "fc5af7423043461a9213702128d54db7",
     origin_entry_id: "JK000000026688",
     entry: "けはい",
+    kanji: "気配",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7372,6 +7787,7 @@ export const n2Words: Word[] = [
     entry_id: "a7e8f4406e124edf9c9abff597c2c412",
     origin_entry_id: "JK000000026832",
     entry: "けん",
+    kanji: "権",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7392,6 +7808,7 @@ export const n2Words: Word[] = [
     entry_id: "a1e80c9e6f884d3da15df1c29aab40d0",
     origin_entry_id: "JK000000026963",
     entry: "けんかい",
+    kanji: "見解",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7408,6 +7825,7 @@ export const n2Words: Word[] = [
     entry_id: "3274d663c40a4086b89c8aee8e7f7573",
     origin_entry_id: "JK000000026982",
     entry: "けんがく",
+    kanji: "見学",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7428,6 +7846,7 @@ export const n2Words: Word[] = [
     entry_id: "dba59867cd4a4e68aa9cfeb4ca370c80",
     origin_entry_id: "JK000000100261",
     entry: "けんきゅうじょ",
+    kanji: "研究所",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -7444,6 +7863,7 @@ export const n2Words: Word[] = [
     entry_id: "c3507728296b4335b50f0b02c787e060",
     origin_entry_id: "JK000000027024",
     entry: "けんきょ",
+    kanji: "謙虚",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7464,6 +7884,7 @@ export const n2Words: Word[] = [
     entry_id: "38c9f9afd35e440ea385a8157074541a",
     origin_entry_id: "JK000000027228",
     entry: "けんしゅう",
+    kanji: "研修",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7484,6 +7905,7 @@ export const n2Words: Word[] = [
     entry_id: "7b2864d63af544eeb1260632af6bfc55",
     origin_entry_id: "JK000000027195",
     entry: "けんじつ",
+    kanji: "堅実",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7504,6 +7926,7 @@ export const n2Words: Word[] = [
     entry_id: "ad13680b94924920ba3c39a253381b7b",
     origin_entry_id: "JK000000027398",
     entry: "けんそん",
+    kanji: "謙遜",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7524,6 +7947,7 @@ export const n2Words: Word[] = [
     entry_id: "16bf3f444bac41e493bcde50f755c9ad",
     origin_entry_id: "JK000000027443",
     entry: "けんちく",
+    kanji: "建築",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7544,6 +7968,7 @@ export const n2Words: Word[] = [
     entry_id: "4b154a23ccd24f6d91e8410d8e7667af",
     origin_entry_id: "JK000000027452",
     entry: "けんちょう",
+    kanji: "県庁",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7560,6 +7985,7 @@ export const n2Words: Word[] = [
     entry_id: "33cefce507bc49249701d4e459e612da",
     origin_entry_id: "JK000000027486",
     entry: "けんとう",
+    kanji: "見当",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7580,6 +8006,7 @@ export const n2Words: Word[] = [
     entry_id: "1f9bd76ebf5040919fe0e7d5edbc4960",
     origin_entry_id: "JK000000027575",
     entry: "けんびきょう",
+    kanji: "顕微鏡",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7596,6 +8023,7 @@ export const n2Words: Word[] = [
     entry_id: "2f425e1af60f46a1a56d1a429e083a84",
     origin_entry_id: "JK000000027633",
     entry: "けんぽう",
+    kanji: "憲法",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7612,6 +8040,7 @@ export const n2Words: Word[] = [
     entry_id: "16b3c211f8bd474084a5f1a281970f4c",
     origin_entry_id: "JK000000027666",
     entry: "けんめい",
+    kanji: "懸命",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7632,6 +8061,7 @@ export const n2Words: Word[] = [
     entry_id: "065d0366a7364bc5a4d88fec09847749",
     origin_entry_id: "JK000000027706",
     entry: "けんり",
+    kanji: "権利",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7648,6 +8078,7 @@ export const n2Words: Word[] = [
     entry_id: "be44fd4b33594c62b7c46f930999bd74",
     origin_entry_id: "JK000000025554",
     entry: "げ",
+    kanji: "下",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7664,6 +8095,7 @@ export const n2Words: Word[] = [
     entry_id: "84436bb8e0194f62af49e73bde3bd09c",
     origin_entry_id: "JK000000025959",
     entry: "げいのう",
+    kanji: "芸能",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7680,6 +8112,7 @@ export const n2Words: Word[] = [
     entry_id: "d27a67a183ba4855841a7e8eceffe897",
     origin_entry_id: "JK100025959001",
     entry: "げいのうじん",
+    kanji: "芸能人",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7696,6 +8129,7 @@ export const n2Words: Word[] = [
     entry_id: "184c728a183244a8b7cfe791a0d462e5",
     origin_entry_id: "JK000000026114",
     entry: "げか",
+    kanji: "外科",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7712,6 +8146,7 @@ export const n2Words: Word[] = [
     entry_id: "9b6b85eb9d274d4ab0efd92020506d3f",
     origin_entry_id: "JK000000026139",
     entry: "げき",
+    kanji: "劇",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7728,6 +8163,7 @@ export const n2Words: Word[] = [
     entry_id: "74a47de01c3b4555a66b76842b4c12e3",
     origin_entry_id: "JK000000026150",
     entry: "げきか",
+    kanji: "激化·劇化",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7748,6 +8184,7 @@ export const n2Words: Word[] = [
     entry_id: "e9820729bcb34cd9bc01adf9e0ab55c9",
     origin_entry_id: "JK000000026166",
     entry: "げきじょう",
+    kanji: "劇場",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7764,6 +8201,7 @@ export const n2Words: Word[] = [
     entry_id: "ff15e6d1bd4f4f6a87676ceee162b759",
     origin_entry_id: "JK000000026179",
     entry: "げきぞう",
+    kanji: "激増",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7784,6 +8222,7 @@ export const n2Words: Word[] = [
     entry_id: "a5240e1950b0483bb635fabdd3b4618a",
     origin_entry_id: "JK000000026291",
     entry: "げしゃ",
+    kanji: "下車",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7804,6 +8243,7 @@ export const n2Words: Word[] = [
     entry_id: "775bbaff1bc3465fae528bef33a1843e",
     origin_entry_id: "JK000000026342",
     entry: "げた",
+    kanji: "下駄",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7820,6 +8260,7 @@ export const n2Words: Word[] = [
     entry_id: "b02ffc33061e42f2b0d29313e5fccc50",
     origin_entry_id: "JK000000026442",
     entry: "げっきゅう",
+    kanji: "月給",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7836,6 +8277,7 @@ export const n2Words: Word[] = [
     entry_id: "6ca96ac3194f4c439b5c0c48e759e628",
     origin_entry_id: "JK000000026622",
     entry: "げつまつ",
+    kanji: "月末",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7852,6 +8294,7 @@ export const n2Words: Word[] = [
     entry_id: "382ab5a806dd42188821e03300123d98",
     origin_entry_id: "JK000000026633",
     entry: "げつよう",
+    kanji: "月曜",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7868,6 +8311,7 @@ export const n2Words: Word[] = [
     entry_id: "b7a8f2d91f0246e19668b270bd380821",
     origin_entry_id: "JK000000027103",
     entry: "げんこう",
+    kanji: "原稿",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7884,6 +8328,7 @@ export const n2Words: Word[] = [
     entry_id: "e1838747813f455592421165c17ea13d",
     origin_entry_id: "JK000000027156",
     entry: "げんさん",
+    kanji: "原産",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7900,6 +8345,7 @@ export const n2Words: Word[] = [
     entry_id: "ed69bb0d66774fad998470c6d49575e0",
     origin_entry_id: "JK000000027180",
     entry: "げんし",
+    kanji: "原始",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7916,6 +8362,7 @@ export const n2Words: Word[] = [
     entry_id: "51b01ed7d10b426392fd2db82c267ff1",
     origin_entry_id: "JK000000027272",
     entry: "げんしょう",
+    kanji: "現象",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7932,6 +8379,7 @@ export const n2Words: Word[] = [
     entry_id: "cc80d82b23e5404faa9a50bb765a8025",
     origin_entry_id: "JK100027181016",
     entry: "げんしりょく",
+    kanji: "原子力",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7948,6 +8396,7 @@ export const n2Words: Word[] = [
     entry_id: "5f9adf562f6f4cd6a14e016658649f54",
     origin_entry_id: "JK000000027275",
     entry: "げんじょう",
+    kanji: "現状",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7964,6 +8413,7 @@ export const n2Words: Word[] = [
     entry_id: "a30ea3249e0044e796c119e0b60eb785",
     origin_entry_id: "JK000000027545",
     entry: "げんば",
+    kanji: "現場",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7980,6 +8430,7 @@ export const n2Words: Word[] = [
     entry_id: "1032b9ce3de24550806d58fcc0115ac3",
     origin_entry_id: "JK000000027687",
     entry: "げんゆ",
+    kanji: "原油",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -7996,6 +8447,7 @@ export const n2Words: Word[] = [
     entry_id: "30efb9b77b2e4242910bc35c51d782f0",
     origin_entry_id: "JK000000027707",
     entry: "げんり",
+    kanji: "原理",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8012,6 +8464,7 @@ export const n2Words: Word[] = [
     entry_id: "b03bf56a20004e12b3687df541386ba9",
     origin_entry_id: "JK000000027719",
     entry: "げんりょう",
+    kanji: "原料",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8048,6 +8501,7 @@ export const n2Words: Word[] = [
     entry_id: "983966babc5245a6ad7552afc6965309",
     origin_entry_id: "JK000000028054",
     entry: "こういん",
+    kanji: "工員",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8064,6 +8518,7 @@ export const n2Words: Word[] = [
     entry_id: "0733e9599ae442d6bea11321c7bfc0c4",
     origin_entry_id: "JK000000028101",
     entry: "こうえん",
+    kanji: "講演",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8084,6 +8539,7 @@ export const n2Words: Word[] = [
     entry_id: "307941b4ceed49418615fe5589c8cd84",
     origin_entry_id: "JK000000028138",
     entry: "こうか",
+    kanji: "硬貨",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8100,6 +8556,7 @@ export const n2Words: Word[] = [
     entry_id: "ee3d22ee8e634aca9050c88646a10301",
     origin_entry_id: "JK000000028218",
     entry: "こうかん",
+    kanji: "交換",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8120,6 +8577,7 @@ export const n2Words: Word[] = [
     entry_id: "5a5be5d4d10e49d28db3e204695d9c8d",
     origin_entry_id: "JK000000028172",
     entry: "こうがい",
+    kanji: "公害",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8136,6 +8594,7 @@ export const n2Words: Word[] = [
     entry_id: "e659aa64186542b682f5e5344248d273",
     origin_entry_id: "JK000000028255",
     entry: "こうき",
+    kanji: "後期",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8152,6 +8611,7 @@ export const n2Words: Word[] = [
     entry_id: "2a82f2bee8234547ad6af158394ef3ae",
     origin_entry_id: "JK100028250001",
     entry: "こうきしん",
+    kanji: "好奇心",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8168,6 +8628,7 @@ export const n2Words: Word[] = [
     entry_id: "8afaf0aa1d8246119dfe782b84ccec14",
     origin_entry_id: "JK000000028321",
     entry: "こうきょう",
+    kanji: "公共",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8184,6 +8645,7 @@ export const n2Words: Word[] = [
     entry_id: "e23a336ce31a4592abc2fb276a0d7943",
     origin_entry_id: "JK000000028366",
     entry: "こうくう",
+    kanji: "航空",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8200,6 +8662,7 @@ export const n2Words: Word[] = [
     entry_id: "7ac5959c55c44f9da9cd2feb8ab9113e",
     origin_entry_id: "JK000000028388",
     entry: "こうけい",
+    kanji: "光景",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8216,6 +8679,7 @@ export const n2Words: Word[] = [
     entry_id: "55d8b38de7ed4ef0b6692db05004ff01",
     origin_entry_id: "JK000000100255",
     entry: "こうけいしゃ",
+    kanji: "後継者",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -8232,6 +8696,7 @@ export const n2Words: Word[] = [
     entry_id: "749227aea63b4823a76379aa92e356d9",
     origin_entry_id: "JK000000028417",
     entry: "こうけん",
+    kanji: "貢献",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8252,6 +8717,7 @@ export const n2Words: Word[] = [
     entry_id: "18986a004f8c4fe783c6f1f43e7ed6fc",
     origin_entry_id: "JK000000028395",
     entry: "こうげい",
+    kanji: "工芸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8268,6 +8734,7 @@ export const n2Words: Word[] = [
     entry_id: "0e31fec6691b421cb00a33303d218d42",
     origin_entry_id: "JK000000028401",
     entry: "こうげき",
+    kanji: "攻撃",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8288,6 +8755,7 @@ export const n2Words: Word[] = [
     entry_id: "d1895e87badd4cffbb22ce6e24de437f",
     origin_entry_id: "JK000000028506",
     entry: "こうさ",
+    kanji: "交差·交叉",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8308,6 +8776,7 @@ export const n2Words: Word[] = [
     entry_id: "5f59bf0ed9fe430a9c730de4cc873811",
     origin_entry_id: "JK000000028536",
     entry: "こうさく",
+    kanji: "耕作",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8328,6 +8797,7 @@ export const n2Words: Word[] = [
     entry_id: "885b54a976dd4768a8f13d79a6e31559",
     origin_entry_id: "JK000000028583",
     entry: "こうし",
+    kanji: "講師",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8344,6 +8814,7 @@ export const n2Words: Word[] = [
     entry_id: "f9d01619495c46c4ba583a02a42191ba",
     origin_entry_id: "JK000000028605",
     entry: "こうしき",
+    kanji: "公式",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8360,6 +8831,7 @@ export const n2Words: Word[] = [
     entry_id: "bfa336dda7aa43c68c7b763c93dc638e",
     origin_entry_id: "JK000000028634",
     entry: "こうしゃ",
+    kanji: "後者",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8376,6 +8848,7 @@ export const n2Words: Word[] = [
     entry_id: "fb8f86df0a9d41b2a83111028d89b553",
     origin_entry_id: "JK000000028669",
     entry: "こうしゅう",
+    kanji: "公衆",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8392,6 +8865,7 @@ export const n2Words: Word[] = [
     entry_id: "7a8b7b0c5e424edba3569d1ee2a2de2e",
     origin_entry_id: "JK000000028777",
     entry: "こうしん",
+    kanji: "更新",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8412,6 +8886,7 @@ export const n2Words: Word[] = [
     entry_id: "ab772537c33240cf82450142b073a1df",
     origin_entry_id: "JK000000028620",
     entry: "こうじつ",
+    kanji: "口実",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8428,6 +8903,7 @@ export const n2Words: Word[] = [
     entry_id: "689df6fe3cf94ec3bd7ec36bd1342eac",
     origin_entry_id: "JK000000028737",
     entry: "こうじょう",
+    kanji: "向上",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8448,6 +8924,7 @@ export const n2Words: Word[] = [
     entry_id: "049e13a51756434388a7d2a2038a5743",
     origin_entry_id: "JK000000028809",
     entry: "こうすい",
+    kanji: "香水",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8464,6 +8941,7 @@ export const n2Words: Word[] = [
     entry_id: "799bb301f54f4e13abcc76b3ab724b91",
     origin_entry_id: "JK000000028842",
     entry: "こうせい",
+    kanji: "構成",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8488,6 +8966,7 @@ export const n2Words: Word[] = [
     entry_id: "d9487b1c0a5144a7a132363c4a777911",
     origin_entry_id: "JK000000028859",
     entry: "こうせき",
+    kanji: "功績",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8504,6 +8983,7 @@ export const n2Words: Word[] = [
     entry_id: "22240dc6bc9e47b9bac84d748a41a329",
     origin_entry_id: "JK000000028882",
     entry: "こうせん",
+    kanji: "光線",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8520,6 +9000,7 @@ export const n2Words: Word[] = [
     entry_id: "178823e8780248bc9f6013462dae5923",
     origin_entry_id: "JK000000028932",
     entry: "こうそう",
+    kanji: "高層",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8536,6 +9017,7 @@ export const n2Words: Word[] = [
     entry_id: "02b906700f62428ca4e3ec91f291ad6c",
     origin_entry_id: "JK000000028946",
     entry: "こうそく",
+    kanji: "高速",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8552,6 +9034,7 @@ export const n2Words: Word[] = [
     entry_id: "066124951d6b41ed99a408e3cecf73a5",
     origin_entry_id: "JK000000028940",
     entry: "こうぞう",
+    kanji: "構造",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8568,6 +9051,7 @@ export const n2Words: Word[] = [
     entry_id: "9a0a3cc548624037aca206f624ba07ee",
     origin_entry_id: "JK000000028970",
     entry: "こうたい",
+    kanji: "交代·交替",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8588,6 +9072,7 @@ export const n2Words: Word[] = [
     entry_id: "eed04661b13d43fcbab0f75f88b4ceef",
     origin_entry_id: "JK000000029014",
     entry: "こうち",
+    kanji: "耕地",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8604,6 +9089,7 @@ export const n2Words: Word[] = [
     entry_id: "62e35db83cee4ceebb5c553878a584f3",
     origin_entry_id: "JK100029060004",
     entry: "こうつうきかん",
+    kanji: "交通機関",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8620,6 +9106,7 @@ export const n2Words: Word[] = [
     entry_id: "a56136ccce9f4d388eef5877911e8dbd",
     origin_entry_id: "JK000000029064",
     entry: "こうてい",
+    kanji: "肯定",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8640,6 +9127,7 @@ export const n2Words: Word[] = [
     entry_id: "3b835d7a9c484b849be4032c4fa36932",
     origin_entry_id: "JK000000029144",
     entry: "こうとう",
+    kanji: "高等",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8656,6 +9144,7 @@ export const n2Words: Word[] = [
     entry_id: "ed126f1f6dad423b91f158b9ecc0d3ef",
     origin_entry_id: "JK000000029125",
     entry: "こうど",
+    kanji: "高度",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8676,6 +9165,7 @@ export const n2Words: Word[] = [
     entry_id: "36b974ccde474f6d8c3c79d3b3efe54e",
     origin_entry_id: "JK000000029287",
     entry: "こうひょう",
+    kanji: "公表",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8696,6 +9186,7 @@ export const n2Words: Word[] = [
     entry_id: "312ca194b5fe419da72e8a190b54792d",
     origin_entry_id: "JK000000029326",
     entry: "こうぶつ",
+    kanji: "鉱物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8712,6 +9203,7 @@ export const n2Words: Word[] = [
     entry_id: "61f0dd1d94a646a18a30125265c10b49",
     origin_entry_id: "JK000000029342",
     entry: "こうへい",
+    kanji: "公平",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8732,6 +9224,7 @@ export const n2Words: Word[] = [
     entry_id: "0b970a5c905449c2b5cf176413bd4f4f",
     origin_entry_id: "JK000000029358",
     entry: "こうほ",
+    kanji: "候補",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8748,6 +9241,7 @@ export const n2Words: Word[] = [
     entry_id: "13d9f80f31054bbcbe34dfff56af3c6b",
     origin_entry_id: "JK000000029418",
     entry: "こうむ",
+    kanji: "公務",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8764,6 +9258,7 @@ export const n2Words: Word[] = [
     entry_id: "2106e7eb5a8d4a4c881ae3c3d631fb7e",
     origin_entry_id: "JK000000029438",
     entry: "こうもく",
+    kanji: "項目",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8780,6 +9275,7 @@ export const n2Words: Word[] = [
     entry_id: "df77b511f02540d3897ecdae53bfb28b",
     origin_entry_id: "JK000000029518",
     entry: "こうりゅう",
+    kanji: "交流",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8800,6 +9296,7 @@ export const n2Words: Word[] = [
     entry_id: "d9c3404ed4634ea8af80af93bf9c7efe",
     origin_entry_id: "JK000000029528",
     entry: "こうりょ",
+    kanji: "考慮",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8820,6 +9317,7 @@ export const n2Words: Word[] = [
     entry_id: "994ded476db444cfb2010ec70e3d7ced",
     origin_entry_id: "JK000000100024",
     entry: "こうれいか",
+    kanji: "高齢化",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -8836,6 +9334,7 @@ export const n2Words: Word[] = [
     entry_id: "c0db8800963a4a3cb4d096e57aa9093f",
     origin_entry_id: "JK000000029702",
     entry: "こおりまくら",
+    kanji: "氷まくら·氷枕",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8852,6 +9351,7 @@ export const n2Words: Word[] = [
     entry_id: "2bbcd6b2ac5649fb9dccfe29c8d2e931",
     origin_entry_id: "JK000000029782",
     entry: "こがた",
+    kanji: "小型",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8868,6 +9368,7 @@ export const n2Words: Word[] = [
     entry_id: "bcc3a391fa024176a1c44e2b93689bb2",
     origin_entry_id: "JK000000029861",
     entry: "こきゅう",
+    kanji: "呼吸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8888,6 +9389,7 @@ export const n2Words: Word[] = [
     entry_id: "dd3efc0219eb4789851d046a6f388de3",
     origin_entry_id: "JK000000029930",
     entry: "こくおう",
+    kanji: "国王",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8904,6 +9406,7 @@ export const n2Words: Word[] = [
     entry_id: "b4848d4dc24941fa9350784d351a9b4e",
     origin_entry_id: "JK000000030021",
     entry: "こくせき",
+    kanji: "国籍",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8920,6 +9423,7 @@ export const n2Words: Word[] = [
     entry_id: "52d5d6aded654184a9f137285ea4fe0c",
     origin_entry_id: "JK000000030103",
     entry: "こくふく",
+    kanji: "克服",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8940,6 +9444,7 @@ export const n2Words: Word[] = [
     entry_id: "e57304f6c1c4428b8e738abc678f6882",
     origin_entry_id: "JK000000030138",
     entry: "こくもつ",
+    kanji: "穀物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8956,6 +9461,7 @@ export const n2Words: Word[] = [
     entry_id: "a5457b365c4c42ecaea9230c0c1124f1",
     origin_entry_id: "JK000000030302",
     entry: "こころあたり",
+    kanji: "心当(た)り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8972,6 +9478,7 @@ export const n2Words: Word[] = [
     entry_id: "80464eeb767241288592f541c84d3ca1",
     origin_entry_id: "JK000000030274",
     entry: "こごと",
+    kanji: "小言·叱言",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -8988,6 +9495,7 @@ export const n2Words: Word[] = [
     entry_id: "b455a8f1c94e4e4cb95707efad086021",
     origin_entry_id: "JK000000030499",
     entry: "こしかけ",
+    kanji: "腰掛(け)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9004,6 +9512,7 @@ export const n2Words: Word[] = [
     entry_id: "b384680231fa4e128a447dfb1e5553bd",
     origin_entry_id: "JK000000030616",
     entry: "こしょう",
+    kanji: "胡椒",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9020,6 +9529,7 @@ export const n2Words: Word[] = [
     entry_id: "3ec6b63a18584f428d0938a986297bd6",
     origin_entry_id: "JK000000030802",
     entry: "こたい",
+    kanji: "固体",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9036,6 +9546,7 @@ export const n2Words: Word[] = [
     entry_id: "cd3e4e3cb9bb4f14bc515be66f0b5969",
     origin_entry_id: "JK000000030909",
     entry: "こっか",
+    kanji: "国家",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9052,6 +9563,7 @@ export const n2Words: Word[] = [
     entry_id: "6cb8eea7060c45f28c43c7c8d0f698f9",
     origin_entry_id: "JK000000030934",
     entry: "こっき",
+    kanji: "国旗",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9068,6 +9580,7 @@ export const n2Words: Word[] = [
     entry_id: "4b4446a8a2914f118932bea891d5b80b",
     origin_entry_id: "JK000000030937",
     entry: "こっきょう",
+    kanji: "国境",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9084,6 +9597,7 @@ export const n2Words: Word[] = [
     entry_id: "5fa1fe6b51ef418ab56118334d777815",
     origin_entry_id: "JK000000030976",
     entry: "こっせつ",
+    kanji: "骨折",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9104,6 +9618,7 @@ export const n2Words: Word[] = [
     entry_id: "cc6f1e3b06bf4634a582832bcabe64dc",
     origin_entry_id: "JK000000030921",
     entry: "こづかい",
+    kanji: "小遣い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9120,6 +9635,7 @@ export const n2Words: Word[] = [
     entry_id: "b68b7dbd7b024224ac7562d4546e43ff",
     origin_entry_id: "JK000000031066",
     entry: "こてん",
+    kanji: "古典",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9152,6 +9668,7 @@ export const n2Words: Word[] = [
     entry_id: "c5ae6e9ec2084f849ab3c554b73ba33a",
     origin_entry_id: "JK100031183009",
     entry: "ことばづかい",
+    kanji: "言葉遣い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9168,6 +9685,7 @@ export const n2Words: Word[] = [
     entry_id: "efafbb4b9588433e849ea821d40f92c6",
     origin_entry_id: "JK000000031210",
     entry: "ことわざ",
+    kanji: "諺",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9184,6 +9702,7 @@ export const n2Words: Word[] = [
     entry_id: "f2f8c9e3452640128fe3013d28a77c1b",
     origin_entry_id: "JK000000031217",
     entry: "こな",
+    kanji: "粉",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9200,6 +9719,7 @@ export const n2Words: Word[] = [
     entry_id: "55f9f10af8e84a3f8dab7019e77839ee",
     origin_entry_id: "JK000000031224",
     entry: "こないだ",
+    kanji: "此間",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9216,6 +9736,7 @@ export const n2Words: Word[] = [
     entry_id: "b4da72a8a0dc479189cbf71def675d1b",
     origin_entry_id: "JK000000031665",
     entry: "こむぎ",
+    kanji: "小麦",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9232,6 +9753,7 @@ export const n2Words: Word[] = [
     entry_id: "a69a5c647353411daa4d5228cc75434b",
     origin_entry_id: "JK000000031757",
     entry: "こや",
+    kanji: "小屋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9248,6 +9770,7 @@ export const n2Words: Word[] = [
     entry_id: "52586de415e54d0db8329968a01b942d",
     origin_entry_id: "JK000000031933",
     entry: "ころ",
+    kanji: "頃·比",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9264,6 +9787,7 @@ export const n2Words: Word[] = [
     entry_id: "c8994b9c3b2649b49f6d4fb3dc770418",
     origin_entry_id: "JK000000032053",
     entry: "こん",
+    kanji: "紺",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9280,6 +9804,7 @@ export const n2Words: Word[] = [
     entry_id: "86ebe10aec69440db4ca4b4427445236",
     origin_entry_id: "JK000000032147",
     entry: "こんごう",
+    kanji: "混合",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9300,6 +9825,7 @@ export const n2Words: Word[] = [
     entry_id: "c372a5748fb942518ea96cebf4d99c91",
     origin_entry_id: "JK000000032260",
     entry: "こんだて",
+    kanji: "献立",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9316,6 +9842,7 @@ export const n2Words: Word[] = [
     entry_id: "b4758f4737e643aa815761ec241bbddb",
     origin_entry_id: "JK000000032320",
     entry: "こんなん",
+    kanji: "困難",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9332,6 +9859,7 @@ export const n2Words: Word[] = [
     entry_id: "40a66a70d85444c299d493f060795a98",
     origin_entry_id: "JK000000032321",
     entry: "こんにち",
+    kanji: "今日",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9348,6 +9876,7 @@ export const n2Words: Word[] = [
     entry_id: "ef257ff23ec34352a356e97c4182bd79",
     origin_entry_id: "JK000000032401",
     entry: "こんやく",
+    kanji: "婚約",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9388,6 +9917,7 @@ export const n2Words: Word[] = [
     entry_id: "583c6f69e9f44484b4c7a7888e63dd17",
     origin_entry_id: "JK000000028004",
     entry: "ごう",
+    kanji: "号",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9408,6 +9938,7 @@ export const n2Words: Word[] = [
     entry_id: "6b372d9b6838445782d006ed19b26b85",
     origin_entry_id: "JK000000028155",
     entry: "ごうか",
+    kanji: "豪華",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9428,6 +9959,7 @@ export const n2Words: Word[] = [
     entry_id: "d8bb032b040b4143aec9d9808291e8b2",
     origin_entry_id: "JK000000028396",
     entry: "ごうけい",
+    kanji: "合計",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9448,6 +9980,7 @@ export const n2Words: Word[] = [
     entry_id: "588af7851acb40fda20589816e208c12",
     origin_entry_id: "JK000000029160",
     entry: "ごうとう",
+    kanji: "強盗",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9464,6 +9997,7 @@ export const n2Words: Word[] = [
     entry_id: "468a8ce00fd245829a7f9bb3dc6f33ff",
     origin_entry_id: "JK000000029505",
     entry: "ごうり",
+    kanji: "合理",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9480,6 +10014,7 @@ export const n2Words: Word[] = [
     entry_id: "2efbbf4fe05d4dafa307a0bf2d1c2161",
     origin_entry_id: "JK000000029902",
     entry: "ごく",
+    kanji: "極",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9500,6 +10035,7 @@ export const n2Words: Word[] = [
     entry_id: "ad4bdb437ac342bca44304155dc5d088",
     origin_entry_id: "JK000000030596",
     entry: "ごじゅうおん",
+    kanji: "五十音",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9516,6 +10052,7 @@ export const n2Words: Word[] = [
     entry_id: "e0218b1a008a4b19b75c14562b66db8a",
     origin_entry_id: "JK000000031442",
     entry: "ごぶさた",
+    kanji: "ご無沙汰·御無沙汰",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9536,6 +10073,7 @@ export const n2Words: Word[] = [
     entry_id: "142ca2c8d8d84d4091f9214b12b9b793",
     origin_entry_id: "JK000000031714",
     entry: "ごめん",
+    kanji: "御免",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9552,6 +10090,7 @@ export const n2Words: Word[] = [
     entry_id: "213b3c87dfc74b3f91f19b582f0b9c34",
     origin_entry_id: "JK000000031808",
     entry: "ごらく",
+    kanji: "娯楽",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9568,6 +10107,7 @@ export const n2Words: Word[] = [
     entry_id: "b0d70de64cc74460bf3d0557f78fd5e9",
     origin_entry_id: "JK000000031816",
     entry: "ごらん",
+    kanji: "御覧",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9600,6 +10140,7 @@ export const n2Words: Word[] = [
     entry_id: "c258093756d44e89bcdeade24373f68d",
     origin_entry_id: "JK000000032500",
     entry: "さい",
+    kanji: "際",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9620,6 +10161,7 @@ export const n2Words: Word[] = [
     entry_id: "d0463ebca41a4cb39ab2fa1daad684cd",
     origin_entry_id: "JK000000032787",
     entry: "さいしゅう",
+    kanji: "最終",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9636,6 +10178,7 @@ export const n2Words: Word[] = [
     entry_id: "9a6c12e5206b4cefb22a2848ef50e623",
     origin_entry_id: "JK000000032831",
     entry: "さいしん",
+    kanji: "最新",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9652,6 +10195,7 @@ export const n2Words: Word[] = [
     entry_id: "0759f2e584c84c08a222e38d69442040",
     origin_entry_id: "JK000000032889",
     entry: "さいそく",
+    kanji: "催促",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9672,6 +10216,7 @@ export const n2Words: Word[] = [
     entry_id: "bcea3de82759464aa374d28c39a212e5",
     origin_entry_id: "JK000000032898",
     entry: "さいだい",
+    kanji: "最大",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9688,6 +10233,7 @@ export const n2Words: Word[] = [
     entry_id: "b378195cf7cf4ad088edaefedd7c9dd7",
     origin_entry_id: "JK000000032923",
     entry: "さいちゅう",
+    kanji: "最中",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9704,6 +10250,7 @@ export const n2Words: Word[] = [
     entry_id: "5260c5bc0ded4dc295912da613c73815",
     origin_entry_id: "JK000000032975",
     entry: "さいなん",
+    kanji: "災難",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9720,6 +10267,7 @@ export const n2Words: Word[] = [
     entry_id: "460c8dc7945c4ccba542813ccc187d73",
     origin_entry_id: "JK000000033024",
     entry: "さいばん",
+    kanji: "裁判",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9740,6 +10288,7 @@ export const n2Words: Word[] = [
     entry_id: "b90d8951a0f14504b4ad8764d9df34c0",
     origin_entry_id: "JK000000033064",
     entry: "さいほう",
+    kanji: "裁縫",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9760,6 +10309,7 @@ export const n2Words: Word[] = [
     entry_id: "b3c4b2c9ca4245a5961ffe503a224cc6",
     origin_entry_id: "JK000000033155",
     entry: "さいわい",
+    kanji: "幸い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9788,6 +10338,7 @@ export const n2Words: Word[] = [
     entry_id: "ef8ee70338594f11b8da45ff99e045b5",
     origin_entry_id: "JK000000033219",
     entry: "さかい",
+    kanji: "境·界",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9804,6 +10355,7 @@ export const n2Words: Word[] = [
     entry_id: "6eb772587cb14e669ca123742c11a785",
     origin_entry_id: "JK000000033243",
     entry: "さかさ",
+    kanji: "逆さ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9820,6 +10372,7 @@ export const n2Words: Word[] = [
     entry_id: "75037b9e7d034fdfbe0618341502df30",
     origin_entry_id: "JK000000033248",
     entry: "さかさま",
+    kanji: "逆様·倒",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9840,6 +10393,7 @@ export const n2Words: Word[] = [
     entry_id: "530023c0de9442ef9c0f77ca421a29d2",
     origin_entry_id: "JK000000033298",
     entry: "さかば",
+    kanji: "酒場",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9856,6 +10410,7 @@ export const n2Words: Word[] = [
     entry_id: "f72ebeb009bb4b61a94956e0320afed5",
     origin_entry_id: "JK000000033328",
     entry: "さかり",
+    kanji: "盛り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9872,6 +10427,7 @@ export const n2Words: Word[] = [
     entry_id: "650a61150852475c8eb0229b0729cfe8",
     origin_entry_id: "JK000000033426",
     entry: "さきほど",
+    kanji: "先程",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9888,6 +10444,7 @@ export const n2Words: Word[] = [
     entry_id: "746462051a964ce18098e543d61bf4a6",
     origin_entry_id: "JK000000033460",
     entry: "さく",
+    kanji: "昨",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9908,6 +10465,7 @@ export const n2Words: Word[] = [
     entry_id: "ee7955d0e69c40709f7d827ecb8220af",
     origin_entry_id: "JK000000033482",
     entry: "さくいん",
+    kanji: "索引·索隠",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9924,6 +10482,7 @@ export const n2Words: Word[] = [
     entry_id: "06dbfd62ba7944c3a41e9996cb987801",
     origin_entry_id: "JK000000033533",
     entry: "さくじょ",
+    kanji: "削除",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9944,6 +10503,7 @@ export const n2Words: Word[] = [
     entry_id: "7e0817d8fa484960b0c19db02895f7d6",
     origin_entry_id: "JK000000033545",
     entry: "さくせい",
+    kanji: "作成",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9964,6 +10524,7 @@ export const n2Words: Word[] = [
     entry_id: "fc94680ed291490fb679c60467ace0dd",
     origin_entry_id: "JK000000033602",
     entry: "さくもつ",
+    kanji: "作物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9980,6 +10541,7 @@ export const n2Words: Word[] = [
     entry_id: "966c773bb8f045fab3c27a2c8195e35f",
     origin_entry_id: "JK000000033916",
     entry: "さしつかえ",
+    kanji: "差(し)支え",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -9996,6 +10558,7 @@ export const n2Words: Word[] = [
     entry_id: "fe08cbbeb6c8484fa09ce1b08089437b",
     origin_entry_id: "JK000000033812",
     entry: "さじ",
+    kanji: "匙",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10012,6 +10575,7 @@ export const n2Words: Word[] = [
     entry_id: "2cb7b937fbd043df8fbe32d364f5e9be",
     origin_entry_id: "JK000000034121",
     entry: "さつ",
+    kanji: "札",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10028,6 +10592,7 @@ export const n2Words: Word[] = [
     entry_id: "1133e7dca94f4d65a8506bc25109249c",
     origin_entry_id: "JK000000034137",
     entry: "さつえい",
+    kanji: "撮影",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10048,6 +10613,7 @@ export const n2Words: Word[] = [
     entry_id: "5bdfe5aba69a4466b622603167898b67",
     origin_entry_id: "JK000000034337",
     entry: "さどう",
+    kanji: "茶道",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10068,6 +10634,7 @@ export const n2Words: Word[] = [
     entry_id: "7869249c54d743faa9ee76409e7e2c3e",
     origin_entry_id: "JK000000034408",
     entry: "さばく",
+    kanji: "砂漠·沙漠",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10084,6 +10651,7 @@ export const n2Words: Word[] = [
     entry_id: "4abd2482cb1a4d2e94cbe2d9678bea5c",
     origin_entry_id: "JK000000034425",
     entry: "さび",
+    kanji: "錆·銹·鏽",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10100,6 +10668,7 @@ export const n2Words: Word[] = [
     entry_id: "282cbde0de0147378bd8d8b0a925f651",
     origin_entry_id: "JK000000034470",
     entry: "さべつ",
+    kanji: "差別",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10120,6 +10689,7 @@ export const n2Words: Word[] = [
     entry_id: "7f03aa8d533b409bbfc28f8728d54f23",
     origin_entry_id: "JK000000034474",
     entry: "さほう",
+    kanji: "作法",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10136,6 +10706,7 @@ export const n2Words: Word[] = [
     entry_id: "4a0bbf0da69747bb9beb9a49c5b5fd4e",
     origin_entry_id: "JK000000034496",
     entry: "さまざま",
+    kanji: "様様",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10156,6 +10727,7 @@ export const n2Words: Word[] = [
     entry_id: "35f6612af3474d4b8cce48ad25025dc2",
     origin_entry_id: "JK000000034589",
     entry: "さゆう",
+    kanji: "左右",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10176,6 +10748,7 @@ export const n2Words: Word[] = [
     entry_id: "9fa8a636d6a6490a96171aa570692e7e",
     origin_entry_id: "JK000000035019",
     entry: "さんこう",
+    kanji: "参考",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10196,6 +10769,7 @@ export const n2Words: Word[] = [
     entry_id: "8ffa8f77182b4ea7b79b680eef16110f",
     origin_entry_id: "JK000000035226",
     entry: "さんせい",
+    kanji: "酸性",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10212,6 +10786,7 @@ export const n2Words: Word[] = [
     entry_id: "140bd8f27eda4cf9a71a61f55df91028",
     origin_entry_id: "JK000000035251",
     entry: "さんそ",
+    kanji: "酸素",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10228,6 +10803,7 @@ export const n2Words: Word[] = [
     entry_id: "73b83cce44b64c5280fad43f7e2241d6",
     origin_entry_id: "JK000000035297",
     entry: "さんち",
+    kanji: "産地",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10244,6 +10820,7 @@ export const n2Words: Word[] = [
     entry_id: "a4b08fc86cb6441c86db36bf352c93c9",
     origin_entry_id: "JK000000035563",
     entry: "さんりん",
+    kanji: "山林",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10260,6 +10837,7 @@ export const n2Words: Word[] = [
     entry_id: "dd4ffe1b1b6344899197f5c9bb66cf21",
     origin_entry_id: "JK000000032603",
     entry: "ざいがく",
+    kanji: "在学",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10280,6 +10858,7 @@ export const n2Words: Word[] = [
     entry_id: "e8555b9e2d7c49a6b41f6cbbaf926881",
     origin_entry_id: "JK000000032749",
     entry: "ざいさん",
+    kanji: "財産",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10296,6 +10875,7 @@ export const n2Words: Word[] = [
     entry_id: "5ce4a5cb984f463ab1cee68d7cfd8f69",
     origin_entry_id: "JK000000033095",
     entry: "ざいもく",
+    kanji: "材木",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10312,6 +10892,7 @@ export const n2Words: Word[] = [
     entry_id: "3ca1f9a990264d11ac66f612c77010bd",
     origin_entry_id: "JK000000033865",
     entry: "ざしき",
+    kanji: "座敷",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10328,6 +10909,7 @@ export const n2Words: Word[] = [
     entry_id: "f07cb2b78d964403a51541e7ea4636a3",
     origin_entry_id: "JK000000034142",
     entry: "ざつおん",
+    kanji: "雑音",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10344,6 +10926,7 @@ export const n2Words: Word[] = [
     entry_id: "cc06f8579ab341d4b1dd23dac993535f",
     origin_entry_id: "JK000000034257",
     entry: "ざつだん",
+    kanji: "雑談",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10364,6 +10947,7 @@ export const n2Words: Word[] = [
     entry_id: "66021c4d0d8b4e40915b25cb80f38b27",
     origin_entry_id: "JK000000034459",
     entry: "ざぶとん",
+    kanji: "座布団·座蒲団",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10404,6 +10988,7 @@ export const n2Words: Word[] = [
     entry_id: "b20f2d791f1b405091b2c565d5b22758",
     origin_entry_id: "JK000000035731",
     entry: "しあさって",
+    kanji: "明明後日",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10420,6 +11005,7 @@ export const n2Words: Word[] = [
     entry_id: "111ddcb4fa3c4a58bda0c4107b0109cb",
     origin_entry_id: "JK000000036065",
     entry: "しか",
+    kanji: "鹿",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10436,6 +11022,7 @@ export const n2Words: Word[] = [
     entry_id: "0253f913849f4096ac45aaf41d66b395",
     origin_entry_id: "JK000000036128",
     entry: "しかく",
+    kanji: "四角",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10452,6 +11039,7 @@ export const n2Words: Word[] = [
     entry_id: "76627d1618224383a36abc5b0728e0b0",
     origin_entry_id: "JK000000036367",
     entry: "しきち",
+    kanji: "敷地",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10468,6 +11056,7 @@ export const n2Words: Word[] = [
     entry_id: "e578f4e24a704a0aa49dee68e6771c18",
     origin_entry_id: "JK000000036422",
     entry: "しきゅう",
+    kanji: "至急",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10488,6 +11077,7 @@ export const n2Words: Word[] = [
     entry_id: "19d86b96b7444e608a2427d2a1988de5",
     origin_entry_id: "JK000000036588",
     entry: "しげき",
+    kanji: "刺激·刺戟",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10508,6 +11098,7 @@ export const n2Words: Word[] = [
     entry_id: "8beae1ad74b4492cae0a357ee43d3f0c",
     origin_entry_id: "JK000000036615",
     entry: "しげん",
+    kanji: "資源",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10524,6 +11115,7 @@ export const n2Words: Word[] = [
     entry_id: "565c5e047442471b846889517ea9eaee",
     origin_entry_id: "JK000000036656",
     entry: "しこう",
+    kanji: "思考",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10544,6 +11136,7 @@ export const n2Words: Word[] = [
     entry_id: "3e25bbd1356b4afc8ce90a23fa6d86c2",
     origin_entry_id: "JK000000036895",
     entry: "ししゃごにゅう",
+    kanji: "四捨五入",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10564,6 +11157,7 @@ export const n2Words: Word[] = [
     entry_id: "38b0e627fc5642d18fc8efa12bd780ff",
     origin_entry_id: "JK000000036934",
     entry: "ししゅつ",
+    kanji: "支出",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10584,6 +11178,7 @@ export const n2Words: Word[] = [
     entry_id: "7bdc821cca6b47d2931cbaa93e650063",
     origin_entry_id: "JK000000036915",
     entry: "しじゅう",
+    kanji: "始終",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10600,6 +11195,7 @@ export const n2Words: Word[] = [
     entry_id: "bf301538c04541e49c184ff011d99f9b",
     origin_entry_id: "JK000000037164",
     entry: "しせい",
+    kanji: "姿勢",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10616,6 +11212,7 @@ export const n2Words: Word[] = [
     entry_id: "3d210fcef9004c229a367886c193d893",
     origin_entry_id: "JK100037229002",
     entry: "しぜんかがく",
+    kanji: "自然科学",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10632,6 +11229,7 @@ export const n2Words: Word[] = [
     entry_id: "a6f189f51f604fd09e89ada4d2ca6e04",
     origin_entry_id: "JK000000037248",
     entry: "しそう",
+    kanji: "思想",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10648,6 +11246,7 @@ export const n2Words: Word[] = [
     entry_id: "976a7840f6644b508e6d88521ca76491",
     origin_entry_id: "JK000000037291",
     entry: "しそん",
+    kanji: "子孫",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10664,6 +11263,7 @@ export const n2Words: Word[] = [
     entry_id: "adfd72567ce84fc49dab44585a36d1f5",
     origin_entry_id: "JK000000037315",
     entry: "したい",
+    kanji: "死体·屍体",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10680,6 +11280,7 @@ export const n2Words: Word[] = [
     entry_id: "13199348513744ccaf9edeb182f59895",
     origin_entry_id: "JK000000037470",
     entry: "したまち",
+    kanji: "下町",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10696,6 +11297,7 @@ export const n2Words: Word[] = [
     entry_id: "2d41b13b222e44bb9ae6b8c699abc6e1",
     origin_entry_id: "JK000000037321",
     entry: "しだい",
+    kanji: "次第",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10716,6 +11318,7 @@ export const n2Words: Word[] = [
     entry_id: "d144bcc963ec47128bdb6115e2361eca",
     origin_entry_id: "JK000000037604",
     entry: "しちょう",
+    kanji: "市長",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10732,6 +11335,7 @@ export const n2Words: Word[] = [
     entry_id: "e1beb33bcca94a61996cc00c540c1ac2",
     origin_entry_id: "JK100037611001",
     entry: "しちょうしゃ",
+    kanji: "視聴者",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10748,6 +11352,7 @@ export const n2Words: Word[] = [
     entry_id: "bc8b402f55d54339a7dbbe75d0b760b3",
     origin_entry_id: "JK000000037704",
     entry: "しっき",
+    kanji: "湿気",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10764,6 +11369,7 @@ export const n2Words: Word[] = [
     entry_id: "74b2f846a6f94c8eaf245deda4d5f9f1",
     origin_entry_id: "JK000000037927",
     entry: "しっぴつ",
+    kanji: "執筆",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10784,6 +11390,7 @@ export const n2Words: Word[] = [
     entry_id: "d065dbc93d284390948f346793dbb85b",
     origin_entry_id: "JK000000037941",
     entry: "しっぽ",
+    kanji: "尻尾",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10800,6 +11407,7 @@ export const n2Words: Word[] = [
     entry_id: "578def003f854b4a92409a6354436c0d",
     origin_entry_id: "JK000000037634",
     entry: "しつ",
+    kanji: "質",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10816,6 +11424,7 @@ export const n2Words: Word[] = [
     entry_id: "97336bd149bb4f4db16e69417e3ed3d5",
     origin_entry_id: "JK000000037945",
     entry: "しつぼう",
+    kanji: "失望",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10836,6 +11445,7 @@ export const n2Words: Word[] = [
     entry_id: "8bf0cf6148a64d4196bdf36c343b5d34",
     origin_entry_id: "JK000000038123",
     entry: "しなぎれ",
+    kanji: "品切れ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10852,6 +11462,7 @@ export const n2Words: Word[] = [
     entry_id: "0518fef6a279417fbb802514a0f06838",
     origin_entry_id: "JK000000038305",
     entry: "しはい",
+    kanji: "支配",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10872,6 +11483,7 @@ export const n2Words: Word[] = [
     entry_id: "b659dc4802eb4dae8aab2124ea493096",
     origin_entry_id: "JK000000038308",
     entry: "しばい",
+    kanji: "芝居",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10888,6 +11500,7 @@ export const n2Words: Word[] = [
     entry_id: "ae5ab5f2cc7e45b8a9b4ddbcf0da9f26",
     origin_entry_id: "JK000000038342",
     entry: "しばふ",
+    kanji: "芝生",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10904,6 +11517,7 @@ export const n2Words: Word[] = [
     entry_id: "6ecd4da594d546a795f38b15828662dc",
     origin_entry_id: "JK000000038512",
     entry: "しへい",
+    kanji: "紙幣",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10920,6 +11534,7 @@ export const n2Words: Word[] = [
     entry_id: "06c27f8512594f0fb3802e4ea1be7a61",
     origin_entry_id: "JK000000038579",
     entry: "しほん",
+    kanji: "資本",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10936,6 +11551,7 @@ export const n2Words: Word[] = [
     entry_id: "63d172c107fa45149229f28d7397d6b0",
     origin_entry_id: "JK000000038582",
     entry: "しま",
+    kanji: "縞",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10952,6 +11568,7 @@ export const n2Words: Word[] = [
     entry_id: "408b99fa2c7b4de2b6326aa55b7b7cee",
     origin_entry_id: "JK000000038776",
     entry: "しも",
+    kanji: "下",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10968,6 +11585,7 @@ export const n2Words: Word[] = [
     entry_id: "ca85da58260042039fdf957bd2932c1e",
     origin_entry_id: "JK000000038853",
     entry: "しゃ",
+    kanji: "社",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -10984,6 +11602,7 @@ export const n2Words: Word[] = [
     entry_id: "557c2b892c06467c838240f89480eedb",
     origin_entry_id: "JK000000038915",
     entry: "しゃいん",
+    kanji: "社員",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11000,6 +11619,7 @@ export const n2Words: Word[] = [
     entry_id: "388b2c546bcd444b84ea48e176a695b9",
     origin_entry_id: "JK100038933006",
     entry: "しゃかいかがく",
+    kanji: "社会科学",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11016,6 +11636,7 @@ export const n2Words: Word[] = [
     entry_id: "0d0a25ee1b5f44d781ec7655a3f7150f",
     origin_entry_id: "JK000000039189",
     entry: "しゃしょう",
+    kanji: "車掌",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11032,6 +11653,7 @@ export const n2Words: Word[] = [
     entry_id: "87a44d64ba09411cbe949c6c9c9d5f5e",
     origin_entry_id: "JK000000039216",
     entry: "しゃせい",
+    kanji: "写生",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11052,6 +11674,7 @@ export const n2Words: Word[] = [
     entry_id: "d4c23d06bc364d039c8fb34f3b784d5b",
     origin_entry_id: "JK000000039268",
     entry: "しゃっきん",
+    kanji: "借金",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11072,6 +11695,7 @@ export const n2Words: Word[] = [
     entry_id: "948deb5dfe634af98b9b6c448783fcad",
     origin_entry_id: "JK000000039272",
     entry: "しゃっくり",
+    kanji: "吃逆·噦り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11092,6 +11716,7 @@ export const n2Words: Word[] = [
     entry_id: "0a974caf8c834503b97599fff5f270db",
     origin_entry_id: "JK000000039418",
     entry: "しゃれ",
+    kanji: "洒落",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11108,6 +11733,7 @@ export const n2Words: Word[] = [
     entry_id: "c729adb19c7a431d8aeee65e5b4261db",
     origin_entry_id: "JK000000039537",
     entry: "しゅう",
+    kanji: "州",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11124,6 +11750,7 @@ export const n2Words: Word[] = [
     entry_id: "85c883c318bb4af79567c8a09701f9f8",
     origin_entry_id: "JK000000039665",
     entry: "しゅうかい",
+    kanji: "集会",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11144,6 +11771,7 @@ export const n2Words: Word[] = [
     entry_id: "31043c03d11440e7a55309e0437e6a29",
     origin_entry_id: "JK000000039671",
     entry: "しゅうかく",
+    kanji: "収穫",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11164,6 +11792,7 @@ export const n2Words: Word[] = [
     entry_id: "94995d74752c4cb784faee28ee5e2927",
     origin_entry_id: "JK000000039721",
     entry: "しゅうきょう",
+    kanji: "宗教",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11180,6 +11809,7 @@ export const n2Words: Word[] = [
     entry_id: "52a8ac4e32f74badb65f3d1a22b5d319",
     origin_entry_id: "JK000000039736",
     entry: "しゅうきん",
+    kanji: "集金",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11200,6 +11830,7 @@ export const n2Words: Word[] = [
     entry_id: "04bd49c648404a58b261f82188f42db5",
     origin_entry_id: "JK000000039792",
     entry: "しゅうごう",
+    kanji: "集合",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11220,6 +11851,7 @@ export const n2Words: Word[] = [
     entry_id: "3c9788da364f44138c1f102962d30d80",
     origin_entry_id: "JK000000039835",
     entry: "しゅうし",
+    kanji: "修士",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11236,6 +11868,7 @@ export const n2Words: Word[] = [
     entry_id: "b5597ceae2fe4104b496eae40fe5d968",
     origin_entry_id: "JK000000039845",
     entry: "しゅうじ",
+    kanji: "習字",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11252,6 +11885,7 @@ export const n2Words: Word[] = [
     entry_id: "2e843c3a1d074c4a8c699fd32ee1e5e0",
     origin_entry_id: "JK000000039958",
     entry: "しゅうせい",
+    kanji: "修正",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11272,6 +11906,7 @@ export const n2Words: Word[] = [
     entry_id: "e20556db481640fa9fba343a11335398",
     origin_entry_id: "JK000000039992",
     entry: "しゅうぜん",
+    kanji: "修繕",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11292,6 +11927,7 @@ export const n2Words: Word[] = [
     entry_id: "56a391e91b7d45c7a2d9ba2ae5bb6aa8",
     origin_entry_id: "JK000000040051",
     entry: "しゅうだん",
+    kanji: "集団",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11308,6 +11944,7 @@ export const n2Words: Word[] = [
     entry_id: "7d0ad489a1ae49b88a82d3d11c7e5ce3",
     origin_entry_id: "JK000000040063",
     entry: "しゅうちゃく",
+    kanji: "執着",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11328,6 +11965,7 @@ export const n2Words: Word[] = [
     entry_id: "34cea7eb0ca34aa49a6260eb312f19ac",
     origin_entry_id: "JK000000040066",
     entry: "しゅうちゅう",
+    kanji: "集中",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11348,6 +11986,7 @@ export const n2Words: Word[] = [
     entry_id: "ca00162a901646a987eae853b2fbe779",
     origin_entry_id: "JK000000040090",
     entry: "しゅうでん",
+    kanji: "終電",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11364,6 +12003,7 @@ export const n2Words: Word[] = [
     entry_id: "579fd8205352488087755b42569c8178",
     origin_entry_id: "JK000000040149",
     entry: "しゅうにん",
+    kanji: "就任",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11384,6 +12024,7 @@ export const n2Words: Word[] = [
     entry_id: "8b495fa2b95a4f03827fa99966fdad94",
     origin_entry_id: "JK000000040332",
     entry: "しゅうりょう",
+    kanji: "終了",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11404,6 +12045,7 @@ export const n2Words: Word[] = [
     entry_id: "59d0bb1d00484a32ab56f3ad3e523472",
     origin_entry_id: "JK000000040441",
     entry: "しゅぎ",
+    kanji: "主義",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11420,6 +12062,7 @@ export const n2Words: Word[] = [
     entry_id: "98bf1658b19c40368afd42eff9b24b39",
     origin_entry_id: "JK000000040648",
     entry: "しゅご",
+    kanji: "主語",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11436,6 +12079,7 @@ export const n2Words: Word[] = [
     entry_id: "196553face854fa1b076a82a1e88699c",
     origin_entry_id: "JK000000040678",
     entry: "しゅざい",
+    kanji: "取材",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11456,6 +12100,7 @@ export const n2Words: Word[] = [
     entry_id: "f964cf6dd1e24840a3d9e225f6ec25f1",
     origin_entry_id: "JK000000040735",
     entry: "しゅしょう",
+    kanji: "首相",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11472,6 +12117,7 @@ export const n2Words: Word[] = [
     entry_id: "8c8c4dcbd249410d95f70ab184fde574",
     origin_entry_id: "JK100040756002",
     entry: "しゅじんこう",
+    kanji: "主人公",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11488,6 +12134,7 @@ export const n2Words: Word[] = [
     entry_id: "09615539048f4c4fb9e0ebfd27e71beb",
     origin_entry_id: "JK000000040863",
     entry: "しゅっか",
+    kanji: "出荷",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11508,6 +12155,7 @@ export const n2Words: Word[] = [
     entry_id: "8924fbf454144020862666f0218ff116",
     origin_entry_id: "JK000000040932",
     entry: "しゅっせ",
+    kanji: "出世",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11528,6 +12176,7 @@ export const n2Words: Word[] = [
     entry_id: "ebbadedd1b8244b6bc624ab631b55ba0",
     origin_entry_id: "JK000000040948",
     entry: "しゅっちょう",
+    kanji: "出張",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11548,6 +12197,7 @@ export const n2Words: Word[] = [
     entry_id: "1bb3622fe1c34c6f84c07595cfad8c8c",
     origin_entry_id: "JK000000041124",
     entry: "しゅやく",
+    kanji: "主役",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11564,6 +12214,7 @@ export const n2Words: Word[] = [
     entry_id: "d5319ecce90c456f83105532d6d8f291",
     origin_entry_id: "JK000000041131",
     entry: "しゅよう",
+    kanji: "主要",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11580,6 +12231,7 @@ export const n2Words: Word[] = [
     entry_id: "0b6ce5aa8e3f4c14a760336d2244d431",
     origin_entry_id: "JK000000041253",
     entry: "しゅんかん",
+    kanji: "瞬間",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11596,6 +12248,7 @@ export const n2Words: Word[] = [
     entry_id: "8f8edc5185bc46bab81d42402c1939f6",
     origin_entry_id: "JK000000041502",
     entry: "しょ",
+    kanji: "所",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11616,6 +12269,7 @@ export const n2Words: Word[] = [
     entry_id: "ff3af434bd804210b9a6ed6939807325",
     origin_entry_id: "JK000000041580",
     entry: "しょう",
+    kanji: "小",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11636,6 +12290,7 @@ export const n2Words: Word[] = [
     entry_id: "14057ff924e045bfa5ecede458895a37",
     origin_entry_id: "JK000000041826",
     entry: "しょうか",
+    kanji: "消火",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11656,6 +12311,7 @@ export const n2Words: Word[] = [
     entry_id: "c9296f62f08e4c378b64d522641d701a",
     origin_entry_id: "JK000000041852",
     entry: "しょうがい",
+    kanji: "障害·障碍·障礙",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11672,6 +12328,7 @@ export const n2Words: Word[] = [
     entry_id: "edddf137edf348e8b242380b922640b0",
     origin_entry_id: "JK000000100242",
     entry: "しょうがくきん",
+    kanji: "奨学金",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -11688,6 +12345,7 @@ export const n2Words: Word[] = [
     entry_id: "c4ae022d18f94d57be25d6c35a8015eb",
     origin_entry_id: "JK100041865001",
     entry: "しょうがくせい",
+    kanji: "小学生",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11704,6 +12362,7 @@ export const n2Words: Word[] = [
     entry_id: "fd88c20cf37143bba335e0b9c795107d",
     origin_entry_id: "JK000000041983",
     entry: "しょうきん",
+    kanji: "賞金",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11720,6 +12379,7 @@ export const n2Words: Word[] = [
     entry_id: "6f3085d37d15419fba6816b06e3ada3f",
     origin_entry_id: "JK000000041929",
     entry: "しょうぎ",
+    kanji: "将棋·将棊",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11736,6 +12396,7 @@ export const n2Words: Word[] = [
     entry_id: "05a77261a0ec402a9218a72314ccc6f3",
     origin_entry_id: "JK000000041969",
     entry: "しょうぎょう",
+    kanji: "商業",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11752,6 +12413,7 @@ export const n2Words: Word[] = [
     entry_id: "bf41aca2aece4ad584ea515bfec0f97c",
     origin_entry_id: "JK100042180001",
     entry: "しょうしか",
+    kanji: "少子化",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11768,6 +12430,7 @@ export const n2Words: Word[] = [
     entry_id: "a04392ae729a4930a2d7d1a315cecf94",
     origin_entry_id: "JK000000042251",
     entry: "しょうしゃ",
+    kanji: "商社",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11784,6 +12447,7 @@ export const n2Words: Word[] = [
     entry_id: "e22726a6b7fb4f62acdb312dd18205e3",
     origin_entry_id: "JK000000042210",
     entry: "しょうじ",
+    kanji: "障子",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11800,6 +12464,7 @@ export const n2Words: Word[] = [
     entry_id: "7fd95f9c101c4f91b4a1e0a8b3d7f6c6",
     origin_entry_id: "JK000000042424",
     entry: "しょうすう",
+    kanji: "少数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11816,6 +12481,7 @@ export const n2Words: Word[] = [
     entry_id: "13885721a6834bc2b123ea84d9f7e68f",
     origin_entry_id: "JK000000042560",
     entry: "しょうち",
+    kanji: "承知",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11836,6 +12502,7 @@ export const n2Words: Word[] = [
     entry_id: "e77554ab06924b79a343eaab460a88a0",
     origin_entry_id: "JK000000042589",
     entry: "しょうちょう",
+    kanji: "象徴",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11856,6 +12523,7 @@ export const n2Words: Word[] = [
     entry_id: "76f7c2956b314c4084ad64539863f0a1",
     origin_entry_id: "JK000000042622",
     entry: "しょうてん",
+    kanji: "焦点",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11872,6 +12540,7 @@ export const n2Words: Word[] = [
     entry_id: "6a9e87d6bef64dbc9000424e9f156c69",
     origin_entry_id: "JK000000042695",
     entry: "しょうとつ",
+    kanji: "衝突",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11892,6 +12561,7 @@ export const n2Words: Word[] = [
     entry_id: "98d46d3ad9f04b9caa9d52fe2126647a",
     origin_entry_id: "JK000000042689",
     entry: "しょうどく",
+    kanji: "消毒",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11912,6 +12582,7 @@ export const n2Words: Word[] = [
     entry_id: "eb2595d83970424a9a47f4c02a2875f3",
     origin_entry_id: "JK000000042721",
     entry: "しょうにん",
+    kanji: "承認",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11932,6 +12603,7 @@ export const n2Words: Word[] = [
     entry_id: "88ccae1461e24290958d90e86aa7e235",
     origin_entry_id: "JK000000042726",
     entry: "しょうにんずう",
+    kanji: "少人数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11948,6 +12620,7 @@ export const n2Words: Word[] = [
     entry_id: "5fd570f67f9c44a182c3c31456238734",
     origin_entry_id: "JK000000042757",
     entry: "しょうはい",
+    kanji: "勝敗",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11964,6 +12637,7 @@ export const n2Words: Word[] = [
     entry_id: "0e941183e48a417d8fc1fce72a94acbc",
     origin_entry_id: "JK000000042818",
     entry: "しょうぶ",
+    kanji: "勝負",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -11984,6 +12658,7 @@ export const n2Words: Word[] = [
     entry_id: "79978a02be454bceb014c880010e9387",
     origin_entry_id: "JK000000042879",
     entry: "しょうべん",
+    kanji: "小便",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12004,6 +12679,7 @@ export const n2Words: Word[] = [
     entry_id: "90f5c12fdad7450dbdaf74138204b506",
     origin_entry_id: "JK000000042920",
     entry: "しょうみ",
+    kanji: "正味",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12020,6 +12696,7 @@ export const n2Words: Word[] = [
     entry_id: "cdf98a94b06c4874b79c8d3f183861b1",
     origin_entry_id: "JK000000100102",
     entry: "しょうみきげん",
+    kanji: "賞味期限",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -12036,6 +12713,7 @@ export const n2Words: Word[] = [
     entry_id: "6f94640fa86f4fbcb29bb4f7d920064f",
     origin_entry_id: "JK000000042952",
     entry: "しょうもう",
+    kanji: "消耗",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12056,6 +12734,7 @@ export const n2Words: Word[] = [
     entry_id: "cf7b38fa35734cc2abf2bf93792167c4",
     origin_entry_id: "JK000000043036",
     entry: "しょうりゃく",
+    kanji: "省略",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12076,6 +12755,7 @@ export const n2Words: Word[] = [
     entry_id: "0a315f36b1d74075ab2450b209292a3a",
     origin_entry_id: "JK000000043187",
     entry: "しょく",
+    kanji: "職",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12096,6 +12776,7 @@ export const n2Words: Word[] = [
     entry_id: "dd538f357df445c29841af96bab8d0e7",
     origin_entry_id: "JK000000043216",
     entry: "しょくえん",
+    kanji: "食塩",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12112,6 +12793,7 @@ export const n2Words: Word[] = [
     entry_id: "4e0da45b108b49a7a77fd26626cf09b6",
     origin_entry_id: "JK000000043272",
     entry: "しょくたく",
+    kanji: "食卓",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12128,6 +12810,7 @@ export const n2Words: Word[] = [
     entry_id: "88be987c9c4640ceb897db8abfa7f15d",
     origin_entry_id: "JK000000043291",
     entry: "しょくにん",
+    kanji: "職人",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12144,6 +12827,7 @@ export const n2Words: Word[] = [
     entry_id: "02e950b7607946c9ae1f5ee64ed63e10",
     origin_entry_id: "JK000000043322",
     entry: "しょくもつ",
+    kanji: "食物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12160,6 +12844,7 @@ export const n2Words: Word[] = [
     entry_id: "870318b912634a9c932570c0c7fcecaa",
     origin_entry_id: "JK000000043331",
     entry: "しょくりょう",
+    kanji: "食料",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12176,6 +12861,7 @@ export const n2Words: Word[] = [
     entry_id: "02869776180e4cf8b84b58163d9d386e",
     origin_entry_id: "JK000000043402",
     entry: "しょさい",
+    kanji: "書斎",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12192,6 +12878,7 @@ export const n2Words: Word[] = [
     entry_id: "70627d1e01784541adc2902e2cc67df6",
     origin_entry_id: "JK000000043472",
     entry: "しょじゅん",
+    kanji: "初旬",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12208,6 +12895,7 @@ export const n2Words: Word[] = [
     entry_id: "ffd60da5864643bfa1dcc0069e250349",
     origin_entry_id: "JK000000043528",
     entry: "しょせき",
+    kanji: "書籍",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12224,6 +12912,7 @@ export const n2Words: Word[] = [
     entry_id: "16adf4a42aae4ac483b5d8ded1d34811",
     origin_entry_id: "JK000000043574",
     entry: "しょたいめん",
+    kanji: "初対面",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12240,6 +12929,7 @@ export const n2Words: Word[] = [
     entry_id: "6b1ec73017b94c24be479b49121237c8",
     origin_entry_id: "JK000000043665",
     entry: "しょどう",
+    kanji: "書道",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12256,6 +12946,7 @@ export const n2Words: Word[] = [
     entry_id: "4592ec954c3d4bcf88768cd6ace01888",
     origin_entry_id: "JK000000043726",
     entry: "しょほ",
+    kanji: "初歩",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12272,6 +12963,7 @@ export const n2Words: Word[] = [
     entry_id: "0d3f67ee72d94995a870550ac0d42c20",
     origin_entry_id: "JK000000043750",
     entry: "しょめい",
+    kanji: "署名",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12292,6 +12984,7 @@ export const n2Words: Word[] = [
     entry_id: "9e39b0cd1aa943ffb90765b2c1d95981",
     origin_entry_id: "JK000000043760",
     entry: "しょもつ",
+    kanji: "書物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12308,6 +13001,7 @@ export const n2Words: Word[] = [
     entry_id: "8d030f15beda4e40a59692e7e9017fe0",
     origin_entry_id: "JK000000043774",
     entry: "しょり",
+    kanji: "処理",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12328,6 +13022,7 @@ export const n2Words: Word[] = [
     entry_id: "384a9cac3f9f4de487ff13c9c72a21fb",
     origin_entry_id: "JK000000041559",
     entry: "しよう",
+    kanji: "使用",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12348,6 +13043,7 @@ export const n2Words: Word[] = [
     entry_id: "80b5cd9eb6374b03b73156da66409d9a",
     origin_entry_id: "JK000000043813",
     entry: "しらが",
+    kanji: "白髪",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12364,6 +13060,7 @@ export const n2Words: Word[] = [
     entry_id: "06fa512e2dbf4398bebc0a093e3e3d46",
     origin_entry_id: "JK000000043929",
     entry: "しり",
+    kanji: "尻·臀·後",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12380,6 +13077,7 @@ export const n2Words: Word[] = [
     entry_id: "1e3769c1ba3344c58aeb11c9506445b6",
     origin_entry_id: "JK000000044047",
     entry: "しる",
+    kanji: "汁",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12396,6 +13094,7 @@ export const n2Words: Word[] = [
     entry_id: "701a916eb42d406f8a9623443b75783e",
     origin_entry_id: "JK000000044116",
     entry: "しろ",
+    kanji: "白",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12412,6 +13111,7 @@ export const n2Words: Word[] = [
     entry_id: "0a9a28bbacd04cc9a3e5445e7c360d7f",
     origin_entry_id: "JK000000044137",
     entry: "しろうと",
+    kanji: "素人",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12428,6 +13128,7 @@ export const n2Words: Word[] = [
     entry_id: "b15f815c8d3148c69f21057838271628",
     origin_entry_id: "JK000000044240",
     entry: "しわ",
+    kanji: "皺·皴",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12444,6 +13145,7 @@ export const n2Words: Word[] = [
     entry_id: "13e87e34e09647ebaf7cee074c115180",
     origin_entry_id: "JK000000044277",
     entry: "しん",
+    kanji: "芯",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12460,6 +13162,7 @@ export const n2Words: Word[] = [
     entry_id: "9d2501a7814b4a9e979b3ad8c249a102",
     origin_entry_id: "JK000000044545",
     entry: "しんくう",
+    kanji: "真空",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12476,6 +13179,7 @@ export const n2Words: Word[] = [
     entry_id: "abb4eca447bc4593b98299f2f2318477",
     origin_entry_id: "JK000000044566",
     entry: "しんけい",
+    kanji: "神経",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12492,6 +13196,7 @@ export const n2Words: Word[] = [
     entry_id: "0411f203b2f34007ab7b4af7c752b9f2",
     origin_entry_id: "JK100044566007",
     entry: "しんけいしつ",
+    kanji: "神経質",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12512,6 +13217,7 @@ export const n2Words: Word[] = [
     entry_id: "7894c598c5494c938b48cfe1579732e5",
     origin_entry_id: "JK000000044589",
     entry: "しんけん",
+    kanji: "真剣",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12532,6 +13238,7 @@ export const n2Words: Word[] = [
     entry_id: "f901d7675e7741cebd8adbce8486b1d4",
     origin_entry_id: "JK000000044636",
     entry: "しんこう",
+    kanji: "進行",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12552,6 +13259,7 @@ export const n2Words: Word[] = [
     entry_id: "ef4f56bddfc6446e88f899bae80be9e9",
     origin_entry_id: "JK000000044654",
     entry: "しんこく",
+    kanji: "深刻",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12576,6 +13284,7 @@ export const n2Words: Word[] = [
     entry_id: "4743ae0d47294cfcb4cc1b932c2dbddb",
     origin_entry_id: "JK000000044848",
     entry: "しんしん",
+    kanji: "心身·身心",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12592,6 +13301,7 @@ export const n2Words: Word[] = [
     entry_id: "6bd7b2b8323845d7a121252036ef9550",
     origin_entry_id: "JK000000044857",
     entry: "しんじん",
+    kanji: "新人",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12608,6 +13318,7 @@ export const n2Words: Word[] = [
     entry_id: "08d520606ca9418686d7bfdedb46cd3d",
     origin_entry_id: "JK000000044946",
     entry: "しんせん",
+    kanji: "新鮮",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12624,6 +13335,7 @@ export const n2Words: Word[] = [
     entry_id: "9e7cf4485fd04cccbd044533c6dcede3",
     origin_entry_id: "JK000000044997",
     entry: "しんそつ",
+    kanji: "新卒",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12640,6 +13352,7 @@ export const n2Words: Word[] = [
     entry_id: "d619a87135e941dda6f11110e3526283",
     origin_entry_id: "JK000000044981",
     entry: "しんぞう",
+    kanji: "心臓",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12656,6 +13369,7 @@ export const n2Words: Word[] = [
     entry_id: "3a475cdccb394ee0ac34b10ba13c9d8b",
     origin_entry_id: "JK000000045003",
     entry: "しんたい",
+    kanji: "身体",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12672,6 +13386,7 @@ export const n2Words: Word[] = [
     entry_id: "4c24082bd0a84109b1582c5ba3566ba4",
     origin_entry_id: "JK000000045007",
     entry: "しんだい",
+    kanji: "寝台",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12688,6 +13403,7 @@ export const n2Words: Word[] = [
     entry_id: "d940bb7fc5fc4f59be1246faac4ea82b",
     origin_entry_id: "JK000000045037",
     entry: "しんだん",
+    kanji: "診断",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12708,6 +13424,7 @@ export const n2Words: Word[] = [
     entry_id: "59d6cbd6c897434aa04a4963aa4f255a",
     origin_entry_id: "JK000000045072",
     entry: "しんちょう",
+    kanji: "慎重",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12728,6 +13445,7 @@ export const n2Words: Word[] = [
     entry_id: "ebecfd0a483f4cad868ba73fbb06686e",
     origin_entry_id: "JK000000045179",
     entry: "しんにゅう",
+    kanji: "侵入",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12748,6 +13466,7 @@ export const n2Words: Word[] = [
     entry_id: "37913699d6254005bffea282ab4489b4",
     origin_entry_id: "JK000000045234",
     entry: "しんぱん",
+    kanji: "審判",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12768,6 +13487,7 @@ export const n2Words: Word[] = [
     entry_id: "b5d85862424c41c89f7f77dad72e2135",
     origin_entry_id: "JK000000045397",
     entry: "しんよう",
+    kanji: "信用",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12788,6 +13508,7 @@ export const n2Words: Word[] = [
     entry_id: "b9ff8b1d350e4d5bb5c87cd05b50a5a6",
     origin_entry_id: "JK000000045403",
     entry: "しんらい",
+    kanji: "信頼",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12808,6 +13529,7 @@ export const n2Words: Word[] = [
     entry_id: "932e41db0aeb4629919e7339b0703ad9",
     origin_entry_id: "JK000000045438",
     entry: "しんりん",
+    kanji: "森林",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12824,6 +13546,7 @@ export const n2Words: Word[] = [
     entry_id: "a37c6b9da0e9484c97e6a5425aa1572e",
     origin_entry_id: "JK000000045456",
     entry: "しんろ",
+    kanji: "針路",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12840,6 +13563,7 @@ export const n2Words: Word[] = [
     entry_id: "6842f85c24914d36956240331fbc30e1",
     origin_entry_id: "JK000000035896",
     entry: "じえい",
+    kanji: "自衛",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12860,6 +13584,7 @@ export const n2Words: Word[] = [
     entry_id: "62a69ba148f94fbca377654ea015bfa5",
     origin_entry_id: "JK000000036286",
     entry: "じき",
+    kanji: "直",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12884,6 +13609,7 @@ export const n2Words: Word[] = [
     entry_id: "76ed1f5204444cfe85ea6888ceca5c57",
     origin_entry_id: "JK000000036429",
     entry: "じきゅう",
+    kanji: "時給",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12900,6 +13626,7 @@ export const n2Words: Word[] = [
     entry_id: "02c455e83b234f9d881caac1189847de",
     origin_entry_id: "JK000000036775",
     entry: "じさつ",
+    kanji: "自殺",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12920,6 +13647,7 @@ export const n2Words: Word[] = [
     entry_id: "17675c75ce9849c6a21171cc2cf0646f",
     origin_entry_id: "JK000000036790",
     entry: "じさん",
+    kanji: "持参",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12940,6 +13668,7 @@ export const n2Words: Word[] = [
     entry_id: "a35aeed0282347d6958b7e74302b04cb",
     origin_entry_id: "JK000000036892",
     entry: "じしゃく",
+    kanji: "磁石",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12972,6 +13701,7 @@ export const n2Words: Word[] = [
     entry_id: "7f4260518d684bca967b8958c3169905",
     origin_entry_id: "JK000000036864",
     entry: "じじつ",
+    kanji: "事実",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -12988,6 +13718,7 @@ export const n2Words: Word[] = [
     entry_id: "54f587c953e24f8c922d973f095a24ee",
     origin_entry_id: "JK000000037331",
     entry: "じたい",
+    kanji: "自体",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13004,6 +13735,7 @@ export const n2Words: Word[] = [
     entry_id: "22994124096149c59db7c06aee8b2792",
     origin_entry_id: "JK000000037375",
     entry: "じたく",
+    kanji: "自宅",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13020,6 +13752,7 @@ export const n2Words: Word[] = [
     entry_id: "0ef811cf7dd642a18d0471b968512b8d",
     origin_entry_id: "JK000000037523",
     entry: "じち",
+    kanji: "自治",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13036,6 +13769,7 @@ export const n2Words: Word[] = [
     entry_id: "af4a6dd500594985bd05b9a4dd4070fd",
     origin_entry_id: "JK000000037702",
     entry: "じっかん",
+    kanji: "実感",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13056,6 +13790,7 @@ export const n2Words: Word[] = [
     entry_id: "99d8776be9ef409383ef756ab51ac9a4",
     origin_entry_id: "JK000000037749",
     entry: "じっけん",
+    kanji: "実験",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13076,6 +13811,7 @@ export const n2Words: Word[] = [
     entry_id: "9380d0eb224c46c8a4937e26e5f93983",
     origin_entry_id: "JK000000037770",
     entry: "じっさい",
+    kanji: "実際",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13092,6 +13828,7 @@ export const n2Words: Word[] = [
     entry_id: "f1615d4db0f849a0bd75686bca1aa3c2",
     origin_entry_id: "JK000000037781",
     entry: "じっし",
+    kanji: "実施",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13112,6 +13849,7 @@ export const n2Words: Word[] = [
     entry_id: "d29da924865c4a15825c756917a5860e",
     origin_entry_id: "JK000000037797",
     entry: "じっしゅう",
+    kanji: "実習",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13132,6 +13870,7 @@ export const n2Words: Word[] = [
     entry_id: "2fcf79e5015d42198f2a0c2667e47c92",
     origin_entry_id: "JK000000037831",
     entry: "じっせき",
+    kanji: "実績",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13148,6 +13887,7 @@ export const n2Words: Word[] = [
     entry_id: "8d41ecf6bb3643dbb38cb13ae3fff899",
     origin_entry_id: "JK000000037934",
     entry: "じつぶつ",
+    kanji: "実物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13164,6 +13904,7 @@ export const n2Words: Word[] = [
     entry_id: "c4f34997078348d2b1cbc2db23161a7d",
     origin_entry_id: "JK000000037955",
     entry: "じつむ",
+    kanji: "実務",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13180,6 +13921,7 @@ export const n2Words: Word[] = [
     entry_id: "6dd90db1e5d64ab9885292a2fa5da767",
     origin_entry_id: "JK000000037964",
     entry: "じつよう",
+    kanji: "実用",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13200,6 +13942,7 @@ export const n2Words: Word[] = [
     entry_id: "5b5b46bf083749d29e99b5aeee9c1483",
     origin_entry_id: "JK000000037978",
     entry: "じつれい",
+    kanji: "実例",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13216,6 +13959,7 @@ export const n2Words: Word[] = [
     entry_id: "b860d9eca38d47c6b5741e11384ef8aa",
     origin_entry_id: "JK000000038067",
     entry: "じどう",
+    kanji: "児童",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13232,6 +13976,7 @@ export const n2Words: Word[] = [
     entry_id: "bbb17b32dabc46d9954af2c994d206a1",
     origin_entry_id: "JK000000038376",
     entry: "じばん",
+    kanji: "地盤",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13248,6 +13993,7 @@ export const n2Words: Word[] = [
     entry_id: "29ed981d41b348588cb8c33094212fe4",
     origin_entry_id: "JK000000038656",
     entry: "じみ",
+    kanji: "地味",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13268,6 +14014,7 @@ export const n2Words: Word[] = [
     entry_id: "fb9684e73fa240f5b1cbeec311230cec",
     origin_entry_id: "JK000000039065",
     entry: "じゃくてん",
+    kanji: "弱点",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13284,6 +14031,7 @@ export const n2Words: Word[] = [
     entry_id: "1d7ad84521ba45149f80af4e1f12acae",
     origin_entry_id: "JK000000039441",
     entry: "じゃんけん",
+    kanji: "じゃん挙",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13320,6 +14068,7 @@ export const n2Words: Word[] = [
     entry_id: "8da3eb3ef5ae46e7be43437e8e4d9420",
     origin_entry_id: "JK000000040039",
     entry: "じゅうたい",
+    kanji: "渋滞",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13340,6 +14089,7 @@ export const n2Words: Word[] = [
     entry_id: "abf19680be344fae9e574fca988faf05",
     origin_entry_id: "JK000000040047",
     entry: "じゅうたく",
+    kanji: "住宅",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13356,6 +14106,7 @@ export const n2Words: Word[] = [
     entry_id: "27e5ebc544954ab694fbe9f4b5624127",
     origin_entry_id: "JK000000040053",
     entry: "じゅうたん",
+    kanji: "絨毯·絨緞",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13372,6 +14123,7 @@ export const n2Words: Word[] = [
     entry_id: "b9082aa07ac34b0e837dff4253a3fcba",
     origin_entry_id: "JK000000040045",
     entry: "じゅうだい",
+    kanji: "重大",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13388,6 +14140,7 @@ export const n2Words: Word[] = [
     entry_id: "db0a45a75935479e8fdedd0c7f5fb9dd",
     origin_entry_id: "JK000000040093",
     entry: "じゅうてん",
+    kanji: "重点",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13404,6 +14157,7 @@ export const n2Words: Word[] = [
     entry_id: "ffd3a90ffc08400eaa4b32817ac7ec3a",
     origin_entry_id: "JK000000040094",
     entry: "じゅうでん",
+    kanji: "充電",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13424,6 +14178,7 @@ export const n2Words: Word[] = [
     entry_id: "ab22769a7f2f41349d4a6f83285b29a5",
     origin_entry_id: "JK000000040296",
     entry: "じゅうやく",
+    kanji: "重役",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13440,6 +14195,7 @@ export const n2Words: Word[] = [
     entry_id: "50efede0968144f89831d8d371c50942",
     origin_entry_id: "JK000000040337",
     entry: "じゅうりょう",
+    kanji: "重量",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13456,6 +14212,7 @@ export const n2Words: Word[] = [
     entry_id: "4b840e0a361c4f0d8305e7eb1af4569d",
     origin_entry_id: "JK000000040341",
     entry: "じゅうりょく",
+    kanji: "重力",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13472,6 +14229,7 @@ export const n2Words: Word[] = [
     entry_id: "a002e207f0fa49369bdd21929fb2673b",
     origin_entry_id: "JK000000040510",
     entry: "じゅくご",
+    kanji: "熟語",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13488,6 +14246,7 @@ export const n2Words: Word[] = [
     entry_id: "a28023cfaf7941e89356fba25704e128",
     origin_entry_id: "JK000000040887",
     entry: "じゅつご",
+    kanji: "述語",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13504,6 +14263,7 @@ export const n2Words: Word[] = [
     entry_id: "cd843e8a11044aca80c3e724fca28875",
     origin_entry_id: "JK000000041137",
     entry: "じゅよう",
+    kanji: "需要",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13520,6 +14280,7 @@ export const n2Words: Word[] = [
     entry_id: "819f94b7c4884a28a9b7e863c4ea8ef1",
     origin_entry_id: "JK000000041200",
     entry: "じゅん",
+    kanji: "順",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13544,6 +14305,7 @@ export const n2Words: Word[] = [
     entry_id: "059cd7ac89f7460fbd316b77d3451761",
     origin_entry_id: "JK000000041321",
     entry: "じゅんさ",
+    kanji: "巡査",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13560,6 +14322,7 @@ export const n2Words: Word[] = [
     entry_id: "3c61cc1f376e4f1393e5a620dab27325",
     origin_entry_id: "JK000000041347",
     entry: "じゅんじゅん",
+    kanji: "順順",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13576,6 +14339,7 @@ export const n2Words: Word[] = [
     entry_id: "a544e794b1dd4fce8f81d83485d7f53b",
     origin_entry_id: "JK000000041351",
     entry: "じゅんじょ",
+    kanji: "順序",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13592,6 +14356,7 @@ export const n2Words: Word[] = [
     entry_id: "9b6e5407a01e4f80bd7b7d2ca9f09572",
     origin_entry_id: "JK000000041357",
     entry: "じゅんじょう",
+    kanji: "純情",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13608,6 +14373,7 @@ export const n2Words: Word[] = [
     entry_id: "88018823a54f4a22b3a90ac1477a28bf",
     origin_entry_id: "JK000000041371",
     entry: "じゅんすい",
+    kanji: "純粋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13628,6 +14394,7 @@ export const n2Words: Word[] = [
     entry_id: "d264957afacc4bf7abed4a18549ade2a",
     origin_entry_id: "JK000000041400",
     entry: "じゅんちょう",
+    kanji: "順調",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13648,6 +14415,7 @@ export const n2Words: Word[] = [
     entry_id: "2cab8d77900542ab99c609f734f30800",
     origin_entry_id: "JK000000041523",
     entry: "じょ",
+    kanji: "女",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13668,6 +14436,7 @@ export const n2Words: Word[] = [
     entry_id: "b6eb7845d8bc462cbf503e61df76ecd5",
     origin_entry_id: "JK000000041676",
     entry: "じょう",
+    kanji: "上",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13688,6 +14457,7 @@ export const n2Words: Word[] = [
     entry_id: "0dc41de5636d4b41925283eefcc4b980",
     origin_entry_id: "JK000000041938",
     entry: "じょうき",
+    kanji: "蒸気",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13704,6 +14474,7 @@ export const n2Words: Word[] = [
     entry_id: "59f145fd4766435abfbf05b852bf9c87",
     origin_entry_id: "JK000000041971",
     entry: "じょうきょう",
+    kanji: "状況∙情況",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13724,6 +14495,7 @@ export const n2Words: Word[] = [
     entry_id: "931329dbcf64490b8dbda9b5e279ee3e",
     origin_entry_id: "JK000000041941",
     entry: "じょうぎ",
+    kanji: "定規·定木",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13740,6 +14512,7 @@ export const n2Words: Word[] = [
     entry_id: "0e1ccdab67fb42f19c601e437a85af93",
     origin_entry_id: "JK000000042353",
     entry: "じょうしょう",
+    kanji: "上昇",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13760,6 +14533,7 @@ export const n2Words: Word[] = [
     entry_id: "71bcc2ff9c3745bb91470478f146ea9c",
     origin_entry_id: "JK000000042455",
     entry: "じょうせい",
+    kanji: "情勢·状勢",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13776,6 +14550,7 @@ export const n2Words: Word[] = [
     entry_id: "d1b94bf3d92d4d4096eff84268ae783e",
     origin_entry_id: "JK000000042533",
     entry: "じょうたい",
+    kanji: "状態·情態",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13792,6 +14567,7 @@ export const n2Words: Word[] = [
     entry_id: "bb9b1d8bf6c34b3987b6bd3c3b8e950d",
     origin_entry_id: "JK000000042542",
     entry: "じょうたつ",
+    kanji: "上達",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13812,6 +14588,7 @@ export const n2Words: Word[] = [
     entry_id: "79e8b8c9beca4d7680422faa76b5d0e7",
     origin_entry_id: "JK000000042674",
     entry: "じょうとう",
+    kanji: "上等",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13828,6 +14605,7 @@ export const n2Words: Word[] = [
     entry_id: "dcd9b730054545008f80cd61a88c0c65",
     origin_entry_id: "JK000000042771",
     entry: "じょうはつ",
+    kanji: "蒸発",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13848,6 +14626,7 @@ export const n2Words: Word[] = [
     entry_id: "a630a308813146d28adf5ab09b8e3890",
     origin_entry_id: "JK000000043110",
     entry: "じょおう",
+    kanji: "女王",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13864,6 +14643,7 @@ export const n2Words: Word[] = [
     entry_id: "c91ef0258aab4b50aca9c03031739175",
     origin_entry_id: "JK000000043177",
     entry: "じょきょうじゅ",
+    kanji: "助教授",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13880,6 +14660,7 @@ export const n2Words: Word[] = [
     entry_id: "eae8ac455ccc4f219c2d9c51a01e6bc5",
     origin_entry_id: "JK000000043460",
     entry: "じょしゅ",
+    kanji: "助手",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13896,6 +14677,7 @@ export const n2Words: Word[] = [
     entry_id: "711571ffd846432a91424e34bf75f7d7",
     origin_entry_id: "JK100044596001",
     entry: "じんけんひ",
+    kanji: "人件費",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13912,6 +14694,7 @@ export const n2Words: Word[] = [
     entry_id: "fef3461b96c64691b9d8668dd9494226",
     origin_entry_id: "JK000000044643",
     entry: "じんこう",
+    kanji: "人工",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13928,6 +14711,7 @@ export const n2Words: Word[] = [
     entry_id: "73d1fb812cf54f51b5fb1a0c1d4c591e",
     origin_entry_id: "JK000000044734",
     entry: "じんじ",
+    kanji: "人事",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13944,6 +14728,7 @@ export const n2Words: Word[] = [
     entry_id: "97e46c620cb045e2af1e4d0c577c636b",
     origin_entry_id: "JK000000044984",
     entry: "じんぞう",
+    kanji: "人造",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13960,6 +14745,7 @@ export const n2Words: Word[] = [
     entry_id: "60e0835c43c946f893662d7b3d04bd55",
     origin_entry_id: "JK000000045277",
     entry: "じんぶつ",
+    kanji: "人物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13976,6 +14762,7 @@ export const n2Words: Word[] = [
     entry_id: "4e07164659524e48a2ea5a620ffe3983",
     origin_entry_id: "JK100045281001",
     entry: "じんぶんかがく",
+    kanji: "人文科学",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -13992,6 +14779,7 @@ export const n2Words: Word[] = [
     entry_id: "f09bc37e7bdb406fa42edec687cb9171",
     origin_entry_id: "JK000000045360",
     entry: "じんめい",
+    kanji: "人命",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14008,6 +14796,7 @@ export const n2Words: Word[] = [
     entry_id: "102dd84024f641c78cbf503d6b562456",
     origin_entry_id: "JK000000045443",
     entry: "じんるい",
+    kanji: "人類",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14024,6 +14813,7 @@ export const n2Words: Word[] = [
     entry_id: "fde5f5446e214dac93bfd3f14001888f",
     origin_entry_id: "JK000000045475",
     entry: "す",
+    kanji: "巣·栖·窼",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14040,6 +14830,7 @@ export const n2Words: Word[] = [
     entry_id: "aedad19a06d84d5e8376603996fa77aa",
     origin_entry_id: "JK000000045573",
     entry: "すいがら",
+    kanji: "吸い殻",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14056,6 +14847,7 @@ export const n2Words: Word[] = [
     entry_id: "498a0c0744e342c7baad126c87eda34d",
     origin_entry_id: "JK000000045636",
     entry: "すいさん",
+    kanji: "水産",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14072,6 +14864,7 @@ export const n2Words: Word[] = [
     entry_id: "23d9a0ea459b44e3904df51a9f122417",
     origin_entry_id: "JK000000045649",
     entry: "すいじ",
+    kanji: "炊事",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14092,6 +14885,7 @@ export const n2Words: Word[] = [
     entry_id: "5fa8772ceffb4cd9bdbd91377bd67d1b",
     origin_entry_id: "JK000000045661",
     entry: "すいじゅん",
+    kanji: "水準",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14108,6 +14902,7 @@ export const n2Words: Word[] = [
     entry_id: "f2d67c13d2d74a9eafb19bcf46ced87e",
     origin_entry_id: "JK000000045674",
     entry: "すいじょうき",
+    kanji: "水蒸気",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14124,6 +14919,7 @@ export const n2Words: Word[] = [
     entry_id: "36f74036460d482393976f9ca74b00d7",
     origin_entry_id: "JK000000045709",
     entry: "すいせん",
+    kanji: "推薦",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14144,6 +14940,7 @@ export const n2Words: Word[] = [
     entry_id: "c6a9ba7584044d5ba7ed1f69820ea17a",
     origin_entry_id: "JK000000045717",
     entry: "すいそ",
+    kanji: "水素",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14160,6 +14957,7 @@ export const n2Words: Word[] = [
     entry_id: "b72995b7a0d54671acbcf4bebd896440",
     origin_entry_id: "JK000000045753",
     entry: "すいちょく",
+    kanji: "垂直",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14180,6 +14978,7 @@ export const n2Words: Word[] = [
     entry_id: "2622825be0b84d47bd0fbc201d2d8850",
     origin_entry_id: "JK000000045763",
     entry: "すいてい",
+    kanji: "推定",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14200,6 +14999,7 @@ export const n2Words: Word[] = [
     entry_id: "2ee07113c7f14a5eae588b299e25c739",
     origin_entry_id: "JK000000045773",
     entry: "すいとう",
+    kanji: "水筒",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14216,6 +15016,7 @@ export const n2Words: Word[] = [
     entry_id: "7d47ec557d834d5c85f91496058c189a",
     origin_entry_id: "JK000000045821",
     entry: "すいぶん",
+    kanji: "水分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14232,6 +15033,7 @@ export const n2Words: Word[] = [
     entry_id: "800c5c270bd245de80c1bea03eb098a8",
     origin_entry_id: "JK000000045824",
     entry: "すいへい",
+    kanji: "水平",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14252,6 +15054,7 @@ export const n2Words: Word[] = [
     entry_id: "01f58dd0367e469aa2b3601a5cb9e2da",
     origin_entry_id: "JK100045824005",
     entry: "すいへいせん",
+    kanji: "水平線",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14268,6 +15071,7 @@ export const n2Words: Word[] = [
     entry_id: "30e42b9428484e6f846b0ef64df1db21",
     origin_entry_id: "JK000000045856",
     entry: "すいめん",
+    kanji: "水面",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14284,6 +15088,7 @@ export const n2Words: Word[] = [
     entry_id: "e8963095b1d341749db55bb04fff7b9e",
     origin_entry_id: "JK000000045864",
     entry: "すいよう",
+    kanji: "水曜",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14300,6 +15105,7 @@ export const n2Words: Word[] = [
     entry_id: "7117f058d32c4b40ad75b720ed52f836",
     origin_entry_id: "JK000000045899",
     entry: "すう",
+    kanji: "数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14320,6 +15126,7 @@ export const n2Words: Word[] = [
     entry_id: "00ef257f2aa34ce88b8e1dcd86075df7",
     origin_entry_id: "JK000000045927",
     entry: "すうじ",
+    kanji: "数字",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14336,6 +15143,7 @@ export const n2Words: Word[] = [
     entry_id: "7d23f6ff78994fceb0e6aceecf85fc0e",
     origin_entry_id: "JK000000045968",
     entry: "すえ",
+    kanji: "末",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14352,6 +15160,7 @@ export const n2Words: Word[] = [
     entry_id: "7df1660d0a2242beb70e7e2cb7ebfbb4",
     origin_entry_id: "JK000000046048",
     entry: "すがた",
+    kanji: "姿·相",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14368,6 +15177,7 @@ export const n2Words: Word[] = [
     entry_id: "1066dc9f49b04728918600b1ee234e81",
     origin_entry_id: "JK000000046094",
     entry: "すき",
+    kanji: "透き·隙",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14384,6 +15194,7 @@ export const n2Words: Word[] = [
     entry_id: "1eedd773e4e343ecb95a7cc0149237e7",
     origin_entry_id: "JK000000046137",
     entry: "すきずき",
+    kanji: "好き好き",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14400,6 +15211,7 @@ export const n2Words: Word[] = [
     entry_id: "dcf53e0036d4435399970d351b8aeba0",
     origin_entry_id: "JK000000046164",
     entry: "すきま",
+    kanji: "隙間·透き間·空き間",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14416,6 +15228,7 @@ export const n2Words: Word[] = [
     entry_id: "20a0199a493a4101a814c9795475ea38",
     origin_entry_id: "JK000000046097",
     entry: "すぎ",
+    kanji: "杉·椙",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14432,6 +15245,7 @@ export const n2Words: Word[] = [
     entry_id: "ffb43eef5b014bf086538b414b57db14",
     origin_entry_id: "JK000000046354",
     entry: "すじ",
+    kanji: "筋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14452,6 +15266,7 @@ export const n2Words: Word[] = [
     entry_id: "ea05955a2e8347cbb2ed26ecf6c97bab",
     origin_entry_id: "JK000000046399",
     entry: "すず",
+    kanji: "鈴",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14468,6 +15283,7 @@ export const n2Words: Word[] = [
     entry_id: "8df9d23101c34b91a88073e189f1a89f",
     origin_entry_id: "JK000000046760",
     entry: "すなわち",
+    kanji: "即ち·則ち·乃ち",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14492,6 +15308,7 @@ export const n2Words: Word[] = [
     entry_id: "7a8766b8885944b385c4675d035aca52",
     origin_entry_id: "JK000000046885",
     entry: "すべて",
+    kanji: "全て∙凡て∙総て",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14512,6 +15329,7 @@ export const n2Words: Word[] = [
     entry_id: "af062c2c55504535aa3aa9e9519947eb",
     origin_entry_id: "JK000000046955",
     entry: "すみ",
+    kanji: "墨",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14528,6 +15346,7 @@ export const n2Words: Word[] = [
     entry_id: "d3f170e0b07042188f29d8f60f43e5a6",
     origin_entry_id: "JK000000047036",
     entry: "すもう",
+    kanji: "相撲·角力",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14544,6 +15363,7 @@ export const n2Words: Word[] = [
     entry_id: "71cf722da3b44b568dcf96ac03763612",
     origin_entry_id: "JK000000047309",
     entry: "すんぽう",
+    kanji: "寸法",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14560,6 +15380,7 @@ export const n2Words: Word[] = [
     entry_id: "9c37b82eaaf249758bc97699994a8968",
     origin_entry_id: "JK000000045484",
     entry: "ず",
+    kanji: "図",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14576,6 +15397,7 @@ export const n2Words: Word[] = [
     entry_id: "3cf8b6cc7f574a15a900c4f02e98533a",
     origin_entry_id: "JK000000045809",
     entry: "ずいひつ",
+    kanji: "随筆",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14592,6 +15414,7 @@ export const n2Words: Word[] = [
     entry_id: "10271d714f2e495d991cd92d2a4f91f5",
     origin_entry_id: "JK000000046080",
     entry: "ずかん",
+    kanji: "図鑑",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14608,6 +15431,7 @@ export const n2Words: Word[] = [
     entry_id: "4a32aa3705724857be350fcf01bee263",
     origin_entry_id: "JK000000046276",
     entry: "ずけい",
+    kanji: "図形",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14624,6 +15448,7 @@ export const n2Words: Word[] = [
     entry_id: "a8df2a6f147f4bdcbd04c1ac8fe9042e",
     origin_entry_id: "JK000000046566",
     entry: "ずつう",
+    kanji: "頭痛",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14640,6 +15465,7 @@ export const n2Words: Word[] = [
     entry_id: "4d9583f04fc8407ab5c972c2de4e5d16",
     origin_entry_id: "JK000000046774",
     entry: "ずのう",
+    kanji: "頭脳",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14656,6 +15482,7 @@ export const n2Words: Word[] = [
     entry_id: "e704392751694af5ba7158f3b81bc73f",
     origin_entry_id: "JK000000046832",
     entry: "ずひょう",
+    kanji: "図表",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14672,6 +15499,7 @@ export const n2Words: Word[] = [
     entry_id: "637c3840be6a45e3a371969162876a2f",
     origin_entry_id: "JK000000047325",
     entry: "せい",
+    kanji: "生",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14696,6 +15524,7 @@ export const n2Words: Word[] = [
     entry_id: "8837f34d13ef4c2bb86de049b579b87c",
     origin_entry_id: "JK000000047455",
     entry: "せいかい",
+    kanji: "正解",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14716,6 +15545,7 @@ export const n2Words: Word[] = [
     entry_id: "4f085208ad6c4eb79dd279341923e68f",
     origin_entry_id: "JK000000047511",
     entry: "せいき",
+    kanji: "世紀",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14732,6 +15562,7 @@ export const n2Words: Word[] = [
     entry_id: "760a3f4fc8914205b17c8ea5b332a4ed",
     origin_entry_id: "JK000000047532",
     entry: "せいきゅう",
+    kanji: "請求",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14752,6 +15583,7 @@ export const n2Words: Word[] = [
     entry_id: "299991df68df432283d4cb4826132f22",
     origin_entry_id: "JK000000047590",
     entry: "せいけつ",
+    kanji: "清潔",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14772,6 +15604,7 @@ export const n2Words: Word[] = [
     entry_id: "fb51739315fb431a990d82ec2a70b8c7",
     origin_entry_id: "JK000000047598",
     entry: "せいげん",
+    kanji: "制限",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14792,6 +15625,7 @@ export const n2Words: Word[] = [
     entry_id: "c97ea53f60e6416795b79482796585cf",
     origin_entry_id: "JK000000047663",
     entry: "せいさく",
+    kanji: "製作",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14812,6 +15646,7 @@ export const n2Words: Word[] = [
     entry_id: "5815fb02d496424a9c3dab8a9d2d061f",
     origin_entry_id: "JK000000047754",
     entry: "せいしょ",
+    kanji: "清書",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14832,6 +15667,7 @@ export const n2Words: Word[] = [
     entry_id: "d6921826507b468893bc88ca85e807b4",
     origin_entry_id: "JK000000047805",
     entry: "せいしん",
+    kanji: "精神",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14848,6 +15684,7 @@ export const n2Words: Word[] = [
     entry_id: "3cb668bd4a5c4a1793d90b964bbd0b53",
     origin_entry_id: "JK000000047822",
     entry: "せいすう",
+    kanji: "整数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14864,6 +15701,7 @@ export const n2Words: Word[] = [
     entry_id: "2d814d2050eb4a6f9bdc7db80c16683a",
     origin_entry_id: "JK000000047884",
     entry: "せいぞう",
+    kanji: "製造",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14884,6 +15722,7 @@ export const n2Words: Word[] = [
     entry_id: "e0a42bc511c642a683859835a5b5eed3",
     origin_entry_id: "JK000000047892",
     entry: "せいぞん",
+    kanji: "生存",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14904,6 +15743,7 @@ export const n2Words: Word[] = [
     entry_id: "18bed78b0fde4d2ebd1546273c71b51e",
     origin_entry_id: "JK000000047948",
     entry: "せいちょう",
+    kanji: "生長",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14924,6 +15764,7 @@ export const n2Words: Word[] = [
     entry_id: "c562e20b754748d9a21417527ce34e23",
     origin_entry_id: "JK000000048002",
     entry: "せいとう",
+    kanji: "政党",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14940,6 +15781,7 @@ export const n2Words: Word[] = [
     entry_id: "b08dfccc028a4fac8f5748cc744ad9e0",
     origin_entry_id: "JK000000047998",
     entry: "せいど",
+    kanji: "制度",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14956,6 +15798,7 @@ export const n2Words: Word[] = [
     entry_id: "753c25ec08eb4e95880c82530781aa74",
     origin_entry_id: "JK000000048045",
     entry: "せいのう",
+    kanji: "性能",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14972,6 +15815,7 @@ export const n2Words: Word[] = [
     entry_id: "3f7b6e5aebbf4e94ab69ce30b9578fef",
     origin_entry_id: "JK000000048078",
     entry: "せいび",
+    kanji: "整備",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -14992,6 +15836,7 @@ export const n2Words: Word[] = [
     entry_id: "7a06e3b37e9743cabcbe510c5d0a27be",
     origin_entry_id: "JK000000048097",
     entry: "せいふ",
+    kanji: "政府",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15008,6 +15853,7 @@ export const n2Words: Word[] = [
     entry_id: "48aff204e4d8495eaf005d1cf586c8d9",
     origin_entry_id: "JK000000048110",
     entry: "せいぶつ",
+    kanji: "生物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15024,6 +15870,7 @@ export const n2Words: Word[] = [
     entry_id: "2fba66d5e1a945cfb84fffef9f1c37eb",
     origin_entry_id: "JK000000048114",
     entry: "せいぶん",
+    kanji: "成分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15040,6 +15887,7 @@ export const n2Words: Word[] = [
     entry_id: "f2ed73d82cb74ce8a885aa2179afac50",
     origin_entry_id: "JK000000048126",
     entry: "せいべつ",
+    kanji: "性別",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15056,6 +15904,7 @@ export const n2Words: Word[] = [
     entry_id: "436fe09b9e30406182d1bfd76584b028",
     origin_entry_id: "JK000000048145",
     entry: "せいほうけい",
+    kanji: "正方形",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15072,6 +15921,7 @@ export const n2Words: Word[] = [
     entry_id: "df7939d4aa234f75857e29ef0a36b53b",
     origin_entry_id: "JK000000048164",
     entry: "せいめい",
+    kanji: "生命",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15088,6 +15938,7 @@ export const n2Words: Word[] = [
     entry_id: "ac6d53f117f8414787266c988e2660df",
     origin_entry_id: "JK000000048220",
     entry: "せいりつ",
+    kanji: "成立",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15108,6 +15959,7 @@ export const n2Words: Word[] = [
     entry_id: "1e62b5445a2b4c4ebd17b17c2f7af5f0",
     origin_entry_id: "JK000000048247",
     entry: "せいれき",
+    kanji: "西暦",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15124,6 +15976,7 @@ export const n2Words: Word[] = [
     entry_id: "ab21e1b8960d4ff5b7d733576562051a",
     origin_entry_id: "JK000000048423",
     entry: "せきたん",
+    kanji: "石炭",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15140,6 +15993,7 @@ export const n2Words: Word[] = [
     entry_id: "f17dabb91f68454a8c7badf7dee43d86",
     origin_entry_id: "JK000000048440",
     entry: "せきどう",
+    kanji: "赤道",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15156,6 +16010,7 @@ export const n2Words: Word[] = [
     entry_id: "915a69aef0f148f1a8a53b12d14172a4",
     origin_entry_id: "JK000000048538",
     entry: "せけん",
+    kanji: "世間",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15172,6 +16027,7 @@ export const n2Words: Word[] = [
     entry_id: "3a0607708df14dc28857534fd5e84ad0",
     origin_entry_id: "JK000000048692",
     entry: "せっきん",
+    kanji: "接近",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15192,6 +16048,7 @@ export const n2Words: Word[] = [
     entry_id: "d475c179b4ce4523b1074b5e9f71002e",
     origin_entry_id: "JK000000048704",
     entry: "せっけい",
+    kanji: "設計",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15212,6 +16069,7 @@ export const n2Words: Word[] = [
     entry_id: "6bc93c1949724870947a1c98a51c2f65",
     origin_entry_id: "JK000000048828",
     entry: "せったい",
+    kanji: "接待",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15232,6 +16090,7 @@ export const n2Words: Word[] = [
     entry_id: "1abf2f0834f24278afa52aa740266130",
     origin_entry_id: "JK000000048868",
     entry: "せっとく",
+    kanji: "説得",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15252,6 +16111,7 @@ export const n2Words: Word[] = [
     entry_id: "8c8dd763f27e4d1890178e5dbb1c9f9c",
     origin_entry_id: "JK000000048608",
     entry: "せつ",
+    kanji: "説",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15268,6 +16128,7 @@ export const n2Words: Word[] = [
     entry_id: "eca529a015d24c749749f72a6122d9d6",
     origin_entry_id: "JK000000048822",
     entry: "せつぞく",
+    kanji: "接続",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15288,6 +16149,7 @@ export const n2Words: Word[] = [
     entry_id: "bb929c7b89e34e9c9f5db8b6bfaf6d54",
     origin_entry_id: "JK000000048884",
     entry: "せつび",
+    kanji: "設備",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15308,6 +16170,7 @@ export const n2Words: Word[] = [
     entry_id: "c035e2ae732f48c1b3994b535c8d7cfd",
     origin_entry_id: "JK100048944006",
     entry: "せともの",
+    kanji: "瀬戸物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15324,6 +16187,7 @@ export const n2Words: Word[] = [
     entry_id: "366815693e394774949c878bb466fadf",
     origin_entry_id: "JK000000049121",
     entry: "せりふ",
+    kanji: "台詞·科白",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15356,6 +16220,7 @@ export const n2Words: Word[] = [
     entry_id: "038be2e215b649f1b2a7a7424198af44",
     origin_entry_id: "JK000000049472",
     entry: "せんご",
+    kanji: "戦後",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15372,6 +16237,7 @@ export const n2Words: Word[] = [
     entry_id: "e3c9fe1a0fd94305bad1ff9db5d09a2a",
     origin_entry_id: "JK000000049746",
     entry: "せんす",
+    kanji: "扇子",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15388,6 +16254,7 @@ export const n2Words: Word[] = [
     entry_id: "53056a369de84975a34aa2bf5222dc7b",
     origin_entry_id: "JK000000049769",
     entry: "せんせい",
+    kanji: "専制·専政",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15408,6 +16275,7 @@ export const n2Words: Word[] = [
     entry_id: "7ed778ee2efd4346bc126bfe3d16f3d8",
     origin_entry_id: "JK000000049817",
     entry: "せんぞ",
+    kanji: "先祖",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15424,6 +16292,7 @@ export const n2Words: Word[] = [
     entry_id: "48993b25b84641b3bb0f6c96129249cc",
     origin_entry_id: "JK000000049869",
     entry: "せんたん",
+    kanji: "先端·尖端",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15440,6 +16309,7 @@ export const n2Words: Word[] = [
     entry_id: "cd30cd2e3453456f9b11938264c3be07",
     origin_entry_id: "JK000000049921",
     entry: "せんてい",
+    kanji: "選定",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15460,6 +16330,7 @@ export const n2Words: Word[] = [
     entry_id: "b0baf61edbec4393bf9cd57475eec861",
     origin_entry_id: "JK000000049961",
     entry: "せんとう",
+    kanji: "先頭",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15476,6 +16347,7 @@ export const n2Words: Word[] = [
     entry_id: "92413cd538ce427e9035a404d6354bc2",
     origin_entry_id: "JK000000050203",
     entry: "せんめん",
+    kanji: "洗面",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15496,6 +16368,7 @@ export const n2Words: Word[] = [
     entry_id: "86c08927272546fca64e6d2ac9b0adad",
     origin_entry_id: "JK000000047505",
     entry: "ぜいかん",
+    kanji: "税関",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15512,6 +16385,7 @@ export const n2Words: Word[] = [
     entry_id: "516fb6cb9a5242ef9da9e146fc04ce33",
     origin_entry_id: "JK000000047917",
     entry: "ぜいたく",
+    kanji: "贅沢",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15536,6 +16410,7 @@ export const n2Words: Word[] = [
     entry_id: "faf43a89eee545dca27945bd98e2e4af",
     origin_entry_id: "JK000000100188",
     entry: "ぜっこうちょう",
+    kanji: "絶好調",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -15552,6 +16427,7 @@ export const n2Words: Word[] = [
     entry_id: "533ea821a2c24baeb0f72300955f205c",
     origin_entry_id: "JK000000048832",
     entry: "ぜったい",
+    kanji: "絶対",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15568,6 +16444,7 @@ export const n2Words: Word[] = [
     entry_id: "ca3a385d1ad74096b375c627fca380b2",
     origin_entry_id: "JK000000048917",
     entry: "ぜつめつ",
+    kanji: "絶滅",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15588,6 +16465,7 @@ export const n2Words: Word[] = [
     entry_id: "06a3b99b76084e488d078c274ad833f1",
     origin_entry_id: "JK000000049220",
     entry: "ぜん",
+    kanji: "前",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15608,6 +16486,7 @@ export const n2Words: Word[] = [
     entry_id: "6b52cd44c25840158276882373eafe44",
     origin_entry_id: "JK000000049362",
     entry: "ぜんき",
+    kanji: "前期",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15624,6 +16503,7 @@ export const n2Words: Word[] = [
     entry_id: "738a3bf9d1fa4defb57189949b44c57e",
     origin_entry_id: "JK000000049475",
     entry: "ぜんご",
+    kanji: "前後",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15648,6 +16528,7 @@ export const n2Words: Word[] = [
     entry_id: "98f1bb3b65f44f34a519172d2d837ec6",
     origin_entry_id: "JK000000049616",
     entry: "ぜんしゃ",
+    kanji: "前者",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15664,6 +16545,7 @@ export const n2Words: Word[] = [
     entry_id: "4ce06861c6924f1db991d85e422b9b26",
     origin_entry_id: "JK000000049736",
     entry: "ぜんしん",
+    kanji: "前進",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15684,6 +16566,7 @@ export const n2Words: Word[] = [
     entry_id: "fd647865eafa414f8009748a24e679da",
     origin_entry_id: "JK000000050071",
     entry: "ぜんぱん",
+    kanji: "全般",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15700,6 +16583,7 @@ export const n2Words: Word[] = [
     entry_id: "df9f2912a07745e28e1cb46c6849a38a",
     origin_entry_id: "JK000000050280",
     entry: "ぜんりょく",
+    kanji: "全力",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15716,6 +16600,7 @@ export const n2Words: Word[] = [
     entry_id: "b7d6fafdee774119a85c5405e77642b3",
     origin_entry_id: "JK000000050473",
     entry: "そうい",
+    kanji: "相違",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15736,6 +16621,7 @@ export const n2Words: Word[] = [
     entry_id: "d8c8eab50af3476fb32c5ab15e7765f2",
     origin_entry_id: "JK000000050667",
     entry: "そうこ",
+    kanji: "倉庫",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15752,6 +16638,7 @@ export const n2Words: Word[] = [
     entry_id: "5d12697291894f7d93ce8a588cb0078c",
     origin_entry_id: "JK000000050670",
     entry: "そうご",
+    kanji: "相互",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15768,6 +16655,7 @@ export const n2Words: Word[] = [
     entry_id: "694ae9d0228c4699802f5dfe2ed4aff1",
     origin_entry_id: "JK000000050717",
     entry: "そうさ",
+    kanji: "操作",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15788,6 +16676,7 @@ export const n2Words: Word[] = [
     entry_id: "57b90480f26a467f8e7fa7f964d9a6cc",
     origin_entry_id: "JK000000050727",
     entry: "そうさく",
+    kanji: "創作",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15808,6 +16697,7 @@ export const n2Words: Word[] = [
     entry_id: "9293b16da943423ebf57b59cdaf7f1d3",
     origin_entry_id: "JK000000050761",
     entry: "そうしき",
+    kanji: "葬式",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15824,6 +16714,7 @@ export const n2Words: Word[] = [
     entry_id: "0b2d1a329df249588266709f66a15fbc",
     origin_entry_id: "JK000000050989",
     entry: "そうち",
+    kanji: "装置",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15844,6 +16735,7 @@ export const n2Words: Word[] = [
     entry_id: "ad67bdc9b102451c866d048c44f65b6b",
     origin_entry_id: "JK000000051012",
     entry: "そうてい",
+    kanji: "想定",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15864,6 +16756,7 @@ export const n2Words: Word[] = [
     entry_id: "cf40214fd7914953ad0f474743aeb0f8",
     origin_entry_id: "JK000000051139",
     entry: "そうべつ",
+    kanji: "送別",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15884,6 +16777,7 @@ export const n2Words: Word[] = [
     entry_id: "6db93677d0e3402baa53b285d88d5a7f",
     origin_entry_id: "JK100051236001",
     entry: "そうりだいじん",
+    kanji: "総理大臣",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15900,6 +16794,7 @@ export const n2Words: Word[] = [
     entry_id: "c50b0f3cc9524394abd32c5ad274deb7",
     origin_entry_id: "JK000000051638",
     entry: "そくりょく",
+    kanji: "速力",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15916,6 +16811,7 @@ export const n2Words: Word[] = [
     entry_id: "59710ae3d6b8416d85ce4ad058cefe51",
     origin_entry_id: "JK000000051755",
     entry: "そしき",
+    kanji: "組織",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15936,6 +16832,7 @@ export const n2Words: Word[] = [
     entry_id: "3f4995208fd741728d63cdfc091f4e20",
     origin_entry_id: "JK000000051758",
     entry: "そしつ",
+    kanji: "素質",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15952,6 +16849,7 @@ export const n2Words: Word[] = [
     entry_id: "7034f3aca60642cdaa2c785329693415",
     origin_entry_id: "JK000000051788",
     entry: "そせん",
+    kanji: "祖先",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15968,6 +16866,7 @@ export const n2Words: Word[] = [
     entry_id: "89db1e8f113c419f8c3e9b793d2ea8af",
     origin_entry_id: "JK000000052144",
     entry: "そぼく",
+    kanji: "素朴·素樸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -15984,6 +16883,7 @@ export const n2Words: Word[] = [
     entry_id: "5f75013f419c455b8bc34602f87a2016",
     origin_entry_id: "JK000000052408",
     entry: "そろばん",
+    kanji: "算盤·十露盤",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16000,6 +16900,7 @@ export const n2Words: Word[] = [
     entry_id: "32d49d68cbfa45d6bc7789cdf16ee2b4",
     origin_entry_id: "JK000000052421",
     entry: "そん",
+    kanji: "損",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16024,6 +16925,7 @@ export const n2Words: Word[] = [
     entry_id: "8da4cc61c1d142c08ddd2ab15f88e4b8",
     origin_entry_id: "JK000000052442",
     entry: "そんがい",
+    kanji: "損害",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16040,6 +16942,7 @@ export const n2Words: Word[] = [
     entry_id: "b59f50eda0ba4e4688932ba597721cb8",
     origin_entry_id: "JK000000052457",
     entry: "そんけい",
+    kanji: "尊敬",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16060,6 +16963,7 @@ export const n2Words: Word[] = [
     entry_id: "accaff89c65f441c9c0aab3b53c9d135",
     origin_entry_id: "JK000000052463",
     entry: "そんざい",
+    kanji: "存在",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16080,6 +16984,7 @@ export const n2Words: Word[] = [
     entry_id: "60952e367ddb4c35ae8186044c6bebfc",
     origin_entry_id: "JK000000052522",
     entry: "そんちょう",
+    kanji: "尊重",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16100,6 +17005,7 @@ export const n2Words: Word[] = [
     entry_id: "19ab8c25e62747c08239ee59f50fecf3",
     origin_entry_id: "JK000000052528",
     entry: "そんとく",
+    kanji: "損得",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16116,6 +17022,7 @@ export const n2Words: Word[] = [
     entry_id: "de131d4148424b20b4c2cf48a5744fa9",
     origin_entry_id: "JK000000050447",
     entry: "ぞう",
+    kanji: "象",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16132,6 +17039,7 @@ export const n2Words: Word[] = [
     entry_id: "41e11a1d95154d36964482653887e3fd",
     origin_entry_id: "JK000000050519",
     entry: "ぞうか",
+    kanji: "増加",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16152,6 +17060,7 @@ export const n2Words: Word[] = [
     entry_id: "ea622769abe54e9f8e792a8b98213b23",
     origin_entry_id: "JK000000050615",
     entry: "ぞうきん",
+    kanji: "雑巾",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16168,6 +17077,7 @@ export const n2Words: Word[] = [
     entry_id: "9440da58cdb84613aee20f5831d0a785",
     origin_entry_id: "JK000000050663",
     entry: "ぞうげん",
+    kanji: "増減",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16188,6 +17098,7 @@ export const n2Words: Word[] = [
     entry_id: "a89950d116df495e89005857c6a452b4",
     origin_entry_id: "JK000000050916",
     entry: "ぞうせん",
+    kanji: "造船",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16208,6 +17119,7 @@ export const n2Words: Word[] = [
     entry_id: "0443fe9e3f084f49be205b1f2353eee0",
     origin_entry_id: "JK000000050965",
     entry: "ぞうだい",
+    kanji: "増大",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16228,6 +17140,7 @@ export const n2Words: Word[] = [
     entry_id: "84eb21c7afcd4d8e8b9d23a8fe505537",
     origin_entry_id: "JK000000051237",
     entry: "ぞうり",
+    kanji: "草履",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16244,6 +17157,7 @@ export const n2Words: Word[] = [
     entry_id: "8cc1786a342a450c950b43f12c0f8138",
     origin_entry_id: "JK000000051474",
     entry: "ぞくしゅつ",
+    kanji: "続出",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16264,6 +17178,7 @@ export const n2Words: Word[] = [
     entry_id: "291fcbdae94744d49cd7579ba7bfd620",
     origin_entry_id: "JK000000052588",
     entry: "た",
+    kanji: "他",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16280,6 +17195,7 @@ export const n2Words: Word[] = [
     entry_id: "aa090f9eb37f4506a1145ab47d1a3aa1",
     origin_entry_id: "JK000000052645",
     entry: "たい",
+    kanji: "対",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16300,6 +17216,7 @@ export const n2Words: Word[] = [
     entry_id: "14e6ec311c4c476996e6140e2dd0bacc",
     origin_entry_id: "JK000000052834",
     entry: "たいかん",
+    kanji: "体感",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16316,6 +17233,7 @@ export const n2Words: Word[] = [
     entry_id: "5400fc8e84014edebe8ca9bfd69f8bb1",
     origin_entry_id: "JK000000052851",
     entry: "たいき",
+    kanji: "大気",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16332,6 +17250,7 @@ export const n2Words: Word[] = [
     entry_id: "d45eab48cc7b47d4a5cc0165afba7feb",
     origin_entry_id: "JK000000052917",
     entry: "たいくつ",
+    kanji: "退屈",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16352,6 +17271,7 @@ export const n2Words: Word[] = [
     entry_id: "e65bc971afeb41489ebf93b660e8d012",
     origin_entry_id: "JK000000052935",
     entry: "たいけい",
+    kanji: "体系",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16368,6 +17288,7 @@ export const n2Words: Word[] = [
     entry_id: "5f102b644f4948bc909399e29aa47ae1",
     origin_entry_id: "JK000000052962",
     entry: "たいこ",
+    kanji: "太鼓",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16384,6 +17305,7 @@ export const n2Words: Word[] = [
     entry_id: "60891c3568d1430c90ca513d67cc26e9",
     origin_entry_id: "JK000000053030",
     entry: "たいざい",
+    kanji: "滞在",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16404,6 +17326,7 @@ export const n2Words: Word[] = [
     entry_id: "e51124aa25274efaac4783c03a0a9d84",
     origin_entry_id: "JK000000053050",
     entry: "たいし",
+    kanji: "大使",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16420,6 +17343,7 @@ export const n2Words: Word[] = [
     entry_id: "051e3bc0ad64448cbc90ad534739f253",
     origin_entry_id: "JK000000053145",
     entry: "たいしょう",
+    kanji: "対象",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16440,6 +17364,7 @@ export const n2Words: Word[] = [
     entry_id: "d6506d5775084ddfb6d4bef97deaeda2",
     origin_entry_id: "JK000000053235",
     entry: "たいせい",
+    kanji: "体制",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16456,6 +17381,7 @@ export const n2Words: Word[] = [
     entry_id: "6a9ed5e5389442368b4d9f7fd9f06dd5",
     origin_entry_id: "JK000000053249",
     entry: "たいせき",
+    kanji: "体積",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16472,6 +17398,7 @@ export const n2Words: Word[] = [
     entry_id: "ba83db711bbf408eb8dfeb1f5aabf13a",
     origin_entry_id: "JK000000053262",
     entry: "たいせん",
+    kanji: "対戦",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16492,6 +17419,7 @@ export const n2Words: Word[] = [
     entry_id: "2029096d8cc84995af30956931b1716c",
     origin_entry_id: "JK000000053279",
     entry: "たいそう",
+    kanji: "体操",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16508,6 +17436,7 @@ export const n2Words: Word[] = [
     entry_id: "2a7107eb5331405b8a83a361979ceefb",
     origin_entry_id: "JK000000053454",
     entry: "たいはん",
+    kanji: "大半",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16524,6 +17453,7 @@ export const n2Words: Word[] = [
     entry_id: "9204e16c58d04ad08d6ac3d0e17ff84b",
     origin_entry_id: "JK000000053542",
     entry: "たいぼく",
+    kanji: "大木",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16540,6 +17470,7 @@ export const n2Words: Word[] = [
     entry_id: "d438ba7a26324e4cb6fdb2e6016f3b04",
     origin_entry_id: "JK000000053582",
     entry: "たいもう",
+    kanji: "体毛",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16556,6 +17487,7 @@ export const n2Words: Word[] = [
     entry_id: "5f0c5d0ebf1e4f51ad05f16be4dd22fe",
     origin_entry_id: "JK000000053611",
     entry: "たいよう",
+    kanji: "太陽",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16572,6 +17504,7 @@ export const n2Words: Word[] = [
     entry_id: "7442479601564699bb17138e7dee7018",
     origin_entry_id: "JK000000053618",
     entry: "たいら",
+    kanji: "平ら",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16592,6 +17525,7 @@ export const n2Words: Word[] = [
     entry_id: "c5e7cf7e1f594817a6cde5d8550b4e0e",
     origin_entry_id: "JK000000053631",
     entry: "たいりく",
+    kanji: "大陸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16608,6 +17542,7 @@ export const n2Words: Word[] = [
     entry_id: "98110eaefc044fad94f7714bf9d08366",
     origin_entry_id: "JK000000053633",
     entry: "たいりつ",
+    kanji: "対立",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16628,6 +17563,7 @@ export const n2Words: Word[] = [
     entry_id: "8cf4067a41a1443eb09a49b373f213f1",
     origin_entry_id: "JK000000053675",
     entry: "たうえ",
+    kanji: "田植(え)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16644,6 +17580,7 @@ export const n2Words: Word[] = [
     entry_id: "c4e6863a2e174f3cb17d1ebb5e1b148e",
     origin_entry_id: "JK000000053735",
     entry: "たがい",
+    kanji: "互い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16660,6 +17597,7 @@ export const n2Words: Word[] = [
     entry_id: "f0943c81888d4f67b9c76b14a56a8c4d",
     origin_entry_id: "JK000000053846",
     entry: "たき",
+    kanji: "滝",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16676,6 +17614,7 @@ export const n2Words: Word[] = [
     entry_id: "76293aefb9994c43ae2cb3dad2c938cf",
     origin_entry_id: "JK000000053912",
     entry: "たく",
+    kanji: "宅",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16720,6 +17659,7 @@ export const n2Words: Word[] = [
     entry_id: "12a24ce3525e475188c65aaedfc8d253",
     origin_entry_id: "JK000000054511",
     entry: "たちば",
+    kanji: "立場",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16736,6 +17676,7 @@ export const n2Words: Word[] = [
     entry_id: "7b61ef43d9264df69f27711b93b62523",
     origin_entry_id: "JK000000054823",
     entry: "たとえ",
+    kanji: "例え·譬え·喩え",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16756,6 +17697,7 @@ export const n2Words: Word[] = [
     entry_id: "5a6db847dce34b698124ffbf146d9fe2",
     origin_entry_id: "JK000000054873",
     entry: "たに",
+    kanji: "谷·渓·谿",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16772,6 +17714,7 @@ export const n2Words: Word[] = [
     entry_id: "1ac0d1a3ab0c4c68908ccc3a0bf33f0b",
     origin_entry_id: "JK000000054893",
     entry: "たにん",
+    kanji: "他人",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16788,6 +17731,7 @@ export const n2Words: Word[] = [
     entry_id: "16bc878efce24f2d8063ea41d515a475",
     origin_entry_id: "JK000000054974",
     entry: "たはた",
+    kanji: "田畑·田畠",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16804,6 +17748,7 @@ export const n2Words: Word[] = [
     entry_id: "dc18e4b22c4f4535a2117ad4f6366f1e",
     origin_entry_id: "JK000000054962",
     entry: "たば",
+    kanji: "束·把",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16820,6 +17765,7 @@ export const n2Words: Word[] = [
     entry_id: "a49e00c244be4352ae5a4f1a5a447552",
     origin_entry_id: "JK000000054980",
     entry: "たび",
+    kanji: "度",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16836,6 +17782,7 @@ export const n2Words: Word[] = [
     entry_id: "b53f7b0b3b024ae1b9aa6a3013b17164",
     origin_entry_id: "JK000000055128",
     entry: "たま",
+    kanji: "玉",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16856,6 +17803,7 @@ export const n2Words: Word[] = [
     entry_id: "21e367cb83494652ad8ba96369619084",
     origin_entry_id: "JK000000055259",
     entry: "ためいき",
+    kanji: "ため息·溜(め)息",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16872,6 +17820,7 @@ export const n2Words: Word[] = [
     entry_id: "3edda05d4b9443609b000317ebb6dea6",
     origin_entry_id: "JK000000055268",
     entry: "ためし",
+    kanji: "試し·験し",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16888,6 +17837,7 @@ export const n2Words: Word[] = [
     entry_id: "bc5309c61611473894826af5420c7848",
     origin_entry_id: "JK000000055325",
     entry: "たより",
+    kanji: "便り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16904,6 +17854,7 @@ export const n2Words: Word[] = [
     entry_id: "ade8b2bf2e6e4e51a67453f33ad2d1e0",
     origin_entry_id: "JK000000055495",
     entry: "たん",
+    kanji: "短",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16924,6 +17875,7 @@ export const n2Words: Word[] = [
     entry_id: "e49361af49684cdca0182823dae3161a",
     origin_entry_id: "JK000000055539",
     entry: "たんい",
+    kanji: "単位",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16940,6 +17892,7 @@ export const n2Words: Word[] = [
     entry_id: "130230d664804786aeed4d8a70489681",
     origin_entry_id: "JK000000055661",
     entry: "たんこう",
+    kanji: "炭鉱·炭礦",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16956,6 +17909,7 @@ export const n2Words: Word[] = [
     entry_id: "3807fa8a11c44d659ae82baacd711454",
     origin_entry_id: "JK000000055768",
     entry: "たんしょ",
+    kanji: "短所",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16972,6 +17926,7 @@ export const n2Words: Word[] = [
     entry_id: "f0168188bdac4847bd790c05e746ca26",
     origin_entry_id: "JK000000055766",
     entry: "たんじゅん",
+    kanji: "単純",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -16992,6 +17947,7 @@ export const n2Words: Word[] = [
     entry_id: "0524f67a66274b16a035515ebfa20021",
     origin_entry_id: "JK000000055816",
     entry: "たんす",
+    kanji: "簞笥·箪笥",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17008,6 +17964,7 @@ export const n2Words: Word[] = [
     entry_id: "bc979e3c03f94e808e8ec61f6904522d",
     origin_entry_id: "JK000000055819",
     entry: "たんすい",
+    kanji: "淡水",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17024,6 +17981,7 @@ export const n2Words: Word[] = [
     entry_id: "dde1ee8de1264e0e8047293a17e2796f",
     origin_entry_id: "JK000000055822",
     entry: "たんすう",
+    kanji: "単数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17040,6 +17998,7 @@ export const n2Words: Word[] = [
     entry_id: "1dd10c5765194f52acb5348205758b4f",
     origin_entry_id: "JK000000055948",
     entry: "たんにん",
+    kanji: "担任",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17060,6 +18019,7 @@ export const n2Words: Word[] = [
     entry_id: "6735cc2287b2461386c1cf23ffa8a3d6",
     origin_entry_id: "JK000000056018",
     entry: "たんぺん",
+    kanji: "短編·短篇",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17076,6 +18036,7 @@ export const n2Words: Word[] = [
     entry_id: "d8346c202c054df5bed163beed0d131e",
     origin_entry_id: "JK000000056023",
     entry: "たんぼ",
+    kanji: "田圃·田んぼ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17112,6 +18073,7 @@ export const n2Words: Word[] = [
     entry_id: "de48caf38962450abab1059ddbb8cfbd",
     origin_entry_id: "JK000000052724",
     entry: "だいいち",
+    kanji: "第一",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17128,6 +18090,7 @@ export const n2Words: Word[] = [
     entry_id: "227a18981ad846c2a2315ee880186164",
     origin_entry_id: "JK100052724001",
     entry: "だいいちいんしょう",
+    kanji: "第一印象",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17144,6 +18107,7 @@ export const n2Words: Word[] = [
     entry_id: "6d8d0213322a459e87be591d8230073d",
     origin_entry_id: "JK100052810001",
     entry: "だいがくいん",
+    kanji: "大学院",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17160,6 +18124,7 @@ export const n2Words: Word[] = [
     entry_id: "402a01d912bf4c1f933ff2371ecc76fb",
     origin_entry_id: "JK000000052908",
     entry: "だいく",
+    kanji: "大工",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17176,6 +18141,7 @@ export const n2Words: Word[] = [
     entry_id: "833c60d0462b4b53a1385d2fa8a488ad",
     origin_entry_id: "JK000000053156",
     entry: "だいしょう",
+    kanji: "大小",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17192,6 +18158,7 @@ export const n2Words: Word[] = [
     entry_id: "a089286240e043de9165f1c9f92e76dd",
     origin_entry_id: "JK000000053201",
     entry: "だいじん",
+    kanji: "大臣",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17208,6 +18175,7 @@ export const n2Words: Word[] = [
     entry_id: "5cb91b82d0d84578bdc999cea431df17",
     origin_entry_id: "JK000000053504",
     entry: "だいぶぶん",
+    kanji: "大部分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17224,6 +18192,7 @@ export const n2Words: Word[] = [
     entry_id: "e68e2659b6034fe4a63d7a80da383be8",
     origin_entry_id: "JK000000053578",
     entry: "だいめいし",
+    kanji: "代名詞",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17240,6 +18209,7 @@ export const n2Words: Word[] = [
     entry_id: "b94045c3485f48dfb8a312cb367b62e9",
     origin_entry_id: "JK000000053704",
     entry: "だえん",
+    kanji: "楕円·橢円",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17256,6 +18226,7 @@ export const n2Words: Word[] = [
     entry_id: "40c5d7418a6241f5a1ffc66793a82aac",
     origin_entry_id: "JK000000054636",
     entry: "だっせん",
+    kanji: "脱線",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17276,6 +18247,7 @@ export const n2Words: Word[] = [
     entry_id: "92794025161a41279829e296d36c5113",
     origin_entry_id: "JK000000054817",
     entry: "だとう",
+    kanji: "妥当",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17296,6 +18268,7 @@ export const n2Words: Word[] = [
     entry_id: "9713f2e58e1640f480edb6046b38399c",
     origin_entry_id: "JK000000055516",
     entry: "だん",
+    kanji: "段",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17316,6 +18289,7 @@ export const n2Words: Word[] = [
     entry_id: "e8c9435541b74ac1b73758890fc0b480",
     origin_entry_id: "JK000000055577",
     entry: "だんかい",
+    kanji: "段階",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17332,6 +18306,7 @@ export const n2Words: Word[] = [
     entry_id: "79768cde1562441ca5aad3bb29ce2e63",
     origin_entry_id: "JK000000055770",
     entry: "だんじょ",
+    kanji: "男女",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17348,6 +18323,7 @@ export const n2Words: Word[] = [
     entry_id: "415389827b454041a7017cd45f92b339",
     origin_entry_id: "JK000000055896",
     entry: "だんち",
+    kanji: "団地",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17364,6 +18340,7 @@ export const n2Words: Word[] = [
     entry_id: "44783ebb94e947bc877d2e8e13d185c5",
     origin_entry_id: "JK000000055917",
     entry: "だんてい",
+    kanji: "断定",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17384,6 +18361,7 @@ export const n2Words: Word[] = [
     entry_id: "ac8ad54198544630856167506ecfac87",
     origin_entry_id: "JK000000056091",
     entry: "ち",
+    kanji: "地",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17400,6 +18378,7 @@ export const n2Words: Word[] = [
     entry_id: "90b429de7f1f438b9aa5c47f385e07a4",
     origin_entry_id: "JK000000056123",
     entry: "ちい",
+    kanji: "地位",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17416,6 +18395,7 @@ export const n2Words: Word[] = [
     entry_id: "cd9276f000b645868317192d2eef633e",
     origin_entry_id: "JK000000056128",
     entry: "ちいき",
+    kanji: "地域",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17432,6 +18412,7 @@ export const n2Words: Word[] = [
     entry_id: "bb5fa947767f400aae320e91a89b3a14",
     origin_entry_id: "JK000000056150",
     entry: "ちえ",
+    kanji: "知恵·智慧",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17448,6 +18429,7 @@ export const n2Words: Word[] = [
     entry_id: "afe8d84f779245b4ab2f422e0a905e95",
     origin_entry_id: "JK000000056201",
     entry: "ちかごろ",
+    kanji: "近頃",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17468,6 +18450,7 @@ export const n2Words: Word[] = [
     entry_id: "3c9c678fe4234de38cf3ead0b98ed327",
     origin_entry_id: "JK000000056292",
     entry: "ちく",
+    kanji: "地区",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17484,6 +18467,7 @@ export const n2Words: Word[] = [
     entry_id: "7856417fcec54e6a83a2fbbe4fe262a1",
     origin_entry_id: "JK000000056402",
     entry: "ちしき",
+    kanji: "知識",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17500,6 +18484,7 @@ export const n2Words: Word[] = [
     entry_id: "04920bb1a3564f0482f0ad4220d4846e",
     origin_entry_id: "JK000000056406",
     entry: "ちしつ",
+    kanji: "地質",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17516,6 +18501,7 @@ export const n2Words: Word[] = [
     entry_id: "4216df3da9714c93beb5442488edd714",
     origin_entry_id: "JK000000056399",
     entry: "ちじ",
+    kanji: "知事",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17532,6 +18518,7 @@ export const n2Words: Word[] = [
     entry_id: "82ec613c633a4bfc8a6c3b2122881d41",
     origin_entry_id: "JK000000056463",
     entry: "ちたい",
+    kanji: "地帯",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17548,6 +18535,7 @@ export const n2Words: Word[] = [
     entry_id: "e09f0daceadf4fbc9275c58c943f9d7d",
     origin_entry_id: "JK000000056566",
     entry: "ちてん",
+    kanji: "地点",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17564,6 +18552,7 @@ export const n2Words: Word[] = [
     entry_id: "cb935ecae26d4081801c6ea18e0aeb5b",
     origin_entry_id: "JK000000056599",
     entry: "ちのう",
+    kanji: "知能·智能",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17580,6 +18569,7 @@ export const n2Words: Word[] = [
     entry_id: "603dca82a78e429ea78ed67c624886f7",
     origin_entry_id: "JK100056654003",
     entry: "ちへいせん",
+    kanji: "地平線",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17596,6 +18586,7 @@ export const n2Words: Word[] = [
     entry_id: "896e2919c2394638b410f042410a367e",
     origin_entry_id: "JK000000056708",
     entry: "ちゃ",
+    kanji: "茶",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17612,6 +18603,7 @@ export const n2Words: Word[] = [
     entry_id: "2b43343feff4436597f8145b13da570f",
     origin_entry_id: "JK000000056966",
     entry: "ちゅう",
+    kanji: "注·註",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17628,6 +18620,7 @@ export const n2Words: Word[] = [
     entry_id: "7d6691eb68e940858191f5217aadef78",
     origin_entry_id: "JK000000057111",
     entry: "ちゅうしょう",
+    kanji: "抽象",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17648,6 +18641,7 @@ export const n2Words: Word[] = [
     entry_id: "e6fc84aad1944b63a156ae08ace6d80f",
     origin_entry_id: "JK000000057134",
     entry: "ちゅうせい",
+    kanji: "中性",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17664,6 +18658,7 @@ export const n2Words: Word[] = [
     entry_id: "c241f2189f564375936802068a6c0c93",
     origin_entry_id: "JK000000057185",
     entry: "ちゅうと",
+    kanji: "中途",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17680,6 +18675,7 @@ export const n2Words: Word[] = [
     entry_id: "dcbb6f9adf8048dfa395c9b36e9b3c94",
     origin_entry_id: "JK000000057268",
     entry: "ちゅうりつ",
+    kanji: "中立",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17700,6 +18696,7 @@ export const n2Words: Word[] = [
     entry_id: "6fe78dfd705744f991e8befd1f020f46",
     origin_entry_id: "JK000000057308",
     entry: "ちょう",
+    kanji: "兆",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17720,6 +18717,7 @@ export const n2Words: Word[] = [
     entry_id: "301984b70b6a4839a41912cd2e582e05",
     origin_entry_id: "JK000000057418",
     entry: "ちょうかん",
+    kanji: "長官",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17736,6 +18734,7 @@ export const n2Words: Word[] = [
     entry_id: "795818922dff4ec582b21bff087b5f6d",
     origin_entry_id: "JK000000057427",
     entry: "ちょうき",
+    kanji: "長期",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17752,6 +18751,7 @@ export const n2Words: Word[] = [
     entry_id: "44864a935ee244bd97c14e6eb6b73c1d",
     origin_entry_id: "JK000000057492",
     entry: "ちょうこく",
+    kanji: "彫刻",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17772,6 +18772,7 @@ export const n2Words: Word[] = [
     entry_id: "98153cda3b6a47bba05998233b2695b5",
     origin_entry_id: "JK000000057526",
     entry: "ちょうじかん",
+    kanji: "長時間",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17788,6 +18789,7 @@ export const n2Words: Word[] = [
     entry_id: "3d83a9451041428fabe1b8600979362c",
     origin_entry_id: "JK000000057566",
     entry: "ちょうじょう",
+    kanji: "頂上",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17804,6 +18806,7 @@ export const n2Words: Word[] = [
     entry_id: "cded33d2d85747adb16da9f34293f68e",
     origin_entry_id: "JK000000057615",
     entry: "ちょうせつ",
+    kanji: "調節",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17824,6 +18827,7 @@ export const n2Words: Word[] = [
     entry_id: "8d4ed35b947a472486ef73b01f0ad5cf",
     origin_entry_id: "JK000000057650",
     entry: "ちょうたん",
+    kanji: "長短",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17840,6 +18844,7 @@ export const n2Words: Word[] = [
     entry_id: "075c563380f7406da18f1e3a88e86b8c",
     origin_entry_id: "JK000000057641",
     entry: "ちょうだい",
+    kanji: "頂戴",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17860,6 +18865,7 @@ export const n2Words: Word[] = [
     entry_id: "5913a8349e314058b7feb192e80f9c6a",
     origin_entry_id: "JK000000057679",
     entry: "ちょうてん",
+    kanji: "頂点",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17876,6 +18882,7 @@ export const n2Words: Word[] = [
     entry_id: "47e2335f7cc6445097e81baf7e1daa59",
     origin_entry_id: "JK000000057753",
     entry: "ちょうほうけい",
+    kanji: "長方形",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17892,6 +18899,7 @@ export const n2Words: Word[] = [
     entry_id: "cb2d07c69c834da4bc59a8e5fe70e889",
     origin_entry_id: "JK000000057795",
     entry: "ちょうり",
+    kanji: "調理",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17912,6 +18920,7 @@ export const n2Words: Word[] = [
     entry_id: "04a59bb1cd2b4c668e6900e7b0077917",
     origin_entry_id: "JK000000057899",
     entry: "ちょくりゅう",
+    kanji: "直流",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17932,6 +18941,7 @@ export const n2Words: Word[] = [
     entry_id: "9d2f177f4ce941d2b715e22639fbc823",
     origin_entry_id: "JK000000057917",
     entry: "ちょしゃ",
+    kanji: "著者",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17948,6 +18958,7 @@ export const n2Words: Word[] = [
     entry_id: "b54d0ebf7f564eddaa9193332c77e76f",
     origin_entry_id: "JK000000057919",
     entry: "ちょしょ",
+    kanji: "著書",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17964,6 +18975,7 @@ export const n2Words: Word[] = [
     entry_id: "669af8680c184204abfac153e1d4af50",
     origin_entry_id: "JK000000057924",
     entry: "ちょぞう",
+    kanji: "貯蔵",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -17984,6 +18996,7 @@ export const n2Words: Word[] = [
     entry_id: "21625327784a40d79241f3961f6bc93e",
     origin_entry_id: "JK000000057931",
     entry: "ちょっかく",
+    kanji: "直角",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18000,6 +19013,7 @@ export const n2Words: Word[] = [
     entry_id: "2751b9f9804a4712832414a69abf0df2",
     origin_entry_id: "JK000000057944",
     entry: "ちょっけい",
+    kanji: "直径",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18016,6 +19030,7 @@ export const n2Words: Word[] = [
     entry_id: "8ead4ea9ff48417a8eb0cd4d0b0d50b7",
     origin_entry_id: "JK000000058025",
     entry: "ちりがみ",
+    kanji: "ちり紙·塵紙",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18032,6 +19047,7 @@ export const n2Words: Word[] = [
     entry_id: "c4c3c09acb8e4074bf51ff69f37ca5cc",
     origin_entry_id: "JK000000058047",
     entry: "ちりょう",
+    kanji: "治療",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18052,6 +19068,7 @@ export const n2Words: Word[] = [
     entry_id: "c248ff3e5f8e4f65ad86d06899cbc0bd",
     origin_entry_id: "JK000000058243",
     entry: "ついか",
+    kanji: "追加",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18072,6 +19089,7 @@ export const n2Words: Word[] = [
     entry_id: "e89f94272a93474db93cb0c6f9a9681e",
     origin_entry_id: "JK000000058329",
     entry: "つう",
+    kanji: "通",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18096,6 +19114,7 @@ export const n2Words: Word[] = [
     entry_id: "36ffd4a7cc074a39a0993ad59484f29c",
     origin_entry_id: "JK000000058339",
     entry: "つうか",
+    kanji: "通貨",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18112,6 +19131,7 @@ export const n2Words: Word[] = [
     entry_id: "a7c38381347f4743b4349f064087a1de",
     origin_entry_id: "JK000000058346",
     entry: "つうがく",
+    kanji: "通学",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18132,6 +19152,7 @@ export const n2Words: Word[] = [
     entry_id: "1a947fa2cef44c0d85df383f68c0e8b1",
     origin_entry_id: "JK000000058403",
     entry: "つうたつ",
+    kanji: "通達",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18152,6 +19173,7 @@ export const n2Words: Word[] = [
     entry_id: "d2f42bc5be9e409cb3878da9137cdfcf",
     origin_entry_id: "JK000000058405",
     entry: "つうち",
+    kanji: "通知",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18172,6 +19194,7 @@ export const n2Words: Word[] = [
     entry_id: "711c57db2422419f9039370b555ed4d6",
     origin_entry_id: "JK000000058446",
     entry: "つうよう",
+    kanji: "通用",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18192,6 +19215,7 @@ export const n2Words: Word[] = [
     entry_id: "8c2375da58cb420f8bcb34a963f26dd1",
     origin_entry_id: "JK000000058454",
     entry: "つうろ",
+    kanji: "通路",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18208,6 +19232,7 @@ export const n2Words: Word[] = [
     entry_id: "ac1643bf4caf4dfb870429c83d60f37f",
     origin_entry_id: "JK000000058480",
     entry: "つかいすて",
+    kanji: "使い捨て",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18224,6 +19249,7 @@ export const n2Words: Word[] = [
     entry_id: "8e45c0adfa4742979cc55bfed34c42f2",
     origin_entry_id: "JK000000058556",
     entry: "つかれ",
+    kanji: "疲れ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18256,6 +19282,7 @@ export const n2Words: Word[] = [
     entry_id: "52ef87605a0e44b3bb89b6e8b81e5e52",
     origin_entry_id: "JK000000058576",
     entry: "つきあい",
+    kanji: "付(き)合い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18272,6 +19299,7 @@ export const n2Words: Word[] = [
     entry_id: "6bb5a5536b68496cbf8b4b26ddb3a72e",
     origin_entry_id: "JK000000058584",
     entry: "つきあたり",
+    kanji: "突き当(た)り·突当り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18288,6 +19316,7 @@ export const n2Words: Word[] = [
     entry_id: "5d027faa7a7642d2af80f6b224ea5269",
     origin_entry_id: "JK000000059020",
     entry: "つづき",
+    kanji: "続き",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18304,6 +19333,7 @@ export const n2Words: Word[] = [
     entry_id: "8b135069d9b9437e93e1daf7cff66c14",
     origin_entry_id: "JK000000059113",
     entry: "つとめ",
+    kanji: "勤め·務め",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18320,6 +19350,7 @@ export const n2Words: Word[] = [
     entry_id: "afbfa539a2df4d58997f9e055f9ec1ce",
     origin_entry_id: "JK000000059125",
     entry: "つな",
+    kanji: "綱",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18336,6 +19367,7 @@ export const n2Words: Word[] = [
     entry_id: "9b28c2cf53004d9d974b54fb98fef7e6",
     origin_entry_id: "JK000000059127",
     entry: "つながり",
+    kanji: "繫がり",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18352,6 +19384,7 @@ export const n2Words: Word[] = [
     entry_id: "53ed9b0c8a3f4d78b0314053dff8c2a8",
     origin_entry_id: "JK000000059171",
     entry: "つば",
+    kanji: "唾",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18368,6 +19401,7 @@ export const n2Words: Word[] = [
     entry_id: "6c3b042ff5a44f00b7f2d6f19c0031b5",
     origin_entry_id: "JK000000059183",
     entry: "つばさ",
+    kanji: "翼",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18384,6 +19418,7 @@ export const n2Words: Word[] = [
     entry_id: "9c19fcdbfde948159fb649701581b4e1",
     origin_entry_id: "JK000000059192",
     entry: "つぶ",
+    kanji: "粒",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18400,6 +19435,7 @@ export const n2Words: Word[] = [
     entry_id: "d41aebad8b83457a98d99b1a2aad865a",
     origin_entry_id: "JK000000059303",
     entry: "つまり",
+    kanji: "詰(ま)り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18416,6 +19452,7 @@ export const n2Words: Word[] = [
     entry_id: "5a7aa87479ce4e8cb7f9b21c2beb30c5",
     origin_entry_id: "JK000000059309",
     entry: "つみ",
+    kanji: "罪",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18436,6 +19473,7 @@ export const n2Words: Word[] = [
     entry_id: "0dd6923d9d304c999640b6e4f0a27f47",
     origin_entry_id: "JK000000100183",
     entry: "つみかさね",
+    kanji: "積み重ね",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -18452,6 +19490,7 @@ export const n2Words: Word[] = [
     entry_id: "27764672ca7e4a9188a779815b4373f0",
     origin_entry_id: "JK000000059408",
     entry: "つや",
+    kanji: "艶",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18468,6 +19507,7 @@ export const n2Words: Word[] = [
     entry_id: "1b5532a811fb40819370854a913effb9",
     origin_entry_id: "JK000000059457",
     entry: "つよき",
+    kanji: "強気",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18484,6 +19524,7 @@ export const n2Words: Word[] = [
     entry_id: "a21ce28a58de46589fbd22a2d41a5ace",
     origin_entry_id: "JK000000059466",
     entry: "つよみ",
+    kanji: "強み·強味",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18500,6 +19541,7 @@ export const n2Words: Word[] = [
     entry_id: "0b7d9eb7e511457bbc0e9fefa3ca966f",
     origin_entry_id: "JK000000059498",
     entry: "つり",
+    kanji: "釣(り)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18516,6 +19558,7 @@ export const n2Words: Word[] = [
     entry_id: "99750c2ce4934e7b808a27f84a5f3a7e",
     origin_entry_id: "JK000000059612",
     entry: "つれ",
+    kanji: "連れ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18532,6 +19575,7 @@ export const n2Words: Word[] = [
     entry_id: "251b396f26454272a95d94124dbba62f",
     origin_entry_id: "JK000000059686",
     entry: "てあらい",
+    kanji: "手洗(い)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18548,6 +19592,7 @@ export const n2Words: Word[] = [
     entry_id: "73768f7a6edf4894800defcec33792cc",
     origin_entry_id: "JK000000059801",
     entry: "ていか",
+    kanji: "定価",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18564,6 +19609,7 @@ export const n2Words: Word[] = [
     entry_id: "deef9ff970fc4d74987262ff986e3a5a",
     origin_entry_id: "JK000000100190",
     entry: "ていきゅうび",
+    kanji: "定休日",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -18580,6 +19626,7 @@ export const n2Words: Word[] = [
     entry_id: "c89fe288a58a4b7b97854ca625293e6c",
     origin_entry_id: "JK000000059868",
     entry: "ていこう",
+    kanji: "抵抗",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18600,6 +19647,7 @@ export const n2Words: Word[] = [
     entry_id: "db8387ea9fd34effaa2a7a3239b21570",
     origin_entry_id: "JK000000059880",
     entry: "ていし",
+    kanji: "停止",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18620,6 +19668,7 @@ export const n2Words: Word[] = [
     entry_id: "062ca7938abf4c2cb9e0fd26545a30fe",
     origin_entry_id: "JK000000060025",
     entry: "ていど",
+    kanji: "程度",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18636,6 +19685,7 @@ export const n2Words: Word[] = [
     entry_id: "887da75c1f3e4cadb0dab63dc312f8e5",
     origin_entry_id: "JK100060097001",
     entry: "ていりゅうじょ",
+    kanji: "停留所",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18652,6 +19702,7 @@ export const n2Words: Word[] = [
     entry_id: "c4db3c18276f4749b5fd505fb91d45cd",
     origin_entry_id: "JK000000060103",
     entry: "ていれ",
+    kanji: "手入れ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18672,6 +19723,7 @@ export const n2Words: Word[] = [
     entry_id: "9a42424c3de24454b5afaf2a1fa4a46c",
     origin_entry_id: "JK000000060176",
     entry: "てがき",
+    kanji: "手書き·手描",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18692,6 +19744,7 @@ export const n2Words: Word[] = [
     entry_id: "7c498f20b139451c9249598c776b5c32",
     origin_entry_id: "JK000000060207",
     entry: "てき",
+    kanji: "敵",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18708,6 +19761,7 @@ export const n2Words: Word[] = [
     entry_id: "354452825ca24fa2b1f44bdb46b52e90",
     origin_entry_id: "JK000000060300",
     entry: "てきせつ",
+    kanji: "適切",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18728,6 +19782,7 @@ export const n2Words: Word[] = [
     entry_id: "16f6daeef84f4538829e5166904035d7",
     origin_entry_id: "JK000000060354",
     entry: "てきよう",
+    kanji: "適用",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18748,6 +19803,7 @@ export const n2Words: Word[] = [
     entry_id: "d284b4f98a2e4b8e8375f420ee487f2c",
     origin_entry_id: "JK000000060576",
     entry: "てちょう",
+    kanji: "手帳·手帖",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18764,6 +19820,7 @@ export const n2Words: Word[] = [
     entry_id: "4889f005e0ec426ebefc1a0f44a5a76a",
     origin_entry_id: "JK000000060629",
     entry: "てっきょう",
+    kanji: "鉄橋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18780,6 +19837,7 @@ export const n2Words: Word[] = [
     entry_id: "2fbac1ad38a844ba872340376be46206",
     origin_entry_id: "JK000000060711",
     entry: "てってい",
+    kanji: "徹底",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18800,6 +19858,7 @@ export const n2Words: Word[] = [
     entry_id: "755567c92eb54ad8a4ffcc3a6378685a",
     origin_entry_id: "JK000000060747",
     entry: "てっぽう",
+    kanji: "鉄砲·鉄炮",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18816,6 +19875,7 @@ export const n2Words: Word[] = [
     entry_id: "a50225d6118947f1b22002469e7ebee7",
     origin_entry_id: "JK000000060579",
     entry: "てつ",
+    kanji: "鉄",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18832,6 +19892,7 @@ export const n2Words: Word[] = [
     entry_id: "9135b73b45d84ddc9283515eaedc649d",
     origin_entry_id: "JK000000060606",
     entry: "てつがく",
+    kanji: "哲学",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18848,6 +19909,7 @@ export const n2Words: Word[] = [
     entry_id: "de7397e44f7e421a953b4c686183832c",
     origin_entry_id: "JK000000060707",
     entry: "てつづき",
+    kanji: "手続(き)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18864,6 +19926,7 @@ export const n2Words: Word[] = [
     entry_id: "5879c3bb3a304cdea1b6da83a25f3c19",
     origin_entry_id: "JK000000060760",
     entry: "てつや",
+    kanji: "徹夜",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18884,6 +19947,7 @@ export const n2Words: Word[] = [
     entry_id: "9bd2d633880c4e68809ba5fa8c6bc399",
     origin_entry_id: "JK000000060640",
     entry: "てづくり",
+    kanji: "手作り·手造り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18900,6 +19964,7 @@ export const n2Words: Word[] = [
     entry_id: "cc23ca00ad4e487b985616d81f7d4e66",
     origin_entry_id: "JK000000060827",
     entry: "てぬぐい",
+    kanji: "手ぬぐい·手拭(い)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18916,6 +19981,7 @@ export const n2Words: Word[] = [
     entry_id: "b8dc8f7d4ade47b28e982e38c725a7d6",
     origin_entry_id: "JK000000060948",
     entry: "てま",
+    kanji: "手間",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18932,6 +19998,7 @@ export const n2Words: Word[] = [
     entry_id: "fe919ad08d304a2bbc1f2133e9a83fb1",
     origin_entry_id: "JK000000061215",
     entry: "てんか",
+    kanji: "添加",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18952,6 +20019,7 @@ export const n2Words: Word[] = [
     entry_id: "466700ef355346e6ab9d9213909dc16f",
     origin_entry_id: "JK000000061230",
     entry: "てんかい",
+    kanji: "展開",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18972,6 +20040,7 @@ export const n2Words: Word[] = [
     entry_id: "e25ec6399c644dd48f91c6ca8bcc8d06",
     origin_entry_id: "JK000000061294",
     entry: "てんけい",
+    kanji: "典型",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -18988,6 +20057,7 @@ export const n2Words: Word[] = [
     entry_id: "6f7d6e57a4354ef4af8f2ffd62606c4e",
     origin_entry_id: "JK000000061315",
     entry: "てんこう",
+    kanji: "天候",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19004,6 +20074,7 @@ export const n2Words: Word[] = [
     entry_id: "6500dcd41bdb4a67ad8d67c84b6bdb88",
     origin_entry_id: "JK000000061419",
     entry: "てんしょく",
+    kanji: "天職",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19020,6 +20091,7 @@ export const n2Words: Word[] = [
     entry_id: "fde5924ec1b747cd8501ca0d79dc9858",
     origin_entry_id: "JK000000061405",
     entry: "てんじょう",
+    kanji: "天井",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19036,6 +20108,7 @@ export const n2Words: Word[] = [
     entry_id: "61b71a51cf214dcd8d9022e25d7ceb5d",
     origin_entry_id: "JK000000061444",
     entry: "てんすう",
+    kanji: "点数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19052,6 +20125,7 @@ export const n2Words: Word[] = [
     entry_id: "dff1f31095394c1093d9b824912ed147",
     origin_entry_id: "JK000000061528",
     entry: "てんちょう",
+    kanji: "店長",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19068,6 +20142,7 @@ export const n2Words: Word[] = [
     entry_id: "dcadaecac9bd4bb9911c243336338cb9",
     origin_entry_id: "JK000000061550",
     entry: "てんてん",
+    kanji: "点点",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19092,6 +20167,7 @@ export const n2Words: Word[] = [
     entry_id: "5173e53906d3418ea864997d2350d21d",
     origin_entry_id: "JK000000061590",
     entry: "てんない",
+    kanji: "店内",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19108,6 +20184,7 @@ export const n2Words: Word[] = [
     entry_id: "722e59ddfce94662b0ea7d3d694b3e6d",
     origin_entry_id: "JK000000061599",
     entry: "てんねん",
+    kanji: "天然",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19124,6 +20201,7 @@ export const n2Words: Word[] = [
     entry_id: "b7810ac48ce14905933af89786937ed5",
     origin_entry_id: "JK000000061602",
     entry: "てんのう",
+    kanji: "天皇",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19140,6 +20218,7 @@ export const n2Words: Word[] = [
     entry_id: "139520ff490343e997fb300b015b003c",
     origin_entry_id: "JK000000061636",
     entry: "てんぷ",
+    kanji: "添付",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19160,6 +20239,7 @@ export const n2Words: Word[] = [
     entry_id: "6d095b946a5d42a8aab3c5d0e2c304ca",
     origin_entry_id: "JK000000060226",
     entry: "できあがり",
+    kanji: "出来上(が)り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19176,6 +20256,7 @@ export const n2Words: Word[] = [
     entry_id: "3c4aedf8abc94b82af1b1b8235e5043c",
     origin_entry_id: "JK000000060441",
     entry: "でこぼこ",
+    kanji: "凸凹",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19196,6 +20277,7 @@ export const n2Words: Word[] = [
     entry_id: "04e456f7b7bd4c9fa202a61b9b354661",
     origin_entry_id: "JK000000060473",
     entry: "でし",
+    kanji: "弟子",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19212,6 +20294,7 @@ export const n2Words: Word[] = [
     entry_id: "9ac74e01067548c4833ce84afce0d4bb",
     origin_entry_id: "JK000000060568",
     entry: "でたらめ",
+    kanji: "出鱈目",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19232,6 +20315,7 @@ export const n2Words: Word[] = [
     entry_id: "05031c9ad272449ab86db5aa1327105a",
     origin_entry_id: "JK000000060989",
     entry: "でむかえ",
+    kanji: "出迎え",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19248,6 +20332,7 @@ export const n2Words: Word[] = [
     entry_id: "ba776904aefb4d83b775578379e54478",
     origin_entry_id: "JK000000061263",
     entry: "でんき",
+    kanji: "伝記",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19264,6 +20349,7 @@ export const n2Words: Word[] = [
     entry_id: "c1b7078da80943839717f6d0e7933742",
     origin_entry_id: "JK000000061360",
     entry: "でんし",
+    kanji: "電子",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19280,6 +20366,7 @@ export const n2Words: Word[] = [
     entry_id: "52d09458e0184087b9283d222044312a",
     origin_entry_id: "JK000000061504",
     entry: "でんたく",
+    kanji: "電卓",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19296,6 +20383,7 @@ export const n2Words: Word[] = [
     entry_id: "c026fb80f3fa47afa8b633b03e30c802",
     origin_entry_id: "JK000000061514",
     entry: "でんち",
+    kanji: "電池",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19312,6 +20400,7 @@ export const n2Words: Word[] = [
     entry_id: "7259ab83776448c298fd1aefb1fe3794",
     origin_entry_id: "JK000000061573",
     entry: "でんとう",
+    kanji: "伝統",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19328,6 +20417,7 @@ export const n2Words: Word[] = [
     entry_id: "0c4b2955ab21434ba7623536565d6e1c",
     origin_entry_id: "JK000000061608",
     entry: "でんぱ",
+    kanji: "電波",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19344,6 +20434,7 @@ export const n2Words: Word[] = [
     entry_id: "b490067ba5cc4c9db48d900da530a1dc",
     origin_entry_id: "JK000000061713",
     entry: "でんりゅう",
+    kanji: "電流",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19360,6 +20451,7 @@ export const n2Words: Word[] = [
     entry_id: "2bda989fa8424557979d6cdd2043f572",
     origin_entry_id: "JK000000061716",
     entry: "でんりょく",
+    kanji: "電力",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19376,6 +20468,7 @@ export const n2Words: Word[] = [
     entry_id: "b0ac72b1f25441f0ba6c3650f016e3c0",
     origin_entry_id: "JK000000061768",
     entry: "とい",
+    kanji: "問(い)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19392,6 +20485,7 @@ export const n2Words: Word[] = [
     entry_id: "42384041feda472fbbce63cea6dc8eef",
     origin_entry_id: "JK000000061809",
     entry: "とう",
+    kanji: "党",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19412,6 +20506,7 @@ export const n2Words: Word[] = [
     entry_id: "ee8affa1e4fd47958864e8fadbcb1453",
     origin_entry_id: "JK000000061904",
     entry: "とういつ",
+    kanji: "統一",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19432,6 +20527,7 @@ export const n2Words: Word[] = [
     entry_id: "3b22bb85886c438688873d793538b971",
     origin_entry_id: "JK000000062079",
     entry: "とうげ",
+    kanji: "峠",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19448,6 +20544,7 @@ export const n2Words: Word[] = [
     entry_id: "3e88e573d2e74cf292e794faf8d661ee",
     origin_entry_id: "JK000000062176",
     entry: "とうざい",
+    kanji: "東西",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19464,6 +20561,7 @@ export const n2Words: Word[] = [
     entry_id: "daa31aa19c994f8e9bd3aca736ff8a01",
     origin_entry_id: "JK000000062286",
     entry: "とうしょ",
+    kanji: "投書",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19484,6 +20582,7 @@ export const n2Words: Word[] = [
     entry_id: "2423a0bcac56435b85c38e5e6d46ed0a",
     origin_entry_id: "JK000000062215",
     entry: "とうじ",
+    kanji: "当時",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19500,6 +20599,7 @@ export const n2Words: Word[] = [
     entry_id: "c6d550cea902474aaa0d23dad6b206db",
     origin_entry_id: "JK000000062247",
     entry: "とうじつ",
+    kanji: "当日",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19516,6 +20616,7 @@ export const n2Words: Word[] = [
     entry_id: "0802f8e765fd4789af97e2fb3c99b9e1",
     origin_entry_id: "JK000000062566",
     entry: "とうなん",
+    kanji: "盗難",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19532,6 +20633,7 @@ export const n2Words: Word[] = [
     entry_id: "e4e45c03f00b4c1ab816a405d9389572",
     origin_entry_id: "JK000000062618",
     entry: "とうばん",
+    kanji: "当番",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19548,6 +20650,7 @@ export const n2Words: Word[] = [
     entry_id: "e481291dbaff46b6bf61784c13f8d39f",
     origin_entry_id: "JK000000062636",
     entry: "とうひょう",
+    kanji: "投票",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19568,6 +20671,7 @@ export const n2Words: Word[] = [
     entry_id: "15ac1f11cd3a46fbb7d22f05204e1027",
     origin_entry_id: "JK000000062665",
     entry: "とうぶん",
+    kanji: "当分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19592,6 +20696,7 @@ export const n2Words: Word[] = [
     entry_id: "ab241f56cfad43b88702a136a89525bf",
     origin_entry_id: "JK000000062721",
     entry: "とうめい",
+    kanji: "透明",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19608,6 +20713,7 @@ export const n2Words: Word[] = [
     entry_id: "b3df8083f3bb490cae266d89cc1a5c20",
     origin_entry_id: "JK000000062750",
     entry: "とうゆ",
+    kanji: "灯油·燈油",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19624,6 +20730,7 @@ export const n2Words: Word[] = [
     entry_id: "cca6cd9b73a24b6c9b5da4b84fe9f429",
     origin_entry_id: "JK000000062818",
     entry: "とうろく",
+    kanji: "登録",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19644,6 +20751,7 @@ export const n2Words: Word[] = [
     entry_id: "0a7e87e97cf34e93b6b412fc5374b5bd",
     origin_entry_id: "JK000000062819",
     entry: "とうろん",
+    kanji: "討論",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19664,6 +20772,7 @@ export const n2Words: Word[] = [
     entry_id: "e36fcbcd70dc4f89a1543f59ded9d176",
     origin_entry_id: "JK000000062936",
     entry: "とかい",
+    kanji: "都会",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19680,6 +20789,7 @@ export const n2Words: Word[] = [
     entry_id: "8eb5dddc1fe14961aeecdb371648e6ca",
     origin_entry_id: "JK000000063169",
     entry: "とくしゅ",
+    kanji: "特殊",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19700,6 +20810,7 @@ export const n2Words: Word[] = [
     entry_id: "b5a2612844b5479b9ec3d1f636aed01d",
     origin_entry_id: "JK000000063206",
     entry: "とくせい",
+    kanji: "特性",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19716,6 +20827,7 @@ export const n2Words: Word[] = [
     entry_id: "0fc31e2361fd4b43a46ff3c63c93adc2",
     origin_entry_id: "JK000000063254",
     entry: "とくちょう",
+    kanji: "特徴",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19732,6 +20844,7 @@ export const n2Words: Word[] = [
     entry_id: "636d76f79ff240ac94afc00be7a997c2",
     origin_entry_id: "JK000000063257",
     entry: "とくてい",
+    kanji: "特定",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19752,6 +20865,7 @@ export const n2Words: Word[] = [
     entry_id: "f255c2b6171048f39009506cff2cad38",
     origin_entry_id: "JK000000063423",
     entry: "ところ",
+    kanji: "野老",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19768,6 +20882,7 @@ export const n2Words: Word[] = [
     entry_id: "659fb76e33234a9990df9619f0bbcc17",
     origin_entry_id: "JK000000063437",
     entry: "ところどころ",
+    kanji: "所所",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19784,6 +20899,7 @@ export const n2Words: Word[] = [
     entry_id: "9b638e7c54f7464382e5fff7484111d1",
     origin_entry_id: "JK000000063521",
     entry: "としつき",
+    kanji: "年月·歳月",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19800,6 +20916,7 @@ export const n2Words: Word[] = [
     entry_id: "1cc03af9edfe4f3b9615da76091b8c2d",
     origin_entry_id: "JK000000063569",
     entry: "としょ",
+    kanji: "図書",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19816,6 +20933,7 @@ export const n2Words: Word[] = [
     entry_id: "87b8642fef9d4973a27364bbf2f1e952",
     origin_entry_id: "JK000000063606",
     entry: "としん",
+    kanji: "都心",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19832,6 +20950,7 @@ export const n2Words: Word[] = [
     entry_id: "17a24519708d48acb2778f9eac566d96",
     origin_entry_id: "JK000000063668",
     entry: "とたん",
+    kanji: "途端",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19848,6 +20967,7 @@ export const n2Words: Word[] = [
     entry_id: "f0cc65c0bb424a41a621b8a70dff3f8c",
     origin_entry_id: "JK000000063663",
     entry: "とだな",
+    kanji: "戸棚",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19884,6 +21004,7 @@ export const n2Words: Word[] = [
     entry_id: "dcd564c4208948d49a8f400de425f100",
     origin_entry_id: "JK000000061905",
     entry: "どういつ",
+    kanji: "同一",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19900,6 +21021,7 @@ export const n2Words: Word[] = [
     entry_id: "eef474f3c6114a4ba5f409ed9d9986fa",
     origin_entry_id: "JK000000061982",
     entry: "どうかく",
+    kanji: "同格",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19916,6 +21038,7 @@ export const n2Words: Word[] = [
     entry_id: "ab30081324c74503997b7784dbc04cc1",
     origin_entry_id: "JK000000062167",
     entry: "どうさ",
+    kanji: "動作",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19932,6 +21055,7 @@ export const n2Words: Word[] = [
     entry_id: "95e6addf8e03463292b81c5910d964a3",
     origin_entry_id: "JK000000062229",
     entry: "どうし",
+    kanji: "動詞",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19948,6 +21072,7 @@ export const n2Words: Word[] = [
     entry_id: "6a6b327f7fba498bb6e1592a56bc4e50",
     origin_entry_id: "JK000000062237",
     entry: "どうじ",
+    kanji: "同時",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19964,6 +21089,7 @@ export const n2Words: Word[] = [
     entry_id: "8cf9042f3b8c4069abdb0d3f3341c249",
     origin_entry_id: "JK000000062550",
     entry: "どうとく",
+    kanji: "道徳",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -19980,6 +21106,7 @@ export const n2Words: Word[] = [
     entry_id: "83e285722dcd4c1882697e709ef2d946",
     origin_entry_id: "JK000000062766",
     entry: "どうよう",
+    kanji: "同様",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20000,6 +21127,7 @@ export const n2Words: Word[] = [
     entry_id: "24f473a7416f4cc0a6bf1e7ccea6791f",
     origin_entry_id: "JK000000062799",
     entry: "どうりょう",
+    kanji: "同僚",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20016,6 +21144,7 @@ export const n2Words: Word[] = [
     entry_id: "cc9accfcb0374b438e328c764e0b9cc2",
     origin_entry_id: "JK000000062820",
     entry: "どうわ",
+    kanji: "童話",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20032,6 +21161,7 @@ export const n2Words: Word[] = [
     entry_id: "5082cf94abe249d5bc82350e202c01ab",
     origin_entry_id: "JK000000064281",
     entry: "どよう",
+    kanji: "土曜",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20048,6 +21178,7 @@ export const n2Words: Word[] = [
     entry_id: "d36e19c8bf3d4f139b6e0691b386207f",
     origin_entry_id: "JK000000064892",
     entry: "どんぶり",
+    kanji: "丼",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20064,6 +21195,7 @@ export const n2Words: Word[] = [
     entry_id: "9f476a0ebb03459da0afc524c1ea6cdf",
     origin_entry_id: "JK000000065320",
     entry: "なかば",
+    kanji: "半ば",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20080,6 +21212,7 @@ export const n2Words: Word[] = [
     entry_id: "48b36f78aada482a8053f3704af26ec1",
     origin_entry_id: "JK000000065336",
     entry: "なかま",
+    kanji: "仲間",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20096,6 +21229,7 @@ export const n2Words: Word[] = [
     entry_id: "d4898b18c9e348c2843fa0979bbb70fe",
     origin_entry_id: "JK000000065340",
     entry: "なかみ",
+    kanji: "中身·中味",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20112,6 +21246,7 @@ export const n2Words: Word[] = [
     entry_id: "1eeca3ab499d41cc8f774285021e5217",
     origin_entry_id: "JK000000065178",
     entry: "ながいき",
+    kanji: "長生き",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20132,6 +21267,7 @@ export const n2Words: Word[] = [
     entry_id: "4838710054c846419c59b58a9ba26e1f",
     origin_entry_id: "JK000000065313",
     entry: "ながねん",
+    kanji: "長年·永年",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20148,6 +21284,7 @@ export const n2Words: Word[] = [
     entry_id: "0bf894a66fd444c1b6e31428768e8c7b",
     origin_entry_id: "JK000000065352",
     entry: "ながめ",
+    kanji: "眺め",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20164,6 +21301,7 @@ export const n2Words: Word[] = [
     entry_id: "d8e78efcf3f64f0381eda65f596e2f86",
     origin_entry_id: "JK000000065386",
     entry: "ながれ",
+    kanji: "流れ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20180,6 +21318,7 @@ export const n2Words: Word[] = [
     entry_id: "25562d1bf63a48f6b49be767cbf88aeb",
     origin_entry_id: "JK000000065611",
     entry: "なし",
+    kanji: "無し",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20196,6 +21335,7 @@ export const n2Words: Word[] = [
     entry_id: "77d8cf73a8544e34b777e4eb9d720bba",
     origin_entry_id: "JK000000065652",
     entry: "なぞ",
+    kanji: "謎",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20212,6 +21352,7 @@ export const n2Words: Word[] = [
     entry_id: "a340f441f2d3484e89008f2490e2f923",
     origin_entry_id: "JK000000065658",
     entry: "なぞなぞ",
+    kanji: "謎謎",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20228,6 +21369,7 @@ export const n2Words: Word[] = [
     entry_id: "f1583eb853934431a7e3f3601b20faca",
     origin_entry_id: "JK000000065733",
     entry: "なっとく",
+    kanji: "納得",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20248,6 +21390,7 @@ export const n2Words: Word[] = [
     entry_id: "164d44d9648c4c94bb2b5b8155463718",
     origin_entry_id: "JK000000065853",
     entry: "なにぶん",
+    kanji: "何分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20268,6 +21411,7 @@ export const n2Words: Word[] = [
     entry_id: "da41a83ce0be45a3bd182e7695079974",
     origin_entry_id: "JK000000065899",
     entry: "なべ",
+    kanji: "鍋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20284,6 +21428,7 @@ export const n2Words: Word[] = [
     entry_id: "3c65784fa5f1449ab38032f04e3e9a94",
     origin_entry_id: "JK000000065926",
     entry: "なまいき",
+    kanji: "生意気",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20304,6 +21449,7 @@ export const n2Words: Word[] = [
     entry_id: "6fb3545f606e49b3b48d61da71722adf",
     origin_entry_id: "JK000000066231",
     entry: "なわ",
+    kanji: "縄·繩·索",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20320,6 +21466,7 @@ export const n2Words: Word[] = [
     entry_id: "4acad73e95344c828a3bce914a5a8224",
     origin_entry_id: "JK000000066286",
     entry: "なんきょく",
+    kanji: "南極",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20336,6 +21483,7 @@ export const n2Words: Word[] = [
     entry_id: "eb8990f8cfa04e85b2a0abadb8702a1e",
     origin_entry_id: "JK000000066441",
     entry: "なんべい",
+    kanji: "南米",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20352,6 +21500,7 @@ export const n2Words: Word[] = [
     entry_id: "e8928bdc1dae47bd8fe5d6d455d4b9b3",
     origin_entry_id: "JK000000066567",
     entry: "にがて",
+    kanji: "苦手",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20368,6 +21517,7 @@ export const n2Words: Word[] = [
     entry_id: "0e3fadd9e04a446ab0cc51870efc3fbf",
     origin_entry_id: "JK000000066702",
     entry: "にくるい",
+    kanji: "肉類",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20384,6 +21534,7 @@ export const n2Words: Word[] = [
     entry_id: "e78f4acc681e4f1fa64b24dfbc8c329d",
     origin_entry_id: "JK000000066776",
     entry: "にじ",
+    kanji: "虹·霓",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20400,6 +21551,7 @@ export const n2Words: Word[] = [
     entry_id: "77c95cc8e87a4f028d5680b0189a3a88",
     origin_entry_id: "JK000000066919",
     entry: "にちよう",
+    kanji: "日曜",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20416,6 +21568,7 @@ export const n2Words: Word[] = [
     entry_id: "c1d5304e0d7f4309bc5952dbc8172dd8",
     origin_entry_id: "JK000000066930",
     entry: "にっか",
+    kanji: "日課",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20432,6 +21585,7 @@ export const n2Words: Word[] = [
     entry_id: "c742140a4671480d816ac03a0cd89acf",
     origin_entry_id: "JK000000066958",
     entry: "にっこう",
+    kanji: "日光",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20448,6 +21602,7 @@ export const n2Words: Word[] = [
     entry_id: "908f2d15148a463fa1de41933760221a",
     origin_entry_id: "JK000000067007",
     entry: "にっぽん",
+    kanji: "日本",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20464,6 +21619,7 @@ export const n2Words: Word[] = [
     entry_id: "1e9a69c6d47f49559e43fa82b00ebffb",
     origin_entry_id: "JK000000067091",
     entry: "にほん",
+    kanji: "日本",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20480,6 +21636,7 @@ export const n2Words: Word[] = [
     entry_id: "506cf653611e4310b5172e794d333d10",
     origin_entry_id: "JK000000067174",
     entry: "にゅうか",
+    kanji: "入荷",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20500,6 +21657,7 @@ export const n2Words: Word[] = [
     entry_id: "ca77dffa5fb44eec83ddf5ff091546aa",
     origin_entry_id: "JK000000067344",
     entry: "にょうぼう",
+    kanji: "女房",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20516,6 +21674,7 @@ export const n2Words: Word[] = [
     entry_id: "1f0a504539e84a75aceba958db6fc11c",
     origin_entry_id: "JK000000067703",
     entry: "ぬの",
+    kanji: "布",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20536,6 +21695,7 @@ export const n2Words: Word[] = [
     entry_id: "1b7dee9586d54b02a1c4b358f6740ecb",
     origin_entry_id: "JK000000067816",
     entry: "ね",
+    kanji: "根",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20560,6 +21720,7 @@ export const n2Words: Word[] = [
     entry_id: "567ca74294c84ed6a486e99b9ee3c3e1",
     origin_entry_id: "JK000000067980",
     entry: "ねじ",
+    kanji: "螺子·捻子·捩子·螺旋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20576,6 +21737,7 @@ export const n2Words: Word[] = [
     entry_id: "3ae15690c62a4bd7974d86be3e019923",
     origin_entry_id: "JK000000068143",
     entry: "ねったい",
+    kanji: "熱帯",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20592,6 +21754,7 @@ export const n2Words: Word[] = [
     entry_id: "d17f5efcd9f64906bfb88c130abb797c",
     origin_entry_id: "JK000000068227",
     entry: "ねびき",
+    kanji: "値引き",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20612,6 +21775,7 @@ export const n2Words: Word[] = [
     entry_id: "86a916b2983f4b699cb9e17971125684",
     origin_entry_id: "JK000000068262",
     entry: "ねまき",
+    kanji: "寝巻(き)·寝間着",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20628,6 +21792,7 @@ export const n2Words: Word[] = [
     entry_id: "dabce61299fe4947985ba4c033a25b9c",
     origin_entry_id: "JK000000068285",
     entry: "ねむり",
+    kanji: "眠り·睡り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20644,6 +21809,7 @@ export const n2Words: Word[] = [
     entry_id: "20a51eb9df274f2c952e8b21f5830d8e",
     origin_entry_id: "JK000000068306",
     entry: "ねらい",
+    kanji: "狙い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20660,6 +21826,7 @@ export const n2Words: Word[] = [
     entry_id: "0787ec078c6c4f4086a2dc05a850c69d",
     origin_entry_id: "JK000000068448",
     entry: "ねんど",
+    kanji: "年度",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20676,6 +21843,7 @@ export const n2Words: Word[] = [
     entry_id: "7340a2081f1542ee9cd116a49c99fbe2",
     origin_entry_id: "JK000000068492",
     entry: "ねんれい",
+    kanji: "年齢",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20692,6 +21860,7 @@ export const n2Words: Word[] = [
     entry_id: "6379033a4f8b4e8d8f60c5d2056c3b33",
     origin_entry_id: "JK000000068506",
     entry: "のう",
+    kanji: "能",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20708,6 +21877,7 @@ export const n2Words: Word[] = [
     entry_id: "1c716d39ddbe44ac9ce7da658c6886ce",
     origin_entry_id: "JK000000068527",
     entry: "のうか",
+    kanji: "農家",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20724,6 +21894,7 @@ export const n2Words: Word[] = [
     entry_id: "b11b095b1eeb43c2ad5d35d6b5e8ba91",
     origin_entry_id: "JK000000068550",
     entry: "のうぎょう",
+    kanji: "農業",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20740,6 +21911,7 @@ export const n2Words: Word[] = [
     entry_id: "142b9c5545f6489faa21c95373d9c50d",
     origin_entry_id: "JK000000068575",
     entry: "のうさんぶつ",
+    kanji: "農産物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20756,6 +21928,7 @@ export const n2Words: Word[] = [
     entry_id: "a4edd0af551c446e8cdb2ec4e4eb6078",
     origin_entry_id: "JK000000068615",
     entry: "のうぜい",
+    kanji: "納税",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20776,6 +21949,7 @@ export const n2Words: Word[] = [
     entry_id: "b9a63b995a784b1b9e5ae5fcbd09567d",
     origin_entry_id: "JK000000068637",
     entry: "のうど",
+    kanji: "濃度",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20792,6 +21966,7 @@ export const n2Words: Word[] = [
     entry_id: "ea4216664b9f464b8b81a8d4b36e9bbb",
     origin_entry_id: "JK000000068660",
     entry: "のうふ",
+    kanji: "納付·納附",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20812,6 +21987,7 @@ export const n2Words: Word[] = [
     entry_id: "93de62fb4cc34913a61a5b88cca337b2",
     origin_entry_id: "JK000000068684",
     entry: "のうやく",
+    kanji: "農薬",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20828,6 +22004,7 @@ export const n2Words: Word[] = [
     entry_id: "dc26d80eab4847698fccd9a131795ecc",
     origin_entry_id: "JK000000068692",
     entry: "のうりつ",
+    kanji: "能率",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20844,6 +22021,7 @@ export const n2Words: Word[] = [
     entry_id: "8d8a4cc400bc41e69092b8801c0c06e7",
     origin_entry_id: "JK000000068722",
     entry: "のき",
+    kanji: "軒",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20860,6 +22038,7 @@ export const n2Words: Word[] = [
     entry_id: "bef9d682b4c140fc8c2202ec50bbdd24",
     origin_entry_id: "JK000000068754",
     entry: "のこぎり",
+    kanji: "鋸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20876,6 +22055,7 @@ export const n2Words: Word[] = [
     entry_id: "da5d503ada1847f8ab43199698eb326e",
     origin_entry_id: "JK000000068765",
     entry: "のこり",
+    kanji: "残り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20892,6 +22072,7 @@ export const n2Words: Word[] = [
     entry_id: "02aa4c569a4b4ed18a0dea6223e34e18",
     origin_entry_id: "JK000000068830",
     entry: "のぞみ",
+    kanji: "望み",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20908,6 +22089,7 @@ export const n2Words: Word[] = [
     entry_id: "58f033c519fe480d93b0fb7c2dcb9f32",
     origin_entry_id: "JK000000068854",
     entry: "のち",
+    kanji: "後",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20956,6 +22138,7 @@ export const n2Words: Word[] = [
     entry_id: "ac413a6ed9be4f22a1fb65b7d38dea4a",
     origin_entry_id: "JK000000069500",
     entry: "はいく",
+    kanji: "俳句",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20972,6 +22155,7 @@ export const n2Words: Word[] = [
     entry_id: "311343d3cad94d73989f68baac7bd4eb",
     origin_entry_id: "JK000000069808",
     entry: "はいぶん",
+    kanji: "配分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -20992,6 +22176,7 @@ export const n2Words: Word[] = [
     entry_id: "d5db666d99504b92b23ee485993801fd",
     origin_entry_id: "JK000000069850",
     entry: "はいゆう",
+    kanji: "俳優",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21008,6 +22193,7 @@ export const n2Words: Word[] = [
     entry_id: "a6ab157bc22045d8b535a8ac6d514751",
     origin_entry_id: "JK000000069942",
     entry: "はか",
+    kanji: "墓",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21024,6 +22210,7 @@ export const n2Words: Word[] = [
     entry_id: "bed4a6f8fb0e480b89718643460332a8",
     origin_entry_id: "JK000000069979",
     entry: "はかせ",
+    kanji: "博士",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21040,6 +22227,7 @@ export const n2Words: Word[] = [
     entry_id: "1cc3a31509324212b219af1f7255117f",
     origin_entry_id: "JK000000070013",
     entry: "はかまいり",
+    kanji: "墓参り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21060,6 +22248,7 @@ export const n2Words: Word[] = [
     entry_id: "8153c962551e439686776c2015447017",
     origin_entry_id: "JK000000070030",
     entry: "はかり",
+    kanji: "秤·衡",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21076,6 +22265,7 @@ export const n2Words: Word[] = [
     entry_id: "0bee783e886c4709b525c6bb678063ed",
     origin_entry_id: "JK000000070071",
     entry: "はきけ",
+    kanji: "吐き気·嘔き気",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21092,6 +22282,7 @@ export const n2Words: Word[] = [
     entry_id: "14cce02e40e742c3a3479e16a46bd016",
     origin_entry_id: "JK000000070389",
     entry: "はぐるま",
+    kanji: "歯車",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21108,6 +22299,7 @@ export const n2Words: Word[] = [
     entry_id: "554c86538055488085adad4b5c71df95",
     origin_entry_id: "JK000000070509",
     entry: "はさみ",
+    kanji: "鋏·剪刀",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21124,6 +22316,7 @@ export const n2Words: Word[] = [
     entry_id: "0f63d12fd4634f3fa267a02808ab06d3",
     origin_entry_id: "JK000000070527",
     entry: "はさん",
+    kanji: "破産",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21160,6 +22353,7 @@ export const n2Words: Word[] = [
     entry_id: "6f267d4cb99847ad995f54ffc553150c",
     origin_entry_id: "JK000000070566",
     entry: "はしご",
+    kanji: "梯子·梯",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21176,6 +22370,7 @@ export const n2Words: Word[] = [
     entry_id: "94e3239db7d44227b602411f512c8656",
     origin_entry_id: "JK000000070602",
     entry: "はじめ",
+    kanji: "初め",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21196,6 +22391,7 @@ export const n2Words: Word[] = [
     entry_id: "1ef9ee4a56a74224b1b6590f911f9e7e",
     origin_entry_id: "JK000000070670",
     entry: "はす",
+    kanji: "斜",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21212,6 +22408,7 @@ export const n2Words: Word[] = [
     entry_id: "afe9ea2f73164eb48f3890f9e9b74940",
     origin_entry_id: "JK000000070773",
     entry: "はた",
+    kanji: "旗",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21228,6 +22425,7 @@ export const n2Words: Word[] = [
     entry_id: "3f1e02c025854a5eb409854a181c7536",
     origin_entry_id: "JK000000070779",
     entry: "はだ",
+    kanji: "肌·膚",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21244,6 +22442,7 @@ export const n2Words: Word[] = [
     entry_id: "c21836d7605e4d6bb1c38194abd18509",
     origin_entry_id: "JK000000070796",
     entry: "はだか",
+    kanji: "裸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21260,6 +22459,7 @@ export const n2Words: Word[] = [
     entry_id: "2f258bfb832a4f4eb73495eabf00af3e",
     origin_entry_id: "JK000000070811",
     entry: "はだぎ",
+    kanji: "肌着·肌衣·膚着",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21276,6 +22476,7 @@ export const n2Words: Word[] = [
     entry_id: "f815f00746aa403cb557e9d323454c95",
     origin_entry_id: "JK000000070908",
     entry: "はち",
+    kanji: "鉢",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21292,6 +22493,7 @@ export const n2Words: Word[] = [
     entry_id: "b2fd7b4b650a49728b175891cfd546f2",
     origin_entry_id: "JK000000071065",
     entry: "はっき",
+    kanji: "発揮",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21312,6 +22514,7 @@ export const n2Words: Word[] = [
     entry_id: "1e2aaaab8bc444e19212cd25b1d198c5",
     origin_entry_id: "JK000000071090",
     entry: "はっくつ",
+    kanji: "発掘",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21332,6 +22535,7 @@ export const n2Words: Word[] = [
     entry_id: "7def5390056f4e7a9db40880af730547",
     origin_entry_id: "JK000000071124",
     entry: "はっこう",
+    kanji: "発行",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21352,6 +22556,7 @@ export const n2Words: Word[] = [
     entry_id: "8832ae9517fc4d769a578c30e2485847",
     origin_entry_id: "JK000000071157",
     entry: "はっしゃ",
+    kanji: "発射",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21372,6 +22577,7 @@ export const n2Words: Word[] = [
     entry_id: "56521f25838c4a1ca0b9fa9efcef8bb0",
     origin_entry_id: "JK000000070988",
     entry: "はつ",
+    kanji: "初",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21392,6 +22598,7 @@ export const n2Words: Word[] = [
     entry_id: "e587866614dc41008bd2e66186464d9a",
     origin_entry_id: "JK000000071353",
     entry: "はで",
+    kanji: "派手",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21412,6 +22619,7 @@ export const n2Words: Word[] = [
     entry_id: "52350918c0e348be8725fef8b2b39938",
     origin_entry_id: "JK000000071605",
     entry: "はなよめ",
+    kanji: "花嫁",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21428,6 +22636,7 @@ export const n2Words: Word[] = [
     entry_id: "6cbe25de877f4be3b1255b394008c266",
     origin_entry_id: "JK000000071646",
     entry: "はね",
+    kanji: "羽根",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21444,6 +22653,7 @@ export const n2Words: Word[] = [
     entry_id: "23d89a0bec1647b0b768f6ed6377825e",
     origin_entry_id: "JK000000071806",
     entry: "はへん",
+    kanji: "破片",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21460,6 +22670,7 @@ export const n2Words: Word[] = [
     entry_id: "cfa0b4349e9041439b055d0a813365dc",
     origin_entry_id: "JK000000071907",
     entry: "はやおき",
+    kanji: "早起き",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21480,6 +22691,7 @@ export const n2Words: Word[] = [
     entry_id: "55cbc53c909344f1aa569057acbd1f79",
     origin_entry_id: "JK000000072003",
     entry: "はら",
+    kanji: "原",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21496,6 +22708,7 @@ export const n2Words: Word[] = [
     entry_id: "96e5a6e5a65b48d3a094a121cc4f3719",
     origin_entry_id: "JK000000072192",
     entry: "はりがね",
+    kanji: "針金",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21512,6 +22725,7 @@ export const n2Words: Word[] = [
     entry_id: "f08d97c654904f0392c144f3d4aefea0",
     origin_entry_id: "JK000000072295",
     entry: "はるさき",
+    kanji: "春先",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21528,6 +22742,7 @@ export const n2Words: Word[] = [
     entry_id: "c42afc7ce00f4edd9b123479e4c3273c",
     origin_entry_id: "JK000000072399",
     entry: "はん",
+    kanji: "反",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21548,6 +22763,7 @@ export const n2Words: Word[] = [
     entry_id: "e13d666790cb439f83bb34ad4868e65a",
     origin_entry_id: "JK000000072471",
     entry: "はんえい",
+    kanji: "反映",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21568,6 +22784,7 @@ export const n2Words: Word[] = [
     entry_id: "71177afda17b4c099e19b6f52a995ab2",
     origin_entry_id: "JK000000072588",
     entry: "はんけい",
+    kanji: "半径",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21584,6 +22801,7 @@ export const n2Words: Word[] = [
     entry_id: "ef9058fd8ab54c8f9d4e45b5e00b61dc",
     origin_entry_id: "JK000000072609",
     entry: "はんこ",
+    kanji: "判子",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21600,6 +22818,7 @@ export const n2Words: Word[] = [
     entry_id: "5e11fdc1df294ad3b51495623d60d103",
     origin_entry_id: "JK000000072615",
     entry: "はんこう",
+    kanji: "反抗",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21620,6 +22839,7 @@ export const n2Words: Word[] = [
     entry_id: "c1147326f6964b61aa4f91e931209a30",
     origin_entry_id: "JK000000072646",
     entry: "はんざい",
+    kanji: "犯罪",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21636,6 +22856,7 @@ export const n2Words: Word[] = [
     entry_id: "be475e3c527a47e5b28bd0a6390832a3",
     origin_entry_id: "JK000000072665",
     entry: "はんじ",
+    kanji: "判事",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21652,6 +22873,7 @@ export const n2Words: Word[] = [
     entry_id: "a6ce82350e44421cb1e8b8a3fc235b24",
     origin_entry_id: "JK000000072755",
     entry: "はんすう",
+    kanji: "半数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21668,6 +22890,7 @@ export const n2Words: Word[] = [
     entry_id: "faf9046434624a1e8517f01add9e354c",
     origin_entry_id: "JK000000072814",
     entry: "はんそで",
+    kanji: "半そで·半袖",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21684,6 +22907,7 @@ export const n2Words: Word[] = [
     entry_id: "38fd176b1359479983d4f531fd989caf",
     origin_entry_id: "JK000000072837",
     entry: "はんだん",
+    kanji: "判断",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21704,6 +22928,7 @@ export const n2Words: Word[] = [
     entry_id: "fd68afe46d714694bdbc9b1aeee5f513",
     origin_entry_id: "JK000000072897",
     entry: "はんとう",
+    kanji: "半島",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21720,6 +22945,7 @@ export const n2Words: Word[] = [
     entry_id: "bc2c2a206180403e9c5c9d1622087fb9",
     origin_entry_id: "JK000000072944",
     entry: "はんのう",
+    kanji: "反応",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21740,6 +22966,7 @@ export const n2Words: Word[] = [
     entry_id: "548467ea73bd4ee69a7f30e0d6234e29",
     origin_entry_id: "JK000000073049",
     entry: "はんめん",
+    kanji: "反面",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21760,6 +22987,7 @@ export const n2Words: Word[] = [
     entry_id: "e565626dfec149ad862975c763273d49",
     origin_entry_id: "JK000000073106",
     entry: "はんろん",
+    kanji: "反論",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21780,6 +23008,7 @@ export const n2Words: Word[] = [
     entry_id: "ce44d2bd07cf477a86f2aa5f7b6d9e39",
     origin_entry_id: "JK000000069238",
     entry: "ば",
+    kanji: "場",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21796,6 +23025,7 @@ export const n2Words: Word[] = [
     entry_id: "9287a3f9cbc44eafb3179caad9bf5d97",
     origin_entry_id: "JK000000069944",
     entry: "ばか",
+    kanji: "馬鹿·莫迦",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21816,6 +23046,7 @@ export const n2Words: Word[] = [
     entry_id: "313816a0eb374a0c970731eb65d27a15",
     origin_entry_id: "JK000000070265",
     entry: "ばくだい",
+    kanji: "ばく大·莫大·莫太",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21832,6 +23063,7 @@ export const n2Words: Word[] = [
     entry_id: "a18f89ca39fc42b6a5fbb002b5c75b34",
     origin_entry_id: "JK000000070315",
     entry: "ばくはつ",
+    kanji: "爆発",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21868,6 +23100,7 @@ export const n2Words: Word[] = [
     entry_id: "30a8f899ac2a47209669e0378800b72a",
     origin_entry_id: "JK000000071649",
     entry: "ばね",
+    kanji: "発条·撥条",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21884,6 +23117,7 @@ export const n2Words: Word[] = [
     entry_id: "ea4378e346574b54ad4a9204afbea059",
     origin_entry_id: "JK000000072647",
     entry: "ばんざい",
+    kanji: "万歳",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21908,6 +23142,7 @@ export const n2Words: Word[] = [
     entry_id: "41b7383fb4e443b1b389f9de0a30be4e",
     origin_entry_id: "JK000000072841",
     entry: "ばんち",
+    kanji: "番地",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21940,6 +23175,7 @@ export const n2Words: Word[] = [
     entry_id: "526ce5a1ca0245df849d01086c2dd112",
     origin_entry_id: "JK000000073379",
     entry: "ひかく",
+    kanji: "比較",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21960,6 +23196,7 @@ export const n2Words: Word[] = [
     entry_id: "c5f6b9b8518646b49b3fc481b374285a",
     origin_entry_id: "JK000000073387",
     entry: "ひかげ",
+    kanji: "日陰·日蔭",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21976,6 +23213,7 @@ export const n2Words: Word[] = [
     entry_id: "45e6fc896a53490a97a332dbc49d0a20",
     origin_entry_id: "JK000000073667",
     entry: "ひきょう",
+    kanji: "卑怯",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -21992,6 +23230,7 @@ export const n2Words: Word[] = [
     entry_id: "647c2cffe24c4c188a19bb95710a9a95",
     origin_entry_id: "JK000000073687",
     entry: "ひきわけ",
+    kanji: "引(き)分け·引分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22008,6 +23247,7 @@ export const n2Words: Word[] = [
     entry_id: "ee86ab561290437d9c6cd15a7b0c441d",
     origin_entry_id: "JK000000073762",
     entry: "ひげき",
+    kanji: "悲劇",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22024,6 +23264,7 @@ export const n2Words: Word[] = [
     entry_id: "8f56847a69114a3aa04ba0f5b92c4a7a",
     origin_entry_id: "JK000000073853",
     entry: "ひざ",
+    kanji: "膝",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22040,6 +23281,7 @@ export const n2Words: Word[] = [
     entry_id: "661eed7bf8be4733b8c2047448ba4c52",
     origin_entry_id: "JK000000073885",
     entry: "ひざし",
+    kanji: "日差(し)·陽射し",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22056,6 +23298,7 @@ export const n2Words: Word[] = [
     entry_id: "c9c52a96b4d44fa0a24be7b5a55a7ef9",
     origin_entry_id: "JK000000073913",
     entry: "ひじ",
+    kanji: "肘·肱·臂",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22072,6 +23315,7 @@ export const n2Words: Word[] = [
     entry_id: "510c02af72c041748f3f8e8567b15f03",
     origin_entry_id: "JK000000074001",
     entry: "ひじょう",
+    kanji: "非常",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22092,6 +23336,7 @@ export const n2Words: Word[] = [
     entry_id: "e05dcb03d1a748a0a887cf06dad87672",
     origin_entry_id: "JK000000074012",
     entry: "ひじょうしき",
+    kanji: "非常識",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22108,6 +23353,7 @@ export const n2Words: Word[] = [
     entry_id: "807a539caab7476d944ae9581bd2915e",
     origin_entry_id: "JK000000074157",
     entry: "ひたい",
+    kanji: "額",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22124,6 +23370,7 @@ export const n2Words: Word[] = [
     entry_id: "2694b42efc9240d7a896f01ef341edd2",
     origin_entry_id: "JK000000074334",
     entry: "ひっし",
+    kanji: "必死",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22144,6 +23391,7 @@ export const n2Words: Word[] = [
     entry_id: "11bbbd32311549b395a84475b0571eef",
     origin_entry_id: "JK000000074345",
     entry: "ひっしゃ",
+    kanji: "筆者",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22160,6 +23408,7 @@ export const n2Words: Word[] = [
     entry_id: "e0ce9c9133024e2dae3fe3a21d21aa1e",
     origin_entry_id: "JK100074347001",
     entry: "ひつじゅひん",
+    kanji: "必需品",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22176,6 +23425,7 @@ export const n2Words: Word[] = [
     entry_id: "a95f769c393d44a88d5c4c167f9861e8",
     origin_entry_id: "JK000000074453",
     entry: "ひてい",
+    kanji: "否定",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22196,6 +23446,7 @@ export const n2Words: Word[] = [
     entry_id: "293601050652465ba206293062283e04",
     origin_entry_id: "JK000000074580",
     entry: "ひとこと",
+    kanji: "一言",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22212,6 +23463,7 @@ export const n2Words: Word[] = [
     entry_id: "344326482695406bb83cedb5f4f485c7",
     origin_entry_id: "JK000000074584",
     entry: "ひとごみ",
+    kanji: "人込み·人混み",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22228,6 +23480,7 @@ export const n2Words: Word[] = [
     entry_id: "fe350c09d01d42fc98805e4af879859e",
     origin_entry_id: "JK000000074665",
     entry: "ひととおり",
+    kanji: "一通り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22244,6 +23497,7 @@ export const n2Words: Word[] = [
     entry_id: "02653bc9dbb244278ed2a62c4cef251e",
     origin_entry_id: "JK000000074666",
     entry: "ひとどおり",
+    kanji: "人通り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22260,6 +23514,7 @@ export const n2Words: Word[] = [
     entry_id: "0e5d558ffeae4d4a855ff85968506014",
     origin_entry_id: "JK000000074688",
     entry: "ひとねむり",
+    kanji: "一眠り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22280,6 +23535,7 @@ export const n2Words: Word[] = [
     entry_id: "6259fe98f6214ac1a484e8dc39f9ef32",
     origin_entry_id: "JK000000074743",
     entry: "ひとみ",
+    kanji: "瞳·眸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22296,6 +23552,7 @@ export const n2Words: Word[] = [
     entry_id: "53c9094888104797b9f6d5b0cb16eff5",
     origin_entry_id: "JK000000074766",
     entry: "ひとやすみ",
+    kanji: "一休み",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22316,6 +23573,7 @@ export const n2Words: Word[] = [
     entry_id: "722a9b98e6794a968047483a732d4ac1",
     origin_entry_id: "JK000000074779",
     entry: "ひとり",
+    kanji: "独り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22332,6 +23590,7 @@ export const n2Words: Word[] = [
     entry_id: "5f8aa4eb13094fadaa6c45939ecffb75",
     origin_entry_id: "JK000000074789",
     entry: "ひとりぐらし",
+    kanji: "一人暮(ら)し·独り暮(ら)し",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22348,6 +23607,7 @@ export const n2Words: Word[] = [
     entry_id: "e5c9b5d5126a4370916921b5e9690846",
     origin_entry_id: "JK000000074792",
     entry: "ひとりごと",
+    kanji: "一人言·独り言",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22364,6 +23624,7 @@ export const n2Words: Word[] = [
     entry_id: "0e74afab141f4cc68e096d4f51ec14e0",
     origin_entry_id: "JK000000074807",
     entry: "ひとりびとり",
+    kanji: "一人一人",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22380,6 +23641,7 @@ export const n2Words: Word[] = [
     entry_id: "a8a233f47763460a91083ebd8ef1f31f",
     origin_entry_id: "JK000000074850",
     entry: "ひなん",
+    kanji: "非難·批難",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22400,6 +23662,7 @@ export const n2Words: Word[] = [
     entry_id: "e420b0b3970643e290f4b77adfc32074",
     origin_entry_id: "JK000000074854",
     entry: "ひにく",
+    kanji: "皮肉",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22416,6 +23679,7 @@ export const n2Words: Word[] = [
     entry_id: "3b3c5e638bfe4527acdb6ffed28ecd70",
     origin_entry_id: "JK000000074859",
     entry: "ひにち",
+    kanji: "日日",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22432,6 +23696,7 @@ export const n2Words: Word[] = [
     entry_id: "c877b42e45b741f0bc09c6611cdcce93",
     origin_entry_id: "JK000000074891",
     entry: "ひのいり",
+    kanji: "日の入り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22448,6 +23713,7 @@ export const n2Words: Word[] = [
     entry_id: "da48a7a54ab243e6a8ad54a72b3174ec",
     origin_entry_id: "JK000000074909",
     entry: "ひので",
+    kanji: "日の出",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22464,6 +23730,7 @@ export const n2Words: Word[] = [
     entry_id: "73128949874f40dcaab488b22fbe20f1",
     origin_entry_id: "JK000000074950",
     entry: "ひはん",
+    kanji: "批判",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22484,6 +23751,7 @@ export const n2Words: Word[] = [
     entry_id: "346e2904550240f4aa2a4ba5229fad65",
     origin_entry_id: "JK000000074970",
     entry: "ひひょう",
+    kanji: "批評",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22504,6 +23772,7 @@ export const n2Words: Word[] = [
     entry_id: "5a85250fd48a41b8aa61de7ca88fe26a",
     origin_entry_id: "JK000000074959",
     entry: "ひび",
+    kanji: "日日",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22520,6 +23789,7 @@ export const n2Words: Word[] = [
     entry_id: "845672a7e3f34fe5b3e966a6a8a41af4",
     origin_entry_id: "JK000000074963",
     entry: "ひびき",
+    kanji: "響き",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22536,6 +23806,7 @@ export const n2Words: Word[] = [
     entry_id: "e42b62dc6be349d1a373385c9273a55f",
     origin_entry_id: "JK000000074979",
     entry: "ひふ",
+    kanji: "皮膚",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22552,6 +23823,7 @@ export const n2Words: Word[] = [
     entry_id: "95632cb6b5f741ed91bc536909ebae4c",
     origin_entry_id: "JK000000075074",
     entry: "ひみつ",
+    kanji: "秘密",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22572,6 +23844,7 @@ export const n2Words: Word[] = [
     entry_id: "53d5feb5f0bd4e46b616ef6d8e8ac713",
     origin_entry_id: "JK100075202001",
     entry: "ひゃっかじてん",
+    kanji: "百科事典",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22588,6 +23861,7 @@ export const n2Words: Word[] = [
     entry_id: "8639966c917242fcb311409e3d9e937d",
     origin_entry_id: "JK000000075318",
     entry: "ひょうか",
+    kanji: "評価",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22608,6 +23882,7 @@ export const n2Words: Word[] = [
     entry_id: "15bf0ef61135496a9da4522a0fdb2a7c",
     origin_entry_id: "JK000000075391",
     entry: "ひょうしき",
+    kanji: "標識",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22624,6 +23899,7 @@ export const n2Words: Word[] = [
     entry_id: "9a671ac0d6c34e1cb4b99a89b054994a",
     origin_entry_id: "JK000000075410",
     entry: "ひょうじゅん",
+    kanji: "標準",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22640,6 +23916,7 @@ export const n2Words: Word[] = [
     entry_id: "2e5bb9af04ec48258b7ba07d9072a132",
     origin_entry_id: "JK000000075504",
     entry: "ひょうばん",
+    kanji: "評判",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22656,6 +23933,7 @@ export const n2Words: Word[] = [
     entry_id: "9526c88193084560aa04b278c8b34323",
     origin_entry_id: "JK000000075531",
     entry: "ひょうほん",
+    kanji: "標本",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22672,6 +23950,7 @@ export const n2Words: Word[] = [
     entry_id: "253a2ee83cc64367afcc1a130460f60a",
     origin_entry_id: "JK000000075554",
     entry: "ひょうろん",
+    kanji: "評論",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22692,6 +23971,7 @@ export const n2Words: Word[] = [
     entry_id: "f17934d0f98648bc8ba2efccd9c34ffd",
     origin_entry_id: "JK000000075796",
     entry: "ひろう",
+    kanji: "疲労",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22712,6 +23992,7 @@ export const n2Words: Word[] = [
     entry_id: "0700869b5feb483081fdf68da7c438e5",
     origin_entry_id: "JK000000075820",
     entry: "ひろば",
+    kanji: "広場",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22728,6 +24009,7 @@ export const n2Words: Word[] = [
     entry_id: "4307416f39524ec7990525b57ada7b75",
     origin_entry_id: "JK000000075855",
     entry: "ひん",
+    kanji: "品",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22748,6 +24030,7 @@ export const n2Words: Word[] = [
     entry_id: "0821b2abe88546e7b40785c24d1e74f3",
     origin_entry_id: "JK000000075906",
     entry: "ひんこん",
+    kanji: "貧困",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22764,6 +24047,7 @@ export const n2Words: Word[] = [
     entry_id: "3e966ca8e94140cf99c2c3d4b2769648",
     origin_entry_id: "JK000000075493",
     entry: "びょうどう",
+    kanji: "平等",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22784,6 +24068,7 @@ export const n2Words: Word[] = [
     entry_id: "56d67efbaca14ef5bcf97aa8ecb17eab",
     origin_entry_id: "JK000000075866",
     entry: "びん",
+    kanji: "便",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22800,6 +24085,7 @@ export const n2Words: Word[] = [
     entry_id: "81d19f1d34cd421197bb630a6c4ea434",
     origin_entry_id: "JK000000075937",
     entry: "びんせん",
+    kanji: "便箋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22816,6 +24102,7 @@ export const n2Words: Word[] = [
     entry_id: "01600fa0ca8b4d47a91436fd506f3794",
     origin_entry_id: "JK000000076114",
     entry: "ふあん",
+    kanji: "不安",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22832,6 +24119,7 @@ export const n2Words: Word[] = [
     entry_id: "32e66bde54d44bf98d10e2ef0ff6ee11",
     origin_entry_id: "JK000000076213",
     entry: "ふう",
+    kanji: "風",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22852,6 +24140,7 @@ export const n2Words: Word[] = [
     entry_id: "0d09d0320fe54c89b94573ac58edd920",
     origin_entry_id: "JK000000076314",
     entry: "ふうせん",
+    kanji: "風船",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22868,6 +24157,7 @@ export const n2Words: Word[] = [
     entry_id: "638fc86c75674a359708991dc2cc894b",
     origin_entry_id: "JK000000076394",
     entry: "ふうん",
+    kanji: "不運",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22884,6 +24174,7 @@ export const n2Words: Word[] = [
     entry_id: "276b81b51690401bbcfcabb2f0d4a891",
     origin_entry_id: "JK000000076399",
     entry: "ふえ",
+    kanji: "笛",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22900,6 +24191,7 @@ export const n2Words: Word[] = [
     entry_id: "354ce2e8e90e4422ba9fa94e02673c9a",
     origin_entry_id: "JK000000076508",
     entry: "ふか",
+    kanji: "不可",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22920,6 +24212,7 @@ export const n2Words: Word[] = [
     entry_id: "663e92dbf30b40079bd7634d68326fcd",
     origin_entry_id: "JK000000076669",
     entry: "ふきそく",
+    kanji: "不規則",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22940,6 +24233,7 @@ export const n2Words: Word[] = [
     entry_id: "4d98e5c7346641609e173e69d1aa3cb8",
     origin_entry_id: "JK000000076718",
     entry: "ふきゅう",
+    kanji: "普及",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22960,6 +24254,7 @@ export const n2Words: Word[] = [
     entry_id: "ef144d95d07c4b4fa9e14a11002cd68d",
     origin_entry_id: "JK000000076749",
     entry: "ふきん",
+    kanji: "付近·附近",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -22996,6 +24291,7 @@ export const n2Words: Word[] = [
     entry_id: "e4e05255caf8460980715bced9aed31f",
     origin_entry_id: "JK000000076834",
     entry: "ふくし",
+    kanji: "副詞",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23012,6 +24308,7 @@ export const n2Words: Word[] = [
     entry_id: "8f534533269f49f296a2bed8903a0419",
     origin_entry_id: "JK000000076851",
     entry: "ふくしゃ",
+    kanji: "複写",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23032,6 +24329,7 @@ export const n2Words: Word[] = [
     entry_id: "19dd2b6d2d6a45e8bd5a1908b7f28fe5",
     origin_entry_id: "JK000000076859",
     entry: "ふくじゅう",
+    kanji: "服従",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23052,6 +24350,7 @@ export const n2Words: Word[] = [
     entry_id: "fb6c8990921f4308be06fbc2d8ee2b41",
     origin_entry_id: "JK000000076893",
     entry: "ふくすう",
+    kanji: "複数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23068,6 +24367,7 @@ export const n2Words: Word[] = [
     entry_id: "cee2ae2593e944ea8696294c7a75e29c",
     origin_entry_id: "JK000000076912",
     entry: "ふくそう",
+    kanji: "服装",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23084,6 +24384,7 @@ export const n2Words: Word[] = [
     entry_id: "8998d8f732964c4da8073e2b2468a016",
     origin_entry_id: "JK000000077042",
     entry: "ふくろ",
+    kanji: "袋·囊",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23100,6 +24401,7 @@ export const n2Words: Word[] = [
     entry_id: "9957a684bf5846219bf6f871e3d70708",
     origin_entry_id: "JK000000077095",
     entry: "ふけつ",
+    kanji: "不潔",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23116,6 +24418,7 @@ export const n2Words: Word[] = [
     entry_id: "09e4b073013d4029b007ed63467d9132",
     origin_entry_id: "JK000000077129",
     entry: "ふこう",
+    kanji: "不幸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23136,6 +24439,7 @@ export const n2Words: Word[] = [
     entry_id: "bfccc84e1ffb467db75e69078b4af453",
     origin_entry_id: "JK000000077143",
     entry: "ふこうへい",
+    kanji: "不公平",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23156,6 +24460,7 @@ export const n2Words: Word[] = [
     entry_id: "d5dbbb663fcf412ab84c1e65c4673f6b",
     origin_entry_id: "JK000000077134",
     entry: "ふごう",
+    kanji: "符号",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23172,6 +24477,7 @@ export const n2Words: Word[] = [
     entry_id: "05767c2481104be89ad7ec5285f175d7",
     origin_entry_id: "JK000000077197",
     entry: "ふし",
+    kanji: "節",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23188,6 +24494,7 @@ export const n2Words: Word[] = [
     entry_id: "97a04e627034462997bcf7c353574aea",
     origin_entry_id: "JK000000077232",
     entry: "ふしぎ",
+    kanji: "不思議",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23208,6 +24515,7 @@ export const n2Words: Word[] = [
     entry_id: "55dce23bd42a4c44a9dc73ba5c425081",
     origin_entry_id: "JK100077308001",
     entry: "ふしょうじ",
+    kanji: "不祥事",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23224,6 +24532,7 @@ export const n2Words: Word[] = [
     entry_id: "7d38a9b49b594bb5a4d8e2f270203aef",
     origin_entry_id: "JK000000077284",
     entry: "ふじゆう",
+    kanji: "不自由",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23248,6 +24557,7 @@ export const n2Words: Word[] = [
     entry_id: "3de5436ec0394ef1bcc803cf816446ad",
     origin_entry_id: "JK000000077352",
     entry: "ふじん",
+    kanji: "夫人",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23264,6 +24574,7 @@ export const n2Words: Word[] = [
     entry_id: "39e70450676242d0830e3b85175b5b5f",
     origin_entry_id: "JK000000077390",
     entry: "ふすま",
+    kanji: "襖",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23280,6 +24591,7 @@ export const n2Words: Word[] = [
     entry_id: "0c7f40e971084d9daa593b4b688f9c14",
     origin_entry_id: "JK000000077399",
     entry: "ふせい",
+    kanji: "不正",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23300,6 +24612,7 @@ export const n2Words: Word[] = [
     entry_id: "7c432b3eb6924ba8bfce2998110ee312",
     origin_entry_id: "JK000000077474",
     entry: "ふぞく",
+    kanji: "付属·附属",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23320,6 +24633,7 @@ export const n2Words: Word[] = [
     entry_id: "4411b6bf4e34419e9e37ec6fd285f4fb",
     origin_entry_id: "JK000000077514",
     entry: "ふたご",
+    kanji: "双子",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23336,6 +24650,7 @@ export const n2Words: Word[] = [
     entry_id: "15d4a3fbf79e4a65a5dd71835f0dc7d2",
     origin_entry_id: "JK000000077563",
     entry: "ふたん",
+    kanji: "負担",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23356,6 +24671,7 @@ export const n2Words: Word[] = [
     entry_id: "5bff4cdd3fe241f5a97defd9dbfafff4",
     origin_entry_id: "JK000000077610",
     entry: "ふちゅうい",
+    kanji: "不注意",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23376,6 +24692,7 @@ export const n2Words: Word[] = [
     entry_id: "e5e9aaf1dd914aff967d880750cc967c",
     origin_entry_id: "JK000000077631",
     entry: "ふつう",
+    kanji: "不通",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23392,6 +24709,7 @@ export const n2Words: Word[] = [
     entry_id: "7b185fb51d7146a1ab4e66f20c1d3b81",
     origin_entry_id: "JK000000077984",
     entry: "ふとくい",
+    kanji: "不得意",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23408,6 +24726,7 @@ export const n2Words: Word[] = [
     entry_id: "be69bdf038b04db4be94351575be644d",
     origin_entry_id: "JK000000078096",
     entry: "ふなびん",
+    kanji: "船便·舟便",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23424,6 +24743,7 @@ export const n2Words: Word[] = [
     entry_id: "953df8e6e89c42a4a36643b94ecda497",
     origin_entry_id: "JK000000078110",
     entry: "ふなれ",
+    kanji: "不慣れ·不馴れ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23440,6 +24760,7 @@ export const n2Words: Word[] = [
     entry_id: "637c7cef04ef4c9c8f1b5d93f7ee2caf",
     origin_entry_id: "JK000000078179",
     entry: "ふぶき",
+    kanji: "吹雪",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23456,6 +24777,7 @@ export const n2Words: Word[] = [
     entry_id: "4aeeca73189f44c0b93f70fc1d53ec44",
     origin_entry_id: "JK000000078188",
     entry: "ふへい",
+    kanji: "不平",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23472,6 +24794,7 @@ export const n2Words: Word[] = [
     entry_id: "f89a1c70de3e48bf9a8a25d14241c9bf",
     origin_entry_id: "JK000000078202",
     entry: "ふぼ",
+    kanji: "父母",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23488,6 +24811,7 @@ export const n2Words: Word[] = [
     entry_id: "c914b67e37af47b58d744c48814c7532",
     origin_entry_id: "JK000000078309",
     entry: "ふもと",
+    kanji: "麓",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23504,6 +24828,7 @@ export const n2Words: Word[] = [
     entry_id: "c31c64bf1a0848e88afed1fa17d2ea2a",
     origin_entry_id: "JK000000078333",
     entry: "ふゆかい",
+    kanji: "不愉快",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23524,6 +24849,7 @@ export const n2Words: Word[] = [
     entry_id: "76cdef6c1c794667af7ca52448aeb011",
     origin_entry_id: "JK000000078515",
     entry: "ふり",
+    kanji: "不利",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23540,6 +24866,7 @@ export const n2Words: Word[] = [
     entry_id: "f52eabf6cb00455eb4e24f7adcef4dc3",
     origin_entry_id: "JK000000078543",
     entry: "ふりえき",
+    kanji: "不利益",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23556,6 +24883,7 @@ export const n2Words: Word[] = [
     entry_id: "432417bb76ca4afab35b9614f1ec92ea",
     origin_entry_id: "JK000000078557",
     entry: "ふりがな",
+    kanji: "振(り)仮名",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23572,6 +24900,7 @@ export const n2Words: Word[] = [
     entry_id: "faa67b2a51f649e58d699f8886f51afd",
     origin_entry_id: "JK000000078723",
     entry: "ふるさと",
+    kanji: "古里·故里·故郷",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23588,6 +24917,7 @@ export const n2Words: Word[] = [
     entry_id: "2c21afa2a3b1454887258c3f6ff4b66b",
     origin_entry_id: "JK000000078845",
     entry: "ふろ",
+    kanji: "風呂",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23604,6 +24934,7 @@ export const n2Words: Word[] = [
     entry_id: "77e608f7358e432bae975ff5b702d7ad",
     origin_entry_id: "JK000000078885",
     entry: "ふろしき",
+    kanji: "風呂敷",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23648,6 +24979,7 @@ export const n2Words: Word[] = [
     entry_id: "b21c51e60e244d419e027ca513e08dbc",
     origin_entry_id: "JK000000078997",
     entry: "ふんか",
+    kanji: "噴火",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23668,6 +25000,7 @@ export const n2Words: Word[] = [
     entry_id: "53cfa63fda7f42878a721ba63cdebdf0",
     origin_entry_id: "JK000000079127",
     entry: "ふんすい",
+    kanji: "噴水",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23684,6 +25017,7 @@ export const n2Words: Word[] = [
     entry_id: "e54a306d1b6044268f16e498dff097ea",
     origin_entry_id: "JK000000076041",
     entry: "ぶ",
+    kanji: "部",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23704,6 +25038,7 @@ export const n2Words: Word[] = [
     entry_id: "94ac96d6c6da47a9bed577ad7d250e2d",
     origin_entry_id: "JK000000076067",
     entry: "ぶあいそう",
+    kanji: "無愛想",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23724,6 +25059,7 @@ export const n2Words: Word[] = [
     entry_id: "804414402bbb4191b30fd4ac6b8acbf6",
     origin_entry_id: "JK000000076207",
     entry: "ぶいん",
+    kanji: "部員",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23740,6 +25076,7 @@ export const n2Words: Word[] = [
     entry_id: "17a12c721a51495abec943ef5a9cebfe",
     origin_entry_id: "JK000000076568",
     entry: "ぶかつ",
+    kanji: "部活",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23756,6 +25093,7 @@ export const n2Words: Word[] = [
     entry_id: "1f7d1e4b3d9e435ba739849a73542c5a",
     origin_entry_id: "JK000000076626",
     entry: "ぶき",
+    kanji: "武器",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23772,6 +25110,7 @@ export const n2Words: Word[] = [
     entry_id: "c7efcd3394e347ea9bac8a4d0755501e",
     origin_entry_id: "JK000000077183",
     entry: "ぶさた",
+    kanji: "無沙汰·不沙汰",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23792,6 +25131,7 @@ export const n2Words: Word[] = [
     entry_id: "3a514853c8b74a30bd56cff97eebad15",
     origin_entry_id: "JK000000077211",
     entry: "ぶし",
+    kanji: "武士",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23808,6 +25148,7 @@ export const n2Words: Word[] = [
     entry_id: "52d01ebcb83b425393f1995873b650fc",
     origin_entry_id: "JK000000077280",
     entry: "ぶしゅ",
+    kanji: "部首",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23824,6 +25165,7 @@ export const n2Words: Word[] = [
     entry_id: "b6161cb858fc40ffa2db8f95ca08ad56",
     origin_entry_id: "JK000000077306",
     entry: "ぶしょ",
+    kanji: "部署",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23840,6 +25182,7 @@ export const n2Words: Word[] = [
     entry_id: "123f42b7c28a4e00aedcd597b03bdd63",
     origin_entry_id: "JK000000077217",
     entry: "ぶじ",
+    kanji: "無事",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23860,6 +25203,7 @@ export const n2Words: Word[] = [
     entry_id: "76f6f24c8e194bcda30672c19b775c3f",
     origin_entry_id: "JK000000077745",
     entry: "ぶっしつ",
+    kanji: "物質",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23876,6 +25220,7 @@ export const n2Words: Word[] = [
     entry_id: "0eb9b2ae9c7d4b46affc897aa411403a",
     origin_entry_id: "JK000000077783",
     entry: "ぶっそう",
+    kanji: "物騒",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23892,6 +25237,7 @@ export const n2Words: Word[] = [
     entry_id: "cb13e8fca5bc4d3b8bac5e8b48c8ae0f",
     origin_entry_id: "JK000000077626",
     entry: "ぶつ",
+    kanji: "打つ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23912,6 +25258,7 @@ export const n2Words: Word[] = [
     entry_id: "28c9f3d0bfbf49b886fb58d353b97eea",
     origin_entry_id: "JK000000078980",
     entry: "ぶん",
+    kanji: "分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23932,6 +25279,7 @@ export const n2Words: Word[] = [
     entry_id: "d70957ebe6b54062b25b9727949b68a3",
     origin_entry_id: "JK000000079008",
     entry: "ぶんかい",
+    kanji: "分解",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23952,6 +25300,7 @@ export const n2Words: Word[] = [
     entry_id: "44464ba43d1b434c848f70f6bc70f0d4",
     origin_entry_id: "JK000000079042",
     entry: "ぶんげい",
+    kanji: "文芸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23968,6 +25317,7 @@ export const n2Words: Word[] = [
     entry_id: "76931dd28e7142d2936e1d866c0e5360",
     origin_entry_id: "JK000000079133",
     entry: "ぶんせき",
+    kanji: "分析",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -23988,6 +25338,7 @@ export const n2Words: Word[] = [
     entry_id: "2524e945596b485d9e869b313bd5e6b8",
     origin_entry_id: "JK000000079162",
     entry: "ぶんたい",
+    kanji: "文体",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24004,6 +25355,7 @@ export const n2Words: Word[] = [
     entry_id: "fbca762998974e2d9f50f5cd6e817a6a",
     origin_entry_id: "JK000000079232",
     entry: "ぶんぷ",
+    kanji: "分布",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24024,6 +25376,7 @@ export const n2Words: Word[] = [
     entry_id: "0af331e613d24d33982df175f8a98614",
     origin_entry_id: "JK000000079261",
     entry: "ぶんみゃく",
+    kanji: "文脈",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24040,6 +25393,7 @@ export const n2Words: Word[] = [
     entry_id: "7e92f0491a054b209099c3b18a79a394",
     origin_entry_id: "JK000000079266",
     entry: "ぶんめい",
+    kanji: "文明",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24056,6 +25410,7 @@ export const n2Words: Word[] = [
     entry_id: "7364b438a04f44e8bb631f3b156f873a",
     origin_entry_id: "JK000000079271",
     entry: "ぶんや",
+    kanji: "分野",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24072,6 +25427,7 @@ export const n2Words: Word[] = [
     entry_id: "22cc260d7a70436eb76dcb4e3a3164bc",
     origin_entry_id: "JK000000079291",
     entry: "ぶんりょう",
+    kanji: "分量",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24088,6 +25444,7 @@ export const n2Words: Word[] = [
     entry_id: "ae92ccad03d748e38f707b86e151fc91",
     origin_entry_id: "JK000000079297",
     entry: "ぶんるい",
+    kanji: "分類",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24108,6 +25465,7 @@ export const n2Words: Word[] = [
     entry_id: "723ca075f6944350853feb16374e3afd",
     origin_entry_id: "JK000000079328",
     entry: "へい",
+    kanji: "塀·屏",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24124,6 +25482,7 @@ export const n2Words: Word[] = [
     entry_id: "e1b699059eef4ceda719372080bd34a4",
     origin_entry_id: "JK000000079383",
     entry: "へいかい",
+    kanji: "閉会",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24144,6 +25503,7 @@ export const n2Words: Word[] = [
     entry_id: "d83f5032e97e456facd6a32ccc7e46fd",
     origin_entry_id: "JK000000079517",
     entry: "へいたい",
+    kanji: "兵隊",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24160,6 +25520,7 @@ export const n2Words: Word[] = [
     entry_id: "35a20a5971df470197add81af744ce1c",
     origin_entry_id: "JK000000079583",
     entry: "へいや",
+    kanji: "平野",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24176,6 +25537,7 @@ export const n2Words: Word[] = [
     entry_id: "2074164d8bc5470dbd1f7a90a79fff21",
     origin_entry_id: "JK000000079742",
     entry: "へそ",
+    kanji: "臍",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24212,6 +25574,7 @@ export const n2Words: Word[] = [
     entry_id: "9ef3cb4c3da34403bb4b9415ed7d1213",
     origin_entry_id: "JK000000080380",
     entry: "へんぴん",
+    kanji: "返品",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24232,6 +25595,7 @@ export const n2Words: Word[] = [
     entry_id: "fbd14a690fa54e05b5c3027ccbfd5637",
     origin_entry_id: "JK000000079865",
     entry: "べっそう",
+    kanji: "別荘",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24248,6 +25612,7 @@ export const n2Words: Word[] = [
     entry_id: "9d15b61e29a74fc7aa17a1c9e7d778f4",
     origin_entry_id: "JK000000080257",
     entry: "べんじょ",
+    kanji: "便所",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24264,6 +25629,7 @@ export const n2Words: Word[] = [
     entry_id: "214a0d80bac3471184c87b7e2f64dcc0",
     origin_entry_id: "JK000000080514",
     entry: "ほう",
+    kanji: "法",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24284,6 +25650,7 @@ export const n2Words: Word[] = [
     entry_id: "ac3e466ab0414202b9ca42438879bc94",
     origin_entry_id: "JK000000080678",
     entry: "ほうがく",
+    kanji: "方角",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24300,6 +25667,7 @@ export const n2Words: Word[] = [
     entry_id: "53f863e0331a4aab9a4012c1534ef508",
     origin_entry_id: "JK000000080702",
     entry: "ほうき",
+    kanji: "箒·帚",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24316,6 +25684,7 @@ export const n2Words: Word[] = [
     entry_id: "539b8710aadf4093822233aad2a94b15",
     origin_entry_id: "JK000000080764",
     entry: "ほうげん",
+    kanji: "方言",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24332,6 +25701,7 @@ export const n2Words: Word[] = [
     entry_id: "2120a3701a1841d68c04a5ed2042a0fd",
     origin_entry_id: "JK000000080785",
     entry: "ほうこう",
+    kanji: "方向",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24348,6 +25718,7 @@ export const n2Words: Word[] = [
     entry_id: "e6c56d2083b249bfbd4f6a45b403fe73",
     origin_entry_id: "JK000000080897",
     entry: "ほうしゅつ",
+    kanji: "放出",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24368,6 +25739,7 @@ export const n2Words: Word[] = [
     entry_id: "88fb4a95784b4614b69585c388e9891e",
     origin_entry_id: "JK000000080952",
     entry: "ほうしん",
+    kanji: "方針",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24384,6 +25756,7 @@ export const n2Words: Word[] = [
     entry_id: "32445a554f2940c3bc12cd7dc61c4596",
     origin_entry_id: "JK000000081020",
     entry: "ほうそう",
+    kanji: "包装",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24404,6 +25777,7 @@ export const n2Words: Word[] = [
     entry_id: "33f69000892149eaba7b8e03741179f0",
     origin_entry_id: "JK000000081037",
     entry: "ほうたい",
+    kanji: "包帯·繃帯",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24420,6 +25794,7 @@ export const n2Words: Word[] = [
     entry_id: "3b0302debe5a481ca8b535b1e2072f78",
     origin_entry_id: "JK000000081097",
     entry: "ほうていしき",
+    kanji: "方程式",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24436,6 +25811,7 @@ export const n2Words: Word[] = [
     entry_id: "689b50a2a391474fb59b2b71c3c92a84",
     origin_entry_id: "JK000000081247",
     entry: "ほうもん",
+    kanji: "訪問",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24456,6 +25832,7 @@ export const n2Words: Word[] = [
     entry_id: "de27feee645143409b53b085437183bd",
     origin_entry_id: "JK000000081335",
     entry: "ほお",
+    kanji: "頬·頰",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24472,6 +25849,7 @@ export const n2Words: Word[] = [
     entry_id: "e6b404fe71814366943c226359f0d4cf",
     origin_entry_id: "JK000000081568",
     entry: "ほくべい",
+    kanji: "北米",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24488,6 +25866,7 @@ export const n2Words: Word[] = [
     entry_id: "ed47fe63c8ab4aec9456b23377cf3363",
     origin_entry_id: "JK000000081611",
     entry: "ほけん",
+    kanji: "保健",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24504,6 +25883,7 @@ export const n2Words: Word[] = [
     entry_id: "30ec23c695074cc3ad18a1add6489b44",
     origin_entry_id: "JK000000081644",
     entry: "ほこり",
+    kanji: "誇り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24520,6 +25900,7 @@ export const n2Words: Word[] = [
     entry_id: "8101871c42134294b064a022ec21dc43",
     origin_entry_id: "JK000000081745",
     entry: "ほしょう",
+    kanji: "保証",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24540,6 +25921,7 @@ export const n2Words: Word[] = [
     entry_id: "48db6f1416ce448a8cd2d19ca992db8c",
     origin_entry_id: "JK000000081919",
     entry: "ほっきょく",
+    kanji: "北極",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24556,6 +25938,7 @@ export const n2Words: Word[] = [
     entry_id: "3762b4587d6d4be088322841bc8d34ea",
     origin_entry_id: "JK000000082064",
     entry: "ほとけ",
+    kanji: "仏",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24572,6 +25955,7 @@ export const n2Words: Word[] = [
     entry_id: "a0247835e36b42e2b5831e8f834a5df9",
     origin_entry_id: "JK000000082055",
     entry: "ほど",
+    kanji: "程",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24592,6 +25976,7 @@ export const n2Words: Word[] = [
     entry_id: "ad9a87e30c954fb7a58f5976679fe0c6",
     origin_entry_id: "JK000000082135",
     entry: "ほのお",
+    kanji: "炎·焰",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24608,6 +25993,7 @@ export const n2Words: Word[] = [
     entry_id: "e25aaef01a804904bb5f36308a3aa37c",
     origin_entry_id: "JK000000082180",
     entry: "ほほ",
+    kanji: "頬",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24624,6 +26010,7 @@ export const n2Words: Word[] = [
     entry_id: "1c32c63e3be64b18b94d73f2e055b02d",
     origin_entry_id: "JK000000082240",
     entry: "ほり",
+    kanji: "堀·濠·壕",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24640,6 +26027,7 @@ export const n2Words: Word[] = [
     entry_id: "890c979cee5d444d88bca2a2879268fd",
     origin_entry_id: "JK000000082522",
     entry: "ほんしょ",
+    kanji: "本書",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24656,6 +26044,7 @@ export const n2Words: Word[] = [
     entry_id: "e5456014acb64e3d8e95adf78e8d918f",
     origin_entry_id: "JK000000082626",
     entry: "ほんと",
+    kanji: "本当",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24672,6 +26061,7 @@ export const n2Words: Word[] = [
     entry_id: "e6526a9ba10f44e8b65b5171c0a228f7",
     origin_entry_id: "JK000000082724",
     entry: "ほんらい",
+    kanji: "本来",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24692,6 +26082,7 @@ export const n2Words: Word[] = [
     entry_id: "058afbd42a2c4a2cbca3cf62cd9a14ec",
     origin_entry_id: "JK000000082738",
     entry: "ほんろん",
+    kanji: "本論",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24708,6 +26099,7 @@ export const n2Words: Word[] = [
     entry_id: "79fdf21165cb4628ac228c409a335b13",
     origin_entry_id: "JK000000080558",
     entry: "ぼう",
+    kanji: "棒",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24724,6 +26116,7 @@ export const n2Words: Word[] = [
     entry_id: "9cfa233096664b98a091fb831113a2d7",
     origin_entry_id: "JK100080635001",
     entry: "ぼうえんきょう",
+    kanji: "望遠鏡",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24740,6 +26133,7 @@ export const n2Words: Word[] = [
     entry_id: "c4d583aacfc14542bd0259b3f4cca216",
     origin_entry_id: "JK000000080768",
     entry: "ぼうけん",
+    kanji: "冒険",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24760,6 +26154,7 @@ export const n2Words: Word[] = [
     entry_id: "4668972b05ae48deaea3716b9735d956",
     origin_entry_id: "JK000000080772",
     entry: "ぼうげん",
+    kanji: "暴言",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24776,6 +26171,7 @@ export const n2Words: Word[] = [
     entry_id: "63ddd2406d7a4562986bc400b4b01f26",
     origin_entry_id: "JK000000080791",
     entry: "ぼうこう",
+    kanji: "暴行",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24796,6 +26192,7 @@ export const n2Words: Word[] = [
     entry_id: "30d91b5dde094c6483ec7d510ba127f1",
     origin_entry_id: "JK000000080811",
     entry: "ぼうさい",
+    kanji: "防災",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24812,6 +26209,7 @@ export const n2Words: Word[] = [
     entry_id: "5fc6f9a95fb6497a81f01e6c148c7c52",
     origin_entry_id: "JK000000080826",
     entry: "ぼうさん",
+    kanji: "坊<strong>さん</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24828,6 +26226,7 @@ export const n2Words: Word[] = [
     entry_id: "461fe4cc5f9e4a77a7766a3873d43ab5",
     origin_entry_id: "JK000000080858",
     entry: "ぼうし",
+    kanji: "防止",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24848,6 +26247,7 @@ export const n2Words: Word[] = [
     entry_id: "a98be5e0018d49f79002297a40286f06",
     origin_entry_id: "JK000000081045",
     entry: "ぼうだい",
+    kanji: "膨大·厖大",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24864,6 +26264,7 @@ export const n2Words: Word[] = [
     entry_id: "595d2cfade9649df9be6bb44e91374bb",
     origin_entry_id: "JK000000081167",
     entry: "ぼうはん",
+    kanji: "防犯",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24880,6 +26281,7 @@ export const n2Words: Word[] = [
     entry_id: "282965d2d8bc4d3fa91c5ed292165c2d",
     origin_entry_id: "JK000000081250",
     entry: "ぼうや",
+    kanji: "坊や",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24896,6 +26298,7 @@ export const n2Words: Word[] = [
     entry_id: "2ad04ce2aafc4f16a2eccaa6d558bdf0",
     origin_entry_id: "JK000000081292",
     entry: "ぼうりょく",
+    kanji: "暴力",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24912,6 +26315,7 @@ export const n2Words: Word[] = [
     entry_id: "a94f304dfedd41bdbf4b8efa1c885afc",
     origin_entry_id: "JK000000081520",
     entry: "ぼくじょう",
+    kanji: "牧場",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24928,6 +26332,7 @@ export const n2Words: Word[] = [
     entry_id: "3abaca9c60634ea8b5c6f76c7da4d137",
     origin_entry_id: "JK000000081544",
     entry: "ぼくちく",
+    kanji: "牧畜",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24944,6 +26349,7 @@ export const n2Words: Word[] = [
     entry_id: "b5c4baa190a14124a12e7caa7ab8fd98",
     origin_entry_id: "JK000000081739",
     entry: "ぼしゅう",
+    kanji: "募集",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24964,6 +26370,7 @@ export const n2Words: Word[] = [
     entry_id: "9c4cf36ac08e4e98ac682c32e1f166cd",
     origin_entry_id: "JK000000082352",
     entry: "ぼろ",
+    kanji: "襤褸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24980,6 +26387,7 @@ export const n2Words: Word[] = [
     entry_id: "dd738e2589f84657af454eada6f75fb3",
     origin_entry_id: "JK000000082395",
     entry: "ぼん",
+    kanji: "盆",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -24996,6 +26404,7 @@ export const n2Words: Word[] = [
     entry_id: "147766414ad644d8ae58cbd6e52c6e41",
     origin_entry_id: "JK000000082600",
     entry: "ぼんち",
+    kanji: "盆地",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25032,6 +26441,7 @@ export const n2Words: Word[] = [
     entry_id: "c3ebca5c987e4ff885ab8afe873b20d4",
     origin_entry_id: "JK000000082802",
     entry: "まいかい",
+    kanji: "毎回",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25048,6 +26458,7 @@ export const n2Words: Word[] = [
     entry_id: "1fbf4f6a5ce2418e8e7fb0645e5f68ea",
     origin_entry_id: "JK000000082828",
     entry: "まいすう",
+    kanji: "枚数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25064,6 +26475,7 @@ export const n2Words: Word[] = [
     entry_id: "f770896193df42e3b868e654d0441a04",
     origin_entry_id: "JK000000083080",
     entry: "まく",
+    kanji: "幕",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25084,6 +26496,7 @@ export const n2Words: Word[] = [
     entry_id: "4d177a3d56f34a9fbc0d9de88052513b",
     origin_entry_id: "JK000000083124",
     entry: "まくら",
+    kanji: "枕",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25100,6 +26513,7 @@ export const n2Words: Word[] = [
     entry_id: "03df882ab6ca4aaea9bb151c785410d5",
     origin_entry_id: "JK000000083224",
     entry: "まさつ",
+    kanji: "摩擦",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25120,6 +26534,7 @@ export const n2Words: Word[] = [
     entry_id: "7be72d59fd004500af3095d2dc21c575",
     origin_entry_id: "JK100083434001",
     entry: "まちあいしつ",
+    kanji: "待合室",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25136,6 +26551,7 @@ export const n2Words: Word[] = [
     entry_id: "c8d248f036e743cb91d5a6c0073c1e35",
     origin_entry_id: "JK000000083472",
     entry: "まちなか",
+    kanji: "町中",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25152,6 +26568,7 @@ export const n2Words: Word[] = [
     entry_id: "8b7a5570f74a41d3a0aeae5ec98ab107",
     origin_entry_id: "JK000000083543",
     entry: "まっさき",
+    kanji: "真っ先",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25168,6 +26585,7 @@ export const n2Words: Word[] = [
     entry_id: "8b6ead6ac528429faedc528db5c36da8",
     origin_entry_id: "JK000000083721",
     entry: "まなつ",
+    kanji: "真夏",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25184,6 +26602,7 @@ export const n2Words: Word[] = [
     entry_id: "5ed117522a574110b954c084a41a7c4e",
     origin_entry_id: "JK000000083796",
     entry: "まふゆ",
+    kanji: "真冬",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25200,6 +26619,7 @@ export const n2Words: Word[] = [
     entry_id: "9e9093b685224080be4c9502865d14de",
     origin_entry_id: "JK000000083793",
     entry: "まぶた",
+    kanji: "瞼·目蓋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25216,6 +26636,7 @@ export const n2Words: Word[] = [
     entry_id: "ccc340b932a24c64beec509de9f06217",
     origin_entry_id: "JK000000083941",
     entry: "まる",
+    kanji: "円",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25232,6 +26653,7 @@ export const n2Words: Word[] = [
     entry_id: "69484c8d958842a19bf83a13ebd6ebde",
     origin_entry_id: "JK000000084107",
     entry: "まんいち",
+    kanji: "万一",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25248,6 +26670,7 @@ export const n2Words: Word[] = [
     entry_id: "f56cf333237d4c15a560eb64a4880adc",
     origin_entry_id: "JK000000084227",
     entry: "まんびき",
+    kanji: "万引(き)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25268,6 +26691,7 @@ export const n2Words: Word[] = [
     entry_id: "735854a4ec424425926268106a3cb523",
     origin_entry_id: "JK000000084275",
     entry: "み",
+    kanji: "実",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25288,6 +26712,7 @@ export const n2Words: Word[] = [
     entry_id: "b3d09b44b20b4f7c86ccfea815edfd7e",
     origin_entry_id: "JK000000084383",
     entry: "みかけ",
+    kanji: "見掛け",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25304,6 +26729,7 @@ export const n2Words: Word[] = [
     entry_id: "edc675851994486bb0b8f8788e5df827",
     origin_entry_id: "JK000000084389",
     entry: "みかた",
+    kanji: "見方",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25320,6 +26746,7 @@ export const n2Words: Word[] = [
     entry_id: "435e5cc17db542f885a774881cb94d02",
     origin_entry_id: "JK000000084391",
     entry: "みかづき",
+    kanji: "三日月",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25336,6 +26763,7 @@ export const n2Words: Word[] = [
     entry_id: "9c3eb1ec5072493f9c5e0db9326f7454",
     origin_entry_id: "JK000000084496",
     entry: "みさき",
+    kanji: "岬·崎",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25352,6 +26780,7 @@ export const n2Words: Word[] = [
     entry_id: "f93e921cb29247089e7790f40704b76c",
     origin_entry_id: "JK000000084601",
     entry: "みずから",
+    kanji: "自ら",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25372,6 +26801,7 @@ export const n2Words: Word[] = [
     entry_id: "1e9da57bd73a4e8e8acf18b21d15419e",
     origin_entry_id: "JK000000084778",
     entry: "みせや",
+    kanji: "店屋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25388,6 +26818,7 @@ export const n2Words: Word[] = [
     entry_id: "2c19a4a5109c43f68008ac09a0270aa2",
     origin_entry_id: "JK000000084782",
     entry: "みそ",
+    kanji: "味噌",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25404,6 +26835,7 @@ export const n2Words: Word[] = [
     entry_id: "6a387a963742487f98269ee4e809aceb",
     origin_entry_id: "JK000000084879",
     entry: "みちじゅん",
+    kanji: "道順",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25420,6 +26852,7 @@ export const n2Words: Word[] = [
     entry_id: "b1bc50e973384d819fd1cbc459112929",
     origin_entry_id: "JK000000085208",
     entry: "みぶん",
+    kanji: "身分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25436,6 +26869,7 @@ export const n2Words: Word[] = [
     entry_id: "b6a00fbe22384208b995a95635977c91",
     origin_entry_id: "JK000000085213",
     entry: "みほん",
+    kanji: "見本",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25452,6 +26886,7 @@ export const n2Words: Word[] = [
     entry_id: "3953357526314d9a9c6091953e4c859d",
     origin_entry_id: "JK000000085229",
     entry: "みまん",
+    kanji: "未満",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25468,6 +26903,7 @@ export const n2Words: Word[] = [
     entry_id: "a1f6cc97b61f4b13b72c9f93a11aea6b",
     origin_entry_id: "JK000000085281",
     entry: "みもと",
+    kanji: "身元·身許",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25484,6 +26920,7 @@ export const n2Words: Word[] = [
     entry_id: "dec25cbd96fd41bc8516c8954c35ac05",
     origin_entry_id: "JK000000085306",
     entry: "みやこ",
+    kanji: "都·京",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25500,6 +26937,7 @@ export const n2Words: Word[] = [
     entry_id: "892f9660214d4ab49d8dbccd44ff1ad6",
     origin_entry_id: "JK000000085372",
     entry: "みょう",
+    kanji: "妙",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25520,6 +26958,7 @@ export const n2Words: Word[] = [
     entry_id: "1fefb9813c55449aace2a69f5b85c88c",
     origin_entry_id: "JK000000085402",
     entry: "みょうじ",
+    kanji: "名字·苗字",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25536,6 +26975,7 @@ export const n2Words: Word[] = [
     entry_id: "ae8fb352b24d4f129cff0af544428007",
     origin_entry_id: "JK000000085467",
     entry: "みりょく",
+    kanji: "魅力",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25552,6 +26992,7 @@ export const n2Words: Word[] = [
     entry_id: "5c56946fe1ff44acb6ce91c1625bd633",
     origin_entry_id: "JK000000085513",
     entry: "みんしゅ",
+    kanji: "民主",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25568,6 +27009,7 @@ export const n2Words: Word[] = [
     entry_id: "e4c5de3741204c2e81fc560bb2604642",
     origin_entry_id: "JK000000085551",
     entry: "みんよう",
+    kanji: "民謡",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25584,6 +27026,7 @@ export const n2Words: Word[] = [
     entry_id: "836c5f44ab3a47528b5e2c40de03ea1b",
     origin_entry_id: "JK000000085778",
     entry: "むげん",
+    kanji: "無限",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25604,6 +27047,7 @@ export const n2Words: Word[] = [
     entry_id: "c06162eae3214a3c83973a3fef5d4072",
     origin_entry_id: "JK000000085933",
     entry: "むじゅん",
+    kanji: "矛盾",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25624,6 +27068,7 @@ export const n2Words: Word[] = [
     entry_id: "9f297e68f8634e68bd389cf53daf2c91",
     origin_entry_id: "JK000000086016",
     entry: "むせきにん",
+    kanji: "無責任",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25644,6 +27089,7 @@ export const n2Words: Word[] = [
     entry_id: "773c302c93b445e0bdd00d1595808a0f",
     origin_entry_id: "JK000000086241",
     entry: "むらさき",
+    kanji: "紫",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25660,6 +27106,7 @@ export const n2Words: Word[] = [
     entry_id: "8a324c84246c413fbade7d2d352647f5",
     origin_entry_id: "JK000000086285",
     entry: "むれ",
+    kanji: "群(れ)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25676,6 +27123,7 @@ export const n2Words: Word[] = [
     entry_id: "12a46c8e363248d9a258b8366440b536",
     origin_entry_id: "JK000000086307",
     entry: "め",
+    kanji: "芽",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25692,6 +27140,7 @@ export const n2Words: Word[] = [
     entry_id: "5ad6571f39e142dcb172639f8b3da736",
     origin_entry_id: "JK000000086321",
     entry: "めい",
+    kanji: "名",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25712,6 +27161,7 @@ export const n2Words: Word[] = [
     entry_id: "09addc0c81f1493e9d03fa55caa045ef",
     origin_entry_id: "JK000000086412",
     entry: "めいし",
+    kanji: "名詞",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25728,6 +27178,7 @@ export const n2Words: Word[] = [
     entry_id: "94fba16b6a554cf6a295ce16eeda70ad",
     origin_entry_id: "JK000000086435",
     entry: "めいしょ",
+    kanji: "名所",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25744,6 +27195,7 @@ export const n2Words: Word[] = [
     entry_id: "e62de9d3caf14a14ac481586818cb323",
     origin_entry_id: "JK000000086454",
     entry: "めいしん",
+    kanji: "迷信",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25760,6 +27212,7 @@ export const n2Words: Word[] = [
     entry_id: "c64be40448aa43b1b65adf578c95d51d",
     origin_entry_id: "JK000000086526",
     entry: "めいぶつ",
+    kanji: "名物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25776,6 +27229,7 @@ export const n2Words: Word[] = [
     entry_id: "cb10f0e549f34870a13434189cb6635a",
     origin_entry_id: "JK000000086549",
     entry: "めいめい",
+    kanji: "銘銘",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25792,6 +27246,7 @@ export const n2Words: Word[] = [
     entry_id: "78e623c063a342b3832845311b9cc27e",
     origin_entry_id: "JK000000086570",
     entry: "めいれい",
+    kanji: "命令",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25812,6 +27267,7 @@ export const n2Words: Word[] = [
     entry_id: "019abae6c04b4c9195b9adf291f14a51",
     origin_entry_id: "JK000000086572",
     entry: "めいろ",
+    kanji: "迷路",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25828,6 +27284,7 @@ export const n2Words: Word[] = [
     entry_id: "ab3b1d2ab3d741a1967f12380ce5aabe",
     origin_entry_id: "JK000000086749",
     entry: "めじるし",
+    kanji: "目印·目標",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25844,6 +27301,7 @@ export const n2Words: Word[] = [
     entry_id: "b59aed3d317245c083bf713c1ded1524",
     origin_entry_id: "JK100086810001",
     entry: "めちゃくちゃ",
+    kanji: "滅茶苦茶",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25864,6 +27322,7 @@ export const n2Words: Word[] = [
     entry_id: "fb785d23f191452f889da6bd9bbab146",
     origin_entry_id: "JK000000086960",
     entry: "めやす",
+    kanji: "目安",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25880,6 +27339,7 @@ export const n2Words: Word[] = [
     entry_id: "b58fa1a331104e34b13c52c0f0efb141",
     origin_entry_id: "JK000000087004",
     entry: "めん",
+    kanji: "面",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25900,6 +27360,7 @@ export const n2Words: Word[] = [
     entry_id: "1db337bba191428e83ad3ad82863e406",
     origin_entry_id: "JK000000087014",
     entry: "めんえき",
+    kanji: "免疫",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25916,6 +27377,7 @@ export const n2Words: Word[] = [
     entry_id: "797952540bd1456a8be9082e80a91572",
     origin_entry_id: "JK000000087057",
     entry: "めんせき",
+    kanji: "面積",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25932,6 +27394,7 @@ export const n2Words: Word[] = [
     entry_id: "44230f70b7d84e77b3e21663bf1a21c5",
     origin_entry_id: "JK000000087245",
     entry: "もうしわけ",
+    kanji: "申し訳",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25952,6 +27415,7 @@ export const n2Words: Word[] = [
     entry_id: "c9b1cfc6abb640d0b75346c6f44c311f",
     origin_entry_id: "JK000000087390",
     entry: "もくざい",
+    kanji: "木材",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25968,6 +27432,7 @@ export const n2Words: Word[] = [
     entry_id: "9c0509d18d2845f6ad8a214d6ba6d086",
     origin_entry_id: "JK000000087399",
     entry: "もくじ",
+    kanji: "目次",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -25984,6 +27449,7 @@ export const n2Words: Word[] = [
     entry_id: "34a53a7318624ecca580e131e2d36fef",
     origin_entry_id: "JK000000087413",
     entry: "もくせい",
+    kanji: "木製",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26000,6 +27466,7 @@ export const n2Words: Word[] = [
     entry_id: "f828fa5d34134e04a247ac4eeb635686",
     origin_entry_id: "JK000000087419",
     entry: "もくぞう",
+    kanji: "木造",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26016,6 +27483,7 @@ export const n2Words: Word[] = [
     entry_id: "f33bdb3eb65847ddaae4a4df784bf4bc",
     origin_entry_id: "JK000000087458",
     entry: "もくよう",
+    kanji: "木曜",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26032,6 +27500,7 @@ export const n2Words: Word[] = [
     entry_id: "37d0000e598a4dd09b0cafb53d991981",
     origin_entry_id: "JK000000087567",
     entry: "もち",
+    kanji: "持ち",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26048,6 +27517,7 @@ export const n2Words: Word[] = [
     entry_id: "bb0dd77f2ab74922b3c038131ec26167",
     origin_entry_id: "JK000000087631",
     entry: "もちぬし",
+    kanji: "持(ち)主",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26064,6 +27534,7 @@ export const n2Words: Word[] = [
     entry_id: "0a8aaeac33284dd7ae4e0e8136d9f9b4",
     origin_entry_id: "JK000000087745",
     entry: "もと",
+    kanji: "元·原",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26084,6 +27555,7 @@ export const n2Words: Word[] = [
     entry_id: "717c90b42bc649cf80073a43b99bc439",
     origin_entry_id: "JK000000087843",
     entry: "ものおと",
+    kanji: "物音",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26100,6 +27572,7 @@ export const n2Words: Word[] = [
     entry_id: "f4280afa5d4e45a6a5bfbc911df1dcb3",
     origin_entry_id: "JK000000087883",
     entry: "ものごと",
+    kanji: "物事",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26116,6 +27589,7 @@ export const n2Words: Word[] = [
     entry_id: "5f750a3c51ed42f9832fa7a5202b9e98",
     origin_entry_id: "JK000000087885",
     entry: "ものさし",
+    kanji: "物指(し)·物差(し)",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26132,6 +27606,7 @@ export const n2Words: Word[] = [
     entry_id: "adbd81a07be54c268deb8313fd6f41b8",
     origin_entry_id: "JK000000087995",
     entry: "もみじ",
+    kanji: "紅葉·黄葉",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26152,6 +27627,7 @@ export const n2Words: Word[] = [
     entry_id: "7a2aebb2534c484898998c12e6fe0c12",
     origin_entry_id: "JK000000088057",
     entry: "もよおし",
+    kanji: "催し",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26168,6 +27644,7 @@ export const n2Words: Word[] = [
     entry_id: "d99ef65778324cb181394fb209e09e99",
     origin_entry_id: "JK000000088202",
     entry: "もんじ",
+    kanji: "文字",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26184,6 +27661,7 @@ export const n2Words: Word[] = [
     entry_id: "35651437271244b2ac045d499e6cecba",
     origin_entry_id: "JK000000088244",
     entry: "もんどう",
+    kanji: "問答",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26204,6 +27682,7 @@ export const n2Words: Word[] = [
     entry_id: "ff43e21e95d24040b87b9db0db89329e",
     origin_entry_id: "JK000000088354",
     entry: "やかん",
+    kanji: "薬缶",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26220,6 +27699,7 @@ export const n2Words: Word[] = [
     entry_id: "0d87c5b361df440890a11f1f999117b8",
     origin_entry_id: "JK000000088431",
     entry: "やきもの",
+    kanji: "焼(き)物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26236,6 +27716,7 @@ export const n2Words: Word[] = [
     entry_id: "c6a3b1a76fab4184a2ba592ab6d6c8c4",
     origin_entry_id: "JK000000088446",
     entry: "やく",
+    kanji: "役",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26260,6 +27741,7 @@ export const n2Words: Word[] = [
     entry_id: "f2778f6630b34902b2cfc3c74a09c16d",
     origin_entry_id: "JK000000088493",
     entry: "やくしゃ",
+    kanji: "役者",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26276,6 +27758,7 @@ export const n2Words: Word[] = [
     entry_id: "9bc81bfbbd7d46babe8d3e7b669beb31",
     origin_entry_id: "JK000000088499",
     entry: "やくしょ",
+    kanji: "役所",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26292,6 +27775,7 @@ export const n2Words: Word[] = [
     entry_id: "763ffa970ed1425dbc3ea3569c5a4429",
     origin_entry_id: "JK000000088553",
     entry: "やくにん",
+    kanji: "役人",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26308,6 +27792,7 @@ export const n2Words: Word[] = [
     entry_id: "7e5be4f1fc8d4a37926cdecc9fa14672",
     origin_entry_id: "JK000000088561",
     entry: "やくひん",
+    kanji: "薬品",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26324,6 +27809,7 @@ export const n2Words: Word[] = [
     entry_id: "319106a00f914645a5049c22e063e55c",
     origin_entry_id: "JK000000088577",
     entry: "やくめ",
+    kanji: "役目",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26340,6 +27826,7 @@ export const n2Words: Word[] = [
     entry_id: "52b7c9d999d44eb583a776d07a5c7ffa",
     origin_entry_id: "JK000000088601",
     entry: "やくわり",
+    kanji: "役割",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26356,6 +27843,7 @@ export const n2Words: Word[] = [
     entry_id: "e041d1cde0db4f20b6c7c60d288fe8b1",
     origin_entry_id: "JK000000088650",
     entry: "やこう",
+    kanji: "夜行",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26376,6 +27864,7 @@ export const n2Words: Word[] = [
     entry_id: "f1dab4898e4f4b3984b480349b43c149",
     origin_entry_id: "JK000000088706",
     entry: "やじるし",
+    kanji: "矢印",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26392,6 +27881,7 @@ export const n2Words: Word[] = [
     entry_id: "8da85728bca8498bb198eb8b01650622",
     origin_entry_id: "JK000000088764",
     entry: "やせい",
+    kanji: "野生",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26416,6 +27906,7 @@ export const n2Words: Word[] = [
     entry_id: "71b9edc6668341abbea6497e1c539f9a",
     origin_entry_id: "JK000000088835",
     entry: "やっかい",
+    kanji: "厄介",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26432,6 +27923,7 @@ export const n2Words: Word[] = [
     entry_id: "1a79cf08e96d4d79aff9a9272925c0f7",
     origin_entry_id: "JK000000088901",
     entry: "やど",
+    kanji: "宿·屋戸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26448,6 +27940,7 @@ export const n2Words: Word[] = [
     entry_id: "608ea0e4a3f34ff39762f4f65ceeddb1",
     origin_entry_id: "JK000000088959",
     entry: "やぬし",
+    kanji: "家主",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26464,6 +27957,7 @@ export const n2Words: Word[] = [
     entry_id: "e47addc05b2b45ea8858cbfe41b5f602",
     origin_entry_id: "JK000000088961",
     entry: "やね",
+    kanji: "屋根",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26480,6 +27974,7 @@ export const n2Words: Word[] = [
     entry_id: "4ef0e117099d4e23a16b271cf0cb09a0",
     origin_entry_id: "JK000000089051",
     entry: "やまかじ",
+    kanji: "山火事",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26496,6 +27991,7 @@ export const n2Words: Word[] = [
     entry_id: "59edf9b0ab924dd8adaa8b6ac4d9af38",
     origin_entry_id: "JK000000089086",
     entry: "やまごや",
+    kanji: "山小屋",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26512,6 +28008,7 @@ export const n2Words: Word[] = [
     entry_id: "0ae2b287668b48338b229250c6643db4",
     origin_entry_id: "JK000000089417",
     entry: "ゆいいつ",
+    kanji: "唯一",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26528,6 +28025,7 @@ export const n2Words: Word[] = [
     entry_id: "adcd7fa40b73486384cbd6baff1f86d6",
     origin_entry_id: "JK000000089422",
     entry: "ゆいごん",
+    kanji: "遺言",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26548,6 +28046,7 @@ export const n2Words: Word[] = [
     entry_id: "07c663f5814447d1bba54c2a5ecb3ca1",
     origin_entry_id: "JK100089503001",
     entry: "ゆうえんち",
+    kanji: "遊園地",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26564,6 +28063,7 @@ export const n2Words: Word[] = [
     entry_id: "043094aa15714d2ab865180cc9a1c7bd",
     origin_entry_id: "JK000000089538",
     entry: "ゆうかん",
+    kanji: "夕刊",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26580,6 +28080,7 @@ export const n2Words: Word[] = [
     entry_id: "65b9f4d4543d4e2eb57fbfa9c8f73f5d",
     origin_entry_id: "JK000000089664",
     entry: "ゆうしゅう",
+    kanji: "優秀",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26596,6 +28097,7 @@ export const n2Words: Word[] = [
     entry_id: "acb333af3792414980f59ffa618d5aa8",
     origin_entry_id: "JK000000089680",
     entry: "ゆうしょう",
+    kanji: "優勝",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26616,6 +28118,7 @@ export const n2Words: Word[] = [
     entry_id: "72ec928da5ff446bacca56fd486d9ac7",
     origin_entry_id: "JK000000089798",
     entry: "ゆうのう",
+    kanji: "有能",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26632,6 +28135,7 @@ export const n2Words: Word[] = [
     entry_id: "b62fccd74f71477780b60f2ba7d2c84d",
     origin_entry_id: "JK000000089887",
     entry: "ゆうりょう",
+    kanji: "優良",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26648,6 +28152,7 @@ export const n2Words: Word[] = [
     entry_id: "72f8edbf7bed41818568a78d9ec03498",
     origin_entry_id: "JK000000089920",
     entry: "ゆかい",
+    kanji: "愉快",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26668,6 +28173,7 @@ export const n2Words: Word[] = [
     entry_id: "a308b721bff34a0396f7910c25d67369",
     origin_entry_id: "JK000000089929",
     entry: "ゆかた",
+    kanji: "浴衣",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26684,6 +28190,7 @@ export const n2Words: Word[] = [
     entry_id: "7ef93677b409436d834f148bc1ac7a43",
     origin_entry_id: "JK000000090037",
     entry: "ゆきどまり",
+    kanji: "行(き)止まり",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26700,6 +28207,7 @@ export const n2Words: Word[] = [
     entry_id: "bace5a6c431d46bcb54e577894459d7b",
     origin_entry_id: "JK000000090092",
     entry: "ゆくえ",
+    kanji: "行方",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26716,6 +28224,7 @@ export const n2Words: Word[] = [
     entry_id: "03eca4cc5a48452a970aea76c38d9ce7",
     origin_entry_id: "JK000000090108",
     entry: "ゆけつ",
+    kanji: "輸血",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26736,6 +28245,7 @@ export const n2Words: Word[] = [
     entry_id: "f297e0b3045c4469a14eae41c970c3e8",
     origin_entry_id: "JK000000090105",
     entry: "ゆげ",
+    kanji: "湯気",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26752,6 +28262,7 @@ export const n2Words: Word[] = [
     entry_id: "acdb3ee0857248b890e5e33fa8b19ba3",
     origin_entry_id: "JK000000090170",
     entry: "ゆそう",
+    kanji: "輸送",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26772,6 +28283,7 @@ export const n2Words: Word[] = [
     entry_id: "a515341c96fd4178bc20009d2948dd06",
     origin_entry_id: "JK000000090183",
     entry: "ゆだん",
+    kanji: "油断",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26792,6 +28304,7 @@ export const n2Words: Word[] = [
     entry_id: "994c41e1f916491e88587912ec0e4636",
     origin_entry_id: "JK000000090233",
     entry: "ゆのみ",
+    kanji: "湯飲み·湯呑み",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26808,6 +28321,7 @@ export const n2Words: Word[] = [
     entry_id: "90a39a7c51a14339932ee70e13783263",
     origin_entry_id: "JK000000090384",
     entry: "よ",
+    kanji: "夜",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26848,6 +28362,7 @@ export const n2Words: Word[] = [
     entry_id: "05a3bfed76b24f26bdf914cad87f55be",
     origin_entry_id: "JK000000090449",
     entry: "よう",
+    kanji: "様",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26868,6 +28383,7 @@ export const n2Words: Word[] = [
     entry_id: "57e5a118627149c7990d76a304621f88",
     origin_entry_id: "JK000000090553",
     entry: "ようがん",
+    kanji: "溶岩·熔岩·鎔岩",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26884,6 +28400,7 @@ export const n2Words: Word[] = [
     entry_id: "3256893331fc4963a9c9f7699e16f4d2",
     origin_entry_id: "JK000000090559",
     entry: "ようき",
+    kanji: "陽気",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26904,6 +28421,7 @@ export const n2Words: Word[] = [
     entry_id: "85e9c8c96a074f94979b7bff7bcc6326",
     origin_entry_id: "JK000000090606",
     entry: "ようご",
+    kanji: "用語",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26920,6 +28438,7 @@ export const n2Words: Word[] = [
     entry_id: "e3d5dc500f744ed3adfb01c0cabe721c",
     origin_entry_id: "JK000000090642",
     entry: "ようし",
+    kanji: "要旨",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26936,6 +28455,7 @@ export const n2Words: Word[] = [
     entry_id: "dafcb0d0095242818caff4b74d21340d",
     origin_entry_id: "JK000000090699",
     entry: "ようじん",
+    kanji: "用心·要心",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26956,6 +28476,7 @@ export const n2Words: Word[] = [
     entry_id: "5493e3ba8a2b462c8c06ae2b0a70fe5f",
     origin_entry_id: "JK000000090704",
     entry: "ようす",
+    kanji: "様子·容子",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26972,6 +28493,7 @@ export const n2Words: Word[] = [
     entry_id: "e8c1f3f702e24daa884875f5fcdf42ce",
     origin_entry_id: "JK000000090725",
     entry: "ようせき",
+    kanji: "容積",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -26988,6 +28510,7 @@ export const n2Words: Word[] = [
     entry_id: "53997f316ca74fc4b1fcf455fbe26895",
     origin_entry_id: "JK000000090736",
     entry: "ようそ",
+    kanji: "要素",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27004,6 +28527,7 @@ export const n2Words: Word[] = [
     entry_id: "cad64108531a4439a35e9f3def216f52",
     origin_entry_id: "JK000000090755",
     entry: "ようち",
+    kanji: "幼稚",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27020,6 +28544,7 @@ export const n2Words: Word[] = [
     entry_id: "629da3ba963d446b945512d46cc89b68",
     origin_entry_id: "JK000000090776",
     entry: "ようてん",
+    kanji: "要点",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27036,6 +28561,7 @@ export const n2Words: Word[] = [
     entry_id: "42c8d6305312475e9bb965df84d8d3b5",
     origin_entry_id: "JK000000090820",
     entry: "ようび",
+    kanji: "曜日",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27052,6 +28578,7 @@ export const n2Words: Word[] = [
     entry_id: "1ab09c8420e6416bac736e21321ed5e3",
     origin_entry_id: "JK000000090837",
     entry: "ようぶん",
+    kanji: "養分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27068,6 +28595,7 @@ export const n2Words: Word[] = [
     entry_id: "88ef4ca0d77c4a2dbbe750d85533ef52",
     origin_entry_id: "JK000000090871",
     entry: "ようもう",
+    kanji: "羊毛",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27084,6 +28612,7 @@ export const n2Words: Word[] = [
     entry_id: "0471b7848d644baebc4944619f01cbe2",
     origin_entry_id: "JK000000090905",
     entry: "ようりょう",
+    kanji: "要領",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27100,6 +28629,7 @@ export const n2Words: Word[] = [
     entry_id: "22452a1e9fbc482085b68934f2ca7f6a",
     origin_entry_id: "JK000000090956",
     entry: "よかん",
+    kanji: "予感",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27120,6 +28650,7 @@ export const n2Words: Word[] = [
     entry_id: "2a35aa6ce56e4860b41b3e9fd97f5f8e",
     origin_entry_id: "JK000000090961",
     entry: "よき",
+    kanji: "予期",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27140,6 +28671,7 @@ export const n2Words: Word[] = [
     entry_id: "3f70e97ef0394fe7bd682aefe411c746",
     origin_entry_id: "JK000000090985",
     entry: "よくあさ",
+    kanji: "翌朝",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27156,6 +28688,7 @@ export const n2Words: Word[] = [
     entry_id: "8024e016f49246f78f2cd1ed6e80c45e",
     origin_entry_id: "JK000000091024",
     entry: "よくとし",
+    kanji: "翌年",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27172,6 +28705,7 @@ export const n2Words: Word[] = [
     entry_id: "044eecb418314185b1da67e5a335b6e2",
     origin_entry_id: "JK000000091085",
     entry: "よこく",
+    kanji: "予告",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27192,6 +28726,7 @@ export const n2Words: Word[] = [
     entry_id: "204a6c634437498cb3dc023aec6ab308",
     origin_entry_id: "JK000000091156",
     entry: "よこみち",
+    kanji: "横道·横路",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27212,6 +28747,7 @@ export const n2Words: Word[] = [
     entry_id: "a0e3be7ba13d4d28a4334123752222ab",
     origin_entry_id: "JK000000091280",
     entry: "よせん",
+    kanji: "予選",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27232,6 +28768,7 @@ export const n2Words: Word[] = [
     entry_id: "c9944377665c40cbb2ac4bb1a5c5b2c1",
     origin_entry_id: "JK000000091283",
     entry: "よそ",
+    kanji: "余所·他所",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27248,6 +28785,7 @@ export const n2Words: Word[] = [
     entry_id: "e9c4643706d94289a64c0b4b92a02858",
     origin_entry_id: "JK000000091294",
     entry: "よそく",
+    kanji: "予測",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27268,6 +28806,7 @@ export const n2Words: Word[] = [
     entry_id: "45591b1b3c72467db7bfd0aa61333b78",
     origin_entry_id: "JK000000091305",
     entry: "よぞら",
+    kanji: "夜空",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27284,6 +28823,7 @@ export const n2Words: Word[] = [
     entry_id: "7b87fb4c07db406d9ab180336eabf2dd",
     origin_entry_id: "JK000000091368",
     entry: "よっぱらい",
+    kanji: "酔(っ)払い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27300,6 +28840,7 @@ export const n2Words: Word[] = [
     entry_id: "15a50656981f489085f9f12bdbe1678c",
     origin_entry_id: "JK000000091389",
     entry: "よとう",
+    kanji: "与党",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27316,6 +28857,7 @@ export const n2Words: Word[] = [
     entry_id: "6a727a3661a34a57a905fcda7271867d",
     origin_entry_id: "JK000000091460",
     entry: "よび",
+    kanji: "予備",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27332,6 +28874,7 @@ export const n2Words: Word[] = [
     entry_id: "db4c8b208ed040e3bd99dd45ac51bb45",
     origin_entry_id: "JK100091460004",
     entry: "よびこう",
+    kanji: "予備校",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27348,6 +28891,7 @@ export const n2Words: Word[] = [
     entry_id: "14f7f28d631b47e980ea15122753d91a",
     origin_entry_id: "JK000000091512",
     entry: "よぶん",
+    kanji: "余分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27364,6 +28908,7 @@ export const n2Words: Word[] = [
     entry_id: "4f3b525ea2af444eaeea528955f707ff",
     origin_entry_id: "JK000000091532",
     entry: "よみ",
+    kanji: "読み",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27380,6 +28925,7 @@ export const n2Words: Word[] = [
     entry_id: "bf1e652172e14acb9503e3c42513757c",
     origin_entry_id: "JK000000091610",
     entry: "よめ",
+    kanji: "嫁",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27396,6 +28942,7 @@ export const n2Words: Word[] = [
     entry_id: "662d3151849c48648769e1913cc22c1a",
     origin_entry_id: "JK000000091637",
     entry: "よゆう",
+    kanji: "余裕",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27412,6 +28959,7 @@ export const n2Words: Word[] = [
     entry_id: "f467cd0003954cffba6b7f739be04b07",
     origin_entry_id: "JK000000091769",
     entry: "よわき",
+    kanji: "弱気",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27428,6 +28976,7 @@ export const n2Words: Word[] = [
     entry_id: "940d426dec644f27903693be4aa05078",
     origin_entry_id: "JK000000091778",
     entry: "よわみ",
+    kanji: "弱み·弱味",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27444,6 +28993,7 @@ export const n2Words: Word[] = [
     entry_id: "bbe05e8814a445d8935f23bc607a13db",
     origin_entry_id: "JK000000091791",
     entry: "よん",
+    kanji: "四",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27460,6 +29010,7 @@ export const n2Words: Word[] = [
     entry_id: "13503d579b754fb9a8fe5494d412158d",
     origin_entry_id: "JK000000091932",
     entry: "らいにち",
+    kanji: "来日",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27480,6 +29031,7 @@ export const n2Words: Word[] = [
     entry_id: "3336203c1a6949f8b886c3f8d51dff2c",
     origin_entry_id: "JK000000092029",
     entry: "らくせん",
+    kanji: "落選",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27500,6 +29052,7 @@ export const n2Words: Word[] = [
     entry_id: "43df8c325d3a406898a96cf5c7d5bcad",
     origin_entry_id: "JK000000092034",
     entry: "らくだい",
+    kanji: "落第",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27520,6 +29073,7 @@ export const n2Words: Word[] = [
     entry_id: "99e61aabf16b43cda164b96f041f7477",
     origin_entry_id: "JK000000092215",
     entry: "らん",
+    kanji: "欄",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27536,6 +29090,7 @@ export const n2Words: Word[] = [
     entry_id: "ed395c0d880848e1a769b2e92d5341c1",
     origin_entry_id: "JK000000092362",
     entry: "らんぼう",
+    kanji: "乱暴",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27560,6 +29115,7 @@ export const n2Words: Word[] = [
     entry_id: "0d2d674111be46d3ae769dd794d10f5d",
     origin_entry_id: "JK000000092444",
     entry: "りえき",
+    kanji: "利益",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27576,6 +29132,7 @@ export const n2Words: Word[] = [
     entry_id: "38e450540b9a48a0b580c7ec7b43c68d",
     origin_entry_id: "JK000000092457",
     entry: "りがい",
+    kanji: "利害",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27592,6 +29149,7 @@ export const n2Words: Word[] = [
     entry_id: "ab82ec8c04b94ceb8b3b0fea62cd9da6",
     origin_entry_id: "JK000000092502",
     entry: "りく",
+    kanji: "陸",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27608,6 +29166,7 @@ export const n2Words: Word[] = [
     entry_id: "695f154a0dcf495caf8376e0ed57e960",
     origin_entry_id: "JK000000092544",
     entry: "りくち",
+    kanji: "陸地",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27624,6 +29183,7 @@ export const n2Words: Word[] = [
     entry_id: "6eba788cfa0e4d1daef07e342b593e76",
     origin_entry_id: "JK000000100068",
     entry: "りじかい",
+    kanji: "理事会",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -27640,6 +29200,7 @@ export const n2Words: Word[] = [
     entry_id: "6602c64d6e1d470faf58bbeff47f94be",
     origin_entry_id: "JK000000092673",
     entry: "りつ",
+    kanji: "率",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27656,6 +29217,7 @@ export const n2Words: Word[] = [
     entry_id: "0f087beffde842dab7d0453d98b30fe9",
     origin_entry_id: "JK000000092923",
     entry: "りゅういき",
+    kanji: "流域",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27692,6 +29254,7 @@ export const n2Words: Word[] = [
     entry_id: "934e45b7c3b744d3b6c490cba7eeaee4",
     origin_entry_id: "JK000000093211",
     entry: "りょうし",
+    kanji: "漁師",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27708,6 +29271,7 @@ export const n2Words: Word[] = [
     entry_id: "abd3f349ec7b449080a899349c689e6a",
     origin_entry_id: "JK000000093230",
     entry: "りょうしゅう",
+    kanji: "領収",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27728,6 +29292,7 @@ export const n2Words: Word[] = [
     entry_id: "96ea0350d2164a9688091f09f83e68d5",
     origin_entry_id: "JK000000093216",
     entry: "りょうじ",
+    kanji: "領事",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27744,6 +29309,7 @@ export const n2Words: Word[] = [
     entry_id: "fa0335302c8f42879e92870361f60327",
     origin_entry_id: "JK000000093605",
     entry: "りんじ",
+    kanji: "臨時",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27760,6 +29326,7 @@ export const n2Words: Word[] = [
     entry_id: "f256d6dfec944e4b9bcf46131a0f1066",
     origin_entry_id: "JK000000093880",
     entry: "れい",
+    kanji: "例",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27776,6 +29343,7 @@ export const n2Words: Word[] = [
     entry_id: "6e359a49570f466685d41018aedcd07c",
     origin_entry_id: "JK000000093948",
     entry: "れいぎ",
+    kanji: "礼儀",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27792,6 +29360,7 @@ export const n2Words: Word[] = [
     entry_id: "662044447f2045d8a6d248dfbb20fcfd",
     origin_entry_id: "JK000000094077",
     entry: "れいてん",
+    kanji: "零点",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27808,6 +29377,7 @@ export const n2Words: Word[] = [
     entry_id: "47866ae312724d548be770cc47e08668",
     origin_entry_id: "JK000000094325",
     entry: "れっとう",
+    kanji: "列島",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27824,6 +29394,7 @@ export const n2Words: Word[] = [
     entry_id: "6f8ca052fd4c459e8bec606d290183d8",
     origin_entry_id: "JK000000094393",
     entry: "れんが",
+    kanji: "煉瓦",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27840,6 +29411,7 @@ export const n2Words: Word[] = [
     entry_id: "bac296c16345449d96686d4549be0a8f",
     origin_entry_id: "JK000000094418",
     entry: "れんごう",
+    kanji: "連合·聯合",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27860,6 +29432,7 @@ export const n2Words: Word[] = [
     entry_id: "f8349211b25949e1a8e9a0d757102c34",
     origin_entry_id: "JK000000094464",
     entry: "れんそう",
+    kanji: "連想·聯想",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27880,6 +29453,7 @@ export const n2Words: Word[] = [
     entry_id: "daee59457c124b8e9dbb9c36e2bc68f4",
     origin_entry_id: "JK000000094467",
     entry: "れんぞく",
+    kanji: "連続",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27900,6 +29474,7 @@ export const n2Words: Word[] = [
     entry_id: "11c0b71aef5a4d74aa23fefd01cd563e",
     origin_entry_id: "JK000000094745",
     entry: "ろうそく",
+    kanji: "蝋燭·蠟燭",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27916,6 +29491,7 @@ export const n2Words: Word[] = [
     entry_id: "69482e96bfb841bcb42f1b63447a4d70",
     origin_entry_id: "JK000000094767",
     entry: "ろうどう",
+    kanji: "労働",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27936,6 +29512,7 @@ export const n2Words: Word[] = [
     entry_id: "a5172345e1b54e4bb608e6539c292398",
     origin_entry_id: "JK000000095004",
     entry: "ろしゅつ",
+    kanji: "露出",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27956,6 +29533,7 @@ export const n2Words: Word[] = [
     entry_id: "0cf4c81c1dda45e1ac9b3c7a145e507b",
     origin_entry_id: "JK000000095016",
     entry: "ろせん",
+    kanji: "路線",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27972,6 +29550,7 @@ export const n2Words: Word[] = [
     entry_id: "580ce1a91dab4f0a9ef7e0fb7acd182c",
     origin_entry_id: "JK000000095112",
     entry: "ろん",
+    kanji: "論",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -27988,6 +29567,7 @@ export const n2Words: Word[] = [
     entry_id: "068a29a75f924a84b1819239d484cbe3",
     origin_entry_id: "JK000000095148",
     entry: "ろんそう",
+    kanji: "論争",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -28008,6 +29588,7 @@ export const n2Words: Word[] = [
     entry_id: "21755d36348e40e1a2f8dbd26f561139",
     origin_entry_id: "JK000000095169",
     entry: "ろんぶん",
+    kanji: "論文",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -28044,6 +29625,7 @@ export const n2Words: Word[] = [
     entry_id: "0a26b71eb5d7464f91107d17239d8104",
     origin_entry_id: "JK000000095240",
     entry: "わえい",
+    kanji: "和英",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -28060,6 +29642,7 @@ export const n2Words: Word[] = [
     entry_id: "d3376a9886f8414ba51380e500054934",
     origin_entry_id: "JK000000095327",
     entry: "わがまま",
+    kanji: "我がまま·我が儘·我が侭",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -28080,6 +29663,7 @@ export const n2Words: Word[] = [
     entry_id: "b7d40265ba024f8b91107fbb30590bcd",
     origin_entry_id: "JK000000095378",
     entry: "わき",
+    kanji: "脇",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -28096,6 +29680,7 @@ export const n2Words: Word[] = [
     entry_id: "3be9739b7ca6411e992710ead6ddeb8b",
     origin_entry_id: "JK000000095494",
     entry: "わこうど",
+    kanji: "若人",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -28112,6 +29697,7 @@ export const n2Words: Word[] = [
     entry_id: "d9d96fe2c0bc419fa5f7fc02ad5aa3a4",
     origin_entry_id: "JK000000095594",
     entry: "わた",
+    kanji: "綿·棉",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -28128,6 +29714,7 @@ export const n2Words: Word[] = [
     entry_id: "583311445ed1446487ec48cd319ea129",
     origin_entry_id: "JK000000095747",
     entry: "わふく",
+    kanji: "和服",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -28144,6 +29731,7 @@ export const n2Words: Word[] = [
     entry_id: "08e187b539e240c8a140df99ec5fd43a",
     origin_entry_id: "JK000000095834",
     entry: "わりあい",
+    kanji: "割合",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -28160,6 +29748,7 @@ export const n2Words: Word[] = [
     entry_id: "7816c7fb573f4943bc142321ec6e6946",
     origin_entry_id: "JK000000095847",
     entry: "わりかん",
+    kanji: "割(り)勘",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -28176,6 +29765,7 @@ export const n2Words: Word[] = [
     entry_id: "a053225a957f4851848305bbb90c1bf4",
     origin_entry_id: "JK000000095918",
     entry: "わるくち",
+    kanji: "悪口",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -28192,6 +29782,7 @@ export const n2Words: Word[] = [
     entry_id: "07eed17ae14842a58fccf6ba18336210",
     origin_entry_id: "JK000000095978",
     entry: "わん",
+    kanji: "椀·碗·埦",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -28956,6 +30547,7 @@ export const n2Words: Word[] = [
     entry_id: "5c84353a41d5483b80916084772bc5d4",
     origin_entry_id: "JK100035918002",
     entry: "ジェットき",
+    kanji: "<strong>ジェット</strong>機",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -29984,6 +31576,7 @@ export const n2Words: Word[] = [
     entry_id: "f1b120248cee4bbdbb6bbfc86d0bf91a",
     origin_entry_id: "JK000000100077",
     entry: "ベつじん",
+    kanji: "別人",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -30556,6 +32149,7 @@ export const n2Words: Word[] = [
     entry_id: "c522f293528342909c64c6d6325e909c",
     origin_entry_id: "JK100094864004",
     entry: "ローマじ",
+    kanji: "<strong>ローマ</strong>字",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30588,6 +32182,7 @@ export const n2Words: Word[] = [
     entry_id: "3fb276a3e32844ecbf24dcd4cf507a03",
     origin_entry_id: "JK000000001528",
     entry: "あちこち",
+    kanji: "彼方此方",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30608,6 +32203,7 @@ export const n2Words: Word[] = [
     entry_id: "fd751bda3c824c759469e3143e163a32",
     origin_entry_id: "JK100001534002",
     entry: "あちらこちら",
+    kanji: "彼方此方",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30624,6 +32220,7 @@ export const n2Words: Word[] = [
     entry_id: "ce99dc575e75404cb5c3652eaa50afe1",
     origin_entry_id: "JK000000001607",
     entry: "あっち",
+    kanji: "彼方",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30640,6 +32237,7 @@ export const n2Words: Word[] = [
     entry_id: "6aaa59fa68394e9d92e86b53d01c45c7",
     origin_entry_id: "JK000000004107",
     entry: "いずれ",
+    kanji: "何れ·孰れ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30656,6 +32254,7 @@ export const n2Words: Word[] = [
     entry_id: "986ca114c6644546962a5e3f1e82ce86",
     origin_entry_id: "JK000000011529",
     entry: "おまえ",
+    kanji: "お前∙御前",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30672,6 +32271,7 @@ export const n2Words: Word[] = [
     entry_id: "ca11207b94754cc199e15499fe0b1c65",
     origin_entry_id: "JK000000031929",
     entry: "これら",
+    kanji: "此等·是等",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30688,6 +32288,7 @@ export const n2Words: Word[] = [
     entry_id: "b82075f0b1b243228d2855075c592049",
     origin_entry_id: "JK000000051912",
     entry: "そっち",
+    kanji: "其方",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30704,6 +32305,7 @@ export const n2Words: Word[] = [
     entry_id: "c454f7ebbfaf4bb49a69a33e175f4c66",
     origin_entry_id: "JK000000095972",
     entry: "われわれ",
+    kanji: "我我·吾吾",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30736,6 +32338,7 @@ export const n2Words: Word[] = [
     entry_id: "48578849bdf34edb9028d5b191d33b03",
     origin_entry_id: "JK000000000383",
     entry: "あお-ぐ",
+    kanji: "扇ぐ·煽ぐ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30752,6 +32355,7 @@ export const n2Words: Word[] = [
     entry_id: "48c322cd9d91458db30efd448dc4fed2",
     origin_entry_id: "JK000000000773",
     entry: "あき-れる",
+    kanji: "呆<strong>れる</strong>·惘<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30784,6 +32388,7 @@ export const n2Words: Word[] = [
     entry_id: "77132f03513b4e7c88a5473640f06e4c",
     origin_entry_id: "JK000000001386",
     entry: "あせ-る",
+    kanji: "焦る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30800,6 +32405,7 @@ export const n2Words: Word[] = [
     entry_id: "26450859e1514b0c955d947c44724e8d",
     origin_entry_id: "JK000000001520",
     entry: "あた-る",
+    kanji: "当(た)<strong>る</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30820,6 +32426,7 @@ export const n2Words: Word[] = [
     entry_id: "64b02ae81f8443bdba3a5968388dfa8a",
     origin_entry_id: "JK000000001698",
     entry: "あてはま-る",
+    kanji: "当てはまる·当て嵌まる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30836,6 +32443,7 @@ export const n2Words: Word[] = [
     entry_id: "b723812d9fd74089a3c9d788d30f0450",
     origin_entry_id: "JK000000001699",
     entry: "あては-める",
+    kanji: "当ては<strong>める</strong>·当て嵌<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30852,6 +32460,7 @@ export const n2Words: Word[] = [
     entry_id: "77262f9bfd104c31b3ccf519a803cd92",
     origin_entry_id: "JK000000001705",
     entry: "あ-てる",
+    kanji: "当<strong>てる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30868,6 +32477,7 @@ export const n2Words: Word[] = [
     entry_id: "326870cd5bc045d68cc6d5d7ee5d24ad",
     origin_entry_id: "JK000000001929",
     entry: "あば-れる",
+    kanji: "暴<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30884,6 +32494,7 @@ export const n2Words: Word[] = [
     entry_id: "3b589fa777b846239a986d038a1954af",
     origin_entry_id: "JK000000002049",
     entry: "あぶ-る",
+    kanji: "炙る·焙る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30900,6 +32511,7 @@ export const n2Words: Word[] = [
     entry_id: "87c042737d4942f1a2595365b916d9b5",
     origin_entry_id: "JK000000002209",
     entry: "あまやか-す",
+    kanji: "甘やかす",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30916,6 +32528,7 @@ export const n2Words: Word[] = [
     entry_id: "a0a2a9252a5649ac908580b4d9cc95b6",
     origin_entry_id: "JK000000002223",
     entry: "あま-る",
+    kanji: "余る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30932,6 +32545,7 @@ export const n2Words: Word[] = [
     entry_id: "474a8022556b4adea654c7e06077c026",
     origin_entry_id: "JK000000002267",
     entry: "あ-む",
+    kanji: "編む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30948,6 +32562,7 @@ export const n2Words: Word[] = [
     entry_id: "833fe3b9a8234efda85c1a5e20448a50",
     origin_entry_id: "JK000000002471",
     entry: "あらそ-う",
+    kanji: "争う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30964,6 +32579,7 @@ export const n2Words: Word[] = [
     entry_id: "66d737e58a33471f94e9600ae1714599",
     origin_entry_id: "JK000000002483",
     entry: "あらた-める",
+    kanji: "改<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30980,6 +32596,7 @@ export const n2Words: Word[] = [
     entry_id: "fbad1c33b5294eb1a92e14e116bf16e1",
     origin_entry_id: "JK000000002558",
     entry: "あらわ-す",
+    kanji: "現(わ)<strong>す</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -30996,6 +32613,7 @@ export const n2Words: Word[] = [
     entry_id: "eea689affc514d25971d7271a0fb4d3b",
     origin_entry_id: "JK000000002564",
     entry: "あ-り",
+    kanji: "有り·在り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31012,6 +32630,7 @@ export const n2Words: Word[] = [
     entry_id: "dd937dbdda994c4ba08fdae6215bdf39",
     origin_entry_id: "JK000000002639",
     entry: "あ-る",
+    kanji: "在る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31028,6 +32647,7 @@ export const n2Words: Word[] = [
     entry_id: "837b71168a9c4f3da84c9c5f47d45bfe",
     origin_entry_id: "JK000000002751",
     entry: "あ-れる",
+    kanji: "荒<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31044,6 +32664,7 @@ export const n2Words: Word[] = [
     entry_id: "9a1ad4fe05404b95bdfd3a6a1bf6c68c",
     origin_entry_id: "JK000000003263",
     entry: "いいつ-ける",
+    kanji: "言<strong>いつ</strong><strong>ける</strong>·言い付<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31060,6 +32681,7 @@ export const n2Words: Word[] = [
     entry_id: "4dc01db2f1c34b9f89abdf2afb09c60b",
     origin_entry_id: "JK000000004332",
     entry: "いた-る",
+    kanji: "至る·到る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31076,6 +32698,7 @@ export const n2Words: Word[] = [
     entry_id: "c9dc4e7ff0eb4096885e305734f1bf86",
     origin_entry_id: "JK000000004231",
     entry: "いだ-く",
+    kanji: "抱く·懐く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31092,6 +32715,7 @@ export const n2Words: Word[] = [
     entry_id: "66237489b051466cb45d3718065cdc95",
     origin_entry_id: "JK000000005242",
     entry: "いば-る",
+    kanji: "威張る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31124,6 +32748,7 @@ export const n2Words: Word[] = [
     entry_id: "df34ca86375141d99cf83cb44a57b8bf",
     origin_entry_id: "JK000000006459",
     entry: "う-える",
+    kanji: "飢<strong>える</strong>·餓<strong>える</strong>·饑<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31160,6 +32785,7 @@ export const n2Words: Word[] = [
     entry_id: "2e5658e735c24d5d89c2b6aeceebf302",
     origin_entry_id: "JK000000006527",
     entry: "うか-ぶ",
+    kanji: "浮(<strong>か</strong>)<strong>ぶ</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31176,6 +32802,7 @@ export const n2Words: Word[] = [
     entry_id: "aa94278c3be84739bea0a195a7d6287e",
     origin_entry_id: "JK000000006644",
     entry: "うけたまわ-る",
+    kanji: "承る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31192,6 +32819,7 @@ export const n2Words: Word[] = [
     entry_id: "720aea177e444afd8bee9b7c28daccd8",
     origin_entry_id: "JK000000006729",
     entry: "うしな-う",
+    kanji: "失う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31208,6 +32836,7 @@ export const n2Words: Word[] = [
     entry_id: "0a80f66406da42ec9275367ae023aed5",
     origin_entry_id: "JK000000006867",
     entry: "うす-める",
+    kanji: "薄<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31224,6 +32853,7 @@ export const n2Words: Word[] = [
     entry_id: "ef1ab399ecf94c6daa324fb410732689",
     origin_entry_id: "JK000000006951",
     entry: "うたが-う",
+    kanji: "疑う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31240,6 +32870,7 @@ export const n2Words: Word[] = [
     entry_id: "93c28ca6f4064c1a8b4993617d8ca088",
     origin_entry_id: "JK000000007046",
     entry: "うちけ-す",
+    kanji: "打(ち)消す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31256,6 +32887,7 @@ export const n2Words: Word[] = [
     entry_id: "70b6a333983e4808b0dcd2f42a7baa7d",
     origin_entry_id: "JK000000007225",
     entry: "うった-える",
+    kanji: "訴<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31272,6 +32904,7 @@ export const n2Words: Word[] = [
     entry_id: "efd97cd5c94c44aa91b518a5af230e08",
     origin_entry_id: "JK000000007176",
     entry: "う-つ",
+    kanji: "撃つ·射つ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31308,6 +32941,7 @@ export const n2Words: Word[] = [
     entry_id: "439345fdd2124d498ae67a35da2eb5b8",
     origin_entry_id: "JK000000007344",
     entry: "うなず-く",
+    kanji: "頷く·首肯く·肯く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31324,6 +32958,7 @@ export const n2Words: Word[] = [
     entry_id: "0bb842f41e3a490fb8bf932c4a554b05",
     origin_entry_id: "JK000000007351",
     entry: "うな-る",
+    kanji: "唸る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31340,6 +32975,7 @@ export const n2Words: Word[] = [
     entry_id: "5f90bfd14ec749b2af46f9aea7d7eca0",
     origin_entry_id: "JK000000007383",
     entry: "うば-う",
+    kanji: "奪う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31356,6 +32992,7 @@ export const n2Words: Word[] = [
     entry_id: "13cabdd24e074c71bcba561ecc1725c3",
     origin_entry_id: "JK000000007509",
     entry: "うみだ-す",
+    kanji: "生み出す·産み出す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31372,6 +33009,7 @@ export const n2Words: Word[] = [
     entry_id: "b40edd04a2384f058e9a6baf353498dd",
     origin_entry_id: "JK000000007584",
     entry: "うやま-う",
+    kanji: "敬う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31388,6 +33026,7 @@ export const n2Words: Word[] = [
     entry_id: "2f41fb445ec348fab78e42f6aa733ad1",
     origin_entry_id: "JK000000007606",
     entry: "うらがえ-す",
+    kanji: "裏返す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31404,6 +33043,7 @@ export const n2Words: Word[] = [
     entry_id: "994e7b5ae05044c7ade99cf4544a4545",
     origin_entry_id: "JK000000007620",
     entry: "うらぎ-る",
+    kanji: "裏切る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31420,6 +33060,7 @@ export const n2Words: Word[] = [
     entry_id: "bd59d3e1228b4da1b06af89fdd62dde7",
     origin_entry_id: "JK000000007653",
     entry: "うらな-う",
+    kanji: "占う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31436,6 +33077,7 @@ export const n2Words: Word[] = [
     entry_id: "556e81ca6ef3415bbc22964fd7beb7a3",
     origin_entry_id: "JK000000007696",
     entry: "うら-む",
+    kanji: "恨む·怨む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31452,6 +33094,7 @@ export const n2Words: Word[] = [
     entry_id: "cfc09d93cb0845faad3310bed8dcf192",
     origin_entry_id: "JK000000007711",
     entry: "うらや-む",
+    kanji: "羨む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31468,6 +33111,7 @@ export const n2Words: Word[] = [
     entry_id: "b7805326869e489687147a626f73bf27",
     origin_entry_id: "JK000000007741",
     entry: "うりき-れる",
+    kanji: "売(り)切<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31484,6 +33128,7 @@ export const n2Words: Word[] = [
     entry_id: "94e2071d2fdf4a3283d5f7fbef2a08cf",
     origin_entry_id: "JK000000007796",
     entry: "う-る",
+    kanji: "得る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31500,6 +33145,7 @@ export const n2Words: Word[] = [
     entry_id: "2e43af7d3eb448c1981881971986c418",
     origin_entry_id: "JK000000008359",
     entry: "えが-く",
+    kanji: "描く·画く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31516,6 +33162,7 @@ export const n2Words: Word[] = [
     entry_id: "a745a7fa8d2849158afb1e3fbb0d1f42",
     origin_entry_id: "JK000000009217",
     entry: "えんじる",
+    kanji: "演じる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31532,6 +33179,7 @@ export const n2Words: Word[] = [
     entry_id: "16bf52f9ca6541629dd019037dbd8998",
     origin_entry_id: "JK000000009481",
     entry: "おいか-ける",
+    kanji: "追<strong>いか</strong><strong>ける</strong>·追(い)掛<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31548,6 +33196,7 @@ export const n2Words: Word[] = [
     entry_id: "d52c077da1444b369ddcdd1ecfa11787",
     origin_entry_id: "JK000000009530",
     entry: "おいつ-く",
+    kanji: "追(い)付く·追(い)着く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31564,6 +33213,7 @@ export const n2Words: Word[] = [
     entry_id: "5c36d3339e0e45008bf7f9637e28fa20",
     origin_entry_id: "JK000000009704",
     entry: "おうじる",
+    kanji: "応じる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31580,6 +33230,7 @@ export const n2Words: Word[] = [
     entry_id: "80106b3aa8e048728b3f6a8a4aa90a2d",
     origin_entry_id: "JK000000009713",
     entry: "おう-ずる",
+    kanji: "応<strong>ずる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31596,6 +33247,7 @@ export const n2Words: Word[] = [
     entry_id: "c1dcd10db90743188c150eaa8e2f018c",
     origin_entry_id: "JK000000009875",
     entry: "おお-う",
+    kanji: "覆う·被う·蔽う·蓋う·掩う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31612,6 +33264,7 @@ export const n2Words: Word[] = [
     entry_id: "ecc56ceacfa941a98dd3cc8309ffc011",
     origin_entry_id: "JK000000010218",
     entry: "おか-す",
+    kanji: "侵す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31628,6 +33281,7 @@ export const n2Words: Word[] = [
     entry_id: "704a49f0851e48ccaf476b913da00b6b",
     origin_entry_id: "JK000000010246",
     entry: "おが-む",
+    kanji: "拝む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31644,6 +33298,7 @@ export const n2Words: Word[] = [
     entry_id: "249faac14b41484db5cdf7cc7bc952ce",
     origin_entry_id: "JK000000010315",
     entry: "おぎな-う",
+    kanji: "補う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31660,6 +33315,7 @@ export const n2Words: Word[] = [
     entry_id: "3a6adf85cbbd4996b0592d6d147ac685",
     origin_entry_id: "JK000000010450",
     entry: "おく-る",
+    kanji: "贈る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31676,6 +33332,7 @@ export const n2Words: Word[] = [
     entry_id: "0850235c71af4e4fa66232ea90657a93",
     origin_entry_id: "JK000000010570",
     entry: "おさ-める",
+    kanji: "収<strong>める</strong>·納<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31692,6 +33349,7 @@ export const n2Words: Word[] = [
     entry_id: "c21d3263e82247f4a1e6e59f6ea0d12e",
     origin_entry_id: "JK000000010677",
     entry: "おしとお-す",
+    kanji: "押(し)通す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31708,6 +33366,7 @@ export const n2Words: Word[] = [
     entry_id: "50e89d11c2d8400b87b1b4a3046e86a1",
     origin_entry_id: "JK000000010829",
     entry: "おそ-れる",
+    kanji: "恐<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31724,6 +33383,7 @@ export const n2Words: Word[] = [
     entry_id: "8da87a40bcec4904b30938770e6a803a",
     origin_entry_id: "JK000000011229",
     entry: "おと-る",
+    kanji: "劣る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31740,6 +33400,7 @@ export const n2Words: Word[] = [
     entry_id: "8fbe7fa4601a4e8fb117c31188119989",
     origin_entry_id: "JK000000011077",
     entry: "おどか-す",
+    kanji: "脅かす·嚇かす",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31756,6 +33417,7 @@ export const n2Words: Word[] = [
     entry_id: "10752350f53a40d4846808da227744b8",
     origin_entry_id: "JK000000011414",
     entry: "おびやか-す",
+    kanji: "脅かす",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31772,6 +33434,7 @@ export const n2Words: Word[] = [
     entry_id: "0221c7213a9c43f681d1f110fba378f9",
     origin_entry_id: "JK000000011514",
     entry: "おぼ-れる",
+    kanji: "溺<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31788,6 +33451,7 @@ export const n2Words: Word[] = [
     entry_id: "9d458e25b3924e93b97f43407a71a73a",
     origin_entry_id: "JK000000011630",
     entry: "おもいき-る",
+    kanji: "思い切る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31804,6 +33468,7 @@ export const n2Words: Word[] = [
     entry_id: "42aba281d85143d4b6510cc847b3e5bc",
     origin_entry_id: "JK000000011688",
     entry: "おも-える",
+    kanji: "思<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31820,6 +33485,7 @@ export const n2Words: Word[] = [
     entry_id: "781422eab1b14b1fb0c69a2725eb874b",
     origin_entry_id: "JK000000011868",
     entry: "およぼ-す",
+    kanji: "及ぼす",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31836,6 +33502,7 @@ export const n2Words: Word[] = [
     entry_id: "a2497d57f4fe4428bcd6967db819e52e",
     origin_entry_id: "JK000000012023",
     entry: "おろす",
+    kanji: "卸す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31852,6 +33519,7 @@ export const n2Words: Word[] = [
     entry_id: "8c34fef192784778a8b5b47126ecd6b8",
     origin_entry_id: "JK000000013522",
     entry: "かえ-す",
+    kanji: "帰す·還す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31900,6 +33568,7 @@ export const n2Words: Word[] = [
     entry_id: "8633a69d601c4308b87c0fc2be0953fa",
     origin_entry_id: "JK000000013659",
     entry: "かか-える",
+    kanji: "抱<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31916,6 +33585,7 @@ export const n2Words: Word[] = [
     entry_id: "05c2e0b65a65479783b99f3f36e6c41a",
     origin_entry_id: "JK000000013749",
     entry: "かかわ-る",
+    kanji: "係わる·関わる·拘わる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31932,6 +33602,7 @@ export const n2Words: Word[] = [
     entry_id: "f490569895ff42eda51e3f986a35d283",
     origin_entry_id: "JK000000013923",
     entry: "かきま-ぜる",
+    kanji: "<strong>かき</strong>混<strong>ぜる</strong>·搔き混<strong>ぜる</strong>·搔き雑<strong>ぜる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31948,6 +33619,7 @@ export const n2Words: Word[] = [
     entry_id: "2963f049edd947478ea92a183216df84",
     origin_entry_id: "JK000000013974",
     entry: "かぎ-る",
+    kanji: "限る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31964,6 +33636,7 @@ export const n2Words: Word[] = [
     entry_id: "176e9d174d974528b9bafe6d8c68ce0f",
     origin_entry_id: "JK000000013987",
     entry: "か-く",
+    kanji: "掻く·搔く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -31980,6 +33653,7 @@ export const n2Words: Word[] = [
     entry_id: "18bc79d465c14464b27ab6977f8b6e63",
     origin_entry_id: "JK000000014020",
     entry: "か-ぐ",
+    kanji: "嗅ぐ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32012,6 +33686,7 @@ export const n2Words: Word[] = [
     entry_id: "56a4c36270514ded805a12eb08023c2d",
     origin_entry_id: "JK000000015036",
     entry: "かしだ-す",
+    kanji: "貸(し)出す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32028,6 +33703,7 @@ export const n2Words: Word[] = [
     entry_id: "780e7f16910943aabd3c81fc03c2a00f",
     origin_entry_id: "JK000000015201",
     entry: "かじ-る",
+    kanji: "齧る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32044,6 +33720,7 @@ export const n2Words: Word[] = [
     entry_id: "43fb625c8c5742489d48e31ae7fc7e7b",
     origin_entry_id: "JK000000015698",
     entry: "かたま-る",
+    kanji: "固まる·堅まる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32060,6 +33737,7 @@ export const n2Words: Word[] = [
     entry_id: "61cdb14d2b9c4c03a706f4714e18e4bb",
     origin_entry_id: "JK000000015711",
     entry: "かたむ-く",
+    kanji: "傾く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32076,6 +33754,7 @@ export const n2Words: Word[] = [
     entry_id: "69fadacb1ed245d99d6e525716e13f8a",
     origin_entry_id: "JK000000015733",
     entry: "かたよ-る",
+    kanji: "偏る·片寄る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32092,6 +33771,7 @@ export const n2Words: Word[] = [
     entry_id: "3d74b830e5064dba85e16b40eb97a0c5",
     origin_entry_id: "JK000000015753",
     entry: "かた-る",
+    kanji: "語る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32108,6 +33788,7 @@ export const n2Words: Word[] = [
     entry_id: "3b5c43df5bdc4ea7a990bd25388ae535",
     origin_entry_id: "JK000000015941",
     entry: "かつ-ぐ",
+    kanji: "担ぐ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32124,6 +33805,7 @@ export const n2Words: Word[] = [
     entry_id: "7b7bb31751ad4288858284f0b2e7fe27",
     origin_entry_id: "JK000000016212",
     entry: "かな-う",
+    kanji: "叶う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32140,6 +33822,7 @@ export const n2Words: Word[] = [
     entry_id: "d2e2593c62f24daf99e3e1ff743d440c",
     origin_entry_id: "JK000000016373",
     entry: "か-ねる",
+    kanji: "兼<strong>ねる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32156,6 +33839,7 @@ export const n2Words: Word[] = [
     entry_id: "19916f3b456b4838ac19f9cddb34b065",
     origin_entry_id: "JK000000016520",
     entry: "かぶ-せる",
+    kanji: "被<strong>せる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32172,6 +33856,7 @@ export const n2Words: Word[] = [
     entry_id: "494fe48e83204cb9a8fdfc41089a2cf5",
     origin_entry_id: "JK000000016640",
     entry: "かま-う",
+    kanji: "構う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32188,6 +33873,7 @@ export const n2Words: Word[] = [
     entry_id: "9f4e361b0a67432abadf9e6c4369e8f6",
     origin_entry_id: "JK000000016987",
     entry: "からか-う",
+    kanji: "揶揄う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32204,6 +33890,7 @@ export const n2Words: Word[] = [
     entry_id: "430ecb0743c34f7cb79036c73b346e7a",
     origin_entry_id: "JK000000017371",
     entry: "か-る",
+    kanji: "刈る·苅る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32220,6 +33907,7 @@ export const n2Words: Word[] = [
     entry_id: "788a247d8ada41778ea8d35674595d3d",
     origin_entry_id: "JK000000017524",
     entry: "かわいが-る",
+    kanji: "可愛がる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32236,6 +33924,7 @@ export const n2Words: Word[] = [
     entry_id: "c92541574e3a4bd3abd69f502111cdc6",
     origin_entry_id: "JK000000017550",
     entry: "かわ-く",
+    kanji: "渇く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32252,6 +33941,7 @@ export const n2Words: Word[] = [
     entry_id: "69b50eb06b634bf6b0244e57dd790826",
     origin_entry_id: "JK000000017685",
     entry: "かわ-る",
+    kanji: "代(わ)<strong>る</strong>·替(わ)<strong>る</strong>·換(わ)<strong>る</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32268,6 +33958,7 @@ export const n2Words: Word[] = [
     entry_id: "b1db205c19f94261865cc3971cecff99",
     origin_entry_id: "JK000000017896",
     entry: "かんがえこ-む",
+    kanji: "考え込む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32284,6 +33975,7 @@ export const n2Words: Word[] = [
     entry_id: "e8cdd7cc96ca4e1baee09bb2d0074a67",
     origin_entry_id: "JK000000018369",
     entry: "かん-する",
+    kanji: "関<strong>する</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32300,6 +33992,7 @@ export const n2Words: Word[] = [
     entry_id: "1661663fc440454783d510c29e1edbc0",
     origin_entry_id: "JK000000018370",
     entry: "かん-ずる",
+    kanji: "感<strong>ずる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32316,6 +34009,7 @@ export const n2Words: Word[] = [
     entry_id: "33858fb3c19047a48ba2a767a1792f06",
     origin_entry_id: "JK000000100201",
     entry: "きがえる",
+    kanji: "着替える",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -32332,6 +34026,7 @@ export const n2Words: Word[] = [
     entry_id: "812920b4aaea4cce93033fd15052723a",
     origin_entry_id: "JK000000019323",
     entry: "ききかえ-す",
+    kanji: "聞(き)返す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32348,6 +34043,7 @@ export const n2Words: Word[] = [
     entry_id: "212879ba7bbb4ab0b8798d09024b9f98",
     origin_entry_id: "JK000000019966",
     entry: "き-せる",
+    kanji: "着<strong>せる</strong>·著<strong>せる</strong>·被<strong>せる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32364,6 +34060,7 @@ export const n2Words: Word[] = [
     entry_id: "ba6a0723b14d45f49759ccf9bc004ac6",
     origin_entry_id: "JK000000022581",
     entry: "きら-う",
+    kanji: "嫌う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32380,6 +34077,7 @@ export const n2Words: Word[] = [
     entry_id: "0432b23c464248fcb73a72f59e9497ae",
     origin_entry_id: "JK000000022829",
     entry: "き-れる",
+    kanji: "切<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32396,6 +34094,7 @@ export const n2Words: Word[] = [
     entry_id: "c074de6dcd064aeba1f09847750cff98",
     origin_entry_id: "JK000000023138",
     entry: "きん-じる",
+    kanji: "禁<strong>じる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32412,6 +34111,7 @@ export const n2Words: Word[] = [
     entry_id: "2c1e2c31a24d4d1da9dc47a536335a32",
     origin_entry_id: "JK000000023515",
     entry: "く-う",
+    kanji: "食う·喰う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32428,6 +34128,7 @@ export const n2Words: Word[] = [
     entry_id: "ffe2cd9a6c0f4a4ba3d9fdf2efe5b739",
     origin_entry_id: "JK000000023735",
     entry: "くぎ-る",
+    kanji: "区切る·句切る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32444,6 +34145,7 @@ export const n2Words: Word[] = [
     entry_id: "d144d4f9eaa94902b613bfd3dc3c01ab",
     origin_entry_id: "JK000000024029",
     entry: "くず-す",
+    kanji: "崩す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32460,6 +34162,7 @@ export const n2Words: Word[] = [
     entry_id: "dedc173da0354a03b264679839416abf",
     origin_entry_id: "JK000000024080",
     entry: "くず-れる",
+    kanji: "崩<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32476,6 +34179,7 @@ export const n2Words: Word[] = [
     entry_id: "ecb1e22c938646f4be35d3988a97e897",
     origin_entry_id: "JK000000024128",
     entry: "くだ-く",
+    kanji: "砕く·摧く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32492,6 +34196,7 @@ export const n2Words: Word[] = [
     entry_id: "c0f70f51431c4a318023be841b916fc8",
     origin_entry_id: "JK000000024135",
     entry: "くだ-ける",
+    kanji: "砕<strong>ける</strong>·摧<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32540,6 +34245,7 @@ export const n2Words: Word[] = [
     entry_id: "358ebe12158d41de9af17d5187002cae",
     origin_entry_id: "JK000000024667",
     entry: "くみた-てる",
+    kanji: "組(み)立<strong>てる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32556,6 +34262,7 @@ export const n2Words: Word[] = [
     entry_id: "c8183cd2a40f4dbe87ad254ce1784c9f",
     origin_entry_id: "JK000000024694",
     entry: "く-む",
+    kanji: "組む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32572,6 +34279,7 @@ export const n2Words: Word[] = [
     entry_id: "99d7b13e07064e6ca386aa1a50a08f61",
     origin_entry_id: "JK000000024745",
     entry: "くや-む",
+    kanji: "悔(<strong>や</strong>)<strong>む</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32588,6 +34296,7 @@ export const n2Words: Word[] = [
     entry_id: "382d67d040264b3385df0b24cde31f44",
     origin_entry_id: "JK000000024997",
     entry: "くる-う",
+    kanji: "狂う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32604,6 +34313,7 @@ export const n2Words: Word[] = [
     entry_id: "61e7f2ce5243450f84f451b85ee7aecd",
     origin_entry_id: "JK000000025017",
     entry: "くるし-める",
+    kanji: "苦し<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32620,6 +34330,7 @@ export const n2Words: Word[] = [
     entry_id: "68059a6693394379a5e86a84218fc135",
     origin_entry_id: "JK000000025050",
     entry: "くる-む",
+    kanji: "包む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32636,6 +34347,7 @@ export const n2Words: Word[] = [
     entry_id: "c2518f55e4954d12a8f1619084d3cf66",
     origin_entry_id: "JK000000025303",
     entry: "くわ-える",
+    kanji: "銜<strong>える</strong>·啣<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32652,6 +34364,7 @@ export const n2Words: Word[] = [
     entry_id: "0ba24933de58478a96c79f2e9939e667",
     origin_entry_id: "JK000000024016",
     entry: "ぐずぐず",
+    kanji: "愚図愚図",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32676,6 +34389,7 @@ export const n2Words: Word[] = [
     entry_id: "02406df01bb14e179c9e30d631daae20",
     origin_entry_id: "JK000000026323",
     entry: "けず-る",
+    kanji: "削る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32692,6 +34406,7 @@ export const n2Words: Word[] = [
     entry_id: "58186295df9e4a1992940c8c3ea4b5ae",
     origin_entry_id: "JK000000029630",
     entry: "こ-える",
+    kanji: "超<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32708,6 +34423,7 @@ export const n2Words: Word[] = [
     entry_id: "17e3c941a4144f6ea46df36aab3eb3dc",
     origin_entry_id: "JK000000029706",
     entry: "こお-る",
+    kanji: "凍る·氷る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32724,6 +34440,7 @@ export const n2Words: Word[] = [
     entry_id: "75a544377b9c44fd9186b407a2e23a33",
     origin_entry_id: "JK000000029779",
     entry: "こが-す",
+    kanji: "焦がす",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32740,6 +34457,7 @@ export const n2Words: Word[] = [
     entry_id: "0605ca7be965491d8896f82e1767c527",
     origin_entry_id: "JK000000029900",
     entry: "こ-ぐ",
+    kanji: "漕ぐ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32756,6 +34474,7 @@ export const n2Words: Word[] = [
     entry_id: "28f58108e87a456ea951eb22585f8009",
     origin_entry_id: "JK000000030219",
     entry: "こ-げる",
+    kanji: "焦<strong>げる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32772,6 +34491,7 @@ export const n2Words: Word[] = [
     entry_id: "b67a6aeac05d47d7a007deca03208a36",
     origin_entry_id: "JK000000030315",
     entry: "こころ-える",
+    kanji: "心得る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32788,6 +34508,7 @@ export const n2Words: Word[] = [
     entry_id: "d6410950d332482792c66a73f29a026d",
     origin_entry_id: "JK000000030262",
     entry: "こご-える",
+    kanji: "凍<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32804,6 +34525,7 @@ export const n2Words: Word[] = [
     entry_id: "3e9c44842e694e609c1bd56ed1411998",
     origin_entry_id: "JK000000030500",
     entry: "こしか-ける",
+    kanji: "腰掛<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32820,6 +34542,7 @@ export const n2Words: Word[] = [
     entry_id: "01b4e00708da4a9ba4e3ec0cb447b047",
     origin_entry_id: "JK000000030648",
     entry: "こしら-える",
+    kanji: "拵<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32836,6 +34559,7 @@ export const n2Words: Word[] = [
     entry_id: "06721be6cf9649da8a6af1fdee0ddcd4",
     origin_entry_id: "JK000000030685",
     entry: "こ-す",
+    kanji: "越す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32852,6 +34576,7 @@ export const n2Words: Word[] = [
     entry_id: "8928f0a8ffa6467888b309be63b8c3d2",
     origin_entry_id: "JK000000030717",
     entry: "こす-る",
+    kanji: "擦る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32868,6 +34593,7 @@ export const n2Words: Word[] = [
     entry_id: "20a6ef9418294183bd8918d6b0bb9817",
     origin_entry_id: "JK000000031154",
     entry: "ことづ-ける",
+    kanji: "言付<strong>ける</strong>·託<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32884,6 +34610,7 @@ export const n2Words: Word[] = [
     entry_id: "c94db3af8aa54284980ba6bc6231f0cf",
     origin_entry_id: "JK000000031168",
     entry: "ことな-る",
+    kanji: "異なる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32900,6 +34627,7 @@ export const n2Words: Word[] = [
     entry_id: "76d1d05b22824ecb88c89a55b7e8f1f1",
     origin_entry_id: "JK000000031712",
     entry: "こ-める",
+    kanji: "込<strong>める</strong>·籠<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32916,6 +34644,7 @@ export const n2Words: Word[] = [
     entry_id: "c481a48663034fc9863f0ddf2ad5a25a",
     origin_entry_id: "JK000000031807",
     entry: "こら-える",
+    kanji: "堪<strong>える</strong>·怺<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32932,6 +34661,7 @@ export const n2Words: Word[] = [
     entry_id: "aaa0641948804033b7bc82b57179f25a",
     origin_entry_id: "JK000000033297",
     entry: "さかのぼ-る",
+    kanji: "遡る·溯る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32948,6 +34678,7 @@ export const n2Words: Word[] = [
     entry_id: "e0c6db85328f4640979f5a93363dff08",
     origin_entry_id: "JK000000033327",
     entry: "さから-う",
+    kanji: "逆らう",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32964,6 +34695,7 @@ export const n2Words: Word[] = [
     entry_id: "213ac353f2db4defbcb689771ff22bf2",
     origin_entry_id: "JK000000033650",
     entry: "さぐ-る",
+    kanji: "探る·捜る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32980,6 +34712,7 @@ export const n2Words: Word[] = [
     entry_id: "8718b1f55aec4923bc750fbda3e195fc",
     origin_entry_id: "JK000000033744",
     entry: "ささ-える",
+    kanji: "支<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -32996,6 +34729,7 @@ export const n2Words: Word[] = [
     entry_id: "84d23d2da4434741a8e421d706e237d1",
     origin_entry_id: "JK000000033789",
     entry: "ささや-く",
+    kanji: "囁く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33012,6 +34746,7 @@ export const n2Words: Word[] = [
     entry_id: "71ae42b0879b4119a2a1b0d1dae5956f",
     origin_entry_id: "JK000000033796",
     entry: "ささ-る",
+    kanji: "刺さる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33028,6 +34763,7 @@ export const n2Words: Word[] = [
     entry_id: "885ab3d68b8649bbbb48e2fde27bd826",
     origin_entry_id: "JK000000033957",
     entry: "さしひ-く",
+    kanji: "差(し)引く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33060,6 +34796,7 @@ export const n2Words: Word[] = [
     entry_id: "76b3f1b90dfe4dd48d0cb29e25fe3c76",
     origin_entry_id: "JK000000034445",
     entry: "さ-びる",
+    kanji: "錆<strong>びる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33076,6 +34813,7 @@ export const n2Words: Word[] = [
     entry_id: "dc01fea4adde4f029476303aa1e1649c",
     origin_entry_id: "JK000000034501",
     entry: "さまた-げる",
+    kanji: "妨<strong>げる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33092,6 +34830,7 @@ export const n2Words: Word[] = [
     entry_id: "da5d0a811cec462da79b4f4cf37f2a24",
     origin_entry_id: "JK000000036504",
     entry: "し-く",
+    kanji: "敷く·布く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33108,6 +34847,7 @@ export const n2Words: Word[] = [
     entry_id: "22cf82e8321b4d6c9c0dc7a431f0f282",
     origin_entry_id: "JK000000036608",
     entry: "しげ-る",
+    kanji: "茂る·繁る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33124,6 +34864,7 @@ export const n2Words: Word[] = [
     entry_id: "4f37dbc7f0214ad983c4d071066f09cc",
     origin_entry_id: "JK000000037122",
     entry: "しずま-る",
+    kanji: "静まる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33140,6 +34881,7 @@ export const n2Words: Word[] = [
     entry_id: "e37b9b1f31e74677983f2bbad3e13042",
     origin_entry_id: "JK000000038423",
     entry: "しび-れる",
+    kanji: "痺<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33156,6 +34898,7 @@ export const n2Words: Word[] = [
     entry_id: "f8426a4b9f904eeca2cffcf0e0779384",
     origin_entry_id: "JK000000038565",
     entry: "しぼ-む",
+    kanji: "萎む·凋む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33172,6 +34915,7 @@ export const n2Words: Word[] = [
     entry_id: "a89bf09258bd468298dd0c79ee8d4f65",
     origin_entry_id: "JK000000038576",
     entry: "しぼ-る",
+    kanji: "絞る·搾る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33188,6 +34932,7 @@ export const n2Words: Word[] = [
     entry_id: "18ea4f260e3a458a9825fff381f33bbb",
     origin_entry_id: "JK000000038724",
     entry: "しめき-る",
+    kanji: "締(め)切る·閉(め)切る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33252,6 +34997,7 @@ export const n2Words: Word[] = [
     entry_id: "d32165e85fb7459ea9506ef5889ea96e",
     origin_entry_id: "JK000000039349",
     entry: "しゃべ-る",
+    kanji: "喋る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33268,6 +35014,7 @@ export const n2Words: Word[] = [
     entry_id: "28fdf531cce641b383c9d23fcbd3ce55",
     origin_entry_id: "JK000000042374",
     entry: "しょう-じる",
+    kanji: "生<strong>じる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33284,6 +35031,7 @@ export const n2Words: Word[] = [
     entry_id: "19ecce62a67540e3ac1d4a7049c3673f",
     origin_entry_id: "JK000000042435",
     entry: "しょう-ずる",
+    kanji: "生<strong>ずる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33300,6 +35048,7 @@ export const n2Words: Word[] = [
     entry_id: "85f58c8be1154334a03663a4869da1a4",
     origin_entry_id: "JK000000044844",
     entry: "しんじる",
+    kanji: "信じる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33316,6 +35065,7 @@ export const n2Words: Word[] = [
     entry_id: "a0e93bdd63af4a6990f9cf76350766d4",
     origin_entry_id: "JK000000044888",
     entry: "しん-ずる",
+    kanji: "信<strong>ずる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33332,6 +35082,7 @@ export const n2Words: Word[] = [
     entry_id: "40d1531c283840ef8b4d2543a77e8de3",
     origin_entry_id: "JK000000046147",
     entry: "すきとお-る",
+    kanji: "透き通る·透き徹る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33348,6 +35099,7 @@ export const n2Words: Word[] = [
     entry_id: "d6ea590ce5984812a96b351a3890fa2a",
     origin_entry_id: "JK000000046219",
     entry: "すく-う",
+    kanji: "救う∙済う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33364,6 +35116,7 @@ export const n2Words: Word[] = [
     entry_id: "d9cdb3c489cd4f209f910db8ae92432f",
     origin_entry_id: "JK000000046269",
     entry: "すぐ-れる",
+    kanji: "優<strong>れる</strong>·勝<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33380,6 +35133,7 @@ export const n2Words: Word[] = [
     entry_id: "5c1cbac782d8434fa44d02ae6d3432a8",
     origin_entry_id: "JK000000046439",
     entry: "すず-む",
+    kanji: "涼む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33448,6 +35202,7 @@ export const n2Words: Word[] = [
     entry_id: "7cc1e941dfbd44d7998e168ff4296780",
     origin_entry_id: "JK000000047208",
     entry: "すれちが-う",
+    kanji: "<strong>すれ</strong>違う·擦れ違う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33496,6 +35251,7 @@ export const n2Words: Word[] = [
     entry_id: "e0afb3d10c484cf4af79c4111fd5ab1c",
     origin_entry_id: "JK000000048285",
     entry: "せお-う",
+    kanji: "背負う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33512,6 +35268,7 @@ export const n2Words: Word[] = [
     entry_id: "a3dfaefbdf984db9a405a9ef8ad1b67e",
     origin_entry_id: "JK000000048793",
     entry: "せっ-する",
+    kanji: "接<strong>する</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33528,6 +35285,7 @@ export const n2Words: Word[] = [
     entry_id: "1498ecbc46c84c3c9fe6e4825d58a691",
     origin_entry_id: "JK000000049012",
     entry: "せま-る",
+    kanji: "迫る·逼る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33544,6 +35302,7 @@ export const n2Words: Word[] = [
     entry_id: "6e75b187ba8146dd8bfa4e070358b336",
     origin_entry_id: "JK000000049077",
     entry: "せ-める",
+    kanji: "責<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33560,6 +35319,7 @@ export const n2Words: Word[] = [
     entry_id: "cbdc794b641f409b842e218be8c81003",
     origin_entry_id: "JK000000052007",
     entry: "そな-える",
+    kanji: "備<strong>える</strong>·具<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33576,6 +35336,7 @@ export const n2Words: Word[] = [
     entry_id: "39a934853adc48fba5f05cd27660051c",
     origin_entry_id: "JK000000052335",
     entry: "そ-る",
+    kanji: "剃る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33592,6 +35353,7 @@ export const n2Words: Word[] = [
     entry_id: "6278a45a2af44fde81719ce76947085a",
     origin_entry_id: "JK000000052391",
     entry: "そ-れる",
+    kanji: "逸<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33608,6 +35370,7 @@ export const n2Words: Word[] = [
     entry_id: "08646a8b2f7646a2ad115ac6d466b5e2",
     origin_entry_id: "JK000000051502",
     entry: "ぞく-する",
+    kanji: "属<strong>する</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33624,6 +35387,7 @@ export const n2Words: Word[] = [
     entry_id: "8d5c3553c71845cea3ea00e51255299a",
     origin_entry_id: "JK000000052500",
     entry: "ぞん-ずる",
+    kanji: "存<strong>ずる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33640,6 +35404,7 @@ export const n2Words: Word[] = [
     entry_id: "57657060a1e246bda6509092d9379478",
     origin_entry_id: "JK000000053224",
     entry: "たい-する",
+    kanji: "対<strong>する</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33656,6 +35421,7 @@ export const n2Words: Word[] = [
     entry_id: "5feae0e417034404829a11f79b35a59f",
     origin_entry_id: "JK000000053827",
     entry: "たがや-す",
+    kanji: "耕す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33672,6 +35438,7 @@ export const n2Words: Word[] = [
     entry_id: "6998b9cfcbb44c5abf0a2c8cec8462bb",
     origin_entry_id: "JK000000053910",
     entry: "た-く",
+    kanji: "宅",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33688,6 +35455,7 @@ export const n2Words: Word[] = [
     entry_id: "5d3d72729a414160a6012e81e247b6e0",
     origin_entry_id: "JK000000054031",
     entry: "たくわ-える",
+    kanji: "蓄<strong>える</strong>∙貯<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33704,6 +35472,7 @@ export const n2Words: Word[] = [
     entry_id: "cc265e24794f4d869bccd71e2b37d79d",
     origin_entry_id: "JK000000054285",
     entry: "たず-ねる",
+    kanji: "尋<strong>ねる</strong>∙訊<strong>ねる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33720,6 +35489,7 @@ export const n2Words: Word[] = [
     entry_id: "29200bf63dfd42a7827cd96c26703236",
     origin_entry_id: "JK000000054332",
     entry: "たたか-う",
+    kanji: "戦う·闘う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33736,6 +35506,7 @@ export const n2Words: Word[] = [
     entry_id: "392603e71b654f6a94b412bba21d94f8",
     origin_entry_id: "JK000000054628",
     entry: "たっ-する",
+    kanji: "達<strong>する</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33768,6 +35539,7 @@ export const n2Words: Word[] = [
     entry_id: "e2cc22bab38444c59a50981e6021dc19",
     origin_entry_id: "JK000000054828",
     entry: "たと-える",
+    kanji: "例<strong>える</strong>·譬<strong>える</strong>·喩<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33784,6 +35556,7 @@ export const n2Words: Word[] = [
     entry_id: "c18f6b25a8fc4d29943ad28538c9ef0a",
     origin_entry_id: "JK000000055274",
     entry: "ため-す",
+    kanji: "試す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33800,6 +35573,7 @@ export const n2Words: Word[] = [
     entry_id: "87d28e7a64274fe781cddc9c18c48b7d",
     origin_entry_id: "JK000000055284",
     entry: "ためら-う",
+    kanji: "躊躇う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33816,6 +35590,7 @@ export const n2Words: Word[] = [
     entry_id: "b9360e0d7bad46d3a8dd09d248ed6db8",
     origin_entry_id: "JK000000055328",
     entry: "たよ-る",
+    kanji: "頼る·便る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33832,6 +35607,7 @@ export const n2Words: Word[] = [
     entry_id: "cdf8184de495408da74ddd530cf16b77",
     origin_entry_id: "JK000000055394",
     entry: "た-る",
+    kanji: "足る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33872,6 +35648,7 @@ export const n2Words: Word[] = [
     entry_id: "717cc1c66fa94fb29a81c1c51dd53791",
     origin_entry_id: "JK000000055237",
     entry: "だま-る",
+    kanji: "黙る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33888,6 +35665,7 @@ export const n2Words: Word[] = [
     entry_id: "7ea693095add41dbbba0c6b1454afec5",
     origin_entry_id: "JK000000056189",
     entry: "ちか-う",
+    kanji: "誓う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33904,6 +35682,7 @@ export const n2Words: Word[] = [
     entry_id: "0a9d71ffa9a547f2ae9e61f629280c14",
     origin_entry_id: "JK000000056227",
     entry: "ちかよ-る",
+    kanji: "近寄る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33920,6 +35699,7 @@ export const n2Words: Word[] = [
     entry_id: "b8ef05d2ebc646328601a74f76e61c4e",
     origin_entry_id: "JK000000056284",
     entry: "ちぎ-る",
+    kanji: "千切る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33936,6 +35716,7 @@ export const n2Words: Word[] = [
     entry_id: "92c13d03f9d540efac4b217e68193081",
     origin_entry_id: "JK000000056512",
     entry: "ちぢ-む",
+    kanji: "縮む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33952,6 +35733,7 @@ export const n2Words: Word[] = [
     entry_id: "77a3fc9107f647d5905108a228d75ac9",
     origin_entry_id: "JK000000056513",
     entry: "ちぢ-める",
+    kanji: "縮<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33968,6 +35750,7 @@ export const n2Words: Word[] = [
     entry_id: "d5624cac4b9741938f8c3a3cf9c498e3",
     origin_entry_id: "JK000000056526",
     entry: "ちぢ-れる",
+    kanji: "縮<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -33984,6 +35767,7 @@ export const n2Words: Word[] = [
     entry_id: "130c341cb7584bf88afd082881e7d520",
     origin_entry_id: "JK000000058002",
     entry: "ちら-す",
+    kanji: "散らす",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34000,6 +35784,7 @@ export const n2Words: Word[] = [
     entry_id: "05d57d8654574c499c407b852d81dd3d",
     origin_entry_id: "JK000000058394",
     entry: "つう-ずる",
+    kanji: "通<strong>ずる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34016,6 +35801,7 @@ export const n2Words: Word[] = [
     entry_id: "e45c63436a124867b750005addfc0dc7",
     origin_entry_id: "JK000000058585",
     entry: "つきあた-る",
+    kanji: "突き当(た)<strong>る</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34032,6 +35818,7 @@ export const n2Words: Word[] = [
     entry_id: "eefcd89d3c9b41de822a773d69b5777e",
     origin_entry_id: "JK000000058736",
     entry: "つ-きる",
+    kanji: "尽<strong>きる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34064,6 +35851,7 @@ export const n2Words: Word[] = [
     entry_id: "a25a1c5e20ea4876979c731b1215cf96",
     origin_entry_id: "JK000000058810",
     entry: "つくりだ-す",
+    kanji: "作り出す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34080,6 +35868,7 @@ export const n2Words: Word[] = [
     entry_id: "641cf0a716074da487f6cf96e7d2962b",
     origin_entry_id: "JK000000058831",
     entry: "つく-る",
+    kanji: "造る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34096,6 +35885,7 @@ export const n2Words: Word[] = [
     entry_id: "d08249078ca542a89bcb4929fe177674",
     origin_entry_id: "JK000000058755",
     entry: "つ-ぐ",
+    kanji: "次ぐ·亜ぐ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34128,6 +35918,7 @@ export const n2Words: Word[] = [
     entry_id: "9b95667fa25d4e05bc4a3cdec3bd15ec",
     origin_entry_id: "JK000000059036",
     entry: "つっこ-む",
+    kanji: "突っ込む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34144,6 +35935,7 @@ export const n2Words: Word[] = [
     entry_id: "c7d68acee27546d4936c0b809d142ca6",
     origin_entry_id: "JK000000059122",
     entry: "つと-める",
+    kanji: "務<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34160,6 +35952,7 @@ export const n2Words: Word[] = [
     entry_id: "cc34da2c0aa64efb9c2d3b0ecdf01a25",
     origin_entry_id: "JK000000059128",
     entry: "つなが-る",
+    kanji: "繋がる·繫がる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34176,6 +35969,7 @@ export const n2Words: Word[] = [
     entry_id: "a0a5ec5e0094454db45a65ff1c054aa8",
     origin_entry_id: "JK000000059133",
     entry: "つな-げる",
+    kanji: "繋<strong>げる</strong>·繫<strong>げる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34192,6 +35986,7 @@ export const n2Words: Word[] = [
     entry_id: "e328d63e77fb474eb457746b84f69914",
     origin_entry_id: "JK000000059147",
     entry: "つね-る",
+    kanji: "抓る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34208,6 +36003,7 @@ export const n2Words: Word[] = [
     entry_id: "4b9695a950c64cbcbd3ff9a8b26ab879",
     origin_entry_id: "JK000000059278",
     entry: "つまず-く",
+    kanji: "躓く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34224,6 +36020,7 @@ export const n2Words: Word[] = [
     entry_id: "388db84f48584122b1d5ea87827c8c73",
     origin_entry_id: "JK000000059306",
     entry: "つま-る",
+    kanji: "詰(ま)<strong>る</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34240,6 +36037,7 @@ export const n2Words: Word[] = [
     entry_id: "4097b5d78e964a84a8535f58c6a2ff0a",
     origin_entry_id: "JK000000059398",
     entry: "つ-める",
+    kanji: "詰<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34256,6 +36054,7 @@ export const n2Words: Word[] = [
     entry_id: "f467a713c2c14ba1adaedfb58a0c50a2",
     origin_entry_id: "JK000000059500",
     entry: "つりあ-う",
+    kanji: "釣(り)合う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34272,6 +36071,7 @@ export const n2Words: Word[] = [
     entry_id: "43c6d75c8357459aadad5b17150c0f6d",
     origin_entry_id: "JK000000059561",
     entry: "つ-る",
+    kanji: "吊る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34288,6 +36088,7 @@ export const n2Words: Word[] = [
     entry_id: "a314edf509804b88a7444b4336e99d66",
     origin_entry_id: "JK000000059585",
     entry: "つる-す",
+    kanji: "吊(る)<strong>す</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34304,6 +36105,7 @@ export const n2Words: Word[] = [
     entry_id: "ccc90f061c38461c959a1af4abf59ec3",
     origin_entry_id: "JK000000060295",
     entry: "てき-する",
+    kanji: "適<strong>する</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34320,6 +36122,7 @@ export const n2Words: Word[] = [
     entry_id: "c980d27f72544e11bed30c45009e6a5f",
     origin_entry_id: "JK000000061053",
     entry: "てら-す",
+    kanji: "照らす",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34336,6 +36139,7 @@ export const n2Words: Word[] = [
     entry_id: "7a93b394f7f848efa632d62d8a8df43d",
     origin_entry_id: "JK000000061100",
     entry: "て-る",
+    kanji: "照る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34352,6 +36156,7 @@ export const n2Words: Word[] = [
     entry_id: "77b03fbecd7c4ff0b7d8cff65d963100",
     origin_entry_id: "JK000000060418",
     entry: "でくわ-す",
+    kanji: "出<strong>くわ</strong>す·出会す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34368,6 +36173,7 @@ export const n2Words: Word[] = [
     entry_id: "72eccfec004d4904a30b6bea711ce830",
     origin_entry_id: "JK000000061780",
     entry: "といか-ける",
+    kanji: "問い掛<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34384,6 +36190,7 @@ export const n2Words: Word[] = [
     entry_id: "87b4588adfe144039999afed60f87005",
     origin_entry_id: "JK000000062857",
     entry: "とお-す",
+    kanji: "通す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34400,6 +36207,7 @@ export const n2Words: Word[] = [
     entry_id: "f38e3c6fb079455f857184c93a574a15",
     origin_entry_id: "JK000000062909",
     entry: "とおりかか-る",
+    kanji: "通り<strong>かか</strong>る·通り掛かる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34416,6 +36224,7 @@ export const n2Words: Word[] = [
     entry_id: "90a5f39ad1a6498db89828e21899fadb",
     origin_entry_id: "JK000000062969",
     entry: "とが-る",
+    kanji: "尖る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34432,6 +36241,7 @@ export const n2Words: Word[] = [
     entry_id: "be2ea69cb0154b42a536496c8fbc5806",
     origin_entry_id: "JK000000063082",
     entry: "と-く",
+    kanji: "解く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34448,6 +36258,7 @@ export const n2Words: Word[] = [
     entry_id: "d92651a203f845e589b64f3db31f2a19",
     origin_entry_id: "JK000000063354",
     entry: "とけこ-む",
+    kanji: "溶(け)込む·解(け)込む·融け込む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34464,6 +36275,7 @@ export const n2Words: Word[] = [
     entry_id: "618d19b7a4014ae995c916cd26482959",
     origin_entry_id: "JK000000063362",
     entry: "と-ける",
+    kanji: "解<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34480,6 +36292,7 @@ export const n2Words: Word[] = [
     entry_id: "cb813928aeac49e0946c6779c73cdd09",
     origin_entry_id: "JK000000063893",
     entry: "ととの-う",
+    kanji: "整う·調う·斉う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34496,6 +36309,7 @@ export const n2Words: Word[] = [
     entry_id: "5f8989b657354cd48b964a815bd0653b",
     origin_entry_id: "JK000000063899",
     entry: "とどま-る",
+    kanji: "止まる·留まる·停まる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34512,6 +36326,7 @@ export const n2Words: Word[] = [
     entry_id: "a1523e86897f454faeb7189106de9dc5",
     origin_entry_id: "JK000000064076",
     entry: "と-ぶ",
+    kanji: "跳ぶ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34560,6 +36375,7 @@ export const n2Words: Word[] = [
     entry_id: "85360515fe354cd185042f2acee71732",
     origin_entry_id: "JK000000064245",
     entry: "ともな-う",
+    kanji: "伴う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34576,6 +36392,7 @@ export const n2Words: Word[] = [
     entry_id: "8ff7f3b550f541dcb1e2e2296d46de50",
     origin_entry_id: "JK000000064307",
     entry: "とら-える",
+    kanji: "捕(ら)<strong>える</strong>·捉<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34592,6 +36409,7 @@ export const n2Words: Word[] = [
     entry_id: "ab56ac362954434a8619f27aadbff293",
     origin_entry_id: "JK000000064393",
     entry: "とりあ-げる",
+    kanji: "取(り)上<strong>げる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34608,6 +36426,7 @@ export const n2Words: Word[] = [
     entry_id: "b582d78351cb4ed69c5cabd64273923c",
     origin_entry_id: "JK000000064409",
     entry: "とりい-れる",
+    kanji: "取(り)入<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34640,6 +36459,7 @@ export const n2Words: Word[] = [
     entry_id: "eefe948655e94294a008fa76fde75346",
     origin_entry_id: "JK000000063097",
     entry: "ど-く",
+    kanji: "退く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34656,6 +36476,7 @@ export const n2Words: Word[] = [
     entry_id: "6daba7d404e043789257fe00f426617f",
     origin_entry_id: "JK000000063365",
     entry: "ど-ける",
+    kanji: "退<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34672,6 +36493,7 @@ export const n2Words: Word[] = [
     entry_id: "23c79f07e8ee4643ad91a51290562442",
     origin_entry_id: "JK000000063935",
     entry: "どな-る",
+    kanji: "怒鳴る·呶鳴る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34688,6 +36510,7 @@ export const n2Words: Word[] = [
     entry_id: "d9ee3335094948fd9ee295cb91663495",
     origin_entry_id: "JK000000065326",
     entry: "ながび-く",
+    kanji: "長引く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34704,6 +36527,7 @@ export const n2Words: Word[] = [
     entry_id: "3f61793db09d4ed6bee4f8dc059ec34b",
     origin_entry_id: "JK000000065358",
     entry: "なが-める",
+    kanji: "眺<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34720,6 +36544,7 @@ export const n2Words: Word[] = [
     entry_id: "bdb7c6d2b0c44e1587579b0245f904fe",
     origin_entry_id: "JK000000065499",
     entry: "なぐさ-める",
+    kanji: "慰<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34736,6 +36561,7 @@ export const n2Words: Word[] = [
     entry_id: "fc8c3a7e69504005bdf5014adc51716d",
     origin_entry_id: "JK000000065525",
     entry: "なぐ-る",
+    kanji: "殴る·擲る·撲る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34752,6 +36578,7 @@ export const n2Words: Word[] = [
     entry_id: "f17087f9ac3c437eaa6270aa94067e47",
     origin_entry_id: "JK000000065631",
     entry: "な-す",
+    kanji: "為す·作す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34768,6 +36595,7 @@ export const n2Words: Word[] = [
     entry_id: "80a6f6d5b1d74f269f9d7e1d5c6395f0",
     origin_entry_id: "JK000000065772",
     entry: "な-でる",
+    kanji: "撫<strong>でる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34800,6 +36628,7 @@ export const n2Words: Word[] = [
     entry_id: "7c8fa60a18504113b1ce6bda9aa97c13",
     origin_entry_id: "JK000000066227",
     entry: "な-れる",
+    kanji: "馴<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34816,6 +36645,7 @@ export const n2Words: Word[] = [
     entry_id: "aef9c9f7b3e6400582348172f8d8a048",
     origin_entry_id: "JK000000066523",
     entry: "に-える",
+    kanji: "煮<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34832,6 +36662,7 @@ export const n2Words: Word[] = [
     entry_id: "f329834d0fc74060ba4e1e6d541bf866",
     origin_entry_id: "JK000000066534",
     entry: "にお-う",
+    kanji: "匂う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34848,6 +36679,7 @@ export const n2Words: Word[] = [
     entry_id: "ecf2d3294f304032910c7b09bbbfb20b",
     origin_entry_id: "JK000000066560",
     entry: "にが-す",
+    kanji: "逃がす",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34864,6 +36696,7 @@ export const n2Words: Word[] = [
     entry_id: "a491c8923bab4aceb220f74375352ba8",
     origin_entry_id: "JK000000066607",
     entry: "にぎりし-める",
+    kanji: "握り締<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34880,6 +36713,7 @@ export const n2Words: Word[] = [
     entry_id: "d053286398a7483bbdee0ca6488e4ecf",
     origin_entry_id: "JK000000066693",
     entry: "にく-む",
+    kanji: "憎む·悪む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34916,6 +36750,7 @@ export const n2Words: Word[] = [
     entry_id: "5a75b14dd1074107a84e9a38f2ee4ecc",
     origin_entry_id: "JK000000066763",
     entry: "にご-る",
+    kanji: "濁る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34932,6 +36767,7 @@ export const n2Words: Word[] = [
     entry_id: "351a3c821305478eb1a4aef40fef70a2",
     origin_entry_id: "JK000000067555",
     entry: "ぬ-う",
+    kanji: "縫う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34948,6 +36784,7 @@ export const n2Words: Word[] = [
     entry_id: "78bdbe88decf4841876569e535d37dd0",
     origin_entry_id: "JK000000068017",
     entry: "ねじ-る",
+    kanji: "捩る·捻る·拗る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34964,6 +36801,7 @@ export const n2Words: Word[] = [
     entry_id: "a6a2f4a045b449eba1a2de9e2a5480dc",
     origin_entry_id: "JK000000068133",
     entry: "ねっ-する",
+    kanji: "熱<strong>する</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34980,6 +36818,7 @@ export const n2Words: Word[] = [
     entry_id: "5e6de60c2b2a48d5a8264606a7319c07",
     origin_entry_id: "JK000000068312",
     entry: "ねら-う",
+    kanji: "狙う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -34996,6 +36835,7 @@ export const n2Words: Word[] = [
     entry_id: "9abcc29ad08746e3995946755ebdfad0",
     origin_entry_id: "JK000000068715",
     entry: "のが-す",
+    kanji: "逃す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35012,6 +36852,7 @@ export const n2Words: Word[] = [
     entry_id: "5feebce0a16247a78c016fb7d20fab01",
     origin_entry_id: "JK000000068824",
     entry: "のぞ-く",
+    kanji: "覗く·窺く·覘く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35028,6 +36869,7 @@ export const n2Words: Word[] = [
     entry_id: "4a2cbfe62bab474c9c6a07ffa02b91b5",
     origin_entry_id: "JK000000068833",
     entry: "のぞ-む",
+    kanji: "望む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35044,6 +36886,7 @@ export const n2Words: Word[] = [
     entry_id: "b8aeeb8521964fe28c2cc0b3ec5b3987",
     origin_entry_id: "JK000000068992",
     entry: "の-べる",
+    kanji: "述<strong>べる</strong>·宣<strong>べる</strong>·陳<strong>べる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35076,6 +36919,7 @@ export const n2Words: Word[] = [
     entry_id: "b9a5542ed16948e69b9b74fe65b6ea67",
     origin_entry_id: "JK000000069138",
     entry: "のりすご-す",
+    kanji: "乗り過(ご)<strong>す</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35092,6 +36936,7 @@ export const n2Words: Word[] = [
     entry_id: "81ef734fe66543d3ac68d78a11c34e3d",
     origin_entry_id: "JK000000069927",
     entry: "は-える",
+    kanji: "生<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35108,6 +36953,7 @@ export const n2Words: Word[] = [
     entry_id: "6aba9a4190134c1cae642f11ee9fe9ae",
     origin_entry_id: "JK000000070047",
     entry: "はか-る",
+    kanji: "計る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35124,6 +36970,7 @@ export const n2Words: Word[] = [
     entry_id: "6d470e709b064b21b3129b784b0b5851",
     origin_entry_id: "JK000000069975",
     entry: "はが-す",
+    kanji: "剥がす·剝がす",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35156,6 +37003,7 @@ export const n2Words: Word[] = [
     entry_id: "14d96785b2ab45a1924252ab1921f3f8",
     origin_entry_id: "JK000000070508",
     entry: "はさま-る",
+    kanji: "挟まる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35172,6 +37020,7 @@ export const n2Words: Word[] = [
     entry_id: "290f5aa1d8f7435097c326a1f79453c8",
     origin_entry_id: "JK000000070522",
     entry: "はさ-む",
+    kanji: "挟む·挿む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35188,6 +37037,7 @@ export const n2Words: Word[] = [
     entry_id: "ff8022b4972a41198e1434b37a7798ae",
     origin_entry_id: "JK000000070728",
     entry: "はず-れる",
+    kanji: "外<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35204,6 +37054,7 @@ export const n2Words: Word[] = [
     entry_id: "7ceb7c6627bc482684087281f3dfee61",
     origin_entry_id: "JK000000071483",
     entry: "はなしか-ける",
+    kanji: "話しか<strong>ける</strong>·話し掛<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35220,6 +37071,7 @@ export const n2Words: Word[] = [
     entry_id: "3969ae4df149434e98b61193c639f72a",
     origin_entry_id: "JK000000071488",
     entry: "はなしこ-む",
+    kanji: "話(し)込む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35236,6 +37088,7 @@ export const n2Words: Word[] = [
     entry_id: "734c582488eb4271b91dd0f51e49ea9b",
     origin_entry_id: "JK000000071502",
     entry: "はな-す",
+    kanji: "放す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35252,6 +37105,7 @@ export const n2Words: Word[] = [
     entry_id: "477f24f3764e459f8f6ed2e83ad0aa6d",
     origin_entry_id: "JK000000071618",
     entry: "はな-れる",
+    kanji: "離<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35268,6 +37122,7 @@ export const n2Words: Word[] = [
     entry_id: "ce9e72b8d2524123a2a19e20f18f7129",
     origin_entry_id: "JK000000071696",
     entry: "は-ねる",
+    kanji: "跳<strong>ねる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35284,6 +37139,7 @@ export const n2Words: Word[] = [
     entry_id: "98b0193b7d58463bb003168c4bd4f0cc",
     origin_entry_id: "JK000000071779",
     entry: "はぶ-く",
+    kanji: "省く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35300,6 +37156,7 @@ export const n2Words: Word[] = [
     entry_id: "c4e623ff49fd4b539379b6fb6e9c9912",
     origin_entry_id: "JK000000071875",
     entry: "は-める",
+    kanji: "塡<strong>める</strong>·嵌<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35316,6 +37173,7 @@ export const n2Words: Word[] = [
     entry_id: "006eccfc15f64039b404da25b128a66d",
     origin_entry_id: "JK000000071998",
     entry: "はや-る",
+    kanji: "流行る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35332,6 +37190,7 @@ export const n2Words: Word[] = [
     entry_id: "d898448163f247b4b2035767c4635329",
     origin_entry_id: "JK000000072023",
     entry: "はらいこ-む",
+    kanji: "払(い)込む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35348,6 +37207,7 @@ export const n2Words: Word[] = [
     entry_id: "b4019727812d4b5aa8f26018a0488584",
     origin_entry_id: "JK000000072197",
     entry: "はりき-る",
+    kanji: "張(り)切る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35364,6 +37224,7 @@ export const n2Words: Word[] = [
     entry_id: "ade912b6a4ce42989d0b545e46d89064",
     origin_entry_id: "JK000000071186",
     entry: "ばっ-する",
+    kanji: "罰<strong>する</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35380,6 +37241,7 @@ export const n2Words: Word[] = [
     entry_id: "8b0b1a2067494c309d0e516124d57c08",
     origin_entry_id: "JK000000073524",
     entry: "ひきかえ-す",
+    kanji: "引(き)返す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35396,6 +37258,7 @@ export const n2Words: Word[] = [
     entry_id: "c6c4ab6d77f241e9935b6f6075a67ae4",
     origin_entry_id: "JK000000073609",
     entry: "ひきと-める",
+    kanji: "引(き)止<strong>める</strong>·引(き)留<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35428,6 +37291,7 @@ export const n2Words: Word[] = [
     entry_id: "17cf3446d74b4ed4b27f0d140a6b115f",
     origin_entry_id: "JK000000074282",
     entry: "ひっかか-る",
+    kanji: "引っ掛(か)<strong>る</strong>∙引っ懸(か)<strong>る</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35444,6 +37308,7 @@ export const n2Words: Word[] = [
     entry_id: "1b80effa9dae4c759466833c899f838a",
     origin_entry_id: "JK000000074302",
     entry: "ひっくりかえ-す",
+    kanji: "引っ繰り返す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35460,6 +37325,7 @@ export const n2Words: Word[] = [
     entry_id: "eb8dc5841a83497f9d51c6f7ab4944bd",
     origin_entry_id: "JK000000074303",
     entry: "ひっくりかえ-る",
+    kanji: "ひっくり返る·引繰り返る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35476,6 +37342,7 @@ export const n2Words: Word[] = [
     entry_id: "b65727c9572c4831be94f5d4dda32b84",
     origin_entry_id: "JK000000074322",
     entry: "ひっこ-む",
+    kanji: "引(っ)込む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35492,6 +37359,7 @@ export const n2Words: Word[] = [
     entry_id: "0d55af75c34c4879b5354fd66dd2c68e",
     origin_entry_id: "JK000000074431",
     entry: "ひっぱ-る",
+    kanji: "引(っ)張る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35508,6 +37376,7 @@ export const n2Words: Word[] = [
     entry_id: "55e4a4fe37bf4152bd463e767d243d8a",
     origin_entry_id: "JK000000074886",
     entry: "ひね-る",
+    kanji: "捻る·拈る·撚る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35524,6 +37393,7 @@ export const n2Words: Word[] = [
     entry_id: "25189ed8291346e899464836291870cd",
     origin_entry_id: "JK000000074965",
     entry: "ひび-く",
+    kanji: "響く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35540,6 +37410,7 @@ export const n2Words: Word[] = [
     entry_id: "4c9bc147f5114f2fa2fcb74d0aef532f",
     origin_entry_id: "JK000000075822",
     entry: "ひろびろ",
+    kanji: "広広",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35556,6 +37427,7 @@ export const n2Words: Word[] = [
     entry_id: "49e2e3a2c84b49aeb9119e4f47c18420",
     origin_entry_id: "JK000000075833",
     entry: "ひろ-める",
+    kanji: "広<strong>める</strong>·弘<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35572,6 +37444,7 @@ export const n2Words: Word[] = [
     entry_id: "14b1b52665f64e9bb8532eff76997f50",
     origin_entry_id: "JK000000077001",
     entry: "ふく-む",
+    kanji: "含む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35588,6 +37461,7 @@ export const n2Words: Word[] = [
     entry_id: "d610d7f8a81b4e49aec4d4fd543ad125",
     origin_entry_id: "JK000000077008",
     entry: "ふく-める",
+    kanji: "含<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35604,6 +37478,7 @@ export const n2Words: Word[] = [
     entry_id: "b8744603500e4f169ac658c4104795e9",
     origin_entry_id: "JK000000077026",
     entry: "ふくらま-す",
+    kanji: "膨らます·脹らます",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35620,6 +37495,7 @@ export const n2Words: Word[] = [
     entry_id: "15d37d57a2a44d5bb335a2c7a8b99658",
     origin_entry_id: "JK000000077028",
     entry: "ふくら-む",
+    kanji: "膨らむ·脹らむ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35636,6 +37512,7 @@ export const n2Words: Word[] = [
     entry_id: "e858d81bf51f4fba81bde64f560d7356",
     origin_entry_id: "JK000000077106",
     entry: "ふ-ける",
+    kanji: "更<strong>ける</strong>·深<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35652,6 +37529,7 @@ export const n2Words: Word[] = [
     entry_id: "14e0e39ced5f48d281b80e5de1fe8405",
     origin_entry_id: "JK000000077172",
     entry: "ふさが-る",
+    kanji: "塞がる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35668,6 +37546,7 @@ export const n2Words: Word[] = [
     entry_id: "2372cf4b11c24428a0519fc4e1577f4c",
     origin_entry_id: "JK000000077177",
     entry: "ふさ-ぐ",
+    kanji: "塞ぐ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35684,6 +37563,7 @@ export const n2Words: Word[] = [
     entry_id: "e8b8a9581e344c1d9caa243ae468865a",
     origin_entry_id: "JK000000077182",
     entry: "ふざ-ける",
+    kanji: "巫山戯る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35700,6 +37580,7 @@ export const n2Words: Word[] = [
     entry_id: "73f7ee452d9147acac72de44d6d23b0e",
     origin_entry_id: "JK000000077431",
     entry: "ふせ-ぐ",
+    kanji: "防ぐ·禦ぐ·拒ぐ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35716,6 +37597,7 @@ export const n2Words: Word[] = [
     entry_id: "5defe4819a5e4851ba9162f6b1a67e8c",
     origin_entry_id: "JK000000078622",
     entry: "ふりむ-く",
+    kanji: "振(り)向く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35732,6 +37614,7 @@ export const n2Words: Word[] = [
     entry_id: "88cfe5542f484b5c9e012bad633082e0",
     origin_entry_id: "JK000000078764",
     entry: "ふるま-う",
+    kanji: "振(る)舞う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35748,6 +37631,7 @@ export const n2Words: Word[] = [
     entry_id: "6bc7c1d01d82484195e56e3d9744ed2d",
     origin_entry_id: "JK000000078837",
     entry: "ふ-れる",
+    kanji: "触<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35764,6 +37648,7 @@ export const n2Words: Word[] = [
     entry_id: "113cb5390e264b9698315366a914d800",
     origin_entry_id: "JK000000077625",
     entry: "ぶ-つ",
+    kanji: "打つ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35780,6 +37665,7 @@ export const n2Words: Word[] = [
     entry_id: "f7dd26766d3b48e1862f5d1c8ed6226f",
     origin_entry_id: "JK000000078432",
     entry: "ぶらさが-る",
+    kanji: "ぶら下がる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35796,6 +37682,7 @@ export const n2Words: Word[] = [
     entry_id: "0f1fb57fd9bf453ba28c9965a6565e15",
     origin_entry_id: "JK000000078433",
     entry: "ぶらさ-げる",
+    kanji: "<strong>ぶら</strong>下<strong>げる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35812,6 +37699,7 @@ export const n2Words: Word[] = [
     entry_id: "ede5bb7ad0c444fe9f1680ba55b7431d",
     origin_entry_id: "JK000000079713",
     entry: "へこ-む",
+    kanji: "凹む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35828,6 +37716,7 @@ export const n2Words: Word[] = [
     entry_id: "666b02f477aa42ce91c8561653ec75a6",
     origin_entry_id: "JK000000079764",
     entry: "へだた-る",
+    kanji: "隔たる·距たる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35844,6 +37733,7 @@ export const n2Words: Word[] = [
     entry_id: "b92c9296b6e946e7b645a84f280f019b",
     origin_entry_id: "JK000000079770",
     entry: "へだ-てる",
+    kanji: "隔<strong>てる</strong>·距<strong>てる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35860,6 +37750,7 @@ export const n2Words: Word[] = [
     entry_id: "42ea91287bc34daebc4bafbce360351e",
     origin_entry_id: "JK000000080075",
     entry: "へる",
+    kanji: "綜る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35876,6 +37767,7 @@ export const n2Words: Word[] = [
     entry_id: "205abd0595c3483fb0131d6eb2c11fa3",
     origin_entry_id: "JK000000081295",
     entry: "ほう-る",
+    kanji: "放る·抛る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35892,6 +37784,7 @@ export const n2Words: Word[] = [
     entry_id: "7d731759a0584db493a3e81b0ca40b04",
     origin_entry_id: "JK000000081333",
     entry: "ほ-える",
+    kanji: "吠<strong>える</strong>·吼<strong>える</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35908,6 +37801,7 @@ export const n2Words: Word[] = [
     entry_id: "15d1654af729419abc55c1af9c3ec146",
     origin_entry_id: "JK000000082308",
     entry: "ほ-る",
+    kanji: "掘る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35924,6 +37818,7 @@ export const n2Words: Word[] = [
     entry_id: "835d9a67ea27456ba09ccafad100449b",
     origin_entry_id: "JK000000083077",
     entry: "ま-く",
+    kanji: "幕",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35940,6 +37835,7 @@ export const n2Words: Word[] = [
     entry_id: "9f44d36e1f644cc8ac212ce04b562110",
     origin_entry_id: "JK000000083292",
     entry: "まじ-る",
+    kanji: "混じる·交じる·雑じる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35956,6 +37852,7 @@ export const n2Words: Word[] = [
     entry_id: "b2b25f42f6384f8895f893b9b84e283c",
     origin_entry_id: "JK000000083301",
     entry: "ま-す",
+    kanji: "増す·益す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35972,6 +37869,7 @@ export const n2Words: Word[] = [
     entry_id: "198f2e2aae0c4dfc98272905275c51ca",
     origin_entry_id: "JK000000083364",
     entry: "ま-ぜる",
+    kanji: "交<strong>ぜる</strong>·雑<strong>ぜる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -35988,6 +37886,7 @@ export const n2Words: Word[] = [
     entry_id: "4175e4ba0f664cb287696fcbe0b2db07",
     origin_entry_id: "JK000000083390",
     entry: "また-ぐ",
+    kanji: "跨ぐ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36004,6 +37903,7 @@ export const n2Words: Word[] = [
     entry_id: "30c6c44f9e294fb9af246d7c3dcb8d36",
     origin_entry_id: "JK000000083441",
     entry: "まちあわ-せる",
+    kanji: "待ち合(わ)<strong>せる</strong>·待合<strong>せる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36020,6 +37920,7 @@ export const n2Words: Word[] = [
     entry_id: "7aa2ff541126470b9cd92672cc612a3b",
     origin_entry_id: "JK000000083642",
     entry: "まつ-る",
+    kanji: "祭る·祀る·祠る·奠る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36036,6 +37937,7 @@ export const n2Words: Word[] = [
     entry_id: "41e457e0724b489683a77b38d461f3b0",
     origin_entry_id: "JK000000083764",
     entry: "ま-ねる",
+    kanji: "真似る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36052,6 +37954,7 @@ export const n2Words: Word[] = [
     entry_id: "0b73a300e5244f17bee951d5fdd79131",
     origin_entry_id: "JK000000084072",
     entry: "まわ-す",
+    kanji: "回す·廻す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36068,6 +37971,7 @@ export const n2Words: Word[] = [
     entry_id: "c868b6fdebd0413599f51308b732f49f",
     origin_entry_id: "JK000000084859",
     entry: "みだ-れる",
+    kanji: "乱<strong>れる</strong>·紊<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36084,6 +37988,7 @@ export const n2Words: Word[] = [
     entry_id: "feb84e11bb314858bd99afae3cd12009",
     origin_entry_id: "JK000000084913",
     entry: "み-ちる",
+    kanji: "満<strong>ちる</strong>·充<strong>ちる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36100,6 +38005,7 @@ export const n2Words: Word[] = [
     entry_id: "411f049a3e9b4ef0966e1ac01c848a94",
     origin_entry_id: "JK000000085025",
     entry: "みつ-める",
+    kanji: "見つ<strong>める</strong>·見詰<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36116,6 +38022,7 @@ export const n2Words: Word[] = [
     entry_id: "7320a684f4844347ae5ea266889c5652",
     origin_entry_id: "JK000000085071",
     entry: "みと-める",
+    kanji: "認<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36132,6 +38039,7 @@ export const n2Words: Word[] = [
     entry_id: "7edae9b84314496f9c6a86d92c710a5f",
     origin_entry_id: "JK000000085127",
     entry: "みな-れる",
+    kanji: "見慣<strong>れる</strong>·見馴<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36148,6 +38056,7 @@ export const n2Words: Word[] = [
     entry_id: "00b2934a6ac840ecbf6877ca7e033102",
     origin_entry_id: "JK000000085168",
     entry: "みの-る",
+    kanji: "実る·稔る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36164,6 +38073,7 @@ export const n2Words: Word[] = [
     entry_id: "e7315578185148679cf0abb42941c938",
     origin_entry_id: "JK000000085617",
     entry: "むか-う",
+    kanji: "向かう",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36180,6 +38090,7 @@ export const n2Words: Word[] = [
     entry_id: "4e531184712d42ca97584b411859dfaf",
     origin_entry_id: "JK000000085730",
     entry: "む-く",
+    kanji: "剥く·剝く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36196,6 +38107,7 @@ export const n2Words: Word[] = [
     entry_id: "17c3e021e5ae420f9f29f603469387f7",
     origin_entry_id: "JK000000085774",
     entry: "む-ける",
+    kanji: "向<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36212,6 +38124,7 @@ export const n2Words: Word[] = [
     entry_id: "eecd3d366f2b48bab363b4f7f1741bff",
     origin_entry_id: "JK000000086450",
     entry: "めい-じる",
+    kanji: "命<strong>じる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36228,6 +38141,7 @@ export const n2Words: Word[] = [
     entry_id: "74b205324b324a98adae8611bca1b671",
     origin_entry_id: "JK000000086464",
     entry: "めい-ずる",
+    kanji: "命<strong>ずる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36244,6 +38158,7 @@ export const n2Words: Word[] = [
     entry_id: "26ea22e1ea5346e5a7a13ef0b656cda5",
     origin_entry_id: "JK000000086648",
     entry: "めぐま-れる",
+    kanji: "恵ま<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36260,6 +38175,7 @@ export const n2Words: Word[] = [
     entry_id: "66a34e6a72d0486caabb1751fe2c95f2",
     origin_entry_id: "JK000000086676",
     entry: "めぐ-る",
+    kanji: "巡る·回る·廻る·周る·繞る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36276,6 +38192,7 @@ export const n2Words: Word[] = [
     entry_id: "cd29d091b11a4db0bf9ebbfadb23e811",
     origin_entry_id: "JK000000086688",
     entry: "めざ-す",
+    kanji: "目指す·目差す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36292,6 +38209,7 @@ export const n2Words: Word[] = [
     entry_id: "0caf814c67044263b3fd8c9521e977a7",
     origin_entry_id: "JK000000087165",
     entry: "もうか-る",
+    kanji: "儲かる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36308,6 +38226,7 @@ export const n2Words: Word[] = [
     entry_id: "3f2004e8719f4f59ae40c31b56f57bba",
     origin_entry_id: "JK000000087180",
     entry: "もう-ける",
+    kanji: "儲<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36324,6 +38243,7 @@ export const n2Words: Word[] = [
     entry_id: "dfd315298618451bade303363c54d417",
     origin_entry_id: "JK000000087466",
     entry: "もぐ-る",
+    kanji: "潜る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36340,6 +38260,7 @@ export const n2Words: Word[] = [
     entry_id: "9c62d7ff17204e2bb37b9a7a786e8c0e",
     origin_entry_id: "JK000000087561",
     entry: "もた-れる",
+    kanji: "凭<strong>れる</strong>·靠<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36356,6 +38277,7 @@ export const n2Words: Word[] = [
     entry_id: "3a4c6ea795f048e0b0346626351a493d",
     origin_entry_id: "JK000000087574",
     entry: "もちあ-げる",
+    kanji: "持(ち)上<strong>げる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36372,6 +38294,7 @@ export const n2Words: Word[] = [
     entry_id: "713181a72e3b41ab8a257e2789deb26a",
     origin_entry_id: "JK000000087585",
     entry: "もち-いる",
+    kanji: "用<strong>いる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36388,6 +38311,7 @@ export const n2Words: Word[] = [
     entry_id: "d874e2fc1f0e47b7af29b2e3bb324a2f",
     origin_entry_id: "JK000000087776",
     entry: "もとづ-く",
+    kanji: "基づく",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36404,6 +38328,7 @@ export const n2Words: Word[] = [
     entry_id: "54112b897c4a43ebb090ca4b02a0077a",
     origin_entry_id: "JK000000087794",
     entry: "もと-める",
+    kanji: "求<strong>める</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36420,6 +38345,7 @@ export const n2Words: Word[] = [
     entry_id: "a43e587aebad4c4c90164cd49cbaf79f",
     origin_entry_id: "JK000000087858",
     entry: "ものがた-る",
+    kanji: "物語る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36436,6 +38362,7 @@ export const n2Words: Word[] = [
     entry_id: "524676337d424a5cbf011395b86645f5",
     origin_entry_id: "JK000000088011",
     entry: "も-む",
+    kanji: "揉む",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36452,6 +38379,7 @@ export const n2Words: Word[] = [
     entry_id: "58932c4a64564dd5acc51beaf580b7d5",
     origin_entry_id: "JK000000088511",
     entry: "やく-す",
+    kanji: "訳す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36468,6 +38396,7 @@ export const n2Words: Word[] = [
     entry_id: "3f855f3bdfeb4f51936cf62083bf4991",
     origin_entry_id: "JK000000088735",
     entry: "やすま-る",
+    kanji: "休まる·安まる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36484,6 +38413,7 @@ export const n2Words: Word[] = [
     entry_id: "4099b79dccb447b88cfe0437ad9ee175",
     origin_entry_id: "JK000000088871",
     entry: "やっつ-ける",
+    kanji: "遣っ付<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36500,6 +38430,7 @@ export const n2Words: Word[] = [
     entry_id: "07108a416880456dae4b045cb5bb1a09",
     origin_entry_id: "JK000000088874",
     entry: "やって-くる",
+    kanji: "遣って来る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36520,6 +38451,7 @@ export const n2Words: Word[] = [
     entry_id: "bbe50e77961947babd19001e68db3704",
     origin_entry_id: "JK000000088908",
     entry: "やと-う",
+    kanji: "雇う·傭う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36536,6 +38468,7 @@ export const n2Words: Word[] = [
     entry_id: "b1394a26dc0b497d867b2e967db49014",
     origin_entry_id: "JK000000088990",
     entry: "やぶ-く",
+    kanji: "破く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36552,6 +38485,7 @@ export const n2Words: Word[] = [
     entry_id: "ac9e59e1ecec4247aa62552aba2ac681",
     origin_entry_id: "JK000000089011",
     entry: "やぶ-れる",
+    kanji: "敗<strong>れる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36584,6 +38518,7 @@ export const n2Words: Word[] = [
     entry_id: "30c33fc73a0b4dfcba92f56a2eeb1e46",
     origin_entry_id: "JK000000089440",
     entry: "ゆ-う",
+    kanji: "言う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36600,6 +38535,7 @@ export const n2Words: Word[] = [
     entry_id: "4b1a135f20c44593883ab10a49346b4a",
     origin_entry_id: "JK000000090159",
     entry: "ゆず-る",
+    kanji: "譲る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36616,6 +38552,7 @@ export const n2Words: Word[] = [
     entry_id: "ec50bc8c930c429fb0a84de19a0dc92f",
     origin_entry_id: "JK000000091245",
     entry: "よ-す",
+    kanji: "止す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36632,6 +38569,7 @@ export const n2Words: Word[] = [
     entry_id: "8357c095b64a43f889263e46aa0198ad",
     origin_entry_id: "JK000000091278",
     entry: "よ-せる",
+    kanji: "寄<strong>せる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36648,6 +38586,7 @@ export const n2Words: Word[] = [
     entry_id: "80d2c3dd650e42ffa5bd183e1f2dbe28",
     origin_entry_id: "JK000000091468",
     entry: "よびか-ける",
+    kanji: "呼(び)掛<strong>ける</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36680,6 +38619,7 @@ export const n2Words: Word[] = [
     entry_id: "7b976e46b5cc43d88ce994fe15fa21f6",
     origin_entry_id: "JK000000092879",
     entry: "りゃく-す",
+    kanji: "略す",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36696,6 +38636,7 @@ export const n2Words: Word[] = [
     entry_id: "92817cf7063d49be8dc50d7bceaae409",
     origin_entry_id: "JK000000095144",
     entry: "ろん-ずる",
+    kanji: "論<strong>ずる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36712,6 +38653,7 @@ export const n2Words: Word[] = [
     entry_id: "d6508d479b97441f9b4a56bba2b27251",
     origin_entry_id: "JK000000095440",
     entry: "わ-く",
+    kanji: "湧く·涌く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36748,6 +38690,7 @@ export const n2Words: Word[] = [
     entry_id: "c54eda35daa84f1ead99002fe9df6428",
     origin_entry_id: "JK000000095745",
     entry: "わ-びる",
+    kanji: "詫<strong>びる</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36852,6 +38795,7 @@ export const n2Words: Word[] = [
     entry_id: "d835602b59f24fb0b73027af19eaea0e",
     origin_entry_id: "JK000000069031",
     entry: "のみ",
+    kanji: "耳·而已",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36868,6 +38812,7 @@ export const n2Words: Word[] = [
     entry_id: "7b05e7262d8848e7b4570e48bc581b7f",
     origin_entry_id: "JK000000001551",
     entry: "あつかまし-い",
+    kanji: "厚かましい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36884,6 +38829,7 @@ export const n2Words: Word[] = [
     entry_id: "521dd9bed6d74c6298744a1b94e262b1",
     origin_entry_id: "JK000000002328",
     entry: "あやう-い",
+    kanji: "危うい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36900,6 +38846,7 @@ export const n2Words: Word[] = [
     entry_id: "b8133376d5a449aa9ec9aa423af4ed4d",
     origin_entry_id: "JK000000002382",
     entry: "あら-い",
+    kanji: "粗い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36916,6 +38863,7 @@ export const n2Words: Word[] = [
     entry_id: "ae28388647674d8bbadd4667096eda1f",
     origin_entry_id: "JK000000002766",
     entry: "あわ-い",
+    kanji: "淡い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36932,6 +38880,7 @@ export const n2Words: Word[] = [
     entry_id: "d35a8ff29d794c3da08a8752000b7fde",
     origin_entry_id: "JK000000002794",
     entry: "あわただし-い",
+    kanji: "慌ただしい·遽しい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36948,6 +38897,7 @@ export const n2Words: Word[] = [
     entry_id: "6991463fcf694134a7df97579b6b8bc7",
     origin_entry_id: "JK000000007422",
     entry: "うま-い",
+    kanji: "上手い·巧い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36964,6 +38914,7 @@ export const n2Words: Word[] = [
     entry_id: "ea7e3f5ca65e497891c01fffdc054421",
     origin_entry_id: "JK000000008896",
     entry: "えら-い",
+    kanji: "偉い·豪い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36980,6 +38931,7 @@ export const n2Words: Word[] = [
     entry_id: "a8e7d353e68b412d8dad1bd7bac326bb",
     origin_entry_id: "JK000000010597",
     entry: "おし-い",
+    kanji: "惜しい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -36996,6 +38948,7 @@ export const n2Words: Word[] = [
     entry_id: "b051dc87158a4bad82aace22c318e9e2",
     origin_entry_id: "JK000000011590",
     entry: "おめでた-い",
+    kanji: "御目出度い·御芽出度い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37012,6 +38965,7 @@ export const n2Words: Word[] = [
     entry_id: "97781e7f280044e7ba2e78cdc83e261a",
     origin_entry_id: "JK000000011624",
     entry: "おもいがけな-い",
+    kanji: "思いがけない·思い掛けない·思い懸けない",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37028,6 +38982,7 @@ export const n2Words: Word[] = [
     entry_id: "9d63d6c58a39488b9fd962ae4d0199c5",
     origin_entry_id: "JK000000015472",
     entry: "かた-い",
+    kanji: "硬い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37044,6 +38999,7 @@ export const n2Words: Word[] = [
     entry_id: "dab34e14eb584464bcb7bb59c7910aab",
     origin_entry_id: "JK100020013003",
     entry: "きそくただし-い",
+    kanji: "規則正しい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37060,6 +39016,7 @@ export const n2Words: Word[] = [
     entry_id: "e4b7038bec594f07906f2caab91e05c7",
     origin_entry_id: "JK000000021434",
     entry: "きよ-い",
+    kanji: "清い·浄い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37076,6 +39033,7 @@ export const n2Words: Word[] = [
     entry_id: "d2709e2620c04fbb9abdc6567f3eb44a",
     origin_entry_id: "JK000000024425",
     entry: "くど-い",
+    kanji: "諄い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37092,6 +39050,7 @@ export const n2Words: Word[] = [
     entry_id: "f4d9bf52d4a84dad80739e17d036656c",
     origin_entry_id: "JK000000026741",
     entry: "けむ-い",
+    kanji: "煙い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37108,6 +39067,7 @@ export const n2Words: Word[] = [
     entry_id: "48e21e2739964b85aba7dd868be38989",
     origin_entry_id: "JK000000027850",
     entry: "こいし-い",
+    kanji: "恋しい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37124,6 +39084,7 @@ export const n2Words: Word[] = [
     entry_id: "126ff1d189a74051b26ffb0c491b22d0",
     origin_entry_id: "JK000000034776",
     entry: "さわがし-い",
+    kanji: "騒がしい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37140,6 +39101,7 @@ export const n2Words: Word[] = [
     entry_id: "bbe9d640ea6e438da897204e63595a34",
     origin_entry_id: "JK100036128001",
     entry: "しかく-い",
+    kanji: "四角い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37156,6 +39118,7 @@ export const n2Words: Word[] = [
     entry_id: "3bf9efb9eccc437ea94056c8a30d0213",
     origin_entry_id: "JK000000100083",
     entry: "しかたがない",
+    kanji: "仕方が<strong>ない</strong>",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -37172,6 +39135,7 @@ export const n2Words: Word[] = [
     entry_id: "a77d47ece0d14525b873a361a10a6636",
     origin_entry_id: "JK000000043634",
     entry: "しょっぱ-い",
+    kanji: "塩っぱい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37188,6 +39152,7 @@ export const n2Words: Word[] = [
     entry_id: "3fbe04d67eb14fffb199b106327c4ff5",
     origin_entry_id: "JK000000043848",
     entry: "しらじらし-い",
+    kanji: "白白しい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37204,6 +39169,7 @@ export const n2Words: Word[] = [
     entry_id: "bb1a85956d144403bd368ed20dfd6c3f",
     origin_entry_id: "JK000000046592",
     entry: "すっぱ-い",
+    kanji: "酸っぱい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37220,6 +39186,7 @@ export const n2Words: Word[] = [
     entry_id: "58dbc70b7133474a81a7d3a762ce7ee7",
     origin_entry_id: "JK000000047174",
     entry: "ずる-い",
+    kanji: "狡い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37236,6 +39203,7 @@ export const n2Words: Word[] = [
     entry_id: "b9633463df64476fa4cb79634cf73f23",
     origin_entry_id: "JK000000050937",
     entry: "そうぞうし-い",
+    kanji: "騒騒しい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37268,6 +39236,7 @@ export const n2Words: Word[] = [
     entry_id: "44dede81a2a44b7bb27032f8e2d7d6ba",
     origin_entry_id: "JK000000056249",
     entry: "ちからづよ-い",
+    kanji: "力強い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37284,6 +39253,7 @@ export const n2Words: Word[] = [
     entry_id: "96ac3c8b07614ce9982b5075eab353b0",
     origin_entry_id: "JK000000065176",
     entry: "なが-い",
+    kanji: "永い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37300,6 +39270,7 @@ export const n2Words: Word[] = [
     entry_id: "8555e00473a148ecbeac6ec9fe638af3",
     origin_entry_id: "JK000000065691",
     entry: "なつかし-い",
+    kanji: "懐かしい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37316,6 +39287,7 @@ export const n2Words: Word[] = [
     entry_id: "87e27c233029482784d49a87831abe4e",
     origin_entry_id: "JK000000066700",
     entry: "にくらし-い",
+    kanji: "憎らしい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37332,6 +39304,7 @@ export const n2Words: Word[] = [
     entry_id: "9a1f02b68ce5471a997068a3a290b230",
     origin_entry_id: "JK000000067080",
     entry: "にぶ-い",
+    kanji: "鈍い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37348,6 +39321,7 @@ export const n2Words: Word[] = [
     entry_id: "6ba631cf5f774caaa1c61e92881568dc",
     origin_entry_id: "JK000000069188",
     entry: "のろ-い",
+    kanji: "鈍い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37364,6 +39338,7 @@ export const n2Words: Word[] = [
     entry_id: "97f8e14290824318bac55eca5a304c08",
     origin_entry_id: "JK000000071561",
     entry: "はなはだし-い",
+    kanji: "甚だしい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37380,6 +39355,7 @@ export const n2Words: Word[] = [
     entry_id: "9df4810593834425bba052e46abacd73",
     origin_entry_id: "JK000000070027",
     entry: "ばからし-い",
+    kanji: "馬鹿<strong>らし</strong>い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37396,6 +39372,7 @@ export const n2Words: Word[] = [
     entry_id: "f31449e542724b279513211784cbfbab",
     origin_entry_id: "JK000000074598",
     entry: "ひとし-い",
+    kanji: "等しい·均しい·斉しい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37412,6 +39389,7 @@ export const n2Words: Word[] = [
     entry_id: "c389a1124ce64925a4f0092e893e6ff0",
     origin_entry_id: "JK000000083560",
     entry: "まっしろ-い",
+    kanji: "真っ白い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37444,6 +39422,7 @@ export const n2Words: Word[] = [
     entry_id: "c06b5b712c6842158f058252f16a1516",
     origin_entry_id: "JK000000086865",
     entry: "めでた-い",
+    kanji: "目出度い·芽出度い·目出い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37460,6 +39439,7 @@ export const n2Words: Word[] = [
     entry_id: "b3fd757c508c45348fbe80fcc23962a2",
     origin_entry_id: "JK000000087896",
     entry: "ものすご-い",
+    kanji: "物凄い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37476,6 +39456,7 @@ export const n2Words: Word[] = [
     entry_id: "0024b62091454d44a5febfc08b5f7a20",
     origin_entry_id: "JK000000088716",
     entry: "やす-い",
+    kanji: "易い",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37492,6 +39473,7 @@ export const n2Words: Word[] = [
     entry_id: "cd9615c8ffe8462da680a0bf1c73b5a2",
     origin_entry_id: "JK000000089374",
     entry: "やわらか-い",
+    kanji: "柔らかい·軟らかい",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37508,6 +39490,7 @@ export const n2Words: Word[] = [
     entry_id: "a45ae45ecfdc4170b7ddc6c7434c88c9",
     origin_entry_id: "JK000000041691",
     entry: "-じょう",
+    kanji: "畳",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37540,6 +39523,7 @@ export const n2Words: Word[] = [
     entry_id: "06b573c621144c77889cf55cbc28db99",
     origin_entry_id: "JK000000091830",
     entry: "らい",
+    kanji: "来",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37556,6 +39540,7 @@ export const n2Words: Word[] = [
     entry_id: "58a5159625b64029a6f5bdd68166e8f6",
     origin_entry_id: "JK000000000223",
     entry: "あいついで",
+    kanji: "相次いで",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37572,6 +39557,7 @@ export const n2Words: Word[] = [
     entry_id: "34bb10e67b9549a8bc0d52ed2cd67c8f",
     origin_entry_id: "JK000000000258",
     entry: "あいにく",
+    kanji: "生憎",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37592,6 +39578,7 @@ export const n2Words: Word[] = [
     entry_id: "df69d3199ef94954be8d359be7c352df",
     origin_entry_id: "JK000000000905",
     entry: "あくまで",
+    kanji: "飽くまで·飽く迄",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37624,6 +39611,7 @@ export const n2Words: Word[] = [
     entry_id: "844b9e578f444f50b3a0ca3cf49fa612",
     origin_entry_id: "JK000000002482",
     entry: "あらためて",
+    kanji: "改めて",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37640,6 +39628,7 @@ export const n2Words: Word[] = [
     entry_id: "e756fcee216242e0a74b2614a635a977",
     origin_entry_id: "JK000000002645",
     entry: "あるいは",
+    kanji: "或いは",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37660,6 +39649,7 @@ export const n2Words: Word[] = [
     entry_id: "b63ffcf1f21c483e882d5cf5e4a9b947",
     origin_entry_id: "JK000000003044",
     entry: "あんまり",
+    kanji: "余り",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37680,6 +39670,7 @@ export const n2Words: Word[] = [
     entry_id: "48dc0d503b934256842b0f07cb401a56",
     origin_entry_id: "JK000000004364",
     entry: "いちおう",
+    kanji: "一応·一往",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37696,6 +39687,7 @@ export const n2Words: Word[] = [
     entry_id: "1d5c88cee29040389ac945a02769f3c3",
     origin_entry_id: "JK000000100173",
     entry: "いちだんと",
+    kanji: "一段と",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -37728,6 +39720,7 @@ export const n2Words: Word[] = [
     entry_id: "29f95f2c995b4bb3915651b67005ed9a",
     origin_entry_id: "JK000000004831",
     entry: "いっそう",
+    kanji: "一層",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37744,6 +39737,7 @@ export const n2Words: Word[] = [
     entry_id: "5c42e4fe367841eeb889854045ccd2f9",
     origin_entry_id: "JK000000004850",
     entry: "いったん",
+    kanji: "一旦",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37760,6 +39754,7 @@ export const n2Words: Word[] = [
     entry_id: "f24f4440ffa8461b9d5c1720b4ccb9c6",
     origin_entry_id: "JK100004966001",
     entry: "いつまでも",
+    kanji: "何時迄も",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37776,6 +39771,7 @@ export const n2Words: Word[] = [
     entry_id: "2ef21c20d3854d5489660cde1132a10a",
     origin_entry_id: "JK000000005377",
     entry: "いまに",
+    kanji: "今に",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37792,6 +39788,7 @@ export const n2Words: Word[] = [
     entry_id: "eaa358a809eb4b598bcf1b88768e4325",
     origin_entry_id: "JK000000005521",
     entry: "いよいよ",
+    kanji: "愈·愈愈·弥弥",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37808,6 +39805,7 @@ export const n2Words: Word[] = [
     entry_id: "0672d75917374b1697dcfa3f5a74bbd5",
     origin_entry_id: "JK000000005854",
     entry: "いわば",
+    kanji: "言わば·謂わば",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37840,6 +39838,7 @@ export const n2Words: Word[] = [
     entry_id: "4dbe4030da674cb09b52a8a894701ec5",
     origin_entry_id: "JK000000010819",
     entry: "おそらく",
+    kanji: "恐らく",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37856,6 +39855,7 @@ export const n2Words: Word[] = [
     entry_id: "fa433b032b5b4224ad1c342dfa0bc7cd",
     origin_entry_id: "JK000000011758",
     entry: "おもに",
+    kanji: "主に",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37872,6 +39872,7 @@ export const n2Words: Word[] = [
     entry_id: "b266b00df1ce4e1285ef88e801b54c20",
     origin_entry_id: "JK000000013528",
     entry: "かえって",
+    kanji: "却って·反って",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37920,6 +39921,7 @@ export const n2Words: Word[] = [
     entry_id: "ea74ad53af6e4951b9341da1c2a68a33",
     origin_entry_id: "JK000000027522",
     entry: "げんに",
+    kanji: "現に",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37936,6 +39938,7 @@ export const n2Words: Word[] = [
     entry_id: "c6cd8ae385974e5cacba1a5255a9f885",
     origin_entry_id: "JK000000032747",
     entry: "さいさん",
+    kanji: "再三",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37952,6 +39955,7 @@ export const n2Words: Word[] = [
     entry_id: "4e470a914eb9465f9c8f0a920847f996",
     origin_entry_id: "JK000000034034",
     entry: "さすが",
+    kanji: "流石·遉",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37972,6 +39976,7 @@ export const n2Words: Word[] = [
     entry_id: "a95f0e0c0dfd49bbb3ddfa7259c09733",
     origin_entry_id: "JK000000034249",
     entry: "さっそく",
+    kanji: "早速",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -37988,6 +39993,7 @@ export const n2Words: Word[] = [
     entry_id: "8c6688bf2bf846e6851637d7f7ea6f41",
     origin_entry_id: "JK000000034309",
     entry: "さて",
+    kanji: "扠·扨·偖·却説",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38012,6 +40018,7 @@ export const n2Words: Word[] = [
     entry_id: "10a7740ce7ae49859b253256cc148a25",
     origin_entry_id: "JK000000034652",
     entry: "さらに",
+    kanji: "更に",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38028,6 +40035,7 @@ export const n2Words: Word[] = [
     entry_id: "607fb81a96084060b05f9bf5900dae0a",
     origin_entry_id: "JK000000036478",
     entry: "しきりに",
+    kanji: "頻りに",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38060,6 +40068,7 @@ export const n2Words: Word[] = [
     entry_id: "7d5350f9d1ac46f8812bb6d02f2161fa",
     origin_entry_id: "JK000000038325",
     entry: "しばしば",
+    kanji: "数·屢·屢屢",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38076,6 +40085,7 @@ export const n2Words: Word[] = [
     entry_id: "0fff5d2d78ab404c9d536e3446579e82",
     origin_entry_id: "JK000000036182",
     entry: "じかに",
+    kanji: "直に",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38092,6 +40102,7 @@ export const n2Words: Word[] = [
     entry_id: "1f826ad3b5e345008d6b3bc70617c8d7",
     origin_entry_id: "JK000000036384",
     entry: "じきに",
+    kanji: "直に",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38108,6 +40119,7 @@ export const n2Words: Word[] = [
     entry_id: "38ed31f8cfd14e46908fe4c571e81ff2",
     origin_entry_id: "JK000000037911",
     entry: "じつに",
+    kanji: "実に",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38124,6 +40136,7 @@ export const n2Words: Word[] = [
     entry_id: "b4c7e9221205453a80287d6c0a145077",
     origin_entry_id: "JK000000100112",
     entry: "じゅんじゅんに",
+    kanji: "順々に",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -38156,6 +40169,7 @@ export const n2Words: Word[] = [
     entry_id: "104d16709d424a4c93f71c0523880823",
     origin_entry_id: "JK000000047840",
     entry: "せいぜい",
+    kanji: "精精",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38172,6 +40186,7 @@ export const n2Words: Word[] = [
     entry_id: "d1e63ab89249428ca29b6852bba07949",
     origin_entry_id: "JK000000048661",
     entry: "せっかく",
+    kanji: "折角",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38236,6 +40251,7 @@ export const n2Words: Word[] = [
     entry_id: "4ff2ecea3a45441991e9828934b5825c",
     origin_entry_id: "JK000000054371",
     entry: "ただちに",
+    kanji: "直ちに",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38252,6 +40268,7 @@ export const n2Words: Word[] = [
     entry_id: "b092ca9f64364361865b17113e632d66",
     origin_entry_id: "JK000000054527",
     entry: "たちまち",
+    kanji: "忽ち",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38284,6 +40301,7 @@ export const n2Words: Word[] = [
     entry_id: "2b76459bbdc94d1f95d579923c6b50c2",
     origin_entry_id: "JK000000055014",
     entry: "たびたび",
+    kanji: "度度",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38300,6 +40318,7 @@ export const n2Words: Word[] = [
     entry_id: "f24bffa2430446d2a92b2ffbd851c209",
     origin_entry_id: "JK000000053506",
     entry: "だいぶん",
+    kanji: "大分",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38316,6 +40335,7 @@ export const n2Words: Word[] = [
     entry_id: "10493b4f6cca49b6848e7dbab11edf61",
     origin_entry_id: "JK000000056207",
     entry: "ちかぢか",
+    kanji: "近近",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38332,6 +40352,7 @@ export const n2Words: Word[] = [
     entry_id: "9523fac0addc4ce1bf79203413d55c98",
     origin_entry_id: "JK000000056797",
     entry: "ちゃくちゃく",
+    kanji: "着着",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38348,6 +40369,7 @@ export const n2Words: Word[] = [
     entry_id: "d888c65474f4423280431bc074a03d4e",
     origin_entry_id: "JK000000100200",
     entry: "ちゃくちゃくと",
+    kanji: "着々と",
     level: "2",
     source: "80198531",
     partsMeans: [
@@ -38364,6 +40386,7 @@ export const n2Words: Word[] = [
     entry_id: "8821c70560c749b9beac8791c7e1fc1f",
     origin_entry_id: "JK000000058298",
     entry: "ついで",
+    kanji: "次いで·尋いで",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38384,6 +40407,7 @@ export const n2Words: Word[] = [
     entry_id: "a67b8f5ebd7b45ca8ef5fdf542c0ab77",
     origin_entry_id: "JK000000058299",
     entry: "ついでに",
+    kanji: "序でに",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38400,6 +40424,7 @@ export const n2Words: Word[] = [
     entry_id: "b2c00f43e65a466a8afdf096b41d05b9",
     origin_entry_id: "JK000000062416",
     entry: "とうぜん",
+    kanji: "当然",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38416,6 +40441,7 @@ export const n2Words: Word[] = [
     entry_id: "95f3f36a952d4732967c13ecda929b12",
     origin_entry_id: "JK100063740001",
     entry: "とっくに",
+    kanji: "疾っくに",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38432,6 +40458,7 @@ export const n2Words: Word[] = [
     entry_id: "6f9e05be604b47bb8a13aee3f450aef8",
     origin_entry_id: "JK000000063938",
     entry: "とにかく",
+    kanji: "兎に角·左右",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38448,6 +40475,7 @@ export const n2Words: Word[] = [
     entry_id: "14a740f7d179461a8aa9c149b51290b8",
     origin_entry_id: "JK000000064216",
     entry: "ともかく",
+    kanji: "兎も角",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38464,6 +40492,7 @@ export const n2Words: Word[] = [
     entry_id: "8e399c40fdd64b59bfc4f412e04d1f9d",
     origin_entry_id: "JK000000064249",
     entry: "ともに",
+    kanji: "共に·倶に",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38480,6 +40509,7 @@ export const n2Words: Word[] = [
     entry_id: "a09a979bb1f34b3da751d3efa1e93fb9",
     origin_entry_id: "JK000000064391",
     entry: "とりあえず",
+    kanji: "取り敢えず",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38496,6 +40526,7 @@ export const n2Words: Word[] = [
     entry_id: "4b137415f98d48a4b8dbebba68869c00",
     origin_entry_id: "JK000000061963",
     entry: "どうか",
+    kanji: "如何か",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38528,6 +40559,7 @@ export const n2Words: Word[] = [
     entry_id: "566a91193f9346cda38a556f951737af",
     origin_entry_id: "JK000000063385",
     entry: "どこか",
+    kanji: "何処か",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38560,6 +40592,7 @@ export const n2Words: Word[] = [
     entry_id: "6cb9ad3717184e1586125b47b605a8c7",
     origin_entry_id: "JK000000065147",
     entry: "なお",
+    kanji: "猶·尚",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38596,6 +40629,7 @@ export const n2Words: Word[] = [
     entry_id: "18dc517408d74f2b9e2ea390cbd572ae",
     origin_entry_id: "JK000000065837",
     entry: "なにしろ",
+    kanji: "何しろ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38612,6 +40646,7 @@ export const n2Words: Word[] = [
     entry_id: "83c0777b123c483189092d94645c46ed",
     origin_entry_id: "JK000000066372",
     entry: "なんで",
+    kanji: "何で",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38628,6 +40663,7 @@ export const n2Words: Word[] = [
     entry_id: "2b95453971064012a3105fcef3555b56",
     origin_entry_id: "JK000000066377",
     entry: "なんでも",
+    kanji: "何でも",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38644,6 +40680,7 @@ export const n2Words: Word[] = [
     entry_id: "a836bb5ebb1f4c0eb739ea16fe2346df",
     origin_entry_id: "JK000000066402",
     entry: "なんとも",
+    kanji: "何<strong>とも</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38676,6 +40713,7 @@ export const n2Words: Word[] = [
     entry_id: "a6ae16bde817442bb495c0fe84697798",
     origin_entry_id: "JK000000068764",
     entry: "のこらず",
+    kanji: "残らず",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38692,6 +40730,7 @@ export const n2Words: Word[] = [
     entry_id: "511515c1b3ca418b8239736b11aaf3c3",
     origin_entry_id: "JK000000068865",
     entry: "のちほど",
+    kanji: "後程",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38708,6 +40747,7 @@ export const n2Words: Word[] = [
     entry_id: "fa1d7aa3c5874bf089be9d1dc5d93387",
     origin_entry_id: "JK000000070834",
     entry: "はたして",
+    kanji: "果(た)して",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38740,6 +40780,7 @@ export const n2Words: Word[] = [
     entry_id: "3d4979de72a94f4c9bb473295978aee8",
     origin_entry_id: "JK100073379005",
     entry: "ひかくてき",
+    kanji: "比較的",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38756,6 +40797,7 @@ export const n2Words: Word[] = [
     entry_id: "ff29505a51554f6ca0a4b5f906734b00",
     origin_entry_id: "JK000000074802",
     entry: "ひとりでに",
+    kanji: "独りでに",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38772,6 +40814,7 @@ export const n2Words: Word[] = [
     entry_id: "ba93feb19a3c40ebbc4f21fb623a611f",
     origin_entry_id: "JK000000077528",
     entry: "ふたたび",
+    kanji: "再び·二度",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38804,6 +40847,7 @@ export const n2Words: Word[] = [
     entry_id: "a53ad506322545e28c13f487d0a8f9ac",
     origin_entry_id: "JK000000082184",
     entry: "ほぼ",
+    kanji: "略·粗",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38876,6 +40920,7 @@ export const n2Words: Word[] = [
     entry_id: "dc6dde8a2d7a4de8a05a6a293a7ac109",
     origin_entry_id: "JK000000083228",
     entry: "まさに",
+    kanji: "将に",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38892,6 +40937,7 @@ export const n2Words: Word[] = [
     entry_id: "3e3d0d9f3af94d08bff02252ccb9f2f4",
     origin_entry_id: "JK000000083336",
     entry: "ますます",
+    kanji: "益·益益",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38908,6 +40954,7 @@ export const n2Words: Word[] = [
     entry_id: "f114a90ef9034c738f1e546823c53709",
     origin_entry_id: "JK000000083578",
     entry: "まったく",
+    kanji: "全く·完く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38924,6 +40971,7 @@ export const n2Words: Word[] = [
     entry_id: "57f18ee92e60429cbe4db0b567ef3d28",
     origin_entry_id: "JK000000083876",
     entry: "まもなく",
+    kanji: "間もなく·間も無く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38940,6 +40988,7 @@ export const n2Words: Word[] = [
     entry_id: "9a474e764c9642188872fbfc1815546e",
     origin_entry_id: "JK000000084000",
     entry: "まるで",
+    kanji: "丸で",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38956,6 +41005,7 @@ export const n2Words: Word[] = [
     entry_id: "2338d66b2a174e7f9589f2fe1e87c593",
     origin_entry_id: "JK000000085955",
     entry: "むしろ",
+    kanji: "寧ろ",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -38988,6 +41038,7 @@ export const n2Words: Word[] = [
     entry_id: "5c2faf6b1f5b4642ad88975db91bd5d0",
     origin_entry_id: "JK100086844003",
     entry: "めったに",
+    kanji: "滅多に",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39004,6 +41055,7 @@ export const n2Words: Word[] = [
     entry_id: "a6378c0adbaf45258d611ac0195ab56f",
     origin_entry_id: "JK000000087796",
     entry: "もともと",
+    kanji: "元元·本本",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39020,6 +41072,7 @@ export const n2Words: Word[] = [
     entry_id: "6ee7b0242ca04efabe0003dcd39b8bdc",
     origin_entry_id: "JK000000088345",
     entry: "やがて",
+    kanji: "軈て",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39036,6 +41089,7 @@ export const n2Words: Word[] = [
     entry_id: "7389f17db63d4eada8f2502a80308770",
     origin_entry_id: "JK000000091050",
     entry: "よけい",
+    kanji: "余計",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39072,6 +41126,7 @@ export const n2Words: Word[] = [
     entry_id: "810ae43dbf85400c829a5e357d3efad6",
     origin_entry_id: "JK000000091754",
     entry: "よろしく",
+    kanji: "宜しく",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39088,6 +41143,7 @@ export const n2Words: Word[] = [
     entry_id: "7a5cf89281ff4a6cbdb12d73d122d264",
     origin_entry_id: "JK000000095557",
     entry: "わずか",
+    kanji: "僅か·纔か",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39108,6 +41164,7 @@ export const n2Words: Word[] = [
     entry_id: "c8fce5ef76264f698a90a5d6611255fc",
     origin_entry_id: "JK000000095874",
     entry: "わりと",
+    kanji: "割と",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39140,6 +41197,7 @@ export const n2Words: Word[] = [
     entry_id: "fe8681efd6b9456d9829b946aec3f544",
     origin_entry_id: "JK000000002590",
     entry: "ありがとう",
+    kanji: "有り難う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39172,6 +41230,7 @@ export const n2Words: Word[] = [
     entry_id: "6a66f602f1e5452f952ea01dc69e2f6a",
     origin_entry_id: "JK000000005479",
     entry: "いや",
+    kanji: "否",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39260,6 +41319,7 @@ export const n2Words: Word[] = [
     entry_id: "5dd772eb1f6240f4b5fbd528c803ffad",
     origin_entry_id: "JK000000011359",
     entry: "おはよう",
+    kanji: "お早う∙御早う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39276,6 +41336,7 @@ export const n2Words: Word[] = [
     entry_id: "20efc53284ce446cb289b5876d9460c1",
     origin_entry_id: "JK000000011537",
     entry: "おまちどおさま",
+    kanji: "お待(ち)遠様",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39292,6 +41353,7 @@ export const n2Words: Word[] = [
     entry_id: "21186f01f4d04e219d142c6cac04991f",
     origin_entry_id: "JK000000011591",
     entry: "おめでとう",
+    kanji: "御目出度う·御芽出度う",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39308,6 +41370,7 @@ export const n2Words: Word[] = [
     entry_id: "68ec16f955a34c108939a1d5dd0515a9",
     origin_entry_id: "JK100030175001",
     entry: "ごくろうさま",
+    kanji: "ご苦労様·御苦労様",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39324,6 +41387,7 @@ export const n2Words: Word[] = [
     entry_id: "8003bf4dc4dc4581b2828328bf521489",
     origin_entry_id: "JK100030868001",
     entry: "ごちそうさま",
+    kanji: "ご馳走様‧御馳走様",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39340,6 +41404,7 @@ export const n2Words: Word[] = [
     entry_id: "9357c89dbec84feea6b12276feb76aa7",
     origin_entry_id: "JK000000038621",
     entry: "しまった",
+    kanji: "仕舞った",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39376,6 +41441,7 @@ export const n2Words: Word[] = [
     entry_id: "965dae03dead46e59a88717a1ab88caf",
     origin_entry_id: "JK000000065846",
     entry: "なになに",
+    kanji: "何何",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39424,6 +41490,7 @@ export const n2Words: Word[] = [
     entry_id: "2bf6a449d77241e9851a1de3a5ca6632",
     origin_entry_id: "JK000000000291",
     entry: "あいまい",
+    kanji: "曖昧",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39440,6 +41507,7 @@ export const n2Words: Word[] = [
     entry_id: "88d0654aebb54ed4a1a4d584207e5b7f",
     origin_entry_id: "JK000000002472",
     entry: "あらた",
+    kanji: "新た",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39456,6 +41524,7 @@ export const n2Words: Word[] = [
     entry_id: "a1d6bc03673541e5805f458450dfaa26",
     origin_entry_id: "JK000000003442",
     entry: "いがい",
+    kanji: "意外",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39472,6 +41541,7 @@ export const n2Words: Word[] = [
     entry_id: "e5da1f5ee3b04edaa66c723fcc7e6d1e",
     origin_entry_id: "JK000000010876",
     entry: "おだやか",
+    kanji: "穏やか",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39488,6 +41558,7 @@ export const n2Words: Word[] = [
     entry_id: "805cec5464174c038d4dc352ba13dae9",
     origin_entry_id: "JK000000014190",
     entry: "かくじつ",
+    kanji: "確実",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39504,6 +41575,7 @@ export const n2Words: Word[] = [
     entry_id: "2a0dce606e7b4440893e9f9bc4dac411",
     origin_entry_id: "JK000000020624",
     entry: "きみょう",
+    kanji: "奇妙",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39520,6 +41592,7 @@ export const n2Words: Word[] = [
     entry_id: "30816b1185844ee5bcbc39bbd8e57dca",
     origin_entry_id: "JK000000021022",
     entry: "きゅうげき",
+    kanji: "急激·急劇",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39536,6 +41609,7 @@ export const n2Words: Word[] = [
     entry_id: "5950793ee194403c9b7390fb4adc2ec4",
     origin_entry_id: "JK000000021442",
     entry: "きよう",
+    kanji: "器用",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39552,6 +41626,7 @@ export const n2Words: Word[] = [
     entry_id: "dd79036fa877479f928ceb457d66fb82",
     origin_entry_id: "JK100024126006",
     entry: "ぐたいてき",
+    kanji: "具体的",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39568,6 +41643,7 @@ export const n2Words: Word[] = [
     entry_id: "2a21e1d57a0745469c7ffd488b9d74f6",
     origin_entry_id: "JK000000027235",
     entry: "げんじゅう",
+    kanji: "厳重",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39584,6 +41660,7 @@ export const n2Words: Word[] = [
     entry_id: "8c3234d5f0cf437b8519ad6c0939ee29",
     origin_entry_id: "JK000000028064",
     entry: "ごういん",
+    kanji: "強引",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39600,6 +41677,7 @@ export const n2Words: Word[] = [
     entry_id: "fb31b6c880a845678236e41ace23a23b",
     origin_entry_id: "JK100029505004",
     entry: "ごうりてき",
+    kanji: "合理的",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39616,6 +41694,7 @@ export const n2Words: Word[] = [
     entry_id: "a3031708c25945c1aa0acf81ee0ae043",
     origin_entry_id: "JK000000034797",
     entry: "さわやか",
+    kanji: "爽やか",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39632,6 +41711,7 @@ export const n2Words: Word[] = [
     entry_id: "9de27639f0ad4e76b1b4aa48d954e0bc",
     origin_entry_id: "JK100048691003",
     entry: "せっきょくてき",
+    kanji: "積極的",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39648,6 +41728,7 @@ export const n2Words: Word[] = [
     entry_id: "5a0c8e1a56de4e8d8152ceaa0aab4652",
     origin_entry_id: "JK000000051915",
     entry: "そっちょく",
+    kanji: "率直",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39664,6 +41745,7 @@ export const n2Words: Word[] = [
     entry_id: "fc4fbc627fbb4eb780ef2357098fb992",
     origin_entry_id: "JK000000052159",
     entry: "そまつ",
+    kanji: "粗末",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39680,6 +41762,7 @@ export const n2Words: Word[] = [
     entry_id: "8bb20b155e9b498db07ea7dbd208038b",
     origin_entry_id: "JK100057111005",
     entry: "ちゅうしょうてき",
+    kanji: "抽象的",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39696,6 +41779,7 @@ export const n2Words: Word[] = [
     entry_id: "8fc82c996ed64464b1c412990f5df617",
     origin_entry_id: "JK000000060241",
     entry: "てきかく",
+    kanji: "的確·適確",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39712,6 +41796,7 @@ export const n2Words: Word[] = [
     entry_id: "0985a0c2dd3f420bbba7063fe1b0ebb9",
     origin_entry_id: "JK000000060318",
     entry: "てきど",
+    kanji: "適度",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39728,6 +41813,7 @@ export const n2Words: Word[] = [
     entry_id: "7e8b3e7daaff4de58372e7b53c8df062",
     origin_entry_id: "JK000000063270",
     entry: "どくとく",
+    kanji: "独特",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39744,6 +41830,7 @@ export const n2Words: Word[] = [
     entry_id: "e98c54b6a1ca45cc9968f55efbee5ba4",
     origin_entry_id: "JK000000069202",
     entry: "のんき",
+    kanji: "呑気·暢気·暖気",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39760,6 +41847,7 @@ export const n2Words: Word[] = [
     entry_id: "f9bd29c47e924d928fa3c0f9688380ac",
     origin_entry_id: "JK000000075076",
     entry: "びみょう",
+    kanji: "微妙",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39776,6 +41864,7 @@ export const n2Words: Word[] = [
     entry_id: "54848c53fa8e4e8689201c864814d6b9",
     origin_entry_id: "JK000000081180",
     entry: "ほうふ",
+    kanji: "豊富",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39792,6 +41881,7 @@ export const n2Words: Word[] = [
     entry_id: "f71a004ea74a46c6bdd8732eb5743138",
     origin_entry_id: "JK000000081458",
     entry: "ほがらか",
+    kanji: "朗らか",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39808,6 +41898,7 @@ export const n2Words: Word[] = [
     entry_id: "dcdbaa62978545579c69f0222b2f763a",
     origin_entry_id: "JK000000084044",
     entry: "まれ",
+    kanji: "稀·希",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39824,6 +41915,7 @@ export const n2Words: Word[] = [
     entry_id: "37d6cce776c4407d95373b9da4c40db6",
     origin_entry_id: "JK000000084476",
     entry: "みごと",
+    kanji: "見事·美事",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39840,6 +41932,7 @@ export const n2Words: Word[] = [
     entry_id: "34db9bf0fcfa40e5b245cb7bfdd34044",
     origin_entry_id: "JK000000084521",
     entry: "みじめ",
+    kanji: "惨め",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39856,6 +41949,7 @@ export const n2Words: Word[] = [
     entry_id: "451bd3eb6e7d47f7bff84d04d0f813cd",
     origin_entry_id: "JK000000084920",
     entry: "みつ",
+    kanji: "密",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39872,6 +41966,7 @@ export const n2Words: Word[] = [
     entry_id: "10ce8137ac514aabb2225da4405448c1",
     origin_entry_id: "JK000000085968",
     entry: "むすう",
+    kanji: "無数",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39888,6 +41983,7 @@ export const n2Words: Word[] = [
     entry_id: "688810d98bfe415fb6190ed4ff055474",
     origin_entry_id: "JK000000087711",
     entry: "もっとも",
+    kanji: "尤も",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39908,6 +42004,7 @@ export const n2Words: Word[] = [
     entry_id: "f523d079d5d848d280250b82904f7e58",
     origin_entry_id: "JK000000089604",
     entry: "ゆうこう",
+    kanji: "有効",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39924,6 +42021,7 @@ export const n2Words: Word[] = [
     entry_id: "840e764c7a7e4f23b6eff895be6bdd24",
     origin_entry_id: "JK000000089880",
     entry: "ゆうり",
+    kanji: "有利",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39940,6 +42038,7 @@ export const n2Words: Word[] = [
     entry_id: "373a5643769343788c8a156ad77a40fc",
     origin_entry_id: "JK000000090173",
     entry: "ゆたか",
+    kanji: "豊か",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39956,6 +42055,7 @@ export const n2Words: Word[] = [
     entry_id: "50a6368717d34de1a9d3a9d0915de162",
     origin_entry_id: "JK000000090508",
     entry: "ようい",
+    kanji: "容易",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39972,6 +42072,7 @@ export const n2Words: Word[] = [
     entry_id: "e67d26f9bcf54dde9ec3bd37db498d5e",
     origin_entry_id: "JK100092124001",
     entry: "らっかんてき",
+    kanji: "楽観的",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -39988,6 +42089,7 @@ export const n2Words: Word[] = [
     entry_id: "ca1c69bf9bb04dd288cb1df147f23e9b",
     origin_entry_id: "JK000000095866",
     entry: "わりだか",
+    kanji: "割高",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40004,6 +42106,7 @@ export const n2Words: Word[] = [
     entry_id: "6ce60dd865c0455dad73e9c940cde781",
     origin_entry_id: "JK000000095901",
     entry: "わりやす",
+    kanji: "割安",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40052,6 +42155,7 @@ export const n2Words: Word[] = [
     entry_id: "4639c2a5d8df4e55b2dbc70067b90d30",
     origin_entry_id: "JK000000000926",
     entry: "あくる",
+    kanji: "明くる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40068,6 +42172,7 @@ export const n2Words: Word[] = [
     entry_id: "7e4045440f624030a0f757bc75d3272f",
     origin_entry_id: "JK000000002544",
     entry: "あらゆる",
+    kanji: "有らゆる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40084,6 +42189,7 @@ export const n2Words: Word[] = [
     entry_id: "a22187c5a6db4cca853f7cd13c851a7b",
     origin_entry_id: "JK000000002644",
     entry: "ある",
+    kanji: "在る",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40116,6 +42222,7 @@ export const n2Words: Word[] = [
     entry_id: "0f0d7e99d3bd4eb593733c5c9fe93da1",
     origin_entry_id: "JK000000005875",
     entry: "いわゆる",
+    kanji: "所謂",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40132,6 +42239,7 @@ export const n2Words: Word[] = [
     entry_id: "f1858b9c1e8240c581b1365ccea74957",
     origin_entry_id: "JK000000011594",
     entry: "おめにかける",
+    kanji: "お目に掛ける",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40148,6 +42256,7 @@ export const n2Words: Word[] = [
     entry_id: "9f382f3e2bea4ae2974c9b05f0799a1b",
     origin_entry_id: "JK000000011755",
     entry: "おもな",
+    kanji: "主な·重な",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40164,6 +42273,7 @@ export const n2Words: Word[] = [
     entry_id: "d9294f8d8c5b44a48966b20078af37fe",
     origin_entry_id: "JK000000016881",
     entry: "かもしれない",
+    kanji: "<strong>かも</strong>知れない",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40180,6 +42290,7 @@ export const n2Words: Word[] = [
     entry_id: "7a52c02d9e93430094dd311e50c3466a",
     origin_entry_id: "JK000000036203",
     entry: "しかも",
+    kanji: "然も·而も",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40196,6 +42307,7 @@ export const n2Words: Word[] = [
     entry_id: "7518b65c6167463bb693ccaa9dce1583",
     origin_entry_id: "JK000000037364",
     entry: "したがって",
+    kanji: "従って·随って",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40212,6 +42324,7 @@ export const n2Words: Word[] = [
     entry_id: "8baf8688246a4b15928368665b53d6b2",
     origin_entry_id: "JK000000046954",
     entry: "すまない",
+    kanji: "済まない",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40228,6 +42341,7 @@ export const n2Words: Word[] = [
     entry_id: "7d8a18e9a85b44f388b7109468129983",
     origin_entry_id: "JK000000051702",
     entry: "そこで",
+    kanji: "其処で",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40244,6 +42358,7 @@ export const n2Words: Word[] = [
     entry_id: "2771f90efdaa4f9fa9cf638d43703060",
     origin_entry_id: "JK000000052026",
     entry: "そのうえ",
+    kanji: "<strong>その</strong>上·其の上",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40260,6 +42375,7 @@ export const n2Words: Word[] = [
     entry_id: "7fd4ddf2479649b3bafa28139b8b1b07",
     origin_entry_id: "JK000000052027",
     entry: "そのうち",
+    kanji: "その内·其の内",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40276,6 +42392,7 @@ export const n2Words: Word[] = [
     entry_id: "c6732b83f5f14e28b7938df4fadf0e00",
     origin_entry_id: "JK000000052035",
     entry: "そのご",
+    kanji: "その後·其の後",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40292,6 +42409,7 @@ export const n2Words: Word[] = [
     entry_id: "a94f3c4c3c254752ab416856643024a5",
     origin_entry_id: "JK000000052042",
     entry: "そのため",
+    kanji: "其の為",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40308,6 +42426,7 @@ export const n2Words: Word[] = [
     entry_id: "e5c939b372484799882c032d92d1fb73",
     origin_entry_id: "JK000000052057",
     entry: "そのほか",
+    kanji: "其の外",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40324,6 +42443,7 @@ export const n2Words: Word[] = [
     entry_id: "6ccd1a8bae474f4aa8404c5c24f1e8d7",
     origin_entry_id: "JK000000052058",
     entry: "そのまま",
+    kanji: "其の儘",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40340,6 +42460,7 @@ export const n2Words: Word[] = [
     entry_id: "0718e52c99e840bfae6e376af50dfef9",
     origin_entry_id: "JK000000052064",
     entry: "そのもの",
+    kanji: "<strong>その</strong>物·其の物",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40388,6 +42509,7 @@ export const n2Words: Word[] = [
     entry_id: "647b2a78eb524924afefb3103141cdb0",
     origin_entry_id: "JK000000052372",
     entry: "それどころか",
+    kanji: "其れ所か",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40452,6 +42574,7 @@ export const n2Words: Word[] = [
     entry_id: "eae29e8dcccc4afd90f7f6237072704e",
     origin_entry_id: "JK000000053694",
     entry: "たえず",
+    kanji: "絶えず",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40468,6 +42591,7 @@ export const n2Words: Word[] = [
     entry_id: "9d98e39405a3439798e145ae3fec4316",
     origin_entry_id: "JK000000054361",
     entry: "ただし",
+    kanji: "但し",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40484,6 +42608,7 @@ export const n2Words: Word[] = [
     entry_id: "ce16a80a52fd4f52a8dc743afbdaead7",
     origin_entry_id: "JK000000055226",
     entry: "たまらない",
+    kanji: "堪らない",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40500,6 +42625,7 @@ export const n2Words: Word[] = [
     entry_id: "9e2c95fe69354bbd89e80b976288bec6",
     origin_entry_id: "JK000000055945",
     entry: "たんなる",
+    kanji: "単なる",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40532,6 +42658,7 @@ export const n2Words: Word[] = [
     entry_id: "af15c800d2e04d2b9b4178f00564a67a",
     origin_entry_id: "JK000000055427",
     entry: "だれか",
+    kanji: "誰か",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40548,6 +42675,7 @@ export const n2Words: Word[] = [
     entry_id: "28f53d6bd6ba4db8acbcc3eea069d53a",
     origin_entry_id: "JK000000056186",
     entry: "ちがいない",
+    kanji: "違い<strong>ない</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40564,6 +42692,7 @@ export const n2Words: Word[] = [
     entry_id: "a9df305f2a604c0f811242f4954b58ba",
     origin_entry_id: "JK000000056588",
     entry: "ちなみに",
+    kanji: "因みに",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40580,6 +42709,7 @@ export const n2Words: Word[] = [
     entry_id: "df27b00eefe34814b6d6bf3b77262613",
     origin_entry_id: "JK000000057952",
     entry: "ちょっとした",
+    kanji: "一寸<strong>した</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40628,6 +42758,7 @@ export const n2Words: Word[] = [
     entry_id: "dba130fa9abc4fa08ea92a07072f5ade",
     origin_entry_id: "JK000000062252",
     entry: "どうしても",
+    kanji: "如何しても",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40644,6 +42775,7 @@ export const n2Words: Word[] = [
     entry_id: "9b5084b14b774c709231203e70d33875",
     origin_entry_id: "JK000000065814",
     entry: "なにか",
+    kanji: "何か",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40660,6 +42792,7 @@ export const n2Words: Word[] = [
     entry_id: "5c7760739705443fbbbc230e92dd624c",
     origin_entry_id: "JK000000065856",
     entry: "なにも",
+    kanji: "何も",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40676,6 +42809,7 @@ export const n2Words: Word[] = [
     entry_id: "b788867fb3fc4d00b6023a40a155fab3",
     origin_entry_id: "JK000000066269",
     entry: "なんか",
+    kanji: "何か",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40692,6 +42826,7 @@ export const n2Words: Word[] = [
     entry_id: "7afd8b86b2e742a695c8e8e58290a7ac",
     origin_entry_id: "JK000000066395",
     entry: "なんとか",
+    kanji: "何<strong>とか</strong>",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40708,6 +42843,7 @@ export const n2Words: Word[] = [
     entry_id: "3a1a44b6aacb4db0b62840d9e39ba49a",
     origin_entry_id: "JK000000066399",
     entry: "なんとなく",
+    kanji: "何と無く",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40724,6 +42860,7 @@ export const n2Words: Word[] = [
     entry_id: "5a145a7bba5a4489ae129d5f54b26f51",
     origin_entry_id: "JK100066457001",
     entry: "なんらか",
+    kanji: "何らか·何等か",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40740,6 +42877,7 @@ export const n2Words: Word[] = [
     entry_id: "9cf09c29ed31493f89df7f09365a31e9",
     origin_entry_id: "JK000000082652",
     entry: "ほんの",
+    kanji: "本の",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40756,6 +42894,7 @@ export const n2Words: Word[] = [
     entry_id: "b9c8296ce5dc42bbb77ba76e44c57120",
     origin_entry_id: "JK000000087506",
     entry: "もしも",
+    kanji: "若しも",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40772,6 +42911,7 @@ export const n2Words: Word[] = [
     entry_id: "e4628cfb31ce41188d08eebbf4a285bd",
     origin_entry_id: "JK000000089868",
     entry: "ゆうゆう",
+    kanji: "悠悠",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40788,6 +42928,7 @@ export const n2Words: Word[] = [
     entry_id: "31993e17ca774e5182a0c1ef66944b40",
     origin_entry_id: "JK000000090715",
     entry: "ようするに",
+    kanji: "要するに",
     level: "2",
     source: "081341B9",
     partsMeans: [
@@ -40804,6 +42945,7 @@ export const n2Words: Word[] = [
     entry_id: "c4e5ee07c1104e4187e1f661ec7b4506",
     origin_entry_id: "JK000000095244",
     entry: "わが",
+    kanji: "我が∙吾が",
     level: "2",
     source: "081341B9",
     partsMeans: [

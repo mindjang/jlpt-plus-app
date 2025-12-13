@@ -10,8 +10,7 @@ import { faEllipsisVertical, faBook, faLanguage } from '@fortawesome/free-solid-
 import { Level, levelData, getLevelGradient } from '@/data'
 import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
-import { convertNaverWordToWord, convertKanjiAliveEntryToKanji } from '@/lib/utils/dataConverter'
-import type { Word, Kanji } from '@/lib/types/content'
+import type { KanjiAliveEntry, NaverWord } from '@/data/types'
 import { SemicircleProgress } from '@/components/ui/SemicircleProgress'
 import { ProgressDisplay } from '@/components/ui/ProgressDisplay'
 import { useStudyProgress } from '@/hooks/useStudyProgress'
@@ -41,21 +40,15 @@ export default function AutoStudyPage() {
     }
   }, [settings.dailyNewLimit])
 
-  // 단어/한자 데이터 변환 (네이버 데이터 사용)
-  const words: Word[] = useMemo(() => {
+  // 단어/한자 데이터 변환 (네이버 데이터 직접 사용)
+  const words: NaverWord[] = useMemo(() => {
     if (activeTab !== 'word') return []
-    const naverWords = getNaverWordsByLevel(level)
-    return naverWords.map((naverWord, index) => 
-      convertNaverWordToWord(naverWord, `${level}_W_${String(index + 1).padStart(4, '0')}`, 1)
-    )
+    return getNaverWordsByLevel(level)
   }, [level, activeTab])
 
-  const kanjis: Kanji[] = useMemo(() => {
+  const kanjis: KanjiAliveEntry[] = useMemo(() => {
     if (activeTab !== 'kanji') return []
-    const kanjiEntries = getKanjiByLevel(level)
-    return kanjiEntries.map((entry, index) => 
-      convertKanjiAliveEntryToKanji(entry, `${level}_K_${String(index + 1).padStart(4, '0')}`, level)
-    )
+    return getKanjiByLevel(level)
   }, [level, activeTab])
 
   // 진행률 데이터를 커스텀 훅으로 관리

@@ -1,4 +1,4 @@
-import { Level, Word } from '../types'
+import { Level, NaverWord } from '../types'
 
 // 네이버 일본어 사전 데이터
 import { n5Words } from './n5'
@@ -7,23 +7,8 @@ import { n3Words } from './n3'
 import { n2Words } from './n2'
 import { n1Words } from './n1'
 
-export interface NaverWord {
-  entry_id: string
-  origin_entry_id: string
-  entry: string
-  level: string
-  source: string
-  partsMeans: Array<{
-    part: string | null
-    means: string[]
-  }>
-  category1: string | null
-  category2: string | null
-  category3: string | null
-}
-
 // 레벨별 네이버 단어 데이터 통합
-const allNaverWordsByLevel: Record<Level, Word[]> = {
+const allNaverWordsByLevel: Record<Level, NaverWord[]> = {
   N5: n5Words,
   N4: n4Words,
   N3: n3Words,
@@ -32,7 +17,7 @@ const allNaverWordsByLevel: Record<Level, Word[]> = {
 }
 
 // 모든 네이버 단어 통합
-const allNaverWords: Word[] = [
+const allNaverWords: NaverWord[] = [
   ...n5Words,
   ...n4Words,
   ...n3Words,
@@ -43,7 +28,7 @@ const allNaverWords: Word[] = [
 /**
  * 레벨별 네이버 단어 가져오기
  */
-export const getNaverWordsByLevel = (level: Level): Word[] => {
+export const getNaverWordsByLevel = (level: Level): NaverWord[] => {
   return allNaverWordsByLevel[level] || []
 }
 
@@ -52,7 +37,7 @@ export const getNaverWordsByLevel = (level: Level): Word[] => {
  * @param query 검색어
  * @param level 필터링할 레벨 (선택사항)
  */
-export const getNaverSearchResults = (query: string, level?: Level): Word[] => {
+export const getNaverSearchResults = (query: string, level?: Level): NaverWord[] => {
   const targetWords = level ? allNaverWordsByLevel[level] : allNaverWords
   
   if (!query) {
@@ -73,7 +58,7 @@ export const getNaverSearchResults = (query: string, level?: Level): Word[] => {
 /**
  * 특정 네이버 단어 찾기
  */
-export const findNaverWord = (entry: string): Word | null => {
+export const findNaverWord = (entry: string): NaverWord | null => {
   return allNaverWords.find((item) => item.entry === entry) || null
 }
 

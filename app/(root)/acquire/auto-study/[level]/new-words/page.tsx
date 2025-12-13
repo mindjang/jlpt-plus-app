@@ -7,7 +7,7 @@ import { SearchBar } from '@/components/ui/SearchBar'
 import { ListItem } from '@/components/ui/ListItem'
 import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
-import type { NaverWord } from '@/data/words/index'
+import type { NaverWord } from '@/data/types'
 import { levels, Level } from '@/data'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { getAllCardIds } from '@/lib/firebase/firestore'
@@ -16,7 +16,7 @@ import {
   getOnYomi,
   getKunYomi,
   getFirstMeaning,
-} from '@/lib/utils/kanjiHelpers'
+} from '@/lib/data/kanji/kanjiHelpers'
 
 function NewWordsContent() {
   const router = useRouter()

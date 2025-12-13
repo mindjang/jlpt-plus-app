@@ -3,7 +3,7 @@
 import React from 'react'
 import { Level } from '@/data'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Pause, RotateCcw, Zap, Clock } from 'lucide-react'
+import { Pause, RotateCcw, Zap, Clock, X } from 'lucide-react'
 import { useFlashEngine } from './useFlashEngine'
 
 interface FlashGameContainerProps {
@@ -69,9 +69,16 @@ export function FlashGameContainer({ level, mode, onExit }: FlashGameContainerPr
           {score.toString().padStart(5, '0')}
         </div>
 
-        <button onClick={togglePause} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30">
-          <Pause fill="currentColor" size={20} />
-        </button>
+        <div className="flex items-center gap-2">
+          <button onClick={togglePause} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30">
+            <Pause fill="currentColor" size={20} />
+          </button>
+          {gameState === 'playing' && (
+            <button onClick={onExit} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30">
+              <X size={20} />
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Timer Bar */}

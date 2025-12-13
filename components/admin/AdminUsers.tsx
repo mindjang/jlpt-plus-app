@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { getAllUsers } from '@/lib/firebase/firestore'
 import { UserProfile } from '@/lib/types/user'
-import { handleFirestoreError } from '@/lib/utils/errorHandler'
+import { handleFirestoreError } from '@/lib/utils/error/errorHandler'
 
 export function AdminUsers() {
   const [users, setUsers] = useState<UserProfile[]>([])

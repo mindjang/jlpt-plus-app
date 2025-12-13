@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { Chart, ArcElement, Tooltip, DoughnutController } from 'chart.js'
+import { hexToRgba } from '@/lib/utils/colorUtils'
 
 interface SemicircleProgressProps {
   value: number
@@ -99,22 +100,4 @@ export function SemicircleProgress({ value, progress, total, color }: Semicircle
 function getTrackColor(hexColor: string): string {
   const rgba = hexToRgba(hexColor, 0.25)
   return rgba || '#E5E7EB'
-}
-
-function hexToRgba(hex: string, alpha: number): string | null {
-  const normalized = hex.replace('#', '').trim()
-  if (![3, 6].includes(normalized.length)) return null
-
-  const full = normalized.length === 3
-    ? normalized.split('').map((c) => c + c).join('')
-    : normalized
-
-  const intVal = Number.parseInt(full, 16)
-  if (Number.isNaN(intVal)) return null
-
-  const r = (intVal >> 16) & 255
-  const g = (intVal >> 8) & 255
-  const b = intVal & 255
-
-  return `rgba(${r}, ${g}, ${b}, ${alpha})`
 }

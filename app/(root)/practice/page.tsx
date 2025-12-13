@@ -35,35 +35,51 @@ function PracticeContent() {
 
       <div className="flex flex-col gap-6 p-4">
         {/* 학습 모드 선택 */}
-        <div className="grid grid-cols-2 gap-3">
-          <button
-            onClick={() => router.push('/practice/learn')}
-            className="bg-surface rounded-card shadow-soft p-6 text-center button-press"
-          >
-            <div className="text-title font-semibold text-text-main mb-2">📖 예문 학습</div>
-            <div className="text-body text-text-sub">SRS 기반 카드</div>
-          </button>
-          <button
-            onClick={() => router.push('/practice/quiz')}
-            className="bg-surface rounded-card shadow-soft p-6 text-center button-press"
-          >
-            <div className="text-title font-semibold text-text-main mb-2">✏️ 객관식 퀴즈</div>
-            <div className="text-body text-text-sub">문제풀이</div>
-          </button>
-          <button
-            onClick={() => router.push('/practice/weak')}
-            className="bg-surface rounded-card shadow-soft p-6 text-center button-press"
-          >
-            <div className="text-title font-semibold text-text-main mb-2">📝 약점노트</div>
-            <div className="text-body text-text-sub">틀린 문제 복습</div>
-          </button>
-          <button
-            onClick={() => router.push('/practice')}
-            className="bg-surface rounded-card shadow-soft p-6 text-center button-press"
-          >
-            <div className="text-title font-semibold text-text-main mb-2">🎲 혼합 모드</div>
-            <div className="text-body text-text-sub">랜덤 학습</div>
-          </button>
+        <div className="space-y-3">
+          {/* 메인 버튼들 */}
+          <div className="grid grid-cols-2 gap-3">
+            <button
+              onClick={() => router.push('/practice/learn')}
+              className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-card shadow-lg p-6 text-center button-press hover:shadow-xl transition-all"
+            >
+              <div className="text-4xl mb-2">📖</div>
+              <div className="text-body font-semibold text-white mb-1">예문 학습</div>
+              <div className="text-label text-white text-opacity-90">SRS 기반 복습</div>
+            </button>
+            <button
+              onClick={() => router.push('/practice/quiz')}
+              className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-card shadow-lg p-6 text-center button-press hover:shadow-xl transition-all"
+            >
+              <div className="text-4xl mb-2">✏️</div>
+              <div className="text-body font-semibold text-white mb-1">퀴즈</div>
+              <div className="text-label text-white text-opacity-90">레벨업 시스템</div>
+            </button>
+          </div>
+
+          {/* 서브 버튼들 */}
+          <div className="grid grid-cols-3 gap-3">
+            <button
+              onClick={() => router.push('/game')}
+              className="bg-surface rounded-card shadow-soft p-4 text-center button-press hover:border-2 hover:border-primary transition-all"
+            >
+              <div className="text-2xl mb-1">🎮</div>
+              <div className="text-label font-medium text-text-main">게임</div>
+            </button>
+            <button
+              onClick={() => router.push('/quiz/history')}
+              className="bg-surface rounded-card shadow-soft p-4 text-center button-press hover:border-2 hover:border-primary transition-all"
+            >
+              <div className="text-2xl mb-1">📊</div>
+              <div className="text-label font-medium text-text-main">기록</div>
+            </button>
+            <button
+              onClick={() => router.push('/quiz/badges')}
+              className="bg-surface rounded-card shadow-soft p-4 text-center button-press hover:border-2 hover:border-primary transition-all"
+            >
+              <div className="text-2xl mb-1">🏆</div>
+              <div className="text-label font-medium text-text-main">배지</div>
+            </button>
+          </div>
         </div>
 
         {/* 레벨 선택 */}

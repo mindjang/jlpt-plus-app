@@ -3,7 +3,7 @@
  */
 import { useState, useEffect } from 'react'
 import { getUserData, updateUserSettings } from '@/lib/firebase/firestore'
-import { handleFirestoreError } from '@/lib/utils/errorHandler'
+import { handleFirestoreError } from '@/lib/utils/error/errorHandler'
 import type { User } from 'firebase/auth'
 
 interface UserSettings {

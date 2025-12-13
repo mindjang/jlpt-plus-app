@@ -4,22 +4,20 @@
  */
 import { useState, useEffect, useMemo } from 'react'
 import { getNaverWordsByLevel } from '@/data/words/index'
-import { convertNaverWordToWord } from '@/lib/utils/dataConverter'
-import type { Word } from '@/lib/types/content'
+import type { NaverWord } from '@/data/types'
 import type { Level } from '@/data/types'
-import type { NaverWord } from '@/data/words/index'
 
 // 한자별 관련 단어 캐시 (7일 유지)
 const RELATED_WORD_CACHE = new Map<
   string,
-  { timestamp: number; items: Word[] }
+  { timestamp: number; items: NaverWord[] }
 >()
 const CACHE_TTL = 7 * 24 * 60 * 60 * 1000 // 7 days
 
 async function getCachedRelatedWords(
   kanjiChar: string,
   level: Level
-): Promise<Word[]> {
+): Promise<NaverWord[]> {
   const key = `${kanjiChar}:${level}`
   const now = Date.now()
   const cached = RELATED_WORD_CACHE.get(key)
@@ -30,15 +28,10 @@ async function getCachedRelatedWords(
   // 해당 레벨의 네이버 단어 데이터
   const levelWords: NaverWord[] = getNaverWordsByLevel(level)
   // entry에 해당 한자가 포함된 것만 필터링 (상세 데이터 없이 동작)
-  const filteredWords = levelWords.filter((w) => w.entry.includes(kanjiChar))
+  const filteredWords = levelWords.filter((w) => w.kanji?.includes(kanjiChar))
   
-  // NaverWord를 Word 타입으로 변환
-  const items: Word[] = filteredWords.map((naverWord, index) =>
-    convertNaverWordToWord(naverWord, `${level}_W_${String(index + 1).padStart(4, '0')}`, 1)
-  )
-  
-  RELATED_WORD_CACHE.set(key, { timestamp: now, items })
-  return items
+  RELATED_WORD_CACHE.set(key, { timestamp: now, items: filteredWords })
+  return filteredWords
 }
 
 interface UseRelatedWordsOptions {
@@ -47,15 +40,13 @@ interface UseRelatedWordsOptions {
 }
 
 interface UseRelatedWordsResult {
-  levelWordsMap: Record<Level, Word[]>
+  levelWordsMap: Record<Level, NaverWord[]>
   availableLevels: Set<Level>
-  activeLevel: Level
-  setActiveLevel: (level: Level) => void
-  exampleWords: Word[]
+  exampleWords: NaverWord[]
   examplePage: number
   setExamplePage: (page: number) => void
   totalPages: number
-  currentPageWords: Word[]
+  currentPageWords: NaverWord[]
 }
 
 /**
@@ -65,7 +56,7 @@ export function useRelatedWords({
   kanjiCharacter,
   kanjiLevel,
 }: UseRelatedWordsOptions): UseRelatedWordsResult {
-  const [levelWordsMap, setLevelWordsMap] = useState<Record<Level, Word[]>>({
+  const [levelWordsMap, setLevelWordsMap] = useState<Record<Level, NaverWord[]>>({
     N5: [],
     N4: [],
     N3: [],
@@ -73,7 +64,6 @@ export function useRelatedWords({
     N1: [],
   })
   const [availableLevels, setAvailableLevels] = useState<Set<Level>>(new Set())
-  const [activeLevel, setActiveLevel] = useState<Level>('N5')
   const [examplePage, setExamplePage] = useState(0)
 
   // 초기 로딩 시 모든 레벨의 관련 단어 조회
@@ -82,7 +72,7 @@ export function useRelatedWords({
 
     const load = async () => {
       const allLevels: Level[] = ['N5', 'N4', 'N3', 'N2', 'N1']
-      const newLevelWordsMap: Record<Level, Word[]> = {
+      const newLevelWordsMap: Record<Level, NaverWord[]> = {
         N5: [],
         N4: [],
         N3: [],
@@ -101,13 +91,6 @@ export function useRelatedWords({
 
       setLevelWordsMap(newLevelWordsMap)
       setAvailableLevels(newAvailableLevels)
-
-      if (kanjiLevel && newAvailableLevels.has(kanjiLevel as Level)) {
-        setActiveLevel(kanjiLevel as Level)
-      } else if (newAvailableLevels.size > 0) {
-        const firstAvailable = Array.from(newAvailableLevels)[0]
-        setActiveLevel(firstAvailable)
-      }
     }
 
     load()
@@ -118,12 +101,20 @@ export function useRelatedWords({
     setExamplePage(0)
   }, [kanjiCharacter])
 
-  // 현재 선택된 레벨의 단어 가져오기 (미리 조회한 데이터 사용)
+  // N5부터 N1까지 순서대로 각 레벨에서 3개씩 가져오기
   const exampleWords = useMemo(() => {
     if (!kanjiCharacter) return []
-    const words = levelWordsMap[activeLevel] || []
-    return words.slice(0, 9) // 최대 9개 (3개씩 3페이지)
-  }, [kanjiCharacter, activeLevel, levelWordsMap])
+    const allLevels: Level[] = ['N5', 'N4', 'N3', 'N2', 'N1']
+    const result: NaverWord[] = []
+    
+    for (const level of allLevels) {
+      const words = levelWordsMap[level] || []
+      // 각 레벨에서 최대 3개씩 가져오기
+      result.push(...words.slice(0, 3))
+    }
+    
+    return result
+  }, [kanjiCharacter, levelWordsMap])
 
   const wordsPerPage = 3
   const totalPages = Math.ceil(exampleWords.length / wordsPerPage)
@@ -135,8 +126,6 @@ export function useRelatedWords({
   return {
     levelWordsMap,
     availableLevels,
-    activeLevel,
-    setActiveLevel,
     exampleWords,
     examplePage,
     setExamplePage,

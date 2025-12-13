@@ -2,14 +2,8 @@
 
 import React from 'react'
 import { useRouter } from 'next/navigation'
-import { formatStudyTime } from '@/lib/srs/studyStats'
-
-interface StudySessionStats {
-  totalCards: number
-  newCards: number
-  reviewCards: number
-  studyTime: number
-}
+import { formatStudyTime } from '@/lib/srs/progress/studyStats'
+import type { StudySessionStats } from '@/lib/types/study'
 
 interface SessionCompleteModalProps {
   /** 학습 통계 */

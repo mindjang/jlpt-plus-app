@@ -1,16 +1,16 @@
 'use client'
 
-import React, { useState, Suspense, useMemo, useEffect } from 'react'
+import React, { useState, Suspense, useMemo, useEffect, useRef } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
-import { StudySession } from '@/components/study/StudySession'
+import { StudySession, type StudySessionHandle } from '@/components/study/StudySession'
 import { LoginForm } from '@/components/auth/LoginForm'
 import { AppBar } from '@/components/ui/AppBar'
 import { ConfirmModal } from '@/components/ui/ConfirmModal'
 import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
-import { convertNaverWordToWord, convertKanjiAliveEntryToKanji } from '@/lib/utils/dataConverter'
-import type { Word, Kanji, JlptLevel } from '@/lib/types/content'
+import type { JlptLevel } from '@/lib/types/content'
+import type { KanjiAliveEntry, NaverWord } from '@/data/types'
 import { Level } from '@/data'
 
 function LearnContent() {
@@ -29,6 +29,8 @@ function LearnContent() {
   const [pendingNavigation, setPendingNavigation] = useState<(() => void) | null>(null)
   // 나가기 확인 후에는 뒤로가기 가드를 해제하기 위한 플래그
   const [allowNavigation, setAllowNavigation] = useState(false)
+  const [isSaving, setIsSaving] = useState(false)
+  const studySessionExitRef = useRef<StudySessionHandle | null>(null)
 
   // 기본 복귀 경로 (진입 전 페이지인 acquire로 안내)
   const defaultReturn = () =>
@@ -73,27 +75,19 @@ function LearnContent() {
   // 남은 카드만 큐에 담기도록 목표량 조정 (분모는 initialCompleted + remaining으로 유지)
   const remainingDailyLimit = Math.max(dailyNewLimit - initialCompleted, 0)
 
-  // 실제 데이터를 Word/Kanji 타입으로 변환 (네이버 데이터 사용)
-  const words: Word[] = useMemo(() => {
+  // 실제 데이터를 NaverWord로 사용 (변환 없이 직접 사용)
+  const words: NaverWord[] = useMemo(() => {
     if (typeParam !== 'word') return []
     const naverWords = getNaverWordsByLevel(level)
     console.log('[LearnPage] 네이버 단어 데이터 로드:', { level, count: naverWords.length })
-    const converted = naverWords.map((naverWord, index) => 
-      convertNaverWordToWord(naverWord, `${level}_W_${String(index + 1).padStart(4, '0')}`, 1)
-    )
-    console.log('[LearnPage] 변환된 단어 수:', converted.length, '첫 번째 단어 ID:', converted[0]?.id)
-    return converted
+    return naverWords
   }, [level, typeParam])
 
-  const kanjis: Kanji[] = useMemo(() => {
+  const kanjis: KanjiAliveEntry[] = useMemo(() => {
     if (typeParam !== 'kanji') return []
     const kanjiEntries = getKanjiByLevel(level)
     console.log('[LearnPage] 한자 데이터 로드:', { level, count: kanjiEntries.length })
-    const converted = kanjiEntries.map((entry, index) => 
-      convertKanjiAliveEntryToKanji(entry, `${level}_K_${String(index + 1).padStart(4, '0')}`, level as JlptLevel)
-    )
-    console.log('[LearnPage] 변환된 한자 수:', converted.length)
-    return converted
+    return kanjiEntries
   }, [level, typeParam])
 
   if (loading) {
@@ -131,12 +125,24 @@ function LearnContent() {
     }
   }
 
-  const handleConfirmExit = () => {
-    // 사용자가 나가기를 확정하면 뒤로가기 가드를 해제한 뒤 이동한다.
-    setAllowNavigation(true)
+  const handleConfirmExit = async () => {
     setShowExitConfirm(false)
-    if (!pendingNavigation) {
-      setPendingNavigation(defaultReturn)
+    setIsSaving(true)
+    
+    try {
+      // StudySession의 데이터 저장 먼저 실행
+      if (studySessionExitRef.current) {
+        await studySessionExitRef.current.saveAndExit()
+      }
+    } catch (error) {
+      console.error('Failed to save study data:', error)
+    } finally {
+      setIsSaving(false)
+      // 저장 완료 후 이동
+      setAllowNavigation(true)
+      if (!pendingNavigation) {
+        setPendingNavigation(defaultReturn)
+      }
     }
   }
 
@@ -151,11 +157,13 @@ function LearnContent() {
               {formatTime(studyTime)}
             </div>
           }
+          className="bg-transparent border-none"
         />
       )}
       
       {/* 학습 세션 */}
       <StudySession
+        ref={studySessionExitRef}
         level={level}
         words={words}
         kanjis={kanjis}
@@ -166,6 +174,16 @@ function LearnContent() {
         onCompleteChange={setCompleted}
         onStudyStarted={setIsStudyStarted}
       />
+
+      {/* 저장 중 로딩 오버레이 */}
+      {isSaving && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
+          <div className="bg-surface rounded-card shadow-soft p-6 flex flex-col items-center gap-4">
+            <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+            <p className="text-body text-text-main font-medium">데이터를 저장하는 중입니다...</p>
+          </div>
+        </div>
+      )}
 
       {/* 학습 중 나가기 확인 모달 */}
       <ConfirmModal

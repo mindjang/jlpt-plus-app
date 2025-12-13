@@ -6,7 +6,7 @@ import { AppBar } from '@/components/ui/AppBar'
 import { ListItem } from '@/components/ui/ListItem'
 import { getNaverWordsByLevel } from '@/data/words/index'
 import { levels, Level } from '@/data'
-import type { NaverWord } from '@/data/words/index'
+import type { NaverWord } from '@/data/types'
 
 function WordListContent() {
   const router = useRouter()

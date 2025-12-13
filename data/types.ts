@@ -293,10 +293,11 @@ export interface KanjiAliveEntry {
   radical: KanjiAliveRadicalBlock
 }
 
-export interface Word {
+export interface NaverWord {
   entry_id: string
   origin_entry_id: string
   entry: string
+  kanji?: string
   level: string
   source: string
   partsMeans: Array<{

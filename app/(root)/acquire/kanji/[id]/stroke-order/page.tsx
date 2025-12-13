@@ -12,7 +12,7 @@ import {
   getRadical,
   getStrokeCount,
   getKanjiMeaning,
-} from '@/lib/utils/kanjiHelpers'
+} from '@/lib/data/kanji/kanjiHelpers'
 
 export default function KanjiStrokeOrderPage() {
   const router = useRouter()

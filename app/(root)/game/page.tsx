@@ -15,14 +15,6 @@ interface GameItem {
 
 const games: GameItem[] = [
   {
-    id: 1,
-    name: 'NEON RAIN',
-    description: '떨어지는 단어를 맞춰보세요',
-    icon: '🌧️',
-    comingSoon: false,
-    href: '/game/rain',
-  },
-  {
     id: 2,
     name: 'WORD BLAST',
     description: '콤보로 폭발적인 점수를!',

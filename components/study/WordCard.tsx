@@ -1,15 +1,17 @@
 'use client'
 
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRotateLeft } from '@fortawesome/free-solid-svg-icons'
-import type { Word } from '@/lib/types/content'
+import { faRotateLeft, faFileLines, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import type { NaverWord, WordDetails, Level } from '@/data/types'
 import type { Grade, UserCardState } from '@/lib/types/srs'
-import { findNaverWord } from '@/data/words/index'
+import { getWordDetails } from '@/data/words/details/index'
 
 interface WordCardProps {
-  word: Word
+  word: NaverWord
+  level: string
   isNew?: boolean
   cardState?: UserCardState | null
   onGrade: (grade: Grade) => void
@@ -22,125 +24,229 @@ interface WordCardProps {
  */
 export function WordCard({
   word,
+  level,
   isNew = false,
   cardState = null,
   onGrade,
   onNext,
   onGradeStateChange,
 }: WordCardProps) {
+  const router = useRouter()
   const [showMeaning, setShowMeaning] = useState(false)
   const [showFurigana, setShowFurigana] = useState(false)
+  const [wordDetails, setWordDetails] = useState<WordDetails | null>(null)
+  const [loadingDetails, setLoadingDetails] = useState(false)
 
-  // 네이버 단어 데이터 찾기 (kanji 또는 kana로 검색)
-  const naverWord = useMemo(() => {
-    if (word.kanji) {
-      return findNaverWord(word.kanji) || findNaverWord(word.kana)
+  // 한자 포함 여부 확인
+  const hasKanji = /[\u4e00-\u9faf]/.test(word.entry)
+  const displayText = word.entry
+  const kanjiText = word.kanji || word.entry
+
+  // 레벨 매핑
+  const levelMap: Record<string, Level> = {
+    '1': 'N1',
+    '2': 'N2',
+    '3': 'N3',
+    '4': 'N4',
+    '5': 'N5',
+  }
+  const jlptLevel = levelMap[word.level] || (level as Level) || 'N5'
+
+  // 첫 번째 예문 가져오기
+  const firstExample = wordDetails?.examples?.[0]
+
+  // WordDetails 로드 (비동기, 블로킹하지 않음)
+  useEffect(() => {
+    let cancelled = false
+    
+    const loadDetails = async () => {
+      setLoadingDetails(true)
+      try {
+        // API 호출을 즉시 시작 (병렬 처리 가능)
+        const details = await getWordDetails(word.entry, jlptLevel)
+        if (!cancelled) {
+          setWordDetails(details)
+        }
+      } catch (error) {
+        console.error('[WordCard] Error loading word details:', error)
+        if (!cancelled) {
+          setWordDetails(null)
+        }
+      } finally {
+        if (!cancelled) {
+          setLoadingDetails(false)
+        }
+      }
     }
-    return findNaverWord(word.kana)
-  }, [word.kanji, word.kana])
+
+    // 약간의 지연을 두어 UI가 먼저 렌더링되도록 (사용자 경험 개선)
+    const timeoutId = setTimeout(() => {
+      loadDetails()
+    }, 50)
+
+    return () => {
+      cancelled = true
+      clearTimeout(timeoutId)
+    }
+  }, [word.entry, jlptLevel])
 
   // 카드가 변경될 때 상태 초기화
   useEffect(() => {
     setShowMeaning(false)
     setShowFurigana(false)
-  }, [word.id])
+    setWordDetails(null)
+  }, [word.entry_id])
+
+  // 모든 내용이 보이는지 확인 (눈 아이콘 상태용)
+  const isAllVisible = showMeaning && showFurigana
+
+  // 눈 아이콘 클릭: 모든 것을 한 번에 보이기/숨기기
+  const handleToggleAll = () => {
+    if (isAllVisible) {
+      setShowMeaning(false)
+      setShowFurigana(false)
+    } else {
+      setShowMeaning(true)
+      setShowFurigana(true)
+    }
+  }
+
+  const handleReset = () => {
+    setShowMeaning(false)
+    setShowFurigana(false)
+  }
+
+  // 예문에서 HTML 태그 제거 및 텍스트 추출
+  const extractTextFromHtml = (html: string): string => {
+    const tempDiv = document.createElement('div')
+    tempDiv.innerHTML = html
+    return tempDiv.textContent || tempDiv.innerText || ''
+  }
 
   return (
-    <div className="w-full max-w-md mx-auto">
+    <div className="w-full max-w-md px-4 mx-auto">
       {/* 카드 */}
       <motion.div
-        className="bg-surface rounded-card shadow-soft p-6 relative"
+        className="flex flex-col bg-surface rounded-card shadow-soft relative h-full"
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.18 }}
       >
         {/* NEW 라벨 */}
         {isNew && (
-          <div className="absolute top-4 right-4">
-            <span className="text-label font-medium text-white bg-blue-500 px-3 py-1 rounded-full">
+          <div className="absolute top-4 left-4">
+            <span className="text-xs tracking-tighter font-medium text-blue-500 bg-blue-100 px-3 py-1 rounded-full">
               New
             </span>
           </div>
         )}
 
-        {/* 카드 내용 */}
-        <div className="mb-6">
+        {/* 우측 상단 아이콘 */}
+        <div className="absolute top-5 right-5 flex items-center gap-1">
+          {/* 눈 아이콘 (모든 내용 보이기/숨기기 토글) */}
+          <button
+            onClick={handleToggleAll}
+            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors border border-divider"
+          >
+            <FontAwesomeIcon
+              icon={isAllVisible ? faEye : faEyeSlash}
+              className="text-text-sub"
+              size="2xs"
+            />
+          </button>
+          {/* 상세 아이콘 */}
+          <button
+            onClick={() => router.push(`/acquire/word/${encodeURIComponent(word.entry)}`)}
+            className="h-8 px-2 gap-1 flex items-center justify-center rounded-full hover:bg-page transition-colors border border-divider"
+          >
+            <FontAwesomeIcon icon={faFileLines} className="text-text-sub" size="2xs" />
+            <span className="text-xs">상세</span>
+          </button>
+        </div>
+
+        {/* 카드 내용 - 상단 절반: 단어 정보 */}
+        <div className="flex-1 flex flex-col justify-center p-6 pt-20">
           {/* 단어 표시 */}
-          <div className="mb-4">
-            <h1 className="text-display-l text-jp font-medium text-text-main mb-2 text-center">
-              {word.kanji || word.kana}
+          <div className="text-center mb-4">
+            <h1 className="text-display-l text-jp font-medium text-text-main mb-3">
+              {kanjiText}
             </h1>
-            {word.kanji && showFurigana && (
-              <div className="text-subtitle text-text-sub text-center">
-                {word.kana}
-              </div>
+            {showFurigana && (
+              <p className="text-title text-jp text-text-sub mb-2">
+                {displayText}
+              </p>
+            )}
+            {!showFurigana && (
+              <p className="text-title text-text-sub mb-2">•••</p>
             )}
           </div>
 
-          {/* 예문 표시 */}
-          {word.examples && word.examples.length > 0 && (
-            <div className="mb-4 text-center">
-              <div className="text-jp text-body text-text-main">
-                {word.examples[0].ja}
+          {/* 의미 표시 */}
+          <div className={`${showMeaning ? 'visible' : 'invisible'}`}>
+            {word.partsMeans && word.partsMeans.length > 0 ? (
+              <div className="space-y-2 text-center">
+                {word.partsMeans[0].part && (
+                  <span className="inline-block px-2 py-1 text-label font-medium text-text-sub bg-page rounded-md mb-2">
+                    {word.partsMeans[0].part}
+                  </span>
+                )}
+                {word.partsMeans[0].means && word.partsMeans[0].means.length > 0 && (
+                  <p className="text-title text-text-main font-semibold">
+                    {word.partsMeans[0].means[0]}
+                  </p>
+                )}
+              </div>
+            ) : (
+              <div className="text-center text-body text-text-sub">
+                의미 정보가 없습니다
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* 구분선 */}
+        <div className="border-t border-gray-100"></div>
+
+        {/* 카드 내용 - 하단 절반: 예문 */}
+        <div className="flex-1 flex flex-col justify-center p-6 min-h-[200px]">
+          {loadingDetails ? (
+            <div className="space-y-3 animate-pulse">
+              <div className="text-center">
+                <div className="h-4 w-12 bg-gray-200 rounded mx-auto mb-3"></div>
+                <div className="h-6 bg-gray-200 rounded mb-2"></div>
+                <div className="h-6 bg-gray-200 rounded mb-3"></div>
+                <div className="h-4 bg-gray-200 rounded w-3/4 mx-auto"></div>
               </div>
             </div>
+          ) : firstExample ? (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2 }}
+              className="space-y-3"
+            >
+              <div className="text-center">
+                <p className="text-label text-text-sub mb-2">예문</p>
+                <div className="text-body text-jp text-text-main mb-3 leading-relaxed">
+                  <span dangerouslySetInnerHTML={{ __html: firstExample.expExample1 }} />
+                </div>
+                <div className="text-body text-text-sub">
+                  {firstExample.expExample2}
+                </div>
+              </div>
+            </motion.div>
+          ) : (
+            <div className="text-center text-body text-text-sub">
+              예문 정보가 없습니다
+            </div>
           )}
-
-          {/* 의미 표시 */}
-          <AnimatePresence>
-            {showMeaning && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="mb-4"
-              >
-                {naverWord && naverWord.partsMeans && naverWord.partsMeans.length > 0 ? (
-                  // 네이버 데이터가 있으면 partsMeans 표시
-                  <div className="space-y-3">
-                    {naverWord.partsMeans.map((partMean, index) => (
-                      <div key={index} className="text-center">
-                        {/* Part 뱃지 */}
-                        {partMean.part && (
-                          <div className="mb-2">
-                            <span className="inline-block px-2 py-1 text-label font-medium text-text-sub bg-page rounded-md">
-                              {partMean.part}
-                            </span>
-                          </div>
-                        )}
-                        
-                        {/* Means 표시 */}
-                        {partMean.means && partMean.means.length > 0 && (
-                          <div className="space-y-1">
-                            {partMean.means.map((mean, meanIndex) => (
-                              <div key={meanIndex} className="text-body text-text-main">
-                                {mean}
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  // 네이버 데이터가 없으면 기존 방식으로 표시
-                  <div className="text-center">
-                
-                  </div>
-                )}
-              </motion.div>
-            )}
-          </AnimatePresence>
         </div>
 
         {/* 하단 버튼 영역 */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 p-4 border-t border-gray-100">
           <button
-            onClick={() => {
-              setShowMeaning(false)
-              setShowFurigana(false)
-            }}
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-divider hover:bg-page transition-colors"
+            onClick={handleReset}
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-gray-400 hover:bg-page transition-colors"
           >
             <FontAwesomeIcon icon={faRotateLeft} className="text-text-sub text-sm" />
           </button>
@@ -149,7 +255,7 @@ export function WordCard({
             className={`button-press flex-1 py-3 px-4 rounded-card text-body font-medium ${
               showMeaning
                 ? 'bg-primary text-white'
-                : 'bg-surface border border-divider text-text-main'
+                : 'bg-surface border border-gray-400 text-text-main'
             }`}
           >
             의미
@@ -159,7 +265,7 @@ export function WordCard({
             className={`button-press flex-1 py-3 px-4 rounded-card text-body font-medium ${
               showFurigana
                 ? 'bg-primary text-white'
-                : 'bg-surface border border-divider text-text-main'
+                : 'bg-surface border border-gray-400 text-text-main'
             }`}
           >
             히라가나

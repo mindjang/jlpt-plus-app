@@ -3,9 +3,12 @@
  * 학습 큐를 로드하고 관리하는 로직을 추상화
  */
 import { useState, useEffect } from 'react'
-import { getTodayQueues, type StudyCard } from '@/lib/srs/studyQueue'
-import type { Word, Kanji, JlptLevel } from '@/lib/types/content'
 import { logger } from '@/lib/utils/logger'
+import type { JlptLevel } from '@/lib/types/content'
+import type { KanjiAliveEntry } from '@/data/types'
+import type { NaverWord } from '@/data/types'
+import type { StudyCard } from '@/lib/types/srs'
+import { getTodayQueues } from '@/lib/srs/queue/studyQueue'
 
 interface UseStudyQueueOptions {
   /** 사용자 ID */
@@ -13,9 +16,9 @@ interface UseStudyQueueOptions {
   /** 레벨 */
   level: JlptLevel
   /** 단어 목록 */
-  words: Word[]
+  words: NaverWord[]
   /** 한자 목록 */
-  kanjis: Kanji[]
+  kanjis: KanjiAliveEntry[]
   /** 일일 새 카드 제한 */
   dailyNewLimit?: number
   /** 로딩 가능 여부 */
@@ -86,7 +89,16 @@ export function useStudyQueue({
 
   useEffect(() => {
     loadQueue()
-  }, [uid, level, words, kanjis, dailyNewLimit, canLoad])
+  }, [
+    uid,
+    level,
+    words.length,
+    kanjis.length,
+    words[0]?.entry_id || '',
+    kanjis[0]?.ka_utf || kanjis[0]?.kanji?.character || '',
+    dailyNewLimit,
+    canLoad,
+  ])
 
   return {
     queue,

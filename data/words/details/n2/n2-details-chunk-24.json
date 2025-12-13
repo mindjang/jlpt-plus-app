@@ -1,0 +1,293 @@
+[
+  {
+    "entry": "わが",
+    "priority": 0,
+    "words": [
+      {
+        "rank": "1",
+        "languageCode": "JAKO",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "我が∙吾が",
+        "partGroupYn": "1",
+        "newEntry": "0",
+        "frequencyAdd": "JLPT 2",
+        "meansCollector": [
+          {
+            "partOfSpeech": "연체사",
+            "partOfSpeech2": "連体詞",
+            "partOfSpeechCode": "連体詞",
+            "means": [
+              {
+                "order": "1",
+                "value": "나의, 우리(들)의.",
+                "vcode": "014113"
+              },
+              {
+                "order": "2",
+                "value": "화자(話者)의 것, 또는 화자와 관계 있는 것을 나타내는 말. (=<span class=\"related_word\" lang=\"ja\">わたしの</span>, <span class=\"related_word\" lang=\"ja\">われわれの</span>)",
+                "vcode": "068451"
+              },
+              {
+                "order": "3",
+                "value": "(고유 명사 앞에 붙여) 화자가 자신과 관계있는 대상에 대한 친밀함이나 자랑스러움을 나타내는 말.",
+                "vcode": "126300"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "わが",
+        "vcode": "821603",
+        "encode": "%E3%82%8F%E3%81%8C"
+      },
+      {
+        "rank": "2",
+        "languageCode": "JAJA",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "priority": 0,
+        "expKanji": "",
+        "partGroupYn": "0",
+        "newEntry": "0",
+        "frequencyAdd": "",
+        "meansCollector": [
+          {
+            "partOfSpeech": "",
+            "partOfSpeech2": "",
+            "partOfSpeechCode": "",
+            "means": [
+              {
+                "order": "1",
+                "value": "わたしの",
+                "vcode": "014113"
+              },
+              {
+                "order": "2",
+                "value": "話し手と関係が深い人を親しみをこめて表す",
+                "vcode": "014113"
+              }
+            ]
+          }
+        ],
+        "handleEntry": "わが",
+        "vcode": "821603",
+        "encode": "%E3%82%8F%E3%81%8C"
+      }
+    ],
+    "meaning": [
+      {
+        "rank": "1",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "내",
+        "expEntrySuperscript": "4",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "준말",
+            "partOfSpeech2": "縮約形",
+            "partOfSpeechCode": "縮約形",
+            "means": [
+              {
+                "order": "1",
+                "value": "<ruby><rb>私</rb><rt>わたくし</rt></ruby>の, <ruby><rb>我</rb><rt><strong>わ</strong></rt></ruby><strong>が</strong>. [본딧말]<span class=\"related_word\" lang=\"ko\">나의</span>",
+                "vcode": "937276"
+              }
+            ]
+          },
+          {
+            "partOfSpeech": "인칭대명사",
+            "partOfSpeech2": "人称代名詞",
+            "partOfSpeechCode": "人称代名詞",
+            "means": [
+              {
+                "order": "2",
+                "value": "(나) <ruby><rb>主格助詞</rb><rt>しゅかくじょし</rt></ruby>‘가(＝が, は, の)’の<ruby><rb>前</rb><rt>まえ</rt></ruby>に<ruby><rb>用</rb><rt>もち</rt></ruby>いられる<ruby><rb>第一人称</rb><rt>だいいちにんしょう</rt></ruby><ruby><rb>代名詞</rb><rt>だいめいし</rt></ruby>: <ruby><rb>私</rb><rt>わたくし·わたし</rt></ruby>, <ruby><rb>僕</rb><rt>ぼく</rt></ruby>, <ruby><rb>俺</rb><rt>おれ</rt></ruby>, わし.",
+                "vcode": "918050"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "내",
+        "vcode": "177056",
+        "encode": "%EB%82%B4"
+      },
+      {
+        "rank": "2",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "날치다",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "자동사",
+            "partOfSpeech2": "自動詞",
+            "partOfSpeechCode": "自動詞",
+            "means": [
+              {
+                "order": "",
+                "value": "のさばる, <strong>わが</strong><ruby><rb>物顔</rb><rt>ものがお</rt></ruby>にふるまう.",
+                "vcode": "014113"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "날치다",
+        "vcode": "347523",
+        "encode": "%EB%82%A0%EC%B9%98%EB%8B%A4"
+      },
+      {
+        "rank": "3",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "비궁",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "<ruby><rb>匪躬</rb><rt>ひきゅう</rt></ruby>, <strong>わが</strong><ruby><rb>身</rb><rt>み</rt></ruby>をかえりみず<ruby><rb>君主</rb><rt>くんしゅ</rt></ruby>または<ruby><rb>国家</rb><rt>こっか</rt></ruby>に<ruby><rb>忠節</rb><rt>ちゅうせつ</rt></ruby>を<ruby><rb>尽</rb><rt>つ</rt></ruby>くすこと.",
+                "vcode": "014113"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [
+          {
+            "originLanguageValue": "匪躬"
+          }
+        ],
+        "handleEntry": "비궁",
+        "vcode": "697976",
+        "encode": "%EB%B9%84%EA%B6%81"
+      },
+      {
+        "rank": "4",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "れんたいし",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "연체사((체언(體言)만을 수식함, ‘<strong>わが</strong>·あらゆる·あの’ 등)).",
+                "vcode": "014113"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "れんたいし",
+        "vcode": "399314",
+        "encode": "%E3%82%8C%E3%82%93%E3%81%9F%E3%81%84%E3%81%97"
+      },
+      {
+        "rank": "5",
+        "expDictTypeForm": "단어",
+        "dictTypeForm": "2",
+        "expEntry": "がいこうせいしょ",
+        "expEntrySuperscript": "",
+        "priority": 0,
+        "meansCollector": [
+          {
+            "partOfSpeech": "명사",
+            "partOfSpeech2": "名詞",
+            "partOfSpeechCode": "名詞",
+            "means": [
+              {
+                "order": "",
+                "value": "외교 청서((국제 정세의 설명, 정부의 외교 방침에 대한 약술 및 외무 대신의 중요 연설 등을 수록한 ‘<strong>わが</strong>外交の近況(=우리 외교의 근황)’라는 책의 속칭. 표지가 청색임)).",
+                "vcode": "014113"
+              }
+            ]
+          }
+        ],
+        "expAliasGeneralAlwaysList": [],
+        "handleEntry": "がいこうせいしょ",
+        "vcode": "769894",
+        "encode": "%E3%81%8C%E3%81%84%E3%81%93%E3%81%86%E3%81%9B%E3%81%84%E3%81%97%E3%82%87"
+      }
+    ],
+    "examples": [
+      {
+        "rank": "1",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>我</rb><rt><strong>わ</strong></rt></ruby><strong>が</strong><ruby><rb>韓国</rb><rt>かんこく</rt></ruby>の<ruby><rb>前途</rb><rt>ぜんと</rt></ruby>",
+        "example2Lang": "1",
+        "expExample2": "우리 한국이 앞으로 나아갈 길",
+        "expEntry": "<strong>わが</strong>[我が∙吾が]"
+      },
+      {
+        "rank": "2",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>我</rb><rt><strong>わ</strong></rt></ruby><strong>が</strong><ruby><rb>田中</rb><rt>たなか</rt></ruby><ruby><rb>選手</rb><rt>せんしゅ</rt></ruby>は<ruby><rb>優勝</rb><rt>ゆうしょう</rt></ruby>を<ruby><rb>獲得</rb><rt>かくとく</rt></ruby>した",
+        "example2Lang": "1",
+        "expExample2": "우리의 <ruby><rb>田中</rb><rt>たなか</rt></ruby> 선수��� 우승을 획득했다",
+        "expEntry": "<strong>わが</strong>[我が∙吾が]"
+      },
+      {
+        "rank": "3",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>我</rb><rt><strong>わ</strong></rt></ruby><strong>が</strong><ruby><rb>道</rb><rt>みち</rt></ruby>を<ruby><rb>行</rb><rt>い</rt></ruby>く",
+        "example2Lang": "1",
+        "expExample2": "나의 길을 가다",
+        "expEntry": "<strong>わが</strong>[我が∙吾が]"
+      },
+      {
+        "rank": "4",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>我</rb><rt><strong>わ</strong></rt></ruby><strong>が</strong><ruby><rb>校</rb><rt>こう</rt></ruby>が<ruby><rb>勝</rb><rt>か</rt></ruby>った",
+        "example2Lang": "1",
+        "expExample2": "우리 학교가 이겼다",
+        "expEntry": "<strong>わが</strong>[我が∙吾が]"
+      },
+      {
+        "rank": "5",
+        "exampleLangCode": "JAKO",
+        "example1Lang": 4,
+        "expExample1": "<ruby><rb>我</rb><rt><strong>わ</strong></rt></ruby><strong>が</strong><ruby><rb>身</rb><rt>み</rt></ruby>を<ruby><rb>省</rb><rt>かえり</rt></ruby>みる",
+        "example2Lang": "1",
+        "expExample2": "내 자신을 돌아보다",
+        "expEntry": "<strong>わが</strong>[我が∙吾が]"
+      }
+    ],
+    "hiraganaList": [
+      {
+        "entry_id": "c4e5ee07c1104e4187e1f661ec7b4506",
+        "parent_entry_id": "c4e5ee07c1104e4187e1f661ec7b4506",
+        "origin_entry_id": "JK000000095244",
+        "entry": "わが",
+        "level": "0",
+        "source": "081341B9",
+        "parts": [
+          "연체사"
+        ],
+        "pron": "我が·吾が",
+        "means": [
+          "나의; 우리의."
+        ],
+        "category1": "katakana",
+        "category2": "わが"
+      }
+    ]
+  }
+]

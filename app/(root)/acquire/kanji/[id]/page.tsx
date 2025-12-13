@@ -13,7 +13,7 @@ import {
   getStrokeCount,
   getRelatedWords,
   getKanjiMeaning,
-} from '@/lib/utils/kanjiHelpers'
+} from '@/lib/data/kanji/kanjiHelpers'
 import { motion } from 'framer-motion'
 
 export default function KanjiDetailPage() {

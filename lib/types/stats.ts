@@ -34,13 +34,19 @@ export interface LevelStats {
 }
 
 /**
- * 통계 업데이트 델타 (증감량)
+ * 진행률 통계 (progressCalculation.ts에서 이동)
  */
-export interface StatsUpdate {
-  type: CardType
-  totalDelta?: number
-  newDelta?: number
-  learningDelta?: number
-  reviewDelta?: number
-  longTermMemoryDelta?: number
+export interface ProgressStats {
+  longTermMemory: number
+  todayNewStudied: number
+  learned: number
+}
+
+/**
+ * 회차 진행률 (progressCalculation.ts에서 이동)
+ */
+export interface RoundProgress {
+  currentRound: number
+  currentRoundProgress: number
+  completedRounds: number
 }

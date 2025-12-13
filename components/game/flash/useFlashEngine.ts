@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Level } from '@/data'
 import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji'
+import { recordGameResult } from '@/lib/stats/calculator'
 
 export type GameState = 'playing' | 'paused' | 'gameover'
 
@@ -95,6 +96,20 @@ export function useFlashEngine(level: Level, mode: 'word' | 'kanji') {
     if (questionCount >= totalQuestions) {
       setGameState('gameover')
       if (timerRef.current) clearInterval(timerRef.current)
+      
+      // 통계 기록
+      recordGameResult({
+        gameType: 'flash',
+        level,
+        mode,
+        score,
+        streak: maxStreak,
+        questionCount,
+        totalQuestions,
+        accuracy: questionCount / totalQuestions,
+        timestamp: Date.now(),
+      })
+      
       return
     }
 

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Level } from '@/data'
 import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji'
+import { recordGameResult } from '@/lib/stats/calculator'
 
 export type GameState = 'menu' | 'playing' | 'paused' | 'gameover'
 
@@ -55,8 +56,19 @@ export function useBlastEngine(level: Level, mode: 'word' | 'kanji') {
     gameStateRef.current = gameState
     if (gameState === 'gameover' && requestRef.current) {
       cancelAnimationFrame(requestRef.current)
+      
+      // 통계 기록
+      recordGameResult({
+        gameType: 'blast',
+        level,
+        mode,
+        score,
+        combo: maxCombo,
+        lives,
+        timestamp: Date.now(),
+      })
     }
-  }, [gameState])
+  }, [gameState, level, mode, score, maxCombo, lives])
 
   useEffect(() => {
     comboRef.current = combo

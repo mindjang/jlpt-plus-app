@@ -1,13 +1,13 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useImperativeHandle, forwardRef, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '../auth/AuthProvider'
 import { ExampleCard } from './ExampleCard'
 import { QuizCard } from './QuizCard'
-import type { StudyCard } from '@/lib/srs/studyQueue'
+import type { StudyCard } from '@/lib/types/srs'
 import { useStudyQueue } from '@/hooks/useStudyQueue'
-import { minutesToDays } from '@/lib/srs/reviewCard'
+import { minutesToDays } from '@/lib/srs/core/reviewCard'
 import { getLevelGradient } from '@/data'
 import {
   evaluateCard,
@@ -15,9 +15,11 @@ import {
   addToPendingUpdates,
   saveCardStateImmediate,
   savePendingUpdates,
-} from '@/lib/srs/cardEvaluation'
-import { calculateStudyStats } from '@/lib/srs/studyStats'
-import type { Word, Kanji, JlptLevel } from '@/lib/types/content'
+} from '@/lib/srs/evaluation/cardEvaluation'
+import { calculateStudyStats } from '@/lib/srs/progress/studyStats'
+import type { JlptLevel } from '@/lib/types/content'
+import type { KanjiAliveEntry } from '@/data/types'
+import type { NaverWord } from '@/data/types'
 import type { Grade, UserCardState } from '@/lib/types/srs'
 import { useMembership } from '../membership/MembershipProvider'
 import { PaywallOverlay } from '../membership/PaywallOverlay'
@@ -27,8 +29,8 @@ import { SessionCompleteModal } from './SessionCompleteModal'
 
 interface StudySessionProps {
   level: string
-  words: Word[]
-  kanjis: Kanji[]
+  words: NaverWord[]
+  kanjis: KanjiAliveEntry[]
   mode: 'example' | 'quiz'
   dailyNewLimit?: number
   initialCompleted?: number // 세션 재진입 시 이미 완료한 개수
@@ -37,7 +39,11 @@ interface StudySessionProps {
   onStudyStarted?: (started: boolean) => void // 학습 시작 여부 콜백
 }
 
-export function StudySession({
+export interface StudySessionHandle {
+  saveAndExit: () => Promise<void>
+}
+
+export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
   level,
   words,
   kanjis,
@@ -47,7 +53,7 @@ export function StudySession({
   onTimeUpdate,
   onCompleteChange,
   onStudyStarted,
-}: StudySessionProps) {
+}, ref) => {
   const router = useRouter()
   const { user } = useAuth()
   const {
@@ -91,31 +97,57 @@ export function StudySession({
     reviewCards: number
     studyTime: number
   } | null>(null)
+  const [isSaving, setIsSaving] = useState(false) // 저장 중 상태
 
   // 세션 종료 처리 (배치 저장 + 통계 계산)
   const finishSession = async (finalQueue: StudyCard[]) => {
-    // 비회원/만료 회원: 실제 세션 완료 시 1회차 소진 처리
-    if (user && membershipStatus !== 'member' && !sessionReserved) {
+    setIsSaving(true)
+    try {
+      // 비회원/만료 회원: 실제 세션 완료 시 1회차 소진 처리
+      if (user && membershipStatus !== 'member' && !sessionReserved) {
+        try {
+          await recordSession()
+          setSessionReserved(true) // 동일 세션 내 재확인용
+        } catch (error) {
+          logger.error('[StudySession] recordSession on finish failed:', error)
+        }
+      }
+
+      if (pendingUpdates.size > 0 && user) {
+        const emptyMap = await savePendingUpdates(user.uid, pendingUpdates)
+        setPendingUpdates(emptyMap)
+      }
+
+      // 초기 큐를 사용하여 통계 계산 (실제 학습한 카드 수 반영)
+      const queueForStats = sessionInitialQueue.length > 0 ? sessionInitialQueue : finalQueue
+      const stats = calculateStudyStats(queueForStats, studyTime)
+      setCompletedStats(stats)
+      setIsCompleted(true)
+      onCompleteChange?.(true)
+    } finally {
+      setIsSaving(false)
+    }
+  }
+
+  // 나가기 전 데이터 저장 함수
+  const saveAndExit = useCallback(async () => {
+    if (pendingUpdates.size > 0 && user) {
+      setIsSaving(true)
       try {
-        await recordSession()
-        setSessionReserved(true) // 동일 세션 내 재확인용
+        await savePendingUpdates(user.uid, pendingUpdates)
+        setPendingUpdates(new Map())
       } catch (error) {
-        logger.error('[StudySession] recordSession on finish failed:', error)
+        logger.error('[StudySession] savePendingUpdates on exit failed:', error)
+      } finally {
+        setIsSaving(false)
       }
     }
+  }, [pendingUpdates, user])
 
-    if (pendingUpdates.size > 0 && user) {
-      const emptyMap = await savePendingUpdates(user.uid, pendingUpdates)
-      setPendingUpdates(emptyMap)
-    }
-
-    // 초기 큐를 사용하여 통계 계산 (실제 학습한 카드 수 반영)
-    const queueForStats = sessionInitialQueue.length > 0 ? sessionInitialQueue : finalQueue
-    const stats = calculateStudyStats(queueForStats, studyTime)
-    setCompletedStats(stats)
-    setIsCompleted(true)
-    onCompleteChange?.(true)
-  }
+  // ref를 통해 부모 컴포넌트에서 saveAndExit 호출 가능하도록 expose
+  useImperativeHandle(ref, () => ({
+    saveAndExit,
+  }), [saveAndExit])
 
   // 학습 큐 동기화
   useEffect(() => {
@@ -318,16 +350,26 @@ export function StudySession({
   const totalCount = initialCompleted + initialQueueLength
   // 분자: 완료 개수(현재 보고 있는 카드는 포함하지 않음)
   const displayIndex = totalCount === 0 ? 0 : Math.min(completedCount, totalCount)
-  const progress = totalCount === 0 ? 0 : (displayIndex / totalCount) * 100
 
   return (
-    <div className="w-full pb-24">
+    <div className="flex flex-col w-full h-[calc(100vh-10rem)] relative">
+      {/* 저장 중 로딩 오버레이 */}
+      {isSaving && (
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
+          <div className="bg-surface rounded-card shadow-soft p-6 flex flex-col items-center gap-4">
+            <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+            <p className="text-body text-text-main font-medium">데이터를 저장하는 중입니다...</p>
+          </div>
+        </div>
+      )}
+
       {/* 진행도 바 */}
       <div className="my-2 px-4">
         <ProgressDisplay
           current={displayIndex}
           total={totalCount}
           color={gradient.to}
+          className="flex items-center justify-between gap-3 py-1 px-2"
         />
       </div>
 
@@ -335,6 +377,7 @@ export function StudySession({
       {mode === 'example' ? (
         <ExampleCard
           item={currentCard.data}
+          itemId={currentCard.itemId}
           type={currentCard.type}
           level={currentCard.level}
           isNew={currentCard.cardState === null}
@@ -343,11 +386,12 @@ export function StudySession({
           onNext={handleNext}
           allWords={words}
           onGradeStateChange={handleGradeStateChange}
+          className="flex-1"
         />
       ) : (
-        <QuizCard
- 
-        />
+        <div className="flex items-center justify-center flex-1 text-body text-text-sub">
+          퀴즈 모드는 준비중입니다.
+        </div>
       )}
 
       {/* 하단 고정 Footer (평가 버튼) - 예제 모드에서만 표시 */}
@@ -385,5 +429,7 @@ export function StudySession({
       )}
     </div>
   )
-}
+})
+
+StudySession.displayName = 'StudySession'
 

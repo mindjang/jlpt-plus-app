@@ -3,7 +3,7 @@
  */
 import { useState, useCallback } from 'react'
 import { updateUserProfile } from '@/lib/firebase/firestore'
-import { handleFirestoreError } from '@/lib/utils/errorHandler'
+import { handleFirestoreError } from '@/lib/utils/error/errorHandler'
 import type { User } from 'firebase/auth'
 
 interface UsePhoneModalOptions {

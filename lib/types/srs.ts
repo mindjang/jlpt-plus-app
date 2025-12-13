@@ -1,5 +1,6 @@
 // SRS 관련 타입 정의
 import type { JlptLevel } from './content'
+import type { KanjiAliveEntry, NaverWord } from '@/data/types'
 
 export type CardType = 'word' | 'kanji'
 
@@ -30,5 +31,21 @@ export interface ReviewParams {
   type: CardType
   level: JlptLevel
   grade: Grade
+}
+
+// 학습 카드 (studyQueue.ts에서 이동)
+export interface StudyCard {
+  itemId: string
+  type: 'word' | 'kanji'
+  level: JlptLevel
+  data: NaverWord | KanjiAliveEntry
+  cardState: UserCardState | null // null이면 New 카드
+}
+
+// 학습 큐 (studyQueue.ts에서 이동)
+export interface StudyQueue {
+  reviewCards: StudyCard[]
+  newCards: StudyCard[]
+  mixedQueue: StudyCard[] // Anki 기본 순서: 복습(기한순) → 새 카드
 }
 

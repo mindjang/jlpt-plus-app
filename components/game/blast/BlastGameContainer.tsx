@@ -3,7 +3,7 @@
 import React from 'react'
 import { Level } from '@/data'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Heart, Pause, RotateCcw, Zap, Bomb } from 'lucide-react'
+import { Heart, Pause, RotateCcw, Zap, Bomb, X } from 'lucide-react'
 import { useBlastEngine } from './useBlastEngine'
 
 interface BlastGameContainerProps {
@@ -66,9 +66,16 @@ export function BlastGameContainer({ level, mode, onExit }: BlastGameContainerPr
           )}
         </div>
 
-        <button onClick={togglePause} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30">
-          <Pause fill="currentColor" size={20} />
-        </button>
+        <div className="flex items-center gap-2">
+          <button onClick={togglePause} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30">
+            <Pause fill="currentColor" size={20} />
+          </button>
+          {gameState === 'playing' && (
+            <button onClick={onExit} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30">
+              <X size={20} />
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Power-up Indicator */}

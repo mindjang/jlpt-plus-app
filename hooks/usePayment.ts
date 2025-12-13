@@ -2,7 +2,7 @@
  * 결제 로직 관리 커스텀 훅
  */
 import { useState, useCallback } from 'react'
-import { handleError } from '@/lib/utils/errorHandler'
+import { handleError } from '@/lib/utils/error/errorHandler'
 import type { User } from 'firebase/auth'
 
 interface UsePaymentOptions {

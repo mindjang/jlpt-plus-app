@@ -3,7 +3,7 @@
 import React from 'react'
 import { Level } from '@/data'
 import { motion, AnimatePresence } from 'framer-motion'
-import { RotateCcw, Clock, Target, Trophy } from 'lucide-react'
+import { RotateCcw, Clock, Target, Trophy, Pause, X } from 'lucide-react'
 import { useMatchEngine } from './useMatchEngine'
 
 interface MatchGameContainerProps {
@@ -22,6 +22,7 @@ export function MatchGameContainer({ level, mode, difficulty, onExit }: MatchGam
     moves,
     timeElapsed,
     handleCardClick,
+    togglePause,
     restartGame
   } = useMatchEngine(level, mode, difficulty)
 
@@ -50,8 +51,26 @@ export function MatchGameContainer({ level, mode, difficulty, onExit }: MatchGam
             </div>
           </div>
 
-          <div className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full">
-            <span className="font-bold text-white">{matchedPairs}/{totalPairs} 쌍</span>
+          <div className="flex items-center gap-3">
+            <div className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full">
+              <span className="font-bold text-white">{matchedPairs}/{totalPairs} 쌍</span>
+            </div>
+            {gameState === 'playing' && (
+              <>
+                <button
+                  onClick={togglePause}
+                  className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30 transition-colors"
+                >
+                  <Pause fill="currentColor" size={20} />
+                </button>
+                <button
+                  onClick={onExit}
+                  className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30 transition-colors"
+                >
+                  <X size={20} />
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -106,6 +125,60 @@ export function MatchGameContainer({ level, mode, difficulty, onExit }: MatchGam
           </AnimatePresence>
         </div>
       </div>
+
+      {/* Pause Overlay */}
+      {gameState === 'paused' && (
+        <div className="absolute inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="bg-white p-8 rounded-3xl shadow-2xl text-center max-w-sm w-full mx-4"
+          >
+            <h2 className="text-4xl font-black text-purple-600 mb-4">
+              일시정지
+            </h2>
+
+            <div className="space-y-3 mb-6">
+              <div className="bg-gradient-to-r from-purple-100 to-pink-100 py-3 rounded-xl">
+                <div className="text-sm text-purple-600">경과 시간</div>
+                <div className="text-3xl font-black text-purple-700">{formatTime(timeElapsed)}</div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="bg-blue-100 py-3 rounded-xl">
+                  <div className="text-xs text-blue-600">이동 횟수</div>
+                  <div className="text-2xl font-bold text-blue-700">{moves}</div>
+                </div>
+                <div className="bg-pink-100 py-3 rounded-xl">
+                  <div className="text-xs text-pink-600">매칭</div>
+                  <div className="text-2xl font-bold text-pink-700">{matchedPairs}/{totalPairs}</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <button
+                onClick={togglePause}
+                className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-xl font-bold shadow-lg"
+              >
+                계속하기
+              </button>
+              <button
+                onClick={restartGame}
+                className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg"
+              >
+                <RotateCcw size={20} />
+                다시 하기
+              </button>
+              <button
+                onClick={onExit}
+                className="w-full py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-xl font-bold"
+              >
+                메뉴로
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
 
       {/* Complete Overlay */}
       {gameState === 'complete' && (

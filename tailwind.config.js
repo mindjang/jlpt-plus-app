@@ -41,7 +41,7 @@ module.exports = {
         },
         // 표면 색상
         surface: '#FFFFFF',
-        page: '#FBFAF7',
+        page: '#fcfcfc',
         // 텍스트 색상
         text: {
           main: '#2A2A2A',

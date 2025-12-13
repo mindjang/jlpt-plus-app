@@ -8,7 +8,7 @@ import {
   findNaverWord,
   getNaverWordsByLevel
 } from './words/index'
-import type { Word } from './types'
+import type { NaverWord } from './types'
 import { 
   getKanjiEntry,
   searchKanji,
@@ -22,12 +22,12 @@ import {
   getStrokeCount,
   getRelatedWords,
   getFirstMeaning,
-} from '../lib/utils/kanjiHelpers'
+} from '../lib/data/kanji/kanjiHelpers'
 // 단어 검색 (레거시 호환 - 네이버 데이터 사용)
 export const getSearchResults = (query: string): SearchResult[] => {
   const naverResults = getNaverSearchResults(query)
   // NaverWord를 SearchResult 형식으로 변환
-  return naverResults.map((w: Word) => {
+  return naverResults.map((w: NaverWord) => {
     const firstMean = w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0
       ? w.partsMeans[0].means[0]
       : ''

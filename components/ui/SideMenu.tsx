@@ -83,10 +83,7 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
                     </h3>
                     <div className="space-y-1">
                       <button
-                        onClick={() => {
-                          // 통계 페이지로 이동
-                          onClose()
-                        }}
+                        onClick={() => handleNavigate('/stats')}
                         className="w-full flex items-center gap-3 px-6 py-3 text-left hover:bg-page transition-colors"
                       >
                         <span className="text-body">📊</span>

@@ -11,7 +11,7 @@ import {
   getOnYomi,
   getKunYomi,
   getFirstMeaning,
-} from '@/lib/utils/kanjiHelpers'
+} from '@/lib/data/kanji/kanjiHelpers'
 
 function KanjiListContent() {
   const router = useRouter()

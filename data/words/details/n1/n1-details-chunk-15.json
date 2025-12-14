@@ -7075,7 +7075,7 @@
               },
               {
                 "order": "3",
-                "value": "<ruby><rb>学問</rb><rt>がくもん</rt></ruby>·<ruby><rb>主義</rb><rt>しゅぎ</rt></ruby>·<ruby><rb>思想</rb><rt>しそう</rt></ruby>·<ruby><rb>行動</rb><rt>こうどう</rt></ruby>など��<ruby><rb>同</rb><rt>おな</rt></ruby>じくする<ruby><rb>人</rb><rt>ひと</rt></ruby>たちの<ruby><rb>集</rb><rt>あつ</rt></ruby>まり.",
+                "value": "<ruby><rb>学問</rb><rt>がくもん</rt></ruby>·<ruby><rb>主義</rb><rt>しゅぎ</rt></ruby>·<ruby><rb>思想</rb><rt>しそう</rt></ruby>·<ruby><rb>行動</rb><rt>こうどう</rt></ruby>など<ruby><rb>同</rb><rt>おな</rt></ruby>じくする<ruby><rb>人</rb><rt>ひと</rt></ruby>たちの<ruby><rb>集</rb><rt>あつ</rt></ruby>まり.",
                 "vcode": "262044"
               }
             ]
@@ -7124,7 +7124,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>体</rb><rt>からだ</rt></ruby>は<ruby><rb>小</rb><rt>ちい</rt></ruby>さいが、<ruby><rb>力</rb><rt>ちから</rt></ruby>は<ruby><rb>強</rb><rt>つよ</rt></ruby>い",
         "example2Lang": "1",
-        "expExample2": "몸은 작���만 힘은 세다",
+        "expExample2": "몸은 작지만 힘은 세다",
         "expEntry": "<strong>は</strong>"
       },
       {
@@ -8928,7 +8928,7 @@
         ],
         "expAliasGeneralAlwaysList": [
           {
-            "originLanguageValue": "��叔母"
+            "originLanguageValue": "叔母"
           }
         ],
         "handleEntry": "당숙모",
@@ -9120,7 +9120,7 @@
               },
               {
                 "order": "3",
-                "value": "(무대 등의) <ruby><rb>書</rb><rt>���</rt></ruby>き<ruby><rb>割</rb><rt>わ</rt></ruby>り.",
+                "value": "(무대 등의) <ruby><rb>書</rb><rt>か</rt></ruby>き<ruby><rb>割</rb><rt>わ</rt></ruby>り.",
                 "vcode": "955009"
               }
             ]
@@ -10373,7 +10373,7 @@
             "means": [
               {
                 "order": "1",
-                "value": "(떨려 나다) (<ruby><rb>団体</rb><rt>だんたい</rt></ruby>などから)<ruby><rb>排除</rb><rt><strong>はいじょ</strong></rt></ruby>される, <ruby><rb>辞</rb><rt>や</rt></ruby>めさせられる, お<ruby><rb>払</rb><rt>はら</rt></ruby>い<ruby><rb>箱</rb><rt>ばこ</rt></ruby>に���る, (<ruby><rb>試験</rb><rt>しけん</rt></ruby>などで)はねられる.",
+                "value": "(떨려 나다) (<ruby><rb>団体</rb><rt>だんたい</rt></ruby>などから)<ruby><rb>排除</rb><rt><strong>はいじょ</strong></rt></ruby>される, <ruby><rb>辞</rb><rt>や</rt></ruby>めさせられる, お<ruby><rb>払</rb><rt>はら</rt></ruby>い<ruby><rb>箱</rb><rt>ばこ</rt></ruby>に入れる, (<ruby><rb>試験</rb><rt>しけん</rt></ruby>などで)はねられる.",
                 "vcode": "841749"
               },
               {
@@ -11677,7 +11677,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<strong>はいとう</strong>される【配当される】。わりあてられる【割り当てられ���】",
+                "value": "<strong>はいとう</strong>される【配当される】。わりあてられる【割り当てられる】",
                 "vcode": "494404"
               }
             ]
@@ -12634,7 +12634,7 @@
         ],
         "expAliasGeneralAlwaysList": [
           {
-            "originLanguageValue": "���然―"
+            "originLanguageValue": "当然―"
           }
         ],
         "handleEntry": "돈연하다",
@@ -14346,7 +14346,7 @@
         "expExample1": "<ruby><rb>意志</rb><rt>いし</rt></ruby><ruby><rb>薄弱</rb><rt><strong>はくじゃく</strong></rt></ruby><strong>で</strong><ruby><rb>自己</rb><rt>じこ</rt></ruby><ruby><rb>抑制</rb><rt>よくせい</rt></ruby>が<ruby><rb>利</rb><rt>き</rt></ruby>かない",
         "example2Lang": "1",
         "expExample2": "의지박약하여 자기 억제가 되지 않는다",
-        "expEntry": "いし[意��]"
+        "expEntry": "いし[意志]"
       }
     ],
     "hiraganaList": [
@@ -17131,7 +17131,7 @@
           }
         ],
         "expAliasGeneralAlwaysList": [],
-        "handleEntry": "���아율",
+        "handleEntry": "발아율",
         "vcode": "864149",
         "encode": "%EB%B0%9C%EC%95%84%EC%9C%A8"
       },
@@ -19500,7 +19500,7 @@
           {
             "partOfSpeech": "명사",
             "partOfSpeech2": "名詞",
-            "partOfSpeechCode": "名��",
+            "partOfSpeechCode": "名詞",
             "means": [
               {
                 "order": "",
@@ -20216,7 +20216,7 @@
             "means": [
               {
                 "order": "4",
-                "value": "<ruby><rb>班</rb><rt><strong>はん</strong></rt></ruby>を<ruby><rb>数</rb><rt>かぞ</rt></ruby>���る<ruby><rb>単位</rb><rt>たんい</rt></ruby>.",
+                "value": "<ruby><rb>班</rb><rt><strong>はん</strong></rt></ruby>を<ruby><rb>数</rb><rt>かぞ</rt></ruby>える<ruby><rb>単位</rb><rt>たんい</rt></ruby>.",
                 "vcode": "577898"
               }
             ]
@@ -23727,7 +23727,7 @@
               },
               {
                 "order": "3",
-                "value": "<ruby><rb>病身</rb><rt>びょうしん</rt></ruby>, <ruby><rb>病気</rb><rt>びょ��き</rt></ruby>の<ruby><rb>身</rb><rt>み</rt></ruby>, <ruby><rb>病</rb><rt>や</rt></ruby>める<ruby><rb>身</rb><rt>み</rt></ruby>.",
+                "value": "<ruby><rb>病身</rb><rt>びょうしん</rt></ruby>, <ruby><rb>病気</rb><rt>びょうき</rt></ruby>の<ruby><rb>身</rb><rt>み</rt></ruby>, <ruby><rb>病</rb><rt>や</rt></ruby>める<ruby><rb>身</rb><rt>み</rt></ruby>.",
                 "vcode": "955009"
               }
             ]
@@ -24047,7 +24047,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>反発心</rb><rt><strong>はん���つ</strong>しん</rt></ruby>.",
+                "value": "<ruby><rb>反発心</rb><rt><strong>はんぱつ</strong>しん</rt></ruby>.",
                 "vcode": "321156"
               }
             ]
@@ -26473,7 +26473,7 @@
         "rank": "1",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>〇</rb><rt>ま���</rt></ruby><strong>ばつ</strong><ruby><rb>式</rb><rt>しき</rt></ruby>の<ruby><rb>問題</rb><rt>もんだい</rt></ruby>",
+        "expExample1": "<ruby><rb>〇</rb><rt>まぐれ</rt></ruby><strong>ばつ</strong><ruby><rb>式</rb><rt>しき</rt></ruby>の<ruby><rb>問題</rb><rt>もんだい</rt></ruby>",
         "example2Lang": "1",
         "expExample2": "오엑스(OX) 문제",
         "expEntry": "<strong>ばつ</strong>"
@@ -27619,7 +27619,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>番人</rb><rt><strong>ばんにん</strong></rt></ruby>の<ruby><rb>意</rb><rt>���</rt></ruby>を<ruby><rb>表</rb><rt>あら</rt></ruby>わす<ruby><rb>語</rb><rt>ご</rt></ruby>, …<ruby><rb>番</rb><rt>ばん</rt></ruby>, …<ruby><rb>守</rb><rt>も</rt></ruby>り.",
+                "value": "<ruby><rb>番人</rb><rt><strong>ばんにん</strong></rt></ruby>の<ruby><rb>意</rb><rt>い</rt></ruby>を<ruby><rb>表</rb><rt>あら</rt></ruby>わす<ruby><rb>語</rb><rt>ご</rt></ruby>, …<ruby><rb>番</rb><rt>ばん</rt></ruby>, …<ruby><rb>守</rb><rt>も</rt></ruby>り.",
                 "vcode": "807949"
               }
             ]

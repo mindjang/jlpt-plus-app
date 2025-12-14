@@ -2,8 +2,12 @@
 
 import React, { useMemo, useState, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFlag } from '@fortawesome/free-solid-svg-icons'
 import { AppBar } from '@/components/ui/AppBar'
 import { LevelChip } from '@/components/ui/LevelChip'
+import { ReportModal } from '@/components/study/ReportModal'
+import { useAuth } from '@/components/auth/AuthProvider'
 import { getKanjiEntry, getKanjiLevel, searchKanji } from '@/data/kanji/index'
 import {
   getKanjiCharacter,
@@ -15,14 +19,19 @@ import {
   getKanjiMeaning,
 } from '@/lib/data/kanji/kanjiHelpers'
 import { motion } from 'framer-motion'
+import type { JlptLevel } from '@/lib/types/content'
 
 export default function KanjiDetailPage() {
   const router = useRouter()
   const params = useParams()
+  const { user } = useAuth()
   const kanji = decodeURIComponent(params.id as string)
   const [kanjiEntry, setKanjiEntry] = useState<any>(null)
   const [level, setLevel] = useState<string>('N5')
   const [loading, setLoading] = useState(true)
+  const [showReportModal, setShowReportModal] = useState(false)
+  const [submittingReport, setSubmittingReport] = useState(false)
+  const [showAllRelatedWords, setShowAllRelatedWords] = useState(false)
 
   // Load kanji data
   useEffect(() => {
@@ -41,6 +50,60 @@ export default function KanjiDetailPage() {
     }
     loadKanji()
   }, [kanji])
+
+  // 한자 구성 요소 (부수와 기본 구성) - hooks는 early return 전에 호출되어야 함
+  const components = useMemo(() => {
+    if (!kanjiEntry) return []
+    
+    const comps: Array<{ char: string; type: 'component' | 'radical'; meaning?: string }> = []
+    const radical = getRadical(kanjiEntry)
+    
+    // 부수 추가
+    if (radical) {
+      comps.push({
+        char: radical,
+        type: 'radical',
+        meaning: kanjiEntry.radical?.meaning?.korean || kanjiEntry.radical?.meaning?.english,
+      })
+    }
+    
+    // 한자를 구성하는 다른 요소들 (간단한 추정)
+    // 실제로는 decomposition 데이터가 필요하지만, 일단 부수만 표시
+    return comps
+  }, [kanjiEntry])
+
+  // 신고 제출 핸들러
+  const handleSubmitReport = async (report: { content: string; reason: string }) => {
+    if (!user) {
+      throw new Error('로그인이 필요합니다.')
+    }
+
+    setSubmittingReport(true)
+    try {
+      const response = await fetch('/api/reports', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          contentType: 'kanji',
+          contentText: report.content,
+          level: level as JlptLevel,
+          reason: report.reason,
+        }),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || '신고 제출에 실패했습니다.')
+      }
+
+      // 성공 시 모달 닫기
+      setShowReportModal(false)
+    } finally {
+      setSubmittingReport(false)
+    }
+  }
 
   if (loading) {
     return (
@@ -77,24 +140,6 @@ export default function KanjiDetailPage() {
   // 유사 한자는 skip (성능 문제로 인해 비활성화)
   const similarKanji: any[] = []
 
-  // 한자 구성 요소 (부수와 기본 구성)
-  const components = useMemo(() => {
-    const comps: Array<{ char: string; type: 'component' | 'radical'; meaning?: string }> = []
-    
-    // 부수 추가
-    if (radical) {
-      comps.push({
-        char: radical,
-        type: 'radical',
-        meaning: kanjiEntry.radical?.meaning?.korean || kanjiEntry.radical?.meaning?.english,
-      })
-    }
-    
-    // 한자를 구성하는 다른 요소들 (간단한 추정)
-    // 실제로는 decomposition 데이터가 필요하지만, 일단 부수만 표시
-    return comps
-  }, [radical, kanjiEntry])
-
   return (
     <div className="w-full">
       <AppBar
@@ -117,7 +162,20 @@ export default function KanjiDetailPage() {
         )}
 
         {/* 한자 기본 정보 */}
-        <div className="bg-surface rounded-lg border border-divider p-6">
+        <div className="bg-surface rounded-lg border border-divider p-6 relative">
+          {/* 신고 버튼 */}
+          <button
+            onClick={() => setShowReportModal(true)}
+            className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
+            title="신고하기"
+          >
+            <FontAwesomeIcon
+              icon={faFlag}
+              className="text-text-sub"
+              size="sm"
+            />
+          </button>
+
           <div className="text-center mb-6">
             <h1 className="text-display-l text-jp font-medium text-text-main mb-4">
               {character}
@@ -195,7 +253,10 @@ export default function KanjiDetailPage() {
               활용 단어 ({relatedWords.length})
             </h3>
             <div className="space-y-2">
-              {relatedWords.slice(0, 5).map((word, index) => (
+              {(showAllRelatedWords 
+                ? relatedWords 
+                : relatedWords.slice(0, 5)
+              ).map((word, index) => (
                 <motion.div
                   key={index}
                   className="bg-page rounded-lg p-4 border border-divider"
@@ -216,14 +277,15 @@ export default function KanjiDetailPage() {
                   <p className="text-body text-text-sub">{word.meaning}</p>
                 </motion.div>
               ))}
-              {relatedWords.length > 5 && (
-                <div className="text-center pt-2">
-                  <span className="text-label text-text-sub">
-                    더보기 ({relatedWords.length - 5}/{relatedWords.length}) ˅
-                  </span>
-                </div>
-              )}
             </div>
+            {relatedWords.length > 5 && (
+              <button
+                onClick={() => setShowAllRelatedWords(!showAllRelatedWords)}
+                className="w-full mt-4 py-3 px-4 rounded-lg bg-surface border border-divider text-body text-text-main font-medium active:bg-gray-50"
+              >
+                {showAllRelatedWords ? '접기' : `더보기 (${relatedWords.length - 5}개 더)`}
+              </button>
+            )}
           </div>
         )}
 
@@ -296,18 +358,19 @@ export default function KanjiDetailPage() {
               <span>네이버 사전</span>
               <span className="text-xs">↗</span>
             </a>
-            <a
-              href={`https://chat.openai.com/?q=${encodeURIComponent(kanji)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 px-4 py-3 rounded-lg bg-surface border border-divider text-body text-text-main font-medium text-center active:bg-gray-50 flex items-center justify-center gap-2"
-            >
-              <span>ChatGPT</span>
-              <span className="text-xs">↗</span>
-            </a>
           </div>
         </div>
       </div>
+
+      {/* 신고 모달 */}
+      <ReportModal
+        isOpen={showReportModal}
+        onClose={() => setShowReportModal(false)}
+        contentType="kanji"
+        contentText={character}
+        level={level as JlptLevel}
+        onSubmit={handleSubmitReport}
+      />
     </div>
   )
 }

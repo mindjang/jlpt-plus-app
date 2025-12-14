@@ -1762,7 +1762,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>回収</rb><rt><strong>か���しゅう</strong></rt></ruby>.",
+                "value": "<ruby><rb>回収</rb><rt><strong>かいしゅう</strong></rt></ruby>.",
                 "vcode": "060344"
               }
             ]
@@ -1923,7 +1923,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>施設</rb><rt>しせつ</rt></ruby>の<ruby><rb>内部</rb><rt>ないぶ</rt></ruby>を<ruby><rb>改修</rb><rt><strong>かいしゅう</strong></rt></ruby>している",
         "example2Lang": "1",
-        "expExample2": "시설 내부를 개수��고 있다",
+        "expExample2": "시설 내부를 개수고 있다",
         "expEntry": "<strong>かいしゅう</strong>[改修]"
       },
       {
@@ -2531,7 +2531,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>海恕</rb><rt><strong>かいじょ</strong></rt></ruby>, <ruby><rb>海</rb><rt>うみ</rt></ruby>のように<ruby><rb>広</rb><rt>ひろ</rt></ruby>い<ruby><rb>���</rb><rt>こころ</rt></ruby>で<ruby><rb>許</rb><rt>ゆる</rt></ruby>すこと.",
+                "value": "<ruby><rb>海恕</rb><rt><strong>かいじょ</strong></rt></ruby>, <ruby><rb>海</rb><rt>うみ</rt></ruby>のように<ruby><rb>広</rb><rt>ひろ</rt></ruby>い<ruby><rb>心</rb><rt>こころ</rt></ruby>で<ruby><rb>許</rb><rt>ゆる</rt></ruby>すこと.",
                 "vcode": "060344"
               }
             ]
@@ -2909,7 +2909,7 @@
         ],
         "expAliasGeneralAlwaysList": [
           {
-            "originLanguageValue": "���層"
+            "originLanguageValue": "階層"
           }
         ],
         "handleEntry": "계층",
@@ -5844,7 +5844,7 @@
             ]
           }
         ],
-        "handleEntry": "かい��う",
+        "handleEntry": "かいほう",
         "vcode": "992353",
         "encode": "%E3%81%8B%E3%81%84%E3%81%BB%E3%81%86"
       }
@@ -8232,7 +8232,7 @@
         "rank": "5",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>��</rb><rt><strong>かかと</strong></rt></ruby><strong>の</strong><ruby><rb>角質</rb><rt>かくしつ</rt></ruby>を<ruby><rb>取</rb><rt>と</rt></ruby>り<ruby><rb>除</rb><rt>のぞ</rt></ruby>く",
+        "expExample1": "<ruby><rb>角</rb><rt><strong>かかと</strong></rt></ruby><strong>の</strong><ruby><rb>角質</rb><rt>かくしつ</rt></ruby>を<ruby><rb>取</rb><rt>と</rt></ruby>り<ruby><rb>除</rb><rt>のぞ</rt></ruby>く",
         "example2Lang": "1",
         "expExample2": "발뒤꿈치의 각질을 제거하다",
         "expEntry": "<strong>かかと</strong>[踵]"
@@ -10121,7 +10121,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>解雇</rb><rt>かいこ</rt></ruby>, <ruby><rb>首</rb><rt>くび</rt></ruby>, ���<ruby><rb>払</rb><rt>はら</rt></ruby>い<ruby><rb>箱</rb><rt>ばこ</rt></ruby>, <ruby><rb>馘首</rb><rt><strong>かくしゅ</strong></rt></ruby>.",
+                "value": "<ruby><rb>解雇</rb><rt>かいこ</rt></ruby>, <ruby><rb>首</rb><rt>くび</rt></ruby>, 払<ruby><rb>払</rb><rt>はら</rt></ruby>い<ruby><rb>箱</rb><rt>ばこ</rt></ruby>, <ruby><rb>馘首</rb><rt><strong>かくしゅ</strong></rt></ruby>.",
                 "vcode": "164097"
               }
             ]
@@ -18433,7 +18433,7 @@
       },
       {
         "rank": "3",
-        "expDictTypeForm": "단���",
+        "expDictTypeForm": "단어",
         "dictTypeForm": "2",
         "expEntry": "논머리",
         "expEntrySuperscript": "",
@@ -29473,7 +29473,7 @@
         "meansCollector": [
           {
             "partOfSpeech": "명사",
-            "partOfSpeech2": "名���",
+            "partOfSpeech2": "名詞",
             "partOfSpeechCode": "名詞",
             "means": [
               {
@@ -32726,7 +32726,7 @@
           {
             "partOfSpeech": "명사",
             "partOfSpeech2": "名詞",
-            "partOfSpeechCode": "名��",
+            "partOfSpeechCode": "名詞",
             "means": [
               {
                 "order": "",
@@ -33106,7 +33106,7 @@
         ],
         "expAliasGeneralAlwaysList": [
           {
-            "originLanguageValue": "高感���"
+            "originLanguageValue": "高感度"
           }
         ],
         "handleEntry": "고감도",
@@ -34050,7 +34050,7 @@
         "rank": "4",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "この<ruby><rb>文章</rb><rt>ぶんしょう</rt></ruby>は<ruby><rb>完璧</rb><rt><strong>か���ぺき</strong></rt></ruby><strong>で</strong><ruby><rb>添削</rb><rt>てんさく</rt></ruby>の<ruby><rb>余地</rb><rt>よち</rt></ruby>がない",
+        "expExample1": "この<ruby><rb>文章</rb><rt>ぶんしょう</rt></ruby>は<ruby><rb>完璧</rb><rt><strong>かんぺき</strong></rt></ruby><strong>で</strong><ruby><rb>添削</rb><rt>てんさく</rt></ruby>の<ruby><rb>余地</rb><rt>よち</rt></ruby>がない",
         "example2Lang": "1",
         "expExample2": "이 문장은 완벽하여 첨삭의 여지가 없다",
         "expEntry": "<strong>かんぺき</strong>[完璧]"

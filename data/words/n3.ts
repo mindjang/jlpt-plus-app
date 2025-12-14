@@ -6842,7 +6842,7 @@ export const n3Words: NaverWord[] = [
     partsMeans: [
       {
         part: "명사",
-        means: ["출장;경기·연기 등을 하�� 위해 그 장소에 나감"]
+        means: ["출장;경기·연기 등을 하여 위해 그 장소에 나감"]
       },
       {
         part: "동사",
@@ -13078,7 +13078,7 @@ export const n3Words: NaverWord[] = [
   {
     entry_id: "29dcfffee42d45dab273744f1338af0a",
     origin_entry_id: "JK000000067447",
-    entry: "にん���",
+    entry: "にんき",
     level: "3",
     source: "081341B9",
     partsMeans: [
@@ -15930,7 +15930,7 @@ export const n3Words: NaverWord[] = [
     partsMeans: [
       {
         part: "명사",
-        means: ["새���람"]
+        means: ["새파람"]
       }
     ],
     category1: "jlpt",
@@ -21669,7 +21669,7 @@ export const n3Words: NaverWord[] = [
     partsMeans: [
       {
         part: "동사",
-        means: ["나누�� 주다;도르다"]
+        means: ["나누어 주다;도르다"]
       }
     ],
     category1: "jlpt",
@@ -23364,7 +23364,7 @@ export const n3Words: NaverWord[] = [
     partsMeans: [
       {
         part: "동사",
-        means: ["���거하다;없애다"]
+        means: ["제거하다;없애다"]
       }
     ],
     category1: "jlpt",
@@ -26371,7 +26371,7 @@ export const n3Words: NaverWord[] = [
     partsMeans: [
       {
         part: "부사",
-        means: ["겨우;간���히"]
+        means: ["겨우;간신히"]
       }
     ],
     category1: "jlpt",

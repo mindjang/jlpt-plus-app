@@ -10,6 +10,7 @@ import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
 import { Level, levelData, getLevelGradient } from '@/data'
 import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
+import { useUserSettings } from '@/hooks/useUserSettings'
 import type { KanjiAliveEntry, NaverWord } from '@/data/types'
 import { useStudyProgress } from '@/hooks/useStudyProgress'
 import { AutoStudyCard } from '@/components/study/AutoStudyCard'
@@ -24,12 +25,12 @@ function AutoStudyContent() {
   const params = useParams()
   const searchParams = useSearchParams()
   const { user } = useAuth()
+  const { settings, updateDailyNewLimit } = useUserSettings(user)
   const level = (params.level as string)?.toUpperCase() as Level || 'N5'
   const gradient = getLevelGradient(params.level as string)
   const data = levelData[level]
   
   const [showModeModal, setShowModeModal] = useState(false)
-  const [targetAmount, setTargetAmount] = useState(20)
   const typeParam = searchParams.get('type')
   const modeParam = searchParams.get('mode')
   const tasteParam = searchParams.get('taste') // Guest taste mode
@@ -44,12 +45,31 @@ function AutoStudyContent() {
     return modeParam === 'chapter' ? 'chapter' : 'auto'
   }, [modeParam])
   
-  // Guest taste mode: override target amount to 5
+  // 일일 학습 목표: Guest taste mode > 사용자 설정 > 기본값(20)
+  // 사용자가 UI에서 변경할 수 있으므로 useState 사용
+  const [targetAmount, setTargetAmount] = useState(() => {
+    if (isTasteMode) return 5
+    return settings?.dailyNewLimit || 20
+  })
+  
+  // 사용자 설정이 변경되면 targetAmount 업데이트 (taste mode가 아닐 때만)
   useEffect(() => {
-    if (isTasteMode) {
-      setTargetAmount(5)
+    if (!isTasteMode && settings?.dailyNewLimit) {
+      setTargetAmount(settings.dailyNewLimit)
     }
-  }, [isTasteMode])
+  }, [settings?.dailyNewLimit, isTasteMode])
+  
+  // targetAmount 변경 핸들러: 사용자 설정도 함께 업데이트
+  const handleTargetAmountChange = async (amount: number) => {
+    setTargetAmount(amount)
+    if (!isTasteMode && user) {
+      try {
+        await updateDailyNewLimit(amount)
+      } catch (error) {
+        console.error('Failed to update daily new limit:', error)
+      }
+    }
+  }
 
   // 단어/한자 데이터 상태 (지연 로딩)
   const [words, setWords] = useState<NaverWord[]>([])
@@ -224,7 +244,7 @@ function AutoStudyContent() {
               nextReviewDays={nextReviewDays}
               gradient={gradient}
               loading={loading}
-              onTargetAmountChange={setTargetAmount}
+              onTargetAmountChange={handleTargetAmountChange}
             />
             
             <StudyInfoCard

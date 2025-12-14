@@ -2341,11 +2341,11 @@
       {
         "rank": "1",
         "exampleLangCode": "JAKO",
-        "example1Lang": 4,
-        "expExample1": "<strong>あちら</strong><ruby><rb>立</rb><rt>た</rt></ruby>てればこちらが<ruby><rb>立</rb><rt>た</rt></ruby>たぬ",
-        "example2Lang": "1",
-        "expExample2": "한쪽이 좋으면 한쪽이 불리하다((세상일이란 모두에게 다 좋을 수는 없다))",
-        "expEntry": "<strong>あちら</strong>[彼方]"
+        "example1Lang": 1,
+        "expExample1": "あちら立たてればこちらが立たたぬ",
+        "example2Lang": "2",
+        "expExample2": "한쪽이 좋으면 한쪽이 불리하다",
+        "expEntry": "あちら"
       },
       {
         "rank": "2",
@@ -15278,7 +15278,7 @@
         "rank": "2",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>背広</rb><rt>せびろ</rt></ruby>の<ruby><rb>���着</rb><rt><strong>うわぎ</strong></rt></ruby>とズボン",
+        "expExample1": "<ruby><rb>背広</rb><rt>せびろ</rt></ruby>の<ruby><rb>上着</rb><rt><strong>うわぎ</strong></rt></ruby>とズボン",
         "example2Lang": "1",
         "expExample2": "신사복의 윗도리와 바지",
         "expEntry": "<strong>うわぎ</strong>[上着·上衣]"

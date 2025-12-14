@@ -9,6 +9,8 @@ import { AppBar } from '@/components/ui/AppBar'
 import { ConfirmModal } from '@/components/ui/ConfirmModal'
 import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
+import { useUserSettings } from '@/hooks/useUserSettings'
+import { getUserData } from '@/lib/firebase/firestore'
 import type { JlptLevel } from '@/lib/types/content'
 import type { KanjiAliveEntry, NaverWord } from '@/data/types'
 import { Level } from '@/data'
@@ -21,6 +23,7 @@ function LearnContent() {
   const limitParam = searchParams.get('limit')
   const doneParam = searchParams.get('done')
   const { user, loading } = useAuth()
+  const { settings } = useUserSettings(user)
   const [mode, setMode] = useState<'example' | 'quiz'>('example')
   const [studyTime, setStudyTime] = useState(0)
   const [completed, setCompleted] = useState(false)
@@ -70,7 +73,15 @@ function LearnContent() {
     return levelParam.toUpperCase() as Level
   }, [levelParam])
 
-  const dailyNewLimit = limitParam ? parseInt(limitParam, 10) : 20
+  // 일일 학습 목표: URL 파라미터 > 사용자 설정 > 기본값(20) 순서로 우선순위
+  const dailyNewLimit = useMemo(() => {
+    if (limitParam) {
+      return parseInt(limitParam, 10)
+    }
+    // 사용자 설정이 있으면 사용, 없으면 기본값 20
+    return settings?.dailyNewLimit || 20
+  }, [limitParam, settings?.dailyNewLimit])
+  
   const initialCompleted = doneParam ? parseInt(doneParam, 10) || 0 : 0
   // 남은 카드만 큐에 담기도록 목표량 조정 (분모는 initialCompleted + remaining으로 유지)
   const remainingDailyLimit = Math.max(dailyNewLimit - initialCompleted, 0)
@@ -176,6 +187,7 @@ function LearnContent() {
         onTimeUpdate={setStudyTime}
         onCompleteChange={setCompleted}
         onStudyStarted={setIsStudyStarted}
+        onCompleteClose={defaultReturn}
       />
 
       {/* 저장 중 로딩 오버레이 */}

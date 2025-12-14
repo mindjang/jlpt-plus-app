@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPencil, faEye, faEyeSlash, faFileLines, faRotateLeft } from '@fortawesome/free-solid-svg-icons'
+import { faEye, faEyeSlash, faFileLines, faRotateLeft, faFlag } from '@fortawesome/free-solid-svg-icons'
 import type { JlptLevel } from '@/lib/types/content'
 import type { KanjiAliveEntry } from '@/data/types'
 import type { Grade, UserCardState } from '@/lib/types/srs'
@@ -12,6 +12,8 @@ import { LevelChip } from '../ui/LevelChip'
 import { useRelatedWords } from '@/hooks/useRelatedWords'
 import { Level } from '@/data'
 import { getKanjiCharacter, getOnYomi, getKunYomi, getKanjiMeaning } from '@/lib/data/kanji/kanjiHelpers'
+import { ReportModal } from './ReportModal'
+import { useAuth } from '@/components/auth/AuthProvider'
 
 interface KanjiCardProps {
   className?: string
@@ -38,9 +40,12 @@ export function KanjiCard({
   onGradeStateChange,
 }: KanjiCardProps) {
   const router = useRouter()
+  const { user } = useAuth()
   const [showMeaning, setShowMeaning] = useState(false)
   const [showFurigana, setShowFurigana] = useState(false)
   const [showReadings, setShowReadings] = useState(false)
+  const [showReportModal, setShowReportModal] = useState(false)
+  const [submittingReport, setSubmittingReport] = useState(false)
 
   const kanjiCharacter = getKanjiCharacter(kanji)
   const kanjiLevel = level as JlptLevel
@@ -86,8 +91,41 @@ export function KanjiCard({
     setShowReadings(false)
   }
 
+  // 신고 제출 핸들러
+  const handleSubmitReport = async (report: { content: string; reason: string }) => {
+    if (!user) {
+      throw new Error('로그인이 필요합니다.')
+    }
+
+    setSubmittingReport(true)
+    try {
+      const response = await fetch('/api/reports', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          contentType: 'kanji',
+          contentText: report.content,
+          level: kanjiLevel,
+          reason: report.reason,
+        }),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || '신고 제출에 실패했습니다.')
+      }
+
+      // 성공 시 모달 닫기
+      setShowReportModal(false)
+    } finally {
+      setSubmittingReport(false)
+    }
+  }
+
   return (
-    <div className={`w-full max-w-md px-4 mx-auto ${className}`}>
+    <div className={`w-full px-4 mx-auto ${className}`}>
       {/* 카드 */}
       <motion.div 
         className="flex flex-col bg-surface rounded-lg border border-divider relative h-full"
@@ -106,9 +144,17 @@ export function KanjiCard({
 
         {/* 우측 상단 아이콘 */}
         <div className="absolute top-5 right-5 flex items-center gap-1">
-          {/* 펜 아이콘 (위치만) */}
-          <button className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider">
-            <FontAwesomeIcon icon={faPencil} className="text-text-sub" size="2xs" />
+          {/* 신고 아이콘 */}
+          <button
+            onClick={() => setShowReportModal(true)}
+            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
+            title="신고하기"
+          >
+            <FontAwesomeIcon
+              icon={faFlag}
+              className="text-text-sub"
+              size="2xs"
+            />
           </button>
           {/* 눈 아이콘 (모든 내용 보이기/숨기기 토글) */}
           <button
@@ -284,6 +330,16 @@ export function KanjiCard({
         )}
 
       </motion.div>
+
+      {/* 신고 모달 */}
+      <ReportModal
+        isOpen={showReportModal}
+        onClose={() => setShowReportModal(false)}
+        contentType="kanji"
+        contentText={kanjiCharacter}
+        level={kanjiLevel}
+        onSubmit={handleSubmitReport}
+      />
     </div>
   )
 }

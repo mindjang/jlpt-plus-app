@@ -7273,7 +7273,7 @@
         "rank": "2",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>学歴</rb><rt><strong>がくれ���</strong></rt></ruby>がなくても<ruby><rb>出世</rb><rt>しゅっせ</rt></ruby>できる",
+        "expExample1": "<ruby><rb>学歴</rb><rt><strong>がくれき</strong></rt></ruby>がなくても<ruby><rb>出世</rb><rt>しゅっせ</rt></ruby>できる",
         "example2Lang": "1",
         "expExample2": "학력이 없어도 출세할 수 있다.",
         "expEntry": "<strong>がくれき</strong>[学歴]"
@@ -9103,7 +9103,7 @@
         "rank": "4",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "ブロック<ruby><rb>玩具</rb><rt><strong>がんぐ</strong></rt></ruby>レゴは<ruby><rb>長年</rb><rt>ながねん</rt></ruby>にわたって<ruby><rb>根強</rb><rt>ねづよ</rt></ruby>い<ruby><rb>人気</rb><rt>に��き</rt></ruby>を<ruby><rb>博</rb><rt>はく</rt></ruby>している",
+        "expExample1": "ブロック<ruby><rb>玩具</rb><rt><strong>がんぐ</strong></rt></ruby>レゴは<ruby><rb>長年</rb><rt>ながねん</rt></ruby>にわたって<ruby><rb>根強</rb><rt>ねづよ</rt></ruby>い<ruby><rb>人気</rb><rt>にき</rt></ruby>を<ruby><rb>博</rb><rt>はく</rt></ruby>している",
         "example2Lang": "1",
         "expExample2": "블록 완구 레고(LEGO)는 오랫동안 꾸준한[탄탄한] 인기를 얻고 있다",
         "expEntry": "レゴ"
@@ -11342,7 +11342,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>觭角</rb><rt><strong>きかく</strong></rt></ruby>, <ruby><rb>一方</rb><rt>いっぽう</rt></ruby>は<ruby><rb>突</rb><rt>つ</rt></ruby>き<ruby><rb>��</rb><rt>あ</rt></ruby>がり<ruby><rb>一方</rb><rt>いっぽう</rt></ruby>は<ruby><rb>下向</rb><rt>したむ</rt></ruby>きになった<ruby><rb>角</rb><rt>つの</rt></ruby>.",
+                "value": "<ruby><rb>觭角</rb><rt><strong>きかく</strong></rt></ruby>, <ruby><rb>一方</rb><rt>いっぽう</rt></ruby>は<ruby><rb>突</rb><rt>つ</rt></ruby>き<ruby><rb>角</rb><rt>あ</rt></ruby>がり<ruby><rb>一方</rb><rt>いっぽう</rt></ruby>は<ruby><rb>下向</rb><rt>したむ</rt></ruby>きになった<ruby><rb>角</rb><rt>つの</rt></ruby>.",
                 "vcode": "164097"
               }
             ]
@@ -21734,7 +21734,7 @@
         "rank": "5",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>物欲</rb><rt>ぶつよく</rt></ruby>の<ruby><rb>羈絆</rb><rt><strong>きはん</strong></rt></ruby><strong>を</strong><ruby><rb>脱</rb><rt>だっ</rt></ruby>す���",
+        "expExample1": "<ruby><rb>物欲</rb><rt>ぶつよく</rt></ruby>の<ruby><rb>羈絆</rb><rt><strong>きはん</strong></rt></ruby><strong>を</strong><ruby><rb>脱</rb><rt>だっ</rt></ruby>す角",
         "example2Lang": "1",
         "expExample2": "물욕의 굴레를 벗어 버리다",
         "expEntry": "<strong>きはん</strong>[羈絆]"

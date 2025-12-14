@@ -8,8 +8,8 @@ import type { Membership } from '@/lib/types/membership'
 type Plan = 'monthly' | 'yearly'
 
 const PLAN_AMOUNTS: Record<Plan, number> = {
-  monthly: Number(process.env.PORTONE_MONTHLY_AMOUNT || 9900),
-  yearly: Number(process.env.PORTONE_YEARLY_AMOUNT || 99000),
+  monthly: Number(process.env.PORTONE_MONTHLY_AMOUNT || 4900),
+  yearly: Number(process.env.PORTONE_YEARLY_AMOUNT || 49000),
 }
 
 function getDurationMs(plan: Plan) {

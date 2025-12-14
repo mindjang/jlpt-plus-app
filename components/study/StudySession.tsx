@@ -37,6 +37,7 @@ interface StudySessionProps {
   onTimeUpdate?: (seconds: number) => void
   onCompleteChange?: (completed: boolean) => void
   onStudyStarted?: (started: boolean) => void // 학습 시작 여부 콜백
+  onCompleteClose?: () => void // 학습 완료 후 닫기 핸들러
 }
 
 export interface StudySessionHandle {
@@ -53,6 +54,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
   onTimeUpdate,
   onCompleteChange,
   onStudyStarted,
+  onCompleteClose,
 }, ref) => {
   const router = useRouter()
   const { user } = useAuth()
@@ -91,6 +93,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
   const [selectedGrade, setSelectedGrade] = useState<Grade | null>(null)
   const [nextReviewInterval, setNextReviewInterval] = useState<number | null>(null)
   const [isCompleted, setIsCompleted] = useState(false) // 학습 완료 여부
+  const [cardStartTime, setCardStartTime] = useState<number>(Date.now()) // 현재 카드 시작 시간
   const [completedStats, setCompletedStats] = useState<{
     totalCards: number
     newCards: number
@@ -150,6 +153,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       setCurrentIndex(0)
       setIsCompleted(false)
       setCompletedStats(null)
+      setCardStartTime(Date.now()) // 첫 카드 시작 시간 설정
       
       // 큐가 로드되면 즉시 세션 예약 (무료 회차 소진)
       if (user && membershipStatus !== 'member' && !sessionReserved && canStartSession) {
@@ -223,7 +227,9 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
     const currentCard = queue[currentIndex]
     if (!currentCard) return
 
-    const cardStartTime = Date.now()
+    // 실제 카드 학습 시간 측정 (밀리초)
+    const now = Date.now()
+    const actualTimeSpent = now - cardStartTime
 
     // 카드 평가 및 상태 업데이트
     const { updatedState, nextReviewInterval } = evaluateCard(currentCard, grade)
@@ -242,7 +248,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
         mode: 'exampleStudy',
         questions: 1,
         correct: grade === 'good' || grade === 'easy' ? 1 : 0,
-        timeSpent: 1000, // 대략 1초 추정 (실제 시간 측정 필요 시 개선)
+        timeSpent: actualTimeSpent, // 실제 측정된 시간 사용
         contentType: currentCard.type,
         level: currentCard.level,
       })
@@ -274,6 +280,11 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
     )
 
     setQueue(updatedQueue)
+    
+    // 다음 카드 시작 시간 설정
+    if (nextIndex < updatedQueue.length) {
+      setCardStartTime(Date.now())
+    }
 
     // 다음 카드로 이동 (분모 유지; "again"은 재삽입 위치로 이동, 나머지는 동일 인덱스)
     setTimeout(() => {
@@ -312,6 +323,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
   const handleNext = async () => {
     if (currentIndex < queue.length - 1) {
       setCurrentIndex(currentIndex + 1)
+      setCardStartTime(Date.now()) // 다음 카드 시작 시간 설정
     } else {
       // 세션 종료
       finishSession(queue)
@@ -345,7 +357,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
 
   // 학습 완료 화면
   if (isCompleted && completedStats) {
-    return <SessionCompleteModal stats={completedStats} />
+    return <SessionCompleteModal stats={completedStats} onClose={onCompleteClose} />
   }
 
   if (queue.length === 0) {

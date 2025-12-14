@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { formatStudyTime } from '@/lib/srs/progress/studyStats'
 import type { StudySessionStats } from '@/lib/types/study'
@@ -22,13 +22,13 @@ export function SessionCompleteModal({
 }: SessionCompleteModalProps) {
   const router = useRouter()
 
-  const handleClose = () => {
+  const handleClose = useCallback(() => {
     if (onClose) {
       onClose()
     } else {
       router.back()
     }
-  }
+  }, [onClose, router])
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-white">
@@ -65,7 +65,8 @@ export function SessionCompleteModal({
 
         <button
           onClick={handleClose}
-          className="w-full py-4 px-6 rounded-lg bg-primary text-white text-body font-semibold active:opacity-80"
+          className="w-full py-4 px-6 rounded-lg bg-primary text-white text-body font-semibold active:opacity-80 transition-opacity cursor-pointer touch-manipulation"
+          type="button"
         >
           이전 화면으로 돌아가기
         </button>

@@ -454,7 +454,7 @@ export const n2Words: NaverWord[] = [
     partsMeans: [
       {
         part: "명사",
-        means: ["표현;���로"]
+        means: ["표현"]
       }
     ],
     category1: "jlpt",
@@ -7814,7 +7814,7 @@ export const n2Words: NaverWord[] = [
     partsMeans: [
       {
         part: "명사",
-        means: ["견���;의견"]
+        means: ["견학;의견"]
       }
     ],
     category1: "jlpt",
@@ -15631,7 +15631,7 @@ export const n2Words: NaverWord[] = [
     partsMeans: [
       {
         part: "명사",
-        means: ["제작;예술 작품·방송 프로그램 따위�� 만듦;또, 그 작품."]
+        means: ["제작;예술 작품·방송 프로그램 따위를 만듦"]
       },
       {
         part: "동사",
@@ -19271,7 +19271,7 @@ export const n2Words: NaverWord[] = [
     partsMeans: [
       {
         part: "명사",
-        means: ["���음;부착성"]
+        means: ["부착성"]
       }
     ],
     category1: "jlpt",
@@ -42853,7 +42853,7 @@ export const n2Words: NaverWord[] = [
       }
     ],
     category1: "jlpt",
-    category2: "なん��なく",
+    category2: "なんなく",
     category3: null
   },
   {

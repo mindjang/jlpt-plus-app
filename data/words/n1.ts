@@ -3882,7 +3882,7 @@ export const n1Words: NaverWord[] = [
       }
     ],
     category1: "jlpt",
-    category2: "か���どう",
+    category2: "かいどう",
     category3: null
   },
   {
@@ -6112,7 +6112,7 @@ export const n1Words: NaverWord[] = [
     partsMeans: [
       {
         part: "명사",
-        means: ["완장;튼튼하고 아��참;옹골참"]
+        means: ["완장;튼튼하고 아기참;옹골참"]
       },
       {
         part: "형용동사",
@@ -24536,7 +24536,7 @@ export const n1Words: NaverWord[] = [
     partsMeans: [
       {
         part: "명사",
-        means: ["제시;증거·증��이 될 만한 것을 보임"]
+        means: ["제시;증거·증명이 될 만한 것을 보임"]
       },
       {
         part: "동사",
@@ -29836,7 +29836,7 @@ export const n1Words: NaverWord[] = [
       },
       {
         part: "동사",
-        means: ["비밀 등을 드러냄;또, 드���남"]
+        means: ["비밀 등을 드러냄;또, 드러남"]
       }
     ],
     category1: "jlpt",
@@ -41129,7 +41129,7 @@ export const n1Words: NaverWord[] = [
     partsMeans: [
       {
         part: "명사",
-        means: ["난센스;무의미함;어리���고 가소로움"]
+        means: ["난센스;무의미함;어리석고 가소로움"]
       },
       {
         part: "형용동사",
@@ -45400,7 +45400,7 @@ export const n1Words: NaverWord[] = [
       }
     ],
     category1: "jlpt",
-    category2: "し��じる",
+    category2: "しくじる",
     category3: null
   },
   {

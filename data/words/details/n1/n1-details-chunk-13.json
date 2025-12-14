@@ -5731,7 +5731,7 @@
         "rank": "4",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>警察</rb><rt>けいさつ</rt></ruby>は<ruby><rb>何</rb><rt>なん</rt></ruby>の<ruby><rb>手掛</rb><rt><strong>て���</strong></rt></ruby><strong>かり</strong>も<ruby><rb>見出</rb><rt>みいだ</rt></ruby>せなかった",
+        "expExample1": "<ruby><rb>警察</rb><rt>けいさつ</rt></ruby>は<ruby><rb>何</rb><rt>なん</rt></ruby>の<ruby><rb>手掛</rb><rt><strong>てが</strong></rt></ruby><strong>かり</strong>も<ruby><rb>見出</rb><rt>みいだ</rt></ruby>せなかった",
         "example2Lang": "1",
         "expExample2": "경찰은 아무런 단서로 찾지 못했다",
         "expEntry": "<strong>てがかり</strong>[手(掛)かり·手(懸)かり]"
@@ -7783,7 +7783,7 @@
             "means": [
               {
                 "order": "1",
-                "value": "‘あらん<ruby><rb>��</rb><rt>かぎ</rt></ruby>りの, <ruby><rb>手数</rb><rt><strong>てすう</strong></rt></ruby>をつくして’の<ruby><rb>意</rb><rt>い</rt></ruby>.",
+                "value": "‘あらん<ruby><rb>かぎ</rb><rt>かぎ</rt></ruby>りの, <ruby><rb>手数</rb><rt><strong>てすう</strong></rt></ruby>をつくして’の<ruby><rb>意</rb><rt>い</rt></ruby>.",
                 "vcode": "148171"
               },
               {
@@ -8452,7 +8452,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>黄</rb><rt>おう</rt></ruby><ruby><rb>鉄鉱</rb><rt><strong>てっこう</strong></rt></ruby><strong>を</strong>ハンマーなどで<ruby><rb>叩</rb><rt>たた</rt></ruby>くと<ruby><rb>火花</rb><rt>ひばな</rt></ruby>を<ruby><rb>散</rb><rt>ち</rt></ruby>らす",
         "example2Lang": "1",
-        "expExample2": "황철석[황철광]을 망치 등으로 두드리면 불��이 일어난다",
+        "expExample2": "황철석[황철광]을 망치 등으로 두드리면 불꽃이 일어난다",
         "expEntry": "おう<strong>てっこう</strong>[黄鉄鉱]"
       },
       {
@@ -12424,7 +12424,7 @@
     "meaning": [
       {
         "rank": "1",
-        "expDictTypeForm": "단���",
+        "expDictTypeForm": "단어",
         "dictTypeForm": "2",
         "expEntry": "지랄병",
         "expEntrySuperscript": "",
@@ -15823,7 +15823,7 @@
         ],
         "expAliasGeneralAlwaysList": [
           {
-            "originLanguageValue": "天人五��"
+            "originLanguageValue": "天人五衰"
           }
         ],
         "handleEntry": "천인 오쇠",
@@ -15916,7 +15916,7 @@
         "example1Lang": 4,
         "expExample1": "よりよい<ruby><rb>役所</rb><rt>やくどころ</rt></ruby>に<ruby><rb>移</rb><rt>うつ</rt></ruby>って<ruby><rb>行</rb><rt>い</rt></ruby>く[<ruby><rb>転任</rb><rt><strong>てんにん</strong></rt></ruby>する]",
         "example2Lang": "1",
-        "expExample2": "보다 좋은 자��로 옮겨가다",
+        "expExample2": "보다 좋은 자치로 옮겨가다",
         "expEntry": "옮겨가다"
       },
       {
@@ -16439,7 +16439,7 @@
             "means": [
               {
                 "order": "1",
-                "value": "<strong>てんぼう</strong>する【展望する】。みわたす【見渡す】。みとおす【見通す】。ち���うぼうする【眺望する】",
+                "value": "<strong>てんぼう</strong>する【展望する】。みわたす【見渡す】。みとおす【見通す】。ちょうぼうする【眺望する】",
                 "vcode": "575014"
               },
               {
@@ -18059,7 +18059,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>大量</rb><rt>たいりょう</rt></ruby>のエネルギー<ruby><rb>供給</rb><rt>きょうきゅう</rt></ruby>ができる<ruby><rb>電源</rb><rt><strong>でんげん</strong></rt></ruby>",
         "example2Lang": "1",
-        "expExample2": "대���의 에너지 공급이 가능한 전원",
+        "expExample2": "대량의 에너지 공급이 가능한 전원",
         "expEntry": "<strong>でんげん</strong>[電源]"
       },
       {
@@ -28260,7 +28260,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<strong>とくしゅう</strong>ごう【特集号】。とくべつ���う【特別号】",
+                "value": "<strong>とくしゅう</strong>ごう【特集号】。とくべつほう【特別号】",
                 "vcode": "365093"
               }
             ]

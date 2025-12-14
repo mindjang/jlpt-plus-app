@@ -7,6 +7,7 @@ import { AppBar } from '@/components/ui/AppBar'
 import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
 import { BadgeGallery } from '@/components/quiz/BadgeGallery'
 import { getUserQuizLevel, getAllQuizStats } from '@/lib/firebase/firestore/quiz'
+import { getStreak } from '@/lib/firebase/firestore/dailyActivity'
 import type { UserQuizLevel, QuizStats } from '@/lib/types/quiz'
 import type { JlptLevel } from '@/lib/types/content'
 
@@ -15,6 +16,7 @@ export default function BadgesPage() {
   const { user, loading: authLoading } = useAuth()
   const [userLevel, setUserLevel] = useState<UserQuizLevel | null>(null)
   const [allStats, setAllStats] = useState<Record<JlptLevel, QuizStats> | null>(null)
+  const [consecutiveDays, setConsecutiveDays] = useState(0)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -28,12 +30,14 @@ export default function BadgesPage() {
 
     setLoading(true)
     try {
-      const [level, stats] = await Promise.all([
+      const [level, stats, streak] = await Promise.all([
         getUserQuizLevel(user.uid),
         getAllQuizStats(user.uid),
+        getStreak(user.uid),
       ])
       setUserLevel(level)
       setAllStats(stats)
+      setConsecutiveDays(streak?.currentStreak || 0)
     } catch (error) {
       console.error('[BadgesPage] Error loading data:', error)
     } finally {
@@ -107,7 +111,7 @@ export default function BadgesPage() {
           userLevel={userLevel}
           totalSessionsCompleted={totalSessions}
           totalQuestionsAnswered={totalQuestions}
-          consecutiveDays={1} // TODO: 실제 연속 일수 계산 구현 필요
+          consecutiveDays={consecutiveDays}
           levelStats={levelStatsForBadges}
         />
       </div>

@@ -25,6 +25,10 @@ export default function KanjiStrokeOrderPage() {
   const [currentStroke, setCurrentStroke] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
 
+  // 획순 이미지 가져오기 (hooks는 early return 전에 호출되어야 함)
+  const strokeImages = kanjiEntry?.kanji?.strokes?.images || []
+  const hasStrokeImages = strokeImages.length > 0
+
   // Load kanji data
   useEffect(() => {
     const loadKanji = async () => {
@@ -42,6 +46,23 @@ export default function KanjiStrokeOrderPage() {
     }
     loadKanji()
   }, [kanji])
+
+  // 획순 애니메이션 재생 (hooks는 early return 전에 호출되어야 함)
+  useEffect(() => {
+    if (isPlaying && hasStrokeImages && currentStroke < strokeImages.length) {
+      const interval = setInterval(() => {
+        setCurrentStroke((prev) => {
+          if (prev >= strokeImages.length - 1) {
+            setIsPlaying(false)
+            return prev
+          }
+          return prev + 1
+        })
+      }, 800) // 각 획마다 0.8초
+
+      return () => clearInterval(interval)
+    }
+  }, [isPlaying, hasStrokeImages, strokeImages.length, currentStroke])
 
   if (loading) {
     return (
@@ -69,27 +90,10 @@ export default function KanjiStrokeOrderPage() {
 
   const character = getKanjiCharacter(kanjiEntry)
   const strokeCount = getStrokeCount(kanjiEntry) || 0
-  const strokeImages = kanjiEntry.kanji?.strokes?.images || []
   const video = kanjiEntry.kanji?.video
 
-  // 획순 애니메이션 재생
-  useEffect(() => {
-    if (isPlaying && strokeImages.length > 0) {
-      const interval = setInterval(() => {
-        setCurrentStroke((prev) => {
-          if (prev >= strokeImages.length - 1) {
-            setIsPlaying(false)
-            return prev
-          }
-          return prev + 1
-        })
-      }, 800) // 각 획마다 0.8초
-
-      return () => clearInterval(interval)
-    }
-  }, [isPlaying, strokeImages.length])
-
   const handlePlay = () => {
+    if (!hasStrokeImages) return
     if (currentStroke >= strokeImages.length - 1) {
       setCurrentStroke(0)
     }
@@ -115,90 +119,105 @@ export default function KanjiStrokeOrderPage() {
 
       <div className="p-4 space-y-4">
         {/* 획순 애니메이션 섹션 */}
-        <div className="bg-surface rounded-lg border border-divider p-6">
-          <h3 className="text-subtitle font-medium text-text-main mb-4">
-            획순 애니메이션
-          </h3>
-          
-          {/* 애니메이션 캔버스 */}
-          <div className="bg-page rounded-lg border border-divider p-8 mb-4 flex items-center justify-center min-h-[200px]">
-            {strokeImages.length > 0 && currentStroke < strokeImages.length ? (
-              <img
-                src={strokeImages[currentStroke]}
-                alt={`${character} stroke ${currentStroke + 1}`}
-                className="max-w-full max-h-[200px]"
-              />
-            ) : (
-              <div className="text-display-l text-jp text-text-sub">
+        {hasStrokeImages ? (
+          <div className="bg-surface rounded-lg border border-divider p-6">
+            <h3 className="text-subtitle font-medium text-text-main mb-4">
+              획순 애니메이션
+            </h3>
+            
+            {/* 애니메이션 캔버스 */}
+            <div className="bg-page rounded-lg border border-divider p-8 mb-4 flex items-center justify-center min-h-[200px]">
+              {currentStroke < strokeImages.length ? (
+                <img
+                  src={strokeImages[currentStroke]}
+                  alt={`${character} stroke ${currentStroke + 1}`}
+                  className="max-w-full max-h-[200px]"
+                />
+              ) : (
+                <div className="text-display-l text-jp text-text-sub">
+                  {character}
+                </div>
+              )}
+            </div>
+
+            {/* 컨트롤 버튼 */}
+            <div className="flex items-center justify-center gap-3">
+              <button
+                onClick={handleReset}
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-divider active:bg-gray-50"
+              >
+                <span className="text-body">↺</span>
+              </button>
+              <button
+                onClick={handlePlay}
+                className="w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white active:opacity-80"
+              >
+                <span className="text-body">{isPlaying ? '⏸' : '▶'}</span>
+              </button>
+              <button
+                onClick={() => {
+                  if (currentStroke < strokeImages.length - 1) {
+                    setCurrentStroke(currentStroke + 1)
+                    setIsPlaying(false)
+                  }
+                }}
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-divider active:bg-gray-50"
+                disabled={currentStroke >= strokeImages.length - 1}
+              >
+                <span className="text-body">⏭</span>
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div className="bg-surface rounded-lg border border-divider p-6">
+            <div className="text-center py-8">
+              <div className="text-display-l text-jp text-text-main mb-4">
                 {character}
               </div>
-            )}
+              <p className="text-body text-text-sub">
+                이 한자의 획순 애니메이션 데이터가 없습니다.
+              </p>
+            </div>
           </div>
-
-          {/* 컨트롤 버튼 */}
-          <div className="flex items-center justify-center gap-3">
-            <button
-              onClick={handleReset}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-divider active:bg-gray-50"
-            >
-              <span className="text-body">↺</span>
-            </button>
-            <button
-              onClick={handlePlay}
-              className="w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white active:opacity-80"
-            >
-              <span className="text-body">{isPlaying ? '⏸' : '▶'}</span>
-            </button>
-            <button
-              onClick={() => {
-                if (currentStroke < strokeImages.length - 1) {
-                  setCurrentStroke(currentStroke + 1)
-                  setIsPlaying(false)
-                }
-              }}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-divider active:bg-gray-50"
-              disabled={currentStroke >= strokeImages.length - 1}
-            >
-              <span className="text-body">⏭</span>
-            </button>
-          </div>
-        </div>
+        )}
 
         {/* 획수 진행 상황 */}
-        <div className="bg-surface rounded-lg border border-divider p-6">
-          <h3 className="text-subtitle font-medium text-text-main mb-4">
-            획수 {strokeCount}획
-          </h3>
-          
-          <div className="flex gap-2 overflow-x-auto pb-2">
-            {Array.from({ length: strokeCount }).map((_, index) => {
-              const strokeIndex = index + 1
-              const isActive = strokeIndex <= currentStroke + 1
-              
-              return (
-                <button
-                  key={index}
-                  onClick={() => handleStrokeClick(index)}
-                  className={`flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-lg border ${
-                    isActive
-                      ? 'border-primary bg-primary/10'
-                      : 'border-divider bg-page'
-                  }`}
-                >
-                  {strokeImages[index] ? (
-                    <img
-                      src={strokeImages[index]}
-                      alt={`Stroke ${strokeIndex}`}
-                      className="w-full h-full object-contain"
-                    />
-                  ) : (
-                    <span className="text-label text-text-sub">{strokeIndex}</span>
-                  )}
-                </button>
-              )
-            })}
+        {hasStrokeImages && strokeCount > 0 && (
+          <div className="bg-surface rounded-lg border border-divider p-6">
+            <h3 className="text-subtitle font-medium text-text-main mb-4">
+              획수 {strokeCount}획
+            </h3>
+            
+            <div className="flex gap-2 overflow-x-auto pb-2">
+              {Array.from({ length: Math.min(strokeCount, strokeImages.length) }).map((_, index) => {
+                const strokeIndex = index + 1
+                const isActive = strokeIndex <= currentStroke + 1
+                
+                return (
+                  <button
+                    key={index}
+                    onClick={() => handleStrokeClick(index)}
+                    className={`flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-lg border ${
+                      isActive
+                        ? 'border-primary bg-primary/10'
+                        : 'border-divider bg-page'
+                    }`}
+                  >
+                    {strokeImages[index] ? (
+                      <img
+                        src={strokeImages[index]}
+                        alt={`Stroke ${strokeIndex}`}
+                        className="w-full h-full object-contain"
+                      />
+                    ) : (
+                      <span className="text-label text-text-sub">{strokeIndex}</span>
+                    )}
+                  </button>
+                )
+              })}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* 한자 상세 정보 */}
         <div className="bg-surface rounded-lg border border-divider p-6">

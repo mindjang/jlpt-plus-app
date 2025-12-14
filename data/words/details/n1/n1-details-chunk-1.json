@@ -404,7 +404,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>一</rb><rt>ひと</rt></ruby>つ<ruby><rb>御</rb><rt>ご</rt></ruby><ruby><rb>依頼</rb><rt><strong>いらい</strong></rt></ruby>したい<ruby><rb>事</rb><rt>こと</rt></ruby>があります",
         "example2Lang": "1",
-        "expExample2": "하나 부��� 드릴 것이 있습니다",
+        "expExample2": "하나 부탁 드릴 것이 있습니다",
         "expEntry": "<strong>いらい</strong>[依頼]"
       }
     ],
@@ -3477,7 +3477,7 @@
               },
               {
                 "order": "2",
-                "value": "(들어주다) <ruby><rb>承諾</rb><rt>しょうだく</rt></ruby>する, <ruby><rb>受</rb><rt>う</rt></ruby>け<ruby><rb>入</rb><rt>い</rt></ruby>れる, 容[<ruby><rb>���</rb><rt>い</rt></ruby>](い)れる, <ruby><rb>受</rb><rt>う</rt></ruby>け<ruby><rb>付</rb><rt>つ</rt></ruby>ける, <ruby><rb>取</rb><rt>と</rt></ruby>[採]り<ruby><rb>上</rb><rt>あ</rt></ruby>げる, <ruby><rb>飲</rb><rt>の</rt></ruby>む.",
+                "value": "(들어주다) <ruby><rb>承諾</rb><rt>しょうだく</rt></ruby>する, <ruby><rb>受</rb><rt>う</rt></ruby>け<ruby><rb>入</rb><rt>い</rt></ruby>れる, 容[<ruby><rb>容</rb><rt>い</rt></ruby>](い)れる, <ruby><rb>受</rb><rt>う</rt></ruby>け<ruby><rb>付</rb><rt>つ</rt></ruby>ける, <ruby><rb>取</rb><rt>と</rt></ruby>[採]り<ruby><rb>上</rb><rt>あ</rt></ruby>げる, <ruby><rb>飲</rb><rt>の</rt></ruby>む.",
                 "vcode": "869676"
               }
             ]
@@ -4002,7 +4002,7 @@
     "meaning": [
       {
         "rank": "1",
-        "expDictTypeForm": "단���",
+        "expDictTypeForm": "단어",
         "dictTypeForm": "2",
         "expEntry": "담당",
         "expEntrySuperscript": "",
@@ -4427,7 +4427,7 @@
             "means": [
               {
                 "order": "1",
-                "value": "<ruby><rb>足</rb><rt>あし</rt></ruby>の<ruby><rb>動</rb><rt><strong>うご</strong></rt></ruby><strong>き</strong>, <ruby><rb>���</rb><rt>あし</rt></ruby>さばき.",
+                "value": "<ruby><rb>足</rb><rt>あし</rt></ruby>の<ruby><rb>動</rb><rt><strong>うご</strong></rt></ruby><strong>き</strong>, <ruby><rb>足</rb><rt>あし</rt></ruby>さばき.",
                 "vcode": "622102"
               },
               {
@@ -7388,7 +7388,7 @@
             "means": [
               {
                 "order": "4",
-                "value": "안에서 유��하는 것이 느껴지다, 치다, 뛰다.",
+                "value": "안에서 유효하는 것이 느껴지다, 치다, 뛰다.",
                 "vcode": "180000"
               }
             ]
@@ -9960,7 +9960,7 @@
         "expExample1": "<ruby><rb>建設</rb><rt>けんせつ</rt></ruby><ruby><rb>資材</rb><rt>しざい</rt></ruby>を<ruby><rb>運送</rb><rt><strong>うんそう</strong></rt></ruby>する",
         "example2Lang": "1",
         "expExample2": "건설 자재를 운송하다",
-        "expEntry": "<strong>うんそ���</strong>[運送]"
+        "expEntry": "<strong>うんそう</strong>[運送]"
       },
       {
         "rank": "3",
@@ -11058,7 +11058,7 @@
         "rank": "2",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>航空</rb><rt>こうく���</rt></ruby><ruby><rb>運輸</rb><rt><strong>うんゆ</strong></rt></ruby><ruby><rb>業界</rb><rt>ぎょうかい</rt></ruby>",
+        "expExample1": "<ruby><rb>航空</rb><rt>こうくう</rt></ruby><ruby><rb>運輸</rb><rt><strong>うんゆ</strong></rt></ruby><ruby><rb>業界</rb><rt>ぎょうかい</rt></ruby>",
         "example2Lang": "1",
         "expExample2": "항공 운수업계",
         "expEntry": "<strong>うんゆ</strong>[運輸]"
@@ -11085,7 +11085,7 @@
         "rank": "5",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>約</rb><rt>やく</rt></ruby><ruby><rb>三〇</rb><rt>さんじゅっ</rt></ruby>％<ruby><rb>割引</rb><rt>わりびき</rt></ruby><ruby><rb>料金</rb><rt>りょうきん</rt></ruby>による<ruby><rb>相乗</rb><rt>あいの</rt></ruby>りのワゴン・タクシー<ruby><rb>運行</rb><rt>うんこう</rt></ruby>を，<ruby><rb>運輸</rb><rt><strong>うん���</strong></rt></ruby><ruby><rb>省</rb><rt>しょう</rt></ruby>に<ruby><rb>申請</rb><rt>しんせい</rt></ruby>する",
+        "expExample1": "<ruby><rb>約</rb><rt>やく</rt></ruby><ruby><rb>三〇</rb><rt>さんじゅっ</rt></ruby>％<ruby><rb>割引</rb><rt>わりびき</rt></ruby><ruby><rb>料金</rb><rt>りょうきん</rt></ruby>による<ruby><rb>相乗</rb><rt>あいの</rt></ruby>りのワゴン・タクシー<ruby><rb>運行</rb><rt>うんこう</rt></ruby>を，<ruby><rb>運輸</rb><rt><strong>うんゆ</strong></rt></ruby><ruby><rb>省</rb><rt>しょう</rt></ruby>に<ruby><rb>申請</rb><rt>しんせい</rt></ruby>する",
         "example2Lang": "1",
         "expExample2": "약 30% 할인 요금으로 합승하는 왜건 택시의 운행을 운수성에 신청한다.",
         "expEntry": "ワゴン・タクシー"
@@ -11268,7 +11268,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>地震</rb><rt>じしん</rt></ruby>の<ruby><rb>被災</rb><rt>ひさい</rt></ruby><ruby><rb>地域</rb><rt>ちいき</rt></ruby>の<ruby><rb>人々</rb><rt>ひとびと</rt></ruby>の<ruby><rb>安否</rb><rt>あんぴ</rt></ruby><ruby><rb>状況</rb><rt>じょうきょう</rt></ruby>などの<ruby><rb>確認</rb><rt>かくにん</rt></ruby><ruby><rb>手段</rb><rt>しゅだん</rt></ruby>として、ウェブ<ruby><rb>一</rb><rt>いち</rt></ruby><ruby><rb>七</rb><rt>なな</rt></ruby><ruby><rb>一</rb><rt>いち</rt></ruby>(web171)の<ruby><rb>運用</rb><rt><strong>うんよう</strong></rt></ruby><strong>を</strong><ruby><rb>開始</rb><rt>かいし</rt></ruby>する",
         "example2Lang": "1",
-        "expExample2": "지진 재해 지역 사람��의 안부 상황 등을 확인하는 수단으로 web 171의 운용을 개시하다",
+        "expExample2": "지진 재해 지역 사람의 안부 상황 등을 확인하는 수단으로 web 171의 운용을 개시하다",
         "expEntry": "ウェブいちなないち[ウェブ一七一]"
       },
       {
@@ -16477,7 +16477,7 @@
         "priority": 0,
         "meansCollector": [
           {
-            "partOfSpeech": "���사",
+            "partOfSpeech": "명사",
             "partOfSpeech2": "名詞",
             "partOfSpeechCode": "名詞",
             "means": [
@@ -18068,7 +18068,7 @@
         ],
         "expAliasGeneralAlwaysList": [
           {
-            "originLanguageValue": "��金期"
+            "originLanguageValue": "황금기"
           }
         ],
         "handleEntry": "황금기",
@@ -18350,7 +18350,7 @@
             "means": [
               {
                 "order": "",
-                "value": "三十三身の種類​33 forms of Kannon​(1)仏身（ぶっしん）​(1) Busshin​(4)大梵王身（だいぼん<strong>おうしん</strong>）​(4) Daibonoshin​(7)大自在天身（だいじ���いてんしん）​(7) Daijizaitenshin...",
+                "value": "三十三身の種類​33 forms of Kannon​(1)仏身（ぶっしん）​(1) Busshin​(4)大梵王身（だいぼん<strong>おうしん</strong>）​(4) Daibonoshin​(7)大自在天身（だいじいてんしん）​(7) Daijizaitenshin...",
                 "vcode": "060344"
               }
             ]
@@ -19415,7 +19415,7 @@
           {
             "partOfSpeech": "관형사, 명사",
             "partOfSpeech2": "冠形詞, 名詞",
-            "partOfSpeechCode": "冠形詞, 名��",
+            "partOfSpeechCode": "冠形詞, 名詞",
             "means": [
               {
                 "order": "",
@@ -19584,7 +19584,7 @@
               },
               {
                 "order": "2",
-                "value": "<ruby><rb>大</rb><rt>おお</rt></ruby>きい<ruby><rb>活舞台</rb><rt>かつどうぶ��い</rt></ruby>.",
+                "value": "<ruby><rb>大</rb><rt>おお</rt></ruby>きい<ruby><rb>活舞台</rb><rt>かつどうぶい</rt></ruby>.",
                 "vcode": "060344"
               }
             ]
@@ -20308,7 +20308,7 @@
         "rank": "1",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>臆病</rb><rt><strong>お��びょう</strong></rt></ruby>",
+        "expExample1": "<ruby><rb>臆病</rb><rt><strong>おくびょう</strong></rt></ruby>",
         "example2Lang": "1",
         "expExample2": "겁냄.",
         "expEntry": "臆"
@@ -22532,7 +22532,7 @@
         "rank": "5",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "どんな<ruby><rb>悪口</rb><rt>わるくち</rt></ruby>を<ruby><rb>言</rb><rt>い</rt></ruby>われても<ruby><rb>落着</rb><rt><strong>おちつ</strong></rt></ruby><strong>き</strong><ruby><rb>��</rb><rt>はら</rt></ruby>っている",
+        "expExample1": "どんな<ruby><rb>悪口</rb><rt>わるくち</rt></ruby>を<ruby><rb>言</rb><rt>い</rt></ruby>われても<ruby><rb>落着</rb><rt><strong>おちつ</strong></rt></ruby><strong>き</strong><ruby><rb>腹</rb><rt>はら</rt></ruby>っている",
         "example2Lang": "1",
         "expExample2": "어떠한 욕을 먹어도 태연자약하다.",
         "expEntry": "<strong>おちつき</strong>はらう[落(ち)着き払う]"
@@ -23170,7 +23170,7 @@
             "means": [
               {
                 "order": "1",
-                "value": "‘使い(=심부���)’의 공손한 말.",
+                "value": "‘使い(=심부름)’의 공손한 말.",
                 "vcode": "527905"
               },
               {
@@ -26621,7 +26621,7 @@
         "expExample1": "<ruby><rb>襟</rb><rt>えり</rt></ruby>の<ruby><rb>折</rb><rt>お</rt></ruby>り<ruby><rb>返</rb><rt>かえ</rt></ruby>し",
         "example2Lang": "1",
         "expExample2": "옷깃의 되접어 꺾은 곳",
-        "expEntry": "<strong>���りかえし</strong>[折(り)返し]"
+        "expEntry": "<strong>おりかえし</strong>[折(り)返し]"
       },
       {
         "rank": "3",
@@ -27252,7 +27252,7 @@
         "expExample1": "<ruby><rb>言</rb><rt>い</rt></ruby>うも<ruby><rb>愚</rb><rt><strong>おろ</strong></rt></ruby><strong>かな</strong><ruby><rb>事</rb><rt>こと</rt></ruby>",
         "example2Lang": "1",
         "expExample2": "말할 필요조차 없는 일; 말하기조차 어리석은 일",
-        "expEntry": "<strong>お��か</strong>[愚か]"
+        "expEntry": "<strong>おろか</strong>[愚か]"
       },
       {
         "rank": "2",
@@ -28398,7 +28398,7 @@
         ],
         "expAliasGeneralAlwaysList": [
           {
-            "originLanguageValue": "海��"
+            "originLanguageValue": "海角"
           }
         ],
         "handleEntry": "해각",

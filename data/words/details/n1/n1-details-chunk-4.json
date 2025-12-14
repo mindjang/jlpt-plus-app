@@ -5233,7 +5233,7 @@
             "originLanguageValue": "家鄕"
           }
         ],
-        "handleEntry": "���향",
+        "handleEntry": "가향",
         "vcode": "832705",
         "encode": "%EA%B0%80%ED%96%A5"
       }
@@ -9347,7 +9347,7 @@
         "rank": "3",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>作業</rb><rt>さぎょう</rt></ruby>の<ruby><rb>切</rb><rt>き</rt></ruby>れ<ruby><rb>目</rb><rt>め</rt></ruby>に<ruby><rb>一服</rb><rt>いっぷく</rt></ruby>���る",
+        "expExample1": "<ruby><rb>作業</rb><rt>さぎょう</rt></ruby>の<ruby><rb>切</rb><rt>き</rt></ruby>れ<ruby><rb>目</rb><rt>め</rt></ruby>に<ruby><rb>一服</rb><rt>いっぷく</rt></ruby>入る",
         "example2Lang": "1",
         "expExample2": "작업 막간에 잠깐 쉬다",
         "expEntry": "<strong>きれめ</strong>[切れ目]"
@@ -10155,7 +10155,7 @@
         ],
         "expAliasGeneralAlwaysList": [
           {
-            "originLanguageValue": "��常連絡網"
+            "originLanguageValue": "장기 연락망"
           }
         ],
         "handleEntry": "비상 연락망",
@@ -10232,7 +10232,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>緊急</rb><rt><strong>きんきゅう</strong></rt></ruby><ruby><rb>措置</rb><rt>そち</rt></ruby>を<ruby><rb>実施</rb><rt>じっし</rt></ruby>する",
         "example2Lang": "1",
-        "expExample2": "긴급 조치�� 실시하다",
+        "expExample2": "긴급 조치를 실시하다",
         "expEntry": "<strong>きんきゅう</strong>[緊急]"
       }
     ],
@@ -13705,7 +13705,7 @@
         "rank": "2",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>特殊</rb><rt>とくしゅ</rt></ruby><ruby><rb>技能</rb><rt><strong>ぎのう</strong></rt></ruby>の<ruby><rb>向上</rb><rt>こう��ょう</rt></ruby>を<ruby><rb>目指</rb><rt>めざ</rt></ruby>す",
+        "expExample1": "<ruby><rb>特殊</rb><rt>とくしゅ</rt></ruby><ruby><rb>技能</rb><rt><strong>ぎのう</strong></rt></ruby>の<ruby><rb>向上</rb><rt>こうじょう</rt></ruby>を<ruby><rb>目指</rb><rt>めざ</rt></ruby>す",
         "example2Lang": "1",
         "expExample2": "특수 기능 향상을 목표로 하다",
         "expEntry": "<strong>ぎのう</strong>[技能]"
@@ -13846,7 +13846,7 @@
             "originLanguageValue": "上衝"
           }
         ],
-        "handleEntry": "상���",
+        "handleEntry": "상충",
         "vcode": "900518",
         "encode": "%EC%83%81%EC%B6%A9"
       },
@@ -18347,17 +18347,17 @@
             "means": [
               {
                 "order": "1",
-                "value": "(줄기) <ruby><rb>茎</rb><rt><strong>くき</strong></rt></ruby>.",
+                "value": "<ruby><rb>茎</rb><rt><strong>くき</strong></rt></ruby>.",
                 "vcode": "171071"
               },
               {
                 "order": "2",
-                "value": "(���대) <ruby><rb>棒</rb><rt>ぼう</rt></ruby>の<ruby><rb>細長</rb><rt>ほそなが</rt></ruby>くて<ruby><rb>中</rb><rt>なか</rt></ruby>のうつろなものの<ruby><rb>総称</rb><rt>そうしょう</rt></ruby>.",
+                "value": "<ruby><rb>棒</rb><rt>ぼう</rt></ruby>の<ruby><rb>細長</rb><rt>ほそなが</rt></ruby>くて<ruby><rb>中</rb><rt>なか</rt></ruby>のうつろなものの<ruby><rb>総称</rb><rt>そうしょう</rt></ruby>.",
                 "vcode": "883964"
               },
               {
                 "order": "3",
-                "value": "[본딧말]<span class=\"related_word\" lang=\"ko\">줏대</span>",
+                "value": "<span class=\"related_word\" lang=\"ko\">줏대</span>",
                 "vcode": "065506"
               }
             ]
@@ -20695,7 +20695,7 @@
         "rank": "2",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>光線</rb><rt>こうせん</rt></ruby>は<ruby><rb>水</rb><rt>みず</rt></ruby>にはいると<ruby><rb>屈折</rb><rt><strong>くっせつ</strong></rt></ruby>す���",
+        "expExample1": "<ruby><rb>光線</rb><rt>こうせん</rt></ruby>は<ruby><rb>水</rb><rt>みず</rt></ruby>にはいると<ruby><rb>屈折</rb><rt><strong>くっせつ</strong></rt></ruby>す角",
         "example2Lang": "1",
         "expExample2": "광선은 물에 들어가면 굴절한다.",
         "expEntry": "<strong>くっせつ</strong>[屈折]"
@@ -26228,7 +26228,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>敬��</rb><rt><strong>けいぐ</strong></rt></ruby>((<ruby><rb>手紙</rb><rt>てがみ</rt></ruby>の<ruby><rb>結語</rb><rt>けつご</rt></ruby>)).",
+                "value": "<ruby><rb>敬具</rb><rt><strong>けいぐ</strong></rt></ruby>((<ruby><rb>手紙</rb><rt>てがみ</rt></ruby>の<ruby><rb>結語</rb><rt>けつご</rt></ruby>)).",
                 "vcode": "164097"
               }
             ]
@@ -27875,7 +27875,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>啓上</rb><rt><strong>けいじ��う</strong></rt></ruby>, <ruby><rb>申</rb><rt>もう</rt></ruby>し<ruby><rb>上</rb><rt>あ</rt></ruby>げること.",
+                "value": "<ruby><rb>啓上</rb><rt><strong>けいじょう</strong></rt></ruby>, <ruby><rb>申</rb><rt>もう</rt></ruby>し<ruby><rb>上</rb><rt>あ</rt></ruby>げること.",
                 "vcode": "415983"
               }
             ]
@@ -29314,7 +29314,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>閨閥</rb><rt><strong>けいばつ</strong></rt></ruby>, <ruby><rb>妻</rb><rt>つま</rt></ruby>の<ruby><rb>一族</rb><rt>いちぞく</rt></ruby>の<ruby><rb>勢力</rb><rt>せいりょく</rt></ruby>を<ruby><rb>中心</rb><rt>ちゅうしん</rt></ruby>として<ruby><rb>��</rb><rt>な</rt></ruby>る<ruby><rb>派閥</rb><rt>はばつ</rt></ruby>.",
+                "value": "<ruby><rb>閨閥</rb><rt><strong>けいばつ</strong></rt></ruby>, <ruby><rb>妻</rb><rt>つま</rt></ruby>の<ruby><rb>一族</rb><rt>いちぞく</rt></ruby>の<ruby><rb>勢力</rb><rt>せいりょく</rt></ruby>を<ruby><rb>中心</rb><rt>ちゅうしん</rt></ruby>として<ruby><rb>内</rb><rt>な</rt></ruby>る<ruby><rb>派閥</rb><rt>はばつ</rt></ruby>.",
                 "vcode": "164097"
               }
             ]

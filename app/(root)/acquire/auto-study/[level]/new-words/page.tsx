@@ -10,6 +10,7 @@ import { getKanjiByLevel } from '@/data/kanji/index'
 import type { NaverWord } from '@/data/types'
 import { levels, Level } from '@/data'
 import { useAuth } from '@/components/auth/AuthProvider'
+import { useUserSettings } from '@/hooks/useUserSettings'
 import { getAllCardIds } from '@/lib/firebase/firestore'
 import {
   getKanjiCharacter,
@@ -23,6 +24,7 @@ function NewWordsContent() {
   const params = useParams()
   const searchParams = useSearchParams()
   const { user } = useAuth()
+  const { settings } = useUserSettings(user)
   
   const levelParam = params.level as string
   const typeParam = searchParams.get('type') || 'word'
@@ -38,7 +40,13 @@ function NewWordsContent() {
     return 'N5'
   }, [levelParam])
 
-  const limit = limitParam ? parseInt(limitParam, 10) : 20
+  // 일일 학습 목표: URL 파라미터 > 사용자 설정 > 기본값(20)
+  const limit = useMemo(() => {
+    if (limitParam) {
+      return parseInt(limitParam, 10)
+    }
+    return settings?.dailyNewLimit || 20
+  }, [limitParam, settings?.dailyNewLimit])
   const [searchQuery, setSearchQuery] = useState('')
   const [learnedIds, setLearnedIds] = useState<Set<string>>(new Set())
   const [loading, setLoading] = useState(true)

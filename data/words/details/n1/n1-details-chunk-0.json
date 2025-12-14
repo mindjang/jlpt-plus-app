@@ -1622,7 +1622,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>仰向</rb><rt><strong>あおむ</strong></rt></ruby><strong>け</strong>に<ruby><rb>置</rb><rt>お</rt></ruby>く",
         "example2Lang": "1",
-        "expExample2": "위를 ��하게 놓다",
+        "expExample2": "위를 정하게 놓다",
         "expEntry": "<strong>あおむけ</strong>[仰向け]"
       },
       {
@@ -5318,7 +5318,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>多彩</rb><rt>たさい</rt></ruby>な<ruby><rb>色合</rb><rt>いろあ</rt></ruby>いが<ruby><rb>独特</rb><rt>どくとく</rt></ruby>の<ruby><rb>味</rb><rt><strong>あじ</strong></rt></ruby><strong>わいを</strong><ruby><rb>醸</rb><rt>かも</rt></ruby>し<ruby><rb>出</rb><rt>だ</rt></ruby>す",
         "example2Lang": "1",
-        "expExample2": "다채로운 색상�� 독특한 정취를 자아내다",
+        "expExample2": "다채로운 색상과 독특한 정취를 자아내다",
         "expEntry": "<strong>あじわい</strong>[味わい]"
       },
       {
@@ -8101,7 +8101,7 @@
             "means": [
               {
                 "order": "",
-                "value": "(<ruby><rb>食後</rb><rt>しょくご</rt></ruby>の)<ruby><rb>後片付</rb><rt><strong>あとかたづ</strong></rt></ruby><strong>け</strong>, <ruby><rb>皿洗</rb><rt>さらあら</rt></ruby>い, <ruby><rb>食器</rb><rt>しょっ��</rt></ruby><ruby><rb>洗</rb><rt>あら</rt></ruby>い. (=<span class=\"related_word\" lang=\"ko\">뒷설거지</span>)",
+                "value": "(<ruby><rb>食後</rb><rt>しょくご</rt></ruby>の)<ruby><rb>後片付</rb><rt><strong>あとかたづ</strong></rt></ruby><strong>け</strong>, <ruby><rb>皿洗</rb><rt>さらあら</rt></ruby>い, <ruby><rb>食器</rb><rt>しょっけ</rt></ruby><ruby><rb>洗</rb><rt>あら</rt></ruby>い. (=<span class=\"related_word\" lang=\"ko\">뒷설거지</span>)",
                 "vcode": "747718"
               }
             ]
@@ -9554,7 +9554,7 @@
         "rank": "3",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>天下</rb><rt><strong>あまくだ</strong></rt></ruby><strong>り</strong>の<ruby><rb>���定</rb><rt>けってい</rt></ruby>[<ruby><rb>案</rb><rt>あん</rt></ruby>]",
+        "expExample1": "<ruby><rb>天下</rb><rt><strong>あまくだ</strong></rt></ruby><strong>り</strong>の<ruby><rb>決定</rb><rt>けってい</rt></ruby>[<ruby><rb>案</rb><rt>あん</rt></ruby>]",
         "example2Lang": "1",
         "expExample2": "상부에서 내린 결정[안]",
         "expEntry": "<strong>あまくだり</strong>[天下り·天降り]"
@@ -11413,7 +11413,7 @@
         "rank": "1",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>現実</rb><rt>げ���じつ</rt></ruby>を<ruby><rb>有</rb><rt>あ</rt></ruby>りの<ruby><rb>儘</rb><rt>まま</rt></ruby>(に)<ruby><rb>見</rb><rt>み</rt></ruby>る",
+        "expExample1": "<ruby><rb>現実</rb><rt>げんじつ</rt></ruby>を<ruby><rb>有</rb><rt>あ</rt></ruby>りの<ruby><rb>儘</rb><rt>まま</rt></ruby>(に)<ruby><rb>見</rb><rt>み</rt></ruby>る",
         "example2Lang": "1",
         "expExample2": "현실을 있는 그대로 보다",
         "expEntry": "<strong>ありのまま</strong>[有りの儘]"
@@ -11619,7 +11619,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>闘鶏</rb><rt>��うけい</rt></ruby>, け<ruby><rb>合</rb><rt>あ</rt></ruby>い, <ruby><rb>鶏合</rb><rt>とり<strong>あ</strong></rt></ruby><strong>わせ</strong>, にわとり<strong>あわせ</strong>.",
+                "value": "<ruby><rb>闘鶏</rb><rt>とうけい</rt></ruby>, け<ruby><rb>合</rb><rt>あ</rt></ruby>い, <ruby><rb>鶏合</rb><rt>とり<strong>あ</strong></rt></ruby><strong>わせ</strong>, にわとり<strong>あわせ</strong>.",
                 "vcode": "213102"
               }
             ]
@@ -16508,7 +16508,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>癸亥</rb><rt>みずのとい·きが��</rt></ruby>.",
+                "value": "<ruby><rb>癸亥</rb><rt>みずのとい·きがい</rt></ruby>.",
                 "vcode": "060344"
               }
             ]
@@ -17117,7 +17117,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>人生</rb><rt>じんせい</rt></ruby>の<ruby><rb>意義</rb><rt><strong>いぎ</strong></rt></ruby>を<ruby><rb>問</rb><rt>と</rt></ruby>う",
         "example2Lang": "1",
-        "expExample2": "인생의 의의[의미]�� 묻다",
+        "expExample2": "인생의 의의[의미]과 묻다",
         "expEntry": "<strong>いぎ</strong>[意義]"
       }
     ],
@@ -20134,7 +20134,7 @@
         "rank": "5",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "ニュート���ルな<ruby><rb>立場</rb><rt>たちば</rt></ruby>を<ruby><rb>維持</rb><rt><strong>いじ</strong></rt></ruby>する",
+        "expExample1": "ニュートラルな<ruby><rb>立場</rb><rt>たちば</rt></ruby>を<ruby><rb>維持</rb><rt><strong>いじ</strong></rt></ruby>する",
         "example2Lang": "1",
         "expExample2": "중립적인 입장을 유지하다",
         "expEntry": "<strong>いじ</strong>[維持]"
@@ -20806,7 +20806,7 @@
           {
             "partOfSpeech": "명사",
             "partOfSpeech2": "名詞",
-            "partOfSpeechCode": "��詞",
+            "partOfSpeechCode": "名詞",
             "means": [
               {
                 "order": "",
@@ -24756,7 +24756,7 @@
               },
               {
                 "order": "2",
-                "value": "율시(律詩)에서, ���나의 대구(對句).",
+                "value": "율시(律詩)에서, 한나의 대구(對句).",
                 "vcode": "060344"
               },
               {
@@ -27412,7 +27412,7 @@
         "meansCollector": [
           {
             "partOfSpeech": "명사",
-            "partOfSpeech2": "名��",
+            "partOfSpeech2": "名詞",
             "partOfSpeechCode": "名詞",
             "means": [
               {
@@ -27632,7 +27632,7 @@
         "priority": 0,
         "meansCollector": [
           {
-            "partOfSpeech": "부��",
+            "partOfSpeech": "부사",
             "partOfSpeech2": "副詞",
             "partOfSpeechCode": "副詞",
             "means": [
@@ -28150,7 +28150,7 @@
         "rank": "1",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>一片</rb><rt><strong>いっぺ��</strong></rt></ruby>",
+        "expExample1": "<ruby><rb>一片</rb><rt><strong>いっぺん</strong></rt></ruby>",
         "example2Lang": "1",
         "expExample2": "1편; 한 조각",
         "expEntry": "-へん[片]"
@@ -28513,7 +28513,7 @@
               },
               {
                 "order": "3",
-                "value": "무엇을 하고자 하�� 생각이나 계획.",
+                "value": "무엇을 하고자 하여 생각이나 계획.",
                 "vcode": "121514"
               }
             ]
@@ -28948,7 +28948,7 @@
             "originLanguageValue": "異動"
           }
         ],
-        "handleEntry": "이���",
+        "handleEntry": "이동",
         "vcode": "811448",
         "encode": "%EC%9D%B4%EB%8F%99"
       },

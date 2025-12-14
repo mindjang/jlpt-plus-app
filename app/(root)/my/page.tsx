@@ -109,23 +109,17 @@ function MyPageContent() {
 
   // Payment Modal State
   const [showPaymentModal, setShowPaymentModal] = useState(false)
-  const [paymentTab, setPaymentTab] = useState<'subscription' | 'pass'>('subscription')
-  const [selectedPlanId, setSelectedPlanId] = useState<string | null>(null)
+  const [selectedPlanId, setSelectedPlanId] = useState<string | null>('monthly')
 
   // Check for payment query param to auto-open modal
   useEffect(() => {
     const shouldShowPayment = searchParams.get('payment')
-    const tab = searchParams.get('tab') as 'subscription' | 'pass' | null
     if (shouldShowPayment === 'true' && user) {
       logger.info('[Payment] Modal auto-opened from paywall', {
-        tab,
         membershipStatus,
         timestamp: Date.now(),
       })
       setShowPaymentModal(true)
-      if (tab) {
-        setPaymentTab(tab)
-      }
     }
   }, [searchParams, user, membershipStatus])
 
@@ -231,12 +225,6 @@ function MyPageContent() {
     }
   }
 
-  const handlePlaceholderPayment = (planId: string) => {
-    // Redirect to subscription tab instead of showing alert
-    setShowPaymentModal(true)
-    setPaymentTab('subscription')
-    payment.setPayMessage('정기 구독을 이용해주세요. 일회성 이용권은 곧 출시됩니다.')
-  }
 
   const loading = settingsLoading
 
@@ -293,7 +281,7 @@ function MyPageContent() {
                 <span>Premium Member</span>
               </div>
             ) : (
-              <button onClick={() => { setShowPaymentModal(true); setPaymentTab('pass'); }} className="inline-flex items-center gap-1.5 mt-2 px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-bold active:bg-gray-200">
+              <button onClick={() => { setShowPaymentModal(true); }} className="inline-flex items-center gap-1.5 mt-2 px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-bold active:bg-gray-200">
                 <span>Free Plan</span>
               </button>
             )}
@@ -356,21 +344,11 @@ function MyPageContent() {
                 <div className="flex gap-2">
                   <button
                     onClick={() => {
-                      setPaymentTab('subscription')
                       setShowPaymentModal(true)
                     }}
-                    className="flex-1 py-4 px-6 bg-black text-white rounded-lg text-body font-semibold active:opacity-80"
+                    className="w-full py-4 px-6 bg-black text-white rounded-lg text-body font-semibold active:opacity-80"
                   >
                     구독 시작하기
-                  </button>
-                  <button
-                    onClick={() => {
-                      setPaymentTab('pass')
-                      setShowPaymentModal(true)
-                    }}
-                    className="flex-1 py-4 px-6 bg-gray-100 text-gray-900 rounded-lg text-body font-semibold active:bg-gray-200 border border-transparent"
-                  >
-                    이용권 구매
                   </button>
                 </div>
                 <div className="text-[10px] text-center text-gray-400">
@@ -503,7 +481,6 @@ function MyPageContent() {
                     onClick={() => {
                       setShowManageModal(false)
                       setShowPaymentModal(true)
-                      setPaymentTab('subscription')
                     }}
                     className="w-full py-4 px-6 rounded-lg bg-white border border-gray-200 text-gray-900 text-body font-semibold active:bg-gray-50"
                   >
@@ -512,10 +489,10 @@ function MyPageContent() {
                 </>
               ) : (
                 <button
-                  onClick={() => { setShowManageModal(false); setPaymentTab('pass'); setShowPaymentModal(true); }}
+                  onClick={() => { setShowManageModal(false); setShowPaymentModal(true); }}
                   className="w-full py-4 rounded-lg bg-black text-white font-bold active:opacity-80 text-sm"
                 >
-                  기간 연장하기 / 구독 전환
+                  구독하기
                 </button>
               )}
             </div>
@@ -547,83 +524,39 @@ function MyPageContent() {
 
             {/* Tabs */}
             <div className="px-6 py-2 shrink-0">
-              <div className="flex bg-gray-100 p-1 rounded-lg">
-                <button
-                  onClick={() => setPaymentTab('subscription')}
-                  className={`flex-1 py-3 rounded-lg text-sm font-bold ${paymentTab === 'subscription' ? 'bg-white text-black' : 'text-gray-400'}`}
-                >
-                  정기 구독
-                  <span className="ml-1.5 text-[10px] bg-red-100 text-red-500 px-1.5 py-0.5 rounded-full">BEST</span>
-                </button>
-                <button
-                  onClick={() => setPaymentTab('pass')}
-                  className={`flex-1 py-3 px-4 rounded-lg text-body font-medium ${paymentTab === 'pass' ? 'bg-white text-black' : 'text-gray-400'}`}
-                >
-                  기간 이용권
-                </button>
-              </div>
+              {/* 탭 제거 - 구독만 제공 */}
             </div>
 
             {/* Content */}
             <div className="flex-1 overflow-y-auto px-6 py-4 space-y-4">
-              {paymentTab === 'subscription' ? (
-                <>
-                  <div
-                    onClick={() => setSelectedPlanId('monthly')}
-                    className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'monthly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
-                  >
-                    <div className="flex justify-between items-center mb-1">
-                      <span className="font-bold text-lg text-gray-900">월간 구독</span>
-                      {selectedPlanId === 'monthly' && <CheckCircle2 className="text-primary" size={20} />}
-                    </div>
-                    <div className="text-3xl font-black text-gray-900 mb-1">₩9,900<span className="text-sm font-medium text-gray-400 ml-1">/월</span></div>
-                    <p className="text-xs text-gray-500">매월 자동 결제, 언제든 해지 가능</p>
-                  </div>
+              <div
+                onClick={() => setSelectedPlanId('monthly')}
+                className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'monthly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
+              >
+                <div className="flex justify-between items-center mb-1">
+                  <span className="font-bold text-lg text-gray-900">월간 구독</span>
+                  {selectedPlanId === 'monthly' && <CheckCircle2 className="text-primary" size={20} />}
+                </div>
+                <div className="text-3xl font-black text-gray-900 mb-1">₩4,900<span className="text-sm font-medium text-gray-400 ml-1">/월</span></div>
+                <p className="text-xs text-gray-500">매월 자동 결제, 언제든 해지 가능</p>
+              </div>
 
-                  <div
-                    onClick={() => setSelectedPlanId('yearly')}
-                    className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'yearly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
-                  >
-                    <div className="flex justify-between items-center mb-1">
-                      <span className="font-bold text-lg text-gray-900">연간 구독</span>
-                      <span className="bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded-full">2개월 무료</span>
-                    </div>
-                    <div className="text-display-s font-black text-gray-900 mb-1">₩99,000<span className="text-label font-medium text-gray-400 ml-1">/년</span></div>
-                    <p className="text-xs text-gray-500">1년마다 자동 결제, 17% 할인 효과</p>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="grid grid-cols-1 gap-3">
-                    {[
-                      { id: '1month', name: '1개월권', price: '₩12,000' },
-                      { id: '3month', name: '3개월권', price: '₩33,000' },
-                      { id: '6month', name: '6개월권', price: '₩60,000' },
-                    ].map((item) => (
-                      <div
-                        key={item.id}
-                        onClick={() => setSelectedPlanId(item.id)}
-                        className={`p-4 rounded-lg border cursor-pointer flex justify-between items-center ${selectedPlanId === item.id ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
-                      >
-                        <div>
-                          <div className="font-bold text-gray-900">{item.name}</div>
-                          <div className="text-xs text-gray-500 mt-0.5">자동 결제 안 됨</div>
-                        </div>
-                        <div className="text-lg font-black text-gray-900">{item.price}</div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="bg-blue-50 p-4 rounded-lg text-xs text-blue-600 font-medium leading-relaxed">
-                    💡 시험 일정이 얼마 남지 않았다면,<br />딱 필요한 기간만큼 이용권을 구매해보세요!
-                  </div>
-                </>
-              )}
+              <div
+                onClick={() => setSelectedPlanId('yearly')}
+                className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'yearly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
+              >
+                <div className="flex justify-between items-center mb-1">
+                  <span className="font-bold text-lg text-gray-900">연간 구독</span>
+                  <span className="bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded-full">2개월 무료</span>
+                </div>
+                <div className="text-display-s font-black text-gray-900 mb-1">₩49,000<span className="text-label font-medium text-gray-400 ml-1">/년</span></div>
+                <p className="text-xs text-gray-500">1년마다 자동 결제, 17% 할인 효과</p>
+              </div>
             </div>
 
             {/* Footer Actions */}
             <div className="p-6 pt-2 border-t border-gray-100 shrink-0 bg-white sm:rounded-b-[40px]">
-              {paymentTab === 'subscription' ? (
-                <div className="space-y-3">
+              <div className="space-y-3">
                   <button
                     onClick={async () => {
                       if (!selectedPlanId) return alert('플랜을 선택해주세요.')
@@ -647,17 +580,6 @@ function MyPageContent() {
                     카카오페이로 시작하기
                   </button>
                 </div>
-              ) : (
-                <button
-                  onClick={() => {
-                    if (!selectedPlanId) return alert('이용권을 선택해주세요.')
-                    handlePlaceholderPayment(selectedPlanId)
-                  }}
-                  className="w-full py-4 px-6 rounded-lg bg-black text-white text-body font-semibold active:opacity-80"
-                >
-                  {selectedPlanId ? '이용권 구매하기' : '상품을 선택해주세요'}
-                </button>
-              )}
             </div>
           </motion.div>
         </div>

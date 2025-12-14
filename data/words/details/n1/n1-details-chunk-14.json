@@ -2339,7 +2339,7 @@
             "means": [
               {
                 "order": "",
-                "value": "(<ruby><rb>門</rb><rt>も���</rt></ruby>の)<ruby><rb>扉</rb><rt><strong>とびら</strong></rt></ruby>, <ruby><rb>戸</rb><rt>と</rt></ruby>, <ruby><rb>門扉</rb><rt>もんぴ</rt></ruby>.",
+                "value": "(<ruby><rb>門</rb><rt>もん</rt></ruby>の)<ruby><rb>扉</rb><rt><strong>とびら</strong></rt></ruby>, <ruby><rb>戸</rb><rt>と</rt></ruby>, <ruby><rb>門扉</rb><rt>もんぴ</rt></ruby>.",
                 "vcode": "863708"
               }
             ]
@@ -2969,7 +2969,7 @@
               },
               {
                 "order": "2",
-                "value": "<ruby><rb>同輩</rb><rt>どうはい</rt></ruby>を<ruby><rb>��</rb><rt>した</rt></ruby>しみをこめて<ruby><rb>呼</rb><rt>よ</rt></ruby>ぶときや, またはあまり<ruby><rb>好</rb><rt>す</rt></ruby>きでない<ruby><rb>人</rb><rt>ひと</rt></ruby>をぞんざいに<ruby><rb>言</rb><rt>い</rt></ruby>う<ruby><rb>時</rb><rt>とき</rt></ruby>の<ruby><rb>称</rb><rt>しょう</rt></ruby>: <ruby><rb>君</rb><rt>きみ</rt></ruby>; おっさん; やつ.",
+                "value": "<ruby><rb>同輩</rb><rt>どうはい</rt></ruby>を<ruby><rb>仲</rb><rt>した</rt></ruby>しみをこめて<ruby><rb>呼</rb><rt>よ</rt></ruby>ぶときや, またはあまり<ruby><rb>好</rb><rt>す</rt></ruby>きでない<ruby><rb>人</rb><rt>ひと</rt></ruby>をぞんざいに<ruby><rb>言</rb><rt>い</rt></ruby>う<ruby><rb>時</rb><rt>とき</rt></ruby>の<ruby><rb>称</rb><rt>しょう</rt></ruby>: <ruby><rb>君</rb><rt>きみ</rt></ruby>; おっさん; やつ.",
                 "vcode": "499935"
               }
             ]
@@ -3672,7 +3672,7 @@
         ],
         "expAliasGeneralAlwaysList": [
           {
-            "originLanguageValue": "���用"
+            "originLanguageValue": "使用"
           }
         ],
         "handleEntry": "시용",
@@ -3918,42 +3918,12 @@
         ],
         "expAliasGeneralAlwaysList": [
           {
-            "originLanguageValue": "영어 Kiyomitsu TORII"
+            "originLanguageValue": "English Kiyomitsu TORII"
           }
         ],
         "handleEntry": "鳥居清満",
         "vcode": "307618",
         "encode": "%E9%B3%A5%E5%B1%85%E6%B8%85%E6%BA%80"
-      },
-      {
-        "rank": "2",
-        "expDictTypeForm": "단어",
-        "dictTypeForm": "2",
-        "expEntry": "鳥居元忠",
-        "expEntrySuperscript": "",
-        "priority": 0,
-        "meansCollector": [
-          {
-            "partOfSpeech": "",
-            "partOfSpeech2": "",
-            "partOfSpeechCode": "",
-            "means": [
-              {
-                "order": "",
-                "value": "鳥居 元忠（<strong>とりい</strong> もとただ）は、安土桃山時代の徳川家康の家臣である。​Mototada TORII was a vassal of Ieyasu TOKUGAWA's in the Azuchi Momoyama period.​三河国渡村（現在の愛知県岡崎市）出身。��He was from Watari-mura in Mikawa Province (present...",
-                "vcode": "955009"
-              }
-            ]
-          }
-        ],
-        "expAliasGeneralAlwaysList": [
-          {
-            "originLanguageValue": "영어 Mototada TORII"
-          }
-        ],
-        "handleEntry": "鳥居元忠",
-        "vcode": "177652",
-        "encode": "%E9%B3%A5%E5%B1%85%E5%85%83%E5%BF%A0"
       }
     ],
     "examples": [
@@ -4365,7 +4335,7 @@
               },
               {
                 "order": "2",
-                "value": "(남에게 주���나 빼앗겼던 것을) 다시 찾다. (=<span class=\"related_word\" lang=\"ja\">とりもどす</span>)",
+                "value": "(남에게 주거나 빼앗겼던 것을) 다시 찾다. (=<span class=\"related_word\" lang=\"ja\">とりもどす</span>)",
                 "vcode": "483597"
               },
               {
@@ -5065,7 +5035,7 @@
         "example1Lang": 4,
         "expExample1": "そうは<ruby><rb>問屋</rb><rt><strong>とんや</strong></rt></ruby>が<ruby><rb>卸</rb><rt>おろ</rt></ruby>さない.",
         "example2Lang": "1",
-        "expExample2": "그렇게 엿장수 마음대로�� 안 된다",
+        "expExample2": "그렇게 엿장수 마음대로 안 된다",
         "expEntry": "엿장수 마음대로"
       },
       {
@@ -6778,7 +6748,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>同気</rb><rt><strong>ど��き</strong></rt></ruby>, <ruby><rb>兄弟姉妹</rb><rt>きょうだいしまい</rt></ruby>(の<ruby><rb>間柄</rb><rt>あいだがら</rt></ruby>), <ruby><rb>同胞</rb><rt>どうほう</rt></ruby>. (=<span class=\"related_word\" lang=\"ko\">형제</span>)",
+                "value": "<ruby><rb>同気</rb><rt><strong>どうき</strong></rt></ruby>, <ruby><rb>兄弟姉妹</rb><rt>きょうだいしまい</rt></ruby>(の<ruby><rb>間柄</rb><rt>あいだがら</rt></ruby>), <ruby><rb>同胞</rb><rt>どうほう</rt></ruby>. (=<span class=\"related_word\" lang=\"ko\">형제</span>)",
                 "vcode": "955009"
               }
             ]
@@ -7656,7 +7626,7 @@
             "means": [
               {
                 "order": "1",
-                "value": "<strong>どうきょ</strong>す���【同居する】 (↔<a href=\"#/entry/koja/c6a6dfc9d69a46af8f10c9c11a93446e\" class=\"link\" lang=\"ko\">별거하다</a>)",
+                "value": "<strong>どうきょ</strong>す【同居する】",
                 "vcode": "655217"
               },
               {
@@ -7976,7 +7946,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<strong>どうこう</strong>, どうのこうの, と��かく, かれこれ, <ruby><rb>何</rb><rt>なん</rt></ruby>のかのと. [작은말]<span class=\"related_word\" lang=\"ko\">요러쿵조러쿵</span>",
+                "value": "<strong>どうこう</strong>, どうのこうの, とうかく, かれこれ, <ruby><rb>何</rb><rt>なん</rt></ruby>のかのと. [작은말]<span class=\"related_word\" lang=\"ko\">요러쿵조러쿵</span>",
                 "vcode": "263239"
               }
             ]
@@ -14667,7 +14637,7 @@
         "rank": "1",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "あの<ruby><rb>奴</rb><rt>やつ</rt></ruby>は<ruby><rb>鈍感</rb><rt><strong>どんかん</strong></rt></ruby><strong>だから</strong><ruby><rb>皮肉</rb><rt>ひに���</rt></ruby>が<ruby><rb>通</rb><rt>つう</rt></ruby>じない",
+        "expExample1": "あの<ruby><rb>奴</rb><rt>やつ</rt></ruby>は<ruby><rb>鈍感</rb><rt><strong>どんかん</strong></rt></ruby><strong>だから</strong><ruby><rb>皮肉</rb><rt>ひにく</rt></ruby>が<ruby><rb>通</rb><rt>つう</rt></ruby>じない",
         "example2Lang": "1",
         "expExample2": "저 녀석은 둔감해서 야유가 통하지 않는다",
         "expEntry": "<strong>どんかん</strong>[鈍感]"
@@ -15239,7 +15209,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>私話</rb><rt>しわ</rt></ruby>, ひ���ひそ<ruby><rb>話</rb><rt>ばなし</rt></ruby>, <strong>ないしょ</strong><ruby><rb>話</rb><rt>ばなし</rt></ruby>, <ruby><rb>私語</rb><rt>しご</rt></ruby>.",
+                "value": "<ruby><rb>私話</rb><rt>しわ</rt></ruby>, ひみひそ<ruby><rb>話</rb><rt>ばなし</rt></ruby>, <strong>ないしょ</strong><ruby><rb>話</rb><rt>ばなし</rt></ruby>, <ruby><rb>私語</rb><rt>しご</rt></ruby>.",
                 "vcode": "955009"
               }
             ]
@@ -16431,7 +16401,7 @@
               },
               {
                 "order": "3",
-                "value": "(<ruby><rb>植民地</rb><rt>し���くみんち</rt></ruby>から<ruby><rb>見</rb><rt>み</rt></ruby>た)<ruby><rb>本国</rb><rt>ほんごく</rt></ruby>.",
+                "value": "(<ruby><rb>植民地</rb><rt>しょくみんち</rt></ruby>から<ruby><rb>見</rb><rt>み</rt></ruby>た)<ruby><rb>本国</rb><rt>ほんごく</rt></ruby>.",
                 "vcode": "955009"
               }
             ]
@@ -17185,7 +17155,7 @@
               },
               {
                 "order": "3",
-                "value": "(‘아우르다’の<ruby><rb>受</rb><rt>う</rt></ruby>け<ruby><rb>身</rb><rt>み</rt></ruby>)いっしょにされる, <ruby><rb>交</rb><rt>ま��</rt></ruby>わられる, <ruby><rb>調和</rb><rt>ちょうわ</rt></ruby>させられる. [큰말]<span class=\"related_word\" lang=\"ko\">어울리다</span>",
+                "value": "(‘아우르다’の<ruby><rb>受</rb><rt>う</rt></ruby>け<ruby><rb>身</rb><rt>み</rt></ruby>)いっしょにされる, <ruby><rb>交</rb><rt>まじ</rt></ruby>わられる, <ruby><rb>調和</rb><rt>ちょうわ</rt></ruby>させられる. [큰말]<span class=\"related_word\" lang=\"ko\">어울리다</span>",
                 "vcode": "955009"
               }
             ]
@@ -18760,7 +18730,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>情</rb><rt><strong>なさ</strong></rt></ruby><strong>けは</strong><ruby><rb>人</rb><rt>ひと</rt></ruby>の<ruby><rb>為</rb><rt>ため</rt></ruby>ならず",
         "example2Lang": "1",
-        "expExample2": "남에게 인정을 베풀면 반드시 내게 돌아��다는 말",
+        "expExample2": "남에게 인정을 베풀면 반드시 내게 돌아다는 말",
         "expEntry": "<strong>なさけ</strong>[情け]"
       },
       {
@@ -19909,7 +19879,7 @@
         ],
         "expAliasGeneralAlwaysList": [
           {
-            "originLanguageValue": "���"
+            "originLanguageValue": "鉛"
           }
         ],
         "handleEntry": "연",
@@ -21771,7 +21741,7 @@
     "meaning": [
       {
         "rank": "1",
-        "expDictTypeForm": "��어",
+        "expDictTypeForm": "단어",
         "dictTypeForm": "2",
         "expEntry": "쓴맛",
         "expEntrySuperscript": "",
@@ -27660,7 +27630,7 @@
       },
       {
         "rank": "5",
-        "expDictTypeForm": "단��",
+        "expDictTypeForm": "단어",
         "dictTypeForm": "2",
         "expEntry": "임명되다",
         "expEntrySuperscript": "",

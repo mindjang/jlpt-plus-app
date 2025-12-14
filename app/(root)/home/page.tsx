@@ -7,10 +7,12 @@ import { AppBar } from '@/components/ui/AppBar'
 import { StreakChip } from '@/components/ui/StreakChip'
 import { getUserData } from '@/lib/firebase/firestore'
 import { getReviewCards } from '@/lib/firebase/firestore'
+import { getStreak } from '@/lib/firebase/firestore/dailyActivity'
 import { logger } from '@/lib/utils/logger'
-import { Play, BookOpen, Brain, Zap, ArrowRight, TrendingUp } from 'lucide-react'
+import { Play, BookOpen, Brain, Zap, ArrowRight, TrendingUp, Calendar } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Level } from '@/data'
+import type { StreakData } from '@/lib/types/stats'
 
 export default function HomePage() {
   const router = useRouter()
@@ -19,6 +21,8 @@ export default function HomePage() {
   const [userLevel, setUserLevel] = useState<string>('N5')
   const [userName, setUserName] = useState<string>('Guest')
   const [loading, setLoading] = useState(true)
+  const [streak, setStreak] = useState<StreakData | null>(null)
+  const [todayActivity, setTodayActivity] = useState<DailyActivity | null>(null)
 
   useEffect(() => {
     if (user) {
@@ -32,14 +36,20 @@ export default function HomePage() {
   const loadUserData = async () => {
     if (!user) return
     try {
-      const userData = await getUserData(user.uid)
+      // 병렬로 데이터 로드
+      const [userData, reviewCards, streakData] = await Promise.all([
+        getUserData(user.uid),
+        getReviewCards(user.uid, 500),
+        getStreak(user.uid),
+      ])
+
       // Default to N5 if targetLevel is not set
       if (userData?.profile.targetLevel) {
         setUserLevel(userData.profile.targetLevel)
       }
 
-      const reviewCards = await getReviewCards(user.uid, 500)
       setReviewDueCount(reviewCards.length)
+      setStreak(streakData)
     } catch (error) {
       logger.error('Failed to load user data:', error)
     } finally {
@@ -102,7 +112,7 @@ export default function HomePage() {
           </div>
           {user && (
             <motion.div variants={itemVariants}>
-              <StreakChip count={0} />
+              <StreakChip count={streak?.currentStreak || 0} />
             </motion.div>
           )}
         </motion.div>
@@ -225,18 +235,34 @@ export default function HomePage() {
 
             <button
               onClick={() => router.push('/stats')}
-              className="col-span-2 p-5 bg-surface rounded-lg flex items-center justify-between border border-divider active:bg-gray-50"
+              className="p-5 bg-surface rounded-lg flex items-center justify-between border border-divider active:bg-gray-50"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 <div className="p-3 bg-green-50 text-green-500 rounded-lg">
-                  <TrendingUp size={24} />
+                  <TrendingUp size={20} />
                 </div>
-                <div>
-                  <h4 className="font-semibold text-text-main text-subtitle">학습 통계</h4>
-                  <p className="text-text-sub text-xs">나의 학습 현황 확인하기</p>
+                <div className="text-left">
+                  <h4 className="font-semibold text-text-main text-body">학습 통계</h4>
+                  <p className="text-text-sub text-xs">나의 학습 현황</p>
                 </div>
               </div>
-              <ArrowRight size={20} className="text-divider" />
+              <ArrowRight size={18} className="text-divider" />
+            </button>
+
+            <button
+              onClick={() => router.push('/history')}
+              className="p-5 bg-surface rounded-lg flex items-center justify-between border border-divider active:bg-gray-50"
+            >
+              <div className="flex items-center gap-3">
+                <div className="p-3 bg-orange-50 text-orange-500 rounded-lg">
+                  <Calendar size={20} />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-text-main text-body">학습 히스토리</h4>
+                  <p className="text-text-sub text-xs">과거 학습 기록</p>
+                </div>
+              </div>
+              <ArrowRight size={18} className="text-divider" />
             </button>
           </div>
         </motion.div>

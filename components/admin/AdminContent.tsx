@@ -78,10 +78,11 @@ export function AdminContent() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h3 className="text-subtitle font-semibold text-text-main">학습 콘텐츠 관리</h3>
-        {saving && <span className="text-sm text-text-sub">저장 중...</span>}
-      </div>
+      {saving && (
+        <div className="bg-blue-50 text-blue-800 p-3 rounded-lg text-label">
+          저장 중...
+        </div>
+      )}
 
       {message && (
         <div className={`p-3 rounded-lg text-body ${message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
@@ -89,7 +90,7 @@ export function AdminContent() {
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
         {levels.map((level) => {
           const setting = settings[level] || { word: true, kanji: true }
 

@@ -590,7 +590,7 @@ export const n4Words: NaverWord[] = [
       }
     ],
     category1: "jlpt",
-    category2: "���んしゅ",
+    category2: "いんしゅ",
     category3: null
   },
   {
@@ -13652,7 +13652,7 @@ export const n4Words: NaverWord[] = [
     partsMeans: [
       {
         part: "동사",
-        means: ["한 줄��� 서다"]
+        means: ["한 줄로 서다"]
       }
     ],
     category1: "jlpt",

@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { useParams } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
+import { useUserSettings } from '@/hooks/useUserSettings'
 import { StudySession } from '@/components/study/StudySession'
 import { LoginForm } from '@/components/auth/LoginForm'
 import { signOutUser } from '@/lib/firebase/auth'
@@ -16,6 +17,7 @@ export default function StudyPage() {
   const params = useParams()
   const level = params.level as string
   const { user, loading } = useAuth()
+  const { settings } = useUserSettings(user)
   const [mode, setMode] = useState<'example' | 'quiz'>('example')
 
   if (loading) {
@@ -80,6 +82,7 @@ export default function StudyPage() {
           words={mockWords}
           kanjis={mockKanjis}
           mode={mode}
+          dailyNewLimit={settings?.dailyNewLimit || 20}
         />
       </div>
     </div>

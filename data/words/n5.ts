@@ -2526,7 +2526,7 @@ export const n5Words: NaverWord[] = [
     partsMeans: [
       {
         part: "명사",
-        means: ["금월;이���"]
+        means: ["금월;이번"]
       }
     ],
     category1: "jlpt",
@@ -4580,7 +4580,7 @@ export const n5Words: NaverWord[] = [
     partsMeans: [
       {
         part: "명사",
-        means: ["��호"]
+        means: ["번호"]
       }
     ],
     category1: "jlpt",

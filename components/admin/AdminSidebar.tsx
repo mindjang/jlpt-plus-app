@@ -1,75 +1,75 @@
 'use client'
 
 import React from 'react'
+import { usePathname, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
   Users,
   BookOpen,
   Ticket,
   BarChart2,
-  LayoutDashboard,
+  LogOut,
   Settings,
-  LogOut
+  Flag
 } from 'lucide-react'
 
-type AdminSection = 'dashboard' | 'users' | 'content' | 'codes' | 'settings'
-
-interface AdminSidebarProps {
-  activeSection: string
-  onNavigate: (section: AdminSection) => void
-}
-
-export function AdminSidebar({ activeSection, onNavigate }: AdminSidebarProps) {
+export function AdminSidebar() {
+  const pathname = usePathname()
+  const router = useRouter()
+  
   const menuItems = [
-    { id: 'dashboard', label: '대시보드', icon: BarChart2 },
-    { id: 'users', label: '사용자 관리', icon: Users },
-    { id: 'content', label: '콘텐츠 관리', icon: BookOpen },
-    { id: 'codes', label: '쿠폰 코드', icon: Ticket },
-    // { id: 'settings', label: '설정', icon: Settings },
+    { id: 'dashboard', label: '대시보드', icon: BarChart2, path: '/admin/dashboard' },
+    { id: 'users', label: '사용자', icon: Users, path: '/admin/users' },
+    { id: 'content', label: '콘텐츠 관리', icon: BookOpen, path: '/admin/content' },
+    { id: 'codes', label: '쿠폰', icon: Ticket, path: '/admin/codes' },
+    { id: 'reports', label: '신고', icon: Flag, path: '/admin/reports' },
+    { id: 'stats', label: '통계', icon: BarChart2, path: '/admin/stats' },
+    { id: 'settings', label: '설정', icon: Settings, path: '/admin/settings' },
   ]
+  
+  const handleNavigate = (path: string) => {
+    router.push(path)
+  }
 
   return (
-    <div className="w-64 bg-surface border-r border-divider h-screen fixed left-0 top-0 flex flex-col z-40 hidden md:flex">
-      <div className="h-16 flex items-center px-6 border-b border-divider">
-        <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-orange-400 bg-clip-text text-transparent">
-          JLPT ONE Admin
-        </h1>
+    <div className="w-16 md:w-20 bg-surface border-r border-divider h-screen fixed left-0 top-0 flex flex-col z-40">
+      {/* 로고/헤더 - 최소화 */}
+      <div className="h-14 flex items-center justify-center border-b border-divider">
+        <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+          <span className="text-white text-xs font-bold">A</span>
+        </div>
       </div>
 
-      <div className="flex-1 py-6 px-4 space-y-2">
+      {/* 메뉴 아이템 - 아이콘만 표시 */}
+      <div className="flex-1 py-4 flex flex-col items-center gap-1">
         {menuItems.map((item) => {
-          const isActive = activeSection === item.id
+          const isActive = pathname === item.path || (item.id === 'dashboard' && pathname === '/admin')
           const Icon = item.icon
 
           return (
             <button
               key={item.id}
-              onClick={() => onNavigate(item.id as AdminSection)}
-              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 group relative ${isActive
-                  ? 'text-white font-bold'
-                  : 'text-text-sub active:bg-gray-100'
-                }`}
+              onClick={() => handleNavigate(item.path)}
+              className={`relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-lg transition-all duration-200 group ${
+                isActive
+                  ? 'bg-primary text-white'
+                  : 'text-text-sub hover:bg-gray-100 active:bg-gray-200'
+              }`}
+              title={item.label}
             >
-              {isActive && (
-                <motion.div
-                  layoutId="activeTab"
-                  className="absolute inset-0 bg-primary rounded-lg"
-                  initial={false}
-                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                />
-              )}
-
-              <Icon size={20} className={`relative z-10 ${isActive ? 'text-white' : 'text-text-sub'}`} />
-              <span className="relative z-10">{item.label}</span>
+              <Icon size={22} className="relative z-10" />
             </button>
           )
         })}
       </div>
 
-      <div className="p-4 border-t border-divider">
-        <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-text-sub active:bg-gray-100 active:text-red-500">
+      {/* 하단 로그아웃 */}
+      <div className="p-2 border-t border-divider">
+        <button 
+          className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-lg text-text-sub hover:bg-red-50 hover:text-red-600 active:bg-red-100 transition-colors"
+          title="나가기"
+        >
           <LogOut size={20} />
-          <span>나가기</span>
         </button>
       </div>
     </div>

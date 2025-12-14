@@ -4,10 +4,12 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRotateLeft, faFileLines, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { faRotateLeft, faFileLines, faEye, faEyeSlash, faFlag } from '@fortawesome/free-solid-svg-icons'
 import type { NaverWord, WordDetails, Level } from '@/data/types'
 import type { Grade, UserCardState } from '@/lib/types/srs'
 import { getWordDetails } from '@/data/words/details/index'
+import { ReportModal } from './ReportModal'
+import { useAuth } from '@/components/auth/AuthProvider'
 
 interface WordCardProps {
   word: NaverWord
@@ -32,10 +34,13 @@ export function WordCard({
   onGradeStateChange,
 }: WordCardProps) {
   const router = useRouter()
+  const { user } = useAuth()
   const [showMeaning, setShowMeaning] = useState(false)
   const [showFurigana, setShowFurigana] = useState(false)
   const [wordDetails, setWordDetails] = useState<WordDetails | null>(null)
   const [loadingDetails, setLoadingDetails] = useState(false)
+  const [showReportModal, setShowReportModal] = useState(false)
+  const [submittingReport, setSubmittingReport] = useState(false)
 
   // 한자 포함 여부 확인
   const hasKanji = /[\u4e00-\u9faf]/.test(word.entry)
@@ -123,8 +128,41 @@ export function WordCard({
     return tempDiv.textContent || tempDiv.innerText || ''
   }
 
+  // 신고 제출 핸들러
+  const handleSubmitReport = async (report: { content: string; reason: string }) => {
+    if (!user) {
+      throw new Error('로그인이 필요합니다.')
+    }
+
+    setSubmittingReport(true)
+    try {
+      const response = await fetch('/api/reports', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          contentType: 'word',
+          contentText: report.content,
+          level: jlptLevel,
+          reason: report.reason,
+        }),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || '신고 제출에 실패했습니다.')
+      }
+
+      // 성공 시 모달 닫기
+      setShowReportModal(false)
+    } finally {
+      setSubmittingReport(false)
+    }
+  }
+
   return (
-    <div className="w-full max-w-md px-4 mx-auto">
+    <div className="w-full px-4 mx-auto">
       {/* 카드 */}
       <motion.div
         className="flex flex-col bg-surface rounded-lg border border-divider relative h-full"
@@ -143,6 +181,18 @@ export function WordCard({
 
         {/* 우측 상단 아이콘 */}
         <div className="absolute top-5 right-5 flex items-center gap-1">
+          {/* 신고 아이콘 */}
+          <button
+            onClick={() => setShowReportModal(true)}
+            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
+            title="신고하기"
+          >
+            <FontAwesomeIcon
+              icon={faFlag}
+              className="text-text-sub"
+              size="2xs"
+            />
+          </button>
           {/* 눈 아이콘 (모든 내용 보이기/숨기기 토글) */}
           <button
             onClick={handleToggleAll}
@@ -227,10 +277,11 @@ export function WordCard({
             >
               <div className="text-center">
                 <p className="text-label text-text-sub mb-2">예문</p>
-                <div className="text-body text-jp text-text-main mb-3 leading-relaxed">
-                  <span dangerouslySetInnerHTML={{ __html: firstExample.expExample1 }} />
-                </div>
-                <div className="text-body text-text-sub">
+                <div 
+                  className={`text-lg text-jp text-text-main mb-3 leading-relaxed [&_rt]:text-sm [&_rt]:font-medium [&_rt]:text-blue-400 ${!showFurigana ? '[&_rt]:invisible' : ''}`}
+                  dangerouslySetInnerHTML={{ __html: firstExample.expExample1 }} 
+                />
+                <div className={`text-text-sub ${showMeaning ? 'visible' : 'invisible'}`}>
                   {firstExample.expExample2}
                 </div>
               </div>
@@ -272,6 +323,16 @@ export function WordCard({
           </button>
         </div>
       </motion.div>
+
+      {/* 신고 모달 */}
+      <ReportModal
+        isOpen={showReportModal}
+        onClose={() => setShowReportModal(false)}
+        contentType="word"
+        contentText={word.entry}
+        level={jlptLevel}
+        onSubmit={handleSubmitReport}
+      />
     </div>
   )
 }

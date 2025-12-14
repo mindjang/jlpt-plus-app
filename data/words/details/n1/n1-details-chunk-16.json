@@ -2423,7 +2423,7 @@
             "means": [
               {
                 "order": "",
-                "value": "はんめん【反面】。が。けど。に<strong>ひき��え</strong> (→<a href=\"#/entry/koja/69c5312d9f764daeb5a4db44c3088b6c\" class=\"link\" lang=\"ko\">-ㄴ 반면에</a>, <a href=\"#/entry/koja/1c260ce25b02440d883fc5cecfdbe0fa\" class=\"link\" lang=\"ko\">-는 반면에</a>)",
+                "value": "はんめん【反面】。が。けど。に<strong>ひきかえ</strong> (→<a href=\"#/entry/koja/69c5312d9f764daeb5a4db44c3088b6c\" class=\"link\" lang=\"ko\">-ㄴ 반면에</a>, <a href=\"#/entry/koja/1c260ce25b02440d883fc5cecfdbe0fa\" class=\"link\" lang=\"ko\">-는 반면에</a>)",
                 "vcode": "034459"
               }
             ]
@@ -2508,7 +2508,7 @@
         "expExample1": "<ruby><rb>経営</rb><rt>けいえい</rt></ruby><ruby><rb>権</rb><rt>けん</rt></ruby>と<ruby><rb>引</rb><rt>ひ</rt></ruby>き<ruby><rb>換</rb><rt>か</rt></ruby>えに<ruby><rb>債務</rb><rt>さいむ</rt></ruby>を<ruby><rb>免除</rb><rt>めんじょ</rt></ruby>してもらう",
         "example2Lang": "1",
         "expExample2": "경영권을 대신하여 채무를 면제받다",
-        "expEntry": "<strong>��きかえ</strong>[引(き)換え·引換·引(き)替え·引替]"
+        "expEntry": "<strong>ひきかえ</strong>[引(き)換え·引換·引(き)替え·引替]"
       },
       {
         "rank": "3",
@@ -3465,7 +3465,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>日頃</rb><rt><strong>ひごろ</strong></rt></ruby>の<ruby><rb>努力</rb><rt>どりょく</rt></ruby>を<ruby><rb>遺憾</rb><rt>いかん</rt></ruby>なく<ruby><rb>発揮</rb><rt>はっき</rt></ruby>している",
         "example2Lang": "1",
-        "expExample2": "평소의 노력을 유감없이 ��휘하고 있다",
+        "expExample2": "평소의 노력을 유감없이 발휘하고 있다",
         "expEntry": "<strong>ひごろ</strong>[日頃·日ごろ]"
       },
       {
@@ -3938,7 +3938,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>避暑</rb><rt><strong>ひしょ</strong></rt></ruby>, <ruby><rb>暑気</rb><rt>しょき</rt></ruby><ruby><rb>払</rb><rt>ばら</rt></ruby>い, <ruby><rb>暑</rb><rt>あつ</rt></ruby>さ<ruby><rb>凌</rb><rt>しの</rt></ruby>ぎ. (↔<span class=\"related_word\" lang=\"ko\">피한(��寒)</span>)",
+                "value": "<ruby><rb>避暑</rb><rt><strong>ひしょ</strong></rt></ruby>, <ruby><rb>暑気</rb><rt>しょき</rt></ruby><ruby><rb>払</rb><rt>ばら</rt></ruby>い, <ruby><rb>暑</rb><rt>あつ</rt></ruby>さ<ruby><rb>凌</rb><rt>しの</rt></ruby>ぎ.",
                 "vcode": "420479"
               }
             ]
@@ -6066,7 +6066,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>人柄</rb><rt><strong>ひとがら</strong></rt></ruby>がにじみ<ruby><rb>出</rb><rt>で</rt></ruby>る",
         "example2Lang": "1",
-        "expExample2": "인품이 절로 우러나��다",
+        "expExample2": "인품이 절로 우러나다",
         "expEntry": "<strong>ひとがら</strong>[人柄]"
       },
       {
@@ -6895,7 +6895,7 @@
               },
               {
                 "order": "2",
-                "value": "(물고기의) <ruby><rb>魚群</rb><rt>ぎょぐん</rt></ruby>が<ruby><rb>��</rb><rt>とお</rt></ruby>る<ruby><rb>道筋</rb><rt>みちすじ</rt></ruby>·<ruby><rb>魚道</rb><rt>ぎょどう</rt></ruby>.",
+                "value": "(물고기의) <ruby><rb>魚群</rb><rt>ぎょぐん</rt></ruby>が<ruby><rb>とお</rb><rt>とお</rt></ruby>る<ruby><rb>道筋</rb><rt>みちすじ</rt></ruby>·<ruby><rb>魚道</rb><rt>ぎょどう</rt></ruby>.",
                 "vcode": "966536"
               },
               {
@@ -7007,7 +7007,7 @@
         "example1Lang": 4,
         "expExample1": "<ruby><rb>一筋</rb><rt><strong>ひとすじ</strong></rt></ruby>の<ruby><rb>涙</rb><rt>なみだ</rt></ruby>が<ruby><rb>彼女</rb><rt>かのじょ</rt></ruby>の<ruby><rb>頬</rb><rt>ほお</rt></ruby>を<ruby><rb>伝</rb><rt>つた</rt></ruby>わって<ruby><rb>流</rb><rt>なが</rt></ruby>れた",
         "example2Lang": "1",
-        "expExample2": "한 줄기 눈물이 ��녀의 볼을 타고 흘러내렸다",
+        "expExample2": "한 줄기 눈물이 그녀의 볼을 타고 흘러내렸다",
         "expEntry": "<strong>ひとすじ</strong>[一筋·一条]"
       }
     ],
@@ -7751,7 +7751,7 @@
             "means": [
               {
                 "order": "1",
-                "value": "(동물의) <ruby><rb>生</rb><rt>う</rt></ruby>まれてまもないか, まだ<ruby><rb>生</rb><rt>う</rt></ruby>まれていない<ruby><rb>動物</rb><rt>���うぶつ</rt></ruby>の<ruby><rb>子</rb><rt>こ</rt></ruby>; <ruby><rb>雛</rb><rt><strong>ひな</strong></rt></ruby>.",
+                "value": "(동물의) <ruby><rb>生</rb><rt>う</rt></ruby>まれてまもないか, まだ<ruby><rb>生</rb><rt>う</rt></ruby>まれていない<ruby><rb>動物</rb><rt>ううぶつ</rt></ruby>の<ruby><rb>子</rb><rt>こ</rt></ruby>; <ruby><rb>雛</rb><rt><strong>ひな</strong></rt></ruby>.",
                 "vcode": "898018"
               },
               {
@@ -7885,7 +7885,7 @@
             "means": [
               {
                 "order": "",
-                "value": "若々しい,青年らしい(youthful),元気な(vigorous) / 新興の,(歴史の)新しい(new);(季節・時間などの)まだ早い(early);新鮮な,生き生���した / 経験の浅い,未熟な;(…に)不慣れな / 若い人たち / (動物・鳥の)子,<strong>ひな</strong>",
+                "value": "若々しい,青年らしい(youthful),元気な(vigorous) / 新興の,(歴史の)新しい(new);(季節・時間などの)まだ早い(early);新鮮な,生き生きした / 経験の浅い,未熟な;(…に)不慣れな / 若い人たち / (動物・鳥の)子,<strong>ひな</strong>",
                 "vcode": "955009"
               }
             ]
@@ -8060,9 +8060,9 @@
     "meaning": [
       {
         "rank": "1",
-        "expDictTypeForm": "단���",
+        "expDictTypeForm": "단어",
         "dictTypeForm": "2",
-        "expEntry": "���지",
+        "expEntry": "양지",
         "expEntrySuperscript": "",
         "priority": 0,
         "meansCollector": [

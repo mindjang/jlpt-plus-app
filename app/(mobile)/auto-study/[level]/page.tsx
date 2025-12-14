@@ -30,15 +30,12 @@ export default function AutoStudyPage() {
   
   const [studyMode, setStudyMode] = useState<StudyMode>('auto')
   const [showModeModal, setShowModeModal] = useState(false)
-  const [targetAmount, setTargetAmount] = useState(20)
   const [activeTab, setActiveTab] = useState<'word' | 'kanji'>('word')
 
-  // 사용자 설정 불러오면 기본 목표 적용
-  useEffect(() => {
-    if (settings?.dailyNewLimit) {
-      setTargetAmount(settings.dailyNewLimit)
-    }
-  }, [settings.dailyNewLimit])
+  // 일일 학습 목표: 사용자 설정 > 기본값(20)
+  const targetAmount = useMemo(() => {
+    return settings?.dailyNewLimit || 20
+  }, [settings?.dailyNewLimit])
 
   // 단어/한자 데이터 변환 (네이버 데이터 직접 사용)
   const words: NaverWord[] = useMemo(() => {

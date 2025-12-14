@@ -2,8 +2,12 @@
 
 import React, { useState, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFlag } from '@fortawesome/free-solid-svg-icons'
 import { AppBar } from '@/components/ui/AppBar'
 import { LevelChip } from '@/components/ui/LevelChip'
+import { ReportModal } from '@/components/study/ReportModal'
+import { useAuth } from '@/components/auth/AuthProvider'
 import { findNaverWord } from '@/data/words/index'
 import { getWordDetails } from '@/data/words/details/index'
 import type { WordDetails, Level } from '@/data/types'
@@ -11,10 +15,14 @@ import type { WordDetails, Level } from '@/data/types'
 export default function WordDetailPage() {
   const router = useRouter()
   const params = useParams()
+  const { user } = useAuth()
   const word = decodeURIComponent(params.id as string)
   const [wordDetails, setWordDetails] = useState<WordDetails | null>(null)
   const [loading, setLoading] = useState(true)
   const [naverWord, setNaverWord] = useState<any>(null)
+  const [showReportModal, setShowReportModal] = useState(false)
+  const [submittingReport, setSubmittingReport] = useState(false)
+  const [showAllRelatedWords, setShowAllRelatedWords] = useState(false)
 
   // 레벨 매핑
   const levelMap: Record<string, Level> = {
@@ -54,6 +62,39 @@ export default function WordDetailPage() {
   const kanjiText = primaryWord?.expKanji || naverWord?.kanji || word
   const displayText = naverWord?.entry || word
 
+  // 신고 제출 핸들러
+  const handleSubmitReport = async (report: { content: string; reason: string }) => {
+    if (!user) {
+      throw new Error('로그인이 필요합니다.')
+    }
+
+    setSubmittingReport(true)
+    try {
+      const response = await fetch('/api/reports', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          contentType: 'word',
+          contentText: report.content,
+          level: jlptLevel,
+          reason: report.reason,
+        }),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || '신고 제출에 실패했습니다.')
+      }
+
+      // 성공 시 모달 닫기
+      setShowReportModal(false)
+    } finally {
+      setSubmittingReport(false)
+    }
+  }
+
   return (
     <div className="w-full">
       <AppBar title="단어 상세" onBack={() => router.back()} />
@@ -85,7 +126,20 @@ export default function WordDetailPage() {
         ) : (
           <>
             {/* 단어 헤더 */}
-            <div className="bg-surface rounded-lg border border-divider p-6">
+            <div className="bg-surface rounded-lg border border-divider p-6 relative">
+              {/* 신고 버튼 */}
+              <button
+                onClick={() => setShowReportModal(true)}
+                className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
+                title="신고하기"
+              >
+                <FontAwesomeIcon
+                  icon={faFlag}
+                  className="text-text-sub"
+                  size="sm"
+                />
+              </button>
+
               <div className="text-center mb-4">
                 <h1 className="text-display-l text-jp font-medium text-text-main mb-2">
                   {kanjiText}
@@ -207,9 +261,14 @@ export default function WordDetailPage() {
             {/* 관련 단어 (hiraganaList) */}
             {wordDetails?.hiraganaList && wordDetails.hiraganaList.length > 0 && (
               <div className="bg-surface rounded-lg border border-divider p-6">
-                <h2 className="text-title font-semibold text-text-main mb-4">관련 단어</h2>
+                <h2 className="text-title font-semibold text-text-main mb-4">
+                  관련 단어 ({wordDetails.hiraganaList.length})
+                </h2>
                 <div className="space-y-3">
-                  {wordDetails.hiraganaList.slice(0, 10).map((item, index) => (
+                  {(showAllRelatedWords 
+                    ? wordDetails.hiraganaList 
+                    : wordDetails.hiraganaList.slice(0, 5)
+                  ).map((item, index) => (
                     <div
                       key={index}
                       className="flex items-start gap-3 border-b border-divider pb-3 last:border-b-0 last:pb-0"
@@ -232,11 +291,29 @@ export default function WordDetailPage() {
                     </div>
                   ))}
                 </div>
+                {wordDetails.hiraganaList.length > 5 && (
+                  <button
+                    onClick={() => setShowAllRelatedWords(!showAllRelatedWords)}
+                    className="w-full mt-4 py-3 px-4 rounded-lg bg-surface border border-divider text-body text-text-main font-medium active:bg-gray-50"
+                  >
+                    {showAllRelatedWords ? '접기' : `더보기 (${wordDetails.hiraganaList.length - 5}개 더)`}
+                  </button>
+                )}
               </div>
             )}
           </>
         )}
       </div>
+
+      {/* 신고 모달 */}
+      <ReportModal
+        isOpen={showReportModal}
+        onClose={() => setShowReportModal(false)}
+        contentType="word"
+        contentText={word}
+        level={jlptLevel}
+        onSubmit={handleSubmitReport}
+      />
     </div>
   )
 }

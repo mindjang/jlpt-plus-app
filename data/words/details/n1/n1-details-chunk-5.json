@@ -1892,7 +1892,7 @@
           {
             "partOfSpeech": "명사",
             "partOfSpeech2": "名詞",
-            "partOfSpeechCode": "���詞",
+            "partOfSpeechCode": "名詞",
             "means": [
               {
                 "order": "",
@@ -3616,7 +3616,7 @@
         "rank": "3",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "クラブを<ruby><rb>結成</rb><rt><strong>けっ���い</strong></rt></ruby>する",
+        "expExample1": "クラブを<ruby><rb>結成</rb><rt><strong>けっせい</strong></rt></ruby>する",
         "example2Lang": "1",
         "expExample2": "클럽을 결성하다.",
         "expEntry": "<strong>けっせい</strong>[結成]"
@@ -4581,7 +4581,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>��議</rb><rt><strong>けつぎ</strong></rt></ruby>, <ruby><rb>議決</rb><rt>ぎけつ</rt></ruby>.",
+                "value": "<ruby><rb>決議</rb><rt><strong>けつぎ</strong></rt></ruby>, <ruby><rb>議決</rb><rt>ぎけつ</rt></ruby>.",
                 "vcode": "591883"
               }
             ]
@@ -5140,7 +5140,7 @@
         "priority": 0,
         "meansCollector": [
           {
-            "partOfSpeech": "��사",
+            "partOfSpeech": "명사",
             "partOfSpeech2": "名詞",
             "partOfSpeechCode": "名詞",
             "means": [
@@ -9654,7 +9654,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>検知</rb><rt><strong>けんち</strong></rt></ruby>, <ruby><rb>検���</rb><rt>けんさ</rt></ruby>して<ruby><rb>知</rb><rt>し</rt></ruby>ること.",
+                "value": "<ruby><rb>検知</rb><rt><strong>けんち</strong></rt></ruby>, <ruby><rb>検査</rb><rt>けんさ</rt></ruby>して<ruby><rb>知</rb><rt>し</rt></ruby>ること.",
                 "vcode": "164097"
               }
             ]
@@ -10734,7 +10734,7 @@
         "rank": "5",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>倹約</rb><rt><strong>けん���く</strong></rt></ruby>イコールけちではない",
+        "expExample1": "<ruby><rb>倹約</rb><rt><strong>けんやく</strong></rt></ruby>イコールけちではない",
         "example2Lang": "1",
         "expExample2": "검약이 곧 인색이 아니다((검약과 인색은 같지 않다)).",
         "expEntry": "イコール"
@@ -19335,7 +19335,7 @@
             "originLanguageValue": "原論"
           }
         ],
-        "handleEntry": "원���",
+        "handleEntry": "원론",
         "vcode": "541662",
         "encode": "%EC%9B%90%EB%A1%A0"
       },
@@ -21688,7 +21688,7 @@
         "priority": 0,
         "meansCollector": [
           {
-            "partOfSpeech": "명���",
+            "partOfSpeech": "명사",
             "partOfSpeech2": "名詞",
             "partOfSpeechCode": "名詞",
             "means": [
@@ -24888,7 +24888,7 @@
             "means": [
               {
                 "order": "",
-                "value": "<ruby><rb>農耕</rb><rt>のうこう</rt></ruby>, <ruby><rb>農作</rb><rt>��うさく</rt></ruby>, <ruby><rb>耕作</rb><rt><strong>こうさく</strong></rt></ruby>.",
+                "value": "<ruby><rb>農耕</rb><rt>のうこう</rt></ruby>, <ruby><rb>農作</rb><rt>のうさく</rt></ruby>, <ruby><rb>耕作</rb><rt><strong>こうさく</strong></rt></ruby>.",
                 "vcode": "943304"
               }
             ]
@@ -28629,7 +28629,7 @@
               },
               {
                 "order": "2",
-                "value": "<ruby><rb>水</rb><rt>みず</rt></ruby>, <ruby><rb>���</rb><rt>の</rt></ruby>み<ruby><rb>水</rb><rt>みず</rt></ruby>.",
+                "value": "<ruby><rb>水</rb><rt>みず</rt></ruby>, <ruby><rb>水</rb><rt>の</rt></ruby>み<ruby><rb>水</rb><rt>みず</rt></ruby>.",
                 "vcode": "504282"
               },
               {
@@ -30595,7 +30595,7 @@
         ],
         "expAliasGeneralAlwaysList": [
           {
-            "originLanguageValue": "���團"
+            "originLanguageValue": "工團"
           }
         ],
         "handleEntry": "공단",

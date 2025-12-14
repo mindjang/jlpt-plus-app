@@ -33,8 +33,15 @@ export default function AutoStudyPage() {
   const [activeTab, setActiveTab] = useState<'word' | 'kanji'>('word')
 
   // 일일 학습 목표: 사용자 설정 > 기본값(20)
-  const targetAmount = useMemo(() => {
+  const [targetAmount, setTargetAmount] = useState(() => {
     return settings?.dailyNewLimit || 20
+  })
+
+  // settings가 변경되면 targetAmount 업데이트 (초기값만)
+  useEffect(() => {
+    if (settings?.dailyNewLimit) {
+      setTargetAmount(settings.dailyNewLimit)
+    }
   }, [settings?.dailyNewLimit])
 
   // 단어/한자 데이터 변환 (네이버 데이터 직접 사용)

@@ -53,7 +53,10 @@ export function ContentEditModal({
         setWordEntry(word.entry || '')
         setWordKanji(word.kanji || '')
         setWordLevel(word.level || '')
-        setWordPartsMeans(word.partsMeans || [{ part: '', means: [''] }])
+        setWordPartsMeans(
+          word.partsMeans?.map(pm => ({ part: pm.part || '', means: pm.means || [''] })) || 
+          [{ part: '', means: [''] }]
+        )
       } else if (type === 'kanji') {
         const kanji = item as KanjiAliveEntry
         setKanjiCharacter(kanji.ka_utf || kanji.kanji?.character || '')
@@ -150,14 +153,14 @@ export function ContentEditModal({
               korean: kanjiMeaning,
               english: kanjiMeaning,
             },
-            onyomi: kanjiOnyomi ? {
+            onyomi: {
               romaji: '',
-              katakana: kanjiOnyomi,
-            } : undefined,
-            kunyomi: kanjiKunyomi ? {
+              katakana: kanjiOnyomi || '',
+            },
+            kunyomi: {
               romaji: '',
-              hiragana: kanjiKunyomi,
-            } : undefined,
+              hiragana: kanjiKunyomi || '',
+            },
             strokes: {
               count: 0,
               timings: [],

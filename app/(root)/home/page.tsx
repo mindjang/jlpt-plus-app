@@ -12,7 +12,7 @@ import { logger } from '@/lib/utils/logger'
 import { Play, BookOpen, Brain, Zap, ArrowRight, TrendingUp, Calendar } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Level } from '@/data'
-import type { StreakData } from '@/lib/types/stats'
+import type { StreakData, DailyActivity } from '@/lib/types/stats'
 
 export default function HomePage() {
   const router = useRouter()

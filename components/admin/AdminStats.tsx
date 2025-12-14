@@ -50,7 +50,7 @@ export function AdminStats() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="bg-page rounded-lg p-4 border border-divider">
           <div className="text-label text-text-sub mb-1">총 사용자</div>
-          <div className="text-2xl font-bold text-text-main">{stats.users.toLocaleString()}명</div>
+          <div className="text-display-s font-bold text-text-main">{stats.users.toLocaleString()}명</div>
         </div>
 
         <div className="bg-page rounded-lg p-4 border border-divider">
@@ -61,8 +61,8 @@ export function AdminStats() {
 
         <div className="bg-page rounded-lg p-4 border border-divider">
           <div className="text-label text-text-sub mb-1">총 학습 콘텐츠</div>
-          <div className="text-2xl font-bold text-text-main">{totalContent.toLocaleString()}개</div>
-          <div className="text-xs text-text-sub mt-1">단어 + 한자</div>
+          <div className="text-display-s font-bold text-text-main">{totalContent.toLocaleString()}개</div>
+          <div className="text-label text-text-sub mt-1">단어 + 한자</div>
         </div>
       </div>
     </div>

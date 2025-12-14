@@ -214,7 +214,7 @@ export function QuizSettingsModal({
         {/* 시작 버튼 */}
         <motion.button
           onClick={handleStart}
-          className="w-full py-4 bg-primary text-white rounded-lg text-title font-semibold active:opacity-80"
+          className="w-full py-4 px-6 bg-primary text-white rounded-lg text-body font-semibold active:opacity-80"
         >
           퀴즈 시작
         </motion.button>

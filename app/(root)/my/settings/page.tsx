@@ -74,18 +74,18 @@ export default function MySettingsPage() {
             <button
               onClick={handleSave}
               disabled={saving}
-              className="flex-1 py-3 rounded-lg bg-black text-white font-semibold disabled:opacity-60"
+              className="flex-1 py-4 px-6 rounded-lg bg-black text-white text-body font-semibold disabled:opacity-60"
             >
               {saving ? '저장 중...' : '저장'}
             </button>
             <button
               onClick={() => router.back()}
-              className="flex-1 py-3 rounded-lg bg-white border border-divider text-text-main font-semibold"
+              className="flex-1 py-4 px-6 rounded-lg bg-white border border-divider text-text-main text-body font-semibold"
             >
               돌아가기
             </button>
           </div>
-          {message && <div className="text-sm text-primary">{message}</div>}
+          {message && <div className="text-label text-primary">{message}</div>}
         </div>
       </div>
     </div>

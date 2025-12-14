@@ -118,7 +118,7 @@ export function PaywallOverlay({
               <button
                 disabled={redeemLoading}
                 onClick={handleRedeem}
-                className="px-4 py-2 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-50"
+                className="px-4 py-3 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-50"
               >
                 {redeemLoading ? '적용중...' : '등록'}
               </button>
@@ -143,7 +143,7 @@ export function PaywallOverlay({
 
         {showBackButton && onBack && (
           <button
-            className="w-full py-3 rounded-lg bg-gray-100 border border-gray-200 text-gray-700 text-body font-medium active:bg-gray-200"
+            className="w-full py-3 px-4 rounded-lg bg-gray-100 border border-gray-200 text-gray-700 text-body font-medium active:bg-gray-200"
             onClick={onBack}
           >
             뒤로가기

@@ -75,7 +75,7 @@ export function LevelUpModal({ isOpen, newLevel, onClose }: LevelUpModalProps) {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
               onClick={onClose}
-              className="w-full py-4 bg-primary text-white rounded-lg text-body font-semibold active:opacity-80"
+              className="w-full py-4 px-6 bg-primary text-white rounded-lg text-body font-semibold active:opacity-80"
             >
               계속하기
             </motion.button>

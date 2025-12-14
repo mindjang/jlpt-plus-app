@@ -45,7 +45,7 @@ export default function BlastGamePage() {
           </button>
           <div className="flex items-center gap-2">
             <Zap className="text-yellow-400" fill="currentColor" />
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent italic tracking-wider">
+            <h1 className="text-display-s font-bold bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent italic tracking-wider">
               WORD BLAST
             </h1>
             <Zap className="text-yellow-400" fill="currentColor" />
@@ -60,7 +60,7 @@ export default function BlastGamePage() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", bounce: 0.5 }}
-              className="inline-block px-4 py-1 rounded-full border-2 border-yellow-500/50 bg-yellow-500/20 text-yellow-400 text-xs font-mono mb-4"
+              className="inline-block px-4 py-1 rounded-full border-2 border-yellow-500/50 bg-yellow-500/20 text-yellow-400 text-label font-mono mb-4"
             >
               💥 COMBO MASTER MODE
             </motion.div>
@@ -90,7 +90,7 @@ export default function BlastGamePage() {
           <div className="w-full max-w-sm space-y-6">
             {/* Level Selector */}
             <div className="space-y-2">
-              <label className="text-xs font-bold text-yellow-400 uppercase tracking-widest pl-1">Level Select</label>
+              <label className="text-label font-semibold text-yellow-400 uppercase tracking-widest pl-1">Level Select</label>
               <div className="flex gap-2">
                 {(['N5', 'N4', 'N3', 'N2', 'N1'] as Level[]).map((lvl) => (
                   <button

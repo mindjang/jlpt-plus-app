@@ -81,7 +81,7 @@ const MenuItem = ({
 )
 
 const SectionTitle = ({ children }: { children: React.ReactNode }) => (
-  <h3 className="px-4 text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 mt-6">
+  <h3 className="px-4 text-label font-semibold text-gray-400 uppercase tracking-wider mb-2 mt-6">
     {children}
   </h3>
 )
@@ -319,10 +319,10 @@ function MyPageContent() {
           <div className="relative z-10">
             <div className="flex justify-between items-start mb-4">
               <div>
-                <h2 className={`text-lg font-bold ${isPremium ? 'text-white' : 'text-gray-900'}`}>
+                <h2 className={`text-subtitle font-semibold ${isPremium ? 'text-white' : 'text-gray-900'}`}>
                   {isPremium ? 'Mogu Premium' : '프리미엄 멤버십'}
                 </h2>
-                <p className={`text-sm mt-1 ${isPremium ? 'text-gray-400' : 'text-gray-500'}`}>
+                <p className={`text-label mt-1 ${isPremium ? 'text-gray-400' : 'text-gray-500'}`}>
                   {isPremium ? '무제한 학습을 즐기고 계시네요!' : '더 효과적인 학습을 시작해보세요'}
                 </p>
               </div>
@@ -336,7 +336,7 @@ function MyPageContent() {
             {isPremium ? (
               <div className="flex gap-2 mt-6">
                 <div className="flex-1 bg-white/10 rounded-lg p-3 backdrop-blur-sm relative overflow-hidden group">
-                  <div className="text-xs text-gray-400 flex items-center gap-1.5">
+                  <div className="text-label text-gray-400 flex items-center gap-1.5">
                     <Clock size={12} />
                     {isAutoRenewing ? '다음 결제일' : '이용 만료일'}
                   </div>
@@ -346,7 +346,7 @@ function MyPageContent() {
                 </div>
                 <button
                   onClick={() => setShowManageModal(true)}
-                  className="px-5 py-3 bg-white text-black rounded-lg text-sm font-bold active:bg-gray-100"
+                  className="px-4 py-3 bg-white text-black rounded-lg text-body font-medium active:bg-gray-100"
                 >
                   관리
                 </button>
@@ -359,7 +359,7 @@ function MyPageContent() {
                       setPaymentTab('subscription')
                       setShowPaymentModal(true)
                     }}
-                    className="flex-1 py-3 bg-black text-white rounded-lg text-sm font-bold active:opacity-80"
+                    className="flex-1 py-4 px-6 bg-black text-white rounded-lg text-body font-semibold active:opacity-80"
                   >
                     구독 시작하기
                   </button>
@@ -368,7 +368,7 @@ function MyPageContent() {
                       setPaymentTab('pass')
                       setShowPaymentModal(true)
                     }}
-                    className="flex-1 py-3 bg-gray-100 text-gray-900 rounded-lg text-sm font-bold active:bg-gray-200 border border-transparent"
+                    className="flex-1 py-4 px-6 bg-gray-100 text-gray-900 rounded-lg text-body font-semibold active:bg-gray-200 border border-transparent"
                   >
                     이용권 구매
                   </button>
@@ -425,7 +425,7 @@ function MyPageContent() {
           <div className="bg-surface w-full max-w-sm rounded-lg border border-divider p-6 relative animate-in fade-in zoom-in-95 duration-200">
             <button onClick={() => setShowDailyTargetModal(false)} className="absolute right-5 top-5 text-gray-400 active:text-gray-900">✕</button>
             <div className="text-center mb-6 mt-1">
-              <h2 className="text-xl font-bold text-text-main">일일 목표 설정</h2>
+              <h2 className="text-title font-semibold text-text-main">일일 목표 설정</h2>
               <p className="text-body text-text-sub mt-1">자동 학습 목표를 조절하세요 (5~40, 5개 단위)</p>
             </div>
             <div className="flex items-center justify-center gap-4 mb-6">
@@ -447,7 +447,7 @@ function MyPageContent() {
               <button
                 onClick={handleSaveDailyTarget}
                 disabled={dailyTargetSaving}
-                className="flex-1 py-3 rounded-lg bg-black text-white font-semibold disabled:opacity-60"
+                className="flex-1 py-3 px-4 rounded-lg bg-black text-white text-body font-semibold disabled:opacity-60"
               >
                 {dailyTargetSaving ? '저장 중...' : '저장'}
               </button>
@@ -476,7 +476,7 @@ function MyPageContent() {
             <div className="bg-gray-50 rounded-lg p-5 mb-6 border border-gray-100">
               <div className="flex justify-between items-center mb-3">
                 <span className="text-sm text-gray-500">현재 상태</span>
-                <span className="text-sm font-bold text-black flex items-center gap-1">
+                <span className="text-body font-semibold text-black flex items-center gap-1">
                   {isAutoRenewing ? <div className="w-2 h-2 rounded-full bg-green-500" /> : <div className="w-2 h-2 rounded-full bg-blue-500" />}
                   {isAutoRenewing ? '정기 구독 중' : '기간 이용권 사용 중'}
                 </span>
@@ -505,7 +505,7 @@ function MyPageContent() {
                       setShowPaymentModal(true)
                       setPaymentTab('subscription')
                     }}
-                    className="w-full py-4 rounded-lg bg-white border border-gray-200 text-gray-900 font-bold active:bg-gray-50 text-sm"
+                    className="w-full py-4 px-6 rounded-lg bg-white border border-gray-200 text-gray-900 text-body font-semibold active:bg-gray-50"
                   >
                     새 결제 수단으로 재구독
                   </button>
@@ -534,7 +534,7 @@ function MyPageContent() {
             {/* Header */}
             <div className="p-6 pb-2 shrink-0">
               <div className="flex justify-between items-center mb-2">
-                <h2 className="text-2xl font-black text-gray-900">Premium Plan</h2>
+                <h2 className="text-display-s font-black text-gray-900">Premium Plan</h2>
                 <button onClick={() => setShowPaymentModal(false)} className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 active:bg-gray-200 text-gray-500">✕</button>
               </div>
               <div className="flex items-center gap-2">
@@ -557,7 +557,7 @@ function MyPageContent() {
                 </button>
                 <button
                   onClick={() => setPaymentTab('pass')}
-                  className={`flex-1 py-3 rounded-lg text-sm font-bold ${paymentTab === 'pass' ? 'bg-white text-black' : 'text-gray-400'}`}
+                  className={`flex-1 py-3 px-4 rounded-lg text-body font-medium ${paymentTab === 'pass' ? 'bg-white text-black' : 'text-gray-400'}`}
                 >
                   기간 이용권
                 </button>
@@ -588,7 +588,7 @@ function MyPageContent() {
                       <span className="font-bold text-lg text-gray-900">연간 구독</span>
                       <span className="bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded-full">2개월 무료</span>
                     </div>
-                    <div className="text-3xl font-black text-gray-900 mb-1">₩99,000<span className="text-sm font-medium text-gray-400 ml-1">/년</span></div>
+                    <div className="text-display-s font-black text-gray-900 mb-1">₩99,000<span className="text-label font-medium text-gray-400 ml-1">/년</span></div>
                     <p className="text-xs text-gray-500">1년마다 자동 결제, 17% 할인 효과</p>
                   </div>
                 </>
@@ -631,7 +631,7 @@ function MyPageContent() {
                       setShowPaymentModal(false)
                     }}
                     disabled={!selectedPlanId || payment.payLoading !== null}
-                    className="w-full py-4 rounded-lg bg-black text-white font-bold text-base active:opacity-80 disabled:opacity-50"
+                    className="w-full py-4 px-6 rounded-lg bg-black text-white text-body font-semibold active:opacity-80 disabled:opacity-50"
                   >
                     {payment.payLoading ? '처리 중...' : '카드 결제하기'}
                   </button>
@@ -653,7 +653,7 @@ function MyPageContent() {
                     if (!selectedPlanId) return alert('이용권을 선택해주세요.')
                     handlePlaceholderPayment(selectedPlanId)
                   }}
-                  className="w-full py-4 rounded-lg bg-black text-white font-bold text-base active:opacity-80"
+                  className="w-full py-4 px-6 rounded-lg bg-black text-white text-body font-semibold active:opacity-80"
                 >
                   {selectedPlanId ? '이용권 구매하기' : '상품을 선택해주세요'}
                 </button>
@@ -698,7 +698,7 @@ function MyPageContent() {
               <div className="text-center"><div className="w-12 h-12 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-4"><Gift size={24} /></div><h3 className="text-lg font-bold text-gray-900">쿠폰 등록</h3><p className="text-sm text-gray-500 mt-1">가지고 계신 코드를 입력해주세요.</p></div>
               <input value={redeemCodeInput} onChange={(e) => setRedeemCodeInput(e.target.value)} placeholder="ABCD-1234" className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-4 text-center font-mono font-bold text-lg focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all uppercase" />
               {redeemMessage && (<div className={`text-xs text-center font-medium ${redeemMessage.includes('적용') ? 'text-green-600' : 'text-red-500'}`}>{redeemMessage}</div>)}
-              <div className="flex gap-2 pt-2"><button onClick={() => setShowRedeemConfirm(false)} className="flex-1 py-3.5 rounded-lg bg-gray-100 text-gray-900 font-bold active:bg-gray-200">취소</button><button onClick={handleRedeemCode} disabled={redeemLoading} className="flex-1 py-3.5 rounded-lg bg-black text-white font-bold active:opacity-80 disabled:opacity-50">{redeemLoading ? '등록 중...' : '등록하기'}</button></div>
+              <div className="flex gap-2 pt-2"><button onClick={() => setShowRedeemConfirm(false)} className="flex-1 py-3 px-4 rounded-lg bg-gray-100 text-gray-900 text-body font-medium active:bg-gray-200">취소</button><button onClick={handleRedeemCode} disabled={redeemLoading} className="flex-1 py-4 px-6 rounded-lg bg-black text-white text-body font-semibold active:opacity-80 disabled:opacity-50">{redeemLoading ? '등록 중...' : '등록하기'}</button></div>
             </div>
           </div>
         </div>

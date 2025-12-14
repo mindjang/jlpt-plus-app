@@ -65,7 +65,7 @@ export default function MatchGamePage() {
           </button>
           <div className="flex items-center gap-2">
             <Brain className="text-pink-300" size={28} />
-            <h1 className="text-2xl font-bold text-white italic tracking-wider">
+            <h1 className="text-display-s font-bold text-white italic tracking-wider">
               WORD MATCH
             </h1>
             <Brain className="text-pink-300" size={28} />
@@ -110,7 +110,7 @@ export default function MatchGamePage() {
           <div className="w-full max-w-sm space-y-6">
             {/* Difficulty Selector */}
             <div className="space-y-2">
-              <label className="text-xs font-bold text-pink-300 uppercase tracking-widest pl-1">난이도</label>
+              <label className="text-label font-semibold text-pink-300 uppercase tracking-widest pl-1">난이도</label>
               <div className="grid grid-cols-3 gap-2">
                 {(['easy', 'medium', 'hard'] as const).map((diff) => (
                   <button

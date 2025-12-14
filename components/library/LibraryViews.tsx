@@ -61,14 +61,14 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                     {level}
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="font-bold text-text-main text-lg">
+                                    <span className="font-semibold text-text-main text-subtitle">
                                         {level === 'N5' ? '입문 단계' :
                                             level === 'N4' ? '기본 단계' :
                                                 level === 'N3' ? '응용 단계' :
                                                     level === 'N2' ? '심화 단계' : '완성 단계'}
                                     </span>
                                     {!isExpanded && (
-                                        <span className="text-xs text-text-sub opacity-70">클릭해서 펼치기</span>
+                                        <span className="text-label text-text-sub opacity-70">클릭해서 펼치기</span>
                                     )}
                                 </div>
                             </div>
@@ -90,7 +90,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                     className="absolute top-[72px] left-0 right-0 bottom-0 p-6 flex flex-col justify-end"
                                 >
                                     <div className="space-y-3">
-                                        <p className="text-text-sub text-sm mb-4 leading-relaxed opacity-80">
+                                        <p className="text-text-sub text-label mb-4 leading-relaxed opacity-80">
                                             꾸준함이 실력이 됩니다. 오늘 배울 내용을 선택해주세요.
                                         </p>
 
@@ -115,8 +115,8 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                                     <Book size={20} />
                                                 </div>
                                                 <div className="text-center">
-                                                    <span className={`block text-sm font-bold text-text-main ${!isEnabled(level, 'word') && 'opacity-50'}`}>단어장</span>
-                                                    <span className="text-xs text-text-sub">{data.words}개</span>
+                                                    <span className={`block text-body font-semibold text-text-main ${!isEnabled(level, 'word') && 'opacity-50'}`}>단어장</span>
+                                                    <span className="text-label text-text-sub">{data.words}개</span>
                                                 </div>
                                             </button>
 
@@ -140,8 +140,8 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                                     <Type size={20} />
                                                 </div>
                                                 <div className="text-center">
-                                                    <span className={`block text-sm font-bold text-text-main ${!isEnabled(level, 'kanji') && 'opacity-50'}`}>한자 암기</span>
-                                                    <span className="text-xs text-text-sub">{data.kanji}개</span>
+                                                    <span className={`block text-body font-semibold text-text-main ${!isEnabled(level, 'kanji') && 'opacity-50'}`}>한자 암기</span>
+                                                    <span className="text-label text-text-sub">{data.kanji}개</span>
                                                 </div>
                                             </button>
                                         </div>
@@ -196,7 +196,7 @@ export const MinimalContentView: React.FC<ViewProps> = ({ onNavigate }) => {
                         className={`flex items-center py-4 border-b border-gray-100 group ${enabled ? 'cursor-pointer active:bg-gray-50' : 'opacity-50 cursor-not-allowed bg-gray-50/50'
                             }`}
                     >
-                        <div className={`w-12 text-lg font-black transition-colors ${getTextColorClass(item.level)}`}>
+                        <div className={`w-12 text-subtitle font-black transition-colors ${getTextColorClass(item.level)}`}>
                             {item.level}
                         </div>
                         <div className="flex-1">
@@ -204,7 +204,7 @@ export const MinimalContentView: React.FC<ViewProps> = ({ onNavigate }) => {
                                 {item.type === 'word' ? 'Vocabulary' : 'Kanji'}
                                 {!enabled && <span className="text-[10px] bg-gray-200 text-gray-500 px-1.5 py-0.5 rounded">곧 출시</span>}
                             </div>
-                            <div className="text-xs text-gray-400 font-mono mt-0.5">
+                            <div className="text-label text-gray-400 font-mono mt-0.5">
                                 {count} CARDS
                             </div>
                         </div>

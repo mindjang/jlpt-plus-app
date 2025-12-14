@@ -73,7 +73,7 @@ export function AdminUsers() {
                   <td className="py-3 px-4">
                     <button
                       onClick={() => copyToClipboard(user.uid || '')}
-                      className="text-xs text-text-sub bg-gray-100 px-2 py-1 rounded active:bg-gray-200"
+                      className="text-label text-text-sub bg-gray-100 px-2 py-1 rounded active:bg-gray-200"
                       title="UID 복사"
                     >
                       복사

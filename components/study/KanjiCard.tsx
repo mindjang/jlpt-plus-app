@@ -98,7 +98,7 @@ export function KanjiCard({
         {/* NEW 라벨 */}
         {isNew && (
           <div className="absolute top-4 left-4">
-            <span className="text-xs tracking-tighter font-medium text-blue-500 bg-blue-100 px-3 py-1 rounded-full">
+            <span className="text-label tracking-tighter font-medium text-blue-500 bg-blue-100 px-3 py-1 rounded-full">
               New
             </span>
           </div>
@@ -244,11 +244,11 @@ export function KanjiCard({
                     >
                       <LevelChip level={wordLevel} />
                       <div className="flex items-center gap-2 flex-1">
-                        {word.kanji && <span className="text-sm text-jp font-medium text-text-main whitespace-nowrap" dangerouslySetInnerHTML={{ __html: word.kanji.split("·")[0] }}></span>}
-                        {showReadings && <span className="text-xs text-jp text-text-sub whitespace-nowrap">{word.entry}</span>}
+                        {word.kanji && <span className="text-body text-jp font-medium text-text-main whitespace-nowrap" dangerouslySetInnerHTML={{ __html: word.kanji.split("·")[0] }}></span>}
+                        {showReadings && <span className="text-label text-jp text-text-sub whitespace-nowrap">{word.entry}</span>}
                       </div>
                       {showMeaning && firstMean && (
-                        <span className="text-xs text-text-sub text-right">
+                        <span className="text-label text-text-sub text-right">
                           {firstMean}
                         </span>
                       )}

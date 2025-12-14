@@ -46,14 +46,14 @@ export function ConfirmModal({
           <button
             onClick={onClose}
             disabled={loading}
-            className="flex-1 py-3 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-100 disabled:opacity-50"
+            className="flex-1 py-3 px-4 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-100 disabled:opacity-50"
           >
             {cancelText}
           </button>
           <button
             onClick={handleConfirm}
             disabled={loading}
-            className={`flex-1 py-3 rounded-lg text-body font-medium active:opacity-80 disabled:opacity-50 ${
+            className={`flex-1 py-3 px-4 rounded-lg text-body font-medium active:opacity-80 disabled:opacity-50 ${
               confirmButtonColor === 'danger'
                 ? 'bg-red-500 text-surface'
                 : 'bg-primary text-surface'

@@ -65,7 +65,7 @@ export function SessionCompleteModal({
 
         <button
           onClick={handleClose}
-          className="w-full py-4 px-4 rounded-lg bg-primary text-white text-body font-medium active:opacity-80"
+          className="w-full py-4 px-6 rounded-lg bg-primary text-white text-body font-semibold active:opacity-80"
         >
           이전 화면으로 돌아가기
         </button>

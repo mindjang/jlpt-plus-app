@@ -169,7 +169,7 @@ export function AdminCoupons() {
             handleGenerateCode()
             setShowCreateModal(true)
           }}
-          className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg active:opacity-80 text-sm font-bold"
+          className="flex items-center gap-2 px-4 py-3 bg-primary text-white rounded-lg active:opacity-80 text-body font-semibold"
         >
           <Plus size={16} />
           <span>코드 생성</span>
@@ -222,7 +222,7 @@ export function AdminCoupons() {
       <Modal isOpen={showCreateModal} onClose={() => setShowCreateModal(false)} title="새 쿠폰 코드 생성">
         <div className="space-y-4">
           <div>
-            <label className="block text-xs font-semibold text-text-sub mb-1">생성 방식</label>
+            <label className="block text-label font-semibold text-text-sub mb-1">생성 방식</label>
             <div className="flex gap-2">
               <button onClick={() => { setGenerationMode('auto'); handleGenerateCode(); }} className={`flex-1 py-2 rounded text-sm ${generationMode === 'auto' ? 'bg-primary text-white' : 'bg-gray-100 text-text-sub'}`}>자동 생성</button>
               <button onClick={() => { setGenerationMode('manual'); setNewCode(''); }} className={`flex-1 py-2 rounded text-sm ${generationMode === 'manual' ? 'bg-primary text-white' : 'bg-gray-100 text-text-sub'}`}>직접 입력</button>
@@ -269,7 +269,7 @@ export function AdminCoupons() {
             <input type="text" value={note} onChange={e => setNote(e.target.value)} className="w-full px-3 py-2 border border-divider rounded" placeholder="메모..." />
           </div>
 
-          <button onClick={handleCreateCode} disabled={creating} className="w-full py-3 bg-primary text-white rounded font-bold active:opacity-80 disabled:opacity-50">
+          <button onClick={handleCreateCode} disabled={creating} className="w-full py-3 px-4 bg-primary text-white rounded-lg text-body font-semibold active:opacity-80 disabled:opacity-50">
             {creating ? '생성 중...' : '코드 생성하기'}
           </button>
         </div>
@@ -279,7 +279,7 @@ export function AdminCoupons() {
       <Modal isOpen={!!editingCode} onClose={() => setEditingCode(null)} title="코드 수정">
         {editingCode && (
           <div className="space-y-4">
-            <div className="p-3 bg-gray-50 rounded font-mono text-center text-lg font-bold">{formatCode(editingCode.code)}</div>
+            <div className="p-3 bg-gray-50 rounded font-mono text-center text-subtitle font-bold">{formatCode(editingCode.code)}</div>
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="block text-xs font-semibold text-text-sub mb-1">혜택 기간 (일)</label>
@@ -300,7 +300,7 @@ export function AdminCoupons() {
               <label className="block text-xs font-semibold text-text-sub mb-1">비고</label>
               <input type="text" value={editNote} onChange={e => setEditNote(e.target.value)} className="w-full px-3 py-2 border border-divider rounded" />
             </div>
-            <button onClick={handleUpdateCode} disabled={updating} className="w-full py-3 bg-primary text-white rounded font-bold active:opacity-80 disabled:opacity-50">
+            <button onClick={handleUpdateCode} disabled={updating} className="w-full py-3 px-4 bg-primary text-white rounded-lg text-body font-semibold active:opacity-80 disabled:opacity-50">
               {updating ? '수정 중...' : '수정 완료'}
             </button>
           </div>

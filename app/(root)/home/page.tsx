@@ -95,7 +95,7 @@ export default function HomePage() {
           className="flex items-start justify-between"
         >
           <div>
-            <motion.p variants={itemVariants} className="text-text-sub text-sm font-medium">{getGreeting()}</motion.p>
+            <motion.p variants={itemVariants} className="text-text-sub text-label font-medium">{getGreeting()}</motion.p>
             <motion.h1 variants={itemVariants} className="text-3xl font-bold text-text-main mt-1">
               {user ? `${userName}님.` : '환영합니다!'}
             </motion.h1>
@@ -124,13 +124,13 @@ export default function HomePage() {
                 <div className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-bold mb-4 border border-white/30">
                   무료 체험
                 </div>
-                <h2 className="text-3xl font-bold mb-2">3분 맛보기</h2>
+                <h2 className="text-display-s font-bold mb-2">3분 맛보기</h2>
                 <p className="opacity-90 mb-8 max-w-[80%]">
                   로그인 없이 바로 학습을 시작해보세요. N5 단어 5개를 무료로 체험할 수 있습니다.
                 </p>
                 <button
                   onClick={() => router.push('/acquire/auto-study/n5?taste=true')}
-                  className="w-full py-4 bg-white text-purple-600 rounded-lg font-bold active:opacity-80 flex items-center justify-center gap-2"
+                  className="w-full py-4 px-6 bg-white text-purple-600 rounded-lg text-body font-semibold active:opacity-80 flex items-center justify-center gap-2"
                 >
                   <Play size={20} fill="currentColor" />
                   지금 바로 체험하기
@@ -147,7 +147,7 @@ export default function HomePage() {
                 <div className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-bold mb-4 border border-white/30">
                   우선순위
                 </div>
-                <h2 className="text-3xl font-bold mb-2">복습 필요</h2>
+                <h2 className="text-display-s font-bold mb-2">복습 필요</h2>
                 <p className="opacity-90 mb-8 max-w-[70%]">
                   현재 <strong className="text-xl mx-1 border-b-2 border-white">{reviewDueCount}</strong> 개의 카드가 복습을 기다리고 있습니다.
                 </p>
@@ -170,13 +170,13 @@ export default function HomePage() {
                 <div className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-bold mb-4 border border-white/30">
                   {userLevel} 목표
                 </div>
-                <h2 className="text-3xl font-bold mb-2">새로운 학습</h2>
+                <h2 className="text-display-s font-bold mb-2">새로운 학습</h2>
                 <p className="opacity-90 mb-8 max-w-[70%]">
                   복습이 완료되었습니다! 새로운 내용을 배워볼까요?
                 </p>
                 <button
                   onClick={handleStartNew}
-                  className="w-full py-4 bg-white text-blue-600 rounded-lg font-bold active:opacity-80 flex items-center justify-center gap-2"
+                  className="w-full py-4 px-6 bg-white text-blue-600 rounded-lg text-body font-semibold active:opacity-80 flex items-center justify-center gap-2"
                 >
                   <BookOpen size={20} />
                   {userLevel} 학습 시작
@@ -194,7 +194,7 @@ export default function HomePage() {
           className="space-y-4"
         >
           <div className="flex items-center justify-between px-1">
-            <h3 className="text-lg font-bold text-text-main">빠른 실행</h3>
+            <h3 className="text-title font-semibold text-text-main">빠른 실행</h3>
             <span className="text-xs text-text-sub bg-surface px-2 py-1 rounded-full border border-divider">
               목표: {userLevel}
             </span>
@@ -219,7 +219,7 @@ export default function HomePage() {
               <div className="p-3 bg-purple-50 text-purple-500 rounded-lg w-fit mb-3">
                 <Brain size={24} />
               </div>
-              <h4 className="font-bold text-text-main text-lg">일일 퀴즈</h4>
+              <h4 className="font-semibold text-text-main text-subtitle">일일 퀴즈</h4>
               <p className="text-text-sub text-xs mt-1">실력 테스트</p>
             </button>
 
@@ -232,7 +232,7 @@ export default function HomePage() {
                   <TrendingUp size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-text-main">학습 통계</h4>
+                  <h4 className="font-semibold text-text-main text-subtitle">학습 통계</h4>
                   <p className="text-text-sub text-xs">나의 학습 현황 확인하기</p>
                 </div>
               </div>

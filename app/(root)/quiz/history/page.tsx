@@ -85,7 +85,7 @@ export default function QuizHistoryPage() {
             </p>
             <button
               onClick={() => router.push('/quiz')}
-              className="px-6 py-3 bg-primary text-white rounded-lg text-body font-semibold active:opacity-80"
+              className="px-6 py-4 bg-primary text-white rounded-lg text-body font-semibold active:opacity-80"
             >
               퀴즈 시작하기
             </button>

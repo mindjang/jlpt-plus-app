@@ -194,7 +194,7 @@ export default function AutoStudyPage() {
                     `/practice/learn?level=${params.level}&type=${activeTab}&limit=${targetAmount}&done=${sessionProgress}`
                   )
                 }
-                className="w-full py-3 rounded-lg bg-primary text-surface text-subtitle font-semibold active:opacity-80"
+                className="w-full py-4 px-6 rounded-lg bg-primary text-surface text-body font-semibold active:opacity-80"
               >
                 {sessionProgress === 0 ? '학습하기' : '이어서 학습하기'}
               </button>

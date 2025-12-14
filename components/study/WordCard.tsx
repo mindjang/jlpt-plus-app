@@ -135,7 +135,7 @@ export function WordCard({
         {/* NEW 라벨 */}
         {isNew && (
           <div className="absolute top-4 left-4">
-            <span className="text-xs tracking-tighter font-medium text-blue-500 bg-blue-100 px-3 py-1 rounded-full">
+            <span className="text-label tracking-tighter font-medium text-blue-500 bg-blue-100 px-3 py-1 rounded-full">
               New
             </span>
           </div>

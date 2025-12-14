@@ -67,7 +67,7 @@ export default function FlashGamePage() {
           </button>
           <div className="flex items-center gap-2">
             <Zap className="text-yellow-400 animate-pulse" fill="currentColor" size={28} />
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent italic tracking-wider">
+            <h1 className="text-display-s font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent italic tracking-wider">
               FLASH QUIZ
             </h1>
             <Zap className="text-yellow-400 animate-pulse" fill="currentColor" size={28} />
@@ -82,7 +82,7 @@ export default function FlashGamePage() {
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ type: "spring", bounce: 0.6 }}
-              className="inline-block px-4 py-1 rounded-full border-2 border-cyan-500/50 bg-cyan-500/20 text-cyan-400 text-xs font-mono mb-4"
+              className="inline-block px-4 py-1 rounded-full border-2 border-cyan-500/50 bg-cyan-500/20 text-cyan-400 text-label font-mono mb-4"
             >
               ⚡ SPEED MODE
             </motion.div>
@@ -112,7 +112,7 @@ export default function FlashGamePage() {
           <div className="w-full max-w-sm space-y-6">
             {/* Level Selector */}
             <div className="space-y-2">
-              <label className="text-xs font-bold text-cyan-400 uppercase tracking-widest pl-1">Level Select</label>
+              <label className="text-label font-semibold text-cyan-400 uppercase tracking-widest pl-1">Level Select</label>
               <div className="flex gap-2">
                 {(['N5', 'N4', 'N3', 'N2', 'N1'] as Level[]).map((lvl) => (
                   <button

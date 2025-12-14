@@ -168,7 +168,7 @@ export function BlastGameContainer({ level, mode, onExit }: BlastGameContainerPr
               key={idx}
               whileTap={{ scale: 0.9 }}
               onClick={() => handleOptionClick(option)}
-              className="px-2 py-4 bg-gradient-to-br from-purple-600/80 to-pink-600/80 backdrop-blur-md border border-white/30 rounded-lg font-bold text-white active:bg-yellow-500"
+              className="px-4 py-4 bg-gradient-to-br from-purple-600/80 to-pink-600/80 backdrop-blur-md border border-white/30 rounded-lg text-body font-semibold text-white active:bg-yellow-500"
             >
               {option.split(',')[0]}
             </motion.button>
@@ -208,7 +208,7 @@ export function BlastGameContainer({ level, mode, onExit }: BlastGameContainerPr
             <div className="space-y-3">
               <button
                 onClick={restartGame}
-                className="w-full py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg font-bold flex items-center justify-center gap-2 active:opacity-80"
+                className="w-full py-3 px-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg text-body font-semibold flex items-center justify-center gap-2 active:opacity-80"
               >
                 <RotateCcw size={20} />
                 RESTART

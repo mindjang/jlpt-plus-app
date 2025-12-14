@@ -143,7 +143,7 @@ export function FlashGameContainer({ level, mode, onExit }: FlashGameContainerPr
                 transition={{ delay: idx * 0.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => handleAnswer(option)}
-                className="px-4 py-5 bg-gradient-to-br from-blue-600/80 to-purple-600/80 backdrop-blur-md border border-white/30 rounded-lg font-bold text-white text-lg active:bg-cyan-500"
+                className="px-4 py-4 bg-gradient-to-br from-blue-600/80 to-purple-600/80 backdrop-blur-md border border-white/30 rounded-lg text-body font-semibold text-white active:bg-cyan-500"
               >
                 {option.split(',')[0]}
               </motion.button>
@@ -184,7 +184,7 @@ export function FlashGameContainer({ level, mode, onExit }: FlashGameContainerPr
             <div className="space-y-3">
               <button
                 onClick={restartGame}
-                className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-bold flex items-center justify-center gap-2 active:opacity-80"
+                className="w-full py-3 px-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg text-body font-semibold flex items-center justify-center gap-2 active:opacity-80"
               >
                 <RotateCcw size={20} />
                 RESTART

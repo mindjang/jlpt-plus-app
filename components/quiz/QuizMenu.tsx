@@ -111,20 +111,20 @@ export function QuizMenu({ userLevel, allStats, onStartQuiz }: QuizMenuProps) {
         {/* 퀴즈 시작 - 메인 버튼 */}
         <button
           onClick={onStartQuiz}
-          className="w-full py-6 bg-primary text-white rounded-lg active:opacity-80 flex items-center justify-center gap-3"
+          className="w-full py-4 px-6 bg-primary text-white rounded-lg active:opacity-80 flex items-center justify-center gap-3"
         >
           <FontAwesomeIcon
             icon={faPlay}
             className="text-2xl"
           />
-          <span className="text-title font-bold">퀴즈 시작하기</span>
+          <span className="text-body font-semibold">퀴즈 시작하기</span>
         </button>
 
         {/* 서브 메뉴 */}
         <div className="grid grid-cols-3 gap-3">
           <button
             onClick={() => router.push('/quiz/history')}
-            className="py-4 bg-surface border border-divider rounded-lg active:bg-gray-50 flex flex-col items-center justify-center gap-2"
+            className="py-3 px-4 bg-surface border border-divider rounded-lg active:bg-gray-50 flex flex-col items-center justify-center gap-2"
           >
             <FontAwesomeIcon icon={faHistory} className="text-xl text-primary" />
             <span className="text-label font-medium text-text-main">히스토리</span>
@@ -132,7 +132,7 @@ export function QuizMenu({ userLevel, allStats, onStartQuiz }: QuizMenuProps) {
 
           <button
             onClick={() => router.push('/quiz/badges')}
-            className="py-4 bg-surface border border-divider rounded-lg active:bg-gray-50 flex flex-col items-center justify-center gap-2"
+            className="py-3 px-4 bg-surface border border-divider rounded-lg active:bg-gray-50 flex flex-col items-center justify-center gap-2"
           >
             <FontAwesomeIcon icon={faTrophy} className="text-xl text-yellow-600" />
             <span className="text-label font-medium text-text-main">배지</span>
@@ -140,7 +140,7 @@ export function QuizMenu({ userLevel, allStats, onStartQuiz }: QuizMenuProps) {
 
           <button
             onClick={() => router.push('/quiz/stats')}
-            className="py-4 bg-surface border border-divider rounded-lg active:bg-gray-50 flex flex-col items-center justify-center gap-2"
+            className="py-3 px-4 bg-surface border border-divider rounded-lg active:bg-gray-50 flex flex-col items-center justify-center gap-2"
           >
             <FontAwesomeIcon icon={faChartLine} className="text-xl text-green-600" />
             <span className="text-label font-medium text-text-main">통계</span>

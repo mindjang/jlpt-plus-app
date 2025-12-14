@@ -124,7 +124,7 @@ export function AutoStudyCard({
               `/practice/learn?level=${level}&type=${activeTab}&limit=${targetAmount}&done=${sessionProgress}`
             )
           }
-          className="w-full py-3 rounded-lg bg-primary text-surface text-subtitle font-semibold active:opacity-80"
+          className="w-full py-4 px-6 rounded-lg bg-primary text-surface text-body font-semibold active:opacity-80"
           disabled={sessionTotal === 0}
         >
           {getButtonLabel()}

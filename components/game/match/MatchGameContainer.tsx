@@ -158,20 +158,20 @@ export function MatchGameContainer({ level, mode, difficulty, onExit }: MatchGam
             <div className="space-y-3">
               <button
                 onClick={togglePause}
-                className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-bold active:opacity-80"
+                className="w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg text-body font-semibold active:opacity-80"
               >
                 계속하기
               </button>
               <button
                 onClick={restartGame}
-                className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-bold flex items-center justify-center gap-2 active:opacity-80"
+                className="w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg text-body font-semibold flex items-center justify-center gap-2 active:opacity-80"
               >
                 <RotateCcw size={20} />
                 다시 하기
               </button>
               <button
                 onClick={onExit}
-                className="w-full py-3 bg-gray-200 active:bg-gray-300 text-gray-700 rounded-lg font-bold"
+                className="w-full py-3 px-4 bg-gray-200 active:bg-gray-300 text-gray-700 rounded-lg text-body font-semibold"
               >
                 메뉴로
               </button>
@@ -216,14 +216,14 @@ export function MatchGameContainer({ level, mode, difficulty, onExit }: MatchGam
             <div className="space-y-3">
               <button
                 onClick={restartGame}
-                className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-bold flex items-center justify-center gap-2 active:opacity-80"
+                className="w-full py-3 px-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg text-body font-semibold flex items-center justify-center gap-2 active:opacity-80"
               >
                 <RotateCcw size={20} />
                 다시 하기
               </button>
               <button
                 onClick={onExit}
-                className="w-full py-3 bg-gray-200 active:bg-gray-300 text-gray-700 rounded-lg font-bold"
+                className="w-full py-3 px-4 bg-gray-200 active:bg-gray-300 text-gray-700 rounded-lg text-body font-semibold"
               >
                 메뉴로
               </button>

@@ -71,16 +71,16 @@ export function ContentViewer({ isOpen, onClose, level, type }: ContentViewerPro
           {filteredItems.slice(0, 100).map((item) => (
             <div key={item.id} className="p-3 bg-page border border-divider rounded-lg flex justify-between items-center">
               <div>
-                <div className="text-lg font-bold text-text-main">{item.main}</div>
-                {item.extra && <div className="text-xs text-text-sub">{item.extra}</div>}
+                <div className="text-subtitle font-semibold text-text-main">{item.main}</div>
+                {item.extra && <div className="text-label text-text-sub">{item.extra}</div>}
               </div>
-              <div className="text-sm text-text-main text-right max-w-[50%]">
+              <div className="text-body text-text-main text-right max-w-[50%]">
                 {item.sub}
               </div>
             </div>
           ))}
           {filteredItems.length > 100 && (
-            <div className="text-center text-xs text-text-sub py-2">
+            <div className="text-center text-label text-text-sub py-2">
               ... 외 {filteredItems.length - 100}개 항목 (검색하여 확인하세요)
             </div>
           )}
@@ -91,12 +91,12 @@ export function ContentViewer({ isOpen, onClose, level, type }: ContentViewerPro
           )}
         </div>
 
-        <div className="bg-yellow-50 text-orange-800 p-3 rounded text-xs">
+        <div className="bg-yellow-50 text-orange-800 p-3 rounded text-label">
           * 현재 콘텐츠는 파일 시스템에 저장되어 있어 관리자 페이지에서 직접 수정할 수 없습니다. 수정이 필요한 경우 개발자에게 문의하세요.
         </div>
 
         <div className="flex justify-end pt-2">
-          <button onClick={onClose} className="px-4 py-2 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-50">닫기</button>
+          <button onClick={onClose} className="px-4 py-3 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-50">닫기</button>
         </div>
       </div>
     </Modal>

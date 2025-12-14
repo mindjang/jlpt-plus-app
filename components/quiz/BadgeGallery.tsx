@@ -99,7 +99,7 @@ export function BadgeGallery({
 
             {/* 레어도 */}
             <div className="text-center">
-              <span className="text-xs px-2 py-1 rounded-full bg-white bg-opacity-50">
+              <span className="text-label px-2 py-1 rounded-full bg-white bg-opacity-50">
                 {getRarityLabel(badge.rarity)}
               </span>
             </div>
@@ -113,7 +113,7 @@ export function BadgeGallery({
                     style={{ width: `${progress * 100}%` }}
                   />
                 </div>
-                <div className="text-center text-xs text-text-sub mt-1">
+                <div className="text-center text-label text-text-sub mt-1">
                   {Math.round(progress * 100)}%
                 </div>
               </div>

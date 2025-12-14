@@ -110,7 +110,7 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
                       // 업그레이드 페이지로 이동
                       onClose()
                     }}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-purple-100 to-purple-200 text-purple-700 active:opacity-80"
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-purple-100 to-purple-200 text-purple-700 text-body font-medium active:opacity-80"
                   >
                     <span className="text-body">🔒</span>
                     <span className="text-body font-medium">유료 버전으로 업그레이드</span>

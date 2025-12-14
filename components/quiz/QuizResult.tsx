@@ -61,7 +61,7 @@ export function QuizResultScreen({
             className="mb-6"
           >
             <div className="inline-block text-6xl mb-4">{gradeInfo.emoji}</div>
-            <div className={`text-2xl font-black mb-2 ${gradeInfo.color === 'text-yellow-600' ? 'text-yellow-100' : gradeInfo.color === 'text-purple-600' ? 'text-purple-100' : gradeInfo.color === 'text-green-600' ? 'text-green-100' : 'text-gray-100'}`}>
+            <div className={`text-title font-black mb-2 ${gradeInfo.color === 'text-yellow-600' ? 'text-yellow-100' : gradeInfo.color === 'text-purple-600' ? 'text-purple-100' : gradeInfo.color === 'text-green-600' ? 'text-green-100' : 'text-gray-100'}`}>
               {gradeInfo.text}
             </div>
           </motion.div>
@@ -76,7 +76,7 @@ export function QuizResultScreen({
             <div className="text-7xl font-black mb-2">
               {result.score}
             </div>
-            <div className="text-xl font-semibold opacity-90">점</div>
+            <div className="text-subtitle font-semibold opacity-90">점</div>
           </motion.div>
           
           {/* 정답률 */}
@@ -86,7 +86,7 @@ export function QuizResultScreen({
             transition={{ delay: 0.5 }}
             className="mt-6"
           >
-            <div className="text-2xl font-bold mb-1">
+            <div className="text-title font-bold mb-1">
               {result.correctCount} / {result.totalQuestions}
             </div>
             <div className="text-lg opacity-90">정답</div>
@@ -111,8 +111,8 @@ export function QuizResultScreen({
               className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-4 text-center"
             >
               <Zap className="w-6 h-6 mx-auto mb-2 text-green-600" />
-              <div className="text-xs text-gray-600 mb-1 font-medium">경험치</div>
-              <div className="text-lg font-black text-green-700">
+              <div className="text-label text-gray-600 mb-1 font-medium">경험치</div>
+              <div className="text-subtitle font-black text-green-700">
                 +{result.expGained}
               </div>
             </motion.div>
@@ -124,8 +124,8 @@ export function QuizResultScreen({
               className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-4 text-center"
             >
               <Clock className="w-6 h-6 mx-auto mb-2 text-blue-600" />
-              <div className="text-xs text-gray-600 mb-1 font-medium">평균 시간</div>
-              <div className="text-lg font-black text-blue-700">
+              <div className="text-label text-gray-600 mb-1 font-medium">평균 시간</div>
+              <div className="text-subtitle font-black text-blue-700">
                 {(result.averageTimePerQuestion / 1000).toFixed(1)}초
               </div>
             </motion.div>
@@ -137,8 +137,8 @@ export function QuizResultScreen({
               className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-4 text-center"
             >
               <Target className="w-6 h-6 mx-auto mb-2 text-purple-600" />
-              <div className="text-xs text-gray-600 mb-1 font-medium">정확도</div>
-              <div className="text-lg font-black text-purple-700">
+              <div className="text-label text-gray-600 mb-1 font-medium">정확도</div>
+              <div className="text-subtitle font-black text-purple-700">
                 {accuracyPercent}%
               </div>
             </motion.div>
@@ -181,7 +181,7 @@ export function QuizResultScreen({
             >
               <div className="flex items-center justify-center gap-2 mb-4">
                 <Award className="w-6 h-6 text-yellow-600" />
-                <div className="text-xl font-black text-yellow-800">
+                <div className="text-subtitle font-black text-yellow-800">
                   새 배지 획득!
                 </div>
               </div>
@@ -211,7 +211,7 @@ export function QuizResultScreen({
             >
               <div className="flex items-center gap-2 mb-4">
                 <XCircle className="w-5 h-5 text-red-500" />
-                <div className="text-lg font-black text-gray-900">
+                <div className="text-subtitle font-black text-gray-900">
                   틀린 문제
                 </div>
                 <div className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-bold">
@@ -232,8 +232,8 @@ export function QuizResultScreen({
                         {index + 1}
                       </div>
                       <div className="flex-1">
-                        <div className="text-sm text-gray-600 mb-1 font-medium">문제</div>
-                        <div className="text-base text-gray-900 font-semibold mb-3">
+                        <div className="text-label text-gray-600 mb-1 font-medium">문제</div>
+                        <div className="text-body text-gray-900 font-semibold mb-3">
                           <span dangerouslySetInnerHTML={{ __html: weak.question }} />
                         </div>
                         
@@ -243,7 +243,7 @@ export function QuizResultScreen({
                               <CheckCircle2 className="w-3 h-3" />
                               정답
                             </div>
-                            <div className="text-sm font-bold text-green-800">
+                            <div className="text-body font-semibold text-green-800">
                               <span dangerouslySetInnerHTML={{ __html: weak.correctAnswer }} />
                             </div>
                           </div>
@@ -283,7 +283,7 @@ export function QuizResultScreen({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.3 }}
                 onClick={onReviewWrong}
-                className="w-full py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-lg text-base font-bold active:opacity-80 flex items-center justify-center gap-2"
+                className="w-full py-4 px-6 bg-gradient-to-r from-red-500 to-pink-500 text-white rounded-lg text-body font-semibold active:opacity-80 flex items-center justify-center gap-2"
               >
                 <Target className="w-5 h-5" />
                 틀린 문제 복습하기
@@ -294,7 +294,7 @@ export function QuizResultScreen({
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: hasWrongAnswers && onReviewWrong ? 1.4 : 1.3 }}
               onClick={() => router.push('/quiz')}
-              className="w-full py-4 bg-white border border-divider text-gray-700 rounded-lg text-base font-semibold active:bg-gray-50"
+              className="w-full py-4 px-6 bg-white border border-divider text-gray-700 rounded-lg text-body font-semibold active:bg-gray-50"
             >
               메뉴로 돌아가기
             </motion.button>

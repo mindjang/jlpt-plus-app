@@ -63,7 +63,7 @@ export default function MySettingsPage() {
                 key={opt}
                 onClick={() => setValue(opt)}
                 className={`px-4 py-2 rounded-lg border text-body font-medium transition-colors ${
-                  value === opt ? 'bg-black text-white border-black' : 'bg-white border-divider text-text-main hover:border-text-sub'
+                  value === opt ? 'bg-black text-white border-black' : 'bg-white border-divider text-text-main'
                 }`}
               >
                 {opt}개

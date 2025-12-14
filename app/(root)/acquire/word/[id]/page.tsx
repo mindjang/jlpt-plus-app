@@ -62,7 +62,7 @@ export default function WordDetailPage() {
         {loading ? (
           <div className="space-y-4">
             {/* 스켈레톤: 단어 헤더 */}
-            <div className="bg-surface rounded-card p-6 animate-pulse">
+            <div className="bg-surface rounded-lg border border-divider p-6 animate-pulse">
               <div className="text-center mb-4">
                 <div className="h-12 w-24 bg-gray-200 rounded mx-auto mb-2"></div>
                 <div className="h-6 w-32 bg-gray-200 rounded mx-auto mb-3"></div>
@@ -74,7 +74,7 @@ export default function WordDetailPage() {
               </div>
             </div>
             {/* 스켈레톤: 예문 */}
-            <div className="bg-surface rounded-card p-6 animate-pulse">
+            <div className="bg-surface rounded-lg border border-divider p-6 animate-pulse">
               <div className="h-6 w-24 bg-gray-200 rounded mb-4"></div>
               <div className="space-y-3">
                 <div className="h-4 w-full bg-gray-200 rounded"></div>
@@ -85,7 +85,7 @@ export default function WordDetailPage() {
         ) : (
           <>
             {/* 단어 헤더 */}
-            <div className="bg-surface rounded-card p-6">
+            <div className="bg-surface rounded-lg border border-divider p-6">
               <div className="text-center mb-4">
                 <h1 className="text-display-l text-jp font-medium text-text-main mb-2">
                   {kanjiText}
@@ -123,7 +123,7 @@ export default function WordDetailPage() {
 
             {/* 다양한 한자 표기 및 의미 */}
             {wordDetails?.words && wordDetails.words.length > 1 && (
-              <div className="bg-surface rounded-card p-6">
+              <div className="bg-surface rounded-lg border border-divider p-6">
                 <h2 className="text-title font-semibold text-text-main mb-4">다양한 표기</h2>
                 <div className="space-y-4">
                   {wordDetails.words.slice(1, 6).map((wordItem, index) => (
@@ -173,7 +173,7 @@ export default function WordDetailPage() {
 
             {/* 예문 */}
             {wordDetails?.examples && wordDetails.examples.length > 0 && (
-              <div className="bg-surface rounded-card p-6">
+              <div className="bg-surface rounded-lg border border-divider p-6">
                 <h2 className="text-title font-semibold text-text-main mb-4">예문</h2>
                 <div className="space-y-4">
                   {wordDetails.examples.slice(0, 5).map((example, index) => (
@@ -206,7 +206,7 @@ export default function WordDetailPage() {
 
             {/* 관련 단어 (hiraganaList) */}
             {wordDetails?.hiraganaList && wordDetails.hiraganaList.length > 0 && (
-              <div className="bg-surface rounded-card p-6">
+              <div className="bg-surface rounded-lg border border-divider p-6">
                 <h2 className="text-title font-semibold text-text-main mb-4">관련 단어</h2>
                 <div className="space-y-3">
                   {wordDetails.hiraganaList.slice(0, 10).map((item, index) => (

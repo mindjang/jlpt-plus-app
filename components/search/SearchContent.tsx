@@ -158,7 +158,7 @@ export function SearchContent({
           <div className="flex gap-2">
             <button
               onClick={() => handleTabChange('word')}
-              className={`flex-1 py-2 px-4 rounded-card text-body font-medium ${
+              className={`flex-1 py-2 px-4 rounded-lg text-body font-medium ${
                 activeTab === 'word'
                   ? 'bg-primary text-surface'
                   : 'bg-surface border border-divider text-text-main'
@@ -169,7 +169,7 @@ export function SearchContent({
             </button>
             <button
               onClick={() => handleTabChange('kanji')}
-              className={`flex-1 py-2 px-4 rounded-card text-body font-medium ${
+              className={`flex-1 py-2 px-4 rounded-lg text-body font-medium ${
                 activeTab === 'kanji'
                   ? 'bg-primary text-surface'
                   : 'bg-surface border border-divider text-text-main'

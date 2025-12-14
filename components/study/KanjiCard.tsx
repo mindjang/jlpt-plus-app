@@ -90,7 +90,7 @@ export function KanjiCard({
     <div className={`w-full max-w-md px-4 mx-auto ${className}`}>
       {/* 카드 */}
       <motion.div 
-        className="flex flex-col bg-surface rounded-card shadow-soft relative h-full"
+        className="flex flex-col bg-surface rounded-lg border border-divider relative h-full"
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.18 }}
@@ -107,13 +107,13 @@ export function KanjiCard({
         {/* 우측 상단 아이콘 */}
         <div className="absolute top-5 right-5 flex items-center gap-1">
           {/* 펜 아이콘 (위치만) */}
-          <button className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors border border-divider">
+          <button className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider">
             <FontAwesomeIcon icon={faPencil} className="text-text-sub" size="2xs" />
           </button>
           {/* 눈 아이콘 (모든 내용 보이기/숨기기 토글) */}
           <button
             onClick={handleToggleAll}
-            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors border border-divider"
+            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
           >
             <FontAwesomeIcon 
               icon={isAllVisible ? faEye : faEyeSlash} 
@@ -123,7 +123,7 @@ export function KanjiCard({
           {/* 상세 아이콘 */}
           <button
             onClick={() => router.push(`/acquire/kanji/${encodeURIComponent(kanjiCharacter)}`)}
-            className="h-8 px-2 gap-1 flex items-center justify-center rounded-full hover:bg-page transition-colors border border-divider"
+            className="h-8 px-2 gap-1 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
           >
             <FontAwesomeIcon icon={faFileLines} className="text-text-sub" size="2xs" />
             <span className="text-xs">상세</span>
@@ -187,13 +187,13 @@ export function KanjiCard({
         <div className="flex items-center gap-2 p-4 border-t border-gray-100">
           <button
             onClick={handleReset}
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-gray-400 hover:bg-page transition-colors"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-gray-400 active:bg-gray-100"
           >
             <FontAwesomeIcon icon={faRotateLeft} className="text-text-sub text-sm" />
           </button>
           <button
             onClick={() => setShowMeaning(!showMeaning)}
-            className={`button-press flex-1 py-3 px-4 rounded-card text-body font-medium ${
+            className={`button-press flex-1 py-3 px-4 rounded-lg text-body font-medium ${
               showMeaning
                 ? 'bg-primary text-white'
                 : 'bg-surface border border-gray-400 text-text-main'
@@ -208,7 +208,7 @@ export function KanjiCard({
               // 히라가나를 보이면 음독/훈독도 함께 보이기, 숨기면 함께 숨기기
               setShowReadings(newShowFurigana)
             }}
-            className={`button-press flex-1 py-3 px-4 rounded-card text-body font-medium ${
+            className={`button-press flex-1 py-3 px-4 rounded-lg text-body font-medium ${
               showFurigana
                 ? 'bg-primary text-white'
                 : 'bg-surface border border-gray-400 text-text-main'
@@ -263,7 +263,7 @@ export function KanjiCard({
                   <button
                     onClick={() => setExamplePage(Math.max(0, examplePage - 1))}
                     disabled={examplePage === 0}
-                    className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                    className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed"
                   >
                     <span className="text-body text-text-sub">‹</span>
                   </button>
@@ -273,7 +273,7 @@ export function KanjiCard({
                   <button
                     onClick={() => setExamplePage(Math.min(totalPages - 1, examplePage + 1))}
                     disabled={examplePage >= totalPages - 1}
-                    className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                    className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed"
                   >
                     <span className="text-body text-text-sub">›</span>
                   </button>

@@ -58,7 +58,7 @@ export default function WordDetailPage() {
       />
 
       <div className="p-4">
-        <div className="bg-surface rounded-card p-6">
+        <div className="bg-surface rounded-lg border border-divider p-6">
           <KanjiDetail
             level={wordData.level}
             kanji={wordData.kanji}

@@ -223,7 +223,7 @@ export default function AdminPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <div
-              className="bg-surface rounded-card p-6 shadow-soft cursor-pointer hover:shadow-md transition-shadow"
+              className="bg-surface rounded-lg border border-divider p-6 cursor-pointer active:bg-gray-50"
               onClick={() => setActiveSection(activeSection === 'users' ? null : 'users')}
             >
               <h3 className="text-subtitle font-semibold text-text-main mb-2">사용자 관리</h3>
@@ -231,7 +231,7 @@ export default function AdminPage() {
             </div>
 
             <div
-              className="bg-surface rounded-card p-6 shadow-soft cursor-pointer hover:shadow-md transition-shadow"
+              className="bg-surface rounded-lg border border-divider p-6 cursor-pointer active:bg-gray-50"
               onClick={() => setActiveSection(activeSection === 'content' ? null : 'content')}
             >
               <h3 className="text-subtitle font-semibold text-text-main mb-2">콘텐츠 관리</h3>
@@ -239,7 +239,7 @@ export default function AdminPage() {
             </div>
 
             <div
-              className="bg-surface rounded-card p-6 shadow-soft cursor-pointer hover:shadow-md transition-shadow"
+              className="bg-surface rounded-lg border border-divider p-6 cursor-pointer active:bg-gray-50"
               onClick={() => setActiveSection(activeSection === 'codes' ? null : 'codes')}
             >
               <h3 className="text-subtitle font-semibold text-text-main mb-2">쿠폰 코드 관리</h3>
@@ -247,7 +247,7 @@ export default function AdminPage() {
             </div>
 
             <div
-              className="bg-surface rounded-card p-6 shadow-soft cursor-pointer hover:shadow-md transition-shadow"
+              className="bg-surface rounded-lg border border-divider p-6 cursor-pointer active:bg-gray-50"
               onClick={() => setActiveSection(activeSection === 'stats' ? null : 'stats')}
             >
               <h3 className="text-subtitle font-semibold text-text-main mb-2">통계 분석</h3>
@@ -262,12 +262,12 @@ export default function AdminPage() {
 
           {/* 쿠폰 코드 관리 섹션 */}
           {activeSection === 'codes' && (
-            <div className="bg-surface rounded-card p-6 shadow-soft">
+            <div className="bg-surface rounded-lg border border-divider p-6">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-subtitle font-semibold text-text-main">쿠폰 코드 관리</h3>
                 <button
                   onClick={() => setShowCreateModal(true)}
-                  className="px-4 py-2 bg-primary text-surface rounded-card text-body font-medium button-press"
+                  className="px-4 py-2 bg-primary text-surface rounded-lg text-body font-medium active:opacity-80"
                 >
                   코드 생성
                 </button>
@@ -275,19 +275,19 @@ export default function AdminPage() {
 
               {/* 통계 */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                <div className="bg-page rounded-card p-4">
+                <div className="bg-page rounded-lg border border-divider p-4">
                   <div className="text-label text-text-sub mb-1">총 코드 수</div>
                   <div className="text-title font-semibold text-text-main">{stats.total}</div>
                 </div>
-                <div className="bg-page rounded-card p-4">
+                <div className="bg-page rounded-lg border border-divider p-4">
                   <div className="text-label text-text-sub mb-1">활성 코드</div>
                   <div className="text-title font-semibold text-text-main">{stats.active}</div>
                 </div>
-                <div className="bg-page rounded-card p-4">
+                <div className="bg-page rounded-lg border border-divider p-4">
                   <div className="text-label text-text-sub mb-1">만료된 코드</div>
                   <div className="text-title font-semibold text-text-main">{stats.expired}</div>
                 </div>
-                <div className="bg-page rounded-card p-4">
+                <div className="bg-page rounded-lg border border-divider p-4">
                   <div className="text-label text-text-sub mb-1">사용 가능 횟수</div>
                   <div className="text-title font-semibold text-text-main">
                     {codes.reduce((sum, c) => {
@@ -301,7 +301,7 @@ export default function AdminPage() {
               {/* 메시지 */}
               {message && (
                 <div
-                  className={`mb-4 p-3 rounded-card text-body ${message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                  className={`mb-4 p-3 rounded-lg text-body ${message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
                     }`}
                 >
                   {message.text}
@@ -342,7 +342,7 @@ export default function AdminPage() {
                                 <span className="text-body font-mono text-text-main">{formattedCode}</span>
                                 <button
                                   onClick={() => copyToClipboard(formattedCode)}
-                                  className="w-6 h-6 flex items-center justify-center rounded hover:bg-page transition-colors"
+                                  className="w-6 h-6 flex items-center justify-center rounded active:bg-gray-100"
                                   aria-label="복사"
                                 >
                                   <svg
@@ -369,13 +369,13 @@ export default function AdminPage() {
                               <div className="flex gap-2">
                                 <button
                                   onClick={() => handleEditCode(item)}
-                                  className="px-3 py-1 text-label bg-page rounded-card hover:bg-divider transition-colors button-press"
+                                  className="px-3 py-1 text-label bg-page rounded-lg active:bg-gray-200"
                                 >
                                   수정
                                 </button>
                                 <button
                                   onClick={() => setDeletingCode(item.code)}
-                                  className="px-3 py-1 text-label bg-red-100 text-red-700 rounded-card hover:bg-red-200 transition-colors button-press"
+                                  className="px-3 py-1 text-label bg-red-100 text-red-700 rounded-lg active:bg-red-200"
                                 >
                                   삭제
                                 </button>
@@ -438,12 +438,12 @@ export default function AdminPage() {
                 placeholder={generationMode === 'auto' ? '자동 생성됨' : 'ABCD-1234'}
                 maxLength={9}
                 disabled={generationMode === 'auto'}
-                className="flex-1 border border-divider rounded-card px-3 py-2 text-body font-mono"
+                className="flex-1 border border-divider rounded-lg px-3 py-2 text-body font-mono"
               />
               {generationMode === 'auto' && (
                 <button
                   onClick={handleGenerateCode}
-                  className="px-4 py-2 bg-page border border-divider rounded-card text-body font-medium button-press"
+                  className="px-4 py-2 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-50"
                 >
                   생성
                 </button>
@@ -459,7 +459,7 @@ export default function AdminPage() {
               value={durationDays}
               onChange={(e) => setDurationDays(parseInt(e.target.value) || 0)}
               min="1"
-              className="w-full border border-divider rounded-card px-3 py-2 text-body"
+              className="w-full border border-divider rounded-lg px-3 py-2 text-body"
             />
           </div>
 
@@ -486,7 +486,7 @@ export default function AdminPage() {
                 onChange={(e) => setRemainingUses(parseInt(e.target.value) || null)}
                 min="1"
                 placeholder="사용 횟수"
-                className="w-full border border-divider rounded-card px-3 py-2 text-body"
+                className="w-full border border-divider rounded-lg px-3 py-2 text-body"
               />
             )}
           </div>
@@ -499,7 +499,7 @@ export default function AdminPage() {
               onChange={(e) => setNote(e.target.value)}
               placeholder="코드에 대한 메모를 입력하세요"
               rows={3}
-              className="w-full border border-divider rounded-card px-3 py-2 text-body resize-none"
+              className="w-full border border-divider rounded-lg px-3 py-2 text-body resize-none"
             />
           </div>
 
@@ -510,14 +510,14 @@ export default function AdminPage() {
                 setShowCreateModal(false)
                 resetCreateForm()
               }}
-              className="flex-1 py-3 bg-page border border-divider rounded-card text-body font-medium button-press"
+              className="flex-1 py-3 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-50"
             >
               취소
             </button>
             <button
               onClick={handleCreateCode}
               disabled={creating}
-              className="flex-1 py-3 bg-primary text-surface rounded-card text-body font-medium button-press disabled:opacity-50"
+              className="flex-1 py-3 bg-primary text-surface rounded-lg text-body font-medium active:opacity-80 disabled:opacity-50"
             >
               {creating ? '생성 중...' : '생성'}
             </button>
@@ -541,7 +541,7 @@ export default function AdminPage() {
                 value={editDurationDays}
                 onChange={(e) => setEditDurationDays(parseInt(e.target.value) || 0)}
                 min="1"
-                className="w-full border border-divider rounded-card px-3 py-2 text-body"
+                className="w-full border border-divider rounded-lg px-3 py-2 text-body"
               />
             </div>
 
@@ -568,7 +568,7 @@ export default function AdminPage() {
                   onChange={(e) => setEditRemainingUses(parseInt(e.target.value) || null)}
                   min="1"
                   placeholder="사용 횟수"
-                  className="w-full border border-divider rounded-card px-3 py-2 text-body"
+                  className="w-full border border-divider rounded-lg px-3 py-2 text-body"
                 />
               )}
             </div>
@@ -581,7 +581,7 @@ export default function AdminPage() {
                 onChange={(e) => setEditNote(e.target.value)}
                 placeholder="코드에 대한 메모를 입력하세요"
                 rows={3}
-                className="w-full border border-divider rounded-card px-3 py-2 text-body resize-none"
+                className="w-full border border-divider rounded-lg px-3 py-2 text-body resize-none"
               />
             </div>
 
@@ -589,14 +589,14 @@ export default function AdminPage() {
             <div className="flex gap-2 pt-4">
               <button
                 onClick={() => setEditingCode(null)}
-                className="flex-1 py-3 bg-page border border-divider rounded-card text-body font-medium button-press"
+                className="flex-1 py-3 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-50"
               >
                 취소
               </button>
               <button
                 onClick={handleUpdateCode}
                 disabled={updating}
-                className="flex-1 py-3 bg-primary text-surface rounded-card text-body font-medium button-press disabled:opacity-50"
+                className="flex-1 py-3 bg-primary text-surface rounded-lg text-body font-medium active:opacity-80 disabled:opacity-50"
               >
                 {updating ? '수정 중...' : '저장'}
               </button>
@@ -620,14 +620,14 @@ export default function AdminPage() {
           <div className="flex gap-2 pt-4">
             <button
               onClick={() => setDeletingCode(null)}
-              className="flex-1 py-3 bg-page border border-divider rounded-card text-body font-medium button-press"
+              className="flex-1 py-3 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-50"
             >
               취소
             </button>
             <button
               onClick={handleDeleteCode}
               disabled={deleting}
-              className="flex-1 py-3 bg-red-500 text-surface rounded-card text-body font-medium button-press disabled:opacity-50"
+              className="flex-1 py-3 bg-red-500 text-surface rounded-lg text-body font-medium active:opacity-80 disabled:opacity-50"
             >
               {deleting ? '삭제 중...' : '삭제'}
             </button>

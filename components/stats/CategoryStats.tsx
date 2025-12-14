@@ -158,15 +158,15 @@ export function CategoryStats() {
   return (
     <div className="space-y-6">
       {/* 카테고리 탭 */}
-      <div className="bg-surface rounded-card shadow-soft p-2 flex gap-2 overflow-x-auto">
+      <div className="bg-surface rounded-lg border border-divider p-2 flex gap-2 overflow-x-auto">
         {(['word', 'kanji', 'quiz', 'game'] as CategoryType[]).map((cat) => (
           <button
             key={cat}
             onClick={() => setCategory(cat)}
-            className={`px-4 py-2 rounded-card text-body font-medium transition-colors whitespace-nowrap ${
+            className={`px-4 py-2 rounded-lg text-body font-medium whitespace-nowrap ${
               category === cat
                 ? 'bg-primary text-white'
-                : 'text-text-sub hover:bg-page'
+                : 'text-text-sub active:bg-gray-50'
             }`}
           >
             {cat === 'word' ? '어휘' : cat === 'kanji' ? '한자' : cat === 'quiz' ? '퀴즈' : '게임'}
@@ -176,7 +176,7 @@ export function CategoryStats() {
 
       {/* 카테고리별 트로피 & 통계 */}
       {stats && (
-        <div className="bg-surface rounded-card shadow-soft p-6">
+        <div className="bg-surface rounded-lg border border-divider p-6">
           <h2 className="text-title font-semibold text-text-main mb-4">
             {getCategoryIcon()} {getCategoryName()} 학습
           </h2>
@@ -201,7 +201,7 @@ export function CategoryStats() {
 
       {/* 7일 학습 정보 */}
       {!loading && weekData.length > 0 && (
-        <div className="bg-surface rounded-card shadow-soft p-4">
+        <div className="bg-surface rounded-lg border border-divider p-4">
           <h3 className="text-body font-semibold text-text-main mb-4">학습 정보</h3>
           <div className="flex items-end gap-2 mb-4">
             {weekData.map((day, index) => (
@@ -254,7 +254,7 @@ export function CategoryStats() {
       )}
 
       {loading && (
-        <div className="bg-surface rounded-card shadow-soft p-8 text-center">
+        <div className="bg-surface rounded-lg border border-divider p-8 text-center">
           <div className="text-body text-text-sub">로딩 중...</div>
         </div>
       )}

@@ -41,7 +41,7 @@ export function QuizMenu({ userLevel, allStats, onStartQuiz }: QuizMenuProps) {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-gradient-to-br from-primary to-blue-600 rounded-card shadow-lg p-6 text-white"
+        className="bg-gradient-to-br from-primary to-blue-600 rounded-lg p-6 text-white"
       >
         <div className="flex items-center justify-between mb-4">
           <div>
@@ -81,19 +81,19 @@ export function QuizMenu({ userLevel, allStats, onStartQuiz }: QuizMenuProps) {
         transition={{ delay: 0.1 }}
         className="grid grid-cols-3 gap-4"
       >
-        <div className="bg-surface rounded-card shadow-soft p-4 text-center">
+        <div className="bg-surface rounded-lg border border-divider p-4 text-center">
           <div className="text-display-s font-bold text-primary mb-1">
             {totalSessions}
           </div>
           <div className="text-label text-text-sub">총 퀴즈</div>
         </div>
-        <div className="bg-surface rounded-card shadow-soft p-4 text-center">
+        <div className="bg-surface rounded-lg border border-divider p-4 text-center">
           <div className="text-display-s font-bold text-green-600 mb-1">
             {totalQuestions}
           </div>
           <div className="text-label text-text-sub">총 문제</div>
         </div>
-        <div className="bg-surface rounded-card shadow-soft p-4 text-center">
+        <div className="bg-surface rounded-lg border border-divider p-4 text-center">
           <div className="text-display-s font-bold text-yellow-600 mb-1">
             {averageScore > 0 ? Math.round(averageScore) : 0}
           </div>
@@ -111,11 +111,11 @@ export function QuizMenu({ userLevel, allStats, onStartQuiz }: QuizMenuProps) {
         {/* 퀴즈 시작 - 메인 버튼 */}
         <button
           onClick={onStartQuiz}
-          className="w-full py-6 bg-primary text-white rounded-card shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3 group"
+          className="w-full py-6 bg-primary text-white rounded-lg active:opacity-80 flex items-center justify-center gap-3"
         >
           <FontAwesomeIcon
             icon={faPlay}
-            className="text-2xl group-hover:scale-110 transition-transform"
+            className="text-2xl"
           />
           <span className="text-title font-bold">퀴즈 시작하기</span>
         </button>
@@ -124,7 +124,7 @@ export function QuizMenu({ userLevel, allStats, onStartQuiz }: QuizMenuProps) {
         <div className="grid grid-cols-3 gap-3">
           <button
             onClick={() => router.push('/quiz/history')}
-            className="py-4 bg-surface border-2 border-divider rounded-card hover:border-primary transition-colors flex flex-col items-center justify-center gap-2"
+            className="py-4 bg-surface border border-divider rounded-lg active:bg-gray-50 flex flex-col items-center justify-center gap-2"
           >
             <FontAwesomeIcon icon={faHistory} className="text-xl text-primary" />
             <span className="text-label font-medium text-text-main">히스토리</span>
@@ -132,7 +132,7 @@ export function QuizMenu({ userLevel, allStats, onStartQuiz }: QuizMenuProps) {
 
           <button
             onClick={() => router.push('/quiz/badges')}
-            className="py-4 bg-surface border-2 border-divider rounded-card hover:border-primary transition-colors flex flex-col items-center justify-center gap-2"
+            className="py-4 bg-surface border border-divider rounded-lg active:bg-gray-50 flex flex-col items-center justify-center gap-2"
           >
             <FontAwesomeIcon icon={faTrophy} className="text-xl text-yellow-600" />
             <span className="text-label font-medium text-text-main">배지</span>
@@ -140,7 +140,7 @@ export function QuizMenu({ userLevel, allStats, onStartQuiz }: QuizMenuProps) {
 
           <button
             onClick={() => router.push('/quiz/stats')}
-            className="py-4 bg-surface border-2 border-divider rounded-card hover:border-primary transition-colors flex flex-col items-center justify-center gap-2"
+            className="py-4 bg-surface border border-divider rounded-lg active:bg-gray-50 flex flex-col items-center justify-center gap-2"
           >
             <FontAwesomeIcon icon={faChartLine} className="text-xl text-green-600" />
             <span className="text-label font-medium text-text-main">통계</span>
@@ -154,7 +154,7 @@ export function QuizMenu({ userLevel, allStats, onStartQuiz }: QuizMenuProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-surface rounded-card shadow-soft p-6"
+          className="bg-surface rounded-lg border border-divider p-6"
         >
           <h3 className="text-body font-semibold text-text-main mb-4">레벨별 진행도</h3>
           <div className="space-y-3">

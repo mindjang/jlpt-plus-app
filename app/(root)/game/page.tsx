@@ -79,9 +79,9 @@ export default function GamePage() {
                 }
               }}
               disabled={game.comingSoon}
-              className={`bg-surface rounded-card shadow-soft p-6 text-center button-press transition-all ${game.comingSoon
+              className={`bg-surface rounded-lg border border-divider p-6 text-center active:bg-gray-50 ${game.comingSoon
                 ? 'opacity-75 cursor-not-allowed'
-                : 'hover:shadow-md hover:scale-105'
+                : ''
                 }`}
             >
               {/* 게임 아이콘 */}

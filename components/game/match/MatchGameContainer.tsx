@@ -59,13 +59,13 @@ export function MatchGameContainer({ level, mode, difficulty, onExit }: MatchGam
               <>
                 <button
                   onClick={togglePause}
-                  className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30 transition-colors"
+                  className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white active:bg-white/30"
                 >
                   <Pause fill="currentColor" size={20} />
                 </button>
                 <button
                   onClick={onExit}
-                  className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30 transition-colors"
+                  className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white active:bg-white/30"
                 >
                   <X size={20} />
                 </button>
@@ -98,13 +98,13 @@ export function MatchGameContainer({ level, mode, difficulty, onExit }: MatchGam
                   disabled={card.isMatched}
                 >
                   {/* Card Back */}
-                  <div className="absolute inset-0 backface-hidden rounded-lg bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-md border-2 border-white/50 shadow-lg flex items-center justify-center">
+                  <div className="absolute inset-0 backface-hidden rounded-lg bg-gradient-to-br from-white/30 to-white/10 backdrop-blur-md border border-white/50 flex items-center justify-center">
                     <div className="text-4xl">🎴</div>
                   </div>
 
                   {/* Card Front */}
                   <div
-                    className={`absolute inset-0 backface-hidden rounded-lg border-2 shadow-lg flex items-center justify-center p-2 ${card.isMatched
+                    className={`absolute inset-0 backface-hidden rounded-lg border flex items-center justify-center p-2 ${card.isMatched
                       ? 'bg-gradient-to-br from-green-400 to-emerald-500 border-green-300'
                       : card.type === 'question'
                         ? 'bg-gradient-to-br from-blue-500 to-cyan-500 border-blue-300'
@@ -132,7 +132,7 @@ export function MatchGameContainer({ level, mode, difficulty, onExit }: MatchGam
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="bg-white p-8 rounded-lg shadow-2xl text-center max-w-sm w-full mx-4"
+            className="bg-white p-8 rounded-lg border border-divider text-center max-w-sm w-full mx-4"
           >
             <h2 className="text-4xl font-black text-purple-600 mb-4">
               일시정지
@@ -158,20 +158,20 @@ export function MatchGameContainer({ level, mode, difficulty, onExit }: MatchGam
             <div className="space-y-3">
               <button
                 onClick={togglePause}
-                className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-lg font-bold shadow-lg"
+                className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-bold active:opacity-80"
               >
                 계속하기
               </button>
               <button
                 onClick={restartGame}
-                className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-lg font-bold flex items-center justify-center gap-2 shadow-lg"
+                className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-bold flex items-center justify-center gap-2 active:opacity-80"
               >
                 <RotateCcw size={20} />
                 다시 하기
               </button>
               <button
                 onClick={onExit}
-                className="w-full py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg font-bold"
+                className="w-full py-3 bg-gray-200 active:bg-gray-300 text-gray-700 rounded-lg font-bold"
               >
                 메뉴로
               </button>
@@ -186,7 +186,7 @@ export function MatchGameContainer({ level, mode, difficulty, onExit }: MatchGam
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="bg-white p-8 rounded-lg shadow-2xl text-center max-w-sm w-full mx-4"
+            className="bg-white p-8 rounded-lg border border-divider text-center max-w-sm w-full mx-4"
           >
             <div className="text-6xl mb-4">🎉</div>
             <h2 className="text-4xl font-black text-purple-600 mb-4">
@@ -216,14 +216,14 @@ export function MatchGameContainer({ level, mode, difficulty, onExit }: MatchGam
             <div className="space-y-3">
               <button
                 onClick={restartGame}
-                className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-lg font-bold flex items-center justify-center gap-2 shadow-lg"
+                className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-bold flex items-center justify-center gap-2 active:opacity-80"
               >
                 <RotateCcw size={20} />
                 다시 하기
               </button>
               <button
                 onClick={onExit}
-                className="w-full py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg font-bold"
+                className="w-full py-3 bg-gray-200 active:bg-gray-300 text-gray-700 rounded-lg font-bold"
               >
                 메뉴로
               </button>

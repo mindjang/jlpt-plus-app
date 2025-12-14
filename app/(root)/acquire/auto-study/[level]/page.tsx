@@ -179,7 +179,7 @@ function AutoStudyContent() {
           !isTasteMode ? (
             <button
               onClick={() => setShowModeModal(true)}
-              className="button-press w-8 h-8 flex items-center justify-center rounded-full hover:bg-black hover:bg-opacity-10 transition-colors"
+              className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100"
             >
               <FontAwesomeIcon icon={faEllipsisVertical} className="text-text-main" />
             </button>
@@ -201,7 +201,7 @@ function AutoStudyContent() {
               </p>
               <button
                 onClick={() => router.push('/login')}
-                className="mt-3 w-full py-2 bg-purple-600 text-white rounded-lg text-sm font-semibold hover:bg-purple-700 transition-colors"
+                className="mt-3 w-full py-2 bg-purple-600 text-white rounded-lg text-sm font-semibold active:opacity-80"
               >
                 로그인하고 진행 상황 저장하기
               </button>
@@ -266,13 +266,13 @@ function AutoStudyContent() {
         <div className="space-y-2">
           <button
             onClick={() => handleModeSelect('auto')}
-            className="w-full text-left px-4 py-3 rounded-md hover:bg-page transition-colors text-body text-text-main"
+            className="w-full text-left px-4 py-3 rounded-md active:bg-gray-50 text-body text-text-main"
           >
             자동 학습
           </button>
           <button
             onClick={() => handleModeSelect('chapter')}
-            className="w-full text-left px-4 py-3 rounded-md hover:bg-page transition-colors text-body text-text-main"
+            className="w-full text-left px-4 py-3 rounded-md active:bg-gray-50 text-body text-text-main"
           >
             챕터별 학습
           </button>

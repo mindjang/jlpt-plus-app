@@ -59,7 +59,7 @@ export const FullScreenModal: React.FC<FullScreenModalProps> = ({
                 )}
                 <button
                   onClick={onClose}
-                  className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors text-text-sub hover:text-text-main"
+                  className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 text-text-sub"
                   aria-label="닫기"
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

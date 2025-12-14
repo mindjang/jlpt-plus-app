@@ -127,7 +127,7 @@ export function WordCard({
     <div className="w-full max-w-md px-4 mx-auto">
       {/* 카드 */}
       <motion.div
-        className="flex flex-col bg-surface rounded-card shadow-soft relative h-full"
+        className="flex flex-col bg-surface rounded-lg border border-divider relative h-full"
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.18 }}
@@ -146,7 +146,7 @@ export function WordCard({
           {/* 눈 아이콘 (모든 내용 보이기/숨기기 토글) */}
           <button
             onClick={handleToggleAll}
-            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors border border-divider"
+            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
           >
             <FontAwesomeIcon
               icon={isAllVisible ? faEye : faEyeSlash}
@@ -157,7 +157,7 @@ export function WordCard({
           {/* 상세 아이콘 */}
           <button
             onClick={() => router.push(`/acquire/word/${encodeURIComponent(word.entry)}`)}
-            className="h-8 px-2 gap-1 flex items-center justify-center rounded-full hover:bg-page transition-colors border border-divider"
+            className="h-8 px-2 gap-1 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
           >
             <FontAwesomeIcon icon={faFileLines} className="text-text-sub" size="2xs" />
             <span className="text-xs">상세</span>
@@ -246,13 +246,13 @@ export function WordCard({
         <div className="flex items-center gap-2 p-4 border-t border-gray-100">
           <button
             onClick={handleReset}
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-gray-400 hover:bg-page transition-colors"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-gray-400 active:bg-gray-100"
           >
             <FontAwesomeIcon icon={faRotateLeft} className="text-text-sub text-sm" />
           </button>
           <button
             onClick={() => setShowMeaning(!showMeaning)}
-            className={`button-press flex-1 py-3 px-4 rounded-card text-body font-medium ${
+            className={`button-press flex-1 py-3 px-4 rounded-lg text-body font-medium ${
               showMeaning
                 ? 'bg-primary text-white'
                 : 'bg-surface border border-gray-400 text-text-main'
@@ -262,7 +262,7 @@ export function WordCard({
           </button>
           <button
             onClick={() => setShowFurigana(!showFurigana)}
-            className={`button-press flex-1 py-3 px-4 rounded-card text-body font-medium ${
+            className={`button-press flex-1 py-3 px-4 rounded-lg text-body font-medium ${
               showFurigana
                 ? 'bg-primary text-white'
                 : 'bg-surface border border-gray-400 text-text-main'

@@ -58,9 +58,9 @@ const MenuItem = ({
 }) => (
   <button
     onClick={onClick}
-    className="w-full flex items-center gap-4 py-4 px-4 hover:bg-black/5 active:bg-black/5 transition-colors group border-b border-gray-100 last:border-0"
+    className="w-full flex items-center gap-4 py-4 px-4 active:bg-gray-50 group border-b border-gray-100 last:border-0"
   >
-    <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${isDestructive ? 'bg-red-50 text-red-500 group-hover:bg-red-100' : 'bg-gray-50 text-gray-600 group-hover:bg-black/10 group-hover:text-black'
+    <div className={`w-10 h-10 rounded-full flex items-center justify-center ${isDestructive ? 'bg-red-50 text-red-500' : 'bg-gray-50 text-gray-600'
       }`}>
       <Icon size={20} strokeWidth={2} />
     </div>
@@ -75,7 +75,7 @@ const MenuItem = ({
       </div>
     )}
     {showArrow && (
-      <ChevronRight size={18} className="text-gray-300 group-hover:text-gray-500 transition-colors" />
+      <ChevronRight size={18} className="text-gray-300" />
     )}
   </button>
 )
@@ -272,9 +272,9 @@ function MyPageContent() {
         <div className="flex items-center gap-5">
           <div className="relative group">
             {user.photoURL ? (
-              <img src={user.photoURL} alt={user.displayName || 'User'} className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-soft group-hover:scale-105 transition-transform" />
+              <img src={user.photoURL} alt={user.displayName || 'User'} className="w-20 h-20 rounded-full object-cover border-4 border-white" />
             ) : (
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-gray-400 text-3xl font-bold border-4 border-white shadow-soft">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-gray-400 text-3xl font-bold border-4 border-white">
                 {user.displayName?.[0]?.toUpperCase() || 'U'}
               </div>
             )}
@@ -293,7 +293,7 @@ function MyPageContent() {
                 <span>Premium Member</span>
               </div>
             ) : (
-              <button onClick={() => { setShowPaymentModal(true); setPaymentTab('pass'); }} className="inline-flex items-center gap-1.5 mt-2 px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-bold hover:bg-gray-200 transition-colors">
+              <button onClick={() => { setShowPaymentModal(true); setPaymentTab('pass'); }} className="inline-flex items-center gap-1.5 mt-2 px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-bold active:bg-gray-200">
                 <span>Free Plan</span>
               </button>
             )}
@@ -306,7 +306,7 @@ function MyPageContent() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className={`relative overflow-hidden rounded-lg p-6 shadow-soft ${isPremium
+          className={`relative overflow-hidden rounded-lg p-6 border border-divider ${isPremium
               ? 'bg-gradient-to-br from-gray-900 to-black text-white'
               : 'bg-white border border-gray-100'
             }`}>
@@ -336,7 +336,6 @@ function MyPageContent() {
             {isPremium ? (
               <div className="flex gap-2 mt-6">
                 <div className="flex-1 bg-white/10 rounded-lg p-3 backdrop-blur-sm relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="text-xs text-gray-400 flex items-center gap-1.5">
                     <Clock size={12} />
                     {isAutoRenewing ? '다음 결제일' : '이용 만료일'}
@@ -347,7 +346,7 @@ function MyPageContent() {
                 </div>
                 <button
                   onClick={() => setShowManageModal(true)}
-                  className="px-5 py-3 bg-white text-black rounded-lg text-sm font-bold hover:bg-gray-100 transition-colors shadow-lg"
+                  className="px-5 py-3 bg-white text-black rounded-lg text-sm font-bold active:bg-gray-100"
                 >
                   관리
                 </button>
@@ -360,7 +359,7 @@ function MyPageContent() {
                       setPaymentTab('subscription')
                       setShowPaymentModal(true)
                     }}
-                    className="flex-1 py-3 bg-black text-white rounded-lg text-sm font-bold hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-black/20"
+                    className="flex-1 py-3 bg-black text-white rounded-lg text-sm font-bold active:opacity-80"
                   >
                     구독 시작하기
                   </button>
@@ -369,7 +368,7 @@ function MyPageContent() {
                       setPaymentTab('pass')
                       setShowPaymentModal(true)
                     }}
-                    className="flex-1 py-3 bg-gray-100 text-gray-900 rounded-lg text-sm font-bold hover:bg-gray-200 transition-all border border-transparent hover:border-black/5"
+                    className="flex-1 py-3 bg-gray-100 text-gray-900 rounded-lg text-sm font-bold active:bg-gray-200 border border-transparent"
                   >
                     이용권 구매
                   </button>
@@ -423,8 +422,8 @@ function MyPageContent() {
       {/* Daily Target Modal */}
       {showDailyTargetModal && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-surface w-full max-w-sm rounded-lg p-6 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
-            <button onClick={() => setShowDailyTargetModal(false)} className="absolute right-5 top-5 text-gray-400 hover:text-gray-900 transition-colors">✕</button>
+          <div className="bg-surface w-full max-w-sm rounded-lg border border-divider p-6 relative animate-in fade-in zoom-in-95 duration-200">
+            <button onClick={() => setShowDailyTargetModal(false)} className="absolute right-5 top-5 text-gray-400 active:text-gray-900">✕</button>
             <div className="text-center mb-6 mt-1">
               <h2 className="text-xl font-bold text-text-main">일일 목표 설정</h2>
               <p className="text-body text-text-sub mt-1">자동 학습 목표를 조절하세요 (5~40, 5개 단위)</p>
@@ -432,14 +431,14 @@ function MyPageContent() {
             <div className="flex items-center justify-center gap-4 mb-6">
               <button
                 onClick={() => changeDailyTarget(-5)}
-                className="w-12 h-12 rounded-full border border-divider text-title text-text-main flex items-center justify-center hover:bg-gray-50"
+                className="w-12 h-12 rounded-full border border-divider text-title text-text-main flex items-center justify-center active:bg-gray-50"
               >
                 -
               </button>
               <div className="text-3xl font-black text-text-main min-w-[80px] text-center">{dailyTargetDraft}</div>
               <button
                 onClick={() => changeDailyTarget(5)}
-                className="w-12 h-12 rounded-full border border-divider text-title text-text-main flex items-center justify-center hover:bg-gray-50"
+                className="w-12 h-12 rounded-full border border-divider text-title text-text-main flex items-center justify-center active:bg-gray-50"
               >
                 +
               </button>
@@ -466,8 +465,8 @@ function MyPageContent() {
       {/* 1. Manage Modal (New) */}
       {showManageModal && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-surface w-full max-w-sm rounded-[32px] p-6 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
-            <button onClick={() => setShowManageModal(false)} className="absolute right-5 top-5 text-gray-400 hover:text-gray-900 transition-colors">✕</button>
+          <div className="bg-surface w-full max-w-sm rounded-lg p-6 border border-divider relative animate-in fade-in zoom-in-95 duration-200">
+            <button onClick={() => setShowManageModal(false)} className="absolute right-5 top-5 text-gray-400 active:text-gray-900">✕</button>
 
             <div className="text-center mb-6 mt-2">
               <h2 className="text-xl font-bold text-gray-900">멤버십 관리</h2>
@@ -506,7 +505,7 @@ function MyPageContent() {
                       setShowPaymentModal(true)
                       setPaymentTab('subscription')
                     }}
-                    className="w-full py-4 rounded-lg bg-white border border-gray-200 text-gray-900 font-bold hover:bg-gray-50 transition-colors text-sm"
+                    className="w-full py-4 rounded-lg bg-white border border-gray-200 text-gray-900 font-bold active:bg-gray-50 text-sm"
                   >
                     새 결제 수단으로 재구독
                   </button>
@@ -514,7 +513,7 @@ function MyPageContent() {
               ) : (
                 <button
                   onClick={() => { setShowManageModal(false); setPaymentTab('pass'); setShowPaymentModal(true); }}
-                  className="w-full py-4 rounded-lg bg-black text-white font-bold hover:opacity-90 transition-colors text-sm shadow-lg shadow-black/20"
+                  className="w-full py-4 rounded-lg bg-black text-white font-bold active:opacity-80 text-sm"
                 >
                   기간 연장하기 / 구독 전환
                 </button>
@@ -536,7 +535,7 @@ function MyPageContent() {
             <div className="p-6 pb-2 shrink-0">
               <div className="flex justify-between items-center mb-2">
                 <h2 className="text-2xl font-black text-gray-900">Premium Plan</h2>
-                <button onClick={() => setShowPaymentModal(false)} className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 transition-colors">✕</button>
+                <button onClick={() => setShowPaymentModal(false)} className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 active:bg-gray-200 text-gray-500">✕</button>
               </div>
               <div className="flex items-center gap-2">
                 <span className="inline-block px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-bold">
@@ -551,14 +550,14 @@ function MyPageContent() {
               <div className="flex bg-gray-100 p-1 rounded-lg">
                 <button
                   onClick={() => setPaymentTab('subscription')}
-                  className={`flex-1 py-3 rounded-lg text-sm font-bold transition-all ${paymentTab === 'subscription' ? 'bg-white shadow-sm text-black' : 'text-gray-400 hover:text-gray-600'}`}
+                  className={`flex-1 py-3 rounded-lg text-sm font-bold ${paymentTab === 'subscription' ? 'bg-white text-black' : 'text-gray-400'}`}
                 >
                   정기 구독
                   <span className="ml-1.5 text-[10px] bg-red-100 text-red-500 px-1.5 py-0.5 rounded-full">BEST</span>
                 </button>
                 <button
                   onClick={() => setPaymentTab('pass')}
-                  className={`flex-1 py-3 rounded-lg text-sm font-bold transition-all ${paymentTab === 'pass' ? 'bg-white shadow-sm text-black' : 'text-gray-400 hover:text-gray-600'}`}
+                  className={`flex-1 py-3 rounded-lg text-sm font-bold ${paymentTab === 'pass' ? 'bg-white text-black' : 'text-gray-400'}`}
                 >
                   기간 이용권
                 </button>
@@ -571,7 +570,7 @@ function MyPageContent() {
                 <>
                   <div
                     onClick={() => setSelectedPlanId('monthly')}
-                    className={`p-5 rounded-lg border-2 cursor-pointer transition-all ${selectedPlanId === 'monthly' ? 'border-primary bg-primary/5' : 'border-gray-100 hover:border-gray-200'}`}
+                    className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'monthly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
                   >
                     <div className="flex justify-between items-center mb-1">
                       <span className="font-bold text-lg text-gray-900">월간 구독</span>
@@ -583,7 +582,7 @@ function MyPageContent() {
 
                   <div
                     onClick={() => setSelectedPlanId('yearly')}
-                    className={`p-5 rounded-lg border-2 cursor-pointer transition-all ${selectedPlanId === 'yearly' ? 'border-primary bg-primary/5' : 'border-gray-100 hover:border-gray-200'}`}
+                    className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'yearly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
                   >
                     <div className="flex justify-between items-center mb-1">
                       <span className="font-bold text-lg text-gray-900">연간 구독</span>
@@ -604,7 +603,7 @@ function MyPageContent() {
                       <div
                         key={item.id}
                         onClick={() => setSelectedPlanId(item.id)}
-                        className={`p-4 rounded-lg border-2 cursor-pointer transition-all flex justify-between items-center ${selectedPlanId === item.id ? 'border-primary bg-primary/5' : 'border-gray-100 hover:border-gray-200'}`}
+                        className={`p-4 rounded-lg border cursor-pointer flex justify-between items-center ${selectedPlanId === item.id ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
                       >
                         <div>
                           <div className="font-bold text-gray-900">{item.name}</div>
@@ -632,7 +631,7 @@ function MyPageContent() {
                       setShowPaymentModal(false)
                     }}
                     disabled={!selectedPlanId || payment.payLoading !== null}
-                    className="w-full py-4 rounded-lg bg-black text-white font-bold text-base shadow-lg shadow-black/20 hover:scale-[1.01] transition-transform disabled:opacity-50 disabled:scale-100"
+                    className="w-full py-4 rounded-lg bg-black text-white font-bold text-base active:opacity-80 disabled:opacity-50"
                   >
                     {payment.payLoading ? '처리 중...' : '카드 결제하기'}
                   </button>
@@ -643,7 +642,7 @@ function MyPageContent() {
                       setShowPaymentModal(false)
                     }}
                     disabled={!selectedPlanId || payment.payLoadingKakao !== null}
-                    className="w-full py-4 rounded-lg bg-[#FAE100] text-[#371D1E] font-bold text-base hover:opacity-90 disabled:opacity-50"
+                    className="w-full py-4 rounded-lg bg-[#FAE100] text-[#371D1E] font-bold text-base active:opacity-80 disabled:opacity-50"
                   >
                     카카오페이로 시작하기
                   </button>
@@ -654,7 +653,7 @@ function MyPageContent() {
                     if (!selectedPlanId) return alert('이용권을 선택해주세요.')
                     handlePlaceholderPayment(selectedPlanId)
                   }}
-                  className="w-full py-4 rounded-lg bg-black text-white font-bold text-base shadow-lg shadow-black/20 hover:scale-[1.01] transition-transform"
+                  className="w-full py-4 rounded-lg bg-black text-white font-bold text-base active:opacity-80"
                 >
                   {selectedPlanId ? '이용권 구매하기' : '상품을 선택해주세요'}
                 </button>
@@ -668,15 +667,15 @@ function MyPageContent() {
 
       {phoneModal.showPhoneModal && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-surface w-full max-w-md rounded-lg shadow-xl p-6 space-y-5 relative border border-divider/50">
+          <div className="bg-surface w-full max-w-md rounded-lg border border-divider p-6 space-y-5 relative">
             {/* ... Existing Phone Modal Content ... */}
-            <button onClick={() => { phoneModal.setShowPhoneModal(false); phoneModal.setPhoneError(null); payment.setPendingPlan(null); }} className="absolute right-4 top-4 w-8 h-8 flex items-center justify-center text-text-sub hover:bg-gray-100 rounded-full transition-colors">✕</button>
+            <button onClick={() => { phoneModal.setShowPhoneModal(false); phoneModal.setPhoneError(null); payment.setPendingPlan(null); }} className="absolute right-4 top-4 w-8 h-8 flex items-center justify-center text-text-sub active:bg-gray-100 rounded-full">✕</button>
             <div className="pr-8"><h2 className="text-xl font-bold text-text-main mb-2">정보 등록</h2><p className="text-sm text-text-sub leading-relaxed">원활한 서비스 이용을 위해 정보를 확인해주세요.</p></div>
             <div className="space-y-4">
               <div><label className="text-sm font-semibold text-text-main mb-2 block">이름</label><input value={phoneModal.nameInput} onChange={(e) => phoneModal.setNameInput(e.target.value)} placeholder="이름을 입력하세요" className="w-full border border-divider rounded-lg px-4 py-3 text-body bg-page focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" /></div>
               <div><label className="text-sm font-semibold text-text-main mb-2 block">휴대폰 번호</label><div className="flex gap-2"><select value={phoneModal.countryCode} onChange={(e) => phoneModal.setCountryCode(e.target.value)} className="border border-divider rounded-lg px-3 py-3 bg-page text-body focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"><option value="82">+82 KR</option><option value="81">+81 JP</option><option value="1">+1 US</option></select><input value={phoneModal.phoneInput} onChange={(e) => phoneModal.setPhoneInput(e.target.value)} placeholder="01012345678" className="flex-1 border border-divider rounded-lg px-4 py-3 text-body bg-page focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" /></div></div>
               {phoneModal.phoneError && (<div className="p-3 rounded-lg bg-red-50 border border-red-200"><p className="text-sm text-red-600 font-medium">{phoneModal.phoneError}</p></div>)}
-              <div className="flex gap-2 pt-2"><button onClick={phoneModal.savePhoneAndContinue} disabled={phoneModal.phoneLoading} className="flex-1 py-3.5 rounded-lg bg-black text-white font-semibold hover:opacity-90 transition-opacity button-press disabled:opacity-60 disabled:cursor-not-allowed">{phoneModal.phoneLoading ? '저장 중...' : '저장하기'}</button></div>
+              <div className="flex gap-2 pt-2"><button onClick={phoneModal.savePhoneAndContinue} disabled={phoneModal.phoneLoading} className="flex-1 py-3.5 rounded-lg bg-black text-white font-semibold active:opacity-80 disabled:opacity-60 disabled:cursor-not-allowed">{phoneModal.phoneLoading ? '저장 중...' : '저장하기'}</button></div>
             </div>
           </div>
         </div>
@@ -694,12 +693,12 @@ function MyPageContent() {
 
       {showRedeemConfirm && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-sm rounded-[32px] p-6 shadow-2xl relative">
+          <div className="bg-white w-full max-w-sm rounded-lg p-6 border border-divider relative">
             <div className="space-y-4">
               <div className="text-center"><div className="w-12 h-12 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-4"><Gift size={24} /></div><h3 className="text-lg font-bold text-gray-900">쿠폰 등록</h3><p className="text-sm text-gray-500 mt-1">가지고 계신 코드를 입력해주세요.</p></div>
               <input value={redeemCodeInput} onChange={(e) => setRedeemCodeInput(e.target.value)} placeholder="ABCD-1234" className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-4 text-center font-mono font-bold text-lg focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all uppercase" />
               {redeemMessage && (<div className={`text-xs text-center font-medium ${redeemMessage.includes('적용') ? 'text-green-600' : 'text-red-500'}`}>{redeemMessage}</div>)}
-              <div className="flex gap-2 pt-2"><button onClick={() => setShowRedeemConfirm(false)} className="flex-1 py-3.5 rounded-lg bg-gray-100 text-gray-900 font-bold hover:bg-gray-200">취소</button><button onClick={handleRedeemCode} disabled={redeemLoading} className="flex-1 py-3.5 rounded-lg bg-black text-white font-bold hover:opacity-90 disabled:opacity-50">{redeemLoading ? '등록 중...' : '등록하기'}</button></div>
+              <div className="flex gap-2 pt-2"><button onClick={() => setShowRedeemConfirm(false)} className="flex-1 py-3.5 rounded-lg bg-gray-100 text-gray-900 font-bold active:bg-gray-200">취소</button><button onClick={handleRedeemCode} disabled={redeemLoading} className="flex-1 py-3.5 rounded-lg bg-black text-white font-bold active:opacity-80 disabled:opacity-50">{redeemLoading ? '등록 중...' : '등록하기'}</button></div>
             </div>
           </div>
         </div>

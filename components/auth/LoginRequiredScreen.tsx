@@ -44,21 +44,21 @@ export function LoginRequiredScreen({
         <div className="flex flex-col gap-3 w-full max-w-xs">
           <button
             onClick={() => router.push('/login')}
-            className="w-full py-4 rounded-lg bg-black text-white font-bold text-lg hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-black/20"
+            className="w-full py-4 rounded-lg bg-black text-white font-bold text-lg active:opacity-80"
           >
             로그인하기
           </button>
           {showBrowseButton && (
             <button
               onClick={() => router.push(browseButtonPath)}
-              className="w-full py-4 rounded-lg bg-white border border-gray-200 text-gray-900 font-bold text-lg hover:bg-gray-50 active:scale-[0.98] transition-all"
+              className="w-full py-4 rounded-lg bg-white border border-gray-200 text-gray-900 font-bold text-lg active:bg-gray-50"
             >
               {browseButtonText}
             </button>
           )}
           <button
             onClick={handleBack}
-            className="w-full py-4 rounded-lg bg-gray-100 text-gray-700 font-bold text-lg hover:bg-gray-200 active:scale-[0.98] transition-all"
+            className="w-full py-4 rounded-lg bg-gray-100 text-gray-700 font-bold text-lg active:bg-gray-200"
           >
             뒤로가기
           </button>

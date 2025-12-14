@@ -58,7 +58,7 @@ export default function KanjiDetailPage() {
           onBack={() => router.back()}
         />
         <div className="p-4">
-          <div className="bg-surface rounded-card p-6 text-center">
+          <div className="bg-surface rounded-lg border border-divider p-6 text-center">
             <p className="text-body text-text-sub">한자를 찾을 수 없습니다.</p>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function KanjiDetailPage() {
           <div className="flex justify-end">
             <button
               onClick={() => router.push(`/acquire/kanji/${encodeURIComponent(kanji)}/stroke-order`)}
-              className="button-press px-4 py-2 rounded-card bg-surface border border-divider text-body text-text-main font-medium hover:bg-page transition-colors flex items-center gap-2"
+              className="px-4 py-2 rounded-lg bg-surface border border-divider text-body text-text-main font-medium active:bg-gray-50 flex items-center gap-2"
             >
               <span>{character} 획순</span>
               <span>›</span>
@@ -117,7 +117,7 @@ export default function KanjiDetailPage() {
         )}
 
         {/* 한자 기본 정보 */}
-        <div className="bg-surface rounded-card p-6">
+        <div className="bg-surface rounded-lg border border-divider p-6">
           <div className="text-center mb-6">
             <h1 className="text-display-l text-jp font-medium text-text-main mb-4">
               {character}
@@ -159,7 +159,7 @@ export default function KanjiDetailPage() {
 
         {/* 한자 구성 */}
         {components.length > 0 && (
-          <div className="bg-surface rounded-card p-6">
+          <div className="bg-surface rounded-lg border border-divider p-6">
             <h3 className="text-subtitle font-medium text-text-main mb-4">
               한자 구성
             </h3>
@@ -167,7 +167,7 @@ export default function KanjiDetailPage() {
               {components.map((comp, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-between p-3 rounded-card bg-page border border-divider"
+                  className="flex items-center justify-between p-3 rounded-lg bg-page border border-divider"
                 >
                   <div className="flex items-center gap-2">
                     <span className="text-subtitle text-jp font-medium text-text-main">
@@ -190,7 +190,7 @@ export default function KanjiDetailPage() {
 
         {/* 활용 단어 */}
         {relatedWords.length > 0 && (
-          <div className="bg-surface rounded-card p-6">
+          <div className="bg-surface rounded-lg border border-divider p-6">
             <h3 className="text-subtitle font-medium text-text-main mb-4">
               활용 단어 ({relatedWords.length})
             </h3>
@@ -198,7 +198,7 @@ export default function KanjiDetailPage() {
               {relatedWords.slice(0, 5).map((word, index) => (
                 <motion.div
                   key={index}
-                  className="bg-page rounded-card p-4 border border-divider"
+                  className="bg-page rounded-lg p-4 border border-divider"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
@@ -229,7 +229,7 @@ export default function KanjiDetailPage() {
 
         {/* 유사 한자 */}
         {similarKanji.length > 0 && (
-          <div className="bg-surface rounded-card p-6">
+          <div className="bg-surface rounded-lg border border-divider p-6">
             <h3 className="text-subtitle font-medium text-text-main mb-4">
               유사 한자 ({similarKanji.length})
             </h3>
@@ -237,7 +237,7 @@ export default function KanjiDetailPage() {
               {similarKanji.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-page rounded-card p-4 border border-divider"
+                  className="bg-page rounded-lg p-4 border border-divider"
                   onClick={() => router.push(`/acquire/kanji/${encodeURIComponent(item.character)}`)}
                 >
                   <div className="flex items-start gap-3 mb-2">
@@ -282,7 +282,7 @@ export default function KanjiDetailPage() {
         )}
 
         {/* 외부 링크 */}
-        <div className="bg-surface rounded-card p-6">
+        <div className="bg-surface rounded-lg border border-divider p-6">
           <h3 className="text-subtitle font-medium text-text-main mb-4">
             외부 링크
           </h3>
@@ -291,7 +291,7 @@ export default function KanjiDetailPage() {
               href={`https://dict.naver.com/search.nhn?query=${encodeURIComponent(kanji)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="button-press flex-1 px-4 py-3 rounded-card bg-surface border border-divider text-body text-text-main font-medium text-center hover:bg-page transition-colors flex items-center justify-center gap-2"
+              className="flex-1 px-4 py-3 rounded-lg bg-surface border border-divider text-body text-text-main font-medium text-center active:bg-gray-50 flex items-center justify-center gap-2"
             >
               <span>네이버 사전</span>
               <span className="text-xs">↗</span>
@@ -300,7 +300,7 @@ export default function KanjiDetailPage() {
               href={`https://chat.openai.com/?q=${encodeURIComponent(kanji)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="button-press flex-1 px-4 py-3 rounded-card bg-surface border border-divider text-body text-text-main font-medium text-center hover:bg-page transition-colors flex items-center justify-center gap-2"
+              className="flex-1 px-4 py-3 rounded-lg bg-surface border border-divider text-body text-text-main font-medium text-center active:bg-gray-50 flex items-center justify-center gap-2"
             >
               <span>ChatGPT</span>
               <span className="text-xs">↗</span>

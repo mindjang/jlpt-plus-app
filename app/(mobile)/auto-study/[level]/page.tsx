@@ -108,7 +108,7 @@ export default function AutoStudyPage() {
         rightAction={
           <button
             onClick={() => setShowModeModal(true)}
-            className="button-press w-8 h-8 flex items-center justify-center rounded-full hover:bg-black hover:bg-opacity-10 transition-colors"
+            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100"
           >
             <FontAwesomeIcon icon={faEllipsisVertical} className="text-text-main" />
           </button>
@@ -121,7 +121,7 @@ export default function AutoStudyPage() {
           // 자동 학습 모드
           <div className="px-4 pt-4 space-y-4">
             {/* 자동 학습 카드 */}
-            <div className="bg-surface rounded-card p-4 shadow-soft">
+            <div className="bg-surface rounded-lg border border-divider p-4">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
                   <h2 className="text-subtitle font-semibold text-text-main">자동 학습</h2>
@@ -194,7 +194,7 @@ export default function AutoStudyPage() {
                     `/practice/learn?level=${params.level}&type=${activeTab}&limit=${targetAmount}&done=${sessionProgress}`
                   )
                 }
-                className="w-full py-3 rounded-card bg-primary text-surface text-subtitle font-semibold"
+                className="w-full py-3 rounded-lg bg-primary text-surface text-subtitle font-semibold active:opacity-80"
               >
                 {sessionProgress === 0 ? '학습하기' : '이어서 학습하기'}
               </button>
@@ -270,7 +270,7 @@ export default function AutoStudyPage() {
               {chapters.map((chapter, index) => (
                 <div
                   key={chapter.number}
-                  className="bg-surface rounded-card p-4 shadow-soft"
+                  className="bg-surface rounded-lg border border-divider p-4"
                 >
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2">
@@ -357,13 +357,13 @@ export default function AutoStudyPage() {
         <div className="space-y-2">
           <button
             onClick={() => handleModeSelect('auto')}
-            className="w-full text-left px-4 py-3 rounded-md hover:bg-page transition-colors text-body text-text-main"
+            className="w-full text-left px-4 py-3 rounded-md active:bg-gray-50 text-body text-text-main"
           >
             자동 학습
           </button>
           <button
             onClick={() => handleModeSelect('chapter')}
-            className="w-full text-left px-4 py-3 rounded-md hover:bg-page transition-colors text-body text-text-main"
+            className="w-full text-left px-4 py-3 rounded-md active:bg-gray-50 text-body text-text-main"
           >
             챕터별 학습
           </button>

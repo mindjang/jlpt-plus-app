@@ -137,7 +137,7 @@ export default function KanaPage() {
             </p>
             <button
               onClick={() => setIsModalOpen(false)}
-              className="button-press w-full py-3 px-4 rounded-card bg-primary text-surface text-body font-medium"
+              className="w-full py-3 px-4 rounded-lg bg-primary text-surface text-body font-medium active:opacity-80"
             >
               닫기
             </button>

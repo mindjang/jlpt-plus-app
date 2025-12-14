@@ -383,7 +383,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       {/* 저장 중 로딩 오버레이 */}
       {isSaving && (
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
-          <div className="bg-surface rounded-card shadow-soft p-6 flex flex-col items-center gap-4">
+          <div className="bg-surface rounded-lg border border-divider p-6 flex flex-col items-center gap-4">
             <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
             <p className="text-body text-text-main font-medium">데이터를 저장하는 중입니다...</p>
           </div>
@@ -427,18 +427,18 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
           <div className="flex gap-2">
             <button
               onClick={() => handleGrade('again')}
-              className={`button-press flex-1 py-4 px-4 rounded-card text-body font-medium transition-colors ${selectedGrade === 'again'
+              className={`flex-1 py-4 px-4 rounded-lg text-body font-medium ${selectedGrade === 'again'
                   ? 'bg-gray-300 text-text-main'
-                  : 'bg-gray-200 text-text-main hover:bg-gray-250'
+                  : 'bg-gray-200 text-text-main active:bg-gray-300'
                 }`}
             >
               다시 학습
             </button>
             <button
               onClick={() => handleGrade('good')}
-              className={`button-press flex-1 py-4 px-4 rounded-card text-body font-medium transition-colors ${selectedGrade === 'good'
+              className={`flex-1 py-4 px-4 rounded-lg text-body font-medium ${selectedGrade === 'good'
                   ? 'bg-gray-600 text-white'
-                  : 'bg-gray-500 text-white hover:bg-gray-550'
+                  : 'bg-gray-500 text-white active:bg-gray-600'
                 }`}
             >
               <div>알고있음</div>

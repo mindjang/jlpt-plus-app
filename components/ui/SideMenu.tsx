@@ -33,7 +33,7 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
 
             {/* 사이드 메뉴 */}
             <motion.div
-              className="fixed left-0 top-0 bottom-0 w-80 bg-surface z-50 shadow-soft"
+              className="fixed left-0 top-0 bottom-0 w-80 bg-surface z-50 border-r border-divider"
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
@@ -61,7 +61,7 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
                     <div className="space-y-1">
                       <button
                         onClick={() => handleNavigate('/search')}
-                        className="w-full flex items-center gap-3 px-6 py-3 text-left hover:bg-page transition-colors"
+                        className="w-full flex items-center gap-3 px-6 py-3 text-left active:bg-gray-50"
                       >
                         <span className="text-body">🔍</span>
                         <span className="text-body text-text-main">검색</span>
@@ -77,14 +77,14 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
                     <div className="space-y-1">
                       <button
                         onClick={() => handleNavigate('/kana')}
-                        className="w-full flex items-center gap-3 px-6 py-3 text-left hover:bg-page transition-colors"
+                        className="w-full flex items-center gap-3 px-6 py-3 text-left active:bg-gray-50"
                       >
                         <span className="text-subtitle text-jp">あ</span>
                         <span className="text-body text-text-main">마이</span>
                       </button>
                       <button
                         onClick={() => handleNavigate('/stats')}
-                        className="w-full flex items-center gap-3 px-6 py-3 text-left hover:bg-page transition-colors"
+                        className="w-full flex items-center gap-3 px-6 py-3 text-left active:bg-gray-50"
                       >
                         <span className="text-body">📊</span>
                         <span className="text-body text-text-main">통계</span>
@@ -94,7 +94,7 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
                           // 설정 페이지로 이동
                           onClose()
                         }}
-                        className="w-full flex items-center gap-3 px-6 py-3 text-left hover:bg-page transition-colors"
+                        className="w-full flex items-center gap-3 px-6 py-3 text-left active:bg-gray-50"
                       >
                         <span className="text-body">⚙️</span>
                         <span className="text-body text-text-main">설정</span>
@@ -110,7 +110,7 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
                       // 업그레이드 페이지로 이동
                       onClose()
                     }}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-card bg-gradient-to-r from-purple-100 to-purple-200 text-purple-700 hover:from-purple-200 hover:to-purple-300 transition-colors"
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-purple-100 to-purple-200 text-purple-700 active:opacity-80"
                   >
                     <span className="text-body">🔒</span>
                     <span className="text-body font-medium">유료 버전으로 업그레이드</span>

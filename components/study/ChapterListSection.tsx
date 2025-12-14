@@ -46,7 +46,7 @@ export function ChapterListSection({
         {chapters.map((chapter, index) => (
           <div
             key={chapter.number}
-            className="bg-surface rounded-card p-4 shadow-soft"
+            className="bg-surface rounded-lg p-4 border border-divider"
           >
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">

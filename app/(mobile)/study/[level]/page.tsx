@@ -44,7 +44,7 @@ export default function StudyPage() {
           </h1>
           <button
             onClick={signOutUser}
-            className="text-body text-text-sub hover:text-text-main"
+            className="text-body text-text-sub active:text-text-main"
           >
             로그아웃
           </button>
@@ -54,7 +54,7 @@ export default function StudyPage() {
         <div className="mb-6 flex gap-2">
           <button
             onClick={() => setMode('example')}
-            className={`flex-1 py-2 px-4 rounded-card text-body font-medium ${
+            className={`flex-1 py-2 px-4 rounded-lg text-body font-medium ${
               mode === 'example'
                 ? 'bg-primary text-surface'
                 : 'bg-surface border border-divider text-text-main'
@@ -64,7 +64,7 @@ export default function StudyPage() {
           </button>
           <button
             onClick={() => setMode('quiz')}
-            className={`flex-1 py-2 px-4 rounded-card text-body font-medium ${
+            className={`flex-1 py-2 px-4 rounded-lg text-body font-medium ${
               mode === 'quiz'
                 ? 'bg-primary text-surface'
                 : 'bg-surface border border-divider text-text-main'

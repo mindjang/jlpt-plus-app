@@ -40,24 +40,24 @@ export function SessionCompleteModal({
         </div>
 
         <div className="space-y-4 mb-6">
-          <div className="bg-page rounded-card p-4">
+          <div className="bg-page rounded-lg border border-divider p-4">
             <div className="text-label text-text-sub mb-1">총 학습 카드</div>
             <div className="text-display-m text-text-main font-bold">{stats.totalCards}개</div>
           </div>
           
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-page rounded-card p-4">
+            <div className="bg-page rounded-lg border border-divider p-4">
               <div className="text-label text-text-sub mb-1">신규 카드</div>
               <div className="text-title text-text-main font-bold">{stats.newCards}개</div>
             </div>
             
-            <div className="bg-page rounded-card p-4">
+            <div className="bg-page rounded-lg border border-divider p-4">
               <div className="text-label text-text-sub mb-1">복습 카드</div>
               <div className="text-title text-text-main font-bold">{stats.reviewCards}개</div>
             </div>
           </div>
 
-          <div className="bg-page rounded-card p-4">
+          <div className="bg-page rounded-lg border border-divider p-4">
             <div className="text-label text-text-sub mb-1">학습 시간</div>
             <div className="text-title text-text-main font-bold">{formatStudyTime(stats.studyTime)}</div>
           </div>
@@ -65,7 +65,7 @@ export function SessionCompleteModal({
 
         <button
           onClick={handleClose}
-          className="w-full button-press py-4 px-4 rounded-card bg-primary text-white text-body font-medium"
+          className="w-full py-4 px-4 rounded-lg bg-primary text-white text-body font-medium active:opacity-80"
         >
           이전 화면으로 돌아가기
         </button>

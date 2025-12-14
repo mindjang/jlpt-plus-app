@@ -32,9 +32,9 @@ const tabs: TabItem[] = [
     icon: 'game',
   },
   {
-    id: 'practice',
+    id: 'quiz',
     label: '퀴즈존',
-    href: '/practice',
+    href: '/quiz',
     icon: 'practice',
   },
   {

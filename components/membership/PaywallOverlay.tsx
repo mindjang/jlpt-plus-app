@@ -66,11 +66,11 @@ export function PaywallOverlay({
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="bg-surface w-full max-w-md rounded-lg shadow-xl p-6 space-y-4 relative">
+      <div className="bg-surface w-full max-w-md rounded-lg border border-divider p-6 space-y-4 relative">
         {onClose && (
           <button
             onClick={onClose}
-            className="absolute right-3 top-3 text-text-sub hover:text-text-main"
+            className="absolute right-3 top-3 text-text-sub active:text-text-main"
             aria-label="닫기"
           >
             ✕
@@ -89,7 +89,7 @@ export function PaywallOverlay({
               </span>
             </div>
             <button
-              className="w-full py-3 rounded-card bg-black text-white text-body font-semibold button-press hover:opacity-90 transition-opacity"
+              className="w-full py-3 rounded-lg bg-black text-white text-body font-semibold active:opacity-80"
               onClick={() => {
                 logger.info('[Paywall] CTA clicked - Navigate to payment', {
                   destination: '/my?payment=true&tab=subscription',
@@ -113,12 +113,12 @@ export function PaywallOverlay({
                 onChange={(e) => setCode(e.target.value)}
                 maxLength={16}
                 placeholder="예: ABCD-1234"
-                className="flex-1 border border-divider rounded-card px-3 py-2 text-body"
+                className="flex-1 border border-divider rounded-lg px-3 py-2 text-body"
               />
               <button
                 disabled={redeemLoading}
                 onClick={handleRedeem}
-                className="px-4 py-2 bg-page border border-divider rounded-card text-body font-medium button-press"
+                className="px-4 py-2 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-50"
               >
                 {redeemLoading ? '적용중...' : '등록'}
               </button>
@@ -128,7 +128,7 @@ export function PaywallOverlay({
 
         {showLogin && (
           <button
-            className="w-full py-3 rounded-card bg-page border border-divider text-body font-medium button-press"
+            className="w-full py-3 rounded-lg bg-page border border-divider text-body font-medium active:bg-gray-50"
             onClick={() => {
               if (user) {
                 router.push('/home')
@@ -143,7 +143,7 @@ export function PaywallOverlay({
 
         {showBackButton && onBack && (
           <button
-            className="w-full py-3 rounded-card bg-gray-100 border border-gray-200 text-gray-700 text-body font-medium button-press"
+            className="w-full py-3 rounded-lg bg-gray-100 border border-gray-200 text-gray-700 text-body font-medium active:bg-gray-200"
             onClick={onBack}
           >
             뒤로가기

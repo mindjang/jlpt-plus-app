@@ -169,7 +169,7 @@ export function AdminCoupons() {
             handleGenerateCode()
             setShowCreateModal(true)
           }}
-          className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors shadow-soft hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0 text-sm font-bold"
+          className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg active:opacity-80 text-sm font-bold"
         >
           <Plus size={16} />
           <span>코드 생성</span>
@@ -177,13 +177,13 @@ export function AdminCoupons() {
       </div>
 
       {message && (
-        <div className={`p-3 rounded-card text-body ${message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+        <div className={`p-3 rounded-lg text-body ${message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
           {message.text}
         </div>
       )}
 
       {/* Code List Table */}
-      <div className="bg-surface rounded-card shadow-soft overflow-hidden">
+      <div className="bg-surface rounded-lg border border-divider overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
@@ -197,7 +197,7 @@ export function AdminCoupons() {
             </thead>
             <tbody>
               {codes.map(item => (
-                <tr key={item.code} className="border-b border-divider hover:bg-gray-50">
+                <tr key={item.code} className="border-b border-divider active:bg-gray-50">
                   <td className="py-3 px-4 font-mono font-medium text-primary cursor-pointer flex items-center gap-2" onClick={() => copyToClipboard(formatCode(item.code))}>
                     {formatCode(item.code)}
                     <Copy size={12} className="opacity-50" />
@@ -208,8 +208,8 @@ export function AdminCoupons() {
                   </td>
                   <td className="py-3 px-4 text-xs text-text-sub max-w-[150px] truncate">{item.data.note || '-'}</td>
                   <td className="py-3 px-4 flex gap-2">
-                    <button onClick={() => handleEditCode(item)} className="p-1.5 hover:bg-gray-200 rounded text-text-sub"><Edit2 size={16} /></button>
-                    <button onClick={() => setDeletingCode(item.code)} className="p-1.5 hover:bg-red-100 rounded text-red-500"><Trash2 size={16} /></button>
+                    <button onClick={() => handleEditCode(item)} className="p-1.5 active:bg-gray-200 rounded text-text-sub"><Edit2 size={16} /></button>
+                    <button onClick={() => setDeletingCode(item.code)} className="p-1.5 active:bg-red-100 rounded text-red-500"><Trash2 size={16} /></button>
                   </td>
                 </tr>
               ))}
@@ -241,7 +241,7 @@ export function AdminCoupons() {
                 placeholder="XXXX-XXXX"
               />
               {generationMode === 'auto' && (
-                <button onClick={handleGenerateCode} className="px-3 py-2 bg-gray-100 rounded hover:bg-gray-200">
+                <button onClick={handleGenerateCode} className="px-3 py-2 bg-gray-100 rounded active:bg-gray-200">
                   <RefreshCw size={16} />
                 </button>
               )}
@@ -269,7 +269,7 @@ export function AdminCoupons() {
             <input type="text" value={note} onChange={e => setNote(e.target.value)} className="w-full px-3 py-2 border border-divider rounded" placeholder="메모..." />
           </div>
 
-          <button onClick={handleCreateCode} disabled={creating} className="w-full py-3 bg-primary text-white rounded font-bold hover:bg-primary-dark transition-colors disabled:opacity-50">
+          <button onClick={handleCreateCode} disabled={creating} className="w-full py-3 bg-primary text-white rounded font-bold active:opacity-80 disabled:opacity-50">
             {creating ? '생성 중...' : '코드 생성하기'}
           </button>
         </div>
@@ -300,7 +300,7 @@ export function AdminCoupons() {
               <label className="block text-xs font-semibold text-text-sub mb-1">비고</label>
               <input type="text" value={editNote} onChange={e => setEditNote(e.target.value)} className="w-full px-3 py-2 border border-divider rounded" />
             </div>
-            <button onClick={handleUpdateCode} disabled={updating} className="w-full py-3 bg-primary text-white rounded font-bold hover:bg-primary-dark transition-colors disabled:opacity-50">
+            <button onClick={handleUpdateCode} disabled={updating} className="w-full py-3 bg-primary text-white rounded font-bold active:opacity-80 disabled:opacity-50">
               {updating ? '수정 중...' : '수정 완료'}
             </button>
           </div>
@@ -312,8 +312,8 @@ export function AdminCoupons() {
         <div className="space-y-4">
           <p className="text-body text-text-main text-center">정말로 이 코드를 삭제하시겠습니까?<br />삭제 후에는 복구할 수 없습니다.</p>
           <div className="flex gap-3">
-            <button onClick={() => setDeletingCode(null)} className="flex-1 py-3 bg-gray-100 text-text-main rounded font-bold hover:bg-gray-200">취소</button>
-            <button onClick={handleDeleteCode} disabled={deleting} className="flex-1 py-3 bg-red-500 text-white rounded font-bold hover:bg-red-600 disabled:opacity-50">
+            <button onClick={() => setDeletingCode(null)} className="flex-1 py-3 bg-gray-100 text-text-main rounded font-bold active:bg-gray-200">취소</button>
+            <button onClick={handleDeleteCode} disabled={deleting} className="flex-1 py-3 bg-red-500 text-white rounded font-bold active:opacity-80 disabled:opacity-50">
               {deleting ? '삭제 중...' : '삭제하기'}
             </button>
           </div>

@@ -27,11 +27,13 @@ import type { JlptLevel } from '@/lib/types/content'
 import { updateDailyActivity, updateStreak, isFirstStudyToday } from '@/lib/firebase/firestore/dailyActivity'
 
 import { QuizMenu } from '@/components/quiz/QuizMenu'
+import { ConfirmModal } from '@/components/ui/ConfirmModal'
 
 type QuizState = 'menu' | 'settings' | 'playing' | 'result'
 
 function QuizContent() {
   const router = useRouter()
+  const searchParams = useSearchParams()
   const { user, loading: authLoading } = useAuth()
   
   const [quizState, setQuizState] = useState<QuizState>('menu')
@@ -46,8 +48,8 @@ function QuizContent() {
   const [maxStreak, setMaxStreak] = useState(0)
   const [userLevel, setUserLevel] = useState<UserQuizLevel | null>(null)
   const [quizResult, setQuizResult] = useState<QuizResult | null>(null)
-  const [showLevelUpModal, setShowLevelUpModal] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [showExitConfirm, setShowExitConfirm] = useState(false)
 
   // 사용자 레벨 정보 및 통계 로드
   useEffect(() => {
@@ -72,6 +74,9 @@ function QuizContent() {
     
     setLoading(true)
     setShowSettingsModal(false)
+    
+    // URL 변경: 퀴즈 진행 중 표시
+    router.push('/quiz?state=playing', { scroll: false })
 
     try {
       // 약점 데이터 로드
@@ -121,6 +126,9 @@ function QuizContent() {
       setStreakCount(0)
       setMaxStreak(0)
       setQuizState('playing')
+      
+      // URL 업데이트 (이미 위에서 변경했지만 확실히)
+      router.replace('/quiz?state=playing', { scroll: false })
     } catch (error) {
       console.error('[QuizPage] Error starting quiz:', error)
       alert('퀴즈 시작 중 오류가 발생했습니다.')
@@ -326,10 +334,16 @@ function QuizContent() {
 
       setQuizResult(result)
       setUserLevel(levelUpResult.newLevel)
-      setQuizState('result')
+      
+      // sessionStorage에 결과 저장
+      sessionStorage.setItem('quizResult', JSON.stringify(result))
+      
+      // 결과 화면으로 리다이렉트
+      router.push('/quiz/result')
 
       if (leveledUp) {
-        setShowLevelUpModal(true)
+        // 레벨업 모달은 결과 페이지에서 처리
+        // 여기서는 바로 리다이렉트
       }
     } catch (error) {
       console.error('[QuizPage] Error finishing quiz:', error)
@@ -340,6 +354,8 @@ function QuizContent() {
   }
 
   const handleRestart = () => {
+    // 이 함수는 더 이상 사용되지 않음 (결과 페이지에서 처리)
+    // 하지만 호환성을 위해 유지
     setQuizState('menu')
     setShowSettingsModal(false)
     setSession(null)
@@ -348,6 +364,37 @@ function QuizContent() {
     setStreakCount(0)
     setMaxStreak(0)
     setQuizResult(null)
+    
+    // URL을 메뉴로 복원
+    router.replace('/quiz', { scroll: false })
+    
+    // 통계 다시 로드
+    if (user) {
+      getAllQuizStats(user.uid).then(setAllStats)
+    }
+  }
+
+  const handleBack = () => {
+    // 퀴즈 진행 중일 때는 확인 모달 표시
+    if (quizState === 'playing') {
+      setShowExitConfirm(true)
+    } else {
+      router.back()
+    }
+  }
+
+  const handleExitConfirm = () => {
+    // 퀴즈 상태 초기화
+    setQuizState('menu')
+    setSession(null)
+    setCurrentQuestionIndex(0)
+    setAnswers([])
+    setStreakCount(0)
+    setMaxStreak(0)
+    setShowExitConfirm(false)
+    
+    // 퀴즈 메인으로 이동
+    router.replace('/quiz', { scroll: false })
     
     // 통계 다시 로드
     if (user) {
@@ -376,13 +423,11 @@ function QuizContent() {
 
   return (
     <div className="min-h-screen">
-      {quizState !== 'result' && (
-        <AppBar
-          title="퀴즈"
-          onBack={() => router.back()}
-          className="bg-transparent border-none"
-        />
-      )}
+      <AppBar
+        title="퀴즈"
+        onBack={() => router.back()}
+        className="bg-transparent border-none"
+      />
 
       {/* 메뉴 화면 */}
       {quizState === 'menu' && userLevel && allStats && (
@@ -417,32 +462,27 @@ function QuizContent() {
         </div>
       )}
 
-      {/* 결과 화면 */}
-      {quizState === 'result' && quizResult && userLevel && (
-        <QuizResultScreen
-          result={quizResult}
-          currentLevel={userLevel.level}
-          onRestart={handleRestart}
-        />
-      )}
-
-      {/* 레벨업 모달 */}
-      {quizResult && quizResult.leveledUp && quizResult.newLevel && (
-        <LevelUpModal
-          isOpen={showLevelUpModal}
-          newLevel={quizResult.newLevel}
-          onClose={() => setShowLevelUpModal(false)}
-        />
-      )}
 
       {/* 로딩 오버레이 */}
       {loading && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-surface rounded-card p-8 shadow-xl">
+          <div className="bg-surface rounded-lg border border-divider p-8">
             <div className="text-title text-text-main">처리 중...</div>
           </div>
         </div>
       )}
+
+      {/* 퀴즈 나가기 확인 모달 */}
+      <ConfirmModal
+        isOpen={showExitConfirm}
+        onClose={() => setShowExitConfirm(false)}
+        onConfirm={handleExitConfirm}
+        title="퀴즈 나가기"
+        message="퀴즈를 중단하고 나가시겠습니까?<br />진행 상황은 저장되지 않습니다."
+        confirmText="나가기"
+        cancelText="계속하기"
+        confirmButtonColor="danger"
+      />
     </div>
   )
 }

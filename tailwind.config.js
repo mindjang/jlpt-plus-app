@@ -66,14 +66,15 @@ module.exports = {
         divider: '#F3F3F3',
       },
       borderRadius: {
-        card: '20px',
+        card: '8px', // 네이버 스타일: 8px
         chip: '6px',
-        kanji: '12px',
+        kanji: '8px',
         search: '999px',
-        levelCard: '24px',
+        levelCard: '12px', // 네이버 스타일: 12px
       },
       boxShadow: {
-        soft: '0 6px 16px rgba(0,0,0,0.06)',
+        // 네이버 스타일: 그림자 최소화 (필요시에만 사용)
+        soft: 'none', // 기본적으로 그림자 없음
       },
       fontFamily: {
         sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'sans-serif'],

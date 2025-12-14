@@ -49,7 +49,7 @@ export function AutoStudyCard({
   }
 
   return (
-    <div className="bg-surface rounded-card p-4 shadow-soft flex flex-col gap-2">
+    <div className="bg-surface rounded-lg p-4 border border-divider flex flex-col gap-2">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <h2 className="text-subtitle font-semibold text-text-main">자동 학습</h2>
@@ -59,7 +59,7 @@ export function AutoStudyCard({
         </div>
         <button 
           onClick={() => router.push('/stats')}
-          className="text-body text-text-sub hover:text-text-main transition-colors"
+          className="text-body text-text-sub active:text-text-main"
         >
           기록 &gt;
         </button>
@@ -124,7 +124,7 @@ export function AutoStudyCard({
               `/practice/learn?level=${level}&type=${activeTab}&limit=${targetAmount}&done=${sessionProgress}`
             )
           }
-          className="w-full py-3 rounded-card bg-primary text-surface text-subtitle font-semibold"
+          className="w-full py-3 rounded-lg bg-primary text-surface text-subtitle font-semibold active:opacity-80"
           disabled={sessionTotal === 0}
         >
           {getButtonLabel()}

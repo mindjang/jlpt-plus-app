@@ -55,7 +55,7 @@ export default function HomePage() {
   }
 
   const handleStartReview = () => {
-    router.push('/practice')
+    router.push('/practice/learn')
   }
 
   const handleStartNew = () => {
@@ -109,10 +109,10 @@ export default function HomePage() {
 
         {/* Focus Card - The ONE main thing to do */}
         <motion.div
-          initial={{ scale: 0.95, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.2, type: "spring" }}
-          className="relative overflow-hidden rounded-[2rem] shadow-xl"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="relative overflow-hidden rounded-lg"
         >
           {!user ? (
             // Guest Mode: Try Now
@@ -130,7 +130,7 @@ export default function HomePage() {
                 </p>
                 <button
                   onClick={() => router.push('/acquire/auto-study/n5?taste=true')}
-                  className="w-full py-4 bg-white text-purple-600 rounded-lg font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+                  className="w-full py-4 bg-white text-purple-600 rounded-lg font-bold active:opacity-80 flex items-center justify-center gap-2"
                 >
                   <Play size={20} fill="currentColor" />
                   지금 바로 체험하기
@@ -153,7 +153,7 @@ export default function HomePage() {
                 </p>
                 <button
                   onClick={handleStartReview}
-                  className="w-full py-4 bg-white text-orange-600 rounded-lg font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2 group"
+                  className="w-full py-4 bg-white text-orange-600 rounded-lg font-bold active:opacity-80 flex items-center justify-center gap-2"
                 >
                   <Play size={20} fill="currentColor" />
                   복습 시작하기
@@ -176,7 +176,7 @@ export default function HomePage() {
                 </p>
                 <button
                   onClick={handleStartNew}
-                  className="w-full py-4 bg-white text-blue-600 rounded-lg font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+                  className="w-full py-4 bg-white text-blue-600 rounded-lg font-bold active:opacity-80 flex items-center justify-center gap-2"
                 >
                   <BookOpen size={20} />
                   {userLevel} 학습 시작
@@ -203,9 +203,9 @@ export default function HomePage() {
           <div className="grid grid-cols-2 gap-4">
             <button
               onClick={() => router.push(`/acquire/auto-study/${userLevel.toLowerCase()}`)}
-              className="p-5 bg-surface rounded-lg shadow-soft hover:shadow-md transition-all text-left group border border-divider"
+              className="p-5 bg-surface rounded-lg text-left border border-divider active:bg-gray-50"
             >
-              <div className="p-3 bg-blue-50 text-blue-500 rounded-lg w-fit mb-3 group-hover:bg-blue-100 transition-colors">
+              <div className="p-3 bg-blue-50 text-blue-500 rounded-lg w-fit mb-3">
                 <BookOpen size={24} />
               </div>
               <h4 className="font-bold text-text-main text-lg">단어/한자</h4>
@@ -213,10 +213,10 @@ export default function HomePage() {
             </button>
 
             <button
-              onClick={() => router.push('/practice/quiz')}
-              className="p-5 bg-surface rounded-lg shadow-soft hover:shadow-md transition-all text-left group border border-divider"
+              onClick={() => router.push('/quiz')}
+              className="p-5 bg-surface rounded-lg text-left border border-divider active:bg-gray-50"
             >
-              <div className="p-3 bg-purple-50 text-purple-500 rounded-lg w-fit mb-3 group-hover:bg-purple-100 transition-colors">
+              <div className="p-3 bg-purple-50 text-purple-500 rounded-lg w-fit mb-3">
                 <Brain size={24} />
               </div>
               <h4 className="font-bold text-text-main text-lg">일일 퀴즈</h4>
@@ -225,10 +225,10 @@ export default function HomePage() {
 
             <button
               onClick={() => router.push('/stats')}
-              className="col-span-2 p-5 bg-surface rounded-lg shadow-soft hover:shadow-md transition-all flex items-center justify-between group border border-divider"
+              className="col-span-2 p-5 bg-surface rounded-lg flex items-center justify-between border border-divider active:bg-gray-50"
             >
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-green-50 text-green-500 rounded-lg group-hover:bg-green-100 transition-colors">
+                <div className="p-3 bg-green-50 text-green-500 rounded-lg">
                   <TrendingUp size={24} />
                 </div>
                 <div>
@@ -236,7 +236,7 @@ export default function HomePage() {
                   <p className="text-text-sub text-xs">나의 학습 현황 확인하기</p>
                 </div>
               </div>
-              <ArrowRight size={20} className="text-divider group-hover:text-primary transition-colors" />
+              <ArrowRight size={20} className="text-divider" />
             </button>
           </div>
         </motion.div>

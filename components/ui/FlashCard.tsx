@@ -58,7 +58,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
 
       {/* 카드 */}
       <motion.div
-        className="bg-surface rounded-card shadow-soft p-8 relative"
+        className="bg-surface rounded-lg border border-divider p-8 relative"
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.18 }}
@@ -74,7 +74,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
 
         {/* 우측 상단 3버튼 */}
         <div className="absolute top-4 right-4 flex gap-2">
-          <button className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-divider transition-colors">
+          <button className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100">
             <span className="text-body">⋯</span>
           </button>
         </div>
@@ -94,7 +94,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
             {furigana && (
               <button
                 onClick={() => setShowFurigana(!showFurigana)}
-                className="text-subtitle text-text-sub hover:text-text-main transition-colors"
+                className="text-subtitle text-text-sub active:text-text-main"
               >
                 {showFurigana ? furigana : '히라가나 보기'}
               </button>
@@ -130,7 +130,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
         <div className="flex flex-col gap-3">
           <button
             onClick={() => setShowMeaning(!showMeaning)}
-            className="button-press w-full py-3 px-4 rounded-card bg-primary text-surface text-body font-medium"
+            className="w-full py-3 px-4 rounded-lg bg-primary text-surface text-body font-medium active:opacity-80"
           >
             {showMeaning ? '의미 숨기기' : '의미 보기'}
           </button>
@@ -140,7 +140,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
               onClick={() => {
                 setShowFurigana(!showFurigana)
               }}
-              className="button-press flex-1 py-3 px-4 rounded-card bg-surface border border-divider text-text-main text-body font-medium"
+              className="flex-1 py-3 px-4 rounded-lg bg-surface border border-divider text-text-main text-body font-medium active:bg-gray-50"
             >
               히라가나
             </button>
@@ -150,7 +150,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
                 setActionLocked(true)
                 onReview()
               }}
-              className="button-press flex-1 py-3 px-4 rounded-card bg-surface border border-divider text-text-main text-body font-medium"
+              className="flex-1 py-3 px-4 rounded-lg bg-surface border border-divider text-text-main text-body font-medium active:bg-gray-50"
               disabled={actionLocked}
             >
               다시학습
@@ -161,7 +161,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
                 setActionLocked(true)
                 onKnow()
               }}
-              className="button-press flex-1 py-3 px-4 rounded-card bg-surface border border-divider text-text-main text-body font-medium"
+              className="flex-1 py-3 px-4 rounded-lg bg-surface border border-divider text-text-main text-body font-medium active:bg-gray-50"
               disabled={actionLocked}
             >
               알고있음
@@ -170,7 +170,7 @@ export const FlashCard: React.FC<FlashCardProps> = ({
 
           <button
             onClick={onNext}
-            className="button-press w-full py-3 px-4 rounded-card bg-disabled-bg text-disabled-text text-body font-medium"
+            className="w-full py-3 px-4 rounded-lg bg-disabled-bg text-disabled-text text-body font-medium"
             disabled
           >
             다음

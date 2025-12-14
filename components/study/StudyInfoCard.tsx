@@ -37,7 +37,7 @@ export function StudyInfoCard({
         </button>
       </div>
 
-      <div className="bg-surface rounded-card p-4 shadow-soft">
+      <div className="bg-surface rounded-lg p-4 border border-divider">
         {/* 장기 기억 단어/한자 */}
         <div className="mb-3">
           <ProgressDisplay

@@ -77,7 +77,7 @@ export const KanjiDetail: React.FC<KanjiDetailProps> = ({
         <div className="mb-6 flex justify-end">
           <button
             onClick={onStrokeOrderClick}
-            className="button-press px-4 py-2 rounded-card bg-surface border border-divider text-body text-text-main font-medium hover:bg-page transition-colors flex items-center gap-2"
+            className="px-4 py-2 rounded-lg bg-surface border border-divider text-body text-text-main font-medium active:bg-gray-50 flex items-center gap-2"
           >
             <span>{kanji} 획순</span>
             <span>›</span>
@@ -95,7 +95,7 @@ export const KanjiDetail: React.FC<KanjiDetailProps> = ({
             {relatedWords.map((word, index) => (
               <motion.div
                 key={index}
-                className="bg-surface rounded-card p-4 border border-divider"
+                className="bg-surface rounded-lg p-4 border border-divider"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
@@ -123,7 +123,7 @@ export const KanjiDetail: React.FC<KanjiDetailProps> = ({
           href={`https://dict.naver.com/search.nhn?query=${encodeURIComponent(kanji)}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="button-press flex-1 px-4 py-3 rounded-card bg-surface border border-divider text-body text-text-main font-medium text-center hover:bg-page transition-colors"
+          className="flex-1 px-4 py-3 rounded-lg bg-surface border border-divider text-body text-text-main font-medium text-center active:bg-gray-50"
         >
           네이버 사전
         </a>
@@ -131,7 +131,7 @@ export const KanjiDetail: React.FC<KanjiDetailProps> = ({
           href={`https://chat.openai.com/?q=${encodeURIComponent(kanji)}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="button-press flex-1 px-4 py-3 rounded-card bg-surface border border-divider text-body text-text-main font-medium text-center hover:bg-page transition-colors"
+          className="flex-1 px-4 py-3 rounded-lg bg-surface border border-divider text-body text-text-main font-medium text-center active:bg-gray-50"
         >
           ChatGPT
         </a>

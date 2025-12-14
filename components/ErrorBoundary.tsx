@@ -61,7 +61,7 @@ export class ErrorBoundary extends Component<Props, State> {
       // 기본 에러 UI
       return (
         <div className="min-h-screen flex items-center justify-center bg-page p-4">
-          <div className="max-w-md w-full bg-surface rounded-card p-6 shadow-soft text-center">
+          <div className="max-w-md w-full bg-surface rounded-lg border border-divider p-6 text-center">
             <div className="mb-4">
               <div className="text-4xl mb-2">⚠️</div>
               <h2 className="text-title font-bold text-text-main mb-2">
@@ -88,13 +88,13 @@ export class ErrorBoundary extends Component<Props, State> {
             <div className="flex gap-2">
               <button
                 onClick={this.handleReset}
-                className="flex-1 py-2 px-4 bg-primary text-surface rounded-md text-body font-semibold hover:opacity-90 transition-opacity"
+                className="flex-1 py-2 px-4 bg-primary text-surface rounded-md text-body font-semibold active:opacity-80"
               >
                 다시 시도
               </button>
               <button
                 onClick={() => window.location.href = '/'}
-                className="flex-1 py-2 px-4 bg-gray-200 text-text-main rounded-md text-body font-semibold hover:bg-gray-300 transition-colors"
+                className="flex-1 py-2 px-4 bg-gray-200 text-text-main rounded-md text-body font-semibold active:bg-gray-300"
               >
                 홈으로
               </button>
@@ -127,7 +127,7 @@ export function SectionErrorBoundary({
           </p>
           <button
             onClick={() => window.location.reload()}
-            className="mt-2 px-4 py-1 bg-red-600 text-white rounded text-label hover:bg-red-700"
+            className="mt-2 px-4 py-1 bg-red-600 text-white rounded text-label active:bg-red-700"
           >
             새로고침
           </button>

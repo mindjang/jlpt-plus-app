@@ -125,7 +125,7 @@ export function StudyHeatmap() {
 
   if (loading) {
     return (
-      <div className="bg-surface rounded-card shadow-soft p-4">
+      <div className="bg-surface rounded-lg border border-divider p-4">
         <div className="h-32 animate-pulse bg-gray-200 rounded" />
       </div>
     )
@@ -138,7 +138,7 @@ export function StudyHeatmap() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-surface rounded-card shadow-soft p-4"
+      className="bg-surface rounded-lg border border-divider p-4"
     >
       {/* 헤더 */}
       <div className="flex items-center justify-between mb-4">
@@ -147,7 +147,7 @@ export function StudyHeatmap() {
           <button
             onClick={handlePrevYear}
             disabled={year <= 2020}
-            className="px-2 py-1 text-label text-text-main hover:text-primary disabled:opacity-30"
+            className="px-2 py-1 text-label text-text-main active:text-primary disabled:opacity-30"
           >
             ◀
           </button>
@@ -157,7 +157,7 @@ export function StudyHeatmap() {
           <button
             onClick={handleNextYear}
             disabled={year >= new Date().getFullYear()}
-            className="px-2 py-1 text-label text-text-main hover:text-primary disabled:opacity-30"
+            className="px-2 py-1 text-label text-text-main active:text-primary disabled:opacity-30"
           >
             ▶
           </button>
@@ -209,7 +209,7 @@ export function StudyHeatmap() {
                     return (
                       <div
                         key={cell.date}
-                        className={`w-[10px] h-[10px] rounded-sm ${getLevelColor(cell.level)} hover:ring-1 hover:ring-primary transition-all cursor-pointer`}
+                        className={`w-[10px] h-[10px] rounded-sm ${getLevelColor(cell.level)} active:ring-1 active:ring-primary cursor-pointer`}
                         title={`${cell.date}: ${cell.count}문제`}
                       />
                     )

@@ -84,8 +84,8 @@ export default function QuizHistoryPage() {
               첫 퀴즈를 시작해보세요!
             </p>
             <button
-              onClick={() => router.push('/practice/quiz')}
-              className="px-6 py-3 bg-primary text-white rounded-card text-body font-semibold"
+              onClick={() => router.push('/quiz')}
+              className="px-6 py-3 bg-primary text-white rounded-lg text-body font-semibold active:opacity-80"
             >
               퀴즈 시작하기
             </button>
@@ -98,7 +98,7 @@ export default function QuizHistoryPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-surface rounded-card shadow-soft p-6"
+                className="bg-surface rounded-lg border border-divider p-6"
               >
                 {/* 날짜 */}
                 <div className="text-label text-text-sub mb-3">

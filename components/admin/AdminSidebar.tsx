@@ -46,8 +46,8 @@ export function AdminSidebar({ activeSection, onNavigate }: AdminSidebarProps) {
               key={item.id}
               onClick={() => onNavigate(item.id as AdminSection)}
               className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 group relative ${isActive
-                  ? 'text-white shadow-soft font-bold'
-                  : 'text-text-sub hover:bg-gray-100 hover:text-text-main'
+                  ? 'text-white font-bold'
+                  : 'text-text-sub active:bg-gray-100'
                 }`}
             >
               {isActive && (
@@ -59,7 +59,7 @@ export function AdminSidebar({ activeSection, onNavigate }: AdminSidebarProps) {
                 />
               )}
 
-              <Icon size={20} className={`relative z-10 ${isActive ? 'text-white' : 'text-text-sub group-hover:text-text-main'}`} />
+              <Icon size={20} className={`relative z-10 ${isActive ? 'text-white' : 'text-text-sub'}`} />
               <span className="relative z-10">{item.label}</span>
             </button>
           )
@@ -67,7 +67,7 @@ export function AdminSidebar({ activeSection, onNavigate }: AdminSidebarProps) {
       </div>
 
       <div className="p-4 border-t border-divider">
-        <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-text-sub hover:bg-gray-100 hover:text-red-500 transition-colors">
+        <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-text-sub active:bg-gray-100 active:text-red-500">
           <LogOut size={20} />
           <span>나가기</span>
         </button>

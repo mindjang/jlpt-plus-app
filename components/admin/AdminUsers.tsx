@@ -44,12 +44,12 @@ export function AdminUsers() {
       </div>
 
       {message && (
-        <div className={`p-3 rounded-card text-body ${message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+        <div className={`p-3 rounded-lg text-body ${message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
           {message.text}
         </div>
       )}
 
-      <div className="bg-surface rounded-card shadow-soft overflow-hidden">
+      <div className="bg-surface rounded-lg border border-divider overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
@@ -63,7 +63,7 @@ export function AdminUsers() {
             </thead>
             <tbody>
               {users.map((user) => (
-                <tr key={user.uid} className="border-b border-divider hover:bg-gray-50 transition-colors">
+                <tr key={user.uid} className="border-b border-divider active:bg-gray-50">
                   <td className="py-3 px-4 text-body text-text-main font-medium">{user.displayName || '-'}</td>
                   <td className="py-3 px-4 text-body text-text-main">{user.email || '-'}</td>
                   <td className="py-3 px-4 text-body text-text-main">{user.phoneNumber || '-'}</td>
@@ -73,7 +73,7 @@ export function AdminUsers() {
                   <td className="py-3 px-4">
                     <button
                       onClick={() => copyToClipboard(user.uid || '')}
-                      className="text-xs text-text-sub bg-gray-100 px-2 py-1 rounded hover:bg-gray-200"
+                      className="text-xs text-text-sub bg-gray-100 px-2 py-1 rounded active:bg-gray-200"
                       title="UID 복사"
                     >
                       복사

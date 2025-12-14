@@ -72,7 +72,7 @@ export function BadgeGallery({
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.02 }}
-            className={`relative p-4 rounded-card border-2 ${
+            className={`relative p-4 rounded-lg border ${
               isEarned
                 ? getRarityColor(badge.rarity)
                 : 'bg-gray-50 border-gray-200 opacity-50'

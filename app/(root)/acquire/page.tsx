@@ -37,7 +37,7 @@ export default function AcquirePage() {
         rightAction={
           <button
             onClick={() => router.push('/stats')}
-            className="button-press w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors"
+            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100"
             aria-label="독서 기록"
           >
             <svg

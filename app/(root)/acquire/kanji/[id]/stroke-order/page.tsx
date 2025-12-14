@@ -59,7 +59,7 @@ export default function KanjiStrokeOrderPage() {
           onBack={() => router.back()}
         />
         <div className="p-4">
-          <div className="bg-surface rounded-card p-6 text-center">
+          <div className="bg-surface rounded-lg border border-divider p-6 text-center">
             <p className="text-body text-text-sub">한자를 찾을 수 없습니다.</p>
           </div>
         </div>
@@ -115,13 +115,13 @@ export default function KanjiStrokeOrderPage() {
 
       <div className="p-4 space-y-4">
         {/* 획순 애니메이션 섹션 */}
-        <div className="bg-surface rounded-card p-6">
+        <div className="bg-surface rounded-lg border border-divider p-6">
           <h3 className="text-subtitle font-medium text-text-main mb-4">
             획순 애니메이션
           </h3>
           
           {/* 애니메이션 캔버스 */}
-          <div className="bg-page rounded-card p-8 mb-4 flex items-center justify-center min-h-[200px]">
+          <div className="bg-page rounded-lg border border-divider p-8 mb-4 flex items-center justify-center min-h-[200px]">
             {strokeImages.length > 0 && currentStroke < strokeImages.length ? (
               <img
                 src={strokeImages[currentStroke]}
@@ -139,13 +139,13 @@ export default function KanjiStrokeOrderPage() {
           <div className="flex items-center justify-center gap-3">
             <button
               onClick={handleReset}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-divider hover:bg-page transition-colors"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-divider active:bg-gray-50"
             >
               <span className="text-body">↺</span>
             </button>
             <button
               onClick={handlePlay}
-              className="w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white hover:bg-primary/90 transition-colors"
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white active:opacity-80"
             >
               <span className="text-body">{isPlaying ? '⏸' : '▶'}</span>
             </button>
@@ -156,7 +156,7 @@ export default function KanjiStrokeOrderPage() {
                   setIsPlaying(false)
                 }
               }}
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-divider hover:bg-page transition-colors"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-surface border border-divider active:bg-gray-50"
               disabled={currentStroke >= strokeImages.length - 1}
             >
               <span className="text-body">⏭</span>
@@ -165,7 +165,7 @@ export default function KanjiStrokeOrderPage() {
         </div>
 
         {/* 획수 진행 상황 */}
-        <div className="bg-surface rounded-card p-6">
+        <div className="bg-surface rounded-lg border border-divider p-6">
           <h3 className="text-subtitle font-medium text-text-main mb-4">
             획수 {strokeCount}획
           </h3>
@@ -179,7 +179,7 @@ export default function KanjiStrokeOrderPage() {
                 <button
                   key={index}
                   onClick={() => handleStrokeClick(index)}
-                  className={`flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-card border-2 transition-colors ${
+                  className={`flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-lg border ${
                     isActive
                       ? 'border-primary bg-primary/10'
                       : 'border-divider bg-page'
@@ -201,7 +201,7 @@ export default function KanjiStrokeOrderPage() {
         </div>
 
         {/* 한자 상세 정보 */}
-        <div className="bg-surface rounded-card p-6">
+        <div className="bg-surface rounded-lg border border-divider p-6">
           <div className="flex items-start gap-4 mb-4">
             <div className="text-display-l text-jp font-medium text-text-main">
               {character}

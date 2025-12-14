@@ -83,13 +83,13 @@ export function LoginForm() {
 
   return (
     <div className="w-full max-w-md mx-auto p-6">
-      <div className="bg-surface rounded-card shadow-soft p-8">
+      <div className="bg-surface rounded-lg border border-divider p-8">
         <h2 className="text-title font-semibold text-text-main mb-6 text-center">
           {isSignUp ? '회원가입' : '로그인'}
         </h2>
 
         {error && (
-          <div className="mb-4 p-3 bg-red-50 text-red-700 rounded-card text-body">
+          <div className="mb-4 p-3 bg-red-50 text-red-700 rounded-lg text-body">
             {error}
           </div>
         )}
@@ -105,7 +105,7 @@ export function LoginForm() {
                   onChange={(e) => setName(e.target.value)}
                   required
                   placeholder="홍길동"
-                  className="w-full px-4 py-2 rounded-card border border-divider bg-surface text-text-main"
+                  className="w-full px-4 py-2 rounded-lg border border-divider bg-surface text-text-main"
                 />
               </div>
               <div>
@@ -116,7 +116,7 @@ export function LoginForm() {
                   onChange={(e) => setPhoneNumber(e.target.value)}
                   required
                   placeholder="010-1234-5678"
-                  className="w-full px-4 py-2 rounded-card border border-divider bg-surface text-text-main"
+                  className="w-full px-4 py-2 rounded-lg border border-divider bg-surface text-text-main"
                 />
               </div>
             </>
@@ -130,7 +130,7 @@ export function LoginForm() {
               onChange={(e) => setEmail(e.target.value)}
               required
               placeholder="email@example.com"
-              className="w-full px-4 py-2 rounded-card border border-divider bg-surface text-text-main"
+              className="w-full px-4 py-2 rounded-lg border border-divider bg-surface text-text-main"
             />
           </div>
 
@@ -142,14 +142,14 @@ export function LoginForm() {
               onChange={(e) => setPassword(e.target.value)}
               required
               placeholder="••••••"
-              className="w-full px-4 py-2 rounded-card border border-divider bg-surface text-text-main"
+              className="w-full px-4 py-2 rounded-lg border border-divider bg-surface text-text-main"
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="button-press w-full py-3 px-4 rounded-card bg-primary text-surface text-body font-medium disabled:opacity-50"
+            className="w-full py-3 px-4 rounded-lg bg-primary text-surface text-body font-medium active:opacity-80 disabled:opacity-50"
           >
             {loading ? '처리 중...' : isSignUp ? '회원가입' : '로그인'}
           </button>
@@ -167,7 +167,7 @@ export function LoginForm() {
         <button
           onClick={handleGoogleAuth}
           disabled={loading}
-          className="button-press w-full py-3 px-4 rounded-card bg-surface border border-divider text-text-main text-body font-medium disabled:opacity-50"
+          className="w-full py-3 px-4 rounded-lg bg-surface border border-divider text-text-main text-body font-medium active:bg-gray-50 disabled:opacity-50"
         >
           Google로 로그인
         </button>
@@ -175,7 +175,7 @@ export function LoginForm() {
         <div className="mt-4 text-center">
           <button
             onClick={() => setIsSignUp(!isSignUp)}
-            className="text-body text-primary hover:underline"
+            className="text-body text-primary active:opacity-70"
           >
             {isSignUp ? '이미 계정이 있으신가요? 로그인' : '계정이 없으신가요? 회원가입'}
           </button>

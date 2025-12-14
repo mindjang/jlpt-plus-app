@@ -48,7 +48,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                         key={level}
                         layout
                         onClick={() => setExpandedLevel(isExpanded ? null : level)}
-                        className={`relative rounded-lg overflow-hidden cursor-pointer shadow-soft transition-all duration-500 ease-spring`}
+                        className={`relative rounded-lg overflow-hidden cursor-pointer border border-divider transition-all duration-500 ease-spring`}
                         style={{
                             ...getGradientStyle(level),
                             height: isExpanded ? '280px' : '72px',
@@ -102,7 +102,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                                     if (isEnabled(level, 'word')) onNavigate(level, 'word');
                                                 }}
                                                 className={`flex flex-col items-center justify-center p-4 rounded-lg gap-2 transition-colors group relative overflow-hidden ${isEnabled(level, 'word')
-                                                        ? 'bg-white/60 hover:bg-white'
+                                                        ? 'bg-white/60'
                                                         : 'bg-white/30 cursor-not-allowed'
                                                     }`}
                                             >
@@ -111,7 +111,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                                         <span className="bg-black/60 text-white text-xs px-2 py-1 rounded-full">곧 출시</span>
                                                     </div>
                                                 )}
-                                                <div className={`p-3 bg-white rounded-full shadow-sm text-orange-500 ${isEnabled(level, 'word') ? 'group-hover:scale-110' : 'opacity-50'} transition-transform`}>
+                                                <div className={`p-3 bg-white rounded-full text-orange-500 ${isEnabled(level, 'word') ? '' : 'opacity-50'}`}>
                                                     <Book size={20} />
                                                 </div>
                                                 <div className="text-center">
@@ -127,7 +127,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                                     if (isEnabled(level, 'kanji')) onNavigate(level, 'kanji');
                                                 }}
                                                 className={`flex flex-col items-center justify-center p-4 rounded-lg gap-2 transition-colors group relative overflow-hidden ${isEnabled(level, 'kanji')
-                                                        ? 'bg-white/60 hover:bg-white'
+                                                        ? 'bg-white/60'
                                                         : 'bg-white/30 cursor-not-allowed'
                                                     }`}
                                             >
@@ -136,7 +136,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
                                                         <span className="bg-black/60 text-white text-xs px-2 py-1 rounded-full">곧 출시</span>
                                                     </div>
                                                 )}
-                                                <div className={`p-3 bg-white rounded-full shadow-sm text-blue-500 ${isEnabled(level, 'kanji') ? 'group-hover:scale-110' : 'opacity-50'} transition-transform`}>
+                                                <div className={`p-3 bg-white rounded-full text-blue-500 ${isEnabled(level, 'kanji') ? '' : 'opacity-50'}`}>
                                                     <Type size={20} />
                                                 </div>
                                                 <div className="text-center">
@@ -193,7 +193,7 @@ export const MinimalContentView: React.FC<ViewProps> = ({ onNavigate }) => {
                         onClick={() => {
                             if (enabled) onNavigate(item.level, item.type)
                         }}
-                        className={`flex items-center py-4 border-b border-gray-100 transition-colors group ${enabled ? 'cursor-pointer hover:bg-gray-50 active:bg-gray-50' : 'opacity-50 cursor-not-allowed bg-gray-50/50'
+                        className={`flex items-center py-4 border-b border-gray-100 group ${enabled ? 'cursor-pointer active:bg-gray-50' : 'opacity-50 cursor-not-allowed bg-gray-50/50'
                             }`}
                     >
                         <div className={`w-12 text-lg font-black transition-colors ${getTextColorClass(item.level)}`}>
@@ -209,11 +209,11 @@ export const MinimalContentView: React.FC<ViewProps> = ({ onNavigate }) => {
                             </div>
                         </div>
                         <div className={`w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center transition-colors ${enabled
-                                ? 'group-hover:bg-black group-hover:border-black group-hover:text-white group-active:bg-black group-active:border-black group-active:text-white'
+                                ? 'group-active:bg-black group-active:border-black group-active:text-white'
                                 : ''
                             }`}>
                             {enabled ? (
-                                <ArrowRight size={14} className="text-gray-400 group-hover:text-white group-active:text-white" />
+                                <ArrowRight size={14} className="text-gray-400 group-active:text-white" />
                             ) : (
                                 <Lock size={14} className="text-gray-300" />
                             )}

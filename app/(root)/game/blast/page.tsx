@@ -40,7 +40,7 @@ export default function BlastGamePage() {
 
       <div className="relative z-10 p-6 flex flex-col h-screen">
         <header className="flex items-center justify-between mb-12">
-          <button onClick={() => router.back()} className="p-2 hover:bg-white/10 rounded-full transition-colors">
+          <button onClick={() => router.back()} className="p-2 active:bg-white/10 rounded-full">
             <ArrowLeft className="text-yellow-400" />
           </button>
           <div className="flex items-center gap-2">
@@ -98,7 +98,7 @@ export default function BlastGamePage() {
                     onClick={() => setSelectedLevel(lvl)}
                     className={`flex-1 py-3 rounded-lg font-bold transition-all relative overflow-hidden ${selectedLevel === lvl
                         ? 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white shadow-[0_0_25px_rgba(251,191,36,0.6)] scale-105'
-                        : 'bg-white/10 text-white/60 hover:bg-white/20'
+                        : 'bg-white/10 text-white/60 active:bg-white/20'
                       }`}
                   >
                     {lvl}
@@ -115,7 +115,7 @@ export default function BlastGamePage() {
                   onClick={() => setGameMode('word')}
                   className={`p-4 rounded-lg border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'word'
                       ? 'border-pink-500 bg-pink-500/20 text-pink-300 shadow-[0_0_20px_rgba(236,72,153,0.4)]'
-                      : 'border-white/20 bg-white/5 text-white/50 hover:border-white/40'
+                      : 'border-white/20 bg-white/5 text-white/50 active:border-white/40'
                     }`}
                 >
                   <span className="text-2xl">あ</span>
@@ -125,7 +125,7 @@ export default function BlastGamePage() {
                   onClick={() => setGameMode('kanji')}
                   className={`p-4 rounded-lg border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'kanji'
                       ? 'border-pink-500 bg-pink-500/20 text-pink-300 shadow-[0_0_20px_rgba(236,72,153,0.4)]'
-                      : 'border-white/20 bg-white/5 text-white/50 hover:border-white/40'
+                      : 'border-white/20 bg-white/5 text-white/50 active:border-white/40'
                     }`}
                 >
                   <span className="text-2xl">字</span>
@@ -137,12 +137,11 @@ export default function BlastGamePage() {
 
           {/* Start Button */}
           <motion.button
-            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={startGame}
             className="w-full max-w-xs py-5 bg-gradient-to-r from-yellow-500 via-orange-500 to-pink-500 rounded-lg font-black text-2xl text-white shadow-[0_0_40px_rgba(251,191,36,0.6)] flex items-center justify-center gap-3 relative overflow-hidden group"
           >
-            <div className="absolute inset-0 bg-white/30 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
+            <div className="absolute inset-0 bg-white/30 translate-x-[-100%] group-active:translate-x-[100%] transition-transform duration-700 skew-x-12"></div>
             <Play fill="currentColor" size={28} />
             START BLAST
           </motion.button>

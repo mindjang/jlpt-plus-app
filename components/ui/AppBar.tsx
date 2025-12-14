@@ -40,7 +40,7 @@ export const AppBar: React.FC<AppBarProps> = ({
             {showMenu && !onBack && (
               <button
                 onClick={() => setIsMenuOpen(true)}
-                className="button-press w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors"
+                className="button-press w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100"
               >
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="text-text-main">
                   <path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -50,7 +50,7 @@ export const AppBar: React.FC<AppBarProps> = ({
             {onBack && (
               <button
                 onClick={onBack}
-                className="button-press w-8 h-8 flex items-center justify-center rounded-full hover:bg-page transition-colors"
+                className="button-press w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100"
               >
                 <span className="text-body text-text-main">‹</span>
               </button>

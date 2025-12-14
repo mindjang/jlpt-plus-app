@@ -86,7 +86,7 @@ export default function BadgesPage() {
 
       <div className="p-4 max-w-6xl mx-auto">
         {/* 헤더 */}
-        <div className="bg-surface rounded-card shadow-soft p-6 mb-6">
+        <div className="bg-surface rounded-lg border border-divider p-6 mb-6">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-display-s font-bold text-text-main mb-2">

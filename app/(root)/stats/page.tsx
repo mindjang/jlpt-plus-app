@@ -33,23 +33,23 @@ function StatsContent() {
 
       <div className="flex flex-col gap-6 p-4 pb-20">
         {/* 메인 탭 */}
-        <div className="flex gap-2 bg-surface rounded-card shadow-soft p-2">
+        <div className="flex gap-2 bg-surface rounded-lg border border-divider p-2">
           <button
             onClick={() => setActiveTab('period')}
-            className={`flex-1 py-2 rounded-card text-body font-medium transition-colors ${
+            className={`flex-1 py-2 rounded-lg text-body font-medium ${
               activeTab === 'period'
                 ? 'bg-primary text-white'
-                : 'text-text-sub hover:bg-page'
+                : 'text-text-sub active:bg-gray-50'
             }`}
           >
             기간별
           </button>
           <button
             onClick={() => setActiveTab('category')}
-            className={`flex-1 py-2 rounded-card text-body font-medium transition-colors ${
+            className={`flex-1 py-2 rounded-lg text-body font-medium ${
               activeTab === 'category'
                 ? 'bg-primary text-white'
-                : 'text-text-sub hover:bg-page'
+                : 'text-text-sub active:bg-gray-50'
             }`}
           >
             학습별

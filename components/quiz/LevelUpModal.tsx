@@ -26,7 +26,7 @@ export function LevelUpModal({ isOpen, newLevel, onClose }: LevelUpModalProps) {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ type: 'spring', damping: 15 }}
-            className="bg-surface rounded-card shadow-xl p-8 max-w-md w-full"
+            className="bg-surface rounded-lg border border-divider p-8 max-w-md w-full"
             onClick={(e) => e.stopPropagation()}
           >
             {/* 애니메이션 아이콘 */}
@@ -62,7 +62,7 @@ export function LevelUpModal({ isOpen, newLevel, onClose }: LevelUpModalProps) {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-center mb-8 p-4 bg-primary bg-opacity-10 rounded-card"
+              className="text-center mb-8 p-4 bg-primary bg-opacity-10 rounded-lg"
             >
               <p className="text-body text-text-main">
                 축하합니다! 꾸준한 학습으로 한 단계 성장했어요! 🚀
@@ -75,9 +75,7 @@ export function LevelUpModal({ isOpen, newLevel, onClose }: LevelUpModalProps) {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
               onClick={onClose}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full py-4 bg-primary text-white rounded-card text-body font-semibold shadow-lg"
+              className="w-full py-4 bg-primary text-white rounded-lg text-body font-semibold active:opacity-80"
             >
               계속하기
             </motion.button>

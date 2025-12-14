@@ -181,7 +181,7 @@ function LearnContent() {
       {/* 저장 중 로딩 오버레이 */}
       {isSaving && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
-          <div className="bg-surface rounded-card shadow-soft p-6 flex flex-col items-center gap-4">
+          <div className="bg-surface rounded-lg border border-divider p-6 flex flex-col items-center gap-4">
             <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
             <p className="text-body text-text-main font-medium">데이터를 저장하는 중입니다...</p>
           </div>

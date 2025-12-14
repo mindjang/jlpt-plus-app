@@ -67,11 +67,11 @@ export function BlastGameContainer({ level, mode, onExit }: BlastGameContainerPr
         </div>
 
         <div className="flex items-center gap-2">
-          <button onClick={togglePause} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30">
+          <button onClick={togglePause} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white active:bg-white/30">
             <Pause fill="currentColor" size={20} />
           </button>
           {gameState === 'playing' && (
-            <button onClick={onExit} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30">
+            <button onClick={onExit} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white active:bg-white/30">
               <X size={20} />
             </button>
           )}
@@ -168,7 +168,7 @@ export function BlastGameContainer({ level, mode, onExit }: BlastGameContainerPr
               key={idx}
               whileTap={{ scale: 0.9 }}
               onClick={() => handleOptionClick(option)}
-              className="px-2 py-4 bg-gradient-to-br from-purple-600/80 to-pink-600/80 backdrop-blur-md border-2 border-white/30 rounded-lg font-bold text-white shadow-lg hover:shadow-[0_0_20px_rgba(236,72,153,0.6)] transition-all active:bg-yellow-500"
+              className="px-2 py-4 bg-gradient-to-br from-purple-600/80 to-pink-600/80 backdrop-blur-md border border-white/30 rounded-lg font-bold text-white active:bg-yellow-500"
             >
               {option.split(',')[0]}
             </motion.button>
@@ -208,14 +208,14 @@ export function BlastGameContainer({ level, mode, onExit }: BlastGameContainerPr
             <div className="space-y-3">
               <button
                 onClick={restartGame}
-                className="w-full py-3 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-white rounded-lg font-bold flex items-center justify-center gap-2 shadow-lg"
+                className="w-full py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg font-bold flex items-center justify-center gap-2 active:opacity-80"
               >
                 <RotateCcw size={20} />
                 RESTART
               </button>
               <button
                 onClick={onExit}
-                className="w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-bold"
+                className="w-full py-3 bg-white/10 active:bg-white/20 text-white rounded-lg font-bold"
               >
                 EXIT MENU
               </button>

@@ -19,7 +19,7 @@ function StatCard({ icon, label, value, color = 'primary' }: StatCardProps) {
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="bg-surface rounded-card shadow-soft p-4"
+      className="bg-surface rounded-lg border border-divider p-4"
     >
       <div className="flex items-center gap-3">
         <div className="text-3xl">{icon}</div>
@@ -100,7 +100,7 @@ export function TodayOverview() {
       <div className="space-y-4">
         <div className="grid grid-cols-2 gap-3">
           {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="bg-surface rounded-card shadow-soft p-4 h-24 animate-pulse" />
+            <div key={i} className="bg-surface rounded-lg border border-divider p-4 h-24 animate-pulse" />
           ))}
         </div>
       </div>
@@ -121,7 +121,7 @@ export function TodayOverview() {
         <h2 className="text-title font-semibold text-text-main">오늘의 학습 정보</h2>
         <button
           onClick={loadData}
-          className="text-label text-primary hover:text-primary-dark"
+          className="text-label text-primary active:opacity-70"
         >
           새로고침
         </button>
@@ -161,7 +161,7 @@ export function TodayOverview() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-surface rounded-card shadow-soft p-4"
+          className="bg-surface rounded-lg border border-divider p-4"
         >
           <h3 className="text-body font-semibold text-text-main mb-3">모드별 학습</h3>
           <div className="space-y-2">
@@ -195,7 +195,7 @@ export function TodayOverview() {
 
       {/* 데이터 없을 때 */}
       {!todayData || todayData.totalQuestions === 0 && (
-        <div className="bg-surface rounded-card shadow-soft p-6 text-center">
+        <div className="bg-surface rounded-lg border border-divider p-6 text-center">
           <div className="text-4xl mb-2">📚</div>
           <div className="text-body text-text-sub">
             오늘은 아직 학습 기록이 없습니다

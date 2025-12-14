@@ -102,7 +102,7 @@ export default function QuizStatsPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-surface rounded-card shadow-soft p-6"
+          className="bg-surface rounded-lg border border-divider p-6"
         >
           <h2 className="text-title font-semibold text-text-main mb-4">전체 통계</h2>
           <div className="grid grid-cols-3 gap-4">
@@ -135,7 +135,7 @@ export default function QuizStatsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-surface rounded-card shadow-soft p-6"
+          className="bg-surface rounded-lg border border-divider p-6"
         >
           <h2 className="text-title font-semibold text-text-main mb-4">레벨별 성과</h2>
           <div className="space-y-4">
@@ -186,7 +186,7 @@ export default function QuizStatsPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-surface rounded-card shadow-soft p-6"
+          className="bg-surface rounded-lg border border-divider p-6"
         >
           <h2 className="text-title font-semibold text-text-main mb-4">약점 분석</h2>
           
@@ -196,10 +196,10 @@ export default function QuizStatsPage() {
               <button
                 key={level}
                 onClick={() => setSelectedLevel(level)}
-                className={`px-4 py-2 rounded-card text-body font-medium transition-colors ${
+                className={`px-4 py-2 rounded-lg text-body font-medium ${
                   selectedLevel === level
                     ? 'bg-primary text-white'
-                    : 'bg-surface border border-divider text-text-main hover:border-primary'
+                    : 'bg-surface border border-divider text-text-main active:bg-gray-50'
                 }`}
               >
                 {level}
@@ -213,7 +213,7 @@ export default function QuizStatsPage() {
               {weakItems.map((item, index) => (
                 <div
                   key={item.itemId}
-                  className="flex items-center justify-between p-3 bg-red-50 rounded-card border border-red-200"
+                  className="flex items-center justify-between p-3 bg-red-50 rounded-lg border border-red-200"
                 >
                   <div>
                     <div className="text-body font-medium text-text-main">

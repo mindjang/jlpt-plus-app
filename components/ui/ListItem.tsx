@@ -23,7 +23,7 @@ export const ListItem: React.FC<ListItemProps> = ({
 }) => {
   return (
     <div
-      className="flex items-center px-4 py-2.5 border-b border-divider cursor-pointer hover:bg-page transition-colors"
+      className="flex items-center px-4 py-2.5 border-b border-divider cursor-pointer active:bg-gray-50"
     >
       {/* 레벨 칩 */}
       <LevelChip level={level} />

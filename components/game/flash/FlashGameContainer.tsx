@@ -70,11 +70,11 @@ export function FlashGameContainer({ level, mode, onExit }: FlashGameContainerPr
         </div>
 
         <div className="flex items-center gap-2">
-          <button onClick={togglePause} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30">
+          <button onClick={togglePause} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white active:bg-white/30">
             <Pause fill="currentColor" size={20} />
           </button>
           {gameState === 'playing' && (
-            <button onClick={onExit} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white/30">
+            <button onClick={onExit} className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white active:bg-white/30">
               <X size={20} />
             </button>
           )}
@@ -143,7 +143,7 @@ export function FlashGameContainer({ level, mode, onExit }: FlashGameContainerPr
                 transition={{ delay: idx * 0.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => handleAnswer(option)}
-                className="px-4 py-5 bg-gradient-to-br from-blue-600/80 to-purple-600/80 backdrop-blur-md border-2 border-white/30 rounded-lg font-bold text-white text-lg shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.6)] transition-all active:bg-cyan-500"
+                className="px-4 py-5 bg-gradient-to-br from-blue-600/80 to-purple-600/80 backdrop-blur-md border border-white/30 rounded-lg font-bold text-white text-lg active:bg-cyan-500"
               >
                 {option.split(',')[0]}
               </motion.button>
@@ -184,14 +184,14 @@ export function FlashGameContainer({ level, mode, onExit }: FlashGameContainerPr
             <div className="space-y-3">
               <button
                 onClick={restartGame}
-                className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white rounded-lg font-bold flex items-center justify-center gap-2 shadow-lg"
+                className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-bold flex items-center justify-center gap-2 active:opacity-80"
               >
                 <RotateCcw size={20} />
                 RESTART
               </button>
               <button
                 onClick={onExit}
-                className="w-full py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-bold"
+                className="w-full py-3 bg-white/10 active:bg-white/20 text-white rounded-lg font-bold"
               >
                 EXIT MENU
               </button>

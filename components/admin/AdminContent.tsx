@@ -84,7 +84,7 @@ export function AdminContent() {
       </div>
 
       {message && (
-        <div className={`p-3 rounded-card text-body ${message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+        <div className={`p-3 rounded-lg text-body ${message.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
           {message.text}
         </div>
       )}
@@ -94,7 +94,7 @@ export function AdminContent() {
           const setting = settings[level] || { word: true, kanji: true }
 
           return (
-            <div key={level} className="bg-page rounded-card p-5 border border-divider">
+            <div key={level} className="bg-page rounded-lg p-5 border border-divider">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-lg font-bold text-text-main">{level}</span>
                 <span className="text-xs text-text-sub bg-white px-2 py-1 rounded border border-divider">
@@ -142,13 +142,13 @@ export function AdminContent() {
                 <div className="pt-2 border-t border-divider flex gap-2">
                   <button
                     onClick={() => openViewer(level, 'word')}
-                    className="flex-1 py-1.5 text-xs font-medium text-text-main bg-white border border-divider rounded hover:bg-gray-50"
+                    className="flex-1 py-1.5 text-xs font-medium text-text-main bg-white border border-divider rounded active:bg-gray-50"
                   >
                     단어 목록
                   </button>
                   <button
                     onClick={() => openViewer(level, 'kanji')}
-                    className="flex-1 py-1.5 text-xs font-medium text-text-main bg-white border border-divider rounded hover:bg-gray-50"
+                    className="flex-1 py-1.5 text-xs font-medium text-text-main bg-white border border-divider rounded active:bg-gray-50"
                   >
                     한자 목록
                   </button>

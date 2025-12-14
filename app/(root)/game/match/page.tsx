@@ -60,12 +60,12 @@ export default function MatchGamePage() {
 
       <div className="relative z-10 p-6 flex flex-col h-screen">
         <header className="flex items-center justify-between mb-12">
-          <button onClick={() => router.back()} className="p-2 hover:bg-white/10 rounded-full transition-colors">
+          <button onClick={() => router.back()} className="p-2 active:bg-white/10 rounded-full">
             <ArrowLeft className="text-white" />
           </button>
           <div className="flex items-center gap-2">
             <Brain className="text-pink-300" size={28} />
-            <h1 className="text-2xl font-bold text-white drop-shadow-lg italic tracking-wider">
+            <h1 className="text-2xl font-bold text-white italic tracking-wider">
               WORD MATCH
             </h1>
             <Brain className="text-pink-300" size={28} />
@@ -117,8 +117,8 @@ export default function MatchGamePage() {
                     key={diff}
                     onClick={() => setDifficulty(diff)}
                     className={`py-3 rounded-lg font-bold transition-all ${difficulty === diff
-                        ? 'bg-white text-purple-600 shadow-lg scale-105'
-                        : 'bg-white/20 text-white hover:bg-white/30'
+                        ? 'bg-white text-purple-600'
+                        : 'bg-white/20 text-white active:bg-white/30'
                       }`}
                   >
                     {diff === 'easy' ? '쉬움 (4쌍)' : diff === 'medium' ? '보통 (6쌍)' : '어려움 (8쌍)'}
@@ -136,8 +136,8 @@ export default function MatchGamePage() {
                     key={lvl}
                     onClick={() => setSelectedLevel(lvl)}
                     className={`flex-1 py-3 rounded-lg font-bold transition-all ${selectedLevel === lvl
-                        ? 'bg-white text-purple-600 shadow-lg scale-105'
-                        : 'bg-white/20 text-white hover:bg-white/30'
+                        ? 'bg-white text-purple-600'
+                        : 'bg-white/20 text-white active:bg-white/30'
                       }`}
                   >
                     {lvl}
@@ -153,8 +153,8 @@ export default function MatchGamePage() {
                 <button
                   onClick={() => setGameMode('word')}
                   className={`p-4 rounded-lg border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'word'
-                      ? 'border-white bg-white/20 text-white shadow-lg'
-                      : 'border-white/30 bg-white/5 text-white/70 hover:bg-white/10'
+                      ? 'border-white bg-white/20 text-white'
+                      : 'border-white/30 bg-white/5 text-white/70 active:bg-white/10'
                     }`}
                 >
                   <span className="text-2xl">あ</span>
@@ -163,8 +163,8 @@ export default function MatchGamePage() {
                 <button
                   onClick={() => setGameMode('kanji')}
                   className={`p-4 rounded-lg border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'kanji'
-                      ? 'border-white bg-white/20 text-white shadow-lg'
-                      : 'border-white/30 bg-white/5 text-white/70 hover:bg-white/10'
+                      ? 'border-white bg-white/20 text-white'
+                      : 'border-white/30 bg-white/5 text-white/70 active:bg-white/10'
                     }`}
                 >
                   <span className="text-2xl">字</span>
@@ -176,12 +176,11 @@ export default function MatchGamePage() {
 
           {/* Start Button */}
           <motion.button
-            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={startGame}
-            className="w-full max-w-xs py-5 bg-white text-purple-600 rounded-lg font-black text-2xl shadow-lg flex items-center justify-center gap-3 relative overflow-hidden group"
+            className="w-full max-w-xs py-5 bg-white text-purple-600 rounded-lg font-black text-2xl flex items-center justify-center gap-3 relative overflow-hidden group"
           >
-            <div className="absolute inset-0 bg-pink-200 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12"></div>
+            <div className="absolute inset-0 bg-pink-200 translate-x-[-100%] group-active:translate-x-[100%] transition-transform duration-500 skew-x-12"></div>
             <Play fill="currentColor" size={28} />
             START GAME
           </motion.button>

@@ -26,7 +26,7 @@ const COLORS = [
 
 export function CategoryPieChart({ data, title = '카테고리별 분포' }: CategoryPieChartProps) {
   return (
-    <div className="bg-surface rounded-lg border border-divider p-4">
+    <div className="bg-surface rounded-lg border border-divider p-6">
       <h3 className="text-body font-semibold text-text-main mb-4">{title}</h3>
       <ResponsiveContainer width="100%" height={300}>
         <PieChart>
@@ -35,7 +35,6 @@ export function CategoryPieChart({ data, title = '카테고리별 분포' }: Cat
             cx="50%"
             cy="50%"
             labelLine={false}
-            label={(entry) => `${entry.name}: ${entry.value}`}
             outerRadius={80}
             fill="#8884d8"
             dataKey="value"

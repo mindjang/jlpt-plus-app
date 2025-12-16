@@ -588,16 +588,58 @@ function MyPageContent() {
       {/* Other Modals (Phone, Terms, Privacy, Redeem, Logout) */}
 
       {phoneModal.showPhoneModal && (
-        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-surface w-full max-w-md rounded-lg border border-divider p-6 space-y-5 relative">
-            {/* ... Existing Phone Modal Content ... */}
-            <button onClick={() => { phoneModal.setShowPhoneModal(false); phoneModal.setPhoneError(null); payment.setPendingPlan(null); }} className="absolute right-4 top-4 w-8 h-8 flex items-center justify-center text-text-sub active:bg-gray-100 rounded-full">✕</button>
-            <div className="pr-8"><h2 className="text-xl font-bold text-text-main mb-2">정보 등록</h2><p className="text-sm text-text-sub leading-relaxed">원활한 서비스 이용을 위해 정보를 확인해주세요.</p></div>
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-surface w-full max-w-md rounded-lg border border-divider p-6 space-y-5 relative my-auto">
+            <button onClick={() => { phoneModal.setShowPhoneModal(false); phoneModal.setPhoneError(null); payment.setPendingPlan(null); }} className="absolute right-4 top-4 w-8 h-8 flex items-center justify-center text-text-sub active:bg-gray-100 rounded-full z-10">✕</button>
+            <div className="pr-8">
+              <h2 className="text-xl font-bold text-text-main mb-2">정보 등록</h2>
+              <p className="text-sm text-text-sub leading-relaxed">원활한 서비스 이용을 위해 정보를 확인해주세요.</p>
+            </div>
             <div className="space-y-4">
-              <div><label className="text-sm font-semibold text-text-main mb-2 block">이름</label><input value={phoneModal.nameInput} onChange={(e) => phoneModal.setNameInput(e.target.value)} placeholder="이름을 입력하세요" className="w-full border border-divider rounded-lg px-4 py-3 text-body bg-page focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" /></div>
-              <div><label className="text-sm font-semibold text-text-main mb-2 block">휴대폰 번호</label><div className="flex gap-2"><select value={phoneModal.countryCode} onChange={(e) => phoneModal.setCountryCode(e.target.value)} className="border border-divider rounded-lg px-3 py-3 bg-page text-body focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"><option value="82">+82 KR</option><option value="81">+81 JP</option><option value="1">+1 US</option></select><input value={phoneModal.phoneInput} onChange={(e) => phoneModal.setPhoneInput(e.target.value)} placeholder="01012345678" className="flex-1 border border-divider rounded-lg px-4 py-3 text-body bg-page focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" /></div></div>
-              {phoneModal.phoneError && (<div className="p-3 rounded-lg bg-red-50 border border-red-200"><p className="text-sm text-red-600 font-medium">{phoneModal.phoneError}</p></div>)}
-              <div className="flex gap-2 pt-2"><button onClick={phoneModal.savePhoneAndContinue} disabled={phoneModal.phoneLoading} className="flex-1 py-3.5 rounded-lg bg-black text-white font-semibold active:opacity-80 disabled:opacity-60 disabled:cursor-not-allowed">{phoneModal.phoneLoading ? '저장 중...' : '저장하기'}</button></div>
+              <div>
+                <label className="text-sm font-semibold text-text-main mb-2 block">이름</label>
+                <input 
+                  value={phoneModal.nameInput} 
+                  onChange={(e) => phoneModal.setNameInput(e.target.value)} 
+                  placeholder="이름을 입력하세요" 
+                  className="w-full border border-divider rounded-lg px-4 py-3 text-body bg-page focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" 
+                />
+              </div>
+              <div>
+                <label className="text-sm font-semibold text-text-main mb-2 block">휴대폰 번호</label>
+                <div className="flex gap-2 min-w-0">
+                  <select 
+                    value={phoneModal.countryCode} 
+                    onChange={(e) => phoneModal.setCountryCode(e.target.value)} 
+                    className="border border-divider rounded-lg px-3 py-3 bg-page text-body focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all shrink-0"
+                    style={{ minWidth: '100px' }}
+                  >
+                    <option value="82">+82 KR</option>
+                    <option value="81">+81 JP</option>
+                    <option value="1">+1 US</option>
+                  </select>
+                  <input 
+                    value={phoneModal.phoneInput} 
+                    onChange={(e) => phoneModal.setPhoneInput(e.target.value)} 
+                    placeholder="01012345678" 
+                    className="flex-1 min-w-0 border border-divider rounded-lg px-4 py-3 text-body bg-page focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" 
+                  />
+                </div>
+              </div>
+              {phoneModal.phoneError && (
+                <div className="p-3 rounded-lg bg-red-50 border border-red-200">
+                  <p className="text-sm text-red-600 font-medium">{phoneModal.phoneError}</p>
+                </div>
+              )}
+              <div className="flex gap-2 pt-2">
+                <button 
+                  onClick={phoneModal.savePhoneAndContinue} 
+                  disabled={phoneModal.phoneLoading} 
+                  className="flex-1 py-3.5 rounded-lg bg-black text-white font-semibold active:opacity-80 disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {phoneModal.phoneLoading ? '저장 중...' : '저장하기'}
+                </button>
+              </div>
             </div>
           </div>
         </div>

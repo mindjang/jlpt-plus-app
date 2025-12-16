@@ -39,8 +39,8 @@ export function PeriodStats() {
           startDate.setDate(startDate.getDate() - 7)
           break
         case 'month':
-          startDate = new Date(today)
-          startDate.setMonth(startDate.getMonth() - 1)
+          // 해당 월의 1일부터 오늘까지
+          startDate = new Date(today.getFullYear(), today.getMonth(), 1)
           break
         case 'year':
           startDate = new Date(today)
@@ -89,45 +89,57 @@ export function PeriodStats() {
           })
         }
       } else if (period === 'month') {
-        // 월간: 주 단위 (4주)
-        for (let week = 0; week < 4; week++) {
-          const weekStart = new Date(startDate)
-          weekStart.setDate(weekStart.getDate() + week * 7)
-          const weekEnd = new Date(weekStart)
-          weekEnd.setDate(weekEnd.getDate() + 6)
+        // 월간: 해당 월의 모든 날짜를 주 단위로 그룹화
+        const monthStart = new Date(startDate)
+        const monthEnd = new Date(today.getFullYear(), today.getMonth() + 1, 0) // 해당 월의 마지막 날
+        const daysInMonth = monthEnd.getDate()
+        
+        // 주 단위로 그룹화 (최대 5주)
+        const weeks: { start: Date; end: Date }[] = []
+        let currentWeekStart = new Date(monthStart)
+        
+        while (currentWeekStart <= monthEnd) {
+          const weekEnd = new Date(currentWeekStart)
+          weekEnd.setDate(Math.min(weekEnd.getDate() + 6, monthEnd.getDate()))
+          weeks.push({ start: new Date(currentWeekStart), end: new Date(weekEnd) })
+          currentWeekStart.setDate(currentWeekStart.getDate() + 7)
+        }
 
+        weeks.forEach((week, weekIndex) => {
           let wordTotal = 0
           let kanjiTotal = 0
           let correctTotal = 0
           let questionTotal = 0
 
-          for (let d = 0; d < 7; d++) {
-            const date = new Date(weekStart)
-            date.setDate(date.getDate() + d)
-            const dateStr = date.toISOString().split('T')[0]
+          // 해당 주의 모든 날짜 처리
+          const currentDate = new Date(week.start)
+          while (currentDate <= week.end && currentDate <= monthEnd) {
+            const dateStr = currentDate.toISOString().split('T')[0]
             const activity = activities[dateStr]
 
             if (activity) {
-              wordTotal += activity.contentBreakdown.word.questions
-              kanjiTotal += activity.contentBreakdown.kanji.questions
-              correctTotal += activity.contentBreakdown.word.correct + activity.contentBreakdown.kanji.correct
-              questionTotal += activity.totalQuestions
+              wordTotal += activity.contentBreakdown.word.questions || 0
+              kanjiTotal += activity.contentBreakdown.kanji.questions || 0
+              correctTotal += (activity.contentBreakdown.word.correct || 0) + (activity.contentBreakdown.kanji.correct || 0)
+              questionTotal += activity.totalQuestions || 0
             }
+            
+            currentDate.setDate(currentDate.getDate() + 1)
           }
 
           barData.push({
-            name: `${week + 1}주`,
+            name: `${weekIndex + 1}주`,
             word: wordTotal,
             kanji: kanjiTotal,
           })
 
           const accuracy = questionTotal > 0 ? (correctTotal / questionTotal) * 100 : 0
           lineData.push({
-            date: `${weekStart.getMonth() + 1}/${weekStart.getDate()}`,
+            date: `${week.start.getMonth() + 1}/${week.start.getDate()}`,
             accuracy: Math.round(accuracy),
             questions: questionTotal,
           })
-        }
+        })
       } else {
         // 연간/전체: 월 단위
         const months = ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월']

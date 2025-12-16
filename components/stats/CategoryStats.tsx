@@ -201,8 +201,8 @@ export function CategoryStats() {
 
       {/* 7일 학습 정보 */}
       {!loading && weekData.length > 0 && (
-        <div className="bg-surface rounded-lg border border-divider p-4">
-          <h3 className="text-body font-semibold text-text-main mb-4">학습 정보</h3>
+        <div className="bg-surface rounded-lg border border-divider p-6">
+          <h3 className="text-body font-semibold text-text-main mb-8">학습 정보</h3>
           <div className="flex items-end gap-2 mb-4">
             {weekData.map((day, index) => (
               <div key={index} className="flex-1 flex flex-col items-center">

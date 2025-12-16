@@ -5,6 +5,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import './globals.css'
 import { Providers } from '@/components/Providers'
+import { LEVEL_COLORS } from '@/lib/constants/colors'
 
 // FontAwesome CSS 자동 주입 비활성화 (SVG만 사용)
 config.autoAddCss = false
@@ -49,7 +50,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: '#0F7FE1',
+  themeColor: LEVEL_COLORS.N1,
 }
 
 export default function RootLayout({

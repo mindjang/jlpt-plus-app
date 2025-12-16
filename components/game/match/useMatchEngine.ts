@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Level } from '@/data'
-import { getNaverWordsByLevel } from '@/data/words/index'
-import { getKanjiByLevel } from '@/data/kanji'
+import { getNaverWordsByLevelAsync } from '@/data/words/index'
+import { getKanjiByLevelAsync } from '@/data/kanji'
 import { recordGameResult } from '@/lib/stats/calculator'
 
 export type GameState = 'playing' | 'paused' | 'complete'
@@ -67,63 +67,75 @@ export function useMatchEngine(
 
   // Initialize Cards
   useEffect(() => {
-    let data: { question: string; answer: string }[] = []
+    const loadData = async () => {
+      let data: { question: string; answer: string }[] = []
 
-    if (mode === 'word') {
-      const naverWords = getNaverWordsByLevel(level)
-        .filter(w => w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0)
-        .sort(() => Math.random() - 0.5)
-        .slice(0, totalPairs)
+      if (mode === 'word') {
+        const naverWords = await getNaverWordsByLevelAsync(level)
+        const filtered = naverWords
+          .filter(w => w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0)
+          .sort(() => Math.random() - 0.5)
+          .slice(0, totalPairs)
 
-      data = naverWords.map(w => {
-        // 첫 번째 part의 첫 번째 의미 사용
-        const firstMean = w.partsMeans[0].means[0]
-        return {
-          question: w.entry,
-          answer: firstMean.split(';')[0].trim()
-        }
+        data = filtered.map(w => {
+          // 첫 번째 part의 첫 번째 의미 사용
+          const firstMean = w.partsMeans[0].means[0]
+          return {
+            question: w.entry,
+            answer: firstMean.split(';')[0].trim()
+          }
+        })
+      } else {
+        const kanji = await getKanjiByLevelAsync(level)
+        const filtered = kanji
+          .filter(k => k.kanji?.meaning?.korean || k.kanji?.meaning?.english || k.meaning)
+          .sort(() => Math.random() - 0.5)
+          .slice(0, totalPairs)
+
+        data = filtered.map(k => ({
+          question: k.kanji?.character || k.ka_utf,
+          answer: (k.kanji?.meaning?.korean || k.kanji?.meaning?.english || k.meaning)!.split(',')[0]
+        }))
+      }
+
+      // 데이터가 없으면 게임 시작하지 않음
+      if (data.length === 0) {
+        console.warn('[MatchGame] No data available for', level, mode)
+        return
+      }
+
+      // 카드 생성 (문제 + 답 쌍)
+      const newCards: Card[] = []
+      data.forEach((item, index) => {
+        newCards.push({
+          id: index * 2,
+          pairId: index,
+          content: item.question,
+          type: 'question',
+          isFlipped: false,
+          isMatched: false
+        })
+        newCards.push({
+          id: index * 2 + 1,
+          pairId: index,
+          content: item.answer,
+          type: 'answer',
+          isFlipped: false,
+          isMatched: false
+        })
       })
-    } else {
-      const kanji = getKanjiByLevel(level)
-        .filter(k => k.kanji?.meaning?.korean || k.kanji?.meaning?.english || k.meaning)
-        .sort(() => Math.random() - 0.5)
-        .slice(0, totalPairs)
 
-      data = kanji.map(k => ({
-        question: k.kanji?.character || k.ka_utf,
-        answer: (k.kanji?.meaning?.korean || k.kanji?.meaning?.english || k.meaning)!.split(',')[0]
-      }))
+      // 카드 섞기
+      const shuffled = newCards.sort(() => Math.random() - 0.5)
+      setCards(shuffled)
+      setFlippedCards([])
+      setMatchedPairs(0)
+      setMoves(0)
+      setTimeElapsed(0)
+      setGameState('playing')
     }
 
-    // 카드 생성 (문제 + 답 쌍)
-    const newCards: Card[] = []
-    data.forEach((item, index) => {
-      newCards.push({
-        id: index * 2,
-        pairId: index,
-        content: item.question,
-        type: 'question',
-        isFlipped: false,
-        isMatched: false
-      })
-      newCards.push({
-        id: index * 2 + 1,
-        pairId: index,
-        content: item.answer,
-        type: 'answer',
-        isFlipped: false,
-        isMatched: false
-      })
-    })
-
-    // 카드 섞기
-    const shuffled = newCards.sort(() => Math.random() - 0.5)
-    setCards(shuffled)
-    setFlippedCards([])
-    setMatchedPairs(0)
-    setMoves(0)
-    setTimeElapsed(0)
-    setGameState('playing')
+    loadData()
   }, [level, mode, difficulty])
 
   const handleCardClick = (cardId: number) => {

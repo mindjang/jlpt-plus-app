@@ -3,7 +3,7 @@
  * 한자에 대한 관련 단어를 레벨별로 로드하고 관리
  */
 import { useState, useEffect, useMemo } from 'react'
-import { getNaverWordsByLevel } from '@/data/words/index'
+import { getNaverWordsByLevelAsync } from '@/data/words/index'
 import type { NaverWord } from '@/data/types'
 import type { Level } from '@/data/types'
 
@@ -26,8 +26,8 @@ async function getCachedRelatedWords(
   }
 
   // 해당 레벨의 네이버 단어 데이터
-  const levelWords: NaverWord[] = getNaverWordsByLevel(level)
-  // entry에 해당 한자가 포함된 것만 필터링 (상세 데이터 없이 동작)
+  const levelWords: NaverWord[] = await getNaverWordsByLevelAsync(level)
+  // kanji 필드에 해당 한자가 포함된 것만 필터링 (상세 데이터 없이 동작)
   const filteredWords = levelWords.filter((w) => w.kanji?.includes(kanjiChar))
   
   RELATED_WORD_CACHE.set(key, { timestamp: now, items: filteredWords })

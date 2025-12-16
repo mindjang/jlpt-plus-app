@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts'
+import { LEVEL_COLORS } from '@/lib/constants/colors'
 
 interface BarChartData {
   name: string
@@ -45,8 +46,8 @@ export function StudyBarChart({ data, period }: StudyBarChartProps) {
             }}
           />
           <Legend />
-          <Bar dataKey="word" fill="#8b5cf6" name="단어" radius={[4, 4, 0, 0]} />
-          <Bar dataKey="kanji" fill="#3b82f6" name="한자" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="word" fill={LEVEL_COLORS.N5} name="단어" radius={[4, 4, 0, 0]} />
+          <Bar dataKey="kanji" fill={LEVEL_COLORS.N4} name="한자" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>

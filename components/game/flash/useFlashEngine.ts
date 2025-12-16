@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Level } from '@/data'
-import { getNaverWordsByLevel } from '@/data/words/index'
-import { getKanjiByLevel } from '@/data/kanji'
+import { getNaverWordsByLevelAsync } from '@/data/words/index'
+import { getKanjiByLevelAsync } from '@/data/kanji'
 import { recordGameResult } from '@/lib/stats/calculator'
 
 export type GameState = 'playing' | 'paused' | 'gameover'
@@ -34,38 +34,51 @@ export function useFlashEngine(level: Level, mode: 'word' | 'kanji') {
 
   // Initialize Data
   useEffect(() => {
-    let data: QuizItem[] = []
-    if (mode === 'word') {
-      data = getNaverWordsByLevel(level)
-        .filter(w => w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0)
-        .map((w) => {
-          // 첫 번째 part의 첫 번째 의미 사용
-          const firstMean = w.partsMeans[0].means[0]
-          return {
-            text: w.entry,
-            subText: undefined, // 네이버 데이터에는 furigana 정보가 없음
-            answer: firstMean,
-          }
-        })
-    } else {
-      data = getKanjiByLevel(level)
-        .filter(k => k.kanji?.meaning?.korean || k.kanji?.meaning?.english || k.meaning) // undefined 제거
-        .map((k) => ({
-          text: k.kanji?.character || k.ka_utf,
-          subText: shortReading(k.kanji?.kunyomi?.hiragana || k.kunyomi_ja),
-          answer: (k.kanji?.meaning?.korean || k.kanji?.meaning?.english || k.meaning)!,
-        }))
+    const loadData = async () => {
+      let data: QuizItem[] = []
+      if (mode === 'word') {
+        const words = await getNaverWordsByLevelAsync(level)
+        data = words
+          .filter(w => w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0)
+          .map((w) => {
+            // 첫 번째 part의 첫 번째 의미 사용
+            const firstMean = w.partsMeans[0].means[0]
+            return {
+              text: w.entry,
+              subText: undefined, // 네이버 데이터에는 furigana 정보가 없음
+              answer: firstMean,
+            }
+          })
+      } else {
+        const kanji = await getKanjiByLevelAsync(level)
+        data = kanji
+          .filter(k => k.kanji?.meaning?.korean || k.kanji?.meaning?.english || k.meaning) // undefined 제거
+          .map((k) => ({
+            text: k.kanji?.character || k.ka_utf,
+            subText: shortReading(k.kanji?.kunyomi?.hiragana || k.kunyomi_ja),
+            answer: (k.kanji?.meaning?.korean || k.kanji?.meaning?.english || k.meaning)!,
+          }))
+      }
+      
+      // 데이터가 없으면 게임 시작하지 않음
+      if (data.length === 0) {
+        console.warn('[FlashGame] No data available for', level, mode)
+        return
+      }
+
+      poolRef.current = data.sort(() => Math.random() - 0.5)
+      usedIndices.current.clear()
+
+      setScore(0)
+      setStreak(0)
+      setMaxStreak(0)
+      setQuestionCount(0)
+      setGameState('playing')
+
+      nextQuestion()
     }
-    poolRef.current = data.sort(() => Math.random() - 0.5)
-    usedIndices.current.clear()
 
-    setScore(0)
-    setStreak(0)
-    setMaxStreak(0)
-    setQuestionCount(0)
-    setGameState('playing')
-
-    nextQuestion()
+    loadData()
 
     return () => {
       if (timerRef.current) clearInterval(timerRef.current)
@@ -110,6 +123,12 @@ export function useFlashEngine(level: Level, mode: 'word' | 'kanji') {
         timestamp: Date.now(),
       })
       
+      return
+    }
+
+    // 데이터가 없으면 게임 종료
+    if (!poolRef.current || poolRef.current.length === 0) {
+      console.warn('[FlashGame] Pool is empty')
       return
     }
 

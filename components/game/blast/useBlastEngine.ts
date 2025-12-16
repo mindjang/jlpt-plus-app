@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Level } from '@/data'
-import { getNaverWordsByLevel } from '@/data/words/index'
-import { getKanjiByLevel } from '@/data/kanji'
+import { getNaverWordsByLevelAsync } from '@/data/words/index'
+import { getKanjiByLevelAsync } from '@/data/kanji'
 import { recordGameResult } from '@/lib/stats/calculator'
 
 export type GameState = 'menu' | 'playing' | 'paused' | 'gameover'
@@ -76,41 +76,57 @@ export function useBlastEngine(level: Level, mode: 'word' | 'kanji') {
 
   // Initialize Data
   useEffect(() => {
-    let data: any[] = []
-    if (mode === 'word') {
-      data = getNaverWordsByLevel(level)
-        .filter(w => w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0)
-        .map((w) => {
-          // 첫 번째 part의 첫 번째 의미 사용
-          const firstMean = w.partsMeans[0].means[0]
-          return {
-            text: w.entry,
-            subText: undefined, // 네이버 데이터에는 furigana 정보가 없음
-            answer: firstMean,
-          }
-        })
-    } else {
-      data = getKanjiByLevel(level).map((k) => ({
-        text: k.kanji?.character || k.ka_utf,
-        subText: shortReading(k.kanji?.kunyomi?.hiragana || k.kunyomi_ja),
-        answer: k.kanji?.meaning?.korean || k.kanji?.meaning?.english || k.meaning,
-      }))
+    const loadData = async () => {
+      let data: any[] = []
+      if (mode === 'word') {
+        const words = await getNaverWordsByLevelAsync(level)
+        data = words
+          .filter(w => w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0)
+          .map((w) => {
+            // 첫 번째 part의 첫 번째 의미 사용
+            const firstMean = w.partsMeans[0].means[0]
+            return {
+              text: w.entry,
+              subText: undefined, // 네이버 데이터에는 furigana 정보가 없음
+              answer: firstMean,
+            }
+          })
+      } else {
+        const kanji = await getKanjiByLevelAsync(level)
+        data = kanji
+          .filter(k => k.kanji?.meaning?.korean || k.kanji?.meaning?.english || k.meaning) // undefined 제거
+          .map((k) => ({
+            text: k.kanji?.character || k.ka_utf,
+            subText: shortReading(k.kanji?.kunyomi?.hiragana || k.kunyomi_ja),
+            answer: k.kanji?.meaning?.korean || k.kanji?.meaning?.english || k.meaning,
+          }))
+      }
+      
+      // 데이터가 없으면 게임 시작하지 않음
+      if (data.length === 0) {
+        console.warn('[BlastGame] No data available for', level, mode)
+        return
+      }
+
+      poolRef.current = data.sort(() => Math.random() - 0.5)
+
+      spawnInterval.current = 1800
+      baseSpeed.current = 0.025
+      itemsRef.current = []
+      setItems([])
+      setScore(0)
+      setLives(5)
+      setCombo(0)
+      setMaxCombo(0)
+      setGameState('playing')
+      lastSpawnTime.current = performance.now()
+      lastUpdateTime.current = performance.now()
+
+      // 데이터 로드 완료 후에만 게임 루프 시작
+      requestRef.current = requestAnimationFrame(gameLoop)
     }
-    poolRef.current = data.sort(() => Math.random() - 0.5)
 
-    spawnInterval.current = 1800
-    baseSpeed.current = 0.025
-    itemsRef.current = []
-    setItems([])
-    setScore(0)
-    setLives(5)
-    setCombo(0)
-    setMaxCombo(0)
-    setGameState('playing')
-    lastSpawnTime.current = performance.now()
-    lastUpdateTime.current = performance.now()
-
-    requestRef.current = requestAnimationFrame(gameLoop)
+    loadData()
 
     return () => {
       if (requestRef.current) cancelAnimationFrame(requestRef.current)
@@ -120,6 +136,11 @@ export function useBlastEngine(level: Level, mode: 'word' | 'kanji') {
   // Game Loop
   const gameLoop = (time: number) => {
     if (gameStateRef.current !== 'playing') {
+      return
+    }
+
+    // 데이터가 로드되지 않았으면 게임 루프 중단
+    if (!poolRef.current || poolRef.current.length === 0) {
       return
     }
 
@@ -212,7 +233,18 @@ export function useBlastEngine(level: Level, mode: 'word' | 'kanji') {
   }
 
   const spawnItem = () => {
+    // poolRef가 비어있거나 초기화되지 않았으면 스폰하지 않음
+    if (!poolRef.current || poolRef.current.length === 0) {
+      return
+    }
+
     const raw = poolRef.current[Math.floor(Math.random() * poolRef.current.length)]
+    
+    // raw가 undefined이거나 필수 필드가 없으면 스폰하지 않음
+    if (!raw || !raw.text || !raw.answer) {
+      return
+    }
+
     const newItem: FallingItem = {
       id: Date.now() + Math.random(),
       text: raw.text,

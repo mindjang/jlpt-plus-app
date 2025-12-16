@@ -60,13 +60,13 @@ export function BottomNav() {
                 href={tab.href}
                 aria-current={isActive ? 'page' : undefined}
                 className={`flex flex-col items-center justify-center flex-1 h-full transition-colors ${
-                  isActive ? 'text-[#FF8A00]' : 'text-text-sub'
+                  isActive ? 'text-level-n5' : 'text-text-sub'
                 }`}
               >
                 <TabIcon name={tab.icon} active={isActive} />
                 <span
                   className={`text-label transition-colors ${
-                    isActive ? 'font-bold text-[#FF8A00]' : 'text-text-sub'
+                    isActive ? 'font-bold text-level-n5' : 'text-text-sub'
                   }`}
                 >
                   {tab.label}

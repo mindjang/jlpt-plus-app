@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { LEVEL_COLORS } from '@/lib/constants/colors'
 
 interface TabIconProps {
   name: string
@@ -9,7 +10,7 @@ interface TabIconProps {
 
 export function TabIcon({ name, active }: TabIconProps) {
   const baseClasses = 'w-6 h-6 transition-colors'
-  const activeClasses = active ? 'text-[#FF8A00]' : 'text-text-sub'
+  const activeClasses = active ? `text-[${LEVEL_COLORS.N5}]` : 'text-text-sub'
 
   // 간단한 SVG 아이콘 (나중에 더 나은 아이콘으로 교체 가능)
   const renderIcon = () => {

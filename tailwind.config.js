@@ -1,3 +1,56 @@
+// Tailwind config에서 TypeScript 파일을 직접 import할 수 없으므로
+// 색상 값을 직접 계산합니다.
+// 실제 색상 값은 lib/constants/colors.ts에서 관리됩니다.
+
+// 레벨별 단색 (Primary Color)
+const LEVEL_COLORS = {
+  N5: '#FF8C00', // 밝은 주황 (가장 쉬움)
+  N4: '#FF6B35', // 오렌지-빨강
+  N3: '#E63946', // 빨강
+  N2: '#6A4C93', // 보라
+  N1: '#1E88E5', // 파랑 (가장 어려움)
+}
+
+// 그라데이션용 매우 밝은 색상 생성 함수
+function generateLightGradientColor(hex, lightness = 0.92) {
+  const r = Math.min(255, parseInt(hex.slice(1, 3), 16) + (255 - parseInt(hex.slice(1, 3), 16)) * lightness)
+  const g = Math.min(255, parseInt(hex.slice(3, 5), 16) + (255 - parseInt(hex.slice(3, 5), 16)) * lightness)
+  const b = Math.min(255, parseInt(hex.slice(5, 7), 16) + (255 - parseInt(hex.slice(5, 7), 16)) * lightness)
+  return `#${Math.round(r).toString(16).padStart(2, '0')}${Math.round(g).toString(16).padStart(2, '0')}${Math.round(b).toString(16).padStart(2, '0')}`
+}
+
+// 그라데이션용 중간 밝기 색상 생성 함수
+function generateMediumGradientColor(hex, lightness = 0.85) {
+  const r = Math.min(255, parseInt(hex.slice(1, 3), 16) + (255 - parseInt(hex.slice(1, 3), 16)) * lightness)
+  const g = Math.min(255, parseInt(hex.slice(3, 5), 16) + (255 - parseInt(hex.slice(3, 5), 16)) * lightness)
+  const b = Math.min(255, parseInt(hex.slice(5, 7), 16) + (255 - parseInt(hex.slice(5, 7), 16)) * lightness)
+  return `#${Math.round(r).toString(16).padStart(2, '0')}${Math.round(g).toString(16).padStart(2, '0')}${Math.round(b).toString(16).padStart(2, '0')}`
+}
+
+// 레벨별 그라데이션 (LEVEL_COLORS에서 자동 생성)
+const LEVEL_GRADIENTS = {
+  N5: { 
+    from: generateLightGradientColor(LEVEL_COLORS.N5, 0.92), 
+    to: generateMediumGradientColor(LEVEL_COLORS.N5, 0.85) 
+  },
+  N4: { 
+    from: generateLightGradientColor(LEVEL_COLORS.N4, 0.92), 
+    to: generateMediumGradientColor(LEVEL_COLORS.N4, 0.85) 
+  },
+  N3: { 
+    from: generateLightGradientColor(LEVEL_COLORS.N3, 0.92), 
+    to: generateMediumGradientColor(LEVEL_COLORS.N3, 0.85) 
+  },
+  N2: { 
+    from: generateLightGradientColor(LEVEL_COLORS.N2, 0.92), 
+    to: generateMediumGradientColor(LEVEL_COLORS.N2, 0.85) 
+  },
+  N1: { 
+    from: generateLightGradientColor(LEVEL_COLORS.N1, 0.92), 
+    to: generateMediumGradientColor(LEVEL_COLORS.N1, 0.85) 
+  },
+}
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -10,33 +63,33 @@ module.exports = {
       colors: {
         // 레벨 단색 (List에서 사용)
         level: {
-          n1: '#0F7FE1',
-          n2: '#4841DC',
-          n3: '#D33939',
-          n4: '#D15D10',
-          n5: '#DA7A13',
+          n1: LEVEL_COLORS.N1,
+          n2: LEVEL_COLORS.N2,
+          n3: LEVEL_COLORS.N3,
+          n4: LEVEL_COLORS.N4,
+          n5: LEVEL_COLORS.N5,
         },
         // 레벨 그라데이션 (홈/자동학습 배경 전용)
         levelGradient: {
           n1: {
-            from: '#E9F4FF',
-            to: '#D9E9FF',
+            from: LEVEL_GRADIENTS.N1.from,
+            to: LEVEL_GRADIENTS.N1.to,
           },
           n2: {
-            from: '#EEE8FF',
-            to: '#D9D0FF',
+            from: LEVEL_GRADIENTS.N2.from,
+            to: LEVEL_GRADIENTS.N2.to,
           },
           n3: {
-            from: '#FFECEC',
-            to: '#FFD4D4',
+            from: LEVEL_GRADIENTS.N3.from,
+            to: LEVEL_GRADIENTS.N3.to,
           },
           n4: {
-            from: '#FFEFE8',
-            to: '#FFDCC8',
+            from: LEVEL_GRADIENTS.N4.from,
+            to: LEVEL_GRADIENTS.N4.to,
           },
           n5: {
-            from: '#FFF4D8',
-            to: '#FFE8B3',
+            from: LEVEL_GRADIENTS.N5.from,
+            to: LEVEL_GRADIENTS.N5.to,
           },
         },
         // 표면 색상

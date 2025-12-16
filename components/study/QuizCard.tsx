@@ -2,6 +2,10 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFlag } from '@fortawesome/free-solid-svg-icons'
+import { useAuth } from '@/components/auth/AuthProvider'
+import { ReportModal } from './ReportModal'
 import type { QuizQuestion } from '@/lib/types/quiz'
 
 interface QuizCardProps {
@@ -19,9 +23,12 @@ export function QuizCard({
   onAnswer,
   disabled = false,
 }: QuizCardProps) {
+  const { user } = useAuth()
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
   const [showResult, setShowResult] = useState(false)
   const [isCorrect, setIsCorrect] = useState(false)
+  const [showReportModal, setShowReportModal] = useState(false)
+  const [submittingReport, setSubmittingReport] = useState(false)
 
   // 문제 변경 시 상태 초기화
   useEffect(() => {
@@ -42,6 +49,39 @@ export function QuizCard({
     setTimeout(() => {
       onAnswer(answer)
     }, 1000)
+  }
+
+  // 신고 제출 핸들러
+  const handleSubmitReport = async (report: { content: string; reason: string }) => {
+    if (!user) {
+      throw new Error('로그인이 필요합니다.')
+    }
+
+    setSubmittingReport(true)
+    try {
+      const response = await fetch('/api/reports', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          contentType: question.itemType,
+          contentText: report.content,
+          level: question.level,
+          reason: report.reason,
+        }),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || '신고 제출에 실패했습니다.')
+      }
+
+      // 성공 시 모달 닫기
+      setShowReportModal(false)
+    } finally {
+      setSubmittingReport(false)
+    }
   }
 
   // 문장에서 빈칸 렌더링
@@ -91,8 +131,21 @@ export function QuizCard({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className="bg-surface rounded-lg border border-divider p-8 mb-6"
+        className="bg-surface rounded-lg border border-divider p-8 mb-6 relative"
       >
+        {/* 신고 버튼 */}
+        <button
+          onClick={() => setShowReportModal(true)}
+          className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
+          title="신고하기"
+        >
+          <FontAwesomeIcon
+            icon={faFlag}
+            className="text-text-sub"
+            size="sm"
+          />
+        </button>
+
         {/* 문제 유형 표시 */}
         <div className="text-center mb-4">
           <span className="text-label text-text-sub bg-page px-3 py-1 rounded-full">
@@ -183,6 +236,16 @@ export function QuizCard({
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* 신고 모달 */}
+      <ReportModal
+        isOpen={showReportModal}
+        onClose={() => setShowReportModal(false)}
+        contentType={question.itemType}
+        contentText={question.question}
+        level={question.level}
+        onSubmit={handleSubmitReport}
+      />
     </div>
   )
 }

@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend } from 'recharts'
+import { LEVEL_COLORS } from '@/lib/constants/colors'
 
 interface LineChartData {
   date: string
@@ -37,18 +38,18 @@ export function ProgressLineChart({ data, title = '학습 추이' }: ProgressLin
           <Line
             type="monotone"
             dataKey="accuracy"
-            stroke="#10b981"
+            stroke={LEVEL_COLORS.N3}
             strokeWidth={2}
             name="정답률 (%)"
-            dot={{ fill: '#10b981', r: 4 }}
+            dot={{ fill: LEVEL_COLORS.N3, r: 4 }}
           />
           <Line
             type="monotone"
             dataKey="questions"
-            stroke="#8b5cf6"
+            stroke={LEVEL_COLORS.N2}
             strokeWidth={2}
             name="문제 수"
-            dot={{ fill: '#8b5cf6', r: 4 }}
+            dot={{ fill: LEVEL_COLORS.N2, r: 4 }}
           />
         </LineChart>
       </ResponsiveContainer>

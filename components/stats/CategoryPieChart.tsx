@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts'
+import { LEVEL_COLORS } from '@/lib/constants/colors'
 
 interface PieChartData {
   name: string
@@ -14,7 +15,14 @@ interface CategoryPieChartProps {
   title?: string
 }
 
-const COLORS = ['#8b5cf6', '#3b82f6', '#10b981', '#f59e0b', '#ef4444']
+// 레벨 색상을 순환 사용 (N1부터 N5까지)
+const COLORS = [
+  LEVEL_COLORS.N1,
+  LEVEL_COLORS.N2,
+  LEVEL_COLORS.N3,
+  LEVEL_COLORS.N4,
+  LEVEL_COLORS.N5,
+]
 
 export function CategoryPieChart({ data, title = '카테고리별 분포' }: CategoryPieChartProps) {
   return (

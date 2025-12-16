@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { hexToRgba } from '@/lib/utils/colorUtils'
+import { LEVEL_COLORS } from '@/lib/constants/colors'
 
 interface ProgressDisplayProps {
   /** 현재 진행된 항목 수 */
@@ -31,7 +32,7 @@ interface ProgressDisplayProps {
 export function ProgressDisplay({
   current,
   total,
-  color = '#FF8A00',
+  color = LEVEL_COLORS.N5,
   className = '',
   showNumbers = true,
   numberPosition = 'right',
@@ -41,7 +42,7 @@ export function ProgressDisplay({
 }: ProgressDisplayProps) {
   const progress = total === 0 ? 0 : Math.max(Math.min((current / total) * 100, 100), 0)
   const backgroundColor = hexToRgba(color, 0.3)
-  const borderColor = '#FF8A00'
+  const borderColor = color
 
   // 레이블이나 숫자가 없으면 mb-1 제거
   const hasLabelOrNumber = (label && labelPosition === 'left') || 

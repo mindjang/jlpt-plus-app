@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { Chart, ArcElement, Tooltip, DoughnutController } from 'chart.js'
 import { hexToRgba } from '@/lib/utils/colorUtils'
+import { LEVEL_COLORS } from '@/lib/constants/colors'
 
 interface SemicircleProgressProps {
   value: number
@@ -25,7 +26,7 @@ export function SemicircleProgress({ value, progress, total, color }: Semicircle
   const trackColor = getTrackColor(color)
   const inactiveColor = '#F3F3F3' // 회색 비활성 트랙
   const activeBgColor = hexToRgba(color, 0.5) || color
-  const activeBorderColor = '#FF8A00'
+  const activeBorderColor = color || LEVEL_COLORS.N5
   const percent = Math.min(Math.max(value, 0), 100)
 
   useEffect(() => {

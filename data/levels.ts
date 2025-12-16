@@ -1,4 +1,5 @@
 import { Level, LevelData, LevelGradient } from './types'
+import { LEVEL_GRADIENTS, getLevelGradient as getLevelGradientFromConstants } from '@/lib/constants/colors'
 
 // 레벨별 단어/한자 수 (실제 데이터 기준)
 export const levelData: Record<Level, LevelData> = {
@@ -9,29 +10,15 @@ export const levelData: Record<Level, LevelData> = {
   N1: { words: 2676, kanji: 1232 },
 }
 
-// 레벨별 그라데이션 색상
-export const levelGradients: Record<Level, LevelGradient> = {
-  N1: { from: '#E9F4FF', to: '#D9E9FF' },
-  N2: { from: '#EEE8FF', to: '#D9D0FF' },
-  N3: { from: '#FFECEC', to: '#FFD4D4' },
-  N4: { from: '#FFEFE8', to: '#FFDCC8' },
-  N5: { from: '#FFF4D8', to: '#FFE8B3' },
-}
+// 레벨별 그라데이션 색상 (상수 파일에서 가져옴)
+export const levelGradients: Record<Level, LevelGradient> = LEVEL_GRADIENTS
 
 // 레벨 순서 (N5부터 N1까지)
 export const levels: Level[] = ['N5', 'N4', 'N3', 'N2', 'N1']
 
-// 레벨 문자열을 Level 타입으로 변환
+// 레벨 문자열을 Level 타입으로 변환하여 그라데이션 가져오기
+// @deprecated getLevelGradientFromConstants 사용 권장
 export const getLevelGradient = (level: string): LevelGradient => {
-  const normalizedLevel = level.toLowerCase()
-  const levelMap: Record<string, Level> = {
-    n1: 'N1',
-    n2: 'N2',
-    n3: 'N3',
-    n4: 'N4',
-    n5: 'N5',
-  }
-  const levelKey = levelMap[normalizedLevel] || 'N5'
-  return levelGradients[levelKey]
+  return getLevelGradientFromConstants(level)
 }
 

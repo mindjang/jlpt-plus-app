@@ -23,6 +23,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://jlpt.mogu.ai.kr'),
   title: 'Mogu-JLPT',
   description: 'MoguMogu 언어 학습 플랫폼 - JLPT 시험 대비 간격 반복 학습',
   manifest: '/manifest.json',

@@ -1,7 +1,7 @@
 {
-  "name": "Mogu-JLPT",
-  "short_name": "Mogu-JLPT",
-  "description": "MoguMogu 언어 학습 플랫폼 - JLPT 시험 대비 간격 반복 학습",
+  "name": "모구 JLPT",
+  "short_name": "모구 JLPT",
+  "description": "모구 JLPT - JLPT 시험 대비 간격 반복 학습",
   "id": "/",
   "scope": "/",
   "lang": "ko-KR",

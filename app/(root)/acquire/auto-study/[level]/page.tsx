@@ -220,7 +220,7 @@ function AutoStudyContent() {
                 {level} 단어 5개를 맛보기로 학습해보세요. 진행 상황은 저장되지 않습니다.
               </p>
               <button
-                onClick={() => router.push('/login')}
+                onClick={() => router.push(`/login?next=${encodeURIComponent(`/acquire/auto-study/${params.level}?${searchParams.toString()}`)}`)}
                 className="mt-3 w-full py-2 bg-purple-600 text-white rounded-lg text-sm font-semibold active:opacity-80"
               >
                 로그인하고 진행 상황 저장하기

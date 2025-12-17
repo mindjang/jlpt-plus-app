@@ -13,7 +13,9 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
   const router = useRouter()
 
   const handleNavigate = (path: string) => {
-    router.push(path)
+    // 메뉴에서 진입한 화면은 하단 네비를 숨길 수 있도록 쿼리 플래그를 붙인다.
+    const joiner = path.includes('?') ? '&' : '?'
+    router.push(`${path}${joiner}from=menu`)
     onClose()
   }
 
@@ -80,7 +82,7 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
                         className="w-full flex items-center gap-3 px-6 py-3 text-left active:bg-gray-50"
                       >
                         <span className="text-subtitle text-jp">あ</span>
-                        <span className="text-body text-text-main">마이</span>
+                        <span className="text-body text-text-main">카나</span>
                       </button>
                       <button
                         onClick={() => handleNavigate('/stats')}
@@ -91,8 +93,7 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
                       </button>
                       <button
                         onClick={() => {
-                          // 설정 페이지로 이동
-                          onClose()
+                          handleNavigate('/my/settings')
                         }}
                         className="w-full flex items-center gap-3 px-6 py-3 text-left active:bg-gray-50"
                       >
@@ -107,8 +108,7 @@ export const SideMenu: React.FC<SideMenuProps> = ({ isOpen, onClose }) => {
                 <div className="p-6 border-t border-divider">
                   <button
                     onClick={() => {
-                      // 업그레이드 페이지로 이동
-                      onClose()
+                      handleNavigate('/my?payment=true&tab=subscription')
                     }}
                     className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gradient-to-r from-purple-100 to-purple-200 text-purple-700 text-body font-medium active:opacity-80"
                   >

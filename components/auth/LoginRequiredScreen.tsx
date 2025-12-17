@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { AppBar } from '@/components/ui/AppBar'
 import { PaywallOverlay } from '@/components/membership/PaywallOverlay'
 
@@ -25,6 +25,10 @@ export function LoginRequiredScreen({
   browseButtonPath = '/acquire',
 }: LoginRequiredScreenProps) {
   const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  const currentPath = `${pathname}${searchParams.toString() ? `?${searchParams.toString()}` : ''}`
 
   const handleBack = () => {
     if (onBack) {
@@ -43,7 +47,7 @@ export function LoginRequiredScreen({
         <p className="text-text-sub text-center mb-8 leading-relaxed max-w-xs whitespace-pre-line" dangerouslySetInnerHTML={{ __html: description }} />
         <div className="flex flex-col gap-3 w-full max-w-xs">
           <button
-            onClick={() => router.push('/login')}
+            onClick={() => router.push(`/login?next=${encodeURIComponent(currentPath)}`)}
             className="w-full py-4 px-6 rounded-lg bg-black text-white text-body font-semibold active:opacity-80"
           >
             로그인하기

@@ -99,10 +99,12 @@ export function KanjiCard({
 
     setSubmittingReport(true)
     try {
+      const token = await user.getIdToken()
       const response = await fetch('/api/reports', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
           contentType: 'kanji',

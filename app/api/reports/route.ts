@@ -1,19 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { submitReport } from '@/lib/firebase/firestore/reports'
 import { requireAuth } from '@/lib/firebase/auth-middleware'
-import { getCurrentUser } from '@/lib/firebase/auth'
+import { adminDb, isAdminConfigured } from '@/lib/firebase/admin'
 
 /**
  * POST /api/reports - 신고 제출
  */
 export async function POST(request: NextRequest) {
   try {
-    // 인증 확인
-    const user = await getCurrentUser()
-    if (!user) {
+    const [user, authError] = await requireAuth(request)
+    if (!user) return authError!
+
+    if (!isAdminConfigured || !adminDb) {
       return NextResponse.json(
-        { error: '인증이 필요합니다.' },
-        { status: 401 }
+        { error: '서버 인증 설정이 필요합니다.' },
+        { status: 503 }
       )
     }
 
@@ -50,16 +50,19 @@ export async function POST(request: NextRequest) {
     }
 
     // 신고 제출
-    const reportId = await submitReport(user.uid, {
+    const docRef = await adminDb.collection('reports').add({
+      uid: user.uid,
       contentType,
       contentText: contentText.trim(),
       level,
       reason: reason.trim(),
+      status: 'pending',
+      createdAt: Date.now(),
     })
 
     return NextResponse.json({
       success: true,
-      reportId,
+      reportId: docRef.id,
     })
   } catch (error) {
     console.error('[API] Error submitting report:', error)

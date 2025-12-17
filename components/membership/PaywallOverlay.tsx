@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useAuth } from '../auth/AuthProvider'
 import { logger } from '@/lib/utils/logger'
 
@@ -29,6 +29,8 @@ export function PaywallOverlay({
   showBackButton = false,
 }: PaywallOverlayProps) {
   const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
   const { user } = useAuth()
   const [code, setCode] = useState('')
   const [redeemLoading, setRedeemLoading] = useState(false)
@@ -63,6 +65,8 @@ export function PaywallOverlay({
       setRedeemLoading(false)
     }
   }
+
+  const currentPath = `${pathname}${searchParams.toString() ? `?${searchParams.toString()}` : ''}`
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
@@ -133,7 +137,7 @@ export function PaywallOverlay({
               if (user) {
                 router.push('/home')
               } else {
-                router.push('/login')
+                router.push(`/login?next=${encodeURIComponent(currentPath)}`)
               }
             }}
           >

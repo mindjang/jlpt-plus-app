@@ -1,11 +1,12 @@
 'use client'
 
 import React, { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { signInWithEmail, signUpWithEmail, signInWithGoogle } from '@/lib/firebase/auth'
 
 export function LoginForm() {
   const router = useRouter()
+  const searchParams = useSearchParams()
   const [isSignUp, setIsSignUp] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -32,7 +33,9 @@ export function LoginForm() {
       } else {
         await signInWithEmail(email, password)
       }
-      router.replace('/my')
+      const next = searchParams.get('next')
+      const safeNext = next && next.startsWith('/') ? next : '/home'
+      router.replace(safeNext)
     } catch (err) {
       const error = err as { code?: string; message?: string }
       let errorMessage = error.message || '인증에 실패했습니다.'
@@ -64,7 +67,9 @@ export function LoginForm() {
 
     try {
       await signInWithGoogle()
-      router.replace('/my')
+      const next = searchParams.get('next')
+      const safeNext = next && next.startsWith('/') ? next : '/home'
+      router.replace(safeNext)
     } catch (err) {
       const error = err as { code?: string; message?: string }
       let errorMessage = error.message || 'Google 로그인에 실패했습니다.'

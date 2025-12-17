@@ -21,7 +21,11 @@ export default function MySettingsPage() {
 
   useEffect(() => {
     if (!authLoading && !user) {
-      router.replace('/login')
+      const currentPath =
+        typeof window !== 'undefined'
+          ? `${window.location.pathname}${window.location.search}`
+          : '/my/settings'
+      router.replace(`/login?next=${encodeURIComponent(currentPath)}`)
     }
   }, [authLoading, user, router])
 

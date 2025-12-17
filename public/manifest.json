@@ -9,25 +9,25 @@
   "start_url": "/",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui", "browser"],
-  "background_color": "#FBFAF7",
+  "background_color": "#FDF5E7",
   "theme_color": "#1E88E5",
   "orientation": "portrait",
   "categories": ["education", "productivity"],
   "prefer_related_applications": false,
   "screenshots": [
     {
-      "src": "/icon-512x512.png",
-      "sizes": "512x512",
+      "src": "/screenshots/narrow-1080x1920.png",
+      "sizes": "1080x1920",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Mogu-JLPT"
     },
     {
-      "src": "/char/n5.png",
-      "sizes": "876x876",
+      "src": "/screenshots/wide-1280x720.png",
+      "sizes": "1280x720",
       "type": "image/png",
-      "form_factor": "narrow",
-      "label": "JLPT 레벨 학습"
+      "form_factor": "wide",
+      "label": "Mogu-JLPT"
     }
   ],
   "shortcuts": [

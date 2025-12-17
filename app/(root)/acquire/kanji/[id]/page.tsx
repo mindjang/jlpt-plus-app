@@ -20,6 +20,7 @@ import {
 } from '@/lib/data/kanji/kanjiHelpers'
 import { motion } from 'framer-motion'
 import type { JlptLevel } from '@/lib/types/content'
+import { submitReport } from '@/lib/api/reports'
 
 export default function KanjiDetailPage() {
   const router = useRouter()
@@ -80,25 +81,12 @@ export default function KanjiDetailPage() {
 
     setSubmittingReport(true)
     try {
-      const token = await user.getIdToken()
-      const response = await fetch('/api/reports', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          contentType: 'kanji',
-          contentText: report.content,
-          level: level as JlptLevel,
-          reason: report.reason,
-        }),
+      await submitReport(user, {
+        contentType: 'kanji',
+        contentText: report.content,
+        level: level as JlptLevel,
+        reason: report.reason,
       })
-
-      if (!response.ok) {
-        const errorData = await response.json()
-        throw new Error(errorData.error || '신고 제출에 실패했습니다.')
-      }
 
       // 성공 시 모달 닫기
       setShowReportModal(false)

@@ -10,6 +10,7 @@ import type { Grade, UserCardState } from '@/lib/types/srs'
 import { getWordDetails } from '@/data/words/details/index'
 import { ReportModal } from './ReportModal'
 import { useAuth } from '@/components/auth/AuthProvider'
+import { submitReport } from '@/lib/api/reports'
 
 interface WordCardProps {
   word: NaverWord
@@ -136,25 +137,12 @@ export function WordCard({
 
     setSubmittingReport(true)
     try {
-      const token = await user.getIdToken()
-      const response = await fetch('/api/reports', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          contentType: 'word',
-          contentText: report.content,
-          level: jlptLevel,
-          reason: report.reason,
-        }),
+      await submitReport(user, {
+        contentType: 'word',
+        contentText: report.content,
+        level: jlptLevel,
+        reason: report.reason,
       })
-
-      if (!response.ok) {
-        const errorData = await response.json()
-        throw new Error(errorData.error || '신고 제출에 실패했습니다.')
-      }
 
       // 성공 시 모달 닫기
       setShowReportModal(false)

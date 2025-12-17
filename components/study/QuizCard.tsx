@@ -7,6 +7,7 @@ import { faFlag } from '@fortawesome/free-solid-svg-icons'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { ReportModal } from './ReportModal'
 import type { QuizQuestion } from '@/lib/types/quiz'
+import { submitReport } from '@/lib/api/reports'
 
 interface QuizCardProps {
   question: QuizQuestion
@@ -59,25 +60,12 @@ export function QuizCard({
 
     setSubmittingReport(true)
     try {
-      const token = await user.getIdToken()
-      const response = await fetch('/api/reports', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          contentType: question.itemType,
-          contentText: report.content,
-          level: question.level,
-          reason: report.reason,
-        }),
+      await submitReport(user, {
+        contentType: question.itemType,
+        contentText: report.content,
+        level: question.level,
+        reason: report.reason,
       })
-
-      if (!response.ok) {
-        const errorData = await response.json()
-        throw new Error(errorData.error || '신고 제출에 실패했습니다.')
-      }
 
       // 성공 시 모달 닫기
       setShowReportModal(false)

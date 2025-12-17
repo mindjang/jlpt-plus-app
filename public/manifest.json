@@ -2,23 +2,84 @@
   "name": "Mogu-JLPT",
   "short_name": "Mogu-JLPT",
   "description": "MoguMogu 언어 학습 플랫폼 - JLPT 시험 대비 간격 반복 학습",
+  "id": "/",
+  "scope": "/",
+  "lang": "ko-KR",
+  "dir": "ltr",
   "start_url": "/",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
   "background_color": "#FBFAF7",
   "theme_color": "#1E88E5",
   "orientation": "portrait",
+  "categories": ["education", "productivity"],
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mogu-JLPT"
+    },
+    {
+      "src": "/char/n5.png",
+      "sizes": "876x876",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "JLPT 레벨 학습"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "홈",
+      "short_name": "홈",
+      "url": "/home",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "자동 학습",
+      "short_name": "자동",
+      "url": "/auto-study/N5",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "플래시카드",
+      "short_name": "카드",
+      "url": "/flashcard/N5",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "퀴즈",
+      "short_name": "퀴즈",
+      "url": "/quiz",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ],
   "icons": [
     {
       "src": "/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }

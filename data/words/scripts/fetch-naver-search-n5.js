@@ -3,10 +3,10 @@ const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
 
-// n5.ts 파일 경로
-const n5Path = path.join(__dirname, '../data/words/n5.ts');
-const outputDir = path.join(__dirname, '../data/words/search-results');
-const detailsDir = path.join(__dirname, '../data/words/details/n5');
+// 경로 기준: data/words/scripts/ (현재 파일 위치)
+const n5Path = path.join(__dirname, '../n5.ts');
+const outputDir = path.join(__dirname, '../search-results');
+const detailsDir = path.join(__dirname, '../details/n5');
 
 // 출력 디렉토리 생성
 if (!fs.existsSync(outputDir)) {
@@ -18,6 +18,7 @@ if (!fs.existsSync(detailsDir)) {
 
 // API 호출 간 delay (ms) - rate limiting 방지
 const DELAY_MS = 200; // 200ms 간격으로 요청
+const LIMIT = Number.parseInt(process.env.LIMIT || '0', 10) || 0;
 
 // n5.ts에서 entry 추출
 function extractEntries() {
@@ -122,14 +123,14 @@ function makeRequest(url, headers = {}) {
         stream = res.pipe(zlib.createBrotliDecompress());
       }
       
-      let data = '';
-      
+      const chunks = [];
       stream.on('data', (chunk) => {
-        data += chunk.toString();
+        chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
       });
       
       stream.on('end', () => {
         try {
+          const data = Buffer.concat(chunks).toString('utf8');
           if (!data) {
             reject(new Error('Empty response'));
             return;
@@ -593,7 +594,8 @@ function delay(ms) {
 
 // 메인 실행 함수
 async function main() {
-  const entries = extractEntries();
+  const allEntries = extractEntries();
+  const entries = LIMIT > 0 ? allEntries.slice(0, LIMIT) : allEntries;
   const results = [];
   const errors = [];
   

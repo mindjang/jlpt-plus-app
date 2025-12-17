@@ -3,10 +3,14 @@ const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
 
-// n4.ts 파일 경로
-const n4Path = path.join(__dirname, '../data/words/n4.ts');
-const outputDir = path.join(__dirname, '../data/words/search-results');
-const detailsDir = path.join(__dirname, '../data/words/details/n4');
+// 경로 기준: data/words/scripts/ (현재 파일 위치)
+const n4Path = path.join(__dirname, '../n4.ts');
+const outputDir = path.join(__dirname, '../search-results');
+const detailsDir = path.join(__dirname, '../details/n4');
+
+const LIMIT = Number.parseInt(process.env.LIMIT || '0', 10) || 0;
+const MIN_DELAY_MS = Number.parseInt(process.env.MIN_DELAY_MS || '200', 10) || 200;
+const MAX_DELAY_MS = Number.parseInt(process.env.MAX_DELAY_MS || '2000', 10) || 2000;
 
 // 출력 디렉토리 생성
 if (!fs.existsSync(outputDir)) {
@@ -18,8 +22,8 @@ if (!fs.existsSync(detailsDir)) {
 
 // API 호출 간 delay (ms) - rate limiting 방지 (0.2~2초 랜덤)
 function getDelayMs() {
-  const min = 200;
-  const max = 2000;
+  const min = Math.min(MIN_DELAY_MS, MAX_DELAY_MS);
+  const max = Math.max(MIN_DELAY_MS, MAX_DELAY_MS);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -83,13 +87,14 @@ function makeRequest(url, headers = {}) {
         stream = res.pipe(zlib.createBrotliDecompress());
       }
 
-      let data = '';
+      const chunks = [];
       stream.on('data', (chunk) => {
-        data += chunk.toString();
+        chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
       });
 
       stream.on('end', () => {
         try {
+          const data = Buffer.concat(chunks).toString('utf8');
           if (!data) {
             reject(new Error('Empty response'));
             return;
@@ -531,7 +536,8 @@ function delay() {
 
 // 메인 실행 함수
 async function main() {
-  const entries = extractEntries();
+  const allEntries = extractEntries();
+  const entries = LIMIT > 0 ? allEntries.slice(0, LIMIT) : allEntries;
   const results = [];
   const errors = [];
 

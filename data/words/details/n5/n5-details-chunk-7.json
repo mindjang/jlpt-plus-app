@@ -22,13 +22,13 @@
               {
                 "order": "",
                 "value": "4분",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "よんぷん",
-        "vcode": "566263",
+        "vcode": "195776",
         "encode": "%E3%82%88%E3%82%93%E3%81%B7%E3%82%93"
       },
       {
@@ -50,13 +50,13 @@
               {
                 "order": "",
                 "value": "사분위수",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "よんぷんくらいすう",
-        "vcode": "902297",
+        "vcode": "802704",
         "encode": "%E3%82%88%E3%82%93%E3%81%B7%E3%82%93%E3%81%8F%E3%82%89%E3%81%84%E3%81%99%E3%81%86"
       }
     ],
@@ -87,13 +87,13 @@
               {
                 "order": "",
                 "value": "4자루",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "よんほん",
-        "vcode": "646331",
+        "vcode": "851588",
         "encode": "%E3%82%88%E3%82%93%E3%81%BB%E3%82%93"
       },
       {
@@ -115,13 +115,13 @@
               {
                 "order": "",
                 "value": "4가닥DNA",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "よんほんさDNA",
-        "vcode": "125063",
+        "vcode": "892176",
         "encode": "%E3%82%88%E3%82%93%E3%81%BB%E3%82%93%E3%81%95DNA"
       }
     ],
@@ -142,19 +142,19 @@
               {
                 "order": "1",
                 "value": "ユッ, <ruby><rb>小</rb><rt>ちい</rt></ruby>さな<ruby><rb>丸</rb><rt>まる</rt></ruby>い<ruby><rb>棒切</rb><rt>ぼうぎ</rt></ruby>れを<ruby><rb>割</rb><rt>わ</rt></ruby>って<ruby><rb>作</rb><rt>つく</rt></ruby>った<ruby><rb>四本一組</rb><rt><strong>よんほん</strong>ひとくみ</rt></ruby>の<ruby><rb>遊戯具</rb><rt>ゆうぎぐ</rt></ruby>.",
-                "vcode": "683745"
+                "vcode": "512536"
               },
               {
                 "order": "2",
                 "value": "‘윷’をなげうった<ruby><rb>時</rb><rt>とき</rt></ruby>, ‘윷’が<ruby><rb>揃</rb><rt>そろ</rt></ruby>ってあおむけになった<ruby><rb>時</rb><rt>とき</rt></ruby>の<ruby><rb>称</rb><rt>しょう</rt></ruby>.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "expAliasGeneralAlwaysList": [],
         "handleEntry": "윷",
-        "vcode": "604418",
+        "vcode": "060007",
         "encode": "%EC%9C%B7"
       },
       {
@@ -173,14 +173,14 @@
               {
                 "order": "",
                 "value": "‘윷놀이(ユンノリ)’で, <ruby><rb>四本</rb><rt><strong>よんほん</strong></rt></ruby><strong>の</strong>‘윷가락(＝かり)’が<ruby><rb>全部</rb><rt>ぜんぶ</rt></ruby><ruby><rb>伏</rb><rt>ふ</rt></ruby>したときの<ruby><rb>称</rb><rt>しょう</rt></ruby>.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "expAliasGeneralAlwaysList": [],
         "handleEntry": "모",
-        "vcode": "001596",
+        "vcode": "301275",
         "encode": "%EB%AA%A8"
       },
       {
@@ -199,14 +199,14 @@
               {
                 "order": "",
                 "value": "‘윷놀이(ユンノリ)’の<ruby><rb>4</rb><rt><strong>よん</strong></rt></ruby><ruby><rb>本</rb><rt><strong>ほん</strong></rt></ruby>の‘윷’の<ruby><rb>中</rb><rt>うち</rt></ruby>, <ruby><rb>1</rb><rt>いっ</rt></ruby><ruby><rb>本</rb><rt>ぽん</rt></ruby>だけ<ruby><rb>裏側</rb><rt>うらがわ</rt></ruby>が<ruby><rb>出</rb><rt>で</rt></ruby>ること((<ruby><rb>得点</rb><rt>とくてん</rt></ruby>は<ruby><rb>1</rb><rt>いっ</rt></ruby><ruby><rb>点</rb><rt>てん</rt></ruby>)).",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "expAliasGeneralAlwaysList": [],
         "handleEntry": "도",
-        "vcode": "652829",
+        "vcode": "650042",
         "encode": "%EB%8F%84"
       },
       {
@@ -225,14 +225,14 @@
               {
                 "order": "",
                 "value": "‘윷놀이(ユンノリ)’の<ruby><rb>采</rb><rt>さい</rt></ruby>((<ruby><rb>四本</rb><rt><strong>よんほん</strong></rt></ruby><strong>の</strong>‘윷(ユッ)’の<ruby><rb>一</rb><rt>ひと</rt></ruby>つ<ruby><rb>一</rb><rt>ひと</rt></ruby>つ)). (=<span class=\"related_word\" lang=\"ko\">윷가락</span>)",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "expAliasGeneralAlwaysList": [],
         "handleEntry": "윷짝",
-        "vcode": "094990",
+        "vcode": "590679",
         "encode": "%EC%9C%B7%EC%A7%9D"
       }
     ],
@@ -281,13 +281,13 @@
               {
                 "order": "",
                 "value": "4장",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "よんまい",
-        "vcode": "967826",
+        "vcode": "237431",
         "encode": "%E3%82%88%E3%82%93%E3%81%BE%E3%81%84"
       },
       {
@@ -309,13 +309,13 @@
               {
                 "order": "",
                 "value": "사매시",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "よんまいしの",
-        "vcode": "799333",
+        "vcode": "935076",
         "encode": "%E3%82%88%E3%82%93%E3%81%BE%E3%81%84%E3%81%97%E3%81%AE"
       }
     ],
@@ -336,7 +336,7 @@
               {
                 "order": "",
                 "value": "<ruby><rb>四枚</rb><rt><strong>よんまい</strong></rt></ruby><ruby><rb>続</rb><rt>つづ</rt></ruby>きの<ruby><rb>門</rb><rt>もん</rt></ruby>.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -347,7 +347,7 @@
           }
         ],
         "handleEntry": "넌출문",
-        "vcode": "701255",
+        "vcode": "535088",
         "encode": "%EB%84%8C%EC%B6%9C%EB%AC%B8"
       },
       {
@@ -366,7 +366,7 @@
               {
                 "order": "",
                 "value": "<ruby><rb>四枚</rb><rt><strong>よんまい</strong></rt></ruby>になっている<ruby><rb>引</rb><rt>ひ</rt></ruby>き<ruby><rb>戸</rb><rt>ど</rt></ruby>. (=<span class=\"related_word\" lang=\"ko\">사분합문(門)</span>)",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -377,7 +377,7 @@
           }
         ],
         "handleEntry": "사분합",
-        "vcode": "554583",
+        "vcode": "279250",
         "encode": "%EC%82%AC%EB%B6%84%ED%95%A9"
       },
       {
@@ -396,7 +396,7 @@
               {
                 "order": "",
                 "value": "(<ruby><rb>花札</rb><rt>はなふだ</rt></ruby>で)<ruby><rb>柳</rb><rt>やなぎ</rt></ruby>[<ruby><rb>雨</rb><rt>あめ</rt></ruby>]の<ruby><rb>札</rb><rt>ふだ</rt></ruby><ruby><rb>4</rb><rt><strong>よん</strong></rt></ruby><ruby><rb>枚</rb><rt><strong>まい</strong></rt></ruby>をそろえた<ruby><rb>役</rb><rt>やく</rt></ruby>. (→<span class=\"related_word\" lang=\"ko\">풍약</span>)",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -407,7 +407,7 @@
           }
         ],
         "handleEntry": "비약",
-        "vcode": "152133",
+        "vcode": "647822",
         "encode": "%EB%B9%84%EC%95%BD"
       },
       {
@@ -426,7 +426,7 @@
               {
                 "order": "",
                 "value": "<ruby><rb>花札</rb><rt>はなふだ</rt></ruby>で, <ruby><rb>菖蒲</rb><rt>しょうぶ</rt></ruby><ruby><rb>四枚</rb><rt><strong>よんまい</strong></rt></ruby>をそろえる<ruby><rb>役</rb><rt>やく</rt></ruby>.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -437,7 +437,7 @@
           }
         ],
         "handleEntry": "초약",
-        "vcode": "594075",
+        "vcode": "098386",
         "encode": "%EC%B4%88%EC%95%BD"
       },
       {
@@ -456,14 +456,14 @@
               {
                 "order": "",
                 "value": "‘투전(闘牋)’で, <ruby><rb>六枚</rb><rt>ろく<strong>まい</strong></rt></ruby>の<ruby><rb>札</rb><rt>ふだ</rt></ruby>のうち, <ruby><rb>四枚</rb><rt><strong>よんまい</strong></rt></ruby><strong>と</strong><ruby><rb>二枚</rb><rt>に<strong>まい</strong></rt></ruby>が<ruby><rb>各各</rb><rt>おのおの</rt></ruby><ruby><rb>同</rb><rt>おな</rt></ruby>じ<ruby><rb>字</rb><rt>じ</rt></ruby>で<ruby><rb>組</rb><rt>く</rt></ruby>み<ruby><rb>合</rb><rt>あ</rt></ruby>わされること.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "expAliasGeneralAlwaysList": [],
         "handleEntry": "모리",
-        "vcode": "532025",
+        "vcode": "939582",
         "encode": "%EB%AA%A8%EB%A6%AC"
       }
     ],
@@ -512,13 +512,13 @@
               {
                 "order": "",
                 "value": "6엔",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろくえん",
-        "vcode": "239704",
+        "vcode": "965553",
         "encode": "%E3%82%8D%E3%81%8F%E3%81%88%E3%82%93"
       },
       {
@@ -540,18 +540,18 @@
               {
                 "order": "1",
                 "value": "호모 로퀜스",
-                "vcode": "683745"
+                "vcode": "512536"
               },
               {
                 "order": "2",
                 "value": "인간을 다른 동물과 구별하는 기준 개념으로서의 말하는 인간. *loquens는 ‘말하다’의 뜻.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ホモ・ロクエンス",
-        "vcode": "301324",
+        "vcode": "745923",
         "encode": "%E3%83%9B%E3%83%A2%E3%83%BB%E3%83%AD%E3%82%AF%E3%82%A8%E3%83%B3%E3%82%B9"
       }
     ],
@@ -572,7 +572,7 @@
               {
                 "order": "",
                 "value": "縁覚（<strong>えん</strong>がく）は十二因縁を覚ってそれぞれ解脱するとする。​Both Hinayana and Mahayana Buddhism seek enlightenment, but in Hinayana, where an individual seeks his enlightenment, an individual can be...",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -583,7 +583,7 @@
           }
         ],
         "handleEntry": "悟り",
-        "vcode": "503733",
+        "vcode": "999422",
         "encode": "%E6%82%9F%E3%82%8A"
       }
     ],
@@ -641,13 +641,13 @@
               {
                 "order": "",
                 "value": "6명",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろくにん",
-        "vcode": "612779",
+        "vcode": "149260",
         "encode": "%E3%82%8D%E3%81%8F%E3%81%AB%E3%82%93"
       },
       {
@@ -669,13 +669,13 @@
               {
                 "order": "",
                 "value": "人が、六の数であること。",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろくにん",
-        "vcode": "612779",
+        "vcode": "149260",
         "encode": "%E3%82%8D%E3%81%8F%E3%81%AB%E3%82%93"
       }
     ],
@@ -706,13 +706,13 @@
               {
                 "order": "",
                 "value": "6년",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろくねん",
-        "vcode": "152813",
+        "vcode": "358070",
         "encode": "%E3%82%8D%E3%81%8F%E3%81%AD%E3%82%93"
       },
       {
@@ -734,18 +734,18 @@
               {
                 "order": "1",
                 "value": "육, 여섯. (=<span class=\"related_word\" lang=\"ja\">むつ</span>, <span class=\"related_word\" lang=\"ja\">むっつ</span>)",
-                "vcode": "199905"
+                "vcode": "186058"
               },
               {
                 "order": "2",
                 "value": "여섯 번째, 제육(第六).",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろく",
-        "vcode": "066212",
+        "vcode": "405395",
         "encode": "%E3%82%8D%E3%81%8F"
       }
     ],
@@ -766,7 +766,7 @@
               {
                 "order": "",
                 "value": "<ruby><rb>春税</rb><rt>しゅんぜい</rt></ruby>, <ruby><rb>一年分</rb><rt>いち<strong>ねん</strong>ぶん</rt></ruby>を<ruby><rb>二度</rb><rt>にど</rt></ruby>に<ruby><rb>分</rb><rt>わ</rt></ruby>けたその<ruby><rb>一部</rb><rt>いちぶ</rt></ruby>を<ruby><rb>六月</rb><rt><strong>ろく</strong>がつ</rt></ruby>に<ruby><rb>納</rb><rt>おさ</rt></ruby>める<ruby><rb>租税</rb><rt>そぜい</rt></ruby>.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -777,7 +777,7 @@
           }
         ],
         "handleEntry": "춘세",
-        "vcode": "087105",
+        "vcode": "582794",
         "encode": "%EC%B6%98%EC%84%B8"
       },
       {
@@ -796,7 +796,7 @@
               {
                 "order": "",
                 "value": "称名念仏（しょうみょう<strong>ねん</strong>ぶつ）とは、仏を念ずる行（念仏）の一つであり、「南無阿弥陀仏」のように仏の名号（みょうごう）を唱える行をさす。​Shomyo Nenbutsu is one practice of praying to the Buddha (nenbutsu (Buddhist invocation)),...",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -807,7 +807,7 @@
           }
         ],
         "handleEntry": "称名念仏",
-        "vcode": "912474",
+        "vcode": "292783",
         "encode": "%E7%A7%B0%E5%90%8D%E5%BF%B5%E4%BB%8F"
       },
       {
@@ -826,7 +826,7 @@
               {
                 "order": "",
                 "value": "明治六年政変（めいじ<strong>ろくねん</strong>せいへん, 1873年（明治6年））は、征韓論に端を発した明治初期の一大政変。​Meiji roku-nen no Seihen (Coups of 1873) is a major political change in the early Meiji era caused by Seikanron (debate on subjugation of Korea).​...",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -837,7 +837,7 @@
           }
         ],
         "handleEntry": "明治六年政変",
-        "vcode": "197682",
+        "vcode": "035205",
         "encode": "%E6%98%8E%E6%B2%BB%E5%85%AD%E5%B9%B4%E6%94%BF%E5%A4%89"
       }
     ],
@@ -913,13 +913,13 @@
               {
                 "order": "",
                 "value": "6배",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろくばい",
-        "vcode": "461344",
+        "vcode": "743913",
         "encode": "%E3%82%8D%E3%81%8F%E3%81%B0%E3%81%84"
       },
       {
@@ -941,13 +941,13 @@
               {
                 "order": "",
                 "value": "육배체",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろくばいたい",
-        "vcode": "292757",
+        "vcode": "441652",
         "encode": "%E3%82%8D%E3%81%8F%E3%81%B0%E3%81%84%E3%81%9F%E3%81%84"
       }
     ],
@@ -968,7 +968,7 @@
               {
                 "order": "",
                 "value": "六条斎院宣旨（<strong>ろく</strong>じょうさいいんのせんじ生没年不詳）は、平安時代後期の女流歌人。​Rokujosaiin no senji (year of birth and death is not clear) was a female waka poet in the late Heian period.​父は源頼国で、藤原高定の妻となった。​Her fa...",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -979,7 +979,7 @@
           }
         ],
         "handleEntry": "六条斎院宣旨",
-        "vcode": "628413",
+        "vcode": "105996",
         "encode": "%E5%85%AD%E6%9D%A1%E6%96%8E%E9%99%A2%E5%AE%A3%E6%97%A8"
       }
     ],
@@ -1019,13 +1019,13 @@
               {
                 "order": "",
                 "value": "6번",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろくばん",
-        "vcode": "537136",
+        "vcode": "668121",
         "encode": "%E3%82%8D%E3%81%8F%E3%81%B0%E3%82%93"
       },
       {
@@ -1047,13 +1047,13 @@
               {
                 "order": "",
                 "value": "비6판; 종이·책 규격의 하나((세로 18.2cm, 가로 12.8cm; 책에서는 사륙판과 거의 같음)).",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ビーろくばん",
-        "vcode": "046261",
+        "vcode": "688148",
         "encode": "%E3%83%93%E3%83%BC%E3%82%8D%E3%81%8F%E3%81%B0%E3%82%93"
       }
     ],
@@ -1074,14 +1074,14 @@
               {
                 "order": "",
                 "value": "<strong>ろくばん</strong> [肋板]",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "expAliasGeneralAlwaysList": [],
         "handleEntry": "늑판",
-        "vcode": "359250",
+        "vcode": "136439",
         "encode": "%EB%8A%91%ED%8C%90"
       },
       {
@@ -1100,7 +1100,7 @@
               {
                 "order": "",
                 "value": "<ruby><rb>三六</rb><rt>さん<strong>ろく</strong></rt></ruby><ruby><rb>判</rb><rt><strong>ばん</strong></rt></ruby>, さぶ<strong>ろくばん</strong>.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -1111,7 +1111,7 @@
           }
         ],
         "handleEntry": "삼륙판",
-        "vcode": "468069",
+        "vcode": "365764",
         "encode": "%EC%82%BC%EB%A5%99%ED%8C%90"
       },
       {
@@ -1130,7 +1130,7 @@
               {
                 "order": "",
                 "value": "<ruby><rb>文庫</rb><rt>ぶんこ</rt></ruby><ruby><rb>判</rb><rt><strong>ばん</strong></rt></ruby>, <ruby><rb>A</rb><rt>エー</rt></ruby><ruby><rb>6</rb><rt><strong>ろく</strong></rt></ruby><ruby><rb>判</rb><rt><strong>ばん</strong></rt></ruby>.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -1141,7 +1141,7 @@
           }
         ],
         "handleEntry": "문고판",
-        "vcode": "176404",
+        "vcode": "957059",
         "encode": "%EB%AC%B8%EA%B3%A0%ED%8C%90"
       },
       {
@@ -1160,7 +1160,7 @@
               {
                 "order": "",
                 "value": "<ruby><rb> B</rb><rt>ビー</rt></ruby><ruby><rb>6</rb><rt><strong>ろく</strong></rt></ruby><ruby><rb>判</rb><rt><strong>ばん</strong></rt></ruby>.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -1171,7 +1171,7 @@
           }
         ],
         "handleEntry": "비육판",
-        "vcode": "377049",
+        "vcode": "210882",
         "encode": "%EB%B9%84%EC%9C%A1%ED%8C%90"
       },
       {
@@ -1190,7 +1190,7 @@
               {
                 "order": "",
                 "value": "<ruby><rb>新</rb><rt>しん</rt></ruby><ruby><rb>四六判</rb><rt>し<strong>ろくばん</strong></rt></ruby>((<ruby><rb>四六判</rb><rt>し<strong>ろくばん</strong></rt></ruby>より<ruby><rb>少</rb><rt>すこ</rt></ruby>し<ruby><rb>小</rb><rt>ちい</rt></ruby>さい<ruby><rb>本</rb><rt>ほん</rt></ruby>の<ruby><rb>規格</rb><rt>きかく</rt></ruby>)).",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -1201,7 +1201,7 @@
           }
         ],
         "handleEntry": "신사륙판",
-        "vcode": "823486",
+        "vcode": "381771",
         "encode": "%EC%8B%A0%EC%82%AC%EB%A5%99%ED%8C%90"
       }
     ],
@@ -1241,13 +1241,13 @@
               {
                 "order": "",
                 "value": "녹미; 무가 시대에, 녹으로 받는 쌀. (=<span class=\"related_word\" lang=\"ja\">ろくべい</span>, <span class=\"related_word\" lang=\"ja\">扶持米</span>)",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろくまい",
-        "vcode": "713810",
+        "vcode": "491447",
         "encode": "%E3%82%8D%E3%81%8F%E3%81%BE%E3%81%84"
       },
       {
@@ -1269,13 +1269,13 @@
               {
                 "order": "",
                 "value": "6장",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろくまい",
-        "vcode": "713810",
+        "vcode": "491447",
         "encode": "%E3%82%8D%E3%81%8F%E3%81%BE%E3%81%84"
       }
     ],
@@ -1296,7 +1296,7 @@
               {
                 "order": "",
                 "value": "<ruby><rb>禄米</rb><rt><strong>ろくまい</strong></rt></ruby>, <ruby><rb>扶持米</rb><rt>ふちまい</rt></ruby>.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -1307,7 +1307,7 @@
           }
         ],
         "handleEntry": "녹미",
-        "vcode": "922618",
+        "vcode": "548989",
         "encode": "%EB%85%B9%EB%AF%B8"
       }
     ],
@@ -1365,13 +1365,13 @@
               {
                 "order": "",
                 "value": "육계. (→<span class=\"related_word\" lang=\"ja\">ろくどう</span>)",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろっかい",
-        "vcode": "381999",
+        "vcode": "587256",
         "encode": "%E3%82%8D%E3%81%A3%E3%81%8B%E3%81%84"
       },
       {
@@ -1393,13 +1393,13 @@
               {
                 "order": "",
                 "value": "6회",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろっかい",
-        "vcode": "381999",
+        "vcode": "587256",
         "encode": "%E3%82%8D%E3%81%A3%E3%81%8B%E3%81%84"
       }
     ],
@@ -1448,13 +1448,13 @@
               {
                 "order": "",
                 "value": "6개",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろっこ",
-        "vcode": "800399",
+        "vcode": "634232",
         "encode": "%E3%82%8D%E3%81%A3%E3%81%93"
       },
       {
@@ -1476,13 +1476,13 @@
               {
                 "order": "",
                 "value": "Orsi-Grocco method",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "オルシグロッコほう",
-        "vcode": "155597",
+        "vcode": "860598",
         "encode": "%E3%82%AA%E3%83%AB%E3%82%B7%E3%82%B0%E3%83%AD%E3%83%83%E3%82%B3%E3%81%BB%E3%81%86"
       }
     ],
@@ -1523,13 +1523,13 @@
               {
                 "order": "",
                 "value": "여섯 잔",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろっぱい",
-        "vcode": "544533",
+        "vcode": "217506",
         "encode": "%E3%82%8D%E3%81%A3%E3%81%B1%E3%81%84"
       }
     ],
@@ -1570,13 +1570,13 @@
               {
                 "order": "",
                 "value": "6마리",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろっぴき",
-        "vcode": "472127",
+        "vcode": "733130",
         "encode": "%E3%82%8D%E3%81%A3%E3%81%B4%E3%81%8D"
       }
     ],
@@ -1617,13 +1617,13 @@
               {
                 "order": "",
                 "value": "6분",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろっぷん",
-        "vcode": "911157",
+        "vcode": "294100",
         "encode": "%E3%82%8D%E3%81%A3%E3%81%B7%E3%82%93"
       }
     ],
@@ -1673,13 +1673,13 @@
               {
                 "order": "",
                 "value": "6자루",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "ろっぽん",
-        "vcode": "676241",
+        "vcode": "085798",
         "encode": "%E3%82%8D%E3%81%A3%E3%81%BD%E3%82%93"
       },
       {
@@ -1701,13 +1701,13 @@
               {
                 "order": "",
                 "value": "무채; 또, 무채를 써는 일. (=<span class=\"related_word\" lang=\"ja\">せんぎり</span>)",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "handleEntry": "せんろっぽん",
-        "vcode": "605512",
+        "vcode": "627375",
         "encode": "%E3%81%9B%E3%82%93%E3%82%8D%E3%81%A3%E3%81%BD%E3%82%93"
       }
     ],
@@ -1728,14 +1728,14 @@
               {
                 "order": "",
                 "value": "ダイコンの<ruby><rb>千切</rb><rt>せんぎ</rt></ruby>り, <ruby><rb>千六本</rb><rt>せん<strong>ろっぽん</strong></rt></ruby>.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
         ],
         "expAliasGeneralAlwaysList": [],
         "handleEntry": "무채",
-        "vcode": "049717",
+        "vcode": "445972",
         "encode": "%EB%AC%B4%EC%B1%84"
       },
       {
@@ -1754,7 +1754,7 @@
               {
                 "order": "",
                 "value": "<ruby><rb>六本</rb><rt><strong>ろっぽん</strong></rt></ruby><strong>の</strong><ruby><rb>足</rb><rt>あし</rt></ruby>, すなわち<ruby><rb>馬</rb><rt>うま</rt></ruby>と<ruby><rb>馬丁</rb><rt>ばてい</rt></ruby>.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -1765,7 +1765,7 @@
           }
         ],
         "handleEntry": "육족",
-        "vcode": "873914",
+        "vcode": "621775",
         "encode": "%EC%9C%A1%EC%A1%B1"
       },
       {
@@ -1784,7 +1784,7 @@
               {
                 "order": "",
                 "value": "<ruby><rb>六本</rb><rt><strong>ろっぽん</strong></rt></ruby><strong>の</strong><ruby><rb>長柄</rb><rt>ながえ</rt></ruby>を<ruby><rb>横</rb><rt>よこ</rt></ruby>につき<ruby><rb>通</rb><rt>とお</rt></ruby>して<ruby><rb>十二人</rb><rt>じゅうににん</rt></ruby>がかつぐようになっているひつぎを<ruby><rb>載</rb><rt>の</rt></ruby>せる<ruby><rb>輿</rb><rt>こし</rt></ruby>.",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -1795,7 +1795,7 @@
           }
         ],
         "handleEntry": "육방망이",
-        "vcode": "096184",
+        "vcode": "665855",
         "encode": "%EC%9C%A1%EB%B0%A9%EB%A7%9D%EC%9D%B4"
       },
       {
@@ -1814,7 +1814,7 @@
               {
                 "order": "",
                 "value": "<ruby><rb>夏向</rb><rt>なつむ</rt></ruby>きの<ruby><rb>料理</rb><rt>りょうり</rt></ruby>の<ruby><rb>一種</rb><rt>いっしゅ</rt></ruby>((<ruby><rb>若</rb><rt>わか</rt></ruby>いとりの<ruby><rb>水炊</rb><rt>みずた</rt></ruby>きを<ruby><rb>細</rb><rt>こま</rt></ruby>かく<ruby><rb>裂</rb><rt>さ</rt></ruby>いて, ナマコ(海鼠)·アワビ(鮑)の<ruby><rb>切</rb><rt>き</rt></ruby>り<ruby><rb>身</rb><rt>み</rt></ruby>とまぜ, キュウリ(胡瓜)の<ruby><rb>千六本</rb><rt>せん<strong>ろっぽん</strong></rt></ruby>とシイタケ(椎葺)·いり<ruby><rb>卵</rb><rt>たまご</rt></ruby>などを...",
-                "vcode": "683745"
+                "vcode": "512536"
               }
             ]
           }
@@ -1825,7 +1825,7 @@
           }
         ],
         "handleEntry": "초교탕",
-        "vcode": "796731",
+        "vcode": "630564",
         "encode": "%EC%B4%88%EA%B5%90%ED%83%95"
       }
     ],

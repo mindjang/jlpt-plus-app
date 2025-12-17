@@ -3,10 +3,14 @@ const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
 
-// n3.ts 파일 경로
-const n3Path = path.join(__dirname, '../data/words/n3.ts');
-const outputDir = path.join(__dirname, '../data/words/search-results');
-const detailsDir = path.join(__dirname, '../data/words/details/n3');
+// 경로 기준: data/words/scripts/ (현재 파일 위치)
+const n3Path = path.join(__dirname, '../n3.ts');
+const outputDir = path.join(__dirname, '../search-results');
+const detailsDir = path.join(__dirname, '../details/n3');
+
+const LIMIT = Number.parseInt(process.env.LIMIT || '0', 10) || 0;
+const MIN_DELAY_MS = Number.parseInt(process.env.MIN_DELAY_MS || '200', 10) || 200;
+const MAX_DELAY_MS = Number.parseInt(process.env.MAX_DELAY_MS || '2000', 10) || 2000;
 
 // 출력 디렉토리 생성
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
@@ -14,8 +18,8 @@ if (!fs.existsSync(detailsDir)) fs.mkdirSync(detailsDir, { recursive: true });
 
 // API 호출 간 delay (0.2~2초 랜덤)
 function getDelayMs() {
-  const min = 200;
-  const max = 2000;
+  const min = Math.min(MIN_DELAY_MS, MAX_DELAY_MS);
+  const max = Math.max(MIN_DELAY_MS, MAX_DELAY_MS);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 function delay() {
@@ -78,10 +82,11 @@ function makeRequest(url, headers = {}) {
       else if (res.headers['content-encoding'] === 'deflate') stream = res.pipe(zlib.createInflate());
       else if (res.headers['content-encoding'] === 'br') stream = res.pipe(zlib.createBrotliDecompress());
 
-      let data = '';
-      stream.on('data', chunk => { data += chunk.toString(); });
+      const chunks = [];
+      stream.on('data', chunk => { chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk)); });
       stream.on('end', () => {
         try {
+          const data = Buffer.concat(chunks).toString('utf8');
           if (!data) return reject(new Error('Empty response'));
           resolve(JSON.parse(data));
         } catch (err) {
@@ -210,7 +215,8 @@ function extractSearchData(searchData) {
 
 // 메인 실행
 async function main() {
-  const entries = extractEntries();
+  const allEntries = extractEntries();
+  const entries = LIMIT > 0 ? allEntries.slice(0, LIMIT) : allEntries;
   const results = [];
   const errors = [];
   console.log('API 호출을 시작합니다...\n');

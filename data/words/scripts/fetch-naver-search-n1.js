@@ -3,9 +3,10 @@ const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
 
-const n1Path = path.join(__dirname, '../data/words/n1.ts');
-const outputDir = path.join(__dirname, '../data/words/search-results');
-const detailsDir = path.join(__dirname, '../data/words/details/n1');
+// 경로 기준: data/words/scripts/ (현재 파일 위치)
+const n1Path = path.join(__dirname, '../n1.ts');
+const outputDir = path.join(__dirname, '../search-results');
+const detailsDir = path.join(__dirname, '../details/n1');
 
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 if (!fs.existsSync(detailsDir)) fs.mkdirSync(detailsDir, { recursive: true });
@@ -34,6 +35,8 @@ function extractEntries() {
     process.exit(1);
   }
 }
+
+const LIMIT = Number.parseInt(process.env.LIMIT || '0', 10) || 0;
 
 function makeRequest(url, headers = {}) {
   return new Promise((resolve, reject) => {
@@ -71,10 +74,11 @@ function makeRequest(url, headers = {}) {
       else if (res.headers['content-encoding'] === 'deflate') stream = res.pipe(zlib.createInflate());
       else if (res.headers['content-encoding'] === 'br') stream = res.pipe(zlib.createBrotliDecompress());
 
-      let data = '';
-      stream.on('data', chunk => { data += chunk.toString(); });
+      const chunks = [];
+      stream.on('data', chunk => { chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk)); });
       stream.on('end', () => {
         try {
+          const data = Buffer.concat(chunks).toString('utf8');
           if (!data) return reject(new Error('Empty response'));
           resolve(JSON.parse(data));
         } catch (err) {
@@ -201,7 +205,8 @@ function extractSearchData(searchData) {
 }
 
 async function main() {
-  const entries = extractEntries();
+  const allEntries = extractEntries();
+  const entries = LIMIT > 0 ? allEntries.slice(0, LIMIT) : allEntries;
   const results = [];
   const errors = [];
   console.log('API 호출을 시작합니다...\n');

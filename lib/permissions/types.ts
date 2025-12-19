@@ -3,6 +3,7 @@
  */
 
 import type { MembershipStatus } from '@/components/membership/MembershipProvider'
+import type { MembershipType, MembershipSource } from '@/lib/types/membership'
 
 /**
  * 기능 식별자
@@ -63,8 +64,8 @@ export interface PermissionContext {
   user: { uid: string } | null
   membership: {
     expiresAt: number
-    type: 'monthly' | 'yearly' | 'gift'
-    source: 'subscription' | 'code'
+    type: MembershipType
+    source: MembershipSource
   } | null
 }
 

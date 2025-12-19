@@ -40,3 +40,6 @@ next-env.d.ts
 
 # test account info (프로덕션에서는 삭제)
 TEST_ACCOUNT.md
+
+/public/sw.js
+/public/workbox-*.js

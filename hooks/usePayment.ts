@@ -295,6 +295,7 @@ export function usePayment({
         yearly: '1년 이용권',
       }
 
+      // PortOne SDK 타입 이슈로 인한 타입 단언
       const paymentResponse = await PortOne.requestPayment({
         storeId: config.storeId,
         channelKey: config.channelKey,
@@ -307,10 +308,15 @@ export function usePayment({
           email: user.email || undefined,
           phoneNumber: phoneNumber || undefined,
         },
-      })
+      } as any)
 
-      if (paymentResponse.code) {
-        setPayMessage(paymentResponse.message || '결제에 실패했습니다.')
+      if (!paymentResponse) {
+        setPayMessage('결제 응답을 받지 못했습니다.')
+        return
+      }
+
+      if ((paymentResponse as any).code) {
+        setPayMessage((paymentResponse as any).message || '결제에 실패했습니다.')
         return
       }
 

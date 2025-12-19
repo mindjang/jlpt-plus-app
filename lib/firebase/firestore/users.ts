@@ -28,14 +28,26 @@ export async function createUserDocument(
 
   const now = Date.now()
 
+  // undefined 값을 제거하여 Firestore 오류 방지
+  const profile: Partial<UserProfile> = {
+    createdAt: now,
+  }
+  
+  if (initialData?.displayName !== undefined) {
+    profile.displayName = initialData.displayName
+  }
+  if (initialData?.email !== undefined) {
+    profile.email = initialData.email
+  }
+  if (initialData?.photoURL !== undefined) {
+    profile.photoURL = initialData.photoURL
+  }
+  if (initialData?.phoneNumber !== undefined) {
+    profile.phoneNumber = initialData.phoneNumber
+  }
+
   const userData: UserData = {
-    profile: {
-      displayName: initialData?.displayName,
-      createdAt: now,
-      email: initialData?.email,
-      photoURL: initialData?.photoURL,
-      phoneNumber: initialData?.phoneNumber,
-    },
+    profile: profile as UserProfile,
     settings: {
       dailyNewLimit: 20, // 기본값
       theme: 'auto',
@@ -68,10 +80,29 @@ export async function getUserData(uid: string): Promise<UserData | null> {
 export async function updateUserProfile(uid: string, profile: Partial<UserProfile>) {
   const dbInstance = getDbInstance()
   const userRef = doc(dbInstance, 'users', uid)
+  
+  // undefined 값을 제거하여 Firestore 오류 방지
+  const cleanProfile: Partial<UserProfile> = {}
+  if (profile.displayName !== undefined) {
+    cleanProfile.displayName = profile.displayName
+  }
+  if (profile.email !== undefined) {
+    cleanProfile.email = profile.email
+  }
+  if (profile.photoURL !== undefined) {
+    cleanProfile.photoURL = profile.photoURL
+  }
+  if (profile.phoneNumber !== undefined) {
+    cleanProfile.phoneNumber = profile.phoneNumber
+  }
+  if (profile.createdAt !== undefined) {
+    cleanProfile.createdAt = profile.createdAt
+  }
+  
   await setDoc(
     userRef,
     {
-      profile,
+      profile: cleanProfile,
     },
     { merge: true }
   )

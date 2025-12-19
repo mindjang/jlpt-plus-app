@@ -15,23 +15,29 @@ export const LibraryViewSwitcher: React.FC<LibraryViewSwitcherProps> = ({
     setVisualMode,
 }) => {
     return (
-        <div className="flex flex-col gap-2 px-4 py-2 bg-white/80 backdrop-blur-md sticky top-14 z-20 border-b border-divider">
-            <div className="flex bg-gray-100/80 p-1 rounded-lg">
+        <div className="px-4 py-3 bg-surface border-b border-divider sticky top-14 z-20">
+            <div className="flex bg-gray-100 p-1 rounded-lg">
                 <button
                     onClick={() => setVisualMode('stack')}
-                    className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-md text-xs font-medium ${visualMode === 'stack' ? 'bg-white text-text-main' : 'text-text-sub active:bg-gray-200/50'
-                        }`}
+                    className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-md text-label font-medium transition-colors ${
+                        visualMode === 'stack' 
+                            ? 'bg-white text-text-main shadow-sm' 
+                            : 'text-text-sub active:bg-gray-200/50'
+                    }`}
                 >
-                    <ListCollapse size={14} />
-                    <span>스택 (레벨별)</span>
+                    <ListCollapse size={16} />
+                    <span>레벨별</span>
                 </button>
                 <button
                     onClick={() => setVisualMode('minimal')}
-                    className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-md text-xs font-medium ${visualMode === 'minimal' ? 'bg-white text-text-main' : 'text-text-sub active:bg-gray-200/50'
-                        }`}
+                    className={`flex-1 flex items-center justify-center gap-2 py-2 rounded-md text-label font-medium transition-colors ${
+                        visualMode === 'minimal' 
+                            ? 'bg-white text-text-main shadow-sm' 
+                            : 'text-text-sub active:bg-gray-200/50'
+                    }`}
                 >
-                    <Scan size={14} />
-                    <span>미니멀 (전체)</span>
+                    <Scan size={16} />
+                    <span>전체</span>
                 </button>
             </div>
         </div>

@@ -192,7 +192,7 @@ export function PeriodStats() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       {/* 오늘의 학습 정보 */}
       <TodayOverview />
 
@@ -200,14 +200,14 @@ export function PeriodStats() {
       <StudyHeatmap />
 
       {/* 기간 선택 탭 */}
-      <div className="bg-surface rounded-lg border border-divider p-2 flex gap-2">
+      <div className="bg-surface rounded-lg border border-divider p-1 flex gap-1">
         {(['week', 'month', 'year', 'all'] as PeriodType[]).map((p) => (
           <button
             key={p}
             onClick={() => setPeriod(p)}
-            className={`flex-1 py-2 rounded-lg text-body font-medium ${
+            className={`flex-1 py-2 rounded-lg text-body font-medium transition-colors ${
               period === p
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-white shadow-sm'
                 : 'text-text-sub active:bg-gray-50'
             }`}
           >
@@ -220,8 +220,8 @@ export function PeriodStats() {
       {!loading && chartData.length > 0 && (
         <>
           <div className="bg-surface rounded-lg border border-divider p-4">
-            <h3 className="text-body font-semibold text-text-main mb-4">학습 시간</h3>
-            <div className="text-center py-8 text-body text-text-sub">
+            <h3 className="text-body font-semibold text-text-main mb-3">학습 시간</h3>
+            <div className="text-center py-6 text-body text-text-sub">
               학습 기록이 없어요.
             </div>
           </div>
@@ -237,7 +237,7 @@ export function PeriodStats() {
       )}
 
       {loading && (
-        <div className="bg-surface rounded-lg border border-divider p-8 text-center">
+        <div className="bg-surface rounded-lg border border-divider p-6 text-center">
           <div className="text-body text-text-sub">로딩 중...</div>
         </div>
       )}

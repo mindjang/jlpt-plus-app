@@ -49,30 +49,30 @@ export function AutoStudyCard({
   }
 
   return (
-    <div className="bg-surface rounded-lg p-4 border border-divider flex flex-col gap-2">
+    <div className="bg-surface rounded-lg p-4 border border-divider flex flex-col gap-3">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <h2 className="text-subtitle font-semibold text-text-main">자동 학습</h2>
+          <h2 className="text-body font-semibold text-text-main">자동 학습</h2>
           <span className="px-2 py-0.5 rounded-full bg-orange-100 text-orange-600 text-label font-medium">
             {studyRound}회차
           </span>
         </div>
         <button 
           onClick={() => router.push('/stats')}
-          className="text-body text-text-sub active:text-text-main"
+          className="text-label text-text-sub active:text-text-main"
         >
           기록 &gt;
         </button>
       </div>
 
       {/* 목표 학습량과 진행률 차트 */}
-      <div className="grid grid-cols-2 gap-4 items-center justify-between">
+      <div className="grid grid-cols-2 gap-3 items-center justify-between">
         <div>
-          <span className="text-body text-text-sub block mb-2">목표 학습량</span>
+          <span className="text-label text-text-sub block mb-1.5">목표 학습량</span>
           <select
             value={targetAmount}
             onChange={(e) => onTargetAmountChange(Number(e.target.value))}
-            className="px-3 py-1.5 w-full rounded-md border border-divider bg-surface text-body text-text-main appearance-none"
+            className="px-3 py-2 w-full rounded-lg border border-divider bg-surface text-body text-text-main appearance-none"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
               backgroundRepeat: 'no-repeat',
@@ -96,9 +96,9 @@ export function AutoStudyCard({
       </div>
 
       {/* 새 단어 / 복습 단어 */}
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2.5">
         <div className="flex items-center justify-between">
-          <span className="text-body text-text-sub">
+          <span className="text-label text-text-sub">
             새 {activeTab === 'word' ? '단어' : '한자'}
           </span>
           <button 
@@ -109,7 +109,7 @@ export function AutoStudyCard({
           </button>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-body text-text-sub">
+          <span className="text-label text-text-sub">
             복습 {activeTab === 'word' ? '단어' : '한자'}
           </span>
           <button className="text-body text-text-main font-medium">
@@ -124,7 +124,7 @@ export function AutoStudyCard({
               `/practice/learn?level=${level}&type=${activeTab}&limit=${targetAmount}&done=${sessionProgress}`
             )
           }
-          className="w-full py-4 px-6 rounded-lg bg-primary text-surface text-body font-semibold active:opacity-80"
+          className="w-full py-3.5 px-4 rounded-lg bg-primary text-white text-body font-bold active:opacity-90 shadow-sm"
           disabled={sessionTotal === 0}
         >
           {getButtonLabel()}
@@ -133,7 +133,7 @@ export function AutoStudyCard({
 
       {/* 미래 복습 안내 */}
       {sessionTotal === 0 && nextReviewDays !== null && (
-        <div className="text-body text-text-sub text-center mt-2">
+        <div className="text-label text-text-sub text-center mt-1">
           다음 복습까지 약 {nextReviewDays}일 남았습니다.
         </div>
       )}

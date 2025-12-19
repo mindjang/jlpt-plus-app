@@ -54,15 +54,15 @@ export function ProgressDisplay({
     <div className={className}>
       {/* 레이블 또는 숫자 */}
       {hasLabelOrNumber && (
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mb-1">
           {label && labelPosition === 'left' && (
-            <span className="text-body text-text-sub">{label}</span>
+            <span className="text-label text-text-sub">{label}</span>
           )}
           {!label && showNumbers && numberPosition === 'left' && (
-            <span className="text-body text-text-sub">{current} / {total}</span>
+            <span className="text-label text-text-sub">{current} / {total}</span>
           )}
           {showNumbers && numberPosition === 'right' && (
-            <span className="text-xs text-text-sub font-medium">
+            <span className="text-label text-text-sub font-medium">
               {current} / {total}
             </span>
           )}
@@ -73,7 +73,7 @@ export function ProgressDisplay({
       )}
 
       {/* 프로그레스바 */}
-      <div className="flex-1 h-2 bg-divider rounded-full overflow-hidden relative">
+      <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden relative">
         <div
           className="h-full rounded-full transition-all duration-300"
           style={{

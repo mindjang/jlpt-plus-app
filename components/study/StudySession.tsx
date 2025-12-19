@@ -22,7 +22,8 @@ import type { KanjiAliveEntry } from '@/data/types'
 import type { NaverWord } from '@/data/types'
 import type { Grade, UserCardState } from '@/lib/types/srs'
 import { useMembership } from '../membership/MembershipProvider'
-import { PaywallOverlay } from '../membership/PaywallOverlay'
+import { useFeatureAccess } from '@/lib/permissions'
+import { FeatureGuard } from '../permissions/FeatureGuard'
 import { logger } from '@/lib/utils/logger'
 import { ProgressDisplay } from '../ui/ProgressDisplay'
 import { SessionCompleteModal } from './SessionCompleteModal'
@@ -65,6 +66,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
     remainingSessions,
     recordSession,
   } = useMembership()
+  const studySessionAccess = useFeatureAccess('study_session')
   const gradient = getLevelGradient(level.toLowerCase())
   const [sessionReserved, setSessionReserved] = useState(false)
   const [paywallMessage, setPaywallMessage] = useState<string | null>(null)
@@ -79,7 +81,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
     words,
     kanjis,
     dailyNewLimit,
-    canLoad: canStartSession || sessionReserved,
+    canLoad: studySessionAccess.allowed || sessionReserved,
   })
 
   const [queue, setQueue] = useState<StudyCard[]>([])
@@ -156,7 +158,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       setCardStartTime(Date.now()) // 첫 카드 시작 시간 설정
       
       // 큐가 로드되면 즉시 세션 예약 (무료 회차 소진)
-      if (user && membershipStatus !== 'member' && !sessionReserved && canStartSession) {
+      if (user && membershipStatus !== 'member' && !sessionReserved && studySessionAccess.allowed) {
         recordSession()
           .then(() => {
             setSessionReserved(true)
@@ -168,7 +170,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       }
     }
     setLoading(queueLoading)
-  }, [initialQueue, queueLoading, queue.length, initialCompleted, user, membershipStatus, sessionReserved, canStartSession, recordSession])
+  }, [initialQueue, queueLoading, queue.length, initialCompleted, user, membershipStatus, sessionReserved, studySessionAccess.allowed, recordSession])
 
   // 타이머 시작
   useEffect(() => {
@@ -330,19 +332,14 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
     }
   }
 
-  if (!user || (!canStartSession && !sessionReserved && !membershipLoading)) {
+  // 권한 체크: 로딩 중이 아니고 세션이 예약되지 않았으며 접근 불가인 경우
+  if (!membershipLoading && !sessionReserved && !studySessionAccess.allowed) {
     return (
       <div className="w-full min-h-screen flex items-center justify-center p-4 relative">
         <div className="text-body text-text-sub">학습을 시작하려면 로그인 및 회원권이 필요합니다.</div>
-        <PaywallOverlay
-          title={!user ? '로그인이 필요합니다' : '오늘의 무료 학습 회차가 모두 소진되었어요'}
-          description={
-            !user
-              ? '로그인 후 학습을 시작해주세요.'
-              : '비회원은 하루 1회차만 학습할 수 있어요. 회원권을 등록하면 무제한 학습이 가능합니다.'
-          }
-          showRedeem={!!user}
-        />
+        <FeatureGuard feature="study_session">
+          <div />
+        </FeatureGuard>
       </div>
     )
   }

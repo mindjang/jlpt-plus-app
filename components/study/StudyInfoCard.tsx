@@ -26,7 +26,7 @@ export function StudyInfoCard({
   return (
     <>
       <div className="flex items-center justify-between">
-        <h2 className="text-subtitle font-semibold text-text-main pl-2 pt-4">
+        <h2 className="text-body font-semibold text-text-main pl-2 pt-3">
           {level} 학습 정보
         </h2>
         <button 
@@ -39,7 +39,7 @@ export function StudyInfoCard({
 
       <div className="bg-surface rounded-lg p-4 border border-divider">
         {/* 장기 기억 단어/한자 */}
-        <div className="mb-3">
+        <div className="mb-2.5">
           <ProgressDisplay
             current={loading ? 0 : longTermMemory}
             total={totalWords}

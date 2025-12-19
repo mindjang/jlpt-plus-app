@@ -60,66 +60,66 @@ export default function FlashGamePage() {
         />
       </div>
 
-      <div className="relative z-10 p-6 flex flex-col h-screen">
-        <header className="flex items-center justify-between mb-12">
-          <button onClick={() => router.back()} className="p-2 active:bg-white/10 rounded-full">
-            <ArrowLeft className="text-cyan-400" />
+      <div className="relative z-10 p-4 flex flex-col h-screen">
+        <header className="flex items-center justify-between mb-6">
+          <button onClick={() => router.back()} className="p-2 active:bg-white/10 rounded-lg">
+            <ArrowLeft className="text-cyan-400" size={20} />
           </button>
           <div className="flex items-center gap-2">
-            <Zap className="text-yellow-400 animate-pulse" fill="currentColor" size={28} />
-            <h1 className="text-display-s font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent italic tracking-wider">
+            <Zap className="text-yellow-400 animate-pulse" fill="currentColor" size={20} />
+            <h1 className="text-title font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               FLASH QUIZ
             </h1>
-            <Zap className="text-yellow-400 animate-pulse" fill="currentColor" size={28} />
+            <Zap className="text-yellow-400 animate-pulse" fill="currentColor" size={20} />
           </div>
           <div className="w-10"></div>
         </header>
 
-        <main className="flex-1 flex flex-col items-center justify-center space-y-12 pb-20">
+        <main className="flex-1 flex flex-col items-center justify-center space-y-6 pb-20">
           {/* Title */}
-          <div className="text-center space-y-4">
+          <div className="text-center space-y-3">
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
               transition={{ type: "spring", bounce: 0.6 }}
-              className="inline-block px-4 py-1 rounded-full border-2 border-cyan-500/50 bg-cyan-500/20 text-cyan-400 text-label font-mono mb-4"
+              className="inline-block px-3 py-1 rounded-full border border-cyan-500/50 bg-cyan-500/20 text-cyan-400 text-label font-medium mb-3"
             >
               ⚡ SPEED MODE
             </motion.div>
             <motion.h2
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              className="text-6xl font-black text-white drop-shadow-[0_0_20px_rgba(34,211,238,0.8)]"
+              className="text-title font-black text-white drop-shadow-[0_0_20px_rgba(34,211,238,0.8)]"
             >
               3초의 기적
             </motion.h2>
-            <p className="text-cyan-200">빠르게 생각하고 빠르게 선택하세요!</p>
+            <p className="text-body text-cyan-200">빠르게 생각하고 빠르게 선택하세요!</p>
 
             {/* Features */}
-            <div className="flex gap-4 justify-center mt-6">
-              <div className="flex items-center gap-2 text-sm text-yellow-300">
-                <Clock size={16} />
+            <div className="flex gap-3 justify-center mt-4">
+              <div className="flex items-center gap-1.5 text-label text-yellow-300">
+                <Clock size={14} />
                 <span>3초 제한</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-purple-300">
-                <Zap size={16} />
+              <div className="flex items-center gap-1.5 text-label text-purple-300">
+                <Zap size={14} />
                 <span>연속 보너스</span>
               </div>
             </div>
           </div>
 
           {/* Selection Controls */}
-          <div className="w-full max-w-sm space-y-6">
+          <div className="w-full max-w-sm space-y-4">
             {/* Level Selector */}
-            <div className="space-y-2">
-              <label className="text-label font-semibold text-cyan-400 uppercase tracking-widest pl-1">Level Select</label>
-              <div className="flex gap-2">
+            <div className="space-y-1.5">
+              <label className="text-label font-semibold text-cyan-400 uppercase tracking-wide pl-1">Level Select</label>
+              <div className="grid grid-cols-5 gap-1.5">
                 {(['N5', 'N4', 'N3', 'N2', 'N1'] as Level[]).map((lvl) => (
                   <button
                     key={lvl}
                     onClick={() => setSelectedLevel(lvl)}
-                    className={`flex-1 py-3 rounded-lg font-bold transition-all ${selectedLevel === lvl
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-[0_0_25px_rgba(34,211,238,0.6)] scale-105'
+                    className={`py-2 rounded-lg font-semibold transition-all text-body ${selectedLevel === lvl
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-sm'
                         : 'bg-white/10 text-white/60 active:bg-white/20'
                       }`}
                   >
@@ -130,28 +130,28 @@ export default function FlashGamePage() {
             </div>
 
             {/* Mode Selector */}
-            <div className="space-y-2">
-              <label className="text-xs font-bold text-cyan-400 uppercase tracking-widest pl-1">Content Type</label>
-              <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-1.5">
+              <label className="text-label font-semibold text-cyan-400 uppercase tracking-wide pl-1">Content Type</label>
+              <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => setGameMode('word')}
-                  className={`p-4 rounded-lg border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'word'
-                      ? 'border-blue-500 bg-blue-500/20 text-blue-300 shadow-[0_0_20px_rgba(59,130,246,0.4)]'
+                  className={`p-3 rounded-lg border transition-all flex flex-col items-center gap-1.5 ${gameMode === 'word'
+                      ? 'border-blue-500 bg-blue-500/20 text-blue-300'
                       : 'border-white/20 bg-white/5 text-white/50 active:border-white/40'
                     }`}
                 >
-                  <span className="text-2xl">あ</span>
-                  <span className="font-bold text-sm">단어</span>
+                  <span className="text-xl">あ</span>
+                  <span className="font-semibold text-body">단어</span>
                 </button>
                 <button
                   onClick={() => setGameMode('kanji')}
-                  className={`p-4 rounded-lg border-2 transition-all flex flex-col items-center gap-2 ${gameMode === 'kanji'
-                      ? 'border-blue-500 bg-blue-500/20 text-blue-300 shadow-[0_0_20px_rgba(59,130,246,0.4)]'
+                  className={`p-3 rounded-lg border transition-all flex flex-col items-center gap-1.5 ${gameMode === 'kanji'
+                      ? 'border-blue-500 bg-blue-500/20 text-blue-300'
                       : 'border-white/20 bg-white/5 text-white/50 active:border-white/40'
                     }`}
                 >
-                  <span className="text-2xl">字</span>
-                  <span className="font-bold text-sm">한자</span>
+                  <span className="text-xl">字</span>
+                  <span className="font-semibold text-body">한자</span>
                 </button>
               </div>
             </div>
@@ -161,10 +161,10 @@ export default function FlashGamePage() {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={startGame}
-            className="w-full max-w-xs py-5 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-lg font-black text-2xl text-white shadow-[0_0_40px_rgba(34,211,238,0.6)] flex items-center justify-center gap-3 relative overflow-hidden group"
+            className="w-full max-w-xs py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-lg font-bold text-body text-white shadow-sm flex items-center justify-center gap-2 relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-white/30 translate-x-[-100%] group-active:translate-x-[100%] transition-transform duration-500 skew-x-12"></div>
-            <Zap fill="currentColor" size={28} />
+            <Zap fill="currentColor" size={20} />
             START FLASH
           </motion.button>
         </main>

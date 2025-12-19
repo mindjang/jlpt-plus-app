@@ -3,11 +3,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { requireAuth } from '@/lib/firebase/auth-middleware'
 
-type Plan = 'monthly' | 'yearly'
+type Plan = 'monthly' // 정기구독은 월간만 가능 (최대 3개월)
 
 const PLAN_AMOUNTS: Record<Plan, number> = {
   monthly: Number(process.env.PORTONE_MONTHLY_AMOUNT || 9900),
-  yearly: Number(process.env.PORTONE_YEARLY_AMOUNT || 99000),
 }
 
 export async function POST(request: NextRequest) {
@@ -30,8 +29,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'billingKey, plan are required' }, { status: 400 })
     }
 
-    if (!['monthly', 'yearly'].includes(plan)) {
-      return NextResponse.json({ error: 'invalid plan' }, { status: 400 })
+    if (plan !== 'monthly') {
+      return NextResponse.json({ error: 'only monthly subscription is allowed' }, { status: 400 })
     }
 
     const apiSecret = process.env.PORTONE_API_SECRET
@@ -40,7 +39,7 @@ export async function POST(request: NextRequest) {
     }
 
     const paymentId = `pay-${plan}-${customerId}-${Date.now()}`
-    const orderName = plan === 'monthly' ? '월간 이용권 정기결제' : '연간 이용권 정기결제'
+    const orderName = '일본어학습 구독권 (월간 정기결제)'
     const amount = PLAN_AMOUNTS[plan]
 
     const scheduleRes = await fetch(

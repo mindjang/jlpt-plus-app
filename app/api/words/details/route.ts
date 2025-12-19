@@ -3,6 +3,9 @@ import fs from 'fs'
 import path from 'path'
 import type { WordDetails, Level } from '@/data/types'
 
+// 동적 라우트 명시 (searchParams 사용)
+export const dynamic = 'force-dynamic'
+
 // 캐시 (메모리 캐시)
 const indexCache = new Map<string, any>()
 const chunkCache = new Map<string, WordDetails[]>()

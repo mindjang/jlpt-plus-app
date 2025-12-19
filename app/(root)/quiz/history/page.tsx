@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
-import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
+import { FeatureGuard } from '@/components/permissions/FeatureGuard'
 import type { QuizHistorySummary } from '@/lib/types/quiz'
 import { getQuizHistory } from '@/lib/firebase/firestore/quiz'
 import { motion } from 'framer-motion'
@@ -60,32 +60,28 @@ export default function QuizHistoryPage() {
     )
   }
 
-  if (!user) {
-    return (
-      <LoginRequiredScreen
-        title="퀴즈 히스토리"
-        showBackButton
-        onBack={() => router.back()}
-        description="퀴즈 기록을 확인하려면\n로그인이 필요합니다."
-      />
-    )
-  }
-
   return (
-    <div className="min-h-screen pb-20">
+    <FeatureGuard
+      feature="quiz_history"
+      customMessage={{
+        title: '퀴즈 히스토리',
+        description: '퀴즈 기록을 확인하려면 로그인이 필요합니다.',
+      }}
+    >
+    <div className="w-full overflow-hidden bg-page min-h-screen">
       <AppBar title="퀴즈 히스토리" onBack={() => router.back()} />
 
-      <div className="p-4 max-w-4xl mx-auto">
+      <div className="flex flex-col gap-4 p-4 pb-20">
         {history.length === 0 ? (
-          <div className="text-center py-20">
-            <div className="text-display-s mb-4">📝</div>
-            <p className="text-title text-text-main mb-2">아직 퀴즈 기록이 없습니다</p>
-            <p className="text-body text-text-sub mb-6">
+          <div className="text-center py-16">
+            <div className="text-title mb-3">📝</div>
+            <p className="text-body text-text-main mb-1.5">아직 퀴즈 기록이 없습니다</p>
+            <p className="text-label text-text-sub mb-4">
               첫 퀴즈를 시작해보세요!
             </p>
             <button
               onClick={() => router.push('/quiz')}
-              className="px-6 py-4 bg-primary text-white rounded-lg text-body font-semibold active:opacity-80"
+              className="px-5 py-3 bg-primary text-white rounded-lg text-body font-semibold active:opacity-90"
             >
               퀴즈 시작하기
             </button>
@@ -95,20 +91,20 @@ export default function QuizHistoryPage() {
             {history.map((item, index) => (
               <motion.div
                 key={item.sessionId}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-surface rounded-lg border border-divider p-6"
+                className="bg-surface rounded-lg border border-divider p-4"
               >
                 {/* 날짜 */}
-                <div className="text-label text-text-sub mb-3">
+                <div className="text-label text-text-sub mb-2.5">
                   {formatDate(item.date)}
                 </div>
 
                 {/* 점수 및 통계 */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-4">
-                    <div className="text-display-s font-bold text-primary">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-3">
+                    <div className="text-title font-bold text-text-main">
                       {item.score}점
                     </div>
                     <div className="text-body text-text-sub">
@@ -117,19 +113,19 @@ export default function QuizHistoryPage() {
                   </div>
                   
                   {/* 경험치 */}
-                  <div className="text-body font-semibold text-green-600">
+                  <div className="text-body font-semibold text-text-main">
                     +{item.expGained} EXP
                   </div>
                 </div>
 
                 {/* 상세 정보 */}
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2">
                   {/* 레벨 태그 */}
                   <div className="flex items-center gap-1">
                     {item.levels.map((level) => (
                       <span
                         key={level}
-                        className="px-2 py-1 bg-page text-text-sub text-label rounded"
+                        className="px-2 py-0.5 bg-gray-100 text-text-sub text-label rounded"
                       >
                         {level}
                       </span>
@@ -152,6 +148,7 @@ export default function QuizHistoryPage() {
         )}
       </div>
     </div>
+    </FeatureGuard>
   )
 }
 

@@ -6,39 +6,33 @@ import { AppBar } from '@/components/ui/AppBar'
 import { motion } from 'framer-motion'
 import { PeriodStats } from '@/components/stats/PeriodStats'
 import { CategoryStats } from '@/components/stats/CategoryStats'
-import { useAuth } from '@/components/auth/AuthProvider'
-import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
+import { FeatureGuard } from '@/components/permissions/FeatureGuard'
 
 type TabType = 'period' | 'category' | 'vocabulary'
 
 function StatsContent() {
   const router = useRouter()
-  const { user } = useAuth()
   const [activeTab, setActiveTab] = useState<TabType>('period')
 
-  if (!user) {
-    return (
-      <LoginRequiredScreen
-        title="학습 통계"
-        showBackButton
-        onBack={() => router.back()}
-        description="학습 통계를 확인하려면<br />로그인이 필요합니다."
-      />
-    )
-  }
-
   return (
+    <FeatureGuard
+      feature="stats_view"
+      customMessage={{
+        title: '학습 통계',
+        description: '학습 통계를 확인하려면 로그인이 필요합니다.',
+      }}
+    >
     <div className="w-full overflow-hidden bg-page min-h-screen">
       <AppBar title="학습 통계" onBack={() => router.back()} />
 
-      <div className="flex flex-col gap-6 p-4 pb-20">
+      <div className="flex flex-col gap-4 p-4 pb-20">
         {/* 메인 탭 */}
-        <div className="flex gap-2 bg-surface rounded-lg border border-divider p-2">
+        <div className="flex gap-2 bg-surface rounded-lg border border-divider p-1">
           <button
             onClick={() => setActiveTab('period')}
-            className={`flex-1 py-2 rounded-lg text-body font-medium ${
+            className={`flex-1 py-2 rounded-lg text-body font-medium transition-colors ${
               activeTab === 'period'
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-white shadow-sm'
                 : 'text-text-sub active:bg-gray-50'
             }`}
           >
@@ -46,9 +40,9 @@ function StatsContent() {
           </button>
           <button
             onClick={() => setActiveTab('category')}
-            className={`flex-1 py-2 rounded-lg text-body font-medium ${
+            className={`flex-1 py-2 rounded-lg text-body font-medium transition-colors ${
               activeTab === 'category'
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-white shadow-sm'
                 : 'text-text-sub active:bg-gray-50'
             }`}
           >
@@ -61,6 +55,7 @@ function StatsContent() {
         {activeTab === 'category' && <CategoryStats />}
       </div>
     </div>
+    </FeatureGuard>
   )
 }
 

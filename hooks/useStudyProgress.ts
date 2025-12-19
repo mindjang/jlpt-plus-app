@@ -1,8 +1,10 @@
 /**
  * 학습 진행률 계산 커스텀 훅
  * 진행률 통계, 회차 진행률, 챕터별 진행률 등을 계산
+ * 중복 요청 방지 및 자동 취소 기능 포함
  */
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
+import { deduplicateRequest } from '@/lib/utils/requestDeduplication'
 import { getLevelProgress, getTodayQueues } from '@/lib/srs/queue/studyQueue'
 import {
   calculateProgressStats,
@@ -101,6 +103,76 @@ export function useStudyProgress({
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
   const studyRoundRef = useRef(1)
+  const abortControllerRef = useRef<AbortController | null>(null)
+  const wordsDataRef = useRef<NaverWord[]>([])
+  const kanjisDataRef = useRef<KanjiAliveEntry[]>([])
+  const wordsLengthRef = useRef(0)
+  const kanjisLengthRef = useRef(0)
+
+  // words/kanjis 데이터를 ref에 저장 (의존성 배열 문제 해결)
+  useEffect(() => {
+    wordsDataRef.current = words
+    kanjisDataRef.current = kanjis
+    wordsLengthRef.current = words.length
+    kanjisLengthRef.current = kanjis.length
+  }, [words, kanjis])
+
+  // 중복 방지가 적용된 진행률 로드 함수 (메모이제이션)
+  const loadProgressDeduplicated = useMemo(
+    () => deduplicateRequest(
+      async (
+        uid: string,
+        level: JlptLevel,
+        activeTab: 'word' | 'kanji',
+        totalWords: number
+      ) => {
+        // 1. 학습한 카드 수 가져오기
+        const progress = await getLevelProgress(
+          uid,
+          level,
+          activeTab === 'word' ? totalWords : 0,
+          activeTab === 'kanji' ? totalWords : 0
+        )
+
+        // 2. 장기 기억 카드 수 및 오늘 새로 학습한 카드 수 계산
+        const levelCardsMap = await getCardsByLevel(uid, level)
+
+        return { progress, levelCardsMap }
+      },
+      {
+        keyGenerator: (uid, level, activeTab, totalWords) => {
+          return `progress:${uid}:${level}:${activeTab}:${totalWords}`
+        },
+        ttl: 3000, // 3초간 캐시
+        removeOnError: true,
+      }
+    ),
+    [uid, level, activeTab, totalWords]
+  )
+
+  // 중복 방지가 적용된 큐 로드 함수 (메모이제이션)
+  const loadQueuesDeduplicated = useMemo(
+    () => deduplicateRequest(
+      async (
+        uid: string,
+        level: JlptLevel,
+        words: NaverWord[],
+        kanjis: KanjiAliveEntry[],
+        targetAmount: number
+      ) => {
+        return await getTodayQueues(uid, level, words, kanjis, targetAmount)
+      },
+      {
+        keyGenerator: (uid, level, words, kanjis, targetAmount) => {
+          // words/kanjis 배열의 길이만 사용하여 키 생성 (배열 내용 변경 감지 최소화)
+          return `queues:${uid}:${level}:${words.length}:${kanjis.length}:${targetAmount}`
+        },
+        ttl: 5000, // 5초간 캐시
+        removeOnError: true,
+      }
+    ),
+    [uid, level, targetAmount]
+  )
 
   const loadProgress = useCallback(async () => {
     if (!uid || !canLoad) {
@@ -108,23 +180,44 @@ export function useStudyProgress({
       return
     }
 
+    // ref에서 최신 데이터 가져오기
+    const currentWords = wordsDataRef.current
+    const currentKanjis = kanjisDataRef.current
+    const items = activeTab === 'word' ? currentWords : currentKanjis
+
+    // words/kanjis가 아직 로드되지 않았으면 로딩 상태 유지
+    if (items.length === 0) {
+      setLoading(true)
+      return
+    }
+
+    // 이전 요청 취소
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort()
+    }
+
+    // 새 AbortController 생성
+    const abortController = new AbortController()
+    abortControllerRef.current = abortController
+
     try {
       setLoading(true)
       setError(null)
 
-      // 1. 학습한 카드 수 가져오기
-      const progress = await getLevelProgress(
+      const { progress, levelCardsMap } = await loadProgressDeduplicated(
         uid,
         level,
-        activeTab === 'word' ? totalWords : 0,
-        activeTab === 'kanji' ? totalWords : 0
+        activeTab,
+        totalWords
       )
+
+      // 요청이 취소되지 않았는지 확인
+      if (abortController.signal.aborted) {
+        return
+      }
 
       const learned = activeTab === 'word' ? progress.learnedWords : progress.learnedKanjis
       setCurrentProgress(learned)
-
-      // 2. 장기 기억 카드 수 및 오늘 새로 학습한 카드 수 계산
-      const levelCardsMap = await getCardsByLevel(uid, level)
       const levelCards = Array.from(levelCardsMap.values())
 
       // 진행률 통계 계산
@@ -149,14 +242,13 @@ export function useStudyProgress({
       setSessionProgress(roundProgress.currentRoundProgress)
 
       // 3. 새 카드/복습 카드 수 가져오기
-      const items = activeTab === 'word' ? words : kanjis
       let availableToday = 0
       if (items.length > 0) {
-        const queues = await getTodayQueues(
+        const queues = await loadQueuesDeduplicated(
           uid,
           level,
-          words,
-          kanjis,
+          currentWords,
+          currentKanjis,
           targetAmount
         )
         setNewWords(queues.newCards.filter(c => c.type === activeTab).length)
@@ -229,17 +321,55 @@ export function useStudyProgress({
 
       setChaptersData(chaptersProgress)
     } catch (err) {
+      // AbortError는 무시 (의도적인 취소)
+      if (err instanceof Error && err.name === 'AbortError') {
+        return
+      }
+
+      // 요청이 취소되지 않았을 때만 에러 설정
+      if (!abortController.signal.aborted) {
       const error = err instanceof Error ? err : new Error('Failed to load progress')
       logger.error('Failed to load progress:', error)
       setError(error)
+      }
     } finally {
+      if (!abortController.signal.aborted) {
       setLoading(false)
+      }
     }
-  }, [uid, level, activeTab, words, kanjis, totalWords, targetAmount, canLoad])
+  }, [uid, level, activeTab, totalWords, targetAmount, canLoad, loadProgressDeduplicated, loadQueuesDeduplicated])
+
+  // words/kanjis 길이 변경 추적
+  const prevWordsLengthRef = useRef(-1)
+  const prevKanjisLengthRef = useRef(-1)
+  const prevActiveTabRef = useRef<'word' | 'kanji' | null>(null)
+  const prevLevelRef = useRef<JlptLevel | null>(null)
+  const isInitialMountRef = useRef(true)
 
   useEffect(() => {
-    loadProgress()
-  }, [loadProgress])
+    // 초기 마운트 시 또는 실제 변경이 있을 때만 실행
+    const isInitialMount = isInitialMountRef.current
+    const wordsLengthChanged = words.length !== prevWordsLengthRef.current && words.length > 0
+    const kanjisLengthChanged = kanjis.length !== prevKanjisLengthRef.current && kanjis.length > 0
+    const activeTabChanged = activeTab !== prevActiveTabRef.current
+    const levelChanged = level !== prevLevelRef.current
+
+    if (isInitialMount || wordsLengthChanged || kanjisLengthChanged || activeTabChanged || levelChanged) {
+      isInitialMountRef.current = false
+      prevWordsLengthRef.current = words.length
+      prevKanjisLengthRef.current = kanjis.length
+      prevActiveTabRef.current = activeTab
+      prevLevelRef.current = level
+      loadProgress()
+    }
+
+    // 컴포넌트 언마운트 시 요청 취소
+    return () => {
+      if (abortControllerRef.current) {
+        abortControllerRef.current.abort()
+      }
+    }
+  }, [loadProgress, words.length, kanjis.length, activeTab, level])
 
   return {
     currentProgress,

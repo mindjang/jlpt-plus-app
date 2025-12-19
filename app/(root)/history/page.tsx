@@ -4,7 +4,7 @@ import React, { useState, useEffect, Suspense } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
-import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
+import { FeatureGuard } from '@/components/permissions/FeatureGuard'
 import { getRangeActivity } from '@/lib/firebase/firestore/dailyActivity'
 import type { DailyActivity } from '@/lib/types/stats'
 import { Calendar, Clock, CheckCircle2, BookOpen, Target, TrendingUp, ArrowLeft, ArrowRight } from 'lucide-react'
@@ -74,41 +74,35 @@ function HistoryContent() {
     return Math.round((totalCorrect / activity.totalQuestions) * 100)
   }
 
-  if (!user) {
     return (
-      <LoginRequiredScreen
-        title="학습 히스토리"
-        showBackButton
-        onBack={() => router.back()}
-        description="학습 히스토리를 확인하려면<br />로그인이 필요합니다."
-      />
-    )
-  }
-
-  if (loading) {
-    return (
+    <FeatureGuard
+      feature="study_history"
+      customMessage={{
+        title: '학습 히스토리',
+        description: '학습 히스토리를 확인하려면 로그인이 필요합니다.',
+      }}
+    >
+      {loading ? (
       <div className="w-full min-h-screen bg-page">
         <AppBar title="학습 히스토리" onBack={() => router.back()} />
         <div className="flex items-center justify-center min-h-[calc(100vh-56px)]">
           <div className="text-body text-text-sub">로딩 중...</div>
         </div>
       </div>
-    )
-  }
-
-  return (
+      ) : (
     <div className="w-full min-h-screen bg-page">
       <AppBar title="학습 히스토리" onBack={() => router.back()} />
 
       <div className="p-4 pb-20 space-y-4">
         {/* 날짜 범위 선택 */}
         <div className="bg-surface rounded-lg border border-divider p-4">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 mb-3">
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-text-sub" />
               <span className="text-body font-semibold text-text-main">기간 선택</span>
             </div>
-            <div className="flex gap-2">
+          </div>
+          <div className="flex gap-2 bg-surface rounded-lg border border-divider p-2">
               {(['7', '30', '90'] as const).map((range) => (
                 <button
                   key={range}
@@ -116,16 +110,15 @@ function HistoryContent() {
                     setDateRange(range)
                     setCurrentPage(0)
                   }}
-                  className={`px-4 py-2 rounded-lg text-body font-medium transition-colors ${
+                className={`flex-1 py-2 rounded-lg text-body font-medium ${
                     dateRange === range
                       ? 'bg-primary text-white'
-                      : 'bg-page text-text-main hover:bg-gray-100'
+                    : 'text-text-sub active:bg-gray-50'
                   }`}
                 >
                   최근 {range}일
                 </button>
               ))}
-            </div>
           </div>
         </div>
 
@@ -294,6 +287,8 @@ function HistoryContent() {
         )}
       </div>
     </div>
+      )}
+    </FeatureGuard>
   )
 }
 

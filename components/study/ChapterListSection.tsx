@@ -26,14 +26,14 @@ export function ChapterListSection({
   onTargetAmountChange,
 }: ChapterListSectionProps) {
   return (
-    <div className="px-4 pt-4 space-y-4">
+    <div className="px-4 pt-4 space-y-3">
       {/* 목표 학습량 */}
       <div className="flex items-center justify-between">
-        <span className="text-body text-text-sub">목표 학습량</span>
+        <span className="text-label text-text-sub">목표 학습량</span>
         <select
           value={targetAmount}
           onChange={(e) => onTargetAmountChange(Number(e.target.value))}
-          className="px-3 py-1 rounded-md border border-divider bg-surface text-body text-text-main"
+          className="px-3 py-2 rounded-lg border border-divider bg-surface text-body text-text-main"
         >
           {CHAPTER_STUDY_TARGET_OPTIONS.map((val) => (
             <option key={val} value={val}>{val}개</option>
@@ -42,20 +42,20 @@ export function ChapterListSection({
       </div>
 
       {/* 챕터 리스트 */}
-      <div className="space-y-3">
+      <div className="space-y-2.5">
         {chapters.map((chapter, index) => (
           <div
             key={chapter.number}
             className="bg-surface rounded-lg p-4 border border-divider"
           >
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-between mb-2.5">
               <div className="flex items-center gap-2">
                 {index === 0 && (
                   <span className="px-2 py-0.5 rounded-full bg-orange-100 text-orange-600 text-label font-medium">
                     학습 대기 중
                   </span>
                 )}
-                <span className="text-subtitle font-semibold text-text-main">
+                <span className="text-body font-semibold text-text-main">
                   챕터 {chapter.number}
                 </span>
                 <span className="px-2 py-0.5 rounded-full bg-gray-100 text-gray-600 text-label">

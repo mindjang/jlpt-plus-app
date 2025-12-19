@@ -1,3 +1,5 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 # dependencies
 /node_modules
 /.pnp
@@ -5,6 +7,7 @@
 
 # testing
 /coverage
+/.nyc_output
 
 # next.js
 /.next/
@@ -24,9 +27,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
-
-# test account info (프로덕션에서는 삭제)
-# TEST_ACCOUNT.md
+.env
 
 # vercel
 .vercel
@@ -35,6 +36,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# scripts
-scripts/*
-public/sw.js
+/scripts/*
+
+# test account info (프로덕션에서는 삭제)
+TEST_ACCOUNT.md

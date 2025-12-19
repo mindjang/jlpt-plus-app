@@ -5,17 +5,17 @@ import { requireAuth } from '@/lib/firebase/auth-middleware'
 import { saveMembership, saveBillingInfo, getMembership } from '@/lib/firebase/firestore'
 import type { Membership } from '@/lib/types/membership'
 
-type Plan = 'monthly' | 'yearly'
+type Plan = 'monthly' | 'quarterly' // 정기구독: 1개월, 3개월
 
 const PLAN_AMOUNTS: Record<Plan, number> = {
   monthly: Number(process.env.PORTONE_MONTHLY_AMOUNT || 4900),
-  yearly: Number(process.env.PORTONE_YEARLY_AMOUNT || 49000),
+  quarterly: Number(process.env.PORTONE_QUARTERLY_AMOUNT || 13000), // 3개월 (약 10% 할인)
 }
 
 function getDurationMs(plan: Plan) {
   return plan === 'monthly'
-    ? 30 * 24 * 60 * 60 * 1000
-    : 365 * 24 * 60 * 60 * 1000
+    ? 30 * 24 * 60 * 60 * 1000 // 1개월
+    : 90 * 24 * 60 * 60 * 1000 // 3개월
 }
 
 export async function POST(request: NextRequest) {
@@ -37,8 +37,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'billingKey, plan are required' }, { status: 400 })
     }
 
-    if (!['monthly', 'yearly'].includes(plan)) {
-      return NextResponse.json({ error: 'invalid plan' }, { status: 400 })
+    if (!['monthly', 'quarterly'].includes(plan)) {
+      return NextResponse.json({ error: 'invalid plan. only monthly or quarterly subscription is allowed' }, { status: 400 })
     }
 
     const apiSecret = process.env.PORTONE_API_SECRET
@@ -48,7 +48,9 @@ export async function POST(request: NextRequest) {
 
     const paymentId = `sub-${plan}-${customerId}-${Date.now()}`
     const amount = PLAN_AMOUNTS[plan]
-    const orderName = plan === 'monthly' ? '월간 이용권 정기결제' : '연간 이용권 정기결제'
+    const orderName = plan === 'monthly' 
+      ? '일본어학습 구독권 (1개월 정기결제)'
+      : '일본어학습 구독권 (3개월 정기결제)'
 
     const paymentResponse = await fetch(
       `https://api.portone.io/payments/${encodeURIComponent(paymentId)}/billing-key`,
@@ -87,7 +89,7 @@ export async function POST(request: NextRequest) {
     const newExpiry = baseTime + getDurationMs(plan)
 
     const membership: Membership = {
-      type: plan,
+      type: plan === 'quarterly' ? 'monthly' : plan, // quarterly는 내부적으로 monthly로 저장 (3개월 기간만 다름)
       source: 'subscription',
       expiresAt: newExpiry,
       createdAt: current?.createdAt || now,
@@ -98,11 +100,12 @@ export async function POST(request: NextRequest) {
     await saveMembership(customerId, membership)
     await saveBillingInfo(customerId, {
       billingKey,
-      plan,
+      plan: plan === 'quarterly' ? 'quarterly' : plan,
       lastPaymentId: paymentId,
       lastPaidAt: now,
       amount,
       provider: 'portone',
+      isRecurring: true,
     })
 
     return NextResponse.json({ ok: true, paymentId, membership })

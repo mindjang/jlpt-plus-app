@@ -1,9 +1,9 @@
 'use client'
 
 import React, { useState, useEffect, Suspense } from 'react'
-import { useSearchParams, useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
-import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
+import { FeatureGuard } from '@/components/permissions/FeatureGuard'
 import { AppBar } from '@/components/ui/AppBar'
 import { QuizCard } from '@/components/study/QuizCard'
 import { QuizSettingsModal } from '@/components/quiz/QuizSettings'
@@ -33,7 +33,6 @@ type QuizState = 'menu' | 'settings' | 'playing' | 'result'
 
 function QuizContent() {
   const router = useRouter()
-  const searchParams = useSearchParams()
   const { user, loading: authLoading } = useAuth()
   
   const [quizState, setQuizState] = useState<QuizState>('menu')
@@ -411,14 +410,7 @@ function QuizContent() {
   }
 
   if (!user) {
-    return (
-      <LoginRequiredScreen
-        title="퀴즈"
-        showBackButton
-        onBack={() => router.back()}
-        description="퀴즈를 시작하려면\n로그인이 필요합니다."
-      />
-    )
+    return null // FeatureGuard가 처리
   }
 
   return (
@@ -489,6 +481,13 @@ function QuizContent() {
 
 export default function QuizPage() {
   return (
+    <FeatureGuard
+      feature="quiz_start"
+      customMessage={{
+        title: '퀴즈',
+        description: '퀴즈를 시작하려면 로그인이 필요합니다.',
+      }}
+    >
     <Suspense
       fallback={
         <div className="flex items-center justify-center min-h-screen">
@@ -498,5 +497,6 @@ export default function QuizPage() {
     >
       <QuizContent />
     </Suspense>
+    </FeatureGuard>
   )
 }

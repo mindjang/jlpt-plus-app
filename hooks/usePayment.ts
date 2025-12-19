@@ -5,24 +5,30 @@ import { useState, useCallback } from 'react'
 import { handleError } from '@/lib/utils/error/errorHandler'
 import type { User } from 'firebase/auth'
 
+type SubscriptionPlan = 'monthly' | 'quarterly' // 정기구독: 1개월, 3개월
+type OneTimePlan = 'monthly' | 'yearly' // 단건결제: 1개월, 1년
+type PaymentPlan = SubscriptionPlan | OneTimePlan
+
 interface UsePaymentOptions {
   user: User | null
   phoneNumber: string | undefined
   displayName: string | undefined
   nameInput: string
   onRefresh?: () => void | Promise<void>
-  onPhoneRequired?: (plan: 'monthly' | 'yearly') => void
+  onPhoneRequired?: (plan: PaymentPlan) => void
 }
 
 interface UsePaymentResult {
-  payLoading: 'monthly' | 'yearly' | null
-  payLoadingKakao: 'monthly' | 'yearly' | null
+  payLoading: PaymentPlan | null
+  payLoadingKakao: PaymentPlan | null
   payMessage: string | null
-  pendingPlan: 'monthly' | 'yearly' | null
+  pendingPlan: PaymentPlan | null
   setPayMessage: (message: string | null) => void
-  setPendingPlan: (plan: 'monthly' | 'yearly' | null) => void
-  handleSubscribe: (plan: 'monthly' | 'yearly') => Promise<void>
-  handleSubscribeKakao: (plan: 'monthly' | 'yearly') => Promise<void>
+  setPendingPlan: (plan: PaymentPlan | null) => void
+  handleSubscribe: (plan: SubscriptionPlan) => Promise<void>
+  handleSubscribeKakao: (plan: SubscriptionPlan) => Promise<void>
+  handleOneTimePayment: (plan: OneTimePlan) => Promise<void>
+  handleOneTimePaymentKakao: (plan: OneTimePlan) => Promise<void>
 }
 
 type PaymentMethod = 'card' | 'kakao'
@@ -48,19 +54,19 @@ export function usePayment({
   onRefresh,
   onPhoneRequired,
 }: UsePaymentOptions): UsePaymentResult {
-  const [payLoading, setPayLoading] = useState<'monthly' | 'yearly' | null>(null)
-  const [payLoadingKakao, setPayLoadingKakao] = useState<'monthly' | 'yearly' | null>(null)
+  const [payLoading, setPayLoading] = useState<PaymentPlan | null>(null)
+  const [payLoadingKakao, setPayLoadingKakao] = useState<PaymentPlan | null>(null)
   const [payMessage, setPayMessage] = useState<string | null>(null)
-  const [pendingPlan, setPendingPlan] = useState<'monthly' | 'yearly' | null>(null)
+  const [pendingPlan, setPendingPlan] = useState<PaymentPlan | null>(null)
 
   /**
-   * 공통 구독 처리 로직
+   * 공통 정기구독 처리 로직
    * 카드 결제와 카카오페이 결제에서 공통으로 사용
    */
   const processSubscription = useCallback(async (
-    plan: 'monthly' | 'yearly',
+    plan: SubscriptionPlan,
     config: BillingKeyConfig,
-    setLoading: (loading: 'monthly' | 'yearly' | null) => void
+    setLoading: (loading: PaymentPlan | null) => void
   ) => {
     if (!user) return
     if (!user.email) {
@@ -190,7 +196,168 @@ export function usePayment({
     }
   }, [user, phoneNumber, displayName, nameInput, onRefresh, onPhoneRequired])
 
-  const handleSubscribe = useCallback(async (plan: 'monthly' | 'yearly') => {
+  const handleSubscribe = useCallback(async (plan: SubscriptionPlan) => {
+    const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
+    const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY
+    
+    if (!storeId || !channelKey) {
+      setPayMessage('결제 설정이 준비되지 않았습니다. (storeId/channelKey)')
+      return
+    }
+
+    const planNames: Record<SubscriptionPlan, string> = {
+      monthly: '1개월 구독',
+      quarterly: '3개월 구독',
+    }
+
+    const config: BillingKeyConfig = {
+      storeId,
+      channelKey,
+      billingKeyMethod: 'CARD',
+      issueIdPrefix: 'bill',
+      issueName: `${planNames[plan]} 빌링키 발급`,
+      errorMessage: '빌링키 발급에 실패했습니다.',
+      successMessage: '구독이 활성화되었습니다.',
+    }
+
+    await processSubscription(plan, config, setPayLoading)
+  }, [processSubscription])
+
+  const handleSubscribeKakao = useCallback(async (plan: SubscriptionPlan) => {
+    const channelKeyKakao = process.env.NEXT_PUBLIC_PORTONE_KAKAO_CHANNEL_KEY
+    const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
+    
+    if (!storeId || !channelKeyKakao) {
+      setPayMessage('카카오 결제 설정이 준비되지 않았습니다. (storeId/channelKey)')
+      return
+    }
+
+    const planNames: Record<SubscriptionPlan, string> = {
+      monthly: '1개월 구독',
+      quarterly: '3개월 구독',
+    }
+
+    const config: BillingKeyConfig = {
+      storeId,
+      channelKey: channelKeyKakao,
+      billingKeyMethod: 'EASY_PAY',
+      issueIdPrefix: 'kko',
+      issueName: `카카오페이 ${planNames[plan]}`,
+      errorMessage: '카카오 빌링키 발급에 실패했습니다.',
+      successMessage: '카카오 구독이 활성화되었습니다.',
+    }
+
+    await processSubscription(plan, config, setPayLoadingKakao)
+  }, [processSubscription])
+
+  /**
+   * 단건결제 처리 로직
+   */
+  const processOneTimePayment = useCallback(async (
+    plan: OneTimePlan,
+    config: BillingKeyConfig,
+    setLoading: (loading: PaymentPlan | null) => void
+  ) => {
+    if (!user) return
+    if (!user.email) {
+      setPayMessage('이메일 정보가 필요합니다. 계정에 이메일이 있는지 확인해주세요.')
+      return
+    }
+
+    const fallbackName =
+      (displayName || nameInput || user.displayName || (user.email ? user.email.split('@')[0] : '') || '사용자').trim() ||
+      '사용자'
+
+    if (!phoneNumber || !fallbackName) {
+      setPendingPlan(plan)
+      if (onPhoneRequired) {
+        onPhoneRequired(plan)
+      }
+      return
+    }
+
+    setLoading(plan)
+    setPayMessage(null)
+
+    try {
+      const PortOne = await import('@portone/browser-sdk/v2')
+      const uidShort = user.uid.replace(/[^A-Za-z0-9]/g, '').slice(0, 8) || 'user'
+      const ts = Date.now().toString(36)
+      const paymentId = `onetime-${plan}-${uidShort}-${ts}`.slice(0, 40)
+
+      const planAmounts: Record<OneTimePlan, number> = {
+        monthly: Number(process.env.NEXT_PUBLIC_PORTONE_ONETIME_MONTHLY_AMOUNT || 4900),
+        yearly: Number(process.env.NEXT_PUBLIC_PORTONE_ONETIME_YEARLY_AMOUNT || 49000),
+      }
+
+      const planNames: Record<OneTimePlan, string> = {
+        monthly: '1개월 이용권',
+        yearly: '1년 이용권',
+      }
+
+      const paymentResponse = await PortOne.requestPayment({
+        storeId: config.storeId,
+        channelKey: config.channelKey,
+        paymentId,
+        orderName: `일본어학습 구독권 (${planNames[plan]})`,
+        totalAmount: planAmounts[plan],
+        currency: 'KRW',
+        customer: {
+          fullName: fallbackName,
+          email: user.email || undefined,
+          phoneNumber: phoneNumber || undefined,
+        },
+      })
+
+      if (paymentResponse.code) {
+        setPayMessage(paymentResponse.message || '결제에 실패했습니다.')
+        return
+      }
+
+      // 실제 결제 ID 가져오기 (PortOne 응답에서)
+      const actualPaymentId = (paymentResponse as any).paymentId || paymentId
+
+      // Firebase ID 토큰 가져오기
+      const idToken = await user.getIdToken()
+      
+      const resp = await fetch('/api/pay/one-time', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${idToken}`
+        },
+        body: JSON.stringify({ paymentId: actualPaymentId, plan }),
+      })
+      const data = await resp.json()
+      if (!resp.ok) {
+        console.error('[Payment] One-time payment API failed', {
+          plan,
+          error: data?.error,
+          timestamp: Date.now(),
+        })
+        setPayMessage(data?.error || '결제에 실패했습니다.')
+        return
+      }
+      
+      console.info('[Payment] One-time payment completed successfully', {
+        plan,
+        method: config.issueIdPrefix === 'kko' ? 'kakao' : 'card',
+        timestamp: Date.now(),
+      })
+      
+      setPayMessage('결제가 완료되었습니다.')
+      if (onRefresh) {
+        await onRefresh()
+      }
+    } catch (error) {
+      const errorMessage = handleError(error, config.issueIdPrefix === 'kko' ? '카카오 단건결제' : '단건결제')
+      setPayMessage(errorMessage)
+    } finally {
+      setLoading(null)
+    }
+  }, [user, phoneNumber, displayName, nameInput, onRefresh, onPhoneRequired])
+
+  const handleOneTimePayment = useCallback(async (plan: OneTimePlan) => {
     const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
     const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY
     
@@ -203,16 +370,16 @@ export function usePayment({
       storeId,
       channelKey,
       billingKeyMethod: 'CARD',
-      issueIdPrefix: 'bill',
-      issueName: plan === 'monthly' ? '월간 구독 빌링키 발급' : '연간 구독 빌링키 발급',
-      errorMessage: '빌링키 발급에 실패했습니다.',
-      successMessage: '구독이 활성화되었습니다.',
+      issueIdPrefix: 'onetime',
+      issueName: plan === 'monthly' ? '1개월 이용권 결제' : '1년 이용권 결제',
+      errorMessage: '결제에 실패했습니다.',
+      successMessage: '결제가 완료되었습니다.',
     }
 
-    await processSubscription(plan, config, setPayLoading)
-  }, [processSubscription])
+    await processOneTimePayment(plan, config, setPayLoading)
+  }, [processOneTimePayment])
 
-  const handleSubscribeKakao = useCallback(async (plan: 'monthly' | 'yearly') => {
+  const handleOneTimePaymentKakao = useCallback(async (plan: OneTimePlan) => {
     const channelKeyKakao = process.env.NEXT_PUBLIC_PORTONE_KAKAO_CHANNEL_KEY
     const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
     
@@ -225,14 +392,14 @@ export function usePayment({
       storeId,
       channelKey: channelKeyKakao,
       billingKeyMethod: 'EASY_PAY',
-      issueIdPrefix: 'kko',
-      issueName: plan === 'monthly' ? '카카오페이 월 구독' : '카카오페이 연간 구독',
-      errorMessage: '카카오 빌링키 발급에 실패했습니다.',
-      successMessage: '카카오 구독이 활성화되었습니다.',
+      issueIdPrefix: 'kko-onetime',
+      issueName: plan === 'monthly' ? '카카오페이 1개월 이용권' : '카카오페이 1년 이용권',
+      errorMessage: '카카오 결제에 실패했습니다.',
+      successMessage: '카카오 결제가 완료되었습니다.',
     }
 
-    await processSubscription(plan, config, setPayLoadingKakao)
-  }, [processSubscription])
+    await processOneTimePayment(plan, config, setPayLoadingKakao)
+  }, [processOneTimePayment])
 
   return {
     payLoading,
@@ -243,5 +410,7 @@ export function usePayment({
     setPendingPlan,
     handleSubscribe,
     handleSubscribeKakao,
+    handleOneTimePayment,
+    handleOneTimePaymentKakao,
   }
 }

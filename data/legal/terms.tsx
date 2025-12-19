@@ -113,6 +113,48 @@ export function TermsContent() {
         </section>
 
         <section>
+          <h3 className="text-title font-semibold mb-3">제10조의2 (환불규정)</h3>
+          <div className="text-body text-text-sub leading-relaxed space-y-2">
+            <h4 className="text-subtitle font-semibold mt-4 mb-2">1. 정기구독 서비스 환불</h4>
+            <p>1-1. 정기구독 서비스는 「전자상거래 등에서의 소비자보호에 관한 법률」 제17조 제2항에 따라 디지털콘텐츠의 제공이 개시된 경우에는 청약철회를 할 수 없습니다.</p>
+            <p>1-2. 다만, 다음 각 호의 경우에는 환불이 가능합니다:</p>
+            <ul className="list-disc list-inside ml-4 space-y-1">
+              <li>서비스 제공 개시 전 환불 요청 시: 전액 환불</li>
+              <li>서비스 제공 개시 후 환불 요청 시: 잔여 기간에 대한 비례 환불 (이용한 기간 제외)</li>
+              <li>회사의 귀책사유로 인한 서비스 중단 시: 잔여 기간에 대한 전액 환불</li>
+            </ul>
+            <p>1-3. 환불 금액 계산 방법:</p>
+            <ul className="list-disc list-inside ml-4 space-y-1">
+              <li>환불 금액 = 결제 금액 × (잔여 이용일수 / 전체 이용일수)</li>
+              <li>이용일수는 서비스 이용 시작일부터 환불 요청일까지를 기준으로 계산합니다.</li>
+            </ul>
+            <p>1-4. 환불 처리 기간: 환불 요청 접수 후 영업일 기준 3~5일 이내 처리</p>
+            
+            <h4 className="text-subtitle font-semibold mt-4 mb-2">2. 단건결제 서비스 환불</h4>
+            <p>2-1. 단건결제 서비스는 서비스 제공 개시 전 환불 요청 시 전액 환불이 가능합니다.</p>
+            <p>2-2. 서비스 제공 개시 후에는 「전자상거래 등에서의 소비자보호에 관한 법률」 제17조 제2항에 따라 청약철회가 제한됩니다.</p>
+            <p>2-3. 다만, 회사의 귀책사유로 인한 서비스 중단 시에는 잔여 기간에 대한 비례 환불이 가능합니다.</p>
+            
+            <h4 className="text-subtitle font-semibold mt-4 mb-2">3. 환불 신청 방법</h4>
+            <p>3-1. 환불 신청은 고객센터를 통해 접수하실 수 있습니다.</p>
+            <p>3-2. 환불 신청 시 다음 정보를 제공해주시기 바랍니다:</p>
+            <ul className="list-disc list-inside ml-4 space-y-1">
+              <li>회원 ID (이메일)</li>
+              <li>결제 일시 및 결제 수단</li>
+              <li>환불 사유</li>
+            </ul>
+            
+            <h4 className="text-subtitle font-semibold mt-4 mb-2">4. 환불 불가 사유</h4>
+            <p>다음 각 호의 경우에는 환불이 불가능합니다:</p>
+            <ul className="list-disc list-inside ml-4 space-y-1">
+              <li>서비스 이용 기간이 전체 이용 기간의 50%를 초과한 경우</li>
+              <li>이용자의 귀책사유로 인한 환불 요청 (단, 서비스 제공 개시 전은 제외)</li>
+              <li>무료 체험 기간 종료 후 자동 결제된 경우 (체험 기간 동안 해지하지 않은 경우)</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
           <h3 className="text-title font-semibold mb-3">제11조 (면책조항)</h3>
           <div className="text-body text-text-sub leading-relaxed space-y-2">
             <p>1. 회사는 천재지변 또는 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없는 경우에는 서비스 제공에 관한 책임이 면제됩니다.</p>

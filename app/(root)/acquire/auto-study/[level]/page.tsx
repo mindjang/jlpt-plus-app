@@ -212,16 +212,16 @@ function AutoStudyContent() {
         {isTasteMode && (
           // Taste mode banner
           <div className="px-4 pt-4">
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-4">
-              <h3 className="font-bold text-purple-900 mb-1 flex items-center gap-2">
-                <span className="text-xl">👋</span> 무료 체험 중입니다
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-3">
+              <h3 className="text-body font-semibold text-purple-900 mb-1 flex items-center gap-2">
+                <span className="text-lg">👋</span> 무료 체험 중입니다
               </h3>
-              <p className="text-sm text-purple-700">
+              <p className="text-label text-purple-700">
                 {level} 단어 5개를 맛보기로 학습해보세요. 진행 상황은 저장되지 않습니다.
               </p>
               <button
                 onClick={() => router.push(`/login?next=${encodeURIComponent(`/acquire/auto-study/${params.level}?${searchParams.toString()}`)}`)}
-                className="mt-3 w-full py-2 bg-purple-600 text-white rounded-lg text-sm font-semibold active:opacity-80"
+                className="mt-2.5 w-full py-3 bg-purple-600 text-white rounded-lg text-body font-bold active:opacity-90 shadow-sm"
               >
                 로그인하고 진행 상황 저장하기
               </button>
@@ -231,7 +231,7 @@ function AutoStudyContent() {
         
         {studyMode === 'auto' ? (
           // 자동 학습 모드
-          <div className="px-4 pt-4 space-y-4">
+          <div className="px-4 pt-4 space-y-3">
             <AutoStudyCard
               level={level}
               activeTab={activeTab}
@@ -283,16 +283,16 @@ function AutoStudyContent() {
         isOpen={showModeModal}
         onClose={() => setShowModeModal(false)}
       >
-        <div className="space-y-2">
+        <div className="space-y-1.5">
           <button
             onClick={() => handleModeSelect('auto')}
-            className="w-full text-left px-4 py-3 rounded-md active:bg-gray-50 text-body text-text-main"
+            className="w-full text-left px-4 py-2.5 rounded-lg active:bg-gray-50 text-body text-text-main"
           >
             자동 학습
           </button>
           <button
             onClick={() => handleModeSelect('chapter')}
-            className="w-full text-left px-4 py-3 rounded-md active:bg-gray-50 text-body text-text-main"
+            className="w-full text-left px-4 py-2.5 rounded-lg active:bg-gray-50 text-body text-text-main"
           >
             챕터별 학습
           </button>

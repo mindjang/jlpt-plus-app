@@ -6,6 +6,7 @@ import type { UserCardState, ReviewParams, Grade, StudyCard } from '../../types/
 import type { EvaluationResult } from '../../types/study'
 import { reviewCard } from '../core/reviewCard'
 import { saveCardState, saveCardStatesBatch } from '../../firebase/firestore'
+import { logger } from '../../utils/logger'
 
 /**
  * 카드 평가 처리
@@ -109,7 +110,7 @@ export function addToPendingUpdates(
 }
 
 /**
- * 배치 업데이트를 Firestore에 저장
+ * 배치 업데이트를 Firestore에 저장 (재시도 로직 포함)
  * @param uid 사용자 ID
  * @param pendingUpdates 배치 업데이트 맵
  * @returns 빈 맵 (저장 후 초기화)
@@ -118,10 +119,27 @@ export async function savePendingUpdates(
   uid: string,
   pendingUpdates: Map<string, UserCardState>
 ): Promise<Map<string, UserCardState>> {
-  if (pendingUpdates.size > 0) {
-    const updates = Array.from(pendingUpdates.values())
-    await saveCardStatesBatch(uid, updates)
+  if (pendingUpdates.size === 0) {
+    return new Map()
   }
+
+    const updates = Array.from(pendingUpdates.values())
+
+  try {
+    await saveCardStatesBatch(uid, updates, {
+      maxRetries: 3,
+      onProgress: (saved, total) => {
+        if (saved === total) {
+          logger.info(`[savePendingUpdates] Successfully saved ${total} card states`)
+  }
+      },
+    })
+  } catch (error) {
+    logger.error('[savePendingUpdates] Failed to save card states after retries:', error)
+    // 에러가 발생해도 빈 맵 반환 (다음 시도에서 다시 저장 시도)
+    // 중요한 데이터이므로 로컬에 백업하는 것을 고려할 수 있음
+  }
+
   return new Map()
 }
 

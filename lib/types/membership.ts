@@ -1,6 +1,6 @@
-export type MembershipType = 'monthly' | 'yearly' | 'gift'
+export type MembershipType = 'monthly' | 'yearly' | 'gift' | 'quarterly' // quarterly: 3개월
 
-export type MembershipSource = 'subscription' | 'code'
+export type MembershipSource = 'subscription' | 'code' | 'one-time' // one-time: 단건결제
 
 export interface Membership {
   type: MembershipType
@@ -26,10 +26,11 @@ export interface DailyUsage {
 }
 
 export interface BillingInfo {
-  billingKey: string
-  plan: 'monthly' | 'yearly'
+  billingKey?: string // 단건결제는 billingKey 없음
+  plan: 'monthly' | 'quarterly' | 'yearly' // monthly: 1개월, quarterly: 3개월, yearly: 1년
   lastPaymentId?: string
   lastPaidAt?: number
   amount?: number
   provider?: string
+  isRecurring?: boolean // true: 정기구독, false: 단건결제
 }

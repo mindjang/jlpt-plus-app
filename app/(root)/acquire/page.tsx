@@ -1,33 +1,16 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import { useRouter } from 'next/navigation'
 import { AppBar } from '@/components/ui/AppBar'
 import { Level } from '@/data'
-import {
-  LibraryViewSwitcher,
-  VisualMode
-} from '@/components/library/LibraryViewSwitcher'
-import {
-  StackLevelView,
-  MinimalContentView
-} from '@/components/library/LibraryViews'
+import { StackLevelView } from '@/components/library/LibraryViews'
 
 export default function AcquirePage() {
   const router = useRouter()
-  // Default to Stack view
-  const [visualMode, setVisualMode] = useState<VisualMode>('stack')
 
   const handleNavigate = (level: Level, type: 'word' | 'kanji') => {
     router.push(`/acquire/auto-study/${level.toLowerCase()}?type=${type}`)
-  }
-
-  const renderContent = () => {
-    switch (visualMode) {
-      case 'stack': return <StackLevelView onNavigate={handleNavigate} />
-      case 'minimal': return <MinimalContentView onNavigate={handleNavigate} />
-      default: return <StackLevelView onNavigate={handleNavigate} />
-    }
   }
 
   return (
@@ -57,13 +40,8 @@ export default function AcquirePage() {
         }
       />
 
-      <LibraryViewSwitcher
-        visualMode={visualMode}
-        setVisualMode={setVisualMode}
-      />
-
       <div className="w-full">
-        {renderContent()}
+        <StackLevelView onNavigate={handleNavigate} />
       </div>
     </div>
   )

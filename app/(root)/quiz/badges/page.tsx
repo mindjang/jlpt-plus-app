@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
-import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
+import { FeatureGuard } from '@/components/permissions/FeatureGuard'
 import { BadgeGallery } from '@/components/quiz/BadgeGallery'
 import { getUserQuizLevel, getAllQuizStats } from '@/lib/firebase/firestore/quiz'
 import { getStreak } from '@/lib/firebase/firestore/dailyActivity'
@@ -53,17 +53,17 @@ export default function BadgesPage() {
     )
   }
 
-  if (!user || !userLevel || !allStats) {
     return (
-      <LoginRequiredScreen
-        title="배지 갤러리"
-        showBackButton
-        onBack={() => router.back()}
-        description="배지를 확인하려면\n로그인이 필요합니다."
-      />
-    )
-  }
-
+    <FeatureGuard
+      feature="quiz_history"
+      customMessage={{
+        title: '배지 갤러리',
+        description: '배지를 확인하려면 로그인이 필요합니다.',
+      }}
+    >
+      {!user || !userLevel || !allStats ? null : (
+        <>
+          {(() => {
   // 통계 계산
   const totalSessions = Object.values(allStats).reduce(
     (sum, stats) => sum + stats.totalSessions,
@@ -90,18 +90,18 @@ export default function BadgesPage() {
 
       <div className="p-4 max-w-6xl mx-auto">
         {/* 헤더 */}
-        <div className="bg-surface rounded-lg border border-divider p-6 mb-6">
+        <div className="bg-surface rounded-lg border border-divider p-4 mb-3">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-display-s font-bold text-text-main mb-2">
+              <h1 className="text-body font-semibold text-text-main mb-0.5">
                 획득한 배지
               </h1>
-              <p className="text-body text-text-sub">
+              <p className="text-label text-text-sub">
                 {userLevel.badges.length}개 획득
               </p>
             </div>
-            <div className="text-display-m font-bold text-primary">
-              🏆
+            <div className="w-9 h-9 rounded-lg bg-yellow-100 flex items-center justify-center">
+              <span className="text-lg">🏆</span>
             </div>
           </div>
         </div>
@@ -116,6 +116,11 @@ export default function BadgesPage() {
         />
       </div>
     </div>
+            )
+          })()}
+        </>
+      )}
+    </FeatureGuard>
   )
 }
 

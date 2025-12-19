@@ -61,7 +61,7 @@ export function BadgeGallery({
   }
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5">
       {ALL_BADGES.map((badge, index) => {
         const isEarned = earnedBadges.includes(badge.id)
         const progress = calculateBadgeProgress(badge, context)
@@ -72,16 +72,16 @@ export function BadgeGallery({
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.02 }}
-            className={`relative p-4 rounded-lg border ${
+            className={`relative p-3 rounded-lg border ${
               isEarned
                 ? getRarityColor(badge.rarity)
                 : 'bg-gray-50 border-gray-200 opacity-50'
             }`}
           >
             {/* 아이콘 */}
-            <div className="text-center mb-2">
+            <div className="text-center mb-1.5">
               <div
-                className={`text-5xl ${
+                className={`text-3xl ${
                   isEarned ? '' : 'grayscale opacity-50'
                 }`}
               >
@@ -90,30 +90,30 @@ export function BadgeGallery({
             </div>
 
             {/* 배지 이름 */}
-            <div className="text-center mb-2">
-              <div className="text-body font-semibold">{badge.name}</div>
-              <div className="text-label text-text-sub mt-1">
+            <div className="text-center mb-1">
+              <div className="text-body font-semibold text-text-main">{badge.name}</div>
+              <div className="text-label text-text-sub mt-0.5">
                 {badge.description}
               </div>
             </div>
 
             {/* 레어도 */}
             <div className="text-center">
-              <span className="text-label px-2 py-1 rounded-full bg-white bg-opacity-50">
+              <span className="text-label px-1.5 py-0.5 rounded-full bg-white bg-opacity-50">
                 {getRarityLabel(badge.rarity)}
               </span>
             </div>
 
             {/* 진행도 (미획득 배지만) */}
             {!isEarned && progress > 0 && progress < 1 && (
-              <div className="mt-3">
-                <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div className="mt-2">
+                <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
                   <div
                     className="h-full bg-primary"
                     style={{ width: `${progress * 100}%` }}
                   />
                 </div>
-                <div className="text-center text-label text-text-sub mt-1">
+                <div className="text-center text-label text-text-sub mt-0.5">
                   {Math.round(progress * 100)}%
                 </div>
               </div>
@@ -121,8 +121,8 @@ export function BadgeGallery({
 
             {/* 획득 마크 */}
             {isEarned && (
-              <div className="absolute top-2 right-2">
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-xs">
+              <div className="absolute top-1.5 right-1.5">
+                <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-white text-xs">
                   ✓
                 </div>
               </div>

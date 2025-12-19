@@ -3,7 +3,7 @@
 import React, { useState, useEffect, Suspense } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
-import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
+import { FeatureGuard } from '@/components/permissions/FeatureGuard'
 import { QuizResultScreen } from '@/components/quiz/QuizResult'
 import { LevelUpModal } from '@/components/quiz/LevelUpModal'
 import type { QuizResult, UserQuizLevel } from '@/lib/types/quiz'
@@ -73,14 +73,7 @@ function QuizResultContent() {
   }
 
   if (!user) {
-    return (
-      <LoginRequiredScreen
-        title="퀴즈 결과"
-        showBackButton
-        onBack={() => router.push('/quiz')}
-        description="퀴즈 결과를 보려면\n로그인이 필요합니다."
-      />
-    )
+    return null // FeatureGuard가 처리
   }
 
   if (!quizResult || !userLevel) {
@@ -88,6 +81,13 @@ function QuizResultContent() {
   }
 
   return (
+    <FeatureGuard
+      feature="quiz_start"
+      customMessage={{
+        title: '퀴즈 결과',
+        description: '퀴즈 결과를 보려면 로그인이 필요합니다.',
+      }}
+    >
     <div className="min-h-screen">
       <QuizResultScreen
         result={quizResult}
@@ -105,6 +105,7 @@ function QuizResultContent() {
         />
       )}
     </div>
+    </FeatureGuard>
   )
 }
 

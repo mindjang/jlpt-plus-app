@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
-import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
+import { FeatureGuard } from '@/components/permissions/FeatureGuard'
 import { getUserQuizLevel, getAllQuizStats, getWeakItems } from '@/lib/firebase/firestore/quiz'
 import type { UserQuizLevel, QuizStats, ItemStats } from '@/lib/types/quiz'
 import type { JlptLevel } from '@/lib/types/content'
@@ -70,12 +70,15 @@ export default function QuizStatsPage() {
 
   if (!user || !userLevel || !allStats) {
     return (
-      <LoginRequiredScreen
-        title="퀴즈 통계"
-        showBackButton
-        onBack={() => router.back()}
-        description="퀴즈 통계를 확인하려면\n로그인이 필요합니다."
-      />
+      <FeatureGuard
+        feature="stats_view"
+        customMessage={{
+          title: '퀴즈 통계',
+          description: '퀴즈 통계를 확인하려면 로그인이 필요합니다.',
+        }}
+      >
+        <div />
+      </FeatureGuard>
     )
   }
 
@@ -94,32 +97,32 @@ export default function QuizStatsPage() {
   )
 
   return (
-    <div className="min-h-screen pb-20">
+    <div className="w-full overflow-hidden bg-page min-h-screen">
       <AppBar title="퀴즈 통계" onBack={() => router.back()} />
 
-      <div className="p-4 max-w-4xl mx-auto space-y-6">
+      <div className="flex flex-col gap-4 p-4 pb-20">
         {/* 전체 통계 */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-surface rounded-lg border border-divider p-6"
+          className="bg-surface rounded-lg border border-divider p-4"
         >
-          <h2 className="text-title font-semibold text-text-main mb-4">전체 통계</h2>
-          <div className="grid grid-cols-3 gap-4">
+          <h2 className="text-body font-semibold text-text-main mb-3">전체 통계</h2>
+          <div className="grid grid-cols-3 gap-2.5">
             <div className="text-center">
-              <div className="text-display-s font-bold text-primary mb-1">
+              <div className="text-title font-bold text-text-main mb-0.5">
                 {totalSessions}
               </div>
               <div className="text-label text-text-sub">총 퀴즈</div>
             </div>
             <div className="text-center">
-              <div className="text-display-s font-bold text-green-600 mb-1">
+              <div className="text-title font-bold text-text-main mb-0.5">
                 {totalQuestions}
               </div>
               <div className="text-label text-text-sub">총 문제</div>
             </div>
             <div className="text-center">
-              <div className="text-display-s font-bold text-yellow-600 mb-1">
+              <div className="text-title font-bold text-text-main mb-0.5">
                 {totalQuestions > 0
                   ? Math.round((totalCorrect / totalQuestions) * 100)
                   : 0}
@@ -132,23 +135,23 @@ export default function QuizStatsPage() {
 
         {/* 레벨별 통계 */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-surface rounded-lg border border-divider p-6"
+          className="bg-surface rounded-lg border border-divider p-4"
         >
-          <h2 className="text-title font-semibold text-text-main mb-4">레벨별 성과</h2>
-          <div className="space-y-4">
+          <h2 className="text-body font-semibold text-text-main mb-3">레벨별 성과</h2>
+          <div className="space-y-3">
             {levels.map((level) => {
               const stats = allStats[level]
               const accuracy = stats.averageAccuracy * 100
 
               return (
-                <div key={level} className="space-y-2">
+                <div key={level} className="space-y-1.5">
                   <div className="flex items-center justify-between">
                     <span className="text-body font-medium text-text-main">{level}</span>
                     <div className="text-right">
-                      <span className="text-body font-semibold text-primary mr-2">
+                      <span className="text-body font-semibold text-text-main mr-2">
                         {Math.round(stats.averageScore)}점
                       </span>
                       <span className="text-label text-text-sub">
@@ -158,7 +161,7 @@ export default function QuizStatsPage() {
                   </div>
                   {stats.totalQuestions > 0 && (
                     <div className="space-y-1">
-                      <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
                         <div
                           className={`h-full rounded-full transition-all ${
                             accuracy >= 80
@@ -183,20 +186,20 @@ export default function QuizStatsPage() {
 
         {/* 약점 분석 */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-surface rounded-lg border border-divider p-6"
+          className="bg-surface rounded-lg border border-divider p-4"
         >
-          <h2 className="text-title font-semibold text-text-main mb-4">약점 분석</h2>
+          <h2 className="text-body font-semibold text-text-main mb-3">약점 분석</h2>
           
           {/* 레벨 선택 */}
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap gap-2 mb-3">
             {levels.map((level) => (
               <button
                 key={level}
                 onClick={() => setSelectedLevel(level)}
-                className={`px-4 py-2 rounded-lg text-body font-medium ${
+                className={`px-3 py-1.5 rounded-lg text-body font-medium ${
                   selectedLevel === level
                     ? 'bg-primary text-white'
                     : 'bg-surface border border-divider text-text-main active:bg-gray-50'
@@ -241,7 +244,7 @@ export default function QuizStatsPage() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-8 text-body text-text-sub">
+            <div className="text-center py-6 text-body text-text-sub">
               약점 데이터가 없습니다
             </div>
           )}

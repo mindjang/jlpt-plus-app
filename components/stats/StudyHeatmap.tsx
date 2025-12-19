@@ -238,7 +238,7 @@ export function StudyHeatmap() {
     return (
       <div className="mb-6">
         <div className="text-label font-semibold text-text-main mb-2">{label}</div>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto overflow-y-hidden">
           <div className="inline-block min-w-full">
             {/* 월 레이블 */}
             <div className="flex mb-1 relative h-4">
@@ -261,14 +261,20 @@ export function StudyHeatmap() {
             </div>
 
             {/* 히트맵 그리드 */}
-            <div className="flex">
+            <div className="flex items-start">
               {/* 요일 레이블 */}
-              <div className="flex flex-col mr-1">
+              <div className="flex flex-col mr-1 gap-[2px]">
                 {days.map((day, i) => (
                   <div
                     key={day}
-                    className="text-label text-text-sub flex items-center justify-end h-[calc(100%/7)]"
-                    style={{ fontSize: '10px', lineHeight: '11px' }}
+                    className="text-label text-text-sub flex items-center justify-end"
+                    style={{ 
+                      fontSize: '10px', 
+                      lineHeight: '1',
+                      height: 'calc((100vw - 2rem - 1.5rem - 1.5rem) / 26)',
+                      minHeight: '11px',
+                      maxHeight: 'calc((100vw - 2rem - 1.5rem - 1.5rem) / 26)'
+                    }}
                   >
                     {day}
                   </div>

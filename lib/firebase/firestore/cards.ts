@@ -44,18 +44,105 @@ export async function saveCardState(uid: string, cardState: UserCardState) {
 }
 
 /**
- * 여러 카드 상태를 배치로 저장
+ * Firestore 배치 제한 (최대 500개)
  */
-export async function saveCardStatesBatch(uid: string, cardStates: UserCardState[]) {
+const FIRESTORE_BATCH_LIMIT = 500
+
+/**
+ * 여러 카드 상태를 배치로 저장 (재시도 및 청크 분할 포함)
+ * 
+ * @param uid 사용자 ID
+ * @param cardStates 저장할 카드 상태 배열
+ * @param options 재시도 옵션
+ * @returns 저장된 카드 수
+ */
+export async function saveCardStatesBatch(
+  uid: string,
+  cardStates: UserCardState[],
+  options: {
+    maxRetries?: number
+    onProgress?: (saved: number, total: number) => void
+  } = {}
+): Promise<number> {
+  if (cardStates.length === 0) {
+    return 0
+  }
+
+  const { maxRetries = 3, onProgress } = options
   const dbInstance = getDbInstance()
+  let totalSaved = 0
+
+  // Firestore 배치 제한에 맞춰 청크로 분할
+  const chunks: UserCardState[][] = []
+  for (let i = 0; i < cardStates.length; i += FIRESTORE_BATCH_LIMIT) {
+    chunks.push(cardStates.slice(i, i + FIRESTORE_BATCH_LIMIT))
+  }
+
+  // 각 청크를 재시도 로직과 함께 처리
+  for (let chunkIndex = 0; chunkIndex < chunks.length; chunkIndex++) {
+    const chunk = chunks[chunkIndex]
+    let saved = false
+    let lastError: unknown
+
+    // 재시도 로직
+    for (let attempt = 0; attempt <= maxRetries; attempt++) {
+      try {
   const batch = writeBatch(dbInstance)
 
-  cardStates.forEach((cardState) => {
+        chunk.forEach((cardState) => {
     const cardRef = doc(dbInstance, 'users', uid, 'cards', cardState.itemId)
     batch.set(cardRef, cardState, { merge: true })
   })
 
   await batch.commit()
+        totalSaved += chunk.length
+        saved = true
+
+        // 진행 상황 콜백
+        if (onProgress) {
+          onProgress(totalSaved, cardStates.length)
+        }
+
+        break // 성공 시 루프 종료
+      } catch (error) {
+        lastError = error
+
+        // 재시도할 수 없는 에러면 즉시 throw
+        const errorMessage = error instanceof Error ? error.message.toLowerCase() : ''
+        const errorCode = (error as any).code?.toLowerCase() || ''
+
+        // 권한 오류, 잘못된 데이터 등은 재시도하지 않음
+        if (
+          errorCode === 'permission-denied' ||
+          errorCode === 'invalid-argument' ||
+          errorMessage.includes('permission')
+        ) {
+          throw error
+        }
+
+        // 마지막 시도면 에러 throw
+        if (attempt >= maxRetries) {
+          throw error
+        }
+
+        // 지수 백오프 대기 (1초, 2초, 4초...)
+        const delay = Math.min(1000 * Math.pow(2, attempt), 10000)
+        await new Promise((resolve) => setTimeout(resolve, delay))
+
+        console.warn(
+          `[saveCardStatesBatch] Retry attempt ${attempt + 1}/${maxRetries} for chunk ${chunkIndex + 1}/${chunks.length}`,
+          error
+        )
+      }
+    }
+
+    // 청크 저장 실패 시 에러 throw
+    if (!saved) {
+      throw lastError || new Error(`Failed to save chunk ${chunkIndex + 1}`)
+    }
+  }
+
+  return totalSaved
 }
 
 /**

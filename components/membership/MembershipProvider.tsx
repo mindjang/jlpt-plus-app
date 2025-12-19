@@ -10,7 +10,7 @@ import {
   redeemGiftCode,
 } from '@/lib/firebase/firestore'
 
-type MembershipStatus = 'guest' | 'nonMember' | 'member' | 'expired'
+export type MembershipStatus = 'guest' | 'nonMember' | 'member' | 'expired'
 
 interface MembershipContextValue {
   loading: boolean

@@ -4,7 +4,7 @@ import React, { useState, Suspense, useMemo, useEffect, useRef } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { StudySession, type StudySessionHandle } from '@/components/study/StudySession'
-import { LoginRequiredScreen } from '@/components/auth/LoginRequiredScreen'
+import { FeatureGuard } from '@/components/permissions/FeatureGuard'
 import { AppBar } from '@/components/ui/AppBar'
 import { ConfirmModal } from '@/components/ui/ConfirmModal'
 import { getNaverWordsByLevel } from '@/data/words/index'
@@ -101,28 +101,24 @@ function LearnContent() {
     return kanjiEntries
   }, [level, typeParam])
 
-  if (loading) {
     return (
+    <FeatureGuard
+      feature="study_session"
+      customMessage={{
+        title: `${level} ${typeParam === 'word' ? '단어' : '한자'} 학습`,
+        description: '학습을 시작하려면 로그인이 필요합니다.',
+      }}
+    >
+      {loading ? (
       <div className="w-full">
         <AppBar title={`${level} ${typeParam === 'word' ? '단어' : '한자'} 학습`} />
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-body text-text-sub">로딩 중...</div>
         </div>
       </div>
-    )
-  }
-
-  if (!user) {
-    return (
-      <LoginRequiredScreen
-        title={`${level} ${typeParam === 'word' ? '단어' : '한자'} 학습`}
-        showBackButton
-        onBack={() => router.push(`/acquire/auto-study/${levelParam.toLowerCase()}?type=${typeParam}`)}
-        description="학습을 시작하려면\n로그인이 필요합니다."
-      />
-    )
-  }
-
+      ) : !user ? null : (
+        <>
+          {(() => {
   // 타이머 포맷 (MM:SS)
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60)
@@ -215,6 +211,11 @@ function LearnContent() {
         confirmButtonColor="danger"
       />
     </div>
+            )
+          })()}
+        </>
+      )}
+    </FeatureGuard>
   )
 }
 

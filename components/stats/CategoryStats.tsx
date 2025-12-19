@@ -156,16 +156,16 @@ export function CategoryStats() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       {/* 카테고리 탭 */}
-      <div className="bg-surface rounded-lg border border-divider p-2 flex gap-2 overflow-x-auto">
+      <div className="bg-surface rounded-lg border border-divider p-1 flex gap-1 overflow-x-auto">
         {(['word', 'kanji', 'quiz', 'game'] as CategoryType[]).map((cat) => (
           <button
             key={cat}
             onClick={() => setCategory(cat)}
-            className={`px-4 py-2 rounded-lg text-body font-medium whitespace-nowrap ${
+            className={`px-3 py-2 rounded-lg text-body font-medium whitespace-nowrap transition-colors ${
               category === cat
-                ? 'bg-primary text-white'
+                ? 'bg-primary text-white shadow-sm'
                 : 'text-text-sub active:bg-gray-50'
             }`}
           >
@@ -176,22 +176,22 @@ export function CategoryStats() {
 
       {/* 카테고리별 트로피 & 통계 */}
       {stats && (
-        <div className="bg-surface rounded-lg border border-divider p-6">
-          <h2 className="text-title font-semibold text-text-main mb-4">
+        <div className="bg-surface rounded-lg border border-divider p-4">
+          <h2 className="text-body font-semibold text-text-main mb-3">
             {getCategoryIcon()} {getCategoryName()} 학습
           </h2>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-3">
             <div>
               <div className="text-label text-text-sub mb-1">
                 {getCategoryName()} 트로피
               </div>
-              <div className="text-display-s font-bold text-primary">
+              <div className="text-title font-bold text-text-main">
                 {stats.trophy}
               </div>
             </div>
             <div>
               <div className="text-label text-text-sub mb-1">총 학습 문제</div>
-              <div className="text-display-s font-bold text-blue-600">
+              <div className="text-title font-bold text-text-main">
                 {stats.totalQuestions.toLocaleString()}
               </div>
             </div>
@@ -201,9 +201,9 @@ export function CategoryStats() {
 
       {/* 7일 학습 정보 */}
       {!loading && weekData.length > 0 && (
-        <div className="bg-surface rounded-lg border border-divider p-6">
-          <h3 className="text-body font-semibold text-text-main mb-8">학습 정보</h3>
-          <div className="flex items-end gap-2 mb-4">
+        <div className="bg-surface rounded-lg border border-divider p-4">
+          <h3 className="text-body font-semibold text-text-main mb-4">학습 정보</h3>
+          <div className="flex items-end gap-1.5 mb-3">
             {weekData.map((day, index) => (
               <div key={index} className="flex-1 flex flex-col items-center">
                 <div
@@ -213,7 +213,7 @@ export function CategoryStats() {
                     minHeight: '4px',
                   }}
                 />
-                <div className="text-label text-text-sub mt-1 text-xs">
+                <div className="text-label text-text-sub mt-1">
                   {day.name}
                 </div>
               </div>
@@ -221,27 +221,24 @@ export function CategoryStats() {
           </div>
 
           {/* 범례 */}
-          <div className="flex items-center gap-4 text-label text-text-sub">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-yellow-500" />
+          <div className="flex items-center gap-3 text-label text-text-sub flex-wrap">
+            <div className="flex items-center gap-1.5">
+              <div className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
               <span>새로 배운 {getCategoryName()}</span>
-              <span>-</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-blue-500" />
+            <div className="flex items-center gap-1.5">
+              <div className="w-2.5 h-2.5 rounded-full bg-blue-500" />
               <span>이미 아는 {getCategoryName()}</span>
-              <span>-</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-purple-500" />
+            <div className="flex items-center gap-1.5">
+              <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
               <span>복습 {getCategoryName()}</span>
-              <span>-</span>
             </div>
           </div>
 
-          <div className="mt-4 text-center">
+          <div className="mt-3 text-center">
             <div className="text-label text-text-sub">Total</div>
-            <div className="text-display-s font-bold text-text-main">
+            <div className="text-title font-bold text-text-main">
               {weekData.reduce((sum, d) => sum + d.value, 0)}
             </div>
           </div>
@@ -254,7 +251,7 @@ export function CategoryStats() {
       )}
 
       {loading && (
-        <div className="bg-surface rounded-lg border border-divider p-8 text-center">
+        <div className="bg-surface rounded-lg border border-divider p-6 text-center">
           <div className="text-body text-text-sub">로딩 중...</div>
         </div>
       )}

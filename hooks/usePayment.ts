@@ -63,7 +63,7 @@ export function usePayment({
    * PC/모바일 감지 유틸리티
    */
   const isMobile = useCallback(() => {
-    if (typeof window === 'undefined') return false
+    if (typeof window === 'undefined' || typeof navigator === 'undefined') return false
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
            window.innerWidth <= 768
   }, [])
@@ -118,6 +118,13 @@ export function usePayment({
     })
 
     try {
+      // 서버 사이드에서는 PortOne SDK를 사용할 수 없음
+      if (typeof window === 'undefined') {
+        setPayMessage('결제는 브라우저에서만 가능합니다.')
+        setLoading(null)
+        return
+      }
+      
       const PortOne = await import('@portone/browser-sdk/v2')
       const uidShort = user.uid.replace(/[^A-Za-z0-9]/g, '').slice(0, 8) || 'user'
       const ts = Date.now().toString(36)
@@ -162,7 +169,7 @@ export function usePayment({
       }
 
       // 모바일 감지 재확인 (더 정확한 감지를 위해)
-      const isDefinitelyMobile = typeof window !== 'undefined' && (
+      const isDefinitelyMobile = typeof window !== 'undefined' && typeof navigator !== 'undefined' && (
         /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
         window.innerWidth <= 768
       )
@@ -173,7 +180,7 @@ export function usePayment({
         console.info('[Payment] Mobile detected, adding offerPeriod', {
           mobile,
           isDefinitelyMobile,
-          userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'N/A',
+          userAgent: typeof window !== 'undefined' && typeof navigator !== 'undefined' ? navigator.userAgent : 'N/A',
           innerWidth: typeof window !== 'undefined' ? window.innerWidth : 'N/A',
         })
         // PortOne 문서에 따르면 offerPeriod는 range 객체 안에 from과 to 필드를 사용
@@ -198,7 +205,7 @@ export function usePayment({
         console.info('[Payment] PC detected, skipping offerPeriod', {
           mobile,
           isDefinitelyMobile,
-          userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'N/A',
+          userAgent: typeof window !== 'undefined' && typeof navigator !== 'undefined' ? navigator.userAgent : 'N/A',
           innerWidth: typeof window !== 'undefined' ? window.innerWidth : 'N/A',
         })
       }
@@ -418,6 +425,12 @@ export function usePayment({
     setPayMessage(null)
 
     try {
+      // 서버 사이드에서는 PortOne SDK를 사용할 수 없음
+      if (typeof window === 'undefined') {
+        setPayMessage('결제는 브라우저에서만 가능합니다.')
+        return
+      }
+      
       const PortOne = await import('@portone/browser-sdk/v2')
       const uidShort = user.uid.replace(/[^A-Za-z0-9]/g, '').slice(0, 8) || 'user'
       const ts = Date.now().toString(36)

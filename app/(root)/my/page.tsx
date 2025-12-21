@@ -108,6 +108,7 @@ function MyPageContent() {
   const [dailyTargetSaving, setDailyTargetSaving] = useState(false)
   const [redeemLoading, setRedeemLoading] = useState(false)
   const [billingInfo, setBillingInfo] = useState<{ paymentMethod?: 'CARD' | 'EASY_PAY' } | null>(null)
+  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
 
   // 결제 정보 가져오기
   useEffect(() => {
@@ -136,17 +137,200 @@ function MyPageContent() {
   const [paymentTab, setPaymentTab] = useState<'subscription' | 'one-time'>('subscription') // 정기구독 / 단건결제 탭
   const [selectedPlanId, setSelectedPlanId] = useState<string | null>('monthly') // 선택된 플랜
 
-  // Check for payment query param to auto-open modal
+  // Check for payment query param to auto-open modal or handle payment success
   useEffect(() => {
-    const shouldShowPayment = searchParams.get('payment')
-    if (shouldShowPayment === 'true' && user) {
+    const paymentParam = searchParams.get('payment')
+    // PortOne V2 SDK는 리다이렉트 시 imp_uid를 쿼리 파라미터로 전달
+    // 빌링키는 직접 전달되지 않으므로 imp_uid로 서버에서 조회 필요
+    const billingKey = searchParams.get('billingKey') // 직접 전달되는 경우 (일반적이지 않음)
+    const plan = searchParams.get('plan') as 'monthly' | 'quarterly' | null
+    const paymentMethod = searchParams.get('paymentMethod') as 'CARD' | 'EASY_PAY' | null
+    
+    // localStorage에서 대기 중인 결제 정보 확인
+    let pendingPayment: { plan: string; paymentMethod: string; timestamp: number } | null = null
+    if (typeof window !== 'undefined') {
+      const pendingStr = localStorage.getItem('pendingPayment')
+      if (pendingStr) {
+        try {
+          const parsed = JSON.parse(pendingStr)
+          // 10분 이상 지난 대기 결제는 무시
+          if (Date.now() - parsed.timestamp > 10 * 60 * 1000) {
+            localStorage.removeItem('pendingPayment')
+          } else {
+            pendingPayment = parsed
+          }
+        } catch (e) {
+          localStorage.removeItem('pendingPayment')
+        }
+      }
+    }
+    
+    // 결제 성공 후 리다이렉트 처리 (모바일)
+    // PortOne V2 SDK는 리다이렉트 시 imp_uid를 쿼리 파라미터로 전달
+    // imp_uid로 빌링키를 조회해야 함
+    if (paymentParam === 'success' && user) {
+      const impUid = searchParams.get('imp_uid')
+      const merchantUid = searchParams.get('merchant_uid')
+      const impSuccess = searchParams.get('imp_success')
+      
+      logger.info('[Payment] Payment success redirect detected', {
+        impUid,
+        merchantUid,
+        impSuccess,
+        hasBillingKey: !!billingKey,
+        plan: plan || (pendingPayment ? pendingPayment.plan : null),
+        paymentMethod: paymentMethod || (pendingPayment ? pendingPayment.paymentMethod : null),
+        timestamp: Date.now(),
+      })
+      
+      // 모바일에서 빌링키 발급 완료 후 리다이렉트된 경우
+      const completeMobilePayment = async () => {
+        try {
+          let finalBillingKey = billingKey
+          let finalPlan: 'monthly' | 'quarterly' | null = plan || (pendingPayment ? (pendingPayment.plan as 'monthly' | 'quarterly') : null)
+          let finalPaymentMethod: 'CARD' | 'EASY_PAY' = paymentMethod || (pendingPayment ? (pendingPayment.paymentMethod as 'CARD' | 'EASY_PAY') : 'EASY_PAY') || 'EASY_PAY'
+          
+          // imp_success가 false이면 실패
+          if (impSuccess === 'false') {
+            const errorCode = searchParams.get('error_code')
+            const errorMsg = searchParams.get('error_msg')
+            logger.error('[Payment] Payment failed on redirect', {
+              errorCode,
+              errorMsg,
+              impUid,
+            })
+            setMessage({ type: 'error', text: errorMsg || '결제에 실패했습니다.' })
+            if (pendingPayment) {
+              localStorage.removeItem('pendingPayment')
+            }
+            return
+          }
+          
+          // imp_uid가 있으면 서버에서 빌링키 조회
+          if (!finalBillingKey && impUid) {
+            logger.info('[Payment] Fetching billing key from server using imp_uid', {
+              impUid,
+              timestamp: Date.now(),
+            })
+            
+            const idToken = await user.getIdToken()
+            const billingKeyResp = await fetch('/api/pay/get-billing-key', {
+              method: 'POST',
+              headers: { 
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${idToken}`
+              },
+              body: JSON.stringify({ impUid }),
+            })
+            
+            const billingKeyData = await billingKeyResp.json()
+            if (billingKeyResp.ok && billingKeyData.billingKey) {
+              finalBillingKey = billingKeyData.billingKey
+              logger.info('[Payment] Billing key retrieved successfully', {
+                impUid,
+                billingKeyLength: finalBillingKey?.length,
+                timestamp: Date.now(),
+              })
+            } else {
+              logger.error('[Payment] Failed to retrieve billing key', {
+                impUid,
+                error: billingKeyData?.error,
+                timestamp: Date.now(),
+              })
+              setMessage({ type: 'error', text: billingKeyData?.error || '빌링키를 찾을 수 없습니다. 고객센터에 문의해주세요.' })
+              if (pendingPayment) {
+                localStorage.removeItem('pendingPayment')
+              }
+              return
+            }
+          }
+          
+          // 빌링키가 여전히 없으면 에러
+          if (!finalBillingKey) {
+            logger.warn('[Payment] Billing key not found', {
+              impUid,
+              timestamp: Date.now(),
+            })
+            setMessage({ type: 'error', text: '빌링키를 찾을 수 없습니다. 고객센터에 문의해주세요.' })
+            if (pendingPayment) {
+              localStorage.removeItem('pendingPayment')
+            }
+            return
+          }
+          
+          if (!finalPlan) {
+            setMessage({ type: 'error', text: '결제 정보를 찾을 수 없습니다.' })
+            if (pendingPayment) {
+              localStorage.removeItem('pendingPayment')
+            }
+            return
+          }
+          
+          const idToken = await user.getIdToken()
+          const resp = await fetch('/api/pay/subscribe', {
+            method: 'POST',
+            headers: { 
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${idToken}`
+            },
+            body: JSON.stringify({ 
+              billingKey: finalBillingKey, 
+              plan: finalPlan,
+              paymentMethod: finalPaymentMethod,
+            }),
+          })
+          
+          const data = await resp.json()
+          if (resp.ok) {
+            logger.info('[Payment] Mobile payment completed successfully', {
+              plan: finalPlan,
+              paymentMethod: finalPaymentMethod,
+              timestamp: Date.now(),
+            })
+            // localStorage 정리
+            if (pendingPayment) {
+              localStorage.removeItem('pendingPayment')
+            }
+            // URL에서 파라미터 제거
+            router.replace('/my')
+            // 멤버십 정보 새로고침
+            await refresh()
+            // 성공 메시지 표시
+            setMessage({ type: 'success', text: '결제가 완료되었습니다.' })
+            setTimeout(() => setMessage(null), 3000)
+          } else {
+            logger.error('[Payment] Mobile payment API failed', {
+              plan: finalPlan,
+              error: data?.error,
+              timestamp: Date.now(),
+            })
+            setMessage({ type: 'error', text: data?.error || '결제 처리에 실패했습니다.' })
+            if (pendingPayment) {
+              localStorage.removeItem('pendingPayment')
+            }
+          }
+        } catch (error) {
+          logger.error('[Payment] Mobile payment completion error', error)
+          setMessage({ type: 'error', text: '결제 처리 중 오류가 발생했습니다.' })
+          if (pendingPayment) {
+            localStorage.removeItem('pendingPayment')
+          }
+        }
+      }
+      
+      completeMobilePayment()
+      return
+    }
+    
+    // 일반 결제 모달 열기
+    if (paymentParam === 'true' && user) {
       logger.info('[Payment] Modal auto-opened from paywall', {
         membershipStatus,
         timestamp: Date.now(),
       })
       setShowPaymentModal(true)
     }
-  }, [searchParams, user, membershipStatus])
+  }, [searchParams, user, membershipStatus, refresh, router])
 
   // 전화번호 모달 관리
   const phoneModal = usePhoneModal({
@@ -803,6 +987,15 @@ function MyPageContent() {
               {redeemMessage && (
                 <div className={`text-label text-center font-medium ${redeemMessage.includes('적용') ? 'text-green-600' : 'text-red-500'}`}>
                   {redeemMessage}
+                </div>
+              )}
+              {message && (
+                <div className={`text-label text-center font-medium px-4 py-2 rounded-lg ${
+                  message.type === 'success' 
+                    ? 'bg-green-50 text-green-700 border border-green-200' 
+                    : 'bg-red-50 text-red-700 border border-red-200'
+                }`}>
+                  {message.text}
                 </div>
               )}
               

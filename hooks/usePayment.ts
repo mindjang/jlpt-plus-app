@@ -184,9 +184,16 @@ export function usePayment({
           }
         }
         // 모바일에서는 리디렉션 URL도 필수
+        // 리다이렉트 시 빌링키와 플랜 정보를 URL 파라미터로 전달
+        // 주의: 실제 빌링키는 리다이렉트 후 PortOne에서 제공되므로, 여기서는 플랜 정보만 전달
+        const redirectParams = new URLSearchParams({
+          payment: 'success',
+          plan: plan,
+          paymentMethod: config.billingKeyMethod,
+        })
         billingKeyOptions.redirectUrl = typeof window !== 'undefined' 
-          ? `${window.location.origin}/my?payment=success`
-          : '/my?payment=success'
+          ? `${window.location.origin}/my?${redirectParams.toString()}`
+          : `/my?${redirectParams.toString()}`
       } else {
         console.info('[Payment] PC detected, skipping offerPeriod', {
           mobile,
@@ -205,6 +212,31 @@ export function usePayment({
       }
 
       const response = issueResponse as IssueResponse
+      
+      // 모바일에서 리다이렉트가 발생한 경우
+      // (빌링키가 없고, 리다이렉트가 설정된 경우)
+      if ((mobile || isDefinitelyMobile) && (!response.billingKey || response.billingKey.trim() === '')) {
+        console.info('[Payment] Mobile redirect occurred, billing key will be received after redirect', {
+          plan,
+          method: config.billingKeyMethod === 'EASY_PAY' ? 'easy_pay' : 'card',
+          redirectUrl: billingKeyOptions.redirectUrl,
+          timestamp: Date.now(),
+        })
+        // 모바일에서는 리다이렉트가 발생하므로 여기서는 대기
+        // 리다이렉트된 페이지에서 빌링키를 받아 처리
+        // 플랜 정보를 localStorage에 저장하여 리다이렉트 후 사용
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('pendingPayment', JSON.stringify({
+            plan,
+            paymentMethod: config.billingKeyMethod,
+            timestamp: Date.now(),
+          }))
+        }
+        setPayMessage('결제를 진행 중입니다...')
+        // 리다이렉트가 발생하므로 여기서 종료
+        return
+      }
+      
       if (response.code !== undefined) {
         console.warn('[Payment] Billing key issue failed', {
           plan,

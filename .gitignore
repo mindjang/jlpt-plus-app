@@ -43,3 +43,5 @@ TEST_ACCOUNT.md
 
 /public/sw.js
 /public/workbox-*.js
+
+*-firebase-adminsdk-fbsvc-86d92d72c4.json

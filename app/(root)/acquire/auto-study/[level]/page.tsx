@@ -4,9 +4,6 @@ import { useState, Suspense, useMemo, useEffect } from 'react'
 import { useRouter, useParams, useSearchParams } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { AppBar } from '@/components/ui/AppBar'
-import { Modal } from '@/components/ui/Modal'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
 import { Level, levelData, getLevelGradient } from '@/data'
 import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
@@ -15,10 +12,7 @@ import type { KanjiAliveEntry, NaverWord } from '@/data/types'
 import { useStudyProgress } from '@/hooks/useStudyProgress'
 import { AutoStudyCard } from '@/components/study/AutoStudyCard'
 import { StudyInfoCard } from '@/components/study/StudyInfoCard'
-import { ChapterListSection } from '@/components/study/ChapterListSection'
 import { StudyTabNavigation } from '@/components/study/StudyTabNavigation'
-
-type StudyMode = 'auto' | 'chapter'
 
 function AutoStudyContent() {
   const router = useRouter()
@@ -30,20 +24,14 @@ function AutoStudyContent() {
   const gradient = getLevelGradient(params.level as string)
   const data = levelData[level]
   
-  const [showModeModal, setShowModeModal] = useState(false)
   const typeParam = searchParams.get('type')
-  const modeParam = searchParams.get('mode')
   const tasteParam = searchParams.get('taste') // Guest taste mode
   const isTasteMode = tasteParam === 'true'
   
-  // URL 파라미터로 탭 및 모드 초기화 (useMemo로 동기화)
+  // URL 파라미터로 탭 초기화 (useMemo로 동기화)
   const activeTab = useMemo(() => {
     return typeParam === 'kanji' ? 'kanji' : 'word'
   }, [typeParam])
-  
-  const studyMode = useMemo(() => {
-    return modeParam === 'chapter' ? 'chapter' : 'auto'
-  }, [modeParam])
   
   // 일일 학습 목표: Guest taste mode > 사용자 설정 > 기본값(20)
   // 사용자가 UI에서 변경할 수 있으므로 useState 사용
@@ -112,7 +100,6 @@ function AutoStudyContent() {
     studyRound,
     nextReviewDays,
     sessionTotalFixed,
-    chaptersData,
     loading,
     refresh: refreshProgress,
   } = useStudyProgress({
@@ -127,33 +114,13 @@ function AutoStudyContent() {
   })
   
   const handleTabChange = (tab: 'word' | 'kanji') => {
-    // 탭 변경 시 URL 업데이트 (기존 mode 파라미터 유지)
-    const mode = modeParam || 'auto'
-    router.push(`/acquire/auto-study/${params.level}?type=${tab}&mode=${mode}`)
+    // 탭 변경 시 URL 업데이트
+    router.push(`/acquire/auto-study/${params.level}?type=${tab}&mode=auto`)
   }
 
   const totalWords = activeTab === 'word' ? data.words : data.kanji
   // 세션 분모: 세션 시작 시 계산된 값 사용, 없으면 목표량
   const sessionTotal = sessionTotalFixed ?? targetAmount
-
-
-  // 챕터 계산 (각 챕터당 targetAmount개) - chaptersData가 있으면 사용, 없으면 기본값
-  const totalChapters = Math.ceil(totalWords / targetAmount)
-  const chapters = chaptersData.length > 0 
-    ? chaptersData 
-    : Array.from({ length: totalChapters }, (_, i) => ({
-        number: i + 1,
-        totalWords: i === totalChapters - 1 ? totalWords % targetAmount || targetAmount : targetAmount,
-        longTermMemory: 0,
-        learned: 0,
-      }))
-
-  const handleModeSelect = (mode: StudyMode) => {
-    setShowModeModal(false)
-    // 모드 변경 시 URL 업데이트 (기존 type 파라미터 유지)
-    const type = activeTab
-    router.push(`/acquire/auto-study/${params.level}?type=${type}&mode=${mode}`)
-  }
 
   const handleAllWordsClick = () => {
     if (activeTab === 'word') {
@@ -163,11 +130,6 @@ function AutoStudyContent() {
     }
   }
 
-  const handleNextRound = () => {
-    // 다음 회차로 넘어가기 - useStudyProgress 훅에서 자동으로 처리됨
-    // 진행률을 새로고침하여 최신 데이터 반영
-    refreshProgress()
-  }
 
   // Show loading when switching tabs or data is loading
   if (dataLoading || (activeTab === 'word' && words.length === 0) || (activeTab === 'kanji' && kanjis.length === 0 && level !== 'N1')) {
@@ -195,16 +157,6 @@ function AutoStudyContent() {
       <AppBar
         title={isTasteMode ? '무료 체험 (맛보기)' : `${level} ${activeTab === 'word' ? '단어' : '한자'}`}
         onBack={() => window.location.href = isTasteMode ? '/home' : `/acquire`}
-        rightAction={
-          !isTasteMode ? (
-            <button
-              onClick={() => setShowModeModal(true)}
-              className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100"
-            >
-              <FontAwesomeIcon icon={faEllipsisVertical} className="text-text-main" />
-            </button>
-          ) : undefined
-        }
         className="bg-transparent border-none"
       />
 
@@ -229,45 +181,34 @@ function AutoStudyContent() {
           </div>
         )}
         
-        {studyMode === 'auto' ? (
-          // 자동 학습 모드
-          <div className="px-4 pt-4 space-y-3">
-            <AutoStudyCard
-              level={level}
-              activeTab={activeTab}
-              studyRound={studyRound}
-              targetAmount={isTasteMode ? 5 : targetAmount}
-              sessionProgress={sessionProgress}
-              sessionTotal={sessionTotal || (isTasteMode ? 5 : targetAmount)}
-              newWords={newWords}
-              reviewWords={reviewWords}
-              nextReviewDays={nextReviewDays}
-              gradient={gradient}
-              loading={loading}
-              onTargetAmountChange={handleTargetAmountChange}
-            />
-            
-            <StudyInfoCard
-              level={level}
-              activeTab={activeTab}
-              longTermMemory={longTermMemory}
-              currentProgress={currentProgress}
-              totalWords={totalWords}
-              gradient={gradient}
-              loading={loading}
-              onAllWordsClick={handleAllWordsClick}
-            />
-          </div>
-        ) : (
-          // 챕터별 학습 모드
-          <ChapterListSection
+        {/* 자동 학습 모드 */}
+        <div className="px-4 pt-4 space-y-3">
+          <AutoStudyCard
+            level={level}
             activeTab={activeTab}
-            targetAmount={targetAmount}
-            chapters={chapters}
+            studyRound={studyRound}
+            targetAmount={isTasteMode ? 5 : targetAmount}
+            sessionProgress={sessionProgress}
+            sessionTotal={sessionTotal || (isTasteMode ? 5 : targetAmount)}
+            newWords={newWords}
+            reviewWords={reviewWords}
+            nextReviewDays={nextReviewDays}
             gradient={gradient}
-            onTargetAmountChange={setTargetAmount}
+            loading={loading}
+            onTargetAmountChange={handleTargetAmountChange}
           />
-        )}
+          
+          <StudyInfoCard
+            level={level}
+            activeTab={activeTab}
+            longTermMemory={longTermMemory}
+            currentProgress={currentProgress}
+            totalWords={totalWords}
+            gradient={gradient}
+            loading={loading}
+            onAllWordsClick={handleAllWordsClick}
+          />
+        </div>
       </div>
 
       {/* 하단 네비게이션 (taste mode에서는 숨김) */}
@@ -277,27 +218,6 @@ function AutoStudyContent() {
           onTabChange={handleTabChange}
         />
       )}
-
-      {/* 모드 선택 모달 */}
-      <Modal
-        isOpen={showModeModal}
-        onClose={() => setShowModeModal(false)}
-      >
-        <div className="space-y-1.5">
-          <button
-            onClick={() => handleModeSelect('auto')}
-            className="w-full text-left px-4 py-2.5 rounded-lg active:bg-gray-50 text-body text-text-main"
-          >
-            자동 학습
-          </button>
-          <button
-            onClick={() => handleModeSelect('chapter')}
-            className="w-full text-left px-4 py-2.5 rounded-lg active:bg-gray-50 text-body text-text-main"
-          >
-            챕터별 학습
-          </button>
-        </div>
-      </Modal>
     </div>
   )
 }

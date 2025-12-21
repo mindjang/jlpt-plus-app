@@ -628,21 +628,6 @@ function MyPageContent() {
                     onClick={async () => {
                       if (!selectedPlanId) return alert('플랜을 선택해주세요.')
                       if (paymentTab === 'subscription') {
-                        await payment.handleSubscribe(selectedPlanId as 'monthly' | 'quarterly')
-                      } else {
-                        await payment.handleOneTimePayment(selectedPlanId as 'monthly' | 'yearly')
-                      }
-                      setShowPaymentModal(false)
-                    }}
-                    disabled={!selectedPlanId || payment.payLoading !== null}
-                    className="w-full py-4 px-6 rounded-lg bg-black text-white text-body font-semibold active:opacity-80 disabled:opacity-50"
-                  >
-                    {payment.payLoading ? '처리 중...' : '카드 결제하기'}
-                  </button>
-                  <button
-                    onClick={async () => {
-                      if (!selectedPlanId) return alert('플랜을 선택해주세요.')
-                      if (paymentTab === 'subscription') {
                         await payment.handleSubscribeKakao(selectedPlanId as 'monthly' | 'quarterly')
                       } else {
                         await payment.handleOneTimePaymentKakao(selectedPlanId as 'monthly' | 'yearly')
@@ -653,6 +638,21 @@ function MyPageContent() {
                     className="w-full py-4 rounded-lg bg-[#FAE100] text-[#371D1E] font-bold text-base active:opacity-80 disabled:opacity-50"
                   >
                     카카오페이로 시작하기
+                  </button>
+                  <button
+                    onClick={async () => {
+                      if (!selectedPlanId) return alert('플랜을 선택해주세요.')
+                      if (paymentTab === 'subscription') {
+                        await payment.handleSubscribe(selectedPlanId as 'monthly' | 'quarterly')
+                      } else {
+                        await payment.handleOneTimePayment(selectedPlanId as 'monthly' | 'yearly')
+                      }
+                      setShowPaymentModal(false)
+                    }}
+                    disabled={!selectedPlanId || payment.payLoading !== null}
+                    className="w-full py-4 px-6 rounded-lg bg-black text-white text-body font-semibold active:opacity-80 disabled:opacity-50"
+                  >
+                    {payment.payLoading ? '처리 중...' : '카드 결제하기'}
                   </button>
                 </div>
             </div>

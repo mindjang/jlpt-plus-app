@@ -6,7 +6,7 @@ import { requireAuth } from '@/lib/firebase/auth-middleware'
 type Plan = 'monthly' // 정기구독은 월간만 가능 (최대 3개월)
 
 const PLAN_AMOUNTS: Record<Plan, number> = {
-  monthly: Number(process.env.PORTONE_MONTHLY_AMOUNT || 9900),
+  monthly: Number(process.env.PORTONE_MONTHLY_AMOUNT || 4900),
 }
 
 export async function POST(request: NextRequest) {

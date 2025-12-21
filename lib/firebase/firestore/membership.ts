@@ -17,7 +17,7 @@ import {
 import type { Membership, DailyUsage, GiftCode, BillingInfo } from '../../types/membership'
 import { getDbInstance, formatDateKey } from './utils'
 
-// 헬퍼 함수들
+// 헬퍼 함수들 (클라이언트 SDK용)
 const membershipDocRef = (dbInstance: Firestore, uid: string) =>
   doc(dbInstance, 'users', uid, 'membership', 'info')
 
@@ -29,12 +29,37 @@ const billingDocRef = (dbInstance: Firestore, uid: string) =>
 
 const codeDocRef = (dbInstance: Firestore, code: string) => doc(dbInstance, 'codes', code)
 
+// 헬퍼 함수들 (Admin SDK용) - 서버 사이드에서만 사용
+const membershipDocRefAdmin = (dbInstance: any, uid: string) =>
+  dbInstance.doc(`users/${uid}/membership/info`)
+
+const usageDocRefAdmin = (dbInstance: any, uid: string, dateKey: string) =>
+  dbInstance.doc(`users/${uid}/usage/${dateKey}`)
+
+const billingDocRefAdmin = (dbInstance: any, uid: string) =>
+  dbInstance.doc(`users/${uid}/billing/info`)
+
+const codeDocRefAdmin = (dbInstance: any, code: string) =>
+  dbInstance.doc(`codes/${code}`)
+
 /**
  * 멤버십 정보 가져오기
  */
 export async function getMembership(uid: string): Promise<Membership | null> {
   const dbInstance = getDbInstance()
-  const ref = membershipDocRef(dbInstance, uid)
+  
+  // 서버 사이드 (Admin SDK)
+  if (typeof window === 'undefined' && 'doc' in dbInstance && typeof (dbInstance as any).doc === 'function') {
+    const adminDb = dbInstance as any
+    const ref = membershipDocRefAdmin(adminDb, uid)
+    const snap = await ref.get()
+    if (!snap.exists) return null
+    return snap.data() as Membership
+  }
+  
+  // 클라이언트 사이드
+  const clientDb = dbInstance as Firestore
+  const ref = membershipDocRef(clientDb, uid)
   const snap = await getDoc(ref)
   if (!snap.exists()) return null
   return snap.data() as Membership
@@ -45,7 +70,18 @@ export async function getMembership(uid: string): Promise<Membership | null> {
  */
 export async function saveMembership(uid: string, membership: Membership) {
   const dbInstance = getDbInstance()
-  const ref = membershipDocRef(dbInstance, uid)
+  
+  // 서버 사이드 (Admin SDK)
+  if (typeof window === 'undefined' && 'doc' in dbInstance && typeof (dbInstance as any).doc === 'function') {
+    const adminDb = dbInstance as any
+    const ref = membershipDocRefAdmin(adminDb, uid)
+    await ref.set(membership, { merge: true })
+    return
+  }
+  
+  // 클라이언트 사이드
+  const clientDb = dbInstance as Firestore
+  const ref = membershipDocRef(clientDb, uid)
   await setDoc(ref, membership, { merge: true })
 }
 
@@ -151,7 +187,18 @@ export async function redeemGiftCode(
  */
 export async function saveBillingInfo(uid: string, billing: BillingInfo) {
   const dbInstance = getDbInstance()
-  const ref = billingDocRef(dbInstance, uid)
+  
+  // 서버 사이드 (Admin SDK) - 이 함수는 서버에서만 호출되어야 함
+  if (typeof window === 'undefined' && 'doc' in dbInstance && typeof (dbInstance as any).doc === 'function') {
+    const adminDb = dbInstance as any
+    const ref = billingDocRefAdmin(adminDb, uid)
+    await ref.set(billing, { merge: true })
+    return
+  }
+  
+  // 클라이언트 사이드 (일반적으로 호출되지 않아야 하지만, 타입 안전성을 위해)
+  const clientDb = dbInstance as Firestore
+  const ref = billingDocRef(clientDb, uid)
   await setDoc(ref, billing, { merge: true })
 }
 

@@ -18,7 +18,9 @@ if (!admin.apps.length) {
   try {
     if (serviceAccount) {
       // Service Account JSON이 환경변수로 제공된 경우
-      const serviceAccountObj = JSON.parse(serviceAccount)
+      // 환경변수에서 따옴표 제거 (큰따옴표 또는 작은따옴표로 감싸진 경우)
+      const cleanedServiceAccount = serviceAccount.trim().replace(/^['"]|['"]$/g, '')
+      const serviceAccountObj = JSON.parse(cleanedServiceAccount)
       adminApp = admin.initializeApp({
         credential: admin.credential.cert(serviceAccountObj),
       })

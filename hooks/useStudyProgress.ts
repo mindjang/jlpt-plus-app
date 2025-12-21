@@ -224,11 +224,12 @@ export function useStudyProgress({
       const progressStats = calculateProgressStats(levelCards, activeTab)
       setLongTermMemory(progressStats.longTermMemory)
 
-      // 회차 진행률 계산
+      // 회차 진행률 계산 (전체 학습량 기반으로 누적 회차 계산)
       const roundProgress = calculateRoundProgress(
         progressStats.todayNewStudied,
         targetAmount,
-        studyRoundRef.current
+        studyRoundRef.current,
+        learned // 전체 학습한 카드 수 (누적)
       )
 
       // 학습 회차 업데이트

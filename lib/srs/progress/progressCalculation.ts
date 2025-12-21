@@ -69,27 +69,42 @@ export function calculateProgressStats(
  * @param todayNewStudied 오늘 새로 학습한 카드 수
  * @param targetAmount 목표 학습량 (회차당)
  * @param currentRound 현재 회차 (선택적, 없으면 자동 계산)
+ * @param totalLearned 전체 학습한 카드 수 (누적 회차 계산용, 선택적)
  * @returns 회차 진행률 정보
  */
 export function calculateRoundProgress(
   todayNewStudied: number,
   targetAmount: number,
-  currentRound?: number
+  currentRound?: number,
+  totalLearned?: number
 ): RoundProgress {
-  const completedRounds = Math.floor(todayNewStudied / targetAmount)
-  const calculatedRound = completedRounds > 0 ? completedRounds + 1 : 1
+  // 전체 학습량 기반 회차 계산 (누적)
+  let calculatedRound = 1
+  if (totalLearned !== undefined && totalLearned > 0) {
+    const completedRounds = Math.floor(totalLearned / targetAmount)
+    calculatedRound = completedRounds > 0 ? completedRounds + 1 : 1
+  } else {
+    // 전체 학습량이 없으면 오늘 학습량 기반으로 계산 (하위 호환)
+    const completedRounds = Math.floor(todayNewStudied / targetAmount)
+    calculatedRound = completedRounds > 0 ? completedRounds + 1 : 1
+  }
 
   const finalRound = currentRound ? Math.max(currentRound, calculatedRound) : calculatedRound
-  const previousRoundsTotal = (finalRound - 1) * targetAmount
-  const currentRoundProgress = Math.max(
-    0,
-    Math.min(todayNewStudied - previousRoundsTotal, targetAmount)
-  )
+  
+  // 현재 회차의 시작점 계산 (누적 기준)
+  const previousRoundsTotal = totalLearned !== undefined 
+    ? Math.floor((finalRound - 1) * targetAmount)
+    : (finalRound - 1) * targetAmount
+  
+  // 현재 회차 진행률: 전체 학습량 기준으로 계산
+  const currentRoundProgress = totalLearned !== undefined
+    ? Math.max(0, Math.min(totalLearned - previousRoundsTotal, targetAmount))
+    : Math.max(0, Math.min(todayNewStudied - previousRoundsTotal, targetAmount))
 
   return {
     currentRound: finalRound,
     currentRoundProgress,
-    completedRounds,
+    completedRounds: Math.floor((totalLearned ?? todayNewStudied) / targetAmount),
   }
 }
 

@@ -9,7 +9,7 @@ type Plan = 'monthly' | 'quarterly' // 정기구독: 1개월, 3개월
 
 const PLAN_AMOUNTS: Record<Plan, number> = {
   monthly: Number(process.env.PORTONE_MONTHLY_AMOUNT || 4900),
-  quarterly: Number(process.env.PORTONE_QUARTERLY_AMOUNT || 13000), // 3개월 (약 10% 할인)
+  quarterly: Number(process.env.PORTONE_QUARTERLY_AMOUNT || 13900), // 3개월 (약 10% 할인)
 }
 
 function getDurationMs(plan: Plan) {
@@ -33,12 +33,36 @@ export async function POST(request: NextRequest) {
     // customerId는 인증된 사용자의 uid를 사용
     const customerId = user!.uid
 
+    // 디버깅을 위한 로깅
+    console.log('[pay/subscribe] Request received', {
+      hasBillingKey: !!billingKey,
+      billingKeyLength: billingKey?.length,
+      plan,
+      customerId,
+    })
+
     if (!billingKey || !plan) {
-      return NextResponse.json({ error: 'billingKey, plan are required' }, { status: 400 })
+      console.error('[pay/subscribe] Missing required fields', {
+        hasBillingKey: !!billingKey,
+        hasPlan: !!plan,
+        billingKey,
+        plan,
+      })
+      return NextResponse.json(
+        { 
+          error: 'billingKey, plan are required',
+          received: { hasBillingKey: !!billingKey, hasPlan: !!plan }
+        },
+        { status: 400 }
+      )
     }
 
     if (!['monthly', 'quarterly'].includes(plan)) {
-      return NextResponse.json({ error: 'invalid plan. only monthly or quarterly subscription is allowed' }, { status: 400 })
+      console.error('[pay/subscribe] Invalid plan', { plan })
+      return NextResponse.json(
+        { error: 'invalid plan. only monthly or quarterly subscription is allowed', received: plan },
+        { status: 400 }
+      )
     }
 
     const apiSecret = process.env.PORTONE_API_SECRET
@@ -69,15 +93,30 @@ export async function POST(request: NextRequest) {
           amount: {
             total: amount,
           },
-          currency: 'CURRENCY_KRW',
+          currency: 'KRW',
         }),
       }
     )
 
     const paymentJson = await paymentResponse.json().catch(() => ({}))
     if (!paymentResponse.ok) {
+      console.error('[pay/subscribe] PortOne API failed', {
+        status: paymentResponse.status,
+        statusText: paymentResponse.statusText,
+        response: paymentJson,
+        request: {
+          paymentId,
+          billingKey: billingKey?.substring(0, 20) + '...',
+          plan,
+          amount,
+        },
+      })
       return NextResponse.json(
-        { error: paymentJson?.message || 'payment failed', detail: paymentJson },
+        { 
+          error: paymentJson?.message || 'payment failed',
+          detail: paymentJson,
+          portoneStatus: paymentResponse.status,
+        },
         { status: 400 }
       )
     }
@@ -108,9 +147,26 @@ export async function POST(request: NextRequest) {
       isRecurring: true,
     })
 
+    console.log('[pay/subscribe] Success', {
+      paymentId,
+      plan,
+      customerId,
+      newExpiry: new Date(newExpiry).toISOString(),
+    })
+
     return NextResponse.json({ ok: true, paymentId, membership })
   } catch (error: any) {
-    console.error('[pay/subscribe] error', error)
-    return NextResponse.json({ error: error?.message || 'unknown error' }, { status: 500 })
+    console.error('[pay/subscribe] error', {
+      error: error?.message,
+      stack: error?.stack,
+      name: error?.name,
+    })
+    return NextResponse.json(
+      { 
+        error: error?.message || 'unknown error',
+        type: error?.name || 'UnknownError',
+      },
+      { status: 500 }
+    )
   }
 }

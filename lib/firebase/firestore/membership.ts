@@ -209,7 +209,19 @@ export async function saveBillingInfo(uid: string, billing: BillingInfo) {
  */
 export async function getBillingInfo(uid: string): Promise<BillingInfo | null> {
   const dbInstance = getDbInstance()
-  const ref = billingDocRef(dbInstance, uid)
+  
+  // 서버 사이드 (Admin SDK)
+  if (typeof window === 'undefined' && 'doc' in dbInstance && typeof (dbInstance as any).doc === 'function') {
+    const adminDb = dbInstance as any
+    const ref = billingDocRefAdmin(adminDb, uid)
+    const snap = await ref.get()
+    if (!snap.exists) return null
+    return snap.data() as BillingInfo
+  }
+  
+  // 클라이언트 사이드 (일반적으로 호출되지 않아야 하지만, 타입 안전성을 위해)
+  const clientDb = dbInstance as Firestore
+  const ref = billingDocRef(clientDb, uid)
   const snap = await getDoc(ref)
   if (!snap.exists()) return null
   return snap.data() as BillingInfo

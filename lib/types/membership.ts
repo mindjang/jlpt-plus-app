@@ -33,4 +33,5 @@ export interface BillingInfo {
   amount?: number
   provider?: string
   isRecurring?: boolean // true: 정기구독, false: 단건결제
+  paymentMethod?: 'CARD' | 'EASY_PAY' // 결제 수단: 카드 또는 간편결제
 }

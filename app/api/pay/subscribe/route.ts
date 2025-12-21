@@ -25,9 +25,10 @@ export async function POST(request: NextRequest) {
     if (authError) return authError
 
     const body = await request.json()
-    const { billingKey, plan } = body as {
+    const { billingKey, plan, paymentMethod } = body as {
       billingKey?: string
       plan?: Plan
+      paymentMethod?: 'CARD' | 'EASY_PAY'
     }
 
     // customerId는 인증된 사용자의 uid를 사용
@@ -145,6 +146,7 @@ export async function POST(request: NextRequest) {
       amount,
       provider: 'portone',
       isRecurring: true,
+      paymentMethod: paymentMethod || 'CARD', // 결제 수단 저장
     })
 
     console.log('[pay/subscribe] Success', {

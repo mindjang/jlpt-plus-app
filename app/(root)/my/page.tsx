@@ -107,6 +107,29 @@ function MyPageContent() {
   const [dailyTargetDraft, setDailyTargetDraft] = useState(settings.dailyNewLimit)
   const [dailyTargetSaving, setDailyTargetSaving] = useState(false)
   const [redeemLoading, setRedeemLoading] = useState(false)
+  const [billingInfo, setBillingInfo] = useState<{ paymentMethod?: 'CARD' | 'EASY_PAY' } | null>(null)
+
+  // 결제 정보 가져오기
+  useEffect(() => {
+    const fetchBillingInfo = async () => {
+      if (!user || !showManageModal) return
+      try {
+        const idToken = await user.getIdToken()
+        const resp = await fetch('/api/billing/info', {
+          headers: {
+            'Authorization': `Bearer ${idToken}`
+          }
+        })
+        if (resp.ok) {
+          const data = await resp.json()
+          setBillingInfo(data.billingInfo)
+        }
+      } catch (error) {
+        console.error('[MyPage] Failed to fetch billing info', error)
+      }
+    }
+    fetchBillingInfo()
+  }, [user, showManageModal])
 
   // Payment Modal State
   const [showPaymentModal, setShowPaymentModal] = useState(false)
@@ -467,6 +490,14 @@ function MyPageContent() {
                   {isAutoRenewing ? '정기 구독 중' : '기간 이용권 사용 중'}
                 </span>
               </div>
+              {isAutoRenewing && billingInfo?.paymentMethod && (
+                <div className="flex justify-between items-center mb-2.5">
+                  <span className="text-label text-text-sub">결제 수단</span>
+                  <span className="text-body font-semibold text-text-main">
+                    {billingInfo.paymentMethod === 'EASY_PAY' ? '간편결제 (카카오페이 등)' : '신용카드'}
+                  </span>
+                </div>
+              )}
               <div className="flex justify-between items-center">
                 <span className="text-label text-text-sub">{isAutoRenewing ? '다음 결제' : '만료 예정'}</span>
                 <span className="text-body font-bold text-text-main">{new Date(membership!.expiresAt!).toLocaleDateString()}</span>

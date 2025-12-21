@@ -13,6 +13,7 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
   const hideBottomNav = 
     pathname === '/login' ||
     pathname === '/stats' ||
+    pathname === '/game' ||
     pathname?.startsWith('/acquire/auto-study/') ||
     pathname?.startsWith('/practice/learn') ||
     pathname?.startsWith('/acquire/word') ||

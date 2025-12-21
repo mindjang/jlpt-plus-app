@@ -23,17 +23,18 @@ export const ListItem: React.FC<ListItemProps> = ({
 }) => {
   return (
     <div
-      className="flex items-center px-4 py-2.5 border-b border-divider cursor-pointer active:bg-gray-50"
+      className="flex items-center px-5 py-4 bg-white/95 backdrop-blur-xl rounded-2xl border border-white/50 shadow-lg shadow-black/5 cursor-pointer transition-all duration-200 hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]"
+      onClick={onClick}
     >
       {/* 레벨 칩 */}
-      <LevelChip level={level} />
+      <div className="flex-shrink-0 mr-4">
+        <LevelChip level={level} />
+      </div>
 
       {/* 단어 + 후리가나 */}
       <div className="flex-1 min-w-0">
         <div className="flex items-baseline gap-2">
-          {/* 불릿 포인트 */}
-          <span className="text-body text-text-sub">•</span>
-          <span className="text-subtitle text-jp font-medium text-text-main truncate">
+          <span className="text-subtitle text-jp font-bold text-text-main truncate">
             {word}
           </span>
           {furigana && (
@@ -53,7 +54,7 @@ export const ListItem: React.FC<ListItemProps> = ({
 
       {/* 화살표 */}
       <div className="flex-shrink-0">
-        <span className="text-body text-text-hint">›</span>
+        <span className="text-body text-text-sub">→</span>
       </div>
     </div>
   )

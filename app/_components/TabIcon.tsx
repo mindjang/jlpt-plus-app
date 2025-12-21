@@ -9,93 +9,125 @@ interface TabIconProps {
 }
 
 export function TabIcon({ name, active }: TabIconProps) {
-  const baseClasses = 'w-6 h-6 transition-colors'
-  const activeClasses = active ? `text-[${LEVEL_COLORS.N5}]` : 'text-text-sub'
+  const baseClasses = 'w-6 h-6 transition-all duration-300'
+  const strokeColor = active ? LEVEL_COLORS.N5 : '#9CA3AF'
+  const strokeWidth = active ? 2.5 : 1.5
 
-  // 간단한 SVG 아이콘 (나중에 더 나은 아이콘으로 교체 가능)
+  // 프리미엄 스타일 SVG 아이콘 (Material Design 3 스타일, 세련된 디자인)
   const renderIcon = () => {
     switch (name) {
       case 'home':
         return (
           <svg
-            className={`${baseClasses} ${activeClasses}`}
+            className={baseClasses}
             fill="none"
-            stroke="currentColor"
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
             viewBox="0 0 24 24"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-            />
-          </svg>
-        )
-      case 'stats':
-        return (
-          <svg
-            className={`${baseClasses} ${activeClasses}`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-            />
+            <path d="M11.47 3.84a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.06l-8.69-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 0 0 1.061 1.06l8.69-8.69Z" />
+            <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
           </svg>
         )
       case 'acquire':
         return (
-          <img
-            src={active 
-              ? 'https://img.icons8.com/plasticine/100/literature.png'
-              : 'https://img.icons8.com/carbon-copy/100/literature.png'
-            }
-            alt="literature"
-            className="w-7 h-7"
-          />
+          <svg
+            className={baseClasses}
+            fill="none"
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
+            viewBox="0 0 24 24"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+          </svg>
         )
       case 'practice':
         return (
-          <img
-            src={active 
-              ? 'https://img.icons8.com/plasticine/100/quizlet--v1.png'
-              : 'https://img.icons8.com/carbon-copy/100/quizlet--v1.png'
-            }
-            alt="quizlet"
-            className="w-7 h-7"
-          />
+          <svg
+            className={baseClasses}
+            fill="none"
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
+            viewBox="0 0 24 24"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            {/* 클립보드 아이콘 */}
+            <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" />
+            <rect x="9" y="3" width="6" height="4" rx="1" />
+            {/* 체크박스들 */}
+            <path d="M9 12h6" />
+            <path d="M9 16h6" />
+            <path d="M9 8h6" />
+          </svg>
         )
       case 'my':
         return (
-          <img
-            src={active 
-              ? 'https://img.icons8.com/plasticine/100/info-squared.png'
-              : 'https://img.icons8.com/carbon-copy/100/info-squared.png'
-            }
-            alt="my"
-            className="w-7 h-7"
-          />
+          <svg
+            className={baseClasses}
+            fill="none"
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
+            viewBox="0 0 24 24"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+          </svg>
         )
       case 'game':
-        return (
-          <img
-            src={active 
-              ? 'https://img.icons8.com/plasticine/100/1010.png'
-              : 'https://img.icons8.com/carbon-copy/100/1010.png'
-            }
-            alt="game"
-            className="w-7 h-7"
-          />
-        )
+        if (active) {
+          // 액티브일 때: 3D 게임기 아이콘 (이모지 + 3D 효과)
+          return (
+            <div 
+              className="relative w-8 h-8 flex items-center justify-center transition-all duration-300"
+              style={{
+                transform: 'perspective(1000px) rotateY(-15deg) rotateX(5deg)',
+                transformStyle: 'preserve-3d',
+              }}
+            >
+              <div
+                className="text-4xl leading-none filter drop-shadow-lg"
+              >
+                🕹️
+              </div>
+              {/* 네온 글로우 효과 */}
+            </div>
+          )
+        } else {
+          // 논액티브일 때: 노멀한 게임 아이콘
+          return (
+            <svg
+              className={baseClasses}
+              fill="none"
+              stroke={strokeColor}
+              strokeWidth={strokeWidth}
+              viewBox="0 0 24 24"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.25 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+            </svg>
+          )
+        }
       default:
         return null
     }
   }
 
-  return <div className="flex items-center justify-center">{renderIcon()}</div>
+  return (
+    <div className="flex items-center justify-center relative">
+      {renderIcon()}
+      {active && (
+        <div 
+          className="absolute inset-0 rounded-full opacity-20 -z-10 transition-opacity duration-300"
+        />
+      )}
+    </div>
+  )
 }
 

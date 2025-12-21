@@ -31,7 +31,6 @@ export const KanjiDetail: React.FC<KanjiDetailProps> = ({
   relatedWords = [],
   onStrokeOrderClick,
 }) => {
-  const [showStrokeOrder, setShowStrokeOrder] = useState(false)
 
   return (
     <div className="w-full">

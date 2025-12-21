@@ -131,10 +131,9 @@ export default function WordDetailPage() {
               </button>
 
               <div className="text-center mb-4">
-                <h1 className="text-display-l text-jp font-medium text-text-main mb-2">
-                  {kanjiText}
-                </h1>
-                <p className="text-title text-jp text-text-sub mb-3">{displayText}</p>
+                <h1 className="text-display-l text-jp font-medium text-text-main mb-2" 
+                  dangerouslySetInnerHTML={{ __html: kanjiText }}></h1>
+                <p className="text-title text-jp text-text-sub mb-3" dangerouslySetInnerHTML={{ __html: displayText }}></p>
                 {naverWord && (
                   <LevelChip level={levelMap[naverWord.level] || 'N5'} />
                 )}
@@ -176,9 +175,8 @@ export default function WordDetailPage() {
                       className="border-b border-divider pb-4 last:border-b-0 last:pb-0"
                     >
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="text-body text-jp font-medium text-text-main">
-                          {wordItem.expKanji}
-                        </span>
+                        <span className="text-body text-jp font-medium text-text-main"
+                          dangerouslySetInnerHTML={{ __html: wordItem.expKanji }}></span>
                         {wordItem.frequencyAdd && (
                           <span className="text-label text-text-sub bg-page px-2 py-0.5 rounded">
                             {wordItem.frequencyAdd}

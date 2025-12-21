@@ -87,10 +87,10 @@ export function SemicircleProgress({ value, progress, total, color }: Semicircle
       </div>
       {/* 텍스트 오버레이 */}
       <div className="absolute inset-0 flex flex-col items-center justify-end pointer-events-none z-10 pb-2">
-        <span className="text-subtitle font-semibold text-text-main leading-tight">
+        <span className="text-subtitle font-semibold text-text-main leading-tight drop-shadow-sm">
           {Math.round(percent)}%
         </span>
-        <span className="text-label text-text-sub leading-tight">
+        <span className="text-label text-text-sub leading-tight drop-shadow-sm">
           {progress}/{total}
         </span>
       </div>

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Noto_Sans_JP, Inter } from 'next/font/google'
+import { Noto_Sans_JP, Inter, Orbitron, Press_Start_2P } from 'next/font/google'
 import Script from 'next/script'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -20,6 +20,18 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   weight: ['400', '500', '600'],
+})
+
+const orbitron = Orbitron({
+  subsets: ['latin'],
+  variable: '--font-orbitron',
+  weight: ['400', '500', '600', '700', '800', '900'],
+})
+
+const pressStart2P = Press_Start_2P({
+  subsets: ['latin'],
+  variable: '--font-press-start-2p',
+  weight: ['400'],
 })
 
 export const metadata: Metadata = {
@@ -63,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ko" className={`${notoSansJP.variable} ${inter.variable}`}>
+    <html lang="ko" className={`${notoSansJP.variable} ${inter.variable} ${orbitron.variable} ${pressStart2P.variable}`}>
       <body>
         <Providers>{children}</Providers>
       </body>

@@ -215,31 +215,65 @@ export function SearchContent({
 
       {/* 하단 네비게이션 */}
       {showBottomNav && (
-        <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-lg bg-surface border-t border-divider z-30">
+        <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-lg bg-white/80 backdrop-blur-xl border-t border-gray-200/50 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-30">
           <div className="flex">
             <button
               onClick={() => handleTabChange('word')}
-              className={`flex-1 flex flex-col items-center justify-center py-2 transition-colors relative ${
-                activeTab === 'word' ? 'text-orange-500' : 'text-text-sub'
-              }`}
+              className="flex-1 flex flex-col items-center justify-center py-3.5 transition-all duration-300 relative group"
             >
-              <FontAwesomeIcon icon={faBook} className="text-[1.25rem] mb-1" />
-              <span className="text-label">단어</span>
-              {activeTab === 'word' && (
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500" />
-              )}
+              <div className="relative">
+                <svg
+                  className="w-6 h-6 transition-all duration-300"
+                  fill={activeTab === 'word' ? '#FF8C00' : 'none'}
+                  stroke={activeTab === 'word' ? '#FF8C00' : '#9CA3AF'}
+                  strokeWidth={activeTab === 'word' ? 2 : 1.5}
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+                    opacity={activeTab === 'word' ? 1 : 0.6}
+                  />
+                </svg>
+                {activeTab === 'word' && (
+                  <div className="absolute inset-0 rounded-full blur-sm opacity-20" style={{ backgroundColor: '#FF8C00' }} />
+                )}
+              </div>
+              <span className={`text-label transition-all duration-300 mt-1.5 ${
+                activeTab === 'word' ? 'font-bold text-text-main' : 'text-text-sub'
+              }`}>
+                단어
+              </span>
             </button>
             <button
               onClick={() => handleTabChange('kanji')}
-              className={`flex-1 flex flex-col items-center justify-center py-2 transition-colors relative ${
-                activeTab === 'kanji' ? 'text-orange-500' : 'text-text-sub'
-              }`}
+              className="flex-1 flex flex-col items-center justify-center py-3.5 transition-all duration-300 relative group"
             >
-              <FontAwesomeIcon icon={faLanguage} className="text-[1.25rem] mb-1" />
-              <span className="text-label">한자</span>
-              {activeTab === 'kanji' && (
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500" />
-              )}
+              <div className="relative">
+                <svg
+                  className="w-6 h-6 transition-all duration-300"
+                  fill={activeTab === 'kanji' ? '#FF8C00' : 'none'}
+                  stroke={activeTab === 'kanji' ? '#FF8C00' : '#9CA3AF'}
+                  strokeWidth={activeTab === 'kanji' ? 2 : 1.5}
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 8.716 6.747M12 3a8.997 8.997 0 0 0-8.716 6.747M15.25 12a3.25 3.25 0 1 1-6.5 0 3.25 3.25 0 0 1 6.5 0Z"
+                    opacity={activeTab === 'kanji' ? 1 : 0.6}
+                  />
+                </svg>
+                {activeTab === 'kanji' && (
+                  <div className="absolute inset-0 rounded-full blur-sm opacity-20" style={{ backgroundColor: '#FF8C00' }} />
+                )}
+              </div>
+              <span className={`text-label transition-all duration-300 mt-1.5 ${
+                activeTab === 'kanji' ? 'font-bold text-text-main' : 'text-text-sub'
+              }`}>
+                한자
+              </span>
             </button>
           </div>
         </div>

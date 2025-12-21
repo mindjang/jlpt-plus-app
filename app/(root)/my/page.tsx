@@ -607,9 +607,6 @@ function MyPageContent() {
                 <h2 className={`text-body font-semibold ${isPremium ? 'text-white' : 'text-text-main'}`}>
                   {isPremium ? 'Mogu Premium' : '프리미엄 멤버십'}
                 </h2>
-                <p className={`text-label mt-0.5 ${isPremium ? 'text-gray-400' : 'text-text-sub'}`}>
-                  {isPremium ? '무제한 학습을 즐기고 계시네요!' : '더 효과적인 학습을 시작해보세요'}
-                </p>
               </div>
               {isPremium && (
                 <span className="bg-white/20 px-2.5 py-1 rounded-full text-label font-medium backdrop-blur-md flex-shrink-0">
@@ -778,7 +775,7 @@ function MyPageContent() {
                       setShowManageModal(false)
                       setShowPaymentModal(true)
                     }}
-                    className="w-full py-3.5 px-4 rounded-lg bg-white border border-gray-200 text-text-main text-body font-semibold active:bg-gray-50 mb-2.5"
+                    className="w-full py-3.5 px-4 rounded-lg bg-white border border-gray-200 text-text-main text-body font-semibold active:bg-gray-50"
                   >
                     결제 수단 변경
                   </button>

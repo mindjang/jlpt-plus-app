@@ -350,18 +350,36 @@ export function useStudyProgress({
   useEffect(() => {
     // 초기 마운트 시 또는 실제 변경이 있을 때만 실행
     const isInitialMount = isInitialMountRef.current
-    const wordsLengthChanged = words.length !== prevWordsLengthRef.current && words.length > 0
-    const kanjisLengthChanged = kanjis.length !== prevKanjisLengthRef.current && kanjis.length > 0
+    const wordsLengthChanged = words.length !== prevWordsLengthRef.current
+    const kanjisLengthChanged = kanjis.length !== prevKanjisLengthRef.current
     const activeTabChanged = activeTab !== prevActiveTabRef.current
     const levelChanged = level !== prevLevelRef.current
 
-    if (isInitialMount || wordsLengthChanged || kanjisLengthChanged || activeTabChanged || levelChanged) {
+    // words/kanjis가 0에서 0이 아닌 값으로 변경되었거나, 다른 변경사항이 있을 때 실행
+    const items = activeTab === 'word' ? words : kanjis
+    const itemsLengthChanged = activeTab === 'word' ? wordsLengthChanged : kanjisLengthChanged
+    const prevItemsLength = activeTab === 'word' ? prevWordsLengthRef.current : prevKanjisLengthRef.current
+    
+    // 데이터가 로드되었는지 확인 (0에서 0이 아닌 값으로 변경)
+    const dataLoaded = itemsLengthChanged && prevItemsLength === 0 && items.length > 0
+    
+    const shouldLoad = isInitialMount || 
+      dataLoaded ||
+      (itemsLengthChanged && items.length > 0) || 
+      activeTabChanged || 
+      levelChanged
+
+    if (shouldLoad) {
       isInitialMountRef.current = false
       prevWordsLengthRef.current = words.length
       prevKanjisLengthRef.current = kanjis.length
       prevActiveTabRef.current = activeTab
       prevLevelRef.current = level
-      loadProgress()
+      
+      // words/kanjis가 로드되었을 때만 loadProgress 호출
+      if (items.length > 0) {
+        loadProgress()
+      }
     }
 
     // 컴포넌트 언마운트 시 요청 취소

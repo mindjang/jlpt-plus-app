@@ -8,7 +8,7 @@ import { ListItem } from '@/components/ui/ListItem'
 import { getNaverWordsByLevel } from '@/data/words/index'
 import { getKanjiByLevel } from '@/data/kanji/index'
 import type { NaverWord } from '@/data/types'
-import { levels, Level } from '@/data'
+import { levels, Level, getLevelGradient } from '@/data'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { useUserSettings } from '@/hooks/useUserSettings'
 import { getAllCardIds } from '@/lib/firebase/firestore'
@@ -158,44 +158,80 @@ function NewWordsContent() {
     setSearchQuery(query)
   }
 
+  const gradient = getLevelGradient(levelParam)
+
   return (
-    <div className="w-full">
-      <AppBar 
-        title={`새 ${typeParam === 'word' ? '단어' : '한자'}`} 
-        onBack={() => router.back()} 
+    <div className="min-h-screen relative overflow-hidden">
+      {/* 프리미엄 그라데이션 배경 (전체 화면) */}
+      <div
+        className="fixed inset-0 transition-all duration-500"
+        style={{
+          background: `linear-gradient(135deg, ${gradient.from} 0%, ${gradient.to} 50%, ${gradient.from} 100%)`,
+          opacity: 0.95,
+        }}
       />
       
-      <div className="p-4">
-        <SearchBar 
-          onSearch={handleSearch} 
-          placeholder={typeParam === 'word' ? '단어 검색...' : '한자 검색...'}
-        />
-        
-        {/* 검색 결과 */}
-        <div className="space-y-2 mt-4">
-          {loading ? (
-            <div className="flex items-center justify-center min-h-[40vh]">
-              <div className="text-body text-text-sub">로딩 중...</div>
-            </div>
-          ) : (
-            <>
-              {newItems.map((item, index) => (
-                <ListItem
-                  key={`${item.word}-${index}`}
-                  level={item.level}
-                  word={item.word}
-                  furigana={item.furigana}
-                  meaning={item.meaning}
-                  onClick={() => handleItemClick(item.word)}
-                />
-              ))}
-              {newItems.length === 0 && (
-                <div className="text-center py-8 text-body text-text-sub">
-                  {searchQuery ? '검색 결과가 없습니다.' : '새로 학습할 단어가 없습니다.'}
+      {/* 장식용 원형 요소들 */}
+      <div className="absolute top-20 -right-20 w-96 h-96 rounded-full opacity-20 blur-3xl" style={{ background: gradient.to }} />
+      <div className="absolute top-40 -left-20 w-80 h-80 rounded-full opacity-15 blur-3xl" style={{ background: gradient.from }} />
+
+      <AppBar 
+        title={`새 ${typeParam === 'word' ? '단어' : '한자'}`} 
+        onBack={() => router.back()}
+        className="bg-transparent border-none backdrop-blur-sm [&_h1]:text-text-main [&_h1]:font-semibold [&_h1]:text-subtitle [&_button_span]:text-text-main [&_button]:text-text-main"
+      />
+      
+      <div className="relative z-10 pb-6">
+        <div className="px-5 pt-6">
+          {/* 검색바 */}
+          <div className="animate-in fade-in slide-in-from-top-4 duration-500">
+            <SearchBar 
+              onSearch={handleSearch} 
+              placeholder={typeParam === 'word' ? '단어 검색...' : '한자 검색...'}
+            />
+          </div>
+          
+          {/* 검색 결과 */}
+          <div className="space-y-3 mt-6">
+            {loading ? (
+              <div className="flex items-center justify-center min-h-[40vh]">
+                <div className="flex flex-col items-center justify-center space-y-4">
+                  <div className="relative w-12 h-12">
+                    <div className="absolute inset-0 w-12 h-12 border-4 border-gray-200 rounded-full" />
+                    <div className="absolute inset-0 w-12 h-12 border-4 border-transparent border-t-primary rounded-full animate-spin" />
+                  </div>
+                  <div className="text-body text-text-sub font-medium">로딩 중...</div>
                 </div>
-              )}
-            </>
-          )}
+              </div>
+            ) : (
+              <>
+                {newItems.map((item, index) => (
+                  <div
+                    key={`${item.word}-${index}`}
+                    className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    <ListItem
+                      level={item.level}
+                      word={item.word}
+                      furigana={item.furigana}
+                      meaning={item.meaning}
+                      onClick={() => handleItemClick(item.word)}
+                    />
+                  </div>
+                ))}
+                {newItems.length === 0 && (
+                  <div className="text-center py-12">
+                    <div className="bg-white/95 backdrop-blur-xl rounded-2xl p-8 border border-white/50 shadow-xl shadow-black/5">
+                      <p className="text-body text-text-sub">
+                        {searchQuery ? '검색 결과가 없습니다.' : '새로 학습할 단어가 없습니다.'}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
         </div>
       </div>
     </div>

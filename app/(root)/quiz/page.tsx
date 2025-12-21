@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useState, useEffect, Suspense } from 'react'
-import { useRouter } from 'next/navigation'
+import React, { useState, useEffect, Suspense, useRef } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { FeatureGuard } from '@/components/permissions/FeatureGuard'
 import { AppBar } from '@/components/ui/AppBar'
@@ -33,6 +33,7 @@ type QuizState = 'menu' | 'settings' | 'playing' | 'result'
 
 function QuizContent() {
   const router = useRouter()
+  const searchParams = useSearchParams()
   const { user, loading: authLoading } = useAuth()
   
   const [quizState, setQuizState] = useState<QuizState>('menu')
@@ -49,6 +50,47 @@ function QuizContent() {
   const [quizResult, setQuizResult] = useState<QuizResult | null>(null)
   const [loading, setLoading] = useState(false)
   const [showExitConfirm, setShowExitConfirm] = useState(false)
+  
+  // URL state 파라미터와 내부 상태 동기화
+  useEffect(() => {
+    const urlState = searchParams.get('state') || searchParams.get('status')
+    
+    // URL에 state가 없는데 playing 상태면 메뉴로 복귀
+    if (!urlState && quizState === 'playing' && session) {
+      // 뒤로가기로 URL만 변경된 경우
+      setQuizState('menu')
+      setSession(null)
+      setCurrentQuestionIndex(0)
+      setAnswers([])
+      setStreakCount(0)
+      setMaxStreak(0)
+    }
+    // URL에 state가 playing인데 내부 상태가 다르면 동기화
+    else if (urlState === 'playing' && quizState !== 'playing') {
+      // 이 경우는 보통 발생하지 않지만, 안전을 위해 처리
+      if (session) {
+        setQuizState('playing')
+      }
+    }
+  }, [searchParams, quizState, session])
+  
+  // 브라우저 뒤로가기 이벤트 처리
+  useEffect(() => {
+    const handlePopState = () => {
+      // 뒤로가기로 URL이 변경되면 상태도 초기화
+      if (quizState === 'playing' && session) {
+        setQuizState('menu')
+        setSession(null)
+        setCurrentQuestionIndex(0)
+        setAnswers([])
+        setStreakCount(0)
+        setMaxStreak(0)
+      }
+    }
+    
+    window.addEventListener('popstate', handlePopState)
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [quizState, session])
 
   // 사용자 레벨 정보 및 통계 로드
   useEffect(() => {
@@ -375,10 +417,11 @@ function QuizContent() {
 
   const handleBack = () => {
     // 퀴즈 진행 중일 때는 확인 모달 표시
-    if (quizState === 'playing') {
+    if (quizState === 'playing' && session) {
       setShowExitConfirm(true)
     } else {
-      router.back()
+      // URL에서 state 파라미터 제거하고 메뉴로 이동
+      router.replace('/quiz', { scroll: false })
     }
   }
 

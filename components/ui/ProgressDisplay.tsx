@@ -73,19 +73,22 @@ export function ProgressDisplay({
       )}
 
       {/* 프로그레스바 */}
-      <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden relative">
+      <div className="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden relative shadow-inner">
         <div
-          className="h-full rounded-full transition-all duration-300"
+          className="h-full rounded-full transition-all duration-500 ease-out relative overflow-hidden"
           style={{
             width: `${progress}%`,
-            backgroundColor,
-            border: `1px solid ${borderColor}`,
+            background: `linear-gradient(90deg, ${backgroundColor}, ${borderColor})`,
+            boxShadow: `0 2px 8px ${hexToRgba(borderColor, 0.3) || borderColor}`,
           }}
-        />
+        >
+          {/* 반짝이는 효과 */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer" />
+        </div>
         {/* 0일 때 작은 인디케이터 */}
         {showZeroIndicator && current === 0 && (
           <div
-            className="absolute left-0 top-0 w-1 h-full rounded-full"
+            className="absolute left-0 top-0 w-1.5 h-full rounded-full"
             style={{
               backgroundColor,
               border: `1px solid ${borderColor}`,

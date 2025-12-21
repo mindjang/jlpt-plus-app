@@ -4,6 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { TabIcon } from './TabIcon'
+import { LEVEL_COLORS } from '@/lib/constants/colors'
 
 export interface TabItem {
   id: string
@@ -27,8 +28,8 @@ const tabs: TabItem[] = [
   },
   {
     id: 'game',
-    label: '게임존',
-    href: '/game',
+    label: '게임방',
+    href: '/intro/game',
     icon: 'game',
   },
   {
@@ -49,7 +50,7 @@ export function BottomNav() {
   const pathname = usePathname()
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-surface border-t border-divider safe-area-bottom">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200/50 safe-area-bottom">
       <div className="max-w-lg mx-auto">
         <div className="flex items-center justify-around h-16 px-2">
           {tabs.map((tab) => {
@@ -59,18 +60,20 @@ export function BottomNav() {
                 key={tab.id}
                 href={tab.href}
                 aria-current={isActive ? 'page' : undefined}
-                className={`flex flex-col items-center justify-center flex-1 h-full transition-colors ${
-                  isActive ? 'text-level-n5' : 'text-text-sub'
-                }`}
+                className="flex flex-col items-center justify-center flex-1 h-full transition-all duration-200 relative group"
               >
                 <TabIcon name={tab.icon} active={isActive} />
-                <span
-                  className={`text-label transition-colors ${
-                    isActive ? 'font-bold text-level-n5' : 'text-text-sub'
-                  }`}
-                >
-                  {tab.label}
-                </span>
+                {!(tab.id === 'game' && isActive) && (
+                  <span
+                    className="text-label transition-all duration-200 mt-1"
+                    style={{
+                      color: isActive ? LEVEL_COLORS.N5 : '#9CA3AF',
+                      fontWeight: isActive ? '700' : '500',
+                    }}
+                  >
+                    {tab.label}
+                  </span>
+                )}
               </Link>
             )
           })}

@@ -240,10 +240,25 @@ export async function createGiftCode(code: string, giftCode: GiftCode): Promise<
     throw new Error('이미 존재하는 코드입니다.')
   }
 
-  await setDoc(ref, {
-    ...giftCode,
-    createdAt: Date.now(),
-  })
+  // undefined 값을 제거하여 Firestore 오류 방지
+  const cleanGiftCode: any = {
+    durationDays: giftCode.durationDays,
+    createdAt: giftCode.createdAt || Date.now(),
+  }
+
+  if (giftCode.remainingUses !== undefined && giftCode.remainingUses !== null) {
+    cleanGiftCode.remainingUses = giftCode.remainingUses
+  }
+
+  if (giftCode.type !== undefined) {
+    cleanGiftCode.type = giftCode.type
+  }
+
+  if (giftCode.note !== undefined && giftCode.note !== null && giftCode.note !== '') {
+    cleanGiftCode.note = giftCode.note
+  }
+
+  await setDoc(ref, cleanGiftCode)
 }
 
 /**
@@ -281,7 +296,28 @@ export async function updateGiftCode(code: string, updates: Partial<GiftCode>): 
     throw new Error('코드가 존재하지 않습니다.')
   }
 
-  await updateDoc(ref, updates)
+  // undefined 값을 제거하여 Firestore 오류 방지
+  const cleanUpdates: any = {}
+  if (updates.durationDays !== undefined) {
+    cleanUpdates.durationDays = updates.durationDays
+  }
+  if (updates.remainingUses !== undefined) {
+    cleanUpdates.remainingUses = updates.remainingUses
+  }
+  if (updates.type !== undefined) {
+    cleanUpdates.type = updates.type
+  }
+  if (updates.note !== undefined && updates.note !== null && updates.note !== '') {
+    cleanUpdates.note = updates.note
+  } else if (updates.note === null || updates.note === '') {
+    // note를 삭제하려는 경우 (null 또는 빈 문자열)
+    cleanUpdates.note = null
+  }
+  if (updates.createdAt !== undefined) {
+    cleanUpdates.createdAt = updates.createdAt
+  }
+
+  await updateDoc(ref, cleanUpdates)
 }
 
 /**

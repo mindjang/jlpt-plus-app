@@ -220,6 +220,38 @@ export function usePayment({
 
       const response = issueResponse as IssueResponse
       
+      // 간편결제 제공사 정보 추출
+      let easyPayProvider: string | undefined = undefined
+      if (config.billingKeyMethod === 'EASY_PAY') {
+        // 카카오페이 버튼을 통한 결제인 경우
+        if (config.issueIdPrefix === 'kko') {
+          easyPayProvider = 'KAKAOPAY'
+        } else {
+          // PortOne 응답에서 간편결제 제공사 정보 확인
+          const responseProvider = (response as any)?.easyPay?.provider || 
+                                  (response as any)?.provider ||
+                                  (response as any)?.method?.provider
+          if (responseProvider) {
+            const providerMap: Record<string, string> = {
+              'KAKAOPAY': 'KAKAOPAY',
+              'NAVERPAY': 'NAVERPAY',
+              'TOSS': 'TOSS',
+              'PAYCO': 'PAYCO',
+              'SSG': 'SSG',
+              'LPAY': 'LPAY',
+              'KPAY': 'KPAY',
+              'INIPAY': 'INIPAY',
+              'PAYPAL': 'PAYPAL',
+              'APPLEPAY': 'APPLEPAY',
+              'SAMSUNGPAY': 'SAMSUNGPAY',
+              'LPOINT': 'LPOINT',
+              'SKPAY': 'SKPAY',
+            }
+            easyPayProvider = providerMap[responseProvider.toUpperCase()] || 'OTHER'
+          }
+        }
+      }
+      
       // 모바일에서 리다이렉트가 발생한 경우
       // (빌링키가 없고, 리다이렉트가 설정된 경우)
       if ((mobile || isDefinitelyMobile) && (!response.billingKey || response.billingKey.trim() === '')) {
@@ -236,6 +268,7 @@ export function usePayment({
           localStorage.setItem('pendingPayment', JSON.stringify({
             plan,
             paymentMethod: config.billingKeyMethod,
+            easyPayProvider: easyPayProvider, // 간편결제 제공사 정보도 저장
             timestamp: Date.now(),
           }))
         }
@@ -295,6 +328,7 @@ export function usePayment({
           billingKey, 
           plan,
           paymentMethod: config.billingKeyMethod, // 결제 수단 전달
+          easyPayProvider: easyPayProvider, // 간편결제 제공사 전달
         }),
       })
       const data = await resp.json()

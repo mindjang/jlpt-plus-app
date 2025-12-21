@@ -1,5 +1,3 @@
-'use server'
-
 import { NextRequest, NextResponse } from 'next/server'
 import { requireAuth } from '@/lib/firebase/auth-middleware'
 import { getBillingInfo } from '@/lib/firebase/firestore'

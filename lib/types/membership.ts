@@ -34,4 +34,5 @@ export interface BillingInfo {
   provider?: string
   isRecurring?: boolean // true: 정기구독, false: 단건결제
   paymentMethod?: 'CARD' | 'EASY_PAY' // 결제 수단: 카드 또는 간편결제
+  easyPayProvider?: 'KAKAOPAY' | 'NAVERPAY' | 'TOSS' | 'PAYCO' | 'SSG' | 'LPAY' | 'KPAY' | 'INIPAY' | 'PAYPAL' | 'APPLEPAY' | 'SAMSUNGPAY' | 'LPOINT' | 'SKPAY' | 'OTHER' // 간편결제 제공사 (선택적)
 }

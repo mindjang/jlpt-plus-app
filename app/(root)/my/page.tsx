@@ -107,8 +107,14 @@ function MyPageContent() {
   const [dailyTargetDraft, setDailyTargetDraft] = useState(settings.dailyNewLimit)
   const [dailyTargetSaving, setDailyTargetSaving] = useState(false)
   const [redeemLoading, setRedeemLoading] = useState(false)
-  const [billingInfo, setBillingInfo] = useState<{ paymentMethod?: 'CARD' | 'EASY_PAY' } | null>(null)
+  const [billingInfo, setBillingInfo] = useState<{ 
+    paymentMethod?: 'CARD' | 'EASY_PAY'
+    easyPayProvider?: string
+    isRecurring?: boolean
+  } | null>(null)
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
+  const [showCancelConfirm, setShowCancelConfirm] = useState(false)
+  const [cancelling, setCancelling] = useState(false)
 
   // 결제 정보 가져오기
   useEffect(() => {
@@ -147,7 +153,7 @@ function MyPageContent() {
     const paymentMethod = searchParams.get('paymentMethod') as 'CARD' | 'EASY_PAY' | null
     
     // localStorage에서 대기 중인 결제 정보 확인
-    let pendingPayment: { plan: string; paymentMethod: string; timestamp: number } | null = null
+    let pendingPayment: { plan: string; paymentMethod: string; easyPayProvider?: string; timestamp: number } | null = null
     if (typeof window !== 'undefined') {
       const pendingStr = localStorage.getItem('pendingPayment')
       if (pendingStr) {
@@ -189,6 +195,7 @@ function MyPageContent() {
           let finalBillingKey = billingKey
           let finalPlan: 'monthly' | 'quarterly' | null = plan || (pendingPayment ? (pendingPayment.plan as 'monthly' | 'quarterly') : null)
           let finalPaymentMethod: 'CARD' | 'EASY_PAY' = paymentMethod || (pendingPayment ? (pendingPayment.paymentMethod as 'CARD' | 'EASY_PAY') : 'EASY_PAY') || 'EASY_PAY'
+          let finalEasyPayProvider: string | undefined = pendingPayment?.easyPayProvider
           
           // imp_success가 false이면 실패
           if (impSuccess === 'false') {
@@ -277,6 +284,7 @@ function MyPageContent() {
               billingKey: finalBillingKey, 
               plan: finalPlan,
               paymentMethod: finalPaymentMethod,
+              easyPayProvider: finalEasyPayProvider,
             }),
           })
           
@@ -285,6 +293,7 @@ function MyPageContent() {
             logger.info('[Payment] Mobile payment completed successfully', {
               plan: finalPlan,
               paymentMethod: finalPaymentMethod,
+              easyPayProvider: finalEasyPayProvider,
               timestamp: Date.now(),
             })
             // localStorage 정리
@@ -394,6 +403,79 @@ function MyPageContent() {
     router.push('/my')
   }
 
+  // 결제 수단 표시 함수
+  const getPaymentMethodLabel = (paymentMethod?: 'CARD' | 'EASY_PAY', easyPayProvider?: string): string => {
+    if (!paymentMethod) return '미등록'
+    if (paymentMethod === 'CARD') return '신용카드'
+    if (paymentMethod === 'EASY_PAY') {
+      if (easyPayProvider) {
+        const providerMap: Record<string, string> = {
+          'KAKAOPAY': '카카오페이',
+          'NAVERPAY': '네이버페이',
+          'TOSS': '토스페이',
+          'PAYCO': '페이코',
+          'SSG': 'SSG페이',
+          'LPAY': 'L페이',
+          'KPAY': 'K페이',
+          'INIPAY': '이니시스',
+          'PAYPAL': '페이팔',
+          'APPLEPAY': '애플페이',
+          'SAMSUNGPAY': '삼성페이',
+          'LPOINT': 'L포인트',
+          'SKPAY': 'SK페이',
+        }
+        return providerMap[easyPayProvider] || '간편결제'
+      }
+      return '간편결제'
+    }
+    return '미등록'
+  }
+
+  // 구독 취소 처리
+  const handleCancelSubscription = async () => {
+    if (!user) return
+    
+    setCancelling(true)
+    try {
+      const idToken = await user.getIdToken()
+      const resp = await fetch('/api/pay/cancel-subscription', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${idToken}`,
+          'Content-Type': 'application/json',
+        },
+      })
+
+      const data = await resp.json()
+      if (!resp.ok) {
+        setMessage({ type: 'error', text: data.error || '구독 취소에 실패했습니다.' })
+        setCancelling(false)
+        setShowCancelConfirm(false)
+        return
+      }
+
+      setMessage({ type: 'success', text: '구독이 취소되었습니다. ' + data.expiresAtFormatted + '까지 사용 가능합니다.' })
+      setShowCancelConfirm(false)
+      if (refresh) await refresh()
+      
+      // BillingInfo 다시 로드
+      const billingResp = await fetch('/api/billing/info', {
+        headers: {
+          'Authorization': `Bearer ${idToken}`
+        }
+      })
+      if (billingResp.ok) {
+        const billingData = await billingResp.json()
+        setBillingInfo(billingData.billingInfo)
+      }
+    } catch (error) {
+      handleError(error, '구독 취소')
+      setMessage({ type: 'error', text: '구독 취소 중 오류가 발생했습니다.' })
+    } finally {
+      setCancelling(false)
+    }
+  }
+
   const handleRedeemCode = async () => {
     if (!redeemCodeInput.trim()) {
       setRedeemMessage('코드를 입력해주세요.')
@@ -464,7 +546,7 @@ function MyPageContent() {
         <>
           {(() => {
   const isPremium = membershipStatus === 'member'
-            const isAutoRenewing = isPremium && membership?.source === 'subscription'
+            const isAutoRenewing = isPremium && membership?.source === 'subscription' && billingInfo?.isRecurring !== false
 
   return (
     <div className="w-full min-h-screen bg-page pb-24">
@@ -678,7 +760,7 @@ function MyPageContent() {
                 <div className="flex justify-between items-center mb-2.5">
                   <span className="text-label text-text-sub">결제 수단</span>
                   <span className="text-body font-semibold text-text-main">
-                    {billingInfo.paymentMethod === 'EASY_PAY' ? '간편결제 (카카오페이 등)' : '신용카드'}
+                    {getPaymentMethodLabel(billingInfo.paymentMethod, billingInfo.easyPayProvider)}
                   </span>
                 </div>
               )}
@@ -691,23 +773,20 @@ function MyPageContent() {
             <div className="space-y-2.5">
               {isAutoRenewing ? (
                 <>
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-2.5">
-                    <p className="text-label text-blue-700">
-                      💡 결제 수단 변경이나 구독 해지가 필요하신가요? 아래 방법을 이용해주세요:
-                    </p>
-                    <ul className="text-label text-blue-700 mt-1.5 space-y-1 list-disc list-inside">
-                      <li>결제 수단 변경: 신규 결제 수단으로 재구독</li>
-                      <li>구독 해지: 마이페이지 하단 연락처로 문의</li>
-                    </ul>
-                  </div>
                   <button
                     onClick={() => {
                       setShowManageModal(false)
                       setShowPaymentModal(true)
                     }}
-                    className="w-full py-3.5 px-4 rounded-lg bg-white border border-gray-200 text-text-main text-body font-semibold active:bg-gray-50"
+                    className="w-full py-3.5 px-4 rounded-lg bg-white border border-gray-200 text-text-main text-body font-semibold active:bg-gray-50 mb-2.5"
                   >
-                    새 결제 수단으로 재구독
+                    결제 수단 변경
+                  </button>
+                  <button
+                    onClick={() => setShowCancelConfirm(true)}
+                    className="w-full py-3.5 px-4 rounded-lg bg-red-50 border border-red-200 text-red-600 text-body font-semibold active:bg-red-100"
+                  >
+                    구독 취소
                   </button>
                 </>
               ) : (
@@ -1020,6 +1099,22 @@ function MyPageContent() {
       )}
 
       <ConfirmModal isOpen={showLogoutConfirm} onClose={() => setShowLogoutConfirm(false)} onConfirm={handleLogout} title="로그아웃" message="정말 로그아웃 하시겠습니까?" confirmText="로그아웃" cancelText="취소" confirmButtonColor="danger" />
+      
+      {/* 구독 취소 확인 모달 */}
+      <ConfirmModal
+        isOpen={showCancelConfirm}
+        onClose={() => setShowCancelConfirm(false)}
+        onConfirm={handleCancelSubscription}
+        title="구독 취소"
+        message={
+          membership?.expiresAt
+            ? `구독을 취소하시겠습니까?<br />${new Date(membership.expiresAt).toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' })}까지 사용할 수 있습니다.`
+            : '구독을 취소하시겠습니까?'
+        }
+        confirmText={cancelling ? '처리 중...' : '구독 취소'}
+        cancelText="취소"
+        confirmButtonColor="danger"
+      />
     </div>
             )
           })()}

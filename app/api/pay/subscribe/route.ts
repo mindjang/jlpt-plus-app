@@ -25,10 +25,11 @@ export async function POST(request: NextRequest) {
     if (authError) return authError
 
     const body = await request.json()
-    const { billingKey, plan, paymentMethod } = body as {
+    const { billingKey, plan, paymentMethod, easyPayProvider } = body as {
       billingKey?: string
       plan?: Plan
       paymentMethod?: 'CARD' | 'EASY_PAY'
+      easyPayProvider?: string
     }
 
     // customerId는 인증된 사용자의 uid를 사용
@@ -122,6 +123,36 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // PortOne 응답에서 간편결제 제공사 정보 추출
+    let extractedEasyPayProvider: string | undefined = easyPayProvider
+    if (paymentMethod === 'EASY_PAY' && !extractedEasyPayProvider) {
+      // PortOne 응답에서 간편결제 제공사 정보 확인
+      // 일반적으로 paymentJson.easyPay?.provider 또는 paymentJson.provider에 있음
+      const responseProvider = (paymentJson as any)?.easyPay?.provider || 
+                              (paymentJson as any)?.provider ||
+                              (paymentJson as any)?.method?.provider
+      
+      if (responseProvider) {
+        // PortOne에서 반환하는 제공사 코드를 우리 타입에 맞게 변환
+        const providerMap: Record<string, string> = {
+          'KAKAOPAY': 'KAKAOPAY',
+          'NAVERPAY': 'NAVERPAY',
+          'TOSS': 'TOSS',
+          'PAYCO': 'PAYCO',
+          'SSG': 'SSG',
+          'LPAY': 'LPAY',
+          'KPAY': 'KPAY',
+          'INIPAY': 'INIPAY',
+          'PAYPAL': 'PAYPAL',
+          'APPLEPAY': 'APPLEPAY',
+          'SAMSUNGPAY': 'SAMSUNGPAY',
+          'LPOINT': 'LPOINT',
+          'SKPAY': 'SKPAY',
+        }
+        extractedEasyPayProvider = providerMap[responseProvider.toUpperCase()] || 'OTHER'
+      }
+    }
+
     // 구독 만료일 계산 (기존 만료일 이후로 연장)
     const now = Date.now()
     const current = await getMembership(customerId)
@@ -147,6 +178,7 @@ export async function POST(request: NextRequest) {
       provider: 'portone',
       isRecurring: true,
       paymentMethod: paymentMethod || 'CARD', // 결제 수단 저장
+      easyPayProvider: extractedEasyPayProvider as any, // 간편결제 제공사 저장
     })
 
     console.log('[pay/subscribe] Success', {

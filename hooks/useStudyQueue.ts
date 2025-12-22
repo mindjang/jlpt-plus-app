@@ -3,7 +3,7 @@
  * 학습 큐를 로드하고 관리하는 로직을 추상화
  * 중복 요청 방지 및 자동 취소 기능 포함
  */
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { logger } from '@/lib/utils/logger'
 import { deduplicateRequest } from '@/lib/utils/requestDeduplication'
 import type { JlptLevel } from '@/lib/types/content'
@@ -11,6 +11,7 @@ import type { KanjiAliveEntry } from '@/data/types'
 import type { NaverWord } from '@/data/types'
 import type { StudyCard } from '@/lib/types/srs'
 import { getTodayQueues } from '@/lib/srs/queue/studyQueue'
+import { getReviewCards } from '@/lib/firebase/firestore'
 
 interface UseStudyQueueOptions {
   /** 사용자 ID */
@@ -27,6 +28,12 @@ interface UseStudyQueueOptions {
   canLoad?: boolean
 }
 
+interface OverdueBombStatus {
+  level: 'medium' | 'high'
+  message: string
+  suggestedLimit?: number
+}
+
 interface UseStudyQueueResult {
   /** 학습 큐 */
   queue: StudyCard[]
@@ -40,6 +47,8 @@ interface UseStudyQueueResult {
   error: Error | null
   /** 큐 새로고침 */
   refresh: () => Promise<void>
+  /** 오버듀 폭탄 상태 (복습 카드 과다 시) */
+  overdueBombStatus: OverdueBombStatus | null
 }
 
 /**
@@ -85,6 +94,7 @@ export function useStudyQueue({
   const [newCards, setNewCards] = useState<StudyCard[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
+  const [totalReviewCount, setTotalReviewCount] = useState(0)
   const abortControllerRef = useRef<AbortController | null>(null)
 
   const loadQueue = async () => {
@@ -106,6 +116,18 @@ export function useStudyQueue({
     setError(null)
 
     try {
+      // 오버듀 폭탄 감지를 위해 전체 복습 카드 수 확인
+      let totalReview = 0
+      if (uid) {
+        try {
+          const allReviewCards = await getReviewCards(uid, 500)
+          totalReview = allReviewCards.filter(card => card.level === level).length
+          setTotalReviewCount(totalReview)
+        } catch (err) {
+          logger.error('Failed to get review cards count:', err)
+        }
+      }
+
       const queues = await loadQueueDeduplicated(uid, level, words, kanjis, dailyNewLimit)
 
       // 요청이 취소되지 않았는지 확인
@@ -153,6 +175,24 @@ export function useStudyQueue({
     canLoad,
   ])
 
+  // 오버듀 폭탄 상태 계산
+  const overdueBombStatus = useMemo((): OverdueBombStatus | null => {
+    if (totalReviewCount >= 100) {
+      return {
+        level: 'high',
+        message: '복습 카드가 많이 쌓여있어요',
+        suggestedLimit: Math.min(dailyNewLimit * 2, 50),
+      }
+    }
+    if (totalReviewCount >= 50) {
+      return {
+        level: 'medium',
+        message: '복습 카드가 쌓여있어요. 천천히 처리해도 괜찮아요',
+      }
+    }
+    return null
+  }, [totalReviewCount, dailyNewLimit])
+
   return {
     queue,
     reviewCards,
@@ -160,5 +200,6 @@ export function useStudyQueue({
     loading,
     error,
     refresh: loadQueue,
+    overdueBombStatus,
   }
 }

@@ -133,6 +133,94 @@ describe('checkFeatureAccess', () => {
       expect(result.reason).toBe('custom_check_failed')
     })
   })
+
+  describe('F) 권한(guest/nonMember/member)별 export/advancedStats 접근 차단이 정확', () => {
+    describe('export_data 권한', () => {
+      it('guest는 export_data에 접근할 수 없어야 함', () => {
+        const context: PermissionContext = {
+          user: null,
+          status: 'guest',
+          isMember: false,
+          canStartSession: false,
+        }
+
+        const result = checkFeatureAccess('export_data', context)
+
+        expect(result.allowed).toBe(false)
+        expect(result.reason).toBe('not_logged_in')
+      })
+
+      it('nonMember는 export_data에 접근할 수 없어야 함', () => {
+        const context: PermissionContext = {
+          user: { uid: 'test-uid' } as any,
+          status: 'nonMember',
+          isMember: false,
+          canStartSession: true,
+        }
+
+        const result = checkFeatureAccess('export_data', context)
+
+        expect(result.allowed).toBe(false)
+        expect(result.reason).toBe('membership_required')
+      })
+
+      it('member는 export_data에 접근할 수 있어야 함', () => {
+        const context: PermissionContext = {
+          user: { uid: 'test-uid' } as any,
+          status: 'member',
+          isMember: true,
+          canStartSession: true,
+        }
+
+        const result = checkFeatureAccess('export_data', context)
+
+        expect(result.allowed).toBe(true)
+      })
+    })
+
+    describe('advanced_stats 권한', () => {
+      it('guest는 advanced_stats에 접근할 수 없어야 함', () => {
+        const context: PermissionContext = {
+          user: null,
+          status: 'guest',
+          isMember: false,
+          canStartSession: false,
+        }
+
+        const result = checkFeatureAccess('advanced_stats', context)
+
+        expect(result.allowed).toBe(false)
+        expect(result.reason).toBe('not_logged_in')
+      })
+
+      it('nonMember는 advanced_stats에 접근할 수 없어야 함', () => {
+        const context: PermissionContext = {
+          user: { uid: 'test-uid' } as any,
+          status: 'nonMember',
+          isMember: false,
+          canStartSession: true,
+        }
+
+        const result = checkFeatureAccess('advanced_stats', context)
+
+        expect(result.allowed).toBe(false)
+        expect(result.reason).toBe('membership_required')
+      })
+
+      it('member는 advanced_stats에 접근할 수 있어야 함', () => {
+        const context: PermissionContext = {
+          user: { uid: 'test-uid' } as any,
+          status: 'member',
+          isMember: true,
+          canStartSession: true,
+        }
+
+        const result = checkFeatureAccess('advanced_stats', context)
+
+        expect(result.allowed).toBe(true)
+      })
+    })
+  })
 })
 
 describe('canAccessFeature', () => {

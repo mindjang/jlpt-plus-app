@@ -304,6 +304,69 @@ describe('reviewCard', () => {
       expect(result.lapses).toBeLessThan(LEECH_THRESHOLD)
       expect(result.suspended).toBeUndefined()
     })
+
+    describe('E) LEECH_THRESHOLD(정본 값)에서 suspended로 전환', () => {
+      it(`lapses가 정확히 ${LEECH_THRESHOLD}일 때 suspended가 true가 되어야 함`, () => {
+        const card: UserCardState = {
+          itemId: 'test-leech-exact',
+          type: 'word',
+          level: 'N5',
+          reps: 10,
+          lapses: LEECH_THRESHOLD, // 정확히 임계값
+          interval: daysToMinutes(10),
+          ease: DEFAULT_EASE,
+          due: 0,
+          lastReviewed: 0,
+          suspended: false, // 아직 suspended되지 않음
+        }
+
+        const result = reviewCard(card, { ...baseParams, grade: 'good' })
+
+        expect(result.suspended).toBe(true)
+        expect(result.lapses).toBe(LEECH_THRESHOLD)
+      })
+
+      it(`lapses가 ${LEECH_THRESHOLD - 1}일 때는 suspended가 설정되지 않아야 함`, () => {
+        const card: UserCardState = {
+          itemId: 'test-leech-below',
+          type: 'word',
+          level: 'N5',
+          reps: 10,
+          lapses: LEECH_THRESHOLD - 1, // 임계값 미만
+          interval: daysToMinutes(10),
+          ease: DEFAULT_EASE,
+          due: 0,
+          lastReviewed: 0,
+        }
+
+        const result = reviewCard(card, { ...baseParams, grade: 'again' })
+
+        // again으로 평가하면 lapses가 증가하지만, 증가 후에도 임계값 미만이면 suspended되지 않음
+        expect(result.lapses).toBe(LEECH_THRESHOLD)
+        // 하지만 다시 평가해야 suspended가 설정됨
+        const result2 = reviewCard(result, { ...baseParams, grade: 'good' })
+        expect(result2.suspended).toBe(true)
+      })
+
+      it(`lapses가 ${LEECH_THRESHOLD} 이상일 때 다시 평가하면 suspended가 유지되어야 함`, () => {
+        const card: UserCardState = {
+          itemId: 'test-leech-maintain',
+          type: 'word',
+          level: 'N5',
+          reps: 10,
+          lapses: LEECH_THRESHOLD,
+          interval: daysToMinutes(10),
+          ease: DEFAULT_EASE,
+          due: 0,
+          lastReviewed: 0,
+          suspended: true, // 이미 suspended
+        }
+
+        const result = reviewCard(card, { ...baseParams, grade: 'good' })
+
+        expect(result.suspended).toBe(true)
+      })
+    })
   })
 
   describe('due 날짜 계산', () => {

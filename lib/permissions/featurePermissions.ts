@@ -27,7 +27,7 @@ export const FEATURE_PERMISSIONS: Record<FeatureId, FeatureRequirement> = {
     },
     restrictionMessage: {
       title: '학습을 시작하려면 로그인이 필요합니다',
-      description: '비회원은 하루 1회만 학습할 수 있어요. 회원권을 등록하면 무제한 학습이 가능합니다.',
+      description: '지금도 충분히 잘 하고 계세요.<br />현재는 하루 1회만 학습할 수 있어요. 회원이 되시면 오늘처럼 매일 학습할 수 있어요.',
     },
   },
 
@@ -38,8 +38,8 @@ export const FEATURE_PERMISSIONS: Record<FeatureId, FeatureRequirement> = {
   unlimited_sessions: {
     minStatus: 'member',
     restrictionMessage: {
-      title: '프리미엄 회원만 이용할 수 있어요',
-      description: '회원권을 등록하면 무제한으로 학습할 수 있어요.',
+      title: '오늘처럼 매일 학습하고 싶으신가요?',
+      description: '지금도 충분히 잘 하고 계세요.<br />현재는 하루 1회만 학습할 수 있어요. 회원이 되시면 복습 카드를 원하는 만큼 처리할 수 있어요.',
     },
   },
 
@@ -50,8 +50,8 @@ export const FEATURE_PERMISSIONS: Record<FeatureId, FeatureRequirement> = {
   advanced_stats: {
     minStatus: 'member',
     restrictionMessage: {
-      title: '프리미엄 회원만 이용할 수 있어요',
-      description: '회원권을 등록하면 상세한 학습 통계를 확인할 수 있어요.',
+      title: '통계를 더 자세히 보고 싶으신가요?',
+      description: '지금 보시는 통계로도 충분해요.<br />회원이 되시면 지금 보시는 통계를 더 자세히 볼 수 있어요. 레벨별 학습 진행도와 학습 데이터를 내보낼 수도 있어요.',
     },
   },
 
@@ -117,13 +117,13 @@ export const FEATURE_PERMISSIONS: Record<FeatureId, FeatureRequirement> = {
 
   /**
    * 데이터 내보내기
-   * - 로그인 필요 (멤버십 불필요)
+   * - 회원 전용
    */
   export_data: {
-    minStatus: 'nonMember',
+    minStatus: 'member',
     restrictionMessage: {
-      title: '로그인이 필요해요',
-      description: '데이터를 내보내려면 로그인이 필요합니다.',
+      title: '학습 기록을 저장하고 싶으신가요?',
+      description: '지금도 충분히 잘 하고 계세요.<br />회원이 되시면 학습 기록을 파일로 저장할 수 있어요. 언제든지 데이터를 가져갈 수 있어요.',
     },
   },
 

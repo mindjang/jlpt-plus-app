@@ -18,8 +18,8 @@ interface PaywallOverlayProps {
 }
 
 export function PaywallOverlay({
-  title = '프리미엄 회원만 이용할 수 있어요',
-  description = '로그인 후 구독을 시작하거나 코드 등록으로 기간을 추가하세요.',
+  title = '오늘처럼 매일 학습하고 싶으신가요?',
+  description = '지금도 충분히 잘 하고 계세요.<br />현재는 하루 1회만 학습할 수 있어요. 회원이 되시면 오늘처럼 매일 학습할 수 있어요.',
   showRedeem = true,
   onRedeem,
   showLogin = true,
@@ -92,6 +92,17 @@ export function PaywallOverlay({
                 테스트 모드
               </span>
             </div>
+            
+            {/* 혜택 설명 */}
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 space-y-2">
+              <p className="text-label font-medium text-blue-900">회원이 되시면:</p>
+              <ul className="text-body text-blue-800 space-y-1 text-sm">
+                <li>• 오늘처럼 매일 학습할 수 있어요</li>
+                <li>• 복습 카드를 원하는 만큼 처리할 수 있어요</li>
+                <li>• 학습 통계를 더 자세히 볼 수 있어요</li>
+              </ul>
+            </div>
+            
             <button
               className="w-full py-3 rounded-lg bg-black text-white text-body font-semibold active:opacity-80"
               onClick={() => {
@@ -105,6 +116,11 @@ export function PaywallOverlay({
             >
               구독 플랜 보기
             </button>
+            
+            {/* 선택권 강조 메시지 */}
+            <p className="text-label text-text-sub text-center">
+              지금도 충분히 괜찮아요. 나중에 결정하셔도 돼요.
+            </p>
           </div>
         )}
 

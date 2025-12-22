@@ -90,15 +90,15 @@ export const MAX_INTERVAL_MINUTES = MAX_INTERVAL_DAYS * ONE_DAY_IN_MINUTES
 
 /**
  * 장기 기억 판정 - 최소 간격 (일)
- * 21일 이상 간격이면 장기 기억으로 간주
+ * 30일 이상 간격이면 장기 기억으로 간주
  */
-export const LONG_TERM_MEMORY_INTERVAL_DAYS = 21
+export const LONG_TERM_MEMORY_INTERVAL_DAYS = 30
 
 /**
  * 장기 기억 판정 - 최소 복습 횟수
- * 8회 이상 복습했으면 장기 기억으로 간주
+ * 12회 이상 복습했으면 장기 기억으로 간주
  */
-export const LONG_TERM_MEMORY_REPS = 8
+export const LONG_TERM_MEMORY_REPS = 12
 
 /**
  * 복습 간격 비교 기준값들 (일 단위)

@@ -166,36 +166,39 @@ export default function HomePage() {
             </div>
           ) : reviewDueCount > 0 ? (
             // Review Mode
-            <div className="p-5">
-              <div className="text-center mb-4">
-                <h2 className="text-title font-bold text-text-main mb-2">복습 필요</h2>
-                <p className="text-body text-text-sub">
-                  <strong className="text-title font-bold text-primary">{reviewDueCount}</strong> 개의 카드가 복습을 기다리고 있습니다
+            <div className="p-6">
+              <div className="text-center mb-5">
+                <h2 className="text-2xl font-bold text-text-main mb-3">오늘은 이만큼만 하면 충분해요</h2>
+                <p className="text-body text-text-sub mb-1">
+                  복습할 카드가 있어요
+                </p>
+                <p className="text-lg text-text-main font-medium">
+                  {Math.min(reviewDueCount, dailyTarget)}개
                 </p>
               </div>
               <button
                 onClick={handleStartReview}
-                className="w-full py-4 px-6 bg-primary text-white rounded-lg text-body font-bold active:opacity-90 flex items-center justify-center gap-2 shadow-sm"
+                className="w-full py-5 px-6 bg-primary text-white rounded-xl text-xl font-bold active:opacity-90 flex items-center justify-center gap-2 shadow-sm"
               >
                 <Play size={20} fill="currentColor" />
-                복습 시작하기
+                지금 시작하기
               </button>
             </div>
           ) : (
             // New Study Mode
-            <div className="p-5">
-              <div className="text-center mb-4">
-                <h2 className="text-title font-bold text-text-main mb-2">새로운 학습</h2>
+            <div className="p-6">
+              <div className="text-center mb-5">
+                <h2 className="text-2xl font-bold text-text-main mb-3">오늘도 새로운 단어를 배워볼까요?</h2>
                 <p className="text-body text-text-sub">
                   {userLevel} 레벨 학습을 시작해보세요
                 </p>
               </div>
               <button
                 onClick={handleStartNew}
-                className="w-full py-4 px-6 bg-primary text-white rounded-lg text-body font-bold active:opacity-90 flex items-center justify-center gap-2 shadow-sm"
+                className="w-full py-5 px-6 bg-primary text-white rounded-xl text-xl font-bold active:opacity-90 flex items-center justify-center gap-2 shadow-sm"
               >
                 <BookOpen size={20} />
-                {userLevel} 학습 시작
+                지금 시작하기
               </button>
             </div>
           )}
@@ -213,18 +216,18 @@ export default function HomePage() {
               <h3 className="text-body font-semibold text-text-main">오늘의 학습</h3>
               <button
                 onClick={() => router.push('/stats')}
-                className="text-label text-primary active:opacity-70 font-medium"
+                className="text-label text-text-sub active:opacity-70 font-medium underline"
               >
-                자세히 보기 →
+                자세히 보기
               </button>
             </div>
 
-            {/* 일일 목표 진행도 - Duolingo Style */}
+            {/* 일일 목표 진행도 */}
             <div className="space-y-1.5 mb-3">
               <div className="flex items-center justify-between">
-                <span className="text-body text-text-sub">일일 목표</span>
-                <span className="text-body font-semibold text-text-main">
-                  {todayLearned} / {dailyTarget}
+                <span className="text-body text-text-sub">오늘 목표 진행 중</span>
+                <span className="text-body font-medium text-text-main">
+                  {Math.round(todayProgress)}%
                 </span>
               </div>
               <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
@@ -235,6 +238,9 @@ export default function HomePage() {
                   className="h-full bg-primary rounded-full"
                 />
               </div>
+              <p className="text-label text-text-sub text-center mt-1">
+                {todayLearned} / {dailyTarget} 완료
+              </p>
             </div>
 
             {/* 오늘의 통계 (리스트 형태) - Duolingo Style */}
@@ -264,7 +270,7 @@ export default function HomePage() {
             className="space-y-2"
           >
             <div className="flex items-center justify-between px-1">
-              <h3 className="text-label font-semibold text-text-sub uppercase tracking-wide">더 보기</h3>
+              <h3 className="text-label font-semibold text-text-sub uppercase tracking-wide">더 알아보기</h3>
             </div>
 
             <div className="space-y-1">

@@ -2,6 +2,7 @@
 import type { UserCardState, CardStatus } from '../../types/srs'
 import { nowAsMinutes, daysToMinutes } from '../../utils/date/dateUtils'
 import { normalizeDue, normalizeInterval } from '../migration/cardMigration'
+import { LONG_TERM_MEMORY_INTERVAL_DAYS, LONG_TERM_MEMORY_REPS } from '../constants'
 
 /**
  * 카드 상태 판정
@@ -22,9 +23,9 @@ export function getCardStatus(card: UserCardState | null): CardStatus {
   const dueMinutes = normalizeDue(card.due)
   const intervalMinutes = normalizeInterval(card.interval)
 
-  // Mastered: interval >= 30일 (43200분) 또는 reps >= 12 (실제 장기 기억 기준)
-  const thirtyDaysInMinutes = daysToMinutes(30)
-  if (intervalMinutes >= thirtyDaysInMinutes || card.reps >= 12) {
+  // Mastered: interval >= LONG_TERM_MEMORY_INTERVAL_DAYS 또는 reps >= LONG_TERM_MEMORY_REPS
+  const longTermIntervalMinutes = daysToMinutes(LONG_TERM_MEMORY_INTERVAL_DAYS)
+  if (intervalMinutes >= longTermIntervalMinutes || card.reps >= LONG_TERM_MEMORY_REPS) {
     return 'mastered'
   }
 

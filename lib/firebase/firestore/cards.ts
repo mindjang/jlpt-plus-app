@@ -5,6 +5,7 @@ import {
   doc,
   getDoc,
   setDoc,
+  updateDoc,
   collection,
   query,
   where,
@@ -14,6 +15,7 @@ import {
   writeBatch,
 } from 'firebase/firestore'
 import type { UserCardState } from '../../types/srs'
+import type { JlptLevel } from '../../types/content'
 import { getDbInstance } from './utils'
 
 /**
@@ -270,5 +272,40 @@ export async function getCardIdsByLevel(
   })
 
   return cardIds
+}
+
+/**
+ * 일시 중단된(Leech) 카드들 가져오기
+ */
+export async function getSuspendedCards(uid: string, level?: JlptLevel): Promise<UserCardState[]> {
+  const dbInstance = getDbInstance()
+  const cardsRef = collection(dbInstance, 'users', uid, 'cards')
+  
+  let q = query(
+    cardsRef,
+    where('suspended', '==', true),
+    orderBy('lapses', 'desc'),
+  )
+  
+  if (level) {
+    q = query(q, where('level', '==', level))
+  }
+  
+  const querySnapshot = await getDocs(q)
+  const cards: UserCardState[] = []
+  querySnapshot.forEach((doc) => {
+    cards.push(doc.data() as UserCardState)
+  })
+  
+  return cards
+}
+
+/**
+ * Leech 카드 재활성화
+ */
+export async function reactivateCard(uid: string, itemId: string): Promise<void> {
+  const dbInstance = getDbInstance()
+  const cardRef = doc(dbInstance, 'users', uid, 'cards', itemId)
+  await updateDoc(cardRef, { suspended: false })
 }
 

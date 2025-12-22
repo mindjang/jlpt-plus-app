@@ -217,7 +217,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
   useEffect(() => {
     if (!user || membershipLoading) return
     if (!canStartSession && !sessionReserved) {
-      setPaywallMessage('오늘의 무료 학습 회차를 모두 사용했어요. 회원권이 필요합니다.')
+      setPaywallMessage('오늘도 학습을 완료하셨어요. 수고하셨어요! 현재는 하루 1회만 학습할 수 있어요.')
     } else {
       setPaywallMessage(null)
     }
@@ -400,13 +400,28 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       )}
 
       {/* 진행도 바 */}
-      <div className="my-2 px-4">
-        <ProgressDisplay
-          current={displayIndex}
-          total={totalCount}
-          color={gradient.to}
-          className="flex items-center justify-between gap-3 py-1 px-2"
-        />
+      <div className="px-4 pt-2 pb-1">
+        {/* 안내 메시지 */}
+        <div className="mb-2 px-3 py-2 bg-blue-50 border-l-4 border-blue-200 rounded-r-lg">
+          <p className="text-label text-blue-800">
+            💡 의미를 보는 것은 정답 보기가 아닙니다. 기억을 확인하는 과정이에요.
+          </p>
+        </div>
+        
+        <div className="flex items-center justify-between mb-1">
+          <span className="text-label text-text-sub">
+            {totalCount - displayIndex}개 남음
+          </span>
+          <span className="text-label text-text-sub font-medium">
+            {displayIndex} / {totalCount}
+          </span>
+        </div>
+        <div className="h-1 bg-gray-100 rounded-full overflow-hidden">
+          <div 
+            className="h-full bg-primary rounded-full transition-all duration-300"
+            style={{ width: `${(displayIndex / totalCount) * 100}%` }}
+          />
+        </div>
       </div>
 
       {/* 카드 표시 */}
@@ -433,29 +448,74 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       {/* 하단 고정 Footer (평가 버튼) - 예제 모드에서만 표시 */}
       {mode === 'example' && (
         <div className="fixed bottom-0 left-0 right-0 max-w-lg mx-auto bg-surface border-t border-divider shadow-top z-40 px-4 py-3">
-          <div className="flex gap-2">
+          {/* Primary 버튼 (good) */}
+          <button
+            onClick={() => handleGrade('good')}
+            className={`w-full py-4 px-6 rounded-xl transition-colors mb-3 shadow-sm ${
+              selectedGrade === 'good'
+                ? 'bg-primary text-white shadow-md'
+                : 'bg-primary text-white active:opacity-90'
+            }`}
+          >
+            <div>기억났어요</div>
+            {/* <div className="text-label mt-1 opacity-90">잘 기억하고 있어요</div> */}
+            {selectedGrade === 'good' && nextReviewInterval !== null && (
+              <div className="text-label mt-1.5 opacity-75 text-sm">
+                {nextReviewInterval < 1440
+                  ? `${Math.round(nextReviewInterval / 60)}시간 후 복습`
+                  : `${minutesToDays(nextReviewInterval)}일 후 복습`
+                }
+              </div>
+            )}
+          </button>
+
+          {/* Secondary 버튼들 (again, hard, easy) */}
+          <div className="grid grid-cols-3 gap-2">
             <button
               onClick={() => handleGrade('again')}
-              className={`flex-1 py-4 px-4 rounded-lg text-body font-medium ${selectedGrade === 'again'
-                  ? 'bg-gray-300 text-text-main'
-                  : 'bg-gray-200 text-text-main active:bg-gray-300'
-                }`}
+              className={`py-3 px-2 rounded-lg text-body font-medium transition-colors ${
+                selectedGrade === 'again'
+                  ? 'bg-gray-200 text-text-main border-2 border-gray-300'
+                  : 'bg-gray-100 border border-gray-300 text-text-main active:bg-gray-200'
+              }`}
             >
-              다시 학습
+              <div className="font-medium text-sm">기억이 안 나요</div>
+              {/* <div className="text-label text-text-sub text-xs mt-0.5">나중에 다시</div> */}
             </button>
             <button
-              onClick={() => handleGrade('good')}
-              className={`flex-1 py-4 px-4 rounded-lg text-body font-medium ${selectedGrade === 'good'
-                  ? 'bg-gray-600 text-white'
-                  : 'bg-gray-500 text-white active:bg-gray-600'
-                }`}
+              onClick={() => handleGrade('hard')}
+              className={`py-3 px-2 rounded-lg text-body font-medium transition-colors ${
+                selectedGrade === 'hard'
+                  ? 'bg-orange-100 border-2 border-orange-300 text-orange-900'
+                  : 'bg-orange-50 border border-orange-200 text-orange-800 active:bg-orange-100'
+              }`}
             >
-              <div>알고있음</div>
-              {selectedGrade === 'good' && nextReviewInterval !== null && (
-                <div className="text-label mt-1">
+              <div className="font-medium text-sm">어려워요</div>
+              {/* <div className="text-label text-orange-600 text-xs mt-0.5">조금 더 연습</div> */}
+              {selectedGrade === 'hard' && nextReviewInterval !== null && (
+                <div className="text-label text-orange-700 text-xs mt-0.5 font-medium">
                   {nextReviewInterval < 1440
-                    ? `${Math.round(nextReviewInterval / 60)}시간 후 복습`
-                    : `${minutesToDays(nextReviewInterval)}일 후 복습`
+                    ? `${Math.round(nextReviewInterval / 60)}시간 후`
+                    : `${minutesToDays(nextReviewInterval)}일 후`
+                  }
+                </div>
+              )}
+            </button>
+            <button
+              onClick={() => handleGrade('easy')}
+              className={`py-3 px-2 rounded-lg text-body font-medium transition-colors ${
+                selectedGrade === 'easy'
+                  ? 'bg-green-100 border-2 border-green-300 text-green-900'
+                  : 'bg-green-50 border border-green-200 text-green-800 active:bg-green-100'
+              }`}
+            >
+              <div className="font-medium text-sm">쉬워요</div>
+              {/* <div className="text-label text-green-600 text-xs mt-0.5">완벽해요</div> */}
+              {selectedGrade === 'easy' && nextReviewInterval !== null && (
+                <div className="text-label text-green-700 text-xs mt-0.5 font-medium">
+                  {nextReviewInterval < 1440
+                    ? `${Math.round(nextReviewInterval / 60)}시간 후`
+                    : `${minutesToDays(nextReviewInterval)}일 후`
                   }
                 </div>
               )}

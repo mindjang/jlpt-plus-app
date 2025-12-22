@@ -90,7 +90,7 @@ export async function getAllReports(
     const snapshot = await reportsQuery.get()
     const reports: ContentReport[] = []
     
-    snapshot.forEach((doc) => {
+    snapshot.forEach((doc: any) => {
       const data = doc.data()
       reports.push({
         id: doc.id,

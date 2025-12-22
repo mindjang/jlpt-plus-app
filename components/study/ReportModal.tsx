@@ -76,12 +76,11 @@ export function ReportModal({
           <label className="block text-label font-medium text-text-main mb-2">
             {contentType === 'word' ? '단어' : '한자'}
           </label>
-          <input
-            type="text"
-            value={contentText}
-            readOnly
+          <div
             className="w-full px-3 py-2 rounded-md border border-divider bg-gray-50 text-body text-text-main cursor-not-allowed"
-          />
+            dangerouslySetInnerHTML={{ __html: contentText }}
+          >
+          </div>
         </div>
 
         {/* 레벨 표시 */}

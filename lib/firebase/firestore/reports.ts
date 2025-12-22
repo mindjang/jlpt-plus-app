@@ -70,6 +70,70 @@ export async function getAllReports(
     limit?: number
   }
 ): Promise<ContentReport[]> {
+  // 서버 사이드에서는 Admin SDK 사용
+  if (typeof window === 'undefined') {
+    // 동적 require로 클라이언트 번들에서 제외
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { adminDb } = require('../admin')
+    if (!adminDb) {
+      throw new Error('Firestore Admin is not initialized')
+    }
+    
+    let reportsQuery = adminDb.collection('reports')
+    
+    if (options?.status) {
+      reportsQuery = reportsQuery.where('status', '==', options.status)
+    }
+    
+    reportsQuery = reportsQuery.orderBy('createdAt', 'desc')
+    
+    const snapshot = await reportsQuery.get()
+    const reports: ContentReport[] = []
+    
+    snapshot.forEach((doc) => {
+      const data = doc.data()
+      reports.push({
+        id: doc.id,
+        ...data,
+      } as ContentReport)
+    })
+    
+    // 사용자 정보 가져오기 (선택적)
+    if (reports.length > 0) {
+      const { getUserData } = await import('./users')
+      const userIds = [...new Set(reports.map(r => r.uid))]
+      
+      const userDataMap = new Map<string, { email?: string; displayName?: string }>()
+      await Promise.all(
+        userIds.map(async (userId) => {
+          try {
+            const userData = await getUserData(userId)
+            if (userData?.profile) {
+              userDataMap.set(userId, {
+                email: userData.profile.email,
+                displayName: userData.profile.displayName,
+              })
+            }
+          } catch (error) {
+            console.error(`Failed to fetch user data for ${userId}:`, error)
+          }
+        })
+      )
+      
+      // 사용자 정보 추가
+      reports.forEach((report) => {
+        const userData = userDataMap.get(report.uid)
+        if (userData) {
+          report.userEmail = userData.email
+          report.userName = userData.displayName
+        }
+      })
+    }
+    
+    return options?.limit ? reports.slice(0, options.limit) : reports
+  }
+  
+  // 클라이언트 사이드에서는 클라이언트 SDK 사용
   const dbInstance = getDbInstance()
   const reportsRef = collection(dbInstance, 'reports')
   
@@ -90,38 +154,6 @@ export async function getAllReports(
     } as ContentReport)
   })
   
-  // 사용자 정보 가져오기 (선택적)
-  if (reports.length > 0) {
-    const { getUserData } = await import('./users')
-    const userIds = [...new Set(reports.map(r => r.uid))]
-    
-    const userDataMap = new Map<string, { email?: string; displayName?: string }>()
-    await Promise.all(
-      userIds.map(async (userId) => {
-        try {
-          const userData = await getUserData(userId)
-          if (userData?.profile) {
-            userDataMap.set(userId, {
-              email: userData.profile.email,
-              displayName: userData.profile.displayName,
-            })
-          }
-        } catch (error) {
-          console.error(`Failed to fetch user data for ${userId}:`, error)
-        }
-      })
-    )
-    
-    // 사용자 정보 추가
-    reports.forEach((report) => {
-      const userData = userDataMap.get(report.uid)
-      if (userData) {
-        report.userEmail = userData.email
-        report.userName = userData.displayName
-      }
-    })
-  }
-  
   return options?.limit ? reports.slice(0, options.limit) : reports
 }
 
@@ -133,6 +165,24 @@ export async function updateReportStatus(
   status: ContentReport['status'],
   adminNote?: string
 ): Promise<void> {
+  // 서버 사이드에서는 Admin SDK 사용
+  if (typeof window === 'undefined') {
+    // 동적 require로 클라이언트 번들에서 제외
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { adminDb } = require('../admin')
+    if (!adminDb) {
+      throw new Error('Firestore Admin is not initialized')
+    }
+    
+    await adminDb.collection('reports').doc(reportId).update({
+      status,
+      reviewedAt: Date.now(),
+      adminNote: adminNote || '',
+    })
+    return
+  }
+  
+  // 클라이언트 사이드에서는 클라이언트 SDK 사용
   const dbInstance = getDbInstance()
   const reportRef = doc(dbInstance, 'reports', reportId)
   

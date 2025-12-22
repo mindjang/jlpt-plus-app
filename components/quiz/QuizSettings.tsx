@@ -22,9 +22,7 @@ export function QuizSettingsModal({
 }: QuizSettingsProps) {
   const [selectedLevels, setSelectedLevels] = useState<JlptLevel[]>(['N5'])
   const [questionCount, setQuestionCount] = useState<number>(20)
-  const [questionTypes, setQuestionTypes] = useState<QuizQuestionType[]>([]) // 빈 배열 = 혼합
-  const [includeWords, setIncludeWords] = useState(true)
-  const [includeKanji, setIncludeKanji] = useState(true)
+  const [questionType, setQuestionType] = useState<QuizQuestionType>('word-to-meaning') // 단일 선택
 
   const levels: JlptLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
   const MIN_QUESTIONS = 5
@@ -33,7 +31,10 @@ export function QuizSettingsModal({
 
   const handleLevelToggle = (level: JlptLevel) => {
     if (selectedLevels.includes(level)) {
-      setSelectedLevels(selectedLevels.filter((l) => l !== level))
+      // 최소 1개는 선택되어야 함
+      if (selectedLevels.length > 1) {
+        setSelectedLevels(selectedLevels.filter((l) => l !== level))
+      }
     } else {
       setSelectedLevels([...selectedLevels, level])
     }
@@ -47,12 +48,8 @@ export function QuizSettingsModal({
     setQuestionCount((prev) => Math.max(prev - STEP, MIN_QUESTIONS))
   }
 
-  const handleQuestionTypeToggle = (type: QuizQuestionType) => {
-    if (questionTypes.includes(type)) {
-      setQuestionTypes(questionTypes.filter((t) => t !== type))
-    } else {
-      setQuestionTypes([...questionTypes, type])
-    }
+  const handleQuestionTypeSelect = (type: QuizQuestionType) => {
+    setQuestionType(type)
   }
 
   const handleStart = () => {
@@ -61,17 +58,10 @@ export function QuizSettingsModal({
       return
     }
 
-    if (!includeWords && !includeKanji) {
-      alert('단어 또는 한자 중 하나 이상을 선택해주세요.')
-      return
-    }
-
     const settings: QuizSettings = {
       levels: selectedLevels,
       questionCount,
-      questionTypes,
-      includeWords,
-      includeKanji,
+      questionTypes: [questionType], // 배열로 변환
     }
 
     onStart(settings)
@@ -144,90 +134,37 @@ export function QuizSettingsModal({
           </div>
         </div>
 
-        {/* 콘텐츠 유형 (Duolingo Style - 토글 스위치) */}
-        <div>
-          <h3 className="text-body font-semibold text-text-main mb-3">
-            콘텐츠 유형
-          </h3>
-          <div className="flex flex-col gap-1.5">
-            <button
-              onClick={() => setIncludeWords(!includeWords)}
-              className={`w-full p-3 rounded-lg flex items-center justify-between transition-all ${
-                includeWords
-                  ? 'bg-primary/10 border border-primary/30'
-                  : 'bg-surface border border-divider'
-              }`}
-            >
-              <span className="text-body font-medium text-text-main">단어 포함</span>
-              <div className={`w-11 h-6 rounded-full relative transition-all ${
-                includeWords ? 'bg-primary' : 'bg-gray-300'
-              }`}>
-                <div className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full transition-all ${
-                  includeWords ? 'translate-x-5' : 'translate-x-0'
-                }`} />
-              </div>
-            </button>
-            <button
-              onClick={() => setIncludeKanji(!includeKanji)}
-              className={`w-full p-3 rounded-lg flex items-center justify-between transition-all ${
-                includeKanji
-                  ? 'bg-primary/10 border border-primary/30'
-                  : 'bg-surface border border-divider'
-              }`}
-            >
-              <span className="text-body font-medium text-text-main">한자 포함</span>
-              <div className={`w-11 h-6 rounded-full relative transition-all ${
-                includeKanji ? 'bg-primary' : 'bg-gray-300'
-              }`}>
-                <div className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full transition-all ${
-                  includeKanji ? 'translate-x-5' : 'translate-x-0'
-                }`} />
-              </div>
-            </button>
-          </div>
-        </div>
-
-        {/* 문제 유형 선택 (Duolingo Style - 2열 그리드) */}
+        {/* 문제 유형 선택 (단일 선택) */}
         <div>
           <h3 className="text-body font-semibold text-text-main mb-3">
             문제 유형
           </h3>
-          <div className="grid grid-cols-2 gap-1.5">
+          <div className="grid grid-cols-1 gap-1.5">
             <button
-              onClick={() => setQuestionTypes([])}
+              onClick={() => handleQuestionTypeSelect('word-to-meaning')}
               className={`p-3 rounded-lg text-center transition-all ${
-                questionTypes.length === 0
-                  ? 'bg-primary text-white shadow-sm'
-                  : 'bg-surface border border-divider text-text-main active:bg-gray-50'
-              }`}
-            >
-              <span className="text-body font-medium">혼합</span>
-            </button>
-            <button
-              onClick={() => setQuestionTypes(['word-to-meaning'])}
-              className={`p-3 rounded-lg text-center transition-all ${
-                questionTypes.length === 1 && questionTypes[0] === 'word-to-meaning'
-                  ? 'bg-primary text-white shadow-sm'
+                questionType === 'word-to-meaning'
+                  ? 'bg-level-n5 text-white shadow-sm'
                   : 'bg-surface border border-divider text-text-main active:bg-gray-50'
               }`}
             >
               <span className="text-body font-medium">단어→뜻</span>
             </button>
             <button
-              onClick={() => setQuestionTypes(['meaning-to-word'])}
+              onClick={() => handleQuestionTypeSelect('meaning-to-word')}
               className={`p-3 rounded-lg text-center transition-all ${
-                questionTypes.length === 1 && questionTypes[0] === 'meaning-to-word'
-                  ? 'bg-primary text-white shadow-sm'
+                questionType === 'meaning-to-word'
+                  ? 'bg-level-n5 text-white shadow-sm'
                   : 'bg-surface border border-divider text-text-main active:bg-gray-50'
               }`}
             >
               <span className="text-body font-medium">뜻→단어</span>
             </button>
             <button
-              onClick={() => setQuestionTypes(['sentence-fill-in'])}
+              onClick={() => handleQuestionTypeSelect('sentence-fill-in')}
               className={`p-3 rounded-lg text-center transition-all ${
-                questionTypes.length === 1 && questionTypes[0] === 'sentence-fill-in'
-                  ? 'bg-primary text-white shadow-sm'
+                questionType === 'sentence-fill-in'
+                  ? 'bg-level-n5 text-white shadow-sm'
                   : 'bg-surface border border-divider text-text-main active:bg-gray-50'
               }`}
             >

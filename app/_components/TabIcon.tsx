@@ -24,8 +24,8 @@ export function TabIcon({ name, active }: TabIconProps) {
             stroke={strokeColor}
             strokeWidth={strokeWidth}
             viewBox="0 0 24 24"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
           >
             <path d="M11.47 3.84a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.06l-8.69-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 0 0 1.061 1.06l8.69-8.69Z" />
             <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
@@ -39,8 +39,8 @@ export function TabIcon({ name, active }: TabIconProps) {
             stroke={strokeColor}
             strokeWidth={strokeWidth}
             viewBox="0 0 24 24"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
           >
             <path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
           </svg>
@@ -100,7 +100,7 @@ export function TabIcon({ name, active }: TabIconProps) {
           )
         } else {
           // 논액티브일 때: 노멀한 게임 아이콘
-          return (
+        return (
             <svg
               className={baseClasses}
               fill="none"
@@ -112,7 +112,7 @@ export function TabIcon({ name, active }: TabIconProps) {
             >
               <path d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.25 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
             </svg>
-          )
+        )
         }
       default:
         return null

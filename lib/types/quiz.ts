@@ -35,9 +35,7 @@ export interface QuizAnswer {
 export interface QuizSettings {
   levels: JlptLevel[] // 선택한 레벨들
   questionCount: number // 문제 수 (10/20/30 또는 커스텀)
-  questionTypes: QuizQuestionType[] // 문제 유형 (빈 배열 = 혼합)
-  includeWords: boolean // 단어 포함 여부
-  includeKanji: boolean // 한자 포함 여부
+  questionTypes: QuizQuestionType[] // 문제 유형 (최소 1개 이상 선택)
 }
 
 // 퀴즈 세션 상태

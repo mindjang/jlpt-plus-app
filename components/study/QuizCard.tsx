@@ -76,9 +76,12 @@ export function QuizCard({
 
   // 문장에서 빈칸 렌더링
   const renderSentenceWithBlank = (sentence: string, answer: string) => {
-    const before = sentence.split(answer)[0];
-    const after = sentence.split(answer)[1];
-
+    // question.question에는 이미 ___로 치환된 텍스트가 들어있음
+    // ___를 찾아서 빈칸으로 렌더링
+    const parts = sentence.split('___');
+    const before = parts[0] || '';
+    const after = parts.slice(1).join('___'); // 여러 개의 ___가 있을 수 있으므로 첫 번째만 사용
+    
     const answerLength = answer.length;
     const spaces = Array(answerLength).fill('　').join('');
     
@@ -149,14 +152,16 @@ export function QuizCard({
 
         {/* 질문 텍스트 */}
         <div className="text-center mb-8">
-          {question.type === 'sentence-fill-in' && question.sentenceJa ? (
+          {question.type === 'sentence-fill-in' && question.question ? (
             <div>
               <div className="text-jp text-title mb-3 flex items-center justify-center flex-wrap leading-relaxed">
-                {renderSentenceWithBlank(question.sentenceJa, question.answer)}
+                {renderSentenceWithBlank(question.question, question.answer)}
               </div>
-              <div className="text-body text-text-sub">
-                {question.sentenceKo}
-              </div>
+              {question.sentenceKo && (
+                <div className="text-body text-text-sub">
+                  {question.sentenceKo}
+                </div>
+              )}
             </div>
           ) : (
             <h2 className="text-display-m text-jp font-medium text-text-main">

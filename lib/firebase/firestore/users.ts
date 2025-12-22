@@ -63,6 +63,25 @@ export async function createUserDocument(
  * 유저 데이터 가져오기
  */
 export async function getUserData(uid: string): Promise<UserData | null> {
+  // 서버 사이드에서는 Admin SDK 사용
+  if (typeof window === 'undefined') {
+    // 동적 require로 클라이언트 번들에서 제외
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { adminDb } = require('../admin')
+    if (!adminDb) {
+      throw new Error('Firestore Admin is not initialized')
+    }
+    
+    const userDoc = await adminDb.collection('users').doc(uid).get()
+    
+    if (!userDoc.exists) {
+      return null
+    }
+    
+    return userDoc.data() as UserData
+  }
+  
+  // 클라이언트 사이드에서는 클라이언트 SDK 사용
   const dbInstance = getDbInstance()
   const userRef = doc(dbInstance, 'users', uid)
   const userSnap = await getDoc(userRef)

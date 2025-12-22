@@ -3322,22 +3322,13 @@
         "rank": "3",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
-        "expExample1": "<ruby><rb>時</rb><rt>とき</rt></ruby>これ<ruby><rb>昭和</rb><rt>しょうわ</rt></ruby><ruby><rb>三十</rb><rt>さん<strong>じゅう</strong></rt></ruby><ruby><rb>八年</rb><rt><strong>はち</strong>ねん</rt></ruby>",
-        "example2Lang": "1",
-        "expExample2": "때는 바(야흐)로 <ruby><rb>昭和</rb><rt>しょうわ</rt></ruby> 38년(1963년)",
-        "expEntry": "これ[此れ·是·之]"
-      },
-      {
-        "rank": "4",
-        "exampleLangCode": "JAKO",
-        "example1Lang": 4,
         "expExample1": "あの<ruby><rb>歌</rb><rt>うた</rt></ruby>が<ruby><rb>彼</rb><rt>かれ</rt></ruby>の<ruby><rb>十八番</rb><rt><strong>じゅう</strong><strong>はち</strong>ばん</rt></ruby>だ",
         "example2Lang": "1",
         "expExample2": "저 노래가 그의 십팔번이다.",
         "expEntry": "<strong>じゅう</strong><strong>はち</strong>ばん[十八番]"
       },
       {
-        "rank": "5",
+        "rank": "4",
         "exampleLangCode": "JAKO",
         "example1Lang": 4,
         "expExample1": "あの<ruby><rb>歌</rb><rt>うた</rt></ruby>が<ruby><rb>彼</rb><rt>かれ</rt></ruby>の<ruby><rb>十八番</rb><rt><strong>じゅう</strong><strong>はち</strong>ばん</rt></ruby>だ.",

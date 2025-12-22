@@ -13,7 +13,7 @@ import type {
 import { getNaverWordsByLevelAsync } from '@/data/words/index'
 import { getKanjiByLevelAsync } from '@/data/kanji/index'
 import { getKanjiCharacter, getKanjiMeaning } from '@/lib/data/kanji/kanjiHelpers'
-import { getWordDetails } from '@/data/words/details'
+import { getWordDetails, getWordDetailsBatch } from '@/data/words/details'
 
 /**
  * 혼합 전략으로 퀴즈 문제 생성
@@ -22,28 +22,98 @@ export async function generateQuizQuestions(
   settings: QuizSettings,
   weakItemsMap: Record<string, ItemStats>
 ): Promise<QuizQuestion[]> {
-  const { levels, questionCount, questionTypes, includeWords, includeKanji } = settings
+  const { levels, questionCount, questionTypes } = settings
 
-  // 1. 모든 아이템 수집
+  // 문장 완성 문제만 선택된 경우, 예문이 있는 단어만 필터링
+  const isSentenceFillInOnly = questionTypes.length === 1 && questionTypes[0] === 'sentence-fill-in'
+
+  // 1. 모든 아이템 수집 (단어와 한자 모두 포함)
   const allItems: Array<{ data: NaverWord | KanjiAliveEntry; type: 'word' | 'kanji'; level: JlptLevel }> = []
 
   for (const level of levels) {
-    if (includeWords) {
-      const words = await getNaverWordsByLevelAsync(level)
-      words.forEach((word) => allItems.push({ data: word, type: 'word', level }))
-    }
-    if (includeKanji) {
-      const kanjis = await getKanjiByLevelAsync(level)
-      kanjis.forEach((kanji) => allItems.push({ data: kanji, type: 'kanji', level }))
-    }
+    // 단어와 한자 모두 포함
+    const words = await getNaverWordsByLevelAsync(level)
+    words.forEach((word) => allItems.push({ data: word, type: 'word', level }))
+    
+    const kanjis = await getKanjiByLevelAsync(level)
+    kanjis.forEach((kanji) => allItems.push({ data: kanji, type: 'kanji', level }))
   }
 
   if (allItems.length === 0) {
     return []
   }
 
+  // 문장 완성만 선택된 경우: 예문이 있는 단어만 효율적으로 필터링
+  let filteredItems = allItems
+  if (isSentenceFillInOnly) {
+    const wordItems = allItems.filter(item => item.type === 'word')
+    
+    // 랜덤으로 섞기
+    const shuffledWords = shuffle(wordItems)
+    
+    const wordsWithExamples: Array<{ data: NaverWord; type: 'word'; level: JlptLevel }> = []
+    let checkedCount = 0
+    const initialSampleSize = Math.min(questionCount * 3, shuffledWords.length)
+    
+    // 초기 샘플링: 문제 수의 3배만큼 확인
+    while (wordsWithExamples.length < questionCount && checkedCount < shuffledWords.length) {
+      const remainingNeeded = questionCount - wordsWithExamples.length
+      const batchSize = Math.min(
+        checkedCount === 0 ? initialSampleSize : remainingNeeded * 2, // 첫 배치는 3배, 이후는 필요한 만큼의 2배
+        shuffledWords.length - checkedCount
+      )
+      
+      const batchWords = shuffledWords.slice(checkedCount, checkedCount + batchSize)
+      
+      // 각 단어의 실제 레벨로 details 확인
+      for (let i = 0; i < batchWords.length; i++) {
+        const wordItem = batchWords[i]
+        const word = wordItem.data as NaverWord
+        const wordLevel = wordItem.level
+        
+        // 각 단어의 실제 레벨로 details 로드
+        const details = await getWordDetails(word.entry, wordLevel)
+        
+        if (details && details.examples && details.examples.length > 0) {
+          // 예문에 해당 단어가 포함되어 있는지 확인
+          const hasValidExample = details.examples.some(example => {
+            const cleanExample = example.expExample1.replace(/<[^>]+>/g, '')
+            return cleanExample.includes(word.entry)
+          })
+          
+          if (hasValidExample) {
+            wordsWithExamples.push({
+              data: word,
+              type: 'word',
+              level: wordLevel
+            })
+            
+            // 문제 수만큼 찾으면 중단
+            if (wordsWithExamples.length >= questionCount) {
+              break
+            }
+          }
+        }
+      }
+      
+      checkedCount += batchSize
+      
+      // 문제 수를 채웠으면 중단
+      if (wordsWithExamples.length >= questionCount) {
+        break
+      }
+    }
+    
+    if (wordsWithExamples.length === 0) {
+      console.warn('[Quiz] No words with valid examples found for sentence-fill-in')
+      return []
+    }
+    
+    filteredItems = wordsWithExamples
+  }
+
   // 2. 약점 아이템 분리 (정답률 60% 미만)
-  const weakItems = allItems.filter((item) => {
+  const weakItems = filteredItems.filter((item) => {
     const itemId = getItemId(item.data, item.type)
     const stats = weakItemsMap[itemId]
     return stats && stats.accuracy < 0.6 && stats.attempts >= 2
@@ -54,7 +124,7 @@ export async function generateQuizQuestions(
   const randomCount = questionCount - weakCount
 
   const selectedWeak = shuffle(weakItems).slice(0, weakCount)
-  const remainingItems = allItems.filter(
+  const remainingItems = filteredItems.filter(
     (item) => !selectedWeak.some((w) => getItemId(w.data, w.type) === getItemId(item.data, item.type))
   )
   const selectedRandom = shuffle(remainingItems).slice(0, randomCount)
@@ -65,10 +135,20 @@ export async function generateQuizQuestions(
   const questions: QuizQuestion[] = []
 
   for (const item of selectedItems) {
-    const questionType = determineQuestionType(questionTypes)
-    const question = await createQuestion(item.data, item.type, item.level, questionType, allItems)
-    if (question) {
-      questions.push(question)
+    // 문장 완성은 단어에서만 생성 가능
+    const availableTypes = item.type === 'word' 
+      ? questionTypes 
+      : questionTypes.filter(t => t !== 'sentence-fill-in')
+    
+    if (availableTypes.length === 0) {
+      // 한자인데 문장 완성만 선택된 경우는 건너뛰기 (이미 필터링되어 있지만 안전장치)
+      continue
+    } else {
+      const questionType = determineQuestionType(availableTypes)
+      const question = await createQuestion(item.data, item.type, item.level, questionType, allItems, isSentenceFillInOnly)
+      if (question) {
+        questions.push(question)
+      }
     }
   }
 
@@ -79,15 +159,7 @@ export async function generateQuizQuestions(
  * 문제 타입 결정
  */
 function determineQuestionType(allowedTypes: QuizQuestionType[]): QuizQuestionType {
-  if (allowedTypes.length === 0) {
-    // 혼합 모드: 33:33:33
-    const rand = Math.random()
-    if (rand < 0.33) return 'word-to-meaning'
-    if (rand < 0.67) return 'meaning-to-word'
-    return 'sentence-fill-in'
-  }
-
-  // 지정된 타입 중 랜덤 선택
+  // 지정된 타입 중 랜덤 선택 (최소 1개는 보장됨)
   return allowedTypes[Math.floor(Math.random() * allowedTypes.length)]
 }
 
@@ -99,12 +171,13 @@ async function createQuestion(
   itemType: 'word' | 'kanji',
   level: JlptLevel,
   questionType: QuizQuestionType,
-  allItems: Array<{ data: NaverWord | KanjiAliveEntry; type: 'word' | 'kanji'; level: JlptLevel }>
+  allItems: Array<{ data: NaverWord | KanjiAliveEntry; type: 'word' | 'kanji'; level: JlptLevel }>,
+  isSentenceFillInOnly: boolean = false
 ): Promise<QuizQuestion | null> {
   const itemId = getItemId(data, itemType)
 
   if (itemType === 'word') {
-    return createWordQuestion(data as NaverWord, level, questionType, allItems)
+    return createWordQuestion(data as NaverWord, level, questionType, allItems, isSentenceFillInOnly)
   } else {
     return createKanjiQuestion(data as KanjiAliveEntry, level, questionType, allItems)
   }
@@ -117,11 +190,12 @@ async function createWordQuestion(
   word: NaverWord,
   level: JlptLevel,
   questionType: QuizQuestionType,
-  allItems: Array<{ data: NaverWord | KanjiAliveEntry; type: 'word' | 'kanji'; level: JlptLevel }>
+  allItems: Array<{ data: NaverWord | KanjiAliveEntry; type: 'word' | 'kanji'; level: JlptLevel }>,
+  isSentenceFillInOnly: boolean = false
 ): Promise<QuizQuestion | null> {
   // 문장 빈칸 채우기는 별도 함수로 처리
   if (questionType === 'sentence-fill-in') {
-    return createSentenceFillInQuestion(word, level, allItems)
+    return createSentenceFillInQuestion(word, level, allItems, isSentenceFillInOnly)
   }
 
   const itemId = `word:${word.entry}`
@@ -175,6 +249,12 @@ function createKanjiQuestion(
   questionType: QuizQuestionType,
   allItems: Array<{ data: NaverWord | KanjiAliveEntry; type: 'word' | 'kanji'; level: JlptLevel }>
 ): QuizQuestion | null {
+  // 한자는 문장 완성 문제를 생성할 수 없음
+  if (questionType === 'sentence-fill-in') {
+    // word-to-meaning으로 대체
+    questionType = 'word-to-meaning'
+  }
+
   const character = getKanjiCharacter(kanji)
   const meaning = getKanjiMeaning(kanji)
   const itemId = `kanji:${character}`
@@ -286,15 +366,21 @@ export function getItemId(data: NaverWord | KanjiAliveEntry, type: 'word' | 'kan
 async function createSentenceFillInQuestion(
   word: NaverWord,
   level: JlptLevel,
-  allItems: Array<{ data: NaverWord | KanjiAliveEntry; type: 'word' | 'kanji'; level: JlptLevel }>
+  allItems: Array<{ data: NaverWord | KanjiAliveEntry; type: 'word' | 'kanji'; level: JlptLevel }>,
+  isSentenceFillInOnly: boolean = false
 ): Promise<QuizQuestion | null> {
   try {
     // 1. WordDetails 로드
     const details = await getWordDetails(word.entry, level)
     if (!details || details.examples.length === 0) {
-      // 예문이 없으면 일반 문제(word-to-meaning)로 fallback
+      // 문장 완성만 선택된 경우 fallback하지 않고 null 반환
+      if (isSentenceFillInOnly) {
+        console.log(`[Quiz] No examples for "${word.entry}", skipping (sentence-fill-in only)`)
+        return null
+      }
+      // 다른 문제 유형도 선택된 경우에만 fallback
       console.log(`[Quiz] No examples for "${word.entry}", falling back to word-to-meaning`)
-      return createWordQuestion(word, level, 'word-to-meaning', allItems)
+      return createWordQuestion(word, level, 'word-to-meaning', allItems, false)
     }
 
     // 2. 랜덤 예문 선택
@@ -308,9 +394,14 @@ async function createSentenceFillInQuestion(
     const blankStart = cleanExample.indexOf(answerWord)
     
     if (blankStart === -1) {
-      // 예문에 해당 단어가 없으면 일반 문제로 fallback
+      // 문장 완성만 선택된 경우 fallback하지 않고 null 반환
+      if (isSentenceFillInOnly) {
+        console.log(`[Quiz] Word "${answerWord}" not found in example, skipping (sentence-fill-in only)`)
+        return null
+      }
+      // 다른 문제 유형도 선택된 경우에만 fallback
       console.log(`[Quiz] Word "${answerWord}" not found in example, falling back to word-to-meaning`)
-      return createWordQuestion(word, level, 'word-to-meaning', allItems)
+      return createWordQuestion(word, level, 'word-to-meaning', allItems, false)
     }
 
     // 5. 품사 추출
@@ -319,12 +410,36 @@ async function createSentenceFillInQuestion(
     // 6. 오답 생성
     const wrongAnswers = generateSimilarWords(word, partOfSpeech, level, allItems, 3)
 
+    // 7. 문제 텍스트 생성: entry가 <ruby> 태그로 감싸져 있으면 전체 <ruby> 태그를 빈칸으로 치환
+    let questionText = example.expExample1
+    
+    // entry가 <ruby> 태그 내부에 있는지 확인하고, 있으면 전체 <ruby> 태그를 치환
+    // 정규식으로 <ruby>...</ruby> 태그를 찾되, 내부에 entry가 포함된 경우
+    const escapedAnswerWord = answerWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    
+    // <ruby> 태그 내부에 entry가 있는지 확인하는 정규식
+    // entry는 <rt> 태그 내부에 있을 수 있고, <strong> 태그로 감싸져 있을 수도 있음
+    const rubyTagRegex = /<ruby>[\s\S]*?<\/ruby>/g
+    questionText = questionText.replace(rubyTagRegex, (match) => {
+      // <ruby> 태그 내부에 entry가 있는지 확인 (태그 제거한 텍스트에서)
+      const rubyContent = match.replace(/<[^>]+>/g, '')
+      if (rubyContent.includes(answerWord)) {
+        return '___'
+      }
+      return match
+    })
+    
+    // 혹시 <ruby> 태그 밖에 <strong>entry</strong>가 있는 경우도 처리 (fallback)
+    if (questionText.includes(`<strong>${answerWord}</strong>`)) {
+      questionText = questionText.replace(new RegExp(`<strong>${escapedAnswerWord}<\/strong>`, 'gi'), '___')
+    }
+
     const itemId = `word:${word.entry}`
 
     return {
       id: `${itemId}-${Date.now()}-${Math.random()}`,
       type: 'sentence-fill-in',
-      question: example.expExample1.replace(/<strong>[^<]*<\/strong>/, '___'),
+      question: questionText,
       answer: answerWord,
       options: shuffle([answerWord, ...wrongAnswers]),
       sentenceJa: example.expExample1,
@@ -337,8 +452,12 @@ async function createSentenceFillInQuestion(
     }
   } catch (error) {
     console.error('[createSentenceFillInQuestion] Error:', error)
-    // 에러 발생 시에도 일반 문제로 fallback
-    return createWordQuestion(word, level, 'word-to-meaning', allItems)
+    // 문장 완성만 선택된 경우 fallback하지 않고 null 반환
+    if (isSentenceFillInOnly) {
+      return null
+    }
+    // 다른 문제 유형도 선택된 경우에만 fallback
+    return createWordQuestion(word, level, 'word-to-meaning', allItems, false)
   }
 }
 

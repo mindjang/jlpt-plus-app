@@ -1,6 +1,6 @@
 export type MembershipType = 'monthly' | 'yearly' | 'gift' | 'quarterly' // quarterly: 3개월
 
-export type MembershipSource = 'subscription' | 'code' | 'one-time' // one-time: 단건결제
+export type MembershipSource = 'subscription' | 'code' | 'one-time' | 'google_play' // one-time: 단건결제, google_play: 구글 플레이스토어 결제
 
 export interface Membership {
   type: MembershipType

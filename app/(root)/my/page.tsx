@@ -21,6 +21,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { AUTO_STUDY_TARGET_OPTIONS } from '@/lib/constants/ui'
 import {
   ChevronRight,
+  ChevronDown,
+  ChevronUp,
   CreditCard,
   Settings,
   BarChart2,
@@ -115,6 +117,7 @@ function MyPageContent() {
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
   const [showCancelConfirm, setShowCancelConfirm] = useState(false)
   const [cancelling, setCancelling] = useState(false)
+  const [showContactInfo, setShowContactInfo] = useState(false)
 
   // 결제 정보 가져오기
   useEffect(() => {
@@ -914,6 +917,16 @@ function MyPageContent() {
 
             {/* Footer Actions */}
             <div className="p-6 pt-2 border-t border-gray-100 shrink-0 bg-white sm:rounded-b-[40px]">
+              {/* 구매 후 바로 사용 가능 안내 */}
+              <div className="mb-3 p-3 bg-blue-50 rounded-lg border border-blue-100">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 size={16} className="text-blue-600 mt-0.5 flex-shrink-0" />
+                  <p className="text-xs text-blue-800 font-medium">
+                    구매 후 바로 사용 가능합니다
+                  </p>
+                </div>
+              </div>
+              
               <div className="space-y-3">
                   <button
                     onClick={async () => {
@@ -1022,10 +1035,37 @@ function MyPageContent() {
       )}
 
       {/* 사업자 정보 푸터 */}
-      <div className="py-4 text-center text-label text-text-sub">
-        <span className="font-semibold text-text-main">재미찾는개발자</span>
-        <span className="px-2 text-text-sub">·</span>
-        <span>사업자번호 547-12-02515</span>
+      <div className="px-4 py-4">
+        <div className="text-center text-label text-text-sub mb-2">
+          <span className="font-semibold text-text-main">재미찾는개발자</span>
+          <span className="px-2 text-text-sub">·</span>
+          <span>사업자번호 547-12-02515</span>
+        </div>
+        
+        {/* 연락처 정보 (접을 수 있음) */}
+        <button
+          onClick={() => setShowContactInfo(!showContactInfo)}
+          className="w-full flex items-center justify-center gap-1 text-label text-text-sub active:opacity-70 py-1"
+        >
+          <span>연락처 정보</span>
+          {showContactInfo ? (
+            <ChevronUp size={14} className="text-text-sub" />
+          ) : (
+            <ChevronDown size={14} className="text-text-sub" />
+          )}
+        </button>
+        
+        {showContactInfo && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="mt-2 text-center text-label text-text-sub space-y-1"
+          >
+            <div>010-8412-0241 | mcd.jang@gmail.com</div>
+            <div>경기도 성남시 수정고 논골로 24</div>
+          </motion.div>
+        )}
       </div>
 
       <FullScreenModal isOpen={showTermsModal} onClose={() => setShowTermsModal(false)} title="이용약관"><TermsContent /></FullScreenModal>

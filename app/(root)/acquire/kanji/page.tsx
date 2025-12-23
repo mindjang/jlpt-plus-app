@@ -1,11 +1,12 @@
 'use client'
 
-import React, { Suspense, useMemo } from 'react'
+import React, { Suspense, useMemo, useEffect, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { AppBar } from '@/components/ui/AppBar'
 import { ListItem } from '@/components/ui/ListItem'
-import { getKanjiByLevel } from '@/data/kanji/index'
+import { getKanjiByLevelAsync } from '@/data/kanji/index'
 import { levels, Level } from '@/data'
+import type { KanjiAliveEntry } from '@/data/types'
 import {
   getKanjiCharacter,
   getOnYomi,
@@ -29,8 +30,13 @@ function KanjiListContent() {
     return 'N5' // 기본값
   }, [levelParam])
 
-  const kanjiList = useMemo(() => {
-    return getKanjiByLevel(level)
+  const [kanjiList, setKanjiList] = useState<KanjiAliveEntry[]>([])
+  useEffect(() => {
+    let mounted = true
+    getKanjiByLevelAsync(level)
+      .then((data) => { if (mounted) setKanjiList(data) })
+      .catch((err) => console.error('[KanjiListPage] Kanji load failed:', err))
+    return () => { mounted = false }
   }, [level])
 
   const handleItemClick = (kanji: string) => {

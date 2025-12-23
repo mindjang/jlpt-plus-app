@@ -115,7 +115,7 @@ export function KanjiCard({
   }
 
   return (
-    <div className={`w-full px-4 mx-auto ${className}`}>
+    <div className={`w-full px-4 mx-auto flex-1 py-4 ${className}`}>
       {/* 카드 */}
       <motion.div 
         className="flex flex-col bg-surface rounded-lg border border-divider relative h-full"

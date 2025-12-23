@@ -65,6 +65,24 @@ function generateMediumGradientColor(hex: string, lightness: number = 0.85): str
 }
 
 /**
+ * Mogu 브랜드 포인트 컬러 (고양이와 자연 이미지 기반)
+ * 앱 전체에서 사용되는 브랜드 컬러 팔레트
+ */
+export const MOGU_BRAND_COLORS = {
+  // 메인 포인트 컬러 (초록색 - 고양이와 풀)
+  primary: '#199c00', // 자연 초록색
+  // 보조 컬러
+  cream: '#F0F8F0', // 연한 초록색 (배경/강조용)
+  light: '#4DB84D', // 밝은 초록색 (배경용)
+  dark: '#147A00', // 어두운 초록색 (호버/액티브용)
+  // 그라데이션
+  gradient: {
+    from: '#F0F8F0', // 매우 밝은 연한 초록
+    to: '#E6F5E6', // 연한 초록
+  },
+}
+
+/**
  * 레벨별 단색 (Primary Color)
  * 주로 칩, 텍스트, 강조 요소에 사용
  */

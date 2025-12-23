@@ -94,7 +94,7 @@ module.exports = {
         },
         // 표면 색상
         surface: '#FFFFFF',
-        page: '#fcfcfc',
+        page: '#f5f5f5',
         // 텍스트 색상
         text: {
           main: '#2A2A2A',
@@ -102,8 +102,15 @@ module.exports = {
           hint: '#BEBEBE',
           level: '#444444',
         },
-        // Primary 색상
-        primary: '#1A1A1A',
+        // Primary 색상 (Mogu 브랜드 컬러)
+        primary: '#199c00',
+        // Mogu 브랜드 포인트 컬러 (고양이와 자연 이미지 기반)
+        mogu: {
+          DEFAULT: '#199c00', // 메인 포인트 컬러 (자연 초록색)
+          cream: '#F0F8F0', // 연한 초록색
+          light: '#4DB84D', // 밝은 초록색
+          dark: '#147A00', // 어두운 초록색
+        },
         // Disabled 색상
         disabled: {
           bg: '#F1F1F1',

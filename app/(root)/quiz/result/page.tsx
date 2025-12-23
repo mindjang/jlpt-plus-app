@@ -37,6 +37,9 @@ function QuizResultContent() {
           setUserLevel(level)
           setLoading(false)
           
+          // 로딩 완료 플래그 제거 (결과 페이지가 완전히 로드됨)
+          sessionStorage.removeItem('quizResultLoading')
+          
           // 레벨업이 발생했으면 모달 표시
           if (result.leveledUp && result.newLevel) {
             setShowLevelUpModal(true)
@@ -55,8 +58,8 @@ function QuizResultContent() {
   const handleRestart = () => {
     // sessionStorage 정리
     sessionStorage.removeItem('quizResult')
-    // 메뉴로 이동
-    router.push('/quiz')
+    // 퀴즈 설정 모달을 열기 위해 파라미터와 함께 메뉴로 이동
+    router.push('/quiz?start=true')
   }
 
   const handleReviewWrong = () => {

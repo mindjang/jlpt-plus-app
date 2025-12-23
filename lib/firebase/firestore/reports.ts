@@ -158,6 +158,33 @@ export async function getAllReports(
 }
 
 /**
+ * 사용자의 신고 내역 가져오기
+ */
+export async function getUserReports(uid: string): Promise<ContentReport[]> {
+  const dbInstance = getDbInstance()
+  const reportsRef = collection(dbInstance, 'reports')
+  
+  const q = query(
+    reportsRef,
+    where('uid', '==', uid),
+    orderBy('createdAt', 'desc')
+  )
+  
+  const snapshot = await getDocs(q)
+  const reports: ContentReport[] = []
+  
+  snapshot.forEach((doc) => {
+    const data = doc.data()
+    reports.push({
+      id: doc.id,
+      ...data,
+    } as ContentReport)
+  })
+  
+  return reports
+}
+
+/**
  * 신고 상태 업데이트 (관리자용)
  */
 export async function updateReportStatus(

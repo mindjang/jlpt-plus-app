@@ -20,17 +20,13 @@ function AutoStudyContent() {
   const { isMember } = useMembership()
   const { settings, updateDailyNewLimit } = useUserSettings(user)
   const level = (params.level as string)?.toUpperCase() as Level || 'N5'
+  const type = (params.type as string) || 'word'
+  const activeTab = type === 'kanji' ? 'kanji' : 'word'
   const gradient = getLevelGradient(params.level as string)
   const data = levelData[level]
   
-  const typeParam = searchParams.get('type')
   const tasteParam = searchParams.get('taste') // Guest taste mode
   const isTasteMode = tasteParam === 'true'
-  
-  // URL 파라미터로 탭 초기화 (useMemo로 동기화)
-  const activeTab = useMemo(() => {
-    return typeParam === 'kanji' ? 'kanji' : 'word'
-  }, [typeParam])
   
   // 일일 학습 목표: Guest taste mode > 사용자 설정 > 기본값(20)
   // 사용자가 UI에서 변경할 수 있으므로 useState 사용
@@ -178,7 +174,10 @@ function AutoStudyContent() {
                 {level} 단어 5개를 맛보기로 학습해보세요. 진행 상황은 저장되지 않습니다.
               </p>
               <button
-                onClick={() => router.push(`/login?next=${encodeURIComponent(`/acquire/auto-study/${params.level}?${searchParams.toString()}`)}`)}
+                onClick={() => {
+                  const nextUrl = `/acquire/auto-study/${params.level}/${params.type}${tasteParam ? `?taste=${tasteParam}` : ''}`
+                  router.push(`/login?next=${encodeURIComponent(nextUrl)}`)
+                }}
                 className="w-full py-3.5 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl text-body font-bold active:opacity-90 shadow-lg shadow-purple-500/30 transition-all duration-200 hover:shadow-xl hover:shadow-purple-500/40"
               >
                 로그인하고 진행 상황 저장하기

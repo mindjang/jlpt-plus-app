@@ -4,8 +4,8 @@
 import type { QuizAnswer, ItemStats, WeakItem } from '@/lib/types/quiz'
 import type { JlptLevel } from '@/lib/types/content'
 import type { NaverWord, KanjiAliveEntry } from '@/data/types'
-import { getNaverWordsByLevel } from '@/data/words/index'
-import { getKanjiByLevel } from '@/data/kanji/index'
+import { getNaverWordsByLevelAsync } from '@/data/words/index'
+import { getKanjiByLevelAsync } from '@/data/kanji/index'
 import { getKanjiCharacter } from '@/lib/data/kanji/kanjiHelpers'
 
 /**
@@ -36,8 +36,8 @@ export async function getWeakItemsWithData(
   weakStats: ItemStats[],
   level: JlptLevel
 ): Promise<WeakItem[]> {
-  const words = getNaverWordsByLevel(level)
-  const kanjis = getKanjiByLevel(level)
+  const words = await getNaverWordsByLevelAsync(level)
+  const kanjis = await getKanjiByLevelAsync(level)
 
   const weakItems: WeakItem[] = []
 

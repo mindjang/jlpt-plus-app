@@ -277,7 +277,7 @@ export function QuizResultScreen({
               <Zap className="w-5 h-5" />
               다시 퀴즈 시작
             </motion.button>
-            {hasWrongAnswers && onReviewWrong && (
+            {/* {hasWrongAnswers && onReviewWrong && (
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -288,7 +288,7 @@ export function QuizResultScreen({
                 <Target className="w-5 h-5" />
                 틀린 문제 복습하기
               </motion.button>
-            )}
+            )} */}
             <motion.button
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

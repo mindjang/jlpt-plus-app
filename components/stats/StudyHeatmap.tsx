@@ -271,9 +271,7 @@ export function StudyHeatmap() {
                     style={{ 
                       fontSize: '10px', 
                       lineHeight: '1',
-                      height: 'calc((100vw - 2rem - 1.5rem - 1.5rem) / 26)',
-                      minHeight: '11px',
-                      maxHeight: 'calc((100vw - 2rem - 1.5rem - 1.5rem) / 26)'
+                      minHeight: '14px',
                     }}
                   >
                     {day}

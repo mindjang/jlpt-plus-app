@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Noto_Sans_JP, Inter, Orbitron, Press_Start_2P } from 'next/font/google'
+import { Noto_Sans_JP, Noto_Sans_KR, Inter, Orbitron, Press_Start_2P, Kosugi_Maru } from 'next/font/google'
 import Script from 'next/script'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -14,6 +14,12 @@ const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
   variable: '--font-noto-sans-jp',
   weight: ['400', '500', '600'],
+})
+
+const notoSansKR = Noto_Sans_KR({
+  subsets: ['latin'],
+  variable: '--font-noto-sans-kr',
+  weight: ['400', '500', '600', '700', '800', '900'],
 })
 
 const inter = Inter({
@@ -31,6 +37,12 @@ const orbitron = Orbitron({
 const pressStart2P = Press_Start_2P({
   subsets: ['latin'],
   variable: '--font-press-start-2p',
+  weight: ['400'],
+})
+
+const kosugiMaru = Kosugi_Maru({
+  subsets: ['latin'],
+  variable: '--font-kosugi-maru',
   weight: ['400'],
 })
 
@@ -75,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ko" className={`${notoSansJP.variable} ${inter.variable} ${orbitron.variable} ${pressStart2P.variable}`}>
+    <html lang="ko" className={`${notoSansJP.variable} ${notoSansKR.variable} ${inter.variable} ${orbitron.variable} ${pressStart2P.variable} ${kosugiMaru.variable}`}>
       <body>
         <Providers>{children}</Providers>
       </body>

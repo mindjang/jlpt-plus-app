@@ -22,17 +22,36 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // 초기 유저 상태 확인
     setLoading(true)
     const currentUser = getCurrentUser()
+    
+    // 초기 사용자가 있으면 즉시 설정 (로딩 시간 단축)
     if (currentUser) {
       setUser(currentUser)
+      // onAuthChange가 호출될 때까지 잠시 대기 후 로딩 완료
+      // Firebase Auth가 초기화되는 동안 짧은 딜레이
+      const timeout = setTimeout(() => {
+        setLoading(false)
+      }, 100)
+      
+      // Auth 상태 변경 감지
+      const unsubscribe = onAuthChange((user) => {
+        setUser(user)
+        clearTimeout(timeout)
+        setLoading(false)
+      })
+
+      return () => {
+        clearTimeout(timeout)
+        unsubscribe()
+      }
+    } else {
+      // 초기 사용자가 없으면 onAuthChange만 대기
+      const unsubscribe = onAuthChange((user) => {
+        setUser(user)
+        setLoading(false)
+      })
+
+      return () => unsubscribe()
     }
-
-    // Auth 상태 변경 감지
-    const unsubscribe = onAuthChange((user) => {
-      setUser(user)
-      setLoading(false)
-    })
-
-    return () => unsubscribe()
   }, [])
 
   return (

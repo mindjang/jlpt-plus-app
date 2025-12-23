@@ -10,13 +10,13 @@ export default function AcquirePage() {
   const router = useRouter()
 
   const handleNavigate = (level: Level, type: 'word' | 'kanji') => {
-    router.push(`/acquire/auto-study/${level.toLowerCase()}?type=${type}`)
+    router.push(`/acquire/auto-study/${level.toLowerCase()}/${type}`)
   }
 
   return (
     <div className="w-full min-h-screen bg-page">
       <AppBar
-        title="도서관"
+        title="기억"
         rightAction={
           <button
             onClick={() => router.push('/stats')}

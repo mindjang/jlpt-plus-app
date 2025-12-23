@@ -1,10 +1,10 @@
 'use client'
 
-import React, { Suspense, useMemo } from 'react'
+import React, { Suspense, useMemo, useEffect, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { AppBar } from '@/components/ui/AppBar'
 import { ListItem } from '@/components/ui/ListItem'
-import { getNaverWordsByLevel } from '@/data/words/index'
+import { getNaverWordsByLevelAsync } from '@/data/words/index'
 import { levels, Level } from '@/data'
 import type { NaverWord } from '@/data/types'
 
@@ -24,9 +24,21 @@ function WordListContent() {
     return 'N5' // 기본값
   }, [levelParam])
 
+  const [naverWords, setNaverWords] = useState<NaverWord[]>([])
+
+  useEffect(() => {
+    let mounted = true
+    getNaverWordsByLevelAsync(level)
+      .then((naverWords) => {
+        if (!mounted) return
+        setNaverWords(naverWords)
+      })
+      .catch((err) => console.error('[WordListPage] Word load failed:', err))
+
+    return () => { mounted = false }
+  }, [level])
+
   const words = useMemo(() => {
-    const naverWords = getNaverWordsByLevel(level)
-    // NaverWord를 SearchResult 형식으로 변환
     return naverWords.map((w: NaverWord) => {
       const firstMean = w.partsMeans && w.partsMeans.length > 0 && w.partsMeans[0].means && w.partsMeans[0].means.length > 0
         ? w.partsMeans[0].means[0]
@@ -45,7 +57,7 @@ function WordListContent() {
         meaning: firstMean,
       }
     })
-  }, [level])
+  }, [naverWords])
 
   const handleItemClick = (word: string) => {
     router.push(`/acquire/word/${encodeURIComponent(word)}`)

@@ -57,7 +57,7 @@ interface UseStudyProgressResult {
   /** 다음 복습까지 남은 일수 */
   nextReviewDays: number | null
   /** 세션 분모 고정값 */
-  sessionTotalFixed: number
+  sessionTotalFixed: number | null
   /** 챕터별 진행률 데이터 */
   chaptersData: Array<{
     number: number
@@ -93,7 +93,7 @@ export function useStudyProgress({
   const [sessionProgress, setSessionProgress] = useState(0)
   const [studyRound, setStudyRound] = useState(1)
   const [nextReviewDays, setNextReviewDays] = useState<number | null>(null)
-  const [sessionTotalFixed, setSessionTotalFixed] = useState<number>(targetAmount)
+  const [sessionTotalFixed, setSessionTotalFixed] = useState<number | null>(null)
   const [chaptersData, setChaptersData] = useState<Array<{
     number: number
     totalWords: number
@@ -261,7 +261,8 @@ export function useStudyProgress({
       const remainingCards = Math.max(totalWords - learned, 0)
       const fallbackTotal = remainingCards > 0 ? Math.min(targetAmount, remainingCards) : targetAmount
       const initialFixed = availableToday > 0 ? Math.min(targetAmount, availableToday) : fallbackTotal
-      setSessionTotalFixed((prev) => (prev === null ? initialFixed : prev))
+      // 목표 학습량 변경 시에도 반영되도록 매번 업데이트
+      setSessionTotalFixed(initialFixed)
 
       // 4. 미래 복습까지 남은 일수 계산
       const nowMinutesLocal = nowAsMinutes()

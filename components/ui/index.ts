@@ -1,5 +1,7 @@
 // UI 컴포넌트 통합 export
 export { AppBar } from './AppBar'
+export { BottomSheet } from './BottomSheet'
+export { BrandLoader } from './BrandLoader'
 export { FlashCard } from './FlashCard'
 export { KanaGrid } from './KanaGrid'
 export { KanjiDetail } from './KanjiDetail'

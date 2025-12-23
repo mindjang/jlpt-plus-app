@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { LEVEL_COLORS } from '@/lib/constants/colors'
+import { MOGU_BRAND_COLORS } from '@/lib/constants/colors'
 
 interface TabIconProps {
   name: string
@@ -10,8 +10,9 @@ interface TabIconProps {
 
 export function TabIcon({ name, active }: TabIconProps) {
   const baseClasses = 'w-6 h-6 transition-all duration-300'
-  const strokeColor = active ? LEVEL_COLORS.N5 : '#9CA3AF'
-  const strokeWidth = active ? 2.5 : 1.5
+  // Mogu 브랜드 포인트 컬러 사용 (또는 LEVEL_COLORS.N5 사용 가능)
+  const strokeColor = active ? MOGU_BRAND_COLORS.primary : '#9CA3AF'
+  const strokeWidth = 1.5
 
   // 프리미엄 스타일 SVG 아이콘 (Material Design 3 스타일, 세련된 디자인)
   const renderIcon = () => {
@@ -24,11 +25,11 @@ export function TabIcon({ name, active }: TabIconProps) {
             stroke={strokeColor}
             strokeWidth={strokeWidth}
             viewBox="0 0 24 24"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
-            <path d="M11.47 3.84a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.06l-8.69-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 0 0 1.061 1.06l8.69-8.69Z" />
-            <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
           </svg>
         )
       case 'acquire':
@@ -39,8 +40,8 @@ export function TabIcon({ name, active }: TabIconProps) {
             stroke={strokeColor}
             strokeWidth={strokeWidth}
             viewBox="0 0 24 24"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
           </svg>
@@ -56,13 +57,10 @@ export function TabIcon({ name, active }: TabIconProps) {
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            {/* 클립보드 아이콘 */}
-            <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" />
-            <rect x="9" y="3" width="6" height="4" rx="1" />
-            {/* 체크박스들 */}
-            <path d="M9 12h6" />
-            <path d="M9 16h6" />
-            <path d="M9 8h6" />
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="9" y1="15" x2="15" y2="15" />
+            <line x1="12" y1="12" x2="12" y2="18" />
           </svg>
         )
       case 'my':
@@ -122,11 +120,6 @@ export function TabIcon({ name, active }: TabIconProps) {
   return (
     <div className="flex items-center justify-center relative">
       {renderIcon()}
-      {active && (
-        <div 
-          className="absolute inset-0 rounded-full opacity-20 -z-10 transition-opacity duration-300"
-        />
-      )}
     </div>
   )
 }

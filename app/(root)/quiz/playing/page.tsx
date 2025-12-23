@@ -1,48 +1,30 @@
 'use client'
 
-import React, { useState, useEffect, Suspense, useRef } from 'react'
-import { useRouter, usePathname, useSearchParams } from 'next/navigation'
+import React, { useState, useEffect, Suspense } from 'react'
+import { useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { FeatureGuard } from '@/components/permissions/FeatureGuard'
 import { AppBar } from '@/components/ui/AppBar'
 import { QuizCard } from '@/components/study/QuizCard'
-import { QuizSettingsModal } from '@/components/quiz/QuizSettings'
-import { QuizResultScreen } from '@/components/quiz/QuizResult'
-import { LevelUpModal } from '@/components/quiz/LevelUpModal'
+import { ConfirmModal } from '@/components/ui/ConfirmModal'
+import { BrandLoader } from '@/components/ui/BrandLoader'
 import type {
-  QuizSettings,
   QuizSession,
-  QuizQuestion,
   QuizAnswer,
   QuizResult,
   UserQuizLevel,
-  QuizStats,
 } from '@/lib/types/quiz'
-import { generateQuizQuestions } from '@/lib/quiz/questionGenerator'
+import { getUserQuizLevel, updateQuizLevel, updateQuizStats, saveQuizSession } from '@/lib/firebase/firestore/quiz'
 import { calculateExp, addExp } from '@/lib/quiz/expSystem'
 import { extractItemResults, extractWrongAnswers } from '@/lib/quiz/statsTracker'
 import { checkNewBadges } from '@/lib/quiz/badgeSystem'
-import { getUserQuizLevel, updateQuizLevel, updateQuizStats, saveQuizSession, getAllQuizStats } from '@/lib/firebase/firestore/quiz'
-import type { JlptLevel } from '@/lib/types/content'
 import { updateDailyActivity, updateStreak, isFirstStudyToday } from '@/lib/firebase/firestore/dailyActivity'
+import type { JlptLevel } from '@/lib/types/content'
 
-import { QuizMenu } from '@/components/quiz/QuizMenu'
-import { ConfirmModal } from '@/components/ui/ConfirmModal'
-import { BrandLoader } from '@/components/ui/BrandLoader'
-
-type QuizState = 'menu' | 'settings' | 'playing' | 'result'
-
-function QuizContent() {
+function QuizPlayingContent() {
   const router = useRouter()
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
   const { user, loading: authLoading } = useAuth()
   
-  // 경로 기반으로 초기 상태 결정
-  const isPlayingPage = pathname === '/quiz/playing'
-  const [quizState, setQuizState] = useState<QuizState>(isPlayingPage ? 'playing' : 'menu')
-  const [showSettingsModal, setShowSettingsModal] = useState(false)
-  const [allStats, setAllStats] = useState<Record<JlptLevel, QuizStats> | null>(null)
   const [session, setSession] = useState<QuizSession | null>(null)
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [answers, setAnswers] = useState<QuizAnswer[]>([])
@@ -50,111 +32,46 @@ function QuizContent() {
   const [streakCount, setStreakCount] = useState(0)
   const [maxStreak, setMaxStreak] = useState(0)
   const [userLevel, setUserLevel] = useState<UserQuizLevel | null>(null)
-  const [quizResult, setQuizResult] = useState<QuizResult | null>(null)
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
+  const [finishing, setFinishing] = useState(false)
   const [showExitConfirm, setShowExitConfirm] = useState(false)
-  
-  // /quiz/playing 경로로 직접 접근하면 리다이렉트
+
+  // sessionStorage에서 세션 로드 및 사용자 레벨 로드
   useEffect(() => {
-    if (pathname === '/quiz/playing') {
-      router.replace('/quiz')
-    }
-  }, [pathname, router])
-
-  // URL 파라미터로 설정 모달 열기 (다시 퀴즈 시작 버튼에서 사용)
-  useEffect(() => {
-    if (pathname === '/quiz' && searchParams.get('start') === 'true') {
-      setShowSettingsModal(true)
-      setQuizState('settings')
-      // URL에서 파라미터 제거
-      router.replace('/quiz', { scroll: false })
-    }
-  }, [pathname, searchParams, router])
-
-  // 사용자 레벨 정보 및 통계 로드
-  useEffect(() => {
-    if (user) {
-      Promise.all([
-        getUserQuizLevel(user.uid),
-        getAllQuizStats(user.uid)
-      ]).then(([level, stats]) => {
-        setUserLevel(level)
-        setAllStats(stats)
-      })
-    }
-  }, [user])
-
-  const handleOpenSettings = () => {
-    setShowSettingsModal(true)
-    setQuizState('settings')
-  }
-
-  const handleStartQuiz = async (settings: QuizSettings) => {
     if (!user) return
-    
-    setLoading(true)
-    setShowSettingsModal(false)
 
-    try {
-      // 약점 데이터 로드
-      const allStats = await getAllQuizStats(user.uid)
-      const weakItemsMap: Record<string, any> = {}
-      
-      for (const level of settings.levels) {
-        const stats = allStats[level]
-        if (stats) {
-          Object.assign(weakItemsMap, stats.itemStats)
+    const loadData = async () => {
+      try {
+        const sessionData = sessionStorage.getItem('quizSession')
+        if (sessionData) {
+          const parsedSession = JSON.parse(sessionData) as QuizSession
+          setSession(parsedSession)
+          setCurrentQuestionIndex(0)
+          setAnswers([])
+          setQuestionStartTime(Date.now())
+          setStreakCount(0)
+          setMaxStreak(0)
+          
+          // 사용자 레벨 로드
+          const level = await getUserQuizLevel(user.uid)
+          setUserLevel(level)
+        } else {
+          // 세션이 없으면 메뉴로 리다이렉트
+          router.replace('/quiz')
         }
-      }
-
-      // 문제 생성
-      const questions = await generateQuizQuestions(settings, weakItemsMap)
-
-      if (questions.length === 0) {
-        alert('생성할 문제가 없습니다. 다른 설정을 선택해주세요.')
-        // 상태 복원
-        setQuizState('settings')
-        setShowSettingsModal(true)
+      } catch (error) {
+        console.error('[QuizPlaying] Error loading session:', error)
+        router.replace('/quiz')
+      } finally {
         setLoading(false)
-        return
       }
-
-      // 세션 초기화
-      const newSession: QuizSession = {
-        sessionId: `${user.uid}-${Date.now()}`,
-        uid: user.uid,
-        settings,
-        questions,
-        answers: [],
-        currentQuestionIndex: 0,
-        startTime: Date.now(),
-        score: 0,
-        correctCount: 0,
-        totalQuestions: questions.length,
-        expGained: 0,
-        badgesEarned: [],
-        streakCount: 0,
-        maxStreak: 0,
-      }
-
-      // sessionStorage에 세션 저장
-      sessionStorage.setItem('quizSession', JSON.stringify(newSession))
-      
-      // 세션 설정 후 URL 변경
-      router.push('/quiz/playing', { scroll: false })
-    } catch (error) {
-      console.error('[QuizPage] Error starting quiz:', error)
-      alert('퀴즈 시작 중 오류가 발생했습니다.')
-      // 상태 복원
-      setQuizState('settings')
-      setShowSettingsModal(true)
-    } finally {
-      setLoading(false)
     }
-  }
+
+    loadData()
+  }, [user, router])
 
   const handleAnswer = async (selectedAnswer: string) => {
-    if (!session || !user || !userLevel) return
+    if (!session || !user) return
 
     const currentQuestion = session.questions[currentQuestionIndex]
     const now = Date.now()
@@ -184,7 +101,8 @@ function QuizContent() {
       setCurrentQuestionIndex(currentQuestionIndex + 1)
       setQuestionStartTime(Date.now())
     } else {
-      // 퀴즈 완료
+      // 퀴즈 완료 - 로딩 상태 설정 후 결과 계산
+      setFinishing(true)
       await finishQuiz(newAnswers, newStreakCount, Math.max(maxStreak, newStreakCount))
     }
   }
@@ -194,9 +112,10 @@ function QuizContent() {
     finalStreakCount: number,
     finalMaxStreak: number
   ) => {
-    if (!session || !user || !userLevel) return
-
-    setLoading(true)
+    if (!session || !user || !userLevel) {
+      setFinishing(false)
+      return
+    }
 
     try {
       const endTime = Date.now()
@@ -246,11 +165,11 @@ function QuizContent() {
         }
       })
 
-      // 배지 확인 (간단한 버전 - 히스토리 기반 배지는 나중에 구현)
+      // 배지 확인
       const newBadges = checkNewBadges(
         { ...session, endTime, maxStreak: finalMaxStreak },
         userLevel,
-        1, // 간단한 버전
+        1,
         session.questions.length,
         1,
         sessionLevelStats
@@ -299,7 +218,6 @@ function QuizContent() {
       await saveQuizSession(user.uid, completedSession)
 
       // 일별 활동 통계 업데이트
-      const totalTime = endTime - session.startTime
       for (const answer of finalAnswers) {
         const question = session.questions.find((q) => q.id === answer.questionId)
         if (question) {
@@ -347,81 +265,67 @@ function QuizContent() {
         completedAt: endTime,
       }
 
-      setQuizResult(result)
-      setUserLevel(levelUpResult.newLevel)
-      
       // sessionStorage에 결과 저장
       sessionStorage.setItem('quizResult', JSON.stringify(result))
       
+      // 세션 정리
+      sessionStorage.removeItem('quizSession')
+      
+      // 결과 페이지 로드 완료 플래그 설정
+      sessionStorage.setItem('quizResultLoading', 'true')
+      
       // 결과 화면으로 리다이렉트
       router.push('/quiz/result')
-
-      if (leveledUp) {
-        // 레벨업 모달은 결과 페이지에서 처리
-        // 여기서는 바로 리다이렉트
-      }
+      
+      // 페이지 전환이 완료될 때까지 충분한 딜레이 후 finishing 상태 해제
+      // 결과 페이지에서 로딩이 완료되면 플래그를 제거하므로,
+      // 여기서는 페이지 전환이 완료될 때까지 기다림
+      setTimeout(() => {
+        setFinishing(false)
+      }, 500)
     } catch (error) {
-      console.error('[QuizPage] Error finishing quiz:', error)
+      console.error('[QuizPlaying] Error finishing quiz:', error)
       alert('퀴즈 완료 처리 중 오류가 발생했습니다.')
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  const handleRestart = () => {
-    // 이 함수는 더 이상 사용되지 않음 (결과 페이지에서 처리)
-    // 하지만 호환성을 위해 유지
-    setQuizState('menu')
-    setShowSettingsModal(false)
-    setSession(null)
-    setCurrentQuestionIndex(0)
-    setAnswers([])
-    setStreakCount(0)
-    setMaxStreak(0)
-    setQuizResult(null)
-    
-    // URL을 메뉴로 복원
-    router.replace('/quiz', { scroll: false })
-    
-    // 통계 다시 로드
-    if (user) {
-      getAllQuizStats(user.uid).then(setAllStats)
-    }
-  }
-
-  const handleBack = () => {
-    // 퀴즈 진행 중일 때는 확인 모달 표시
-    if (quizState === 'playing' && session) {
-      setShowExitConfirm(true)
-    } else {
-      // URL에서 state 파라미터 제거하고 메뉴로 이동
-      router.replace('/quiz', { scroll: false })
+      setFinishing(false)
     }
   }
 
   const handleExitConfirm = () => {
-    // 퀴즈 상태 초기화
-    setQuizState('menu')
-    setSession(null)
-    setCurrentQuestionIndex(0)
-    setAnswers([])
-    setStreakCount(0)
-    setMaxStreak(0)
+    // 세션 초기화
+    sessionStorage.removeItem('quizSession')
     setShowExitConfirm(false)
-    
-    // 퀴즈 메인으로 이동
-    router.replace('/quiz', { scroll: false })
-    
-    // 통계 다시 로드
-    if (user) {
-      getAllQuizStats(user.uid).then(setAllStats)
-    }
+    router.replace('/quiz')
   }
 
-  if (authLoading) {
+  if (authLoading || loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-body text-text-sub">로딩 중...</div>
+      <div className="min-h-screen flex items-center justify-center">
+        <BrandLoader fullScreen={false} text="로딩 중..." />
+      </div>
+    )
+  }
+
+  // 결과 계산 중일 때는 전체 화면 로딩 오버레이 표시
+  // router.push() 후에도 finishing 상태를 유지하여 페이지 전환 중에도 로딩 화면 표시
+  if (finishing) {
+    return (
+      <div className="min-h-screen">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <BrandLoader fullScreen={false} text="결과를 계산하고 있어요..." />
+        </div>
+        {/* 숨겨진 컨텐츠 (페이지 전환 중 깜빡임 방지) */}
+        <div className="opacity-0 pointer-events-none">
+          {session && (
+            <div className="py-8">
+              <QuizCard
+                question={session.questions[currentQuestionIndex]}
+                questionNumber={currentQuestionIndex + 1}
+                totalQuestions={session.questions.length}
+                onAnswer={() => {}}
+              />
+            </div>
+          )}
+        </div>
       </div>
     )
   }
@@ -430,49 +334,31 @@ function QuizContent() {
     return null // FeatureGuard가 처리
   }
 
+  if (!session) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-body text-text-sub">퀴즈를 시작해주세요.</div>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen">
       <AppBar
         title="퀴즈"
-        onBack={() => {
-          if (pathname === '/quiz/playing') {
-            router.replace('/quiz')
-          } else {
-            router.back()
-          }
-        }}
+        onBack={() => setShowExitConfirm(true)}
         className="bg-transparent border-none"
       />
 
-      {/* 메뉴 화면 - /quiz 경로에서만 표시 */}
-      {pathname === '/quiz' && quizState === 'menu' && userLevel && allStats && (
-        <QuizMenu
-          userLevel={userLevel}
-          allStats={allStats}
-          onStartQuiz={handleOpenSettings}
+      {/* 퀴즈 진행 중 */}
+      <div className="py-8">
+        <QuizCard
+          question={session.questions[currentQuestionIndex]}
+          questionNumber={currentQuestionIndex + 1}
+          totalQuestions={session.questions.length}
+          onAnswer={handleAnswer}
         />
-      )}
-
-      {/* 설정 모달 */}
-      <QuizSettingsModal
-        isOpen={showSettingsModal}
-        onClose={() => {
-          setShowSettingsModal(false)
-          if (quizState === 'settings') {
-            setQuizState('menu')
-          }
-        }}
-        onStart={handleStartQuiz}
-      />
-
-
-
-      {/* 로딩 오버레이 */}
-      {loading && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm">
-          <BrandLoader fullScreen={false} text="문제를 만들고 있어요..." />
-        </div>
-      )}
+      </div>
 
       {/* 퀴즈 나가기 확인 모달 */}
       <ConfirmModal
@@ -489,7 +375,7 @@ function QuizContent() {
   )
 }
 
-export default function QuizPage() {
+export default function QuizPlayingPage() {
   return (
     <FeatureGuard
       feature="quiz_start"
@@ -498,15 +384,15 @@ export default function QuizPage() {
         description: '퀴즈를 시작하려면 로그인이 필요합니다.',
       }}
     >
-    <Suspense
-      fallback={
-        <div className="flex items-center justify-center min-h-screen">
-          <div className="text-body text-text-sub">로딩 중...</div>
-        </div>
-      }
-    >
-      <QuizContent />
-    </Suspense>
+      <Suspense
+        fallback={
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="text-body text-text-sub">로딩 중...</div>
+          </div>
+        }
+      >
+        <QuizPlayingContent />
+      </Suspense>
     </FeatureGuard>
   )
 }

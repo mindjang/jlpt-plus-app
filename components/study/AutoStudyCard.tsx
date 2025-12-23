@@ -127,7 +127,7 @@ export function AutoStudyCard({
             style={{
               backgroundColor: hexToRgba(gradient.from, 0.8) || 'rgba(249, 250, 251, 0.5)',
             }}
-            onClick={() => router.push(`/acquire/auto-study/${level}/new-words?type=${activeTab}&limit=${targetAmount}`)}
+            onClick={() => router.push(`/acquire/auto-study/${level}/${activeTab}/new-words?limit=${targetAmount}`)}
           >
             <span className="text-label text-text-sub font-medium">
               새 {activeTab === 'word' ? '단어' : '한자'}

@@ -5,8 +5,8 @@ import { useRouter, useParams, useSearchParams } from 'next/navigation'
 import { AppBar } from '@/components/ui/AppBar'
 import { SearchBar } from '@/components/ui/SearchBar'
 import { ListItem } from '@/components/ui/ListItem'
-import { getNaverWordsByLevel } from '@/data/words/index'
-import { getKanjiByLevel } from '@/data/kanji/index'
+import { getNaverWordsByLevelAsync } from '@/data/words/index'
+import { getKanjiByLevelAsync } from '@/data/kanji/index'
 import type { NaverWord } from '@/data/types'
 import { levels, Level, getLevelGradient } from '@/data'
 import { useAuth } from '@/components/auth/AuthProvider'
@@ -27,7 +27,7 @@ function NewWordsContent() {
   const { settings } = useUserSettings(user)
   
   const levelParam = params.level as string
-  const typeParam = searchParams.get('type') || 'word'
+  const typeParam = params.type as string || 'word'
   const limitParam = searchParams.get('limit')
   
   const level: Level = useMemo(() => {
@@ -72,6 +72,29 @@ function NewWordsContent() {
     fetchLearnedIds()
   }, [user])
 
+  const [kanjiList, setKanjiList] = useState<any[]>([])
+  const [wordList, setWordList] = useState<NaverWord[]>([])
+
+  useEffect(() => {
+    let mounted = true
+    if (typeParam === 'word') {
+      getNaverWordsByLevelAsync(level)
+        .then((entries) => { if (mounted) setWordList(entries) })
+        .catch((err) => console.error('[NewWordsPage] Word load failed:', err))
+    } else {
+      setWordList([])
+    }
+
+    if (typeParam !== 'kanji') {
+      setKanjiList([])
+    } else {
+      getKanjiByLevelAsync(level)
+        .then((entries) => { if (mounted) setKanjiList(entries) })
+        .catch((err) => console.error('[NewWordsPage] Kanji load failed:', err))
+    }
+    return () => { mounted = false }
+  }, [level, typeParam])
+
   // 새 단어/한자 목록 가져오기
   const newItems = useMemo(() => {
     if (loading) return []
@@ -84,7 +107,7 @@ function NewWordsContent() {
     }> = []
 
     if (typeParam === 'word') {
-      const naverWords = getNaverWordsByLevel(level)
+      const naverWords = wordList
       // 학습하지 않은 단어만 필터링하고 SearchResult 형식으로 변환
       allItems = naverWords
         .filter((w: NaverWord) => !learnedIds.has(w.entry))
@@ -108,9 +131,8 @@ function NewWordsContent() {
           }
         })
     } else {
-      const kanjis = getKanjiByLevel(level)
       // KanjiAliveEntry를 SearchResult 형식으로 변환
-      allItems = kanjis
+      allItems = kanjiList
         .filter((entry) => {
           const character = getKanjiCharacter(entry)
           return !learnedIds.has(character)
@@ -144,7 +166,7 @@ function NewWordsContent() {
 
     // 목표 학습량만큼만 반환
     return allItems.slice(0, limit)
-  }, [level, typeParam, learnedIds, searchQuery, limit, loading])
+  }, [level, typeParam, learnedIds, searchQuery, limit, loading, kanjiList, wordList])
 
   const handleItemClick = (word: string) => {
     if (typeParam === 'word') {

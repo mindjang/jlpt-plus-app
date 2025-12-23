@@ -122,13 +122,6 @@ export function WordCard({
     setShowFurigana(false)
   }
 
-  // 예문에서 HTML 태그 제거 및 텍스트 추출
-  const extractTextFromHtml = (html: string): string => {
-    const tempDiv = document.createElement('div')
-    tempDiv.innerHTML = html
-    return tempDiv.textContent || tempDiv.innerText || ''
-  }
-
   // 신고 제출 핸들러
   const handleSubmitReport = async (report: { content: string; reason: string }) => {
     if (!user) {
@@ -152,7 +145,7 @@ export function WordCard({
   }
 
   return (
-    <div className="w-full px-4 mx-auto">
+    <div className="w-full px-4 mx-auto flex-1 py-4">
       {/* 카드 */}
       <motion.div
         className="flex flex-col bg-surface rounded-lg border border-divider relative h-full"
@@ -249,16 +242,7 @@ export function WordCard({
 
         {/* 카드 내용 - 하단 절반: 예문 */}
         <div className="flex-1 flex flex-col justify-center p-6 min-h-[200px]">
-          {loadingDetails ? (
-            <div className="space-y-3 animate-pulse">
-              <div className="text-center">
-                <div className="h-4 w-12 bg-gray-200 rounded mx-auto mb-3"></div>
-                <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                <div className="h-6 bg-gray-200 rounded mb-3"></div>
-                <div className="h-4 bg-gray-200 rounded w-3/4 mx-auto"></div>
-              </div>
-            </div>
-          ) : firstExample ? (
+          {firstExample ? (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -278,7 +262,6 @@ export function WordCard({
             </motion.div>
           ) : (
             <div className="text-center text-body text-text-sub">
-              예문 정보가 없습니다
             </div>
           )}
         </div>

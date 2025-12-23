@@ -65,7 +65,7 @@ export function SessionCompleteModal({
 
         <button
           onClick={handleClose}
-          className="w-full py-5 px-6 rounded-xl bg-primary text-white text-lg font-bold active:opacity-90 transition-opacity cursor-pointer touch-manipulation shadow-sm"
+          className="w-full py-4 px-6 rounded-xl transition-colors mb-3 shadow-sm bg-primary text-white active:opacity-90"
           type="button"
         >
           완료했어요

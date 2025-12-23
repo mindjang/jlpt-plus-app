@@ -7,8 +7,8 @@ import { StudySession, type StudySessionHandle } from '@/components/study/StudyS
 import { FeatureGuard } from '@/components/permissions/FeatureGuard'
 import { AppBar } from '@/components/ui/AppBar'
 import { ConfirmModal } from '@/components/ui/ConfirmModal'
-import { getNaverWordsByLevel } from '@/data/words/index'
-import { getKanjiByLevel } from '@/data/kanji/index'
+import { getNaverWordsByLevelAsync } from '@/data/words/index'
+import { getKanjiByLevelAsync } from '@/data/kanji/index'
 import { useUserSettings } from '@/hooks/useUserSettings'
 import { getUserData } from '@/lib/firebase/firestore'
 import type { JlptLevel } from '@/lib/types/content'
@@ -37,7 +37,7 @@ function LearnContent() {
 
   // 기본 복귀 경로 (진입 전 페이지인 acquire로 안내)
   const defaultReturn = () =>
-    router.push(`/acquire/auto-study/${levelParam.toLowerCase()}?type=${typeParam}`)
+    router.push(`/acquire/auto-study/${levelParam.toLowerCase()}/${typeParam}`)
 
   // 나가기 확정 이후에 가드 해제 -> 이동을 순서대로 실행
   useEffect(() => {
@@ -87,18 +87,44 @@ function LearnContent() {
   const remainingDailyLimit = Math.max(dailyNewLimit - initialCompleted, 0)
 
   // 실제 데이터를 NaverWord로 사용 (변환 없이 직접 사용)
-  const words: NaverWord[] = useMemo(() => {
-    if (typeParam !== 'word') return []
-    const naverWords = getNaverWordsByLevel(level)
-    console.log('[LearnPage] 네이버 단어 데이터 로드:', { level, count: naverWords.length })
-    return naverWords
+  const [words, setWords] = useState<NaverWord[]>([])
+  useEffect(() => {
+    let mounted = true
+    if (typeParam !== 'word') {
+      setWords([])
+      return
+    }
+    getNaverWordsByLevelAsync(level)
+      .then((entries) => {
+        if (mounted) {
+          setWords(entries)
+          console.log('[LearnPage] 네이버 단어 데이터 로드:', { level, count: entries.length })
+        }
+      })
+      .catch((error) => {
+        console.error('[LearnPage] 네이버 단어 데이터 로드 실패:', error)
+      })
+    return () => {
+      mounted = false
+    }
   }, [level, typeParam])
 
-  const kanjis: KanjiAliveEntry[] = useMemo(() => {
-    if (typeParam !== 'kanji') return []
-    const kanjiEntries = getKanjiByLevel(level)
-    console.log('[LearnPage] 한자 데이터 로드:', { level, count: kanjiEntries.length })
-    return kanjiEntries
+  const [kanjis, setKanjis] = useState<KanjiAliveEntry[]>([])
+  useEffect(() => {
+    let mounted = true
+    if (typeParam !== 'kanji') {
+      setKanjis([])
+      return
+    }
+    getKanjiByLevelAsync(level).then((entries) => {
+      if (mounted) {
+        setKanjis(entries)
+        console.log('[LearnPage] 한자 데이터 로드:', { level, count: entries.length })
+      }
+    }).catch((error) => {
+      console.error('[LearnPage] 한자 데이터 로드 실패:', error)
+    })
+    return () => { mounted = false }
   }, [level, typeParam])
 
     return (
@@ -111,7 +137,7 @@ function LearnContent() {
     >
       {loading ? (
       <div className="w-full">
-        <AppBar title={`${level} ${typeParam === 'word' ? '단어' : '한자'} 학습`} />
+        <AppBar title={`${level} ${typeParam === 'word' ? '단어' : '한자'} 학습`} className='bg-white'/>
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-body text-text-sub">로딩 중...</div>
         </div>
@@ -167,7 +193,7 @@ function LearnContent() {
               {formatTime(studyTime)}
             </div>
           }
-          className="bg-transparent border-none"
+          className="bg-white border-none"
         />
       )}
       

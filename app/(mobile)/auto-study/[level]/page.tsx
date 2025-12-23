@@ -8,8 +8,8 @@ import { Modal } from '@/components/ui/Modal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisVertical, faBook, faLanguage } from '@fortawesome/free-solid-svg-icons'
 import { Level, levelData, getLevelGradient } from '@/data'
-import { getNaverWordsByLevel } from '@/data/words/index'
-import { getKanjiByLevel } from '@/data/kanji/index'
+import { getNaverWordsByLevelAsync } from '@/data/words/index'
+import { getKanjiByLevelAsync } from '@/data/kanji/index'
 import type { KanjiAliveEntry, NaverWord } from '@/data/types'
 import { SemicircleProgress } from '@/components/ui/SemicircleProgress'
 import { ProgressDisplay } from '@/components/ui/ProgressDisplay'
@@ -45,14 +45,30 @@ export default function AutoStudyPage() {
   }, [settings?.dailyNewLimit])
 
   // 단어/한자 데이터 변환 (네이버 데이터 직접 사용)
-  const words: NaverWord[] = useMemo(() => {
-    if (activeTab !== 'word') return []
-    return getNaverWordsByLevel(level)
-  }, [level, activeTab])
+  const [words, setWords] = useState<NaverWord[]>([])
+  const [kanjis, setKanjis] = useState<KanjiAliveEntry[]>([])
 
-  const kanjis: KanjiAliveEntry[] = useMemo(() => {
-    if (activeTab !== 'kanji') return []
-    return getKanjiByLevel(level)
+  useEffect(() => {
+    let mounted = true
+    if (activeTab !== 'word') {
+      setWords([])
+      return
+    }
+    getNaverWordsByLevelAsync(level)
+      .then((data) => { if (mounted) setWords(data) })
+      .catch((err) => console.error('[Mobile AutoStudy] Word load failed', err))
+    return () => { mounted = false }
+  }, [level, activeTab])
+  useEffect(() => {
+    let mounted = true
+    if (activeTab !== 'kanji') {
+      setKanjis([])
+      return
+    }
+    getKanjiByLevelAsync(level)
+      .then((data) => { if (mounted) setKanjis(data) })
+      .catch((err) => console.error('[Mobile AutoStudy] Kanji load failed', err))
+    return () => { mounted = false }
   }, [level, activeTab])
 
   // 진행률 데이터를 커스텀 훅으로 관리
@@ -175,7 +191,7 @@ export default function AutoStudyPage() {
                     새 {activeTab === 'word' ? '단어' : '한자'}
                   </span>
               <button 
-                onClick={() => router.push(`/acquire/auto-study/${params.level}/new-words?type=${activeTab}&limit=${targetAmount}`)}
+                onClick={() => router.push(`/acquire/auto-study/${params.level}/${activeTab}/new-words?limit=${targetAmount}`)}
                 className="text-body text-text-main font-medium"
               >
                 {loading ? '...' : newWords} &gt;

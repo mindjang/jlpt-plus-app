@@ -1,8 +1,39 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 
+@font-face {
+    font-family: 'YeogiOttaeJalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MungyeongGamhongApple';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-2@1.0/Mungyeong-Gamhong-Apple.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 벚꽃 꽃잎 애니메이션 */
+@keyframes sakura-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(calc(100vh + 100px)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.sakura-petal {
+  animation: sakura-fall linear infinite;
+  will-change: transform;
+}
 
 /* FontAwesome 아이콘 기본 크기 제한 (CSS 로딩 지연 방지) */
 svg[data-icon],
@@ -30,6 +61,8 @@ svg[data-icon] path {
   --font-inter: 'Inter', sans-serif;
   --font-orbitron: 'Orbitron', sans-serif;
   --font-press-start-2p: 'Press Start 2P', cursive;
+  --font-jalnan: 'YeogiOttaeJalnan', sans-serif;
+  --font-mungyeong: 'MungyeongGamhongApple', sans-serif;
 }
 
 * {

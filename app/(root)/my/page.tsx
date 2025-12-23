@@ -15,6 +15,8 @@ import { useUserSettings } from '@/hooks/useUserSettings'
 import { usePhoneModal } from '@/hooks/usePhoneModal'
 import { usePayment } from '@/hooks/usePayment'
 import { ConfirmModal } from '@/components/ui/ConfirmModal'
+import { getUserReports } from '@/lib/firebase/firestore/reports'
+import type { ContentReport } from '@/lib/firebase/firestore/reports'
 import { TermsContent } from '@/data/legal/terms'
 import { PrivacyContent } from '@/data/legal/privacy'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -38,7 +40,8 @@ import {
   Clock,
   CheckCircle2,
   Languages,
-  X
+  X,
+  AlertCircle
 } from 'lucide-react'
 import { Suspense } from 'react'
 
@@ -118,6 +121,10 @@ function MyPageContent() {
   const [showCancelConfirm, setShowCancelConfirm] = useState(false)
   const [cancelling, setCancelling] = useState(false)
   const [showContactInfo, setShowContactInfo] = useState(false)
+  const [showReportsModal, setShowReportsModal] = useState(false)
+  const [reports, setReports] = useState<ContentReport[]>([])
+  const [reportsLoading, setReportsLoading] = useState(false)
+  const [reportsError, setReportsError] = useState<string | null>(null)
 
   // 결제 정보 가져오기
   useEffect(() => {
@@ -140,6 +147,17 @@ function MyPageContent() {
     }
     fetchBillingInfo()
   }, [user, showManageModal])
+
+  // 신고 내역 가져오기
+  useEffect(() => {
+    if (showReportsModal && user && reports.length === 0 && !reportsLoading) {
+      loadReports()
+    }
+    // 모달이 닫힐 때 에러 상태 초기화
+    if (!showReportsModal) {
+      setReportsError(null)
+    }
+  }, [showReportsModal, user])
 
   // Payment Modal State
   const [showPaymentModal, setShowPaymentModal] = useState(false)
@@ -406,6 +424,26 @@ function MyPageContent() {
     router.push('/my')
   }
 
+  const loadReports = async () => {
+    if (!user) return
+    setReportsLoading(true)
+    setReportsError(null)
+    try {
+      const userReports = await getUserReports(user.uid)
+      setReports(userReports)
+    } catch (error) {
+      handleError(error, '신고 내역 로드')
+      setReportsError('신고 내역을 불러오는데 실패했습니다.')
+    } finally {
+      setReportsLoading(false)
+    }
+  }
+
+  const formatDate = (timestamp: number) => {
+    const date = new Date(timestamp)
+    return `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`
+  }
+
   // 결제 수단 표시 함수
   const getPaymentMethodLabel = (paymentMethod?: 'CARD' | 'EASY_PAY', easyPayProvider?: string): string => {
     if (!paymentMethod) return '미등록'
@@ -589,7 +627,7 @@ function MyPageContent() {
         </div>
       </div>
 
-      <div className="p-4 space-y-4">
+      <div className="p-4 space-y-2">
         {/* Membership Card */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -671,8 +709,10 @@ function MyPageContent() {
           <MenuItem icon={BarChart2} label="나의 독서 기록" onClick={() => router.push('/stats')} />
           <MenuItem icon={Star} label="배지 갤러리" onClick={() => router.push('/quiz/badges')} />
           <MenuItem icon={Languages} label="카나" onClick={() => router.push('/kana')} />
+        </div>
 
-          <SectionTitle>계정 설정</SectionTitle>
+        <div className="bg-surface rounded-lg border border-divider overflow-hidden">
+        <SectionTitle>계정 설정</SectionTitle>
           <MenuItem icon={User} label="프로필 수정" onClick={() => phoneModal.setShowPhoneModal(true)} />
           <MenuItem icon={Gift} label="쿠폰 등록" onClick={() => { setRedeemCodeInput(''); setShowRedeemConfirm(true); }} />
         </div>
@@ -681,14 +721,11 @@ function MyPageContent() {
           <SectionTitle>지원 및 정보</SectionTitle>
           <MenuItem icon={FileText} label="이용약관" onClick={() => setShowTermsModal(true)} />
           <MenuItem icon={Shield} label="개인정보 처리방침" onClick={() => setShowPrivacyModal(true)} />
-          <div className="border-t border-gray-100 my-1" />
-          <MenuItem icon={LogOut} label="로그아웃" onClick={() => setShowLogoutConfirm(true)} isDestructive showArrow={false} />
+          <MenuItem icon={AlertCircle} label="나의 신고내역" onClick={() => setShowReportsModal(true)} />
         </div>
 
-        {/* Footer Info */}
-        <div className="text-center py-4">
-          <p className="text-label text-text-sub uppercase tracking-widest font-semibold mb-1">Provided by Funny Devs</p>
-          <p className="text-label text-text-sub">Version 3.0.0</p>
+        <div className="bg-surface rounded-lg border border-divider overflow-hidden">
+          <MenuItem icon={LogOut} label="로그아웃" onClick={() => setShowLogoutConfirm(true)} isDestructive showArrow={false} />
         </div>
       </div>
 
@@ -1036,6 +1073,8 @@ function MyPageContent() {
 
       {/* 사업자 정보 푸터 */}
       <div className="px-4 py-4">
+        <p className="text-label text-text-sub text-center mb-2">Version 1.0.0</p>
+
         <div className="text-center text-label text-text-sub mb-2">
           <span className="font-semibold text-text-main">재미찾는개발자</span>
           <span className="px-2 text-text-sub">·</span>
@@ -1070,6 +1109,91 @@ function MyPageContent() {
 
       <FullScreenModal isOpen={showTermsModal} onClose={() => setShowTermsModal(false)} title="이용약관"><TermsContent /></FullScreenModal>
       <FullScreenModal isOpen={showPrivacyModal} onClose={() => setShowPrivacyModal(false)} title="개인정보취급방침"><PrivacyContent /></FullScreenModal>
+
+      {/* 신고 내역 모달 */}
+      {showReportsModal && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4 max-w-lg mx-auto">
+          <motion.div
+            initial={{ y: '100%' }}
+            animate={{ y: 0 }}
+            exit={{ y: '100%' }}
+            className="bg-surface w-full sm:rounded-[40px] rounded-t-[32px] shadow-2xl relative h-[85vh] sm:h-auto max-h-[85vh] flex flex-col"
+          >
+            {/* Header */}
+            <div className="p-6 pb-4 shrink-0 border-b border-divider">
+              <div className="flex justify-between items-center">
+                <h2 className="text-display-s font-black text-gray-900">나의 신고내역</h2>
+                <button 
+                  onClick={() => setShowReportsModal(false)} 
+                  className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 active:bg-gray-200 text-gray-500"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="flex-1 overflow-y-auto px-6 py-4">
+              {reportsLoading ? (
+                <div className="flex items-center justify-center py-12">
+                  <div className="animate-pulse text-text-sub">로딩 중...</div>
+                </div>
+              ) : reportsError ? (
+                <div className="flex flex-col items-center justify-center py-12">
+                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                    <AlertCircle size={24} className="text-red-500" />
+                  </div>
+                  <p className="text-body text-red-600 mb-2">{reportsError}</p>
+                  <button
+                    onClick={loadReports}
+                    className="mt-2 px-4 py-2 bg-gray-100 rounded-lg text-sm font-medium text-text-main active:bg-gray-200"
+                  >
+                    다시 시도
+                  </button>
+                </div>
+              ) : reports.length === 0 ? (
+                <div className="flex flex-col items-center justify-center py-12">
+                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+                    <AlertCircle size={24} className="text-gray-400" />
+                  </div>
+                  <p className="text-body text-text-sub">신고 내역이 없습니다.</p>
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  {reports.map((report) => (
+                    <div
+                      key={report.id}
+                      className="bg-gray-50 rounded-lg border border-gray-200 p-4"
+                    >
+                      <div className="flex items-start justify-between mb-2">
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-semibold px-2 py-1 rounded bg-white border border-gray-200">
+                            {report.contentType === 'word' ? '단어' : '한자'}
+                          </span>
+                          <span className="text-xs font-semibold px-2 py-1 rounded bg-white border border-gray-200">
+                            {report.level}
+                          </span>
+                        </div>
+                        <span className="text-xs text-text-sub">
+                          {formatDate(report.createdAt)}
+                        </span>
+                      </div>
+                      <div className="mb-2">
+                        <p className="text-sm font-semibold text-text-main mb-1">
+                          {report.contentText}
+                        </p>
+                        <p className="text-xs text-text-sub line-clamp-2">
+                          {report.reason}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </motion.div>
+        </div>
+      )}
 
       {showRedeemConfirm && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">

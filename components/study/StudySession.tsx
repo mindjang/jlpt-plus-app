@@ -26,7 +26,7 @@ import { useFeatureAccess } from '@/lib/permissions'
 import { FeatureGuard } from '../permissions/FeatureGuard'
 import { logger } from '@/lib/utils/logger'
 import { ProgressDisplay } from '../ui/ProgressDisplay'
-import { SessionCompleteModal } from './SessionCompleteModal'
+import { BrandLoader } from '../ui/BrandLoader'
 
 interface StudySessionProps {
   level: string
@@ -94,18 +94,13 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
   const [studyTime, setStudyTime] = useState(0) // 학습 시간 (초)
   const [selectedGrade, setSelectedGrade] = useState<Grade | null>(null)
   const [nextReviewInterval, setNextReviewInterval] = useState<number | null>(null)
-  const [isCompleted, setIsCompleted] = useState(false) // 학습 완료 여부
   const [cardStartTime, setCardStartTime] = useState<number>(Date.now()) // 현재 카드 시작 시간
-  const [completedStats, setCompletedStats] = useState<{
-    totalCards: number
-    newCards: number
-    reviewCards: number
-    studyTime: number
-  } | null>(null)
   const [isSaving, setIsSaving] = useState(false) // 저장 중 상태
+  const [finishing, setFinishing] = useState(false) // 학습 완료 처리 중 상태
 
   // 세션 종료 처리 (배치 저장 + 통계 계산)
   const finishSession = async (finalQueue: StudyCard[]) => {
+    setFinishing(true)
     setIsSaving(true)
     try {
       // 세션은 이미 시작 시 예약되었으므로 여기서는 저장만 수행
@@ -117,11 +112,37 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       // 초기 큐를 사용하여 통계 계산 (실제 학습한 카드 수 반영)
       const queueForStats = sessionInitialQueue.length > 0 ? sessionInitialQueue : finalQueue
       const stats = calculateStudyStats(queueForStats, studyTime)
-      setCompletedStats(stats)
-      setIsCompleted(true)
-      onCompleteChange?.(true)
-    } finally {
+      
+      // 타입 결정 (words 배열이 있으면 'word', kanjis 배열이 있으면 'kanji')
+      const contentType = words.length > 0 ? 'word' : 'kanji'
+      
+      // sessionStorage에 결과 저장
+      sessionStorage.setItem('studyResult', JSON.stringify(stats))
+      
+      // 자동 학습 페이지로 돌아가기 위한 레벨과 타입 정보 저장
+      sessionStorage.setItem('studyReturnInfo', JSON.stringify({
+        level: level.toLowerCase(),
+        type: contentType,
+      }))
+      
+      // 결과 페이지 로드 완료 플래그 설정
+      sessionStorage.setItem('studyResultLoading', 'true')
+      
+      // 결과 화면으로 리다이렉트
+      router.push('/practice/result')
+      
+      // 페이지 전환이 완료될 때까지 충분한 딜레이 후 finishing 상태 해제
+      setTimeout(() => {
+        setIsSaving(false)
+        // 추가 딜레이 후 finishing 상태 해제 (결과 화면이 완전히 렌더링될 때까지)
+        setTimeout(() => {
+          setFinishing(false)
+        }, 500)
+      }, 300)
+    } catch (error) {
       setIsSaving(false)
+      setFinishing(false)
+      logger.error('[StudySession] Error finishing session:', error)
     }
   }
 
@@ -153,8 +174,6 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       setInitialQueueLength(initialQueue.length)
       setCompletedCount(initialCompleted)
       setCurrentIndex(0)
-      setIsCompleted(false)
-      setCompletedStats(null)
       setCardStartTime(Date.now()) // 첫 카드 시작 시간 설정
       
       // 큐가 로드되면 즉시 세션 예약 (무료 회차 소진)
@@ -281,6 +300,15 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       grade
     )
 
+    // 마지막 카드였는지 먼저 확인 (again이 아니고 큐가 비어있는 경우)
+    if (grade !== 'again' && updatedQueue.length === 0) {
+      // finishing 상태를 먼저 설정하여 리렌더링 시 로딩 화면이 표시되도록 함
+      setFinishing(true)
+      // 큐 업데이트는 하지 않고 바로 세션 종료
+      finishSession(queue)
+      return
+    }
+
     setQueue(updatedQueue)
     
     // 다음 카드 시작 시간 설정
@@ -292,12 +320,6 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
     setTimeout(() => {
       if (grade === 'again') {
         setCurrentIndex(nextIndex)
-        return
-      }
-
-      if (updatedQueue.length === 0) {
-        // 마지막 카드였던 경우 세션 종료
-        finishSession(queue)
         return
       }
 
@@ -327,7 +349,8 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       setCurrentIndex(currentIndex + 1)
       setCardStartTime(Date.now()) // 다음 카드 시작 시간 설정
     } else {
-      // 세션 종료
+      // 세션 종료 - finishing 상태를 먼저 설정하여 리렌더링 시 로딩 화면이 표시되도록 함
+      setFinishing(true)
       finishSession(queue)
     }
   }
@@ -352,9 +375,13 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
     )
   }
 
-  // 학습 완료 화면
-  if (isCompleted && completedStats) {
-    return <SessionCompleteModal stats={completedStats} onClose={onCompleteClose} />
+  // 학습 완료 처리 중 로딩 화면
+  if (finishing) {
+    return (
+      <div className="fixed inset-0 z-[100] bg-white flex items-center justify-center">
+        <BrandLoader fullScreen={false} text="결과를 계산하고 있어요..." />
+      </div>
+    )
   }
 
   if (queue.length === 0) {
@@ -385,10 +412,10 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
   // 분모: 이전에 학습한 개수 + 이번 세션 로드된 큐 길이
   const totalCount = initialCompleted + initialQueueLength
   // 분자: 완료 개수(현재 보고 있는 카드는 포함하지 않음)
-  const displayIndex = totalCount === 0 ? 0 : Math.min(completedCount, totalCount)
+  const displayIndex = totalCount === 0 ? 0 : Math.min(completedCount, totalCount) + 1
 
   return (
-    <div className="flex flex-col w-full h-[calc(100vh-10rem)] relative">
+    <div className="flex flex-col w-full h-[calc(100vh-10rem)] relative bg-white">
       {/* 저장 중 로딩 오버레이 */}
       {isSaving && (
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
@@ -402,11 +429,11 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       {/* 진행도 바 */}
       <div className="px-4 pt-2 pb-1">
         {/* 안내 메시지 */}
-        <div className="mb-2 px-3 py-2 bg-blue-50 border-l-4 border-blue-200 rounded-r-lg">
+        {/* <div className="mb-2 px-3 py-2 bg-blue-50 border-l-4 border-blue-200 rounded-r-lg">
           <p className="text-label text-blue-800">
             💡 의미를 보는 것은 정답 보기가 아닙니다. 기억을 확인하는 과정이에요.
           </p>
-        </div>
+        </div> */}
         
         <div className="flex items-center justify-between mb-1">
           <span className="text-label text-text-sub">
@@ -459,14 +486,14 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
           >
             <div>기억났어요</div>
             {/* <div className="text-label mt-1 opacity-90">잘 기억하고 있어요</div> */}
-            {selectedGrade === 'good' && nextReviewInterval !== null && (
+            {/* {selectedGrade === 'good' && nextReviewInterval !== null && (
               <div className="text-label mt-1.5 opacity-75 text-sm">
                 {nextReviewInterval < 1440
                   ? `${Math.round(nextReviewInterval / 60)}시간 후 복습`
                   : `${minutesToDays(nextReviewInterval)}일 후 복습`
                 }
               </div>
-            )}
+            )} */}
           </button>
 
           {/* Secondary 버튼들 (again, hard, easy) */}
@@ -492,14 +519,14 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
             >
               <div className="font-medium text-sm">어려워요</div>
               {/* <div className="text-label text-orange-600 text-xs mt-0.5">조금 더 연습</div> */}
-              {selectedGrade === 'hard' && nextReviewInterval !== null && (
+              {/* {selectedGrade === 'hard' && nextReviewInterval !== null && (
                 <div className="text-label text-orange-700 text-xs mt-0.5 font-medium">
                   {nextReviewInterval < 1440
                     ? `${Math.round(nextReviewInterval / 60)}시간 후`
                     : `${minutesToDays(nextReviewInterval)}일 후`
                   }
                 </div>
-              )}
+              )} */}
             </button>
             <button
               onClick={() => handleGrade('easy')}
@@ -511,14 +538,14 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
             >
               <div className="font-medium text-sm">쉬워요</div>
               {/* <div className="text-label text-green-600 text-xs mt-0.5">완벽해요</div> */}
-              {selectedGrade === 'easy' && nextReviewInterval !== null && (
+              {/* {selectedGrade === 'easy' && nextReviewInterval !== null && (
                 <div className="text-label text-green-700 text-xs mt-0.5 font-medium">
                   {nextReviewInterval < 1440
                     ? `${Math.round(nextReviewInterval / 60)}시간 후`
                     : `${minutesToDays(nextReviewInterval)}일 후`
                   }
                 </div>
-              )}
+              )} */}
             </button>
           </div>
         </div>

@@ -4,6 +4,12 @@
 import { useState, useCallback } from 'react'
 import { handleError } from '@/lib/utils/error/errorHandler'
 import type { User } from 'firebase/auth'
+import {
+  isTWA,
+  isGooglePlayBillingAvailable,
+  purchaseSubscription,
+  getGooglePlayProductId,
+} from '@/lib/utils/google-play-billing'
 
 type SubscriptionPlan = 'monthly' | 'quarterly' // 정기구독: 1개월, 3개월
 type OneTimePlan = 'monthly' | 'yearly' // 단건결제: 1개월, 1년
@@ -365,7 +371,118 @@ export function usePayment({
     }
   }, [user, phoneNumber, displayName, nameInput, onRefresh, onPhoneRequired, isMobile])
 
+  /**
+   * Google Play Billing을 통한 구독 처리
+   */
+  const processGooglePlaySubscription = useCallback(async (plan: SubscriptionPlan) => {
+    if (!user) return
+
+    setPayLoading(plan)
+    setPayMessage(null)
+
+    try {
+      // Google Play Billing 사용 가능 여부 확인
+      const available = await isGooglePlayBillingAvailable()
+      if (!available) {
+        setPayMessage('구글 플레이스토어 결제를 사용할 수 없습니다. 일반 결제를 시도합니다.')
+        // 일반 결제로 폴백
+        const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
+        const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY
+        if (storeId && channelKey) {
+          const planNames: Record<SubscriptionPlan, string> = {
+            monthly: '1개월 구독',
+            quarterly: '3개월 구독',
+          }
+          const config: BillingKeyConfig = {
+            storeId,
+            channelKey,
+            billingKeyMethod: 'CARD',
+            issueIdPrefix: 'bill',
+            issueName: `${planNames[plan]} 빌링키 발급`,
+            errorMessage: '빌링키 발급에 실패했습니다.',
+            successMessage: '구독이 활성화되었습니다.',
+          }
+          await processSubscription(plan, config, setPayLoading)
+        }
+        return
+      }
+
+      // 구글 플레이스토어 상품 ID 가져오기
+      const productId = getGooglePlayProductId(plan)
+
+      console.info('[Payment] Attempting Google Play Billing', {
+        plan,
+        productId,
+        timestamp: Date.now(),
+      })
+
+      // 구매 요청
+      const purchaseResult = await purchaseSubscription(productId)
+
+      if (!purchaseResult || !purchaseResult.purchaseToken) {
+        setPayMessage('구글 플레이스토어 결제에 실패했습니다.')
+        return
+      }
+
+      // Firebase ID 토큰 가져오기
+      const idToken = await user.getIdToken()
+
+      // 서버에 구매 토큰 전송하여 검증 및 구독 활성화
+      const resp = await fetch('/api/pay/google-play', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${idToken}`,
+        },
+        body: JSON.stringify({
+          purchaseToken: purchaseResult.purchaseToken,
+          productId: purchaseResult.productId,
+          orderId: purchaseResult.orderId,
+          plan,
+        }),
+      })
+
+      const data = await resp.json()
+      if (!resp.ok) {
+        console.error('[Payment] Google Play subscription API failed', {
+          plan,
+          status: resp.status,
+          error: data?.error,
+          timestamp: Date.now(),
+        })
+        setPayMessage(data?.error || '구독 결제에 실패했습니다.')
+        return
+      }
+
+      console.info('[Payment] Google Play subscription completed successfully', {
+        plan,
+        purchaseToken: purchaseResult.purchaseToken.substring(0, 20) + '...',
+        timestamp: Date.now(),
+      })
+
+      setPayMessage('구독이 활성화되었습니다.')
+      if (onRefresh) {
+        await onRefresh()
+      }
+    } catch (error) {
+      const errorMessage = handleError(error, '구글 플레이스토어 구독')
+      setPayMessage(errorMessage)
+    } finally {
+      setPayLoading(null)
+    }
+  }, [user, onRefresh])
+
   const handleSubscribe = useCallback(async (plan: SubscriptionPlan) => {
+    // TWA 환경이고 Google Play Billing이 사용 가능한 경우 우선 사용
+    if (isTWA()) {
+      const available = await isGooglePlayBillingAvailable()
+      if (available) {
+        await processGooglePlaySubscription(plan)
+        return
+      }
+    }
+
+    // 일반 PortOne 결제 처리
     const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
     const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY
     
@@ -390,7 +507,7 @@ export function usePayment({
     }
 
     await processSubscription(plan, config, setPayLoading)
-  }, [processSubscription])
+  }, [processSubscription, processGooglePlaySubscription])
 
   const handleSubscribeKakao = useCallback(async (plan: SubscriptionPlan) => {
     const channelKeyKakao = process.env.NEXT_PUBLIC_PORTONE_KAKAO_CHANNEL_KEY

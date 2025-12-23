@@ -1062,7 +1062,7 @@ function MyPageContent() {
             exit={{ opacity: 0, height: 0 }}
             className="mt-2 text-center text-label text-text-sub space-y-1"
           >
-            <div>010-8412-0241 | mcd.jang@gmail.com</div>
+            <div>장준영 | 010-8412-0241 | mcd.jang@gmail.com</div>
             <div>경기도 성남시 수정고 논골로 24</div>
           </motion.div>
         )}

@@ -8,9 +8,9 @@ import { ErrorBoundary } from '@/components/ErrorBoundary'
 function LayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  
+
   // 하단 네비게이션을 숨겨야 하는 경로들
-  const hideBottomNav = 
+  const hideBottomNav =
     pathname === '/login' ||
     pathname === '/stats' ||
     pathname === '/game' ||
@@ -24,7 +24,12 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
     (pathname === '/quiz' && searchParams.get('state') === 'playing') ||
     pathname === '/quiz/playing' ||
     (pathname === '/quiz/result') ||
+    (pathname === '/quiz/badges') ||
+    (pathname === '/quiz/stats') ||
+    (pathname === '/quiz/history') ||
+    (pathname === '/quiz/notebook') ||
     (pathname === '/practice/result')
+
 
 
   return (

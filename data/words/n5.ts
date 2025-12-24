@@ -521,7 +521,7 @@ export const n5Words: NaverWord[] = [
     partsMeans: [
       {
         part: "명사",
-        means: ["일회","한 번","한 돌"]
+        means: ["일회", "한 번", "한 돌"]
       }
     ],
     category1: "jlpt",
@@ -4512,7 +4512,7 @@ export const n5Words: NaverWord[] = [
     partsMeans: [
       {
         part: "명사",
-        means: ["코","후각"]
+        means: ["코", "후각"]
       }
     ],
     category1: "jlpt",
@@ -7395,7 +7395,7 @@ export const n5Words: NaverWord[] = [
     partsMeans: [
       {
         part: "동사",
-        means: ["쓰다;뒤집어쓰다","끝나다;파하다","건판·필름이 흐려지다"]
+        means: ["쓰다;뒤집어쓰다", "끝나다;파하다", "건판·필름이 흐려지다"]
       }
     ],
     category1: "jlpt",
@@ -8809,7 +8809,7 @@ export const n5Words: NaverWord[] = [
     partsMeans: [
       {
         part: "형용사",
-        means: ["빠르다","세차다;거칠다"]
+        means: ["빠르다", "세차다;거칠다"]
       }
     ],
     category1: "jlpt",
@@ -9029,7 +9029,7 @@ export const n5Words: NaverWord[] = [
     partsMeans: [
       {
         part: "부사",
-        means: ["‘같음·동일’의 뜻","어차피;이왕에."]
+        means: ["‘같음·동일’의 뜻", "어차피;이왕에."]
       },
       {
         part: "형용동사",

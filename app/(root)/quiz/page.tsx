@@ -37,7 +37,7 @@ function QuizContent() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const { user, loading: authLoading } = useAuth()
-  
+
   // 경로 기반으로 초기 상태 결정
   const isPlayingPage = pathname === '/quiz/playing'
   const [quizState, setQuizState] = useState<QuizState>(isPlayingPage ? 'playing' : 'menu')
@@ -53,7 +53,7 @@ function QuizContent() {
   const [quizResult, setQuizResult] = useState<QuizResult | null>(null)
   const [loading, setLoading] = useState(false)
   const [showExitConfirm, setShowExitConfirm] = useState(false)
-  
+
   // /quiz/playing 경로로 직접 접근하면 리다이렉트
   useEffect(() => {
     if (pathname === '/quiz/playing') {
@@ -91,7 +91,7 @@ function QuizContent() {
 
   const handleStartQuiz = async (settings: QuizSettings) => {
     if (!user) return
-    
+
     setLoading(true)
     setShowSettingsModal(false)
 
@@ -99,7 +99,7 @@ function QuizContent() {
       // 약점 데이터 로드
       const allStats = await getAllQuizStats(user.uid)
       const weakItemsMap: Record<string, any> = {}
-      
+
       for (const level of settings.levels) {
         const stats = allStats[level]
         if (stats) {
@@ -139,7 +139,7 @@ function QuizContent() {
 
       // sessionStorage에 세션 저장
       sessionStorage.setItem('quizSession', JSON.stringify(newSession))
-      
+
       // 세션 설정 후 URL 변경
       router.push('/quiz/playing', { scroll: false })
     } catch (error) {
@@ -153,252 +153,6 @@ function QuizContent() {
     }
   }
 
-  const handleAnswer = async (selectedAnswer: string) => {
-    if (!session || !user || !userLevel) return
-
-    const currentQuestion = session.questions[currentQuestionIndex]
-    const now = Date.now()
-    const timeSpent = now - questionStartTime
-    const isCorrect = selectedAnswer === currentQuestion.answer
-
-    // 답안 기록
-    const answer: QuizAnswer = {
-      questionId: currentQuestion.id,
-      selectedAnswer,
-      correctAnswer: currentQuestion.answer,
-      isCorrect,
-      timeSpent,
-      timestamp: now,
-    }
-
-    const newAnswers = [...answers, answer]
-    setAnswers(newAnswers)
-
-    // 연속 정답 업데이트
-    const newStreakCount = isCorrect ? streakCount + 1 : 0
-    setStreakCount(newStreakCount)
-    setMaxStreak(Math.max(maxStreak, newStreakCount))
-
-    // 다음 문제로 이동 또는 종료
-    if (currentQuestionIndex + 1 < session.questions.length) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1)
-      setQuestionStartTime(Date.now())
-    } else {
-      // 퀴즈 완료
-      await finishQuiz(newAnswers, newStreakCount, Math.max(maxStreak, newStreakCount))
-    }
-  }
-
-  const finishQuiz = async (
-    finalAnswers: QuizAnswer[],
-    finalStreakCount: number,
-    finalMaxStreak: number
-  ) => {
-    if (!session || !user || !userLevel) return
-
-    setLoading(true)
-
-    try {
-      const endTime = Date.now()
-      const correctCount = finalAnswers.filter((a) => a.isCorrect).length
-      const score = Math.round((correctCount / session.questions.length) * 100)
-      const averageTimePerQuestion =
-        finalAnswers.reduce((sum, a) => sum + a.timeSpent, 0) / finalAnswers.length
-
-      // 경험치 계산
-      let totalExp = 0
-      for (const answer of finalAnswers) {
-        const questionStreakAtTime = finalAnswers.slice(0, finalAnswers.indexOf(answer) + 1)
-          .reverse()
-          .findIndex((a) => !a.isCorrect)
-        const streakAtTime = questionStreakAtTime === -1 ? finalAnswers.indexOf(answer) + 1 : questionStreakAtTime
-        totalExp += calculateExp(answer.isCorrect, streakAtTime, answer.timeSpent)
-      }
-
-      // 레벨업 확인
-      const levelUpResult = addExp(userLevel, totalExp)
-      const leveledUp = levelUpResult.leveledUp
-
-      // 레벨별 통계 계산 (현재 세션 기반)
-      const sessionLevelStats: Record<JlptLevel, { correct: number; total: number; accuracy: number }> = {
-        N5: { correct: 0, total: 0, accuracy: 0 },
-        N4: { correct: 0, total: 0, accuracy: 0 },
-        N3: { correct: 0, total: 0, accuracy: 0 },
-        N2: { correct: 0, total: 0, accuracy: 0 },
-        N1: { correct: 0, total: 0, accuracy: 0 },
-      }
-
-      // 현재 세션의 레벨별 통계 계산
-      finalAnswers.forEach((answer, index) => {
-        const question = session.questions[index]
-        const level = question.level as JlptLevel
-        sessionLevelStats[level].total++
-        if (answer.isCorrect) {
-          sessionLevelStats[level].correct++
-        }
-      })
-
-      // 정확도 계산
-      ;(['N5', 'N4', 'N3', 'N2', 'N1'] as JlptLevel[]).forEach((level) => {
-        if (sessionLevelStats[level].total > 0) {
-          sessionLevelStats[level].accuracy =
-            sessionLevelStats[level].correct / sessionLevelStats[level].total
-        }
-      })
-
-      // 배지 확인 (간단한 버전 - 히스토리 기반 배지는 나중에 구현)
-      const newBadges = checkNewBadges(
-        { ...session, endTime, maxStreak: finalMaxStreak },
-        userLevel,
-        1, // 간단한 버전
-        session.questions.length,
-        1,
-        sessionLevelStats
-      )
-
-      // Firestore 업데이트
-      await updateQuizLevel(user.uid, totalExp, newBadges)
-
-      // 통계 업데이트
-      const itemResults = extractItemResults(
-        finalAnswers,
-        session.questions.map((q) => ({
-          id: q.id,
-          itemId: q.itemId,
-          itemType: q.itemType,
-        }))
-      )
-
-      for (const level of session.settings.levels) {
-        const levelItemResults = itemResults.filter((r) => {
-          const question = session.questions.find((q) => q.itemId === r.itemId)
-          return question?.level === level
-        })
-
-        if (levelItemResults.length > 0) {
-          await updateQuizStats(user.uid, level, {
-            correctCount: levelItemResults.filter((r) => r.isCorrect).length,
-            totalQuestions: levelItemResults.length,
-            score,
-            itemResults: levelItemResults,
-          })
-        }
-      }
-
-      // 세션 저장
-      const completedSession: QuizSession = {
-        ...session,
-        answers: finalAnswers,
-        endTime,
-        score,
-        correctCount,
-        expGained: totalExp,
-        badgesEarned: newBadges,
-        maxStreak: finalMaxStreak,
-      }
-      await saveQuizSession(user.uid, completedSession)
-
-      // 일별 활동 통계 업데이트
-      const totalTime = endTime - session.startTime
-      for (const answer of finalAnswers) {
-        const question = session.questions.find((q) => q.id === answer.questionId)
-        if (question) {
-          await updateDailyActivity(user.uid, {
-            mode: 'quiz',
-            questions: 1,
-            correct: answer.isCorrect ? 1 : 0,
-            timeSpent: answer.timeSpent,
-            contentType: question.itemType,
-            level: question.level,
-            quizType: question.type,
-          })
-        }
-      }
-
-      // 연속 일수 업데이트 (매일 첫 학습)
-      const isFirst = await isFirstStudyToday(user.uid)
-      if (isFirst) {
-        await updateStreak(user.uid)
-      }
-
-      // 결과 생성
-      const wrongAnswers = extractWrongAnswers(finalAnswers)
-      const result: QuizResult = {
-        sessionId: session.sessionId,
-        score,
-        correctCount,
-        totalQuestions: session.questions.length,
-        expGained: totalExp,
-        leveledUp,
-        newLevel: leveledUp ? levelUpResult.newLevel.level : undefined,
-        badgesEarned: newBadges,
-        averageTimePerQuestion,
-        accuracy: correctCount / session.questions.length,
-        weakPoints: wrongAnswers.map((answer) => {
-          const question = session.questions.find((q) => q.id === answer.questionId)!
-          return {
-            itemId: question.itemId,
-            itemType: question.itemType,
-            question: question.question,
-            correctAnswer: answer.correctAnswer,
-            userAnswer: answer.selectedAnswer,
-          }
-        }),
-        completedAt: endTime,
-      }
-
-      setQuizResult(result)
-      setUserLevel(levelUpResult.newLevel)
-      
-      // sessionStorage에 결과 저장
-      sessionStorage.setItem('quizResult', JSON.stringify(result))
-      
-      // 결과 화면으로 리다이렉트
-      router.push('/quiz/result')
-
-      if (leveledUp) {
-        // 레벨업 모달은 결과 페이지에서 처리
-        // 여기서는 바로 리다이렉트
-      }
-    } catch (error) {
-      console.error('[QuizPage] Error finishing quiz:', error)
-      alert('퀴즈 완료 처리 중 오류가 발생했습니다.')
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  const handleRestart = () => {
-    // 이 함수는 더 이상 사용되지 않음 (결과 페이지에서 처리)
-    // 하지만 호환성을 위해 유지
-    setQuizState('menu')
-    setShowSettingsModal(false)
-    setSession(null)
-    setCurrentQuestionIndex(0)
-    setAnswers([])
-    setStreakCount(0)
-    setMaxStreak(0)
-    setQuizResult(null)
-    
-    // URL을 메뉴로 복원
-    router.replace('/quiz', { scroll: false })
-    
-    // 통계 다시 로드
-    if (user) {
-      getAllQuizStats(user.uid).then(setAllStats)
-    }
-  }
-
-  const handleBack = () => {
-    // 퀴즈 진행 중일 때는 확인 모달 표시
-    if (quizState === 'playing' && session) {
-      setShowExitConfirm(true)
-    } else {
-      // URL에서 state 파라미터 제거하고 메뉴로 이동
-      router.replace('/quiz', { scroll: false })
-    }
-  }
-
   const handleExitConfirm = () => {
     // 퀴즈 상태 초기화
     setQuizState('menu')
@@ -408,10 +162,10 @@ function QuizContent() {
     setStreakCount(0)
     setMaxStreak(0)
     setShowExitConfirm(false)
-    
+
     // 퀴즈 메인으로 이동
     router.replace('/quiz', { scroll: false })
-    
+
     // 통계 다시 로드
     if (user) {
       getAllQuizStats(user.uid).then(setAllStats)
@@ -434,13 +188,6 @@ function QuizContent() {
     <div className="min-h-screen">
       <AppBar
         title="퀴즈"
-        onBack={() => {
-          if (pathname === '/quiz/playing') {
-            router.replace('/quiz')
-          } else {
-            router.back()
-          }
-        }}
         className="bg-transparent border-none"
       />
 
@@ -498,15 +245,15 @@ export default function QuizPage() {
         description: '퀴즈를 시작하려면 로그인이 필요합니다.',
       }}
     >
-    <Suspense
-      fallback={
-        <div className="flex items-center justify-center min-h-screen">
-          <div className="text-body text-text-sub">로딩 중...</div>
-        </div>
-      }
-    >
-      <QuizContent />
-    </Suspense>
+      <Suspense
+        fallback={
+          <div className="flex items-center justify-center min-h-screen">
+            <div className="text-body text-text-sub">로딩 중...</div>
+          </div>
+        }
+      >
+        <QuizContent />
+      </Suspense>
     </FeatureGuard>
   )
 }

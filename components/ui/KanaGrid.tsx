@@ -58,7 +58,7 @@ export const KanaGrid: React.FC<KanaGridProps> = ({
           return (
             <motion.button
               key={index}
-              className="aspect-square flex flex-col items-center justify-center rounded-kanji border border-divider bg-surface active:bg-gray-50"
+              className="aspect-square flex flex-col items-center justify-center rounded-kanji shadow-soft bg-surface active:bg-gray-50"
               onClick={() => onItemClick?.(item)}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -106,7 +106,7 @@ export const KanaGrid: React.FC<KanaGridProps> = ({
       {items.map((item, index) => (
         <motion.button
           key={index}
-          className={`${columns === 3 ? '' : 'aspect-square'} flex flex-col items-center justify-center rounded-kanji border border-divider bg-surface active:bg-gray-50`}
+          className={`${columns === 3 ? '' : 'aspect-square'} flex flex-col items-center justify-center rounded-kanji shadow-soft bg-surface active:bg-gray-50`}
           style={cardStyle}
           onClick={() => onItemClick?.(item)}
           initial={{ opacity: 0, scale: 0.9 }}

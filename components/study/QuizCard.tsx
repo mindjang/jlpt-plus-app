@@ -81,10 +81,10 @@ export function QuizCard({
     const parts = sentence.split('___');
     const before = parts[0] || '';
     const after = parts.slice(1).join('___'); // 여러 개의 ___가 있을 수 있으므로 첫 번째만 사용
-    
+
     const answerLength = answer.length;
     const spaces = Array(answerLength).fill('　').join('');
-    
+
     return (
       <>
         <span dangerouslySetInnerHTML={{ __html: before }} />
@@ -124,12 +124,12 @@ export function QuizCard({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className="bg-surface rounded-lg border border-divider p-8 mb-6 relative"
+        className="bg-surface rounded-lg shadow-card p-8 mb-6 relative"
       >
         {/* 신고 버튼 */}
         <button
           onClick={() => setShowReportModal(true)}
-          className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
+          className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full active:bg-gray-100 shadow-soft"
           title="신고하기"
         >
           <FontAwesomeIcon
@@ -142,11 +142,11 @@ export function QuizCard({
         {/* 문제 유형 표시 */}
         <div className="text-center mb-4">
           <span className="text-label text-text-sub bg-page px-3 py-1 rounded-full">
-            {question.type === 'sentence-fill-in' 
-              ? '문장 완성' 
-              : question.type === 'word-to-meaning' 
-              ? '뜻 맞추기' 
-              : '단어 맞추기'}
+            {question.type === 'sentence-fill-in'
+              ? '문장 완성'
+              : question.type === 'word-to-meaning'
+                ? '뜻 맞추기'
+                : '단어 맞추기'}
           </span>
         </div>
 
@@ -175,20 +175,20 @@ export function QuizCard({
           {question.options.map((option, index) => {
             const isSelected = selectedAnswer === option
             const isCorrectAnswer = option === question.answer
-            
+
             let buttonClass = 'w-full py-4 px-6 rounded-lg text-body font-medium '
-            
+
             if (!showResult) {
               buttonClass += isSelected
                 ? 'bg-primary text-white'
-                : 'bg-surface border border-divider text-text-main active:bg-gray-50'
+                : 'bg-surface shadow-soft text-text-main active:bg-gray-50'
             } else {
               if (isCorrectAnswer) {
                 buttonClass += 'bg-green-500 text-white border-2 border-green-600'
               } else if (isSelected && !isCorrect) {
                 buttonClass += 'bg-red-500 text-white border-2 border-red-600'
               } else {
-                buttonClass += 'bg-surface border border-divider text-text-sub opacity-50'
+                buttonClass += 'bg-surface shadow-soft text-text-sub opacity-50'
               }
             }
 
@@ -219,11 +219,10 @@ export function QuizCard({
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className={`text-center py-4 px-6 rounded-lg ${
-              isCorrect
+            className={`text-center py-4 px-6 rounded-lg ${isCorrect
                 ? 'bg-green-100 text-green-800'
                 : 'bg-red-100 text-red-800'
-            }`}
+              }`}
           >
             <p className="text-body font-medium">
               {isCorrect ? '정답입니다! 🎉' : '아쉽네요... 다음 기회에!'}

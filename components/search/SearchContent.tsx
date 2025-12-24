@@ -161,7 +161,7 @@ export function SearchContent({
               className={`flex-1 py-2 px-4 rounded-lg text-body font-medium ${
                 activeTab === 'word'
                   ? 'bg-primary text-surface'
-                  : 'bg-surface border border-divider text-text-main'
+                  : 'bg-surface shadow-soft text-text-main'
               }`}
             >
               <FontAwesomeIcon icon={faBook} className="mr-2" />
@@ -172,7 +172,7 @@ export function SearchContent({
               className={`flex-1 py-2 px-4 rounded-lg text-body font-medium ${
                 activeTab === 'kanji'
                   ? 'bg-primary text-surface'
-                  : 'bg-surface border border-divider text-text-main'
+                  : 'bg-surface shadow-soft text-text-main'
               }`}
             >
               <FontAwesomeIcon icon={faLanguage} className="mr-2" />

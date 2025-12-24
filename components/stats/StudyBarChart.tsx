@@ -28,7 +28,7 @@ export function StudyBarChart({ data, period }: StudyBarChartProps) {
   }
 
   return (
-    <div className="bg-surface rounded-lg border border-divider p-6">
+    <div className="bg-surface rounded-lg shadow-soft p-6">
       <h3 className="text-body font-semibold text-text-main mb-8">{getTitle()}</h3>
       <ResponsiveContainer width="100%" height={300} className="-ml-12 !w-[calc(100%+3rem)]">
         <BarChart data={data}>

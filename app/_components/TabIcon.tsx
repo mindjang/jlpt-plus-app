@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { motion } from 'framer-motion'
 import { MOGU_BRAND_COLORS } from '@/lib/constants/colors'
 
 interface TabIconProps {
@@ -10,18 +11,18 @@ interface TabIconProps {
 
 export function TabIcon({ name, active }: TabIconProps) {
   const baseClasses = 'w-6 h-6 transition-all duration-300'
-  // Mogu 브랜드 포인트 컬러 사용 (또는 LEVEL_COLORS.N5 사용 가능)
   const strokeColor = active ? MOGU_BRAND_COLORS.primary : '#9CA3AF'
+  const fillColor = active ? `${MOGU_BRAND_COLORS.primary}20` : 'none' // 20% opacity fill for active
   const strokeWidth = 1.5
 
-  // 프리미엄 스타일 SVG 아이콘 (Material Design 3 스타일, 세련된 디자인)
   const renderIcon = () => {
+    const accentColor = active ? '#FF8C00' : 'transparent'
     switch (name) {
       case 'home':
         return (
           <svg
             className={baseClasses}
-            fill="none"
+            fill={fillColor}
             stroke={strokeColor}
             strokeWidth={strokeWidth}
             viewBox="0 0 24 24"
@@ -29,28 +30,29 @@ export function TabIcon({ name, active }: TabIconProps) {
             strokeLinejoin="round"
           >
             <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-            <polyline points="9 22 9 12 15 12 15 22" />
+            <path d="M9 22V12h6v10" fill={accentColor} fillOpacity={0.4} />
           </svg>
         )
       case 'acquire':
         return (
           <svg
             className={baseClasses}
-            fill="none"
+            fill={fillColor}
             stroke={strokeColor}
             strokeWidth={strokeWidth}
             viewBox="0 0 24 24"
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            <path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+            <path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292" />
+            <path d="M12 6.042a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" stroke={accentColor} strokeWidth={active ? 2.5 : 1.5} />
           </svg>
         )
       case 'practice':
         return (
           <svg
             className={baseClasses}
-            fill="none"
+            fill={fillColor}
             stroke={strokeColor}
             strokeWidth={strokeWidth}
             viewBox="0 0 24 24"
@@ -58,60 +60,40 @@ export function TabIcon({ name, active }: TabIconProps) {
             strokeLinejoin="round"
           >
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-            <polyline points="14 2 14 8 20 8" />
-            <line x1="9" y1="15" x2="15" y2="15" />
-            <line x1="12" y1="12" x2="12" y2="18" />
+            <path d="M14 2v6h6" fill={accentColor} fillOpacity={0.4} />
+            <path d="M8 13h8M8 17h5" stroke={accentColor} opacity={active ? 1 : 0} />
           </svg>
         )
       case 'my':
         return (
           <svg
             className={baseClasses}
-            fill="none"
+            fill={fillColor}
             stroke={strokeColor}
             strokeWidth={strokeWidth}
             viewBox="0 0 24 24"
             strokeLinecap="round"
             strokeLinejoin="round"
           >
-            <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            <circle cx="12" cy="7" r="4" fill={accentColor} fillOpacity={0.3} />
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
           </svg>
         )
       case 'game':
-        if (active) {
-          // 액티브일 때: 3D 게임기 아이콘 (이모지 + 3D 효과)
-          return (
-            <div 
-              className="relative w-8 h-8 flex items-center justify-center transition-all duration-300"
-              style={{
-                transform: 'perspective(1000px) rotateY(-15deg) rotateX(5deg)',
-                transformStyle: 'preserve-3d',
-              }}
-            >
-              <div
-                className="text-4xl leading-none filter drop-shadow-lg"
-              >
-                🕹️
-              </div>
-              {/* 네온 글로우 효과 */}
-            </div>
-          )
-        } else {
-          // 논액티브일 때: 노멀한 게임 아이콘
         return (
-            <svg
-              className={baseClasses}
-              fill="none"
-              stroke={strokeColor}
-              strokeWidth={strokeWidth}
-              viewBox="0 0 24 24"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.25 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
-            </svg>
+          <svg
+            className={baseClasses}
+            fill={fillColor}
+            stroke={strokeColor}
+            strokeWidth={strokeWidth}
+            viewBox="0 0 24 24"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <rect x="2" y="6" width="20" height="12" rx="2" fill={accentColor} fillOpacity={0.3} />
+            <path d="M6 12h4m-2-2v4m7-1h.01m2.99-2h.01" />
+          </svg>
         )
-        }
       default:
         return null
     }
@@ -119,6 +101,15 @@ export function TabIcon({ name, active }: TabIconProps) {
 
   return (
     <div className="flex items-center justify-center relative">
+      {active && (
+        <motion.div
+          layoutId="active-tab-glow"
+          className="absolute inset-0 bg-primary/10 blur-xl rounded-full scale-150"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        />
+      )}
       {renderIcon()}
     </div>
   )

@@ -70,7 +70,7 @@ export function PaywallOverlay({
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
-      <div className="bg-surface w-full max-w-md rounded-lg border border-divider p-6 space-y-4 relative">
+      <div className="bg-surface w-full max-w-md rounded-lg shadow-soft p-6 space-y-4 relative">
         {onClose && (
           <button
             onClick={onClose}
@@ -133,12 +133,12 @@ export function PaywallOverlay({
                 onChange={(e) => setCode(e.target.value)}
                 maxLength={16}
                 placeholder="예: ABCD-1234"
-                className="flex-1 border border-divider rounded-lg px-3 py-2 text-body"
+                className="flex-1 shadow-soft rounded-lg px-3 py-2 text-body"
               />
               <button
                 disabled={redeemLoading}
                 onClick={handleRedeem}
-                className="px-4 py-3 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-50"
+                className="px-4 py-3 bg-page shadow-soft rounded-lg text-body font-medium active:bg-gray-50"
               >
                 {redeemLoading ? '적용중...' : '등록'}
               </button>
@@ -148,7 +148,7 @@ export function PaywallOverlay({
 
         {showLogin && (
           <button
-            className="w-full py-3 rounded-lg bg-page border border-divider text-body font-medium active:bg-gray-50"
+            className="w-full py-3 rounded-lg bg-page shadow-soft text-body font-medium active:bg-gray-50"
             onClick={() => {
               if (user) {
                 router.push('/home')

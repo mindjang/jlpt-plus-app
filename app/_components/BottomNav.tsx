@@ -4,7 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { TabIcon } from './TabIcon'
-import { LEVEL_COLORS, MOGU_BRAND_COLORS } from '@/lib/constants/colors'
+import { MOGU_BRAND_COLORS } from '@/lib/constants/colors'
 
 export interface TabItem {
   id: string
@@ -63,17 +63,15 @@ export function BottomNav() {
                 className="flex flex-col items-center justify-center flex-1 h-full transition-all duration-200 relative group"
               >
                 <TabIcon name={tab.icon} active={isActive} />
-                {!(tab.id === 'game' && isActive) && (
-                  <span
-                    className="text-[0.675rem] transition-all duration-200"
-                    style={{
-                      color: isActive ? MOGU_BRAND_COLORS.primary : '#9CA3AF',
-                      fontWeight: 500,
-                    }}
-                  >
-                    {tab.label}
-                  </span>
-                )}
+                <span
+                  className="text-[0.675rem] transition-all duration-200"
+                  style={{
+                    color: isActive ? MOGU_BRAND_COLORS.primary : '#9CA3AF',
+                    fontWeight: 500,
+                  }}
+                >
+                  {tab.label}
+                </span>
               </Link>
             )
           })}

@@ -41,7 +41,7 @@ function lightenColor(hex: string, factor: number = 0.15): string {
  * @param lightness 밝기 조절 (0-1, 기본: 0.92 - 매우 밝게)
  * @returns 매우 밝은 Hex 색상 코드
  */
-function generateLightGradientColor(hex: string, lightness: number = 0.92): string {
+function generateLightGradientColor(hex: string, lightness: number = 0.88): string {
   // 원본 색상을 매우 밝게 만들어서 그라데이션 from 색상으로 사용
   const r = Math.min(255, parseInt(hex.slice(1, 3), 16) + (255 - parseInt(hex.slice(1, 3), 16)) * lightness)
   const g = Math.min(255, parseInt(hex.slice(3, 5), 16) + (255 - parseInt(hex.slice(3, 5), 16)) * lightness)
@@ -56,7 +56,7 @@ function generateLightGradientColor(hex: string, lightness: number = 0.92): stri
  * @param lightness 밝기 조절 (0-1, 기본: 0.85)
  * @returns 중간 밝기 Hex 색상 코드
  */
-function generateMediumGradientColor(hex: string, lightness: number = 0.85): string {
+function generateMediumGradientColor(hex: string, lightness: number = 0.78): string {
   // 원본 색상을 중간 밝기로 만들어서 그라데이션 to 색상으로 사용
   const r = Math.min(255, parseInt(hex.slice(1, 3), 16) + (255 - parseInt(hex.slice(1, 3), 16)) * lightness)
   const g = Math.min(255, parseInt(hex.slice(3, 5), 16) + (255 - parseInt(hex.slice(3, 5), 16)) * lightness)
@@ -87,11 +87,11 @@ export const MOGU_BRAND_COLORS = {
  * 주로 칩, 텍스트, 강조 요소에 사용
  */
 export const LEVEL_COLORS: Record<Level, string> = {
-  N5: '#FF8C00', // 밝은 주황 (가장 쉬움)
-  N4: '#FF6B35', // 오렌지-빨강
-  N3: '#E63946', // 빨강
-  N2: '#6A4C93', // 보라
-  N1: '#1E88E5', // 파랑 (가장 어려움)
+  N5: '#FFA133', // More Defined Orange
+  N4: '#FF8566', // More Defined Coral
+  N3: '#FF8090', // More Defined Rose
+  N2: '#A385DB', // More Defined Purple
+  N1: '#7BB9F9', // More Defined Blue
 }
 
 /**
@@ -100,25 +100,25 @@ export const LEVEL_COLORS: Record<Level, string> = {
  * LEVEL_COLORS에서 자동 생성 (매우 밝은 톤)
  */
 export const LEVEL_GRADIENTS: Record<Level, { from: string; to: string }> = {
-  N5: { 
-    from: generateLightGradientColor(LEVEL_COLORS.N5, 0.92), 
-    to: generateMediumGradientColor(LEVEL_COLORS.N5, 0.85) 
+  N5: {
+    from: generateLightGradientColor(LEVEL_COLORS.N5, 0.92),
+    to: generateMediumGradientColor(LEVEL_COLORS.N5, 0.85)
   },
-  N4: { 
-    from: generateLightGradientColor(LEVEL_COLORS.N4, 0.92), 
-    to: generateMediumGradientColor(LEVEL_COLORS.N4, 0.85) 
+  N4: {
+    from: generateLightGradientColor(LEVEL_COLORS.N4, 0.92),
+    to: generateMediumGradientColor(LEVEL_COLORS.N4, 0.85)
   },
-  N3: { 
-    from: generateLightGradientColor(LEVEL_COLORS.N3, 0.92), 
-    to: generateMediumGradientColor(LEVEL_COLORS.N3, 0.85) 
+  N3: {
+    from: generateLightGradientColor(LEVEL_COLORS.N3, 0.92),
+    to: generateMediumGradientColor(LEVEL_COLORS.N3, 0.85)
   },
-  N2: { 
-    from: generateLightGradientColor(LEVEL_COLORS.N2, 0.92), 
-    to: generateMediumGradientColor(LEVEL_COLORS.N2, 0.85) 
+  N2: {
+    from: generateLightGradientColor(LEVEL_COLORS.N2, 0.92),
+    to: generateMediumGradientColor(LEVEL_COLORS.N2, 0.85)
   },
-  N1: { 
-    from: generateLightGradientColor(LEVEL_COLORS.N1, 0.92), 
-    to: generateMediumGradientColor(LEVEL_COLORS.N1, 0.85) 
+  N1: {
+    from: generateLightGradientColor(LEVEL_COLORS.N1, 0.92),
+    to: generateMediumGradientColor(LEVEL_COLORS.N1, 0.85)
   },
 }
 
@@ -190,11 +190,11 @@ export const LEVEL_TEXT_COLORS: Record<Level, string> = LEVEL_COLORS
  * LEVEL_COLORS에서 자동 계산
  */
 export const LEVEL_BG_COLORS: Record<Level, string> = {
-  N5: hexToRgba(LEVEL_COLORS.N5, 0.1),
-  N4: hexToRgba(LEVEL_COLORS.N4, 0.1),
-  N3: hexToRgba(LEVEL_COLORS.N3, 0.1),
-  N2: hexToRgba(LEVEL_COLORS.N2, 0.1),
-  N1: hexToRgba(LEVEL_COLORS.N1, 0.1),
+  N5: hexToRgba(LEVEL_COLORS.N5, 0.15),
+  N4: hexToRgba(LEVEL_COLORS.N4, 0.15),
+  N3: hexToRgba(LEVEL_COLORS.N3, 0.15),
+  N2: hexToRgba(LEVEL_COLORS.N2, 0.15),
+  N1: hexToRgba(LEVEL_COLORS.N1, 0.15),
 }
 
 /**

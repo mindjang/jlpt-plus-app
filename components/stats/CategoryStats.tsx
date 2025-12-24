@@ -74,14 +74,14 @@ export function CategoryStats() {
         const allStats = await getAllQuizStats(user.uid)
         const levelStats: any[] = []
 
-        ;(['N5', 'N4', 'N3', 'N2', 'N1'] as JlptLevel[]).forEach((level) => {
-          const stat = allStats[level]
-          const questions = stat.totalQuestions
-          levelStats.push({
-            name: level,
-            value: questions,
+          ; (['N5', 'N4', 'N3', 'N2', 'N1'] as JlptLevel[]).forEach((level) => {
+            const stat = allStats[level]
+            const questions = stat.totalQuestions
+            levelStats.push({
+              name: level,
+              value: questions,
+            })
           })
-        })
 
         setPieData(levelStats)
 
@@ -158,16 +158,15 @@ export function CategoryStats() {
   return (
     <div className="space-y-4">
       {/* 카테고리 탭 */}
-      <div className="bg-surface rounded-lg border border-divider p-1 flex gap-1 overflow-x-auto">
+      <div className="bg-surface rounded-lg shadow-soft p-1 flex gap-1 overflow-x-auto">
         {(['word', 'kanji', 'quiz', 'game'] as CategoryType[]).map((cat) => (
           <button
             key={cat}
             onClick={() => setCategory(cat)}
-            className={`px-3 py-2 rounded-lg text-body font-medium whitespace-nowrap transition-colors ${
-              category === cat
+            className={`px-3 py-2 rounded-lg text-body font-medium whitespace-nowrap transition-colors ${category === cat
                 ? 'bg-primary text-white shadow-sm'
                 : 'text-text-sub active:bg-gray-50'
-            }`}
+              }`}
           >
             {cat === 'word' ? '어휘' : cat === 'kanji' ? '한자' : cat === 'quiz' ? '퀴즈' : '게임'}
           </button>
@@ -176,7 +175,7 @@ export function CategoryStats() {
 
       {/* 카테고리별 트로피 & 통계 */}
       {stats && (
-        <div className="bg-surface rounded-lg border border-divider p-4">
+        <div className="bg-surface rounded-lg shadow-soft p-4">
           <h2 className="text-body font-semibold text-text-main mb-3">
             {getCategoryIcon()} {getCategoryName()} 학습
           </h2>
@@ -201,7 +200,7 @@ export function CategoryStats() {
 
       {/* 7일 학습 정보 */}
       {!loading && weekData.length > 0 && (
-        <div className="bg-surface rounded-lg border border-divider p-4">
+        <div className="bg-surface rounded-lg shadow-soft p-4">
           <h3 className="text-body font-semibold text-text-main mb-4">학습 정보</h3>
           <div className="flex items-end gap-1.5 mb-3">
             {weekData.map((day, index) => (
@@ -223,15 +222,15 @@ export function CategoryStats() {
           {/* 범례 */}
           <div className="flex items-center gap-3 text-label text-text-sub flex-wrap">
             <div className="flex items-center gap-1.5">
-              <div className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
+              <div className="w-2.5 h-2.5 rounded-full bg-primary" />
               <span>새로 배운 {getCategoryName()}</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <div className="w-2.5 h-2.5 rounded-full bg-blue-500" />
+              <div className="w-2.5 h-2.5 rounded-full bg-blue-300" />
               <span>이미 아는 {getCategoryName()}</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <div className="w-2.5 h-2.5 rounded-full bg-purple-500" />
+              <div className="w-2.5 h-2.5 rounded-full bg-purple-300" />
               <span>복습 {getCategoryName()}</span>
             </div>
           </div>
@@ -251,7 +250,7 @@ export function CategoryStats() {
       )}
 
       {loading && (
-        <div className="bg-surface rounded-lg border border-divider p-6 text-center">
+        <div className="bg-surface rounded-lg shadow-soft p-6 text-center">
           <div className="text-body text-text-sub">로딩 중...</div>
         </div>
       )}

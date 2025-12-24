@@ -86,12 +86,12 @@ export function SemicircleProgress({ value, progress, total, color }: Semicircle
         <canvas ref={canvasRef} className="w-full h-full" />
       </div>
       {/* 텍스트 오버레이 */}
-      <div className="absolute inset-0 flex flex-col items-center justify-end pointer-events-none z-10 pb-2">
-        <span className="text-subtitle font-semibold text-text-main leading-tight drop-shadow-sm">
+      <div className="absolute inset-0 flex flex-col gap-1 items-center justify-end pointer-events-none z-10">
+        <span className="text-title font-black leading-none tracking-tight" style={{ color: color }}>
           {Math.round(percent)}%
         </span>
-        <span className="text-label text-text-sub leading-tight drop-shadow-sm">
-          {progress}/{total}
+        <span className="text-label font-black text-text-sub">
+          {progress}<span className="opacity-40 mx-0.5">/</span>{total}
         </span>
       </div>
     </div>

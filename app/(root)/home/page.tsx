@@ -140,9 +140,9 @@ export default function HomePage() {
       <div className="w-full min-h-screen bg-page">
         <header className="fixed top-0 left-0 right-0 z-30 bg-surface border-b border-divider">
           <div className="flex items-center justify-center h-14 px-4">
-            <h1 
+            <h1
               className="text-xl font-black"
-              style={{ 
+              style={{
                 fontFamily: 'var(--font-mungyeong), MungyeongGamhongApple, Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif',
                 letterSpacing: '-0.02em',
               }}
@@ -164,9 +164,9 @@ export default function HomePage() {
       {/* 맵 헤더 */}
       <header className="fixed top-0 left-0 right-0 z-30 bg-surface border-b border-divider">
         <div className="max-w-lg mx-auto flex items-center justify-start h-12 px-4">
-          <h1 
+          <h1
             className="text-lg font-black text-primary"
-            style={{ 
+            style={{
               fontFamily: 'var(--font-mungyeong), MungyeongGamhongApple, Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif',
               letterSpacing: '-0.02em',
             }}
@@ -205,7 +205,7 @@ export default function HomePage() {
           {/* 주황색 버튼 */}
           {!isMember && <button
             onClick={() => router.push('/acquire/auto-study/n5/word')}
-            className="w-full py-4 px-6 rounded-lg text-body font-bold active:opacity-90 flex items-center justify-center gap-2 shadow-sm text-white"
+            className="w-full py-4 px-6 rounded-lg text-body font-bold active:opacity-90 flex items-center justify-center gap-2 shadow-card text-white"
             style={{
               backgroundColor: MOGU_BRAND_COLORS.primary,
             }}
@@ -236,7 +236,7 @@ export default function HomePage() {
               </div>
               <button
                 onClick={handleStartReview}
-                className="w-full py-4 px-6 rounded-lg text-body font-bold active:opacity-90 flex items-center justify-center gap-2 shadow-sm text-white"
+                className="w-full py-4 px-6 rounded-lg text-body font-bold active:opacity-90 flex items-center justify-center gap-2 shadow-card text-white"
                 style={{
                   backgroundColor: MOGU_BRAND_COLORS.primary,
                 }}
@@ -253,12 +253,12 @@ export default function HomePage() {
               </div>
               <button
                 onClick={handleStartNew}
-                className="w-full py-4 px-6 rounded-lg text-body font-bold active:opacity-90 flex items-center justify-center gap-2 shadow-sm text-white"
+                className="w-full py-4 px-6 rounded-lg text-body font-bold active:opacity-90 flex items-center justify-center gap-2 shadow-card text-white"
                 style={{
                   backgroundColor: LEVEL_COLORS.N5,
                 }}
               >
-                <BookOpen size={20} />
+                <BookOpen size={20} fill="currentColor" fillOpacity={0.2} />
                 {userLevel} 학습 시작하기
               </button>
             </div>
@@ -275,7 +275,7 @@ export default function HomePage() {
             <motion.button
               variants={itemVariants}
               onClick={() => router.push('/quiz')}
-              className="relative aspect-[3/4] bg-surface rounded-lg border border-divider p-3 flex flex-col justify-between active:bg-gray-50 overflow-hidden group"
+              className="relative aspect-[3/4] bg-surface rounded-lg p-3 flex flex-col justify-between active:bg-gray-50 overflow-hidden group shadow-soft"
             >
               <span className="text-sm font-semibold text-left">일일<br />퀴즈</span>
               <div className="w-full h-20 flex items-end justify-end">
@@ -294,7 +294,7 @@ export default function HomePage() {
             <motion.button
               variants={itemVariants}
               onClick={() => router.push('/stats')}
-              className="relative aspect-[3/4] bg-surface rounded-lg border border-divider p-3 flex flex-col justify-between active:bg-gray-50 overflow-hidden group"
+              className="relative aspect-[3/4] bg-surface rounded-lg p-3 flex flex-col justify-between active:bg-gray-50 overflow-hidden group shadow-soft"
             >
               <div className="flex flex-col gap-2">
                 <span className="text-sm font-semibold text-left">학습<br />통계</span>
@@ -315,7 +315,7 @@ export default function HomePage() {
             <motion.button
               variants={itemVariants}
               onClick={() => router.push('/history')}
-              className="relative aspect-[3/4] bg-surface rounded-lg border border-divider p-3 flex flex-col justify-between active:bg-gray-50 overflow-hidden group"
+              className="relative aspect-[3/4] bg-surface rounded-lg p-3 flex flex-col justify-between active:bg-gray-50 overflow-hidden group shadow-soft"
             >
               <div className="flex flex-col gap-2">
                 <span className="text-sm font-semibold text-left">학습<br />히스토리</span>
@@ -329,7 +329,7 @@ export default function HomePage() {
                   className="object-contain"
                   priority
                 />
-                
+
               </div>
             </motion.button>
           </div>
@@ -340,7 +340,7 @@ export default function HomePage() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-surface rounded-lg border border-divider p-4"
+          className="bg-surface rounded-lg p-4 shadow-soft"
         >
           <div className="flex items-center justify-between mb-3">
             <h3 className="text-body font-semibold text-text-main">오늘의 학습</h3>

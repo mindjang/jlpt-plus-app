@@ -43,7 +43,7 @@ export const Modal: React.FC<ModalProps> = ({
           {/* 모달 */}
           <div className="fixed inset-0 z-[70] flex items-center justify-center p-4 pointer-events-none">
             <motion.div
-              className="bg-surface rounded-lg p-6 w-full max-w-md max-h-[90vh] overflow-y-auto pointer-events-auto modal-enter"
+              className="bg-surface rounded-lg p-6 w-full max-w-md max-h-[90vh] overflow-y-auto pointer-events-auto modal-enter shadow-card"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}

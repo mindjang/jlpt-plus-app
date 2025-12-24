@@ -185,7 +185,7 @@ export function StudyHeatmap() {
 
   if (loading) {
     return (
-      <div className="bg-surface rounded-lg border border-divider p-4">
+      <div className="bg-surface rounded-lg shadow-soft p-4">
         <div className="h-32 animate-pulse bg-gray-200 rounded" />
       </div>
     )
@@ -193,7 +193,7 @@ export function StudyHeatmap() {
 
   const firstHalfMonths = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN']
   const secondHalfMonths = ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC']
-  const days = ['일', '월', '화', '수', '목', '금', '토']
+  const days = ['', '월', '', '수', '', '금', '']
 
   // 주 수 계산
   const getWeekCount = (cells: HeatmapCell[]) => {
@@ -206,7 +206,7 @@ export function StudyHeatmap() {
   const renderHeatmapGrid = (cells: HeatmapCell[], months: string[], label: string, startMonth: number) => {
     // 정확한 주 수 계산 (셀 배열 길이를 7로 나눈 올림값)
     const weekCount = Math.ceil(cells.length / 7)
-    
+
     // 마지막 주가 완전히 채워지지 않았으면 빈 셀 추가
     const totalCellsNeeded = weekCount * 7
     const cellsToRender = [...cells]
@@ -217,24 +217,24 @@ export function StudyHeatmap() {
         level: 0,
       })
     }
-    
+
     // 각 월의 시작 주 인덱스 계산
     const monthWeekPositions: { month: string; weekIndex: number }[] = []
     const periodStart = new Date(year, startMonth, 1)
     const periodFirstDay = periodStart.getDay()
     const periodCalendarStart = new Date(periodStart)
     periodCalendarStart.setDate(periodCalendarStart.getDate() - periodFirstDay)
-    
+
     months.forEach((month, monthIndex) => {
       const monthStart = new Date(year, startMonth + monthIndex, 1)
       const firstDay = monthStart.getDay()
       const calendarStart = new Date(monthStart)
       calendarStart.setDate(calendarStart.getDate() - firstDay)
-      
+
       const weekIndex = Math.floor((calendarStart.getTime() - periodCalendarStart.getTime()) / (1000 * 60 * 60 * 24 * 7))
       monthWeekPositions.push({ month, weekIndex })
     })
-    
+
     return (
       <div className="mb-6">
         <div className="text-label font-semibold text-text-main mb-2">{label}</div>
@@ -242,14 +242,14 @@ export function StudyHeatmap() {
           <div className="inline-block min-w-full">
             {/* 월 레이블 */}
             <div className="flex mb-1 relative h-4">
-              <div className="w-6" /> {/* 요일 레이블 공간 */}
+              <div className="w-8" /> {/* 요일 레이블 공간 (조금 더 넓게) */}
               <div className="flex-1 relative">
                 {monthWeekPositions.map(({ month, weekIndex }) => (
                   <div
                     key={month}
                     className="text-label text-text-sub absolute"
-                    style={{ 
-                      left: `calc(${weekIndex}*(100%/26))`,
+                    style={{
+                      left: `calc(${weekIndex}*(100%/${weekCount}))`, // weekCount 동적 계산
                       fontSize: '10px',
                       whiteSpace: 'nowrap'
                     }}
@@ -261,17 +261,16 @@ export function StudyHeatmap() {
             </div>
 
             {/* 히트맵 그리드 */}
-            <div className="flex items-start">
+            <div className="flex items-stretch">
               {/* 요일 레이블 */}
-              <div className="flex flex-col mr-1 gap-[2px]">
+              <div className="flex flex-col mr-2 gap-[2px] py-[1px]">
                 {days.map((day, i) => (
                   <div
-                    key={day}
-                    className="text-label text-text-sub flex items-center justify-end"
-                    style={{ 
-                      fontSize: '10px', 
-                      lineHeight: '1',
-                      minHeight: '14px',
+                    key={i}
+                    className="text-label text-text-sub flex items-center justify-end flex-1"
+                    style={{
+                      fontSize: '10px',
+                      height: 'auto',
                     }}
                   >
                     {day}
@@ -319,7 +318,7 @@ export function StudyHeatmap() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-surface rounded-lg border border-divider p-4"
+      className="bg-surface rounded-lg shadow-soft p-4"
     >
       {/* 헤더 */}
       <div className="flex items-center justify-between mb-4">

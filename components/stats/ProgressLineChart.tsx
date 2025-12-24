@@ -17,7 +17,7 @@ interface ProgressLineChartProps {
 
 export function ProgressLineChart({ data, title = '학습 추이' }: ProgressLineChartProps) {
   return (
-    <div className="bg-surface rounded-lg border border-divider p-6">
+    <div className="bg-surface rounded-lg shadow-soft p-6">
       <h3 className="text-body font-semibold text-text-main mb-8">{title}</h3>
       <ResponsiveContainer width="100%" className="-ml-12 !w-[calc(100%+3rem)]" height={300}>
         <LineChart data={data}>

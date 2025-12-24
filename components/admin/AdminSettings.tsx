@@ -89,10 +89,10 @@ export function AdminSettings() {
           const setting = settings[level] || { word: true, kanji: true }
 
           return (
-            <div key={level} className="bg-surface rounded-lg p-5 border border-divider">
+            <div key={level} className="bg-surface rounded-lg p-5 shadow-soft">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-subtitle font-semibold text-text-main">{level}</span>
-                <span className="text-label text-text-sub bg-page px-2 py-1 rounded border border-divider">
+                <span className="text-label text-text-sub bg-page px-2 py-1 rounded shadow-soft">
                   {level === 'N5' ? '입문' : level === 'N4' ? '기본' : level === 'N3' ? '응용' : level === 'N2' ? '심화' : '완성'}
                 </span>
               </div>

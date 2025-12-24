@@ -33,7 +33,7 @@ export function ChapterListSection({
         <select
           value={targetAmount}
           onChange={(e) => onTargetAmountChange(Number(e.target.value))}
-          className="px-3 py-2 rounded-lg border border-divider bg-surface text-body text-text-main"
+          className="px-3 py-2 rounded-lg shadow-soft bg-surface text-body text-text-main"
         >
           {CHAPTER_STUDY_TARGET_OPTIONS.map((val) => (
             <option key={val} value={val}>{val}개</option>
@@ -46,7 +46,7 @@ export function ChapterListSection({
         {chapters.map((chapter, index) => (
           <div
             key={chapter.number}
-            className="bg-surface rounded-lg p-4 border border-divider"
+            className="bg-surface rounded-lg p-4 shadow-soft"
           >
             <div className="flex items-center justify-between mb-2.5">
               <div className="flex items-center gap-2">

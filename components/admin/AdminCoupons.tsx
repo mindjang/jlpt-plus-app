@@ -183,7 +183,7 @@ export function AdminCoupons() {
       )}
 
       {/* Code List Table */}
-      <div className="bg-surface rounded-lg border border-divider overflow-hidden">
+      <div className="bg-surface rounded-lg shadow-soft overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
@@ -237,7 +237,7 @@ export function AdminCoupons() {
                 value={newCode}
                 onChange={(e) => setNewCode(e.target.value)}
                 readOnly={generationMode === 'auto'}
-                className="flex-1 px-3 py-2 border border-divider rounded bg-page text-text-main font-mono"
+                className="flex-1 px-3 py-2 shadow-soft rounded bg-page text-text-main font-mono"
                 placeholder="XXXX-XXXX"
               />
               {generationMode === 'auto' && (
@@ -251,7 +251,7 @@ export function AdminCoupons() {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-semibold text-text-sub mb-1">혜택 기간 (일)</label>
-              <input type="number" value={durationDays} onChange={e => setDurationDays(Number(e.target.value))} className="w-full px-3 py-2 border border-divider rounded" />
+              <input type="number" value={durationDays} onChange={e => setDurationDays(Number(e.target.value))} className="w-full px-3 py-2 shadow-soft rounded" />
             </div>
             <div>
               <label className="block text-xs font-semibold text-text-sub mb-1">사용 가능 횟수</label>
@@ -260,13 +260,13 @@ export function AdminCoupons() {
                 <label htmlFor="unlimited" className="text-sm">무제한</label>
               </div>
               {!unlimitedUses && (
-                <input type="number" value={remainingUses || ''} onChange={e => setRemainingUses(Number(e.target.value))} className="w-full px-3 py-2 border border-divider rounded" placeholder="횟수 입력" />
+                <input type="number" value={remainingUses || ''} onChange={e => setRemainingUses(Number(e.target.value))} className="w-full px-3 py-2 shadow-soft rounded" placeholder="횟수 입력" />
               )}
             </div>
           </div>
           <div>
             <label className="block text-xs font-semibold text-text-sub mb-1">비고 (선택)</label>
-            <input type="text" value={note} onChange={e => setNote(e.target.value)} className="w-full px-3 py-2 border border-divider rounded" placeholder="메모..." />
+            <input type="text" value={note} onChange={e => setNote(e.target.value)} className="w-full px-3 py-2 shadow-soft rounded" placeholder="메모..." />
           </div>
 
           <button onClick={handleCreateCode} disabled={creating} className="w-full py-3 px-4 bg-primary text-white rounded-lg text-body font-semibold active:opacity-80 disabled:opacity-50">
@@ -283,7 +283,7 @@ export function AdminCoupons() {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="block text-xs font-semibold text-text-sub mb-1">혜택 기간 (일)</label>
-                <input type="number" value={editDurationDays} onChange={e => setEditDurationDays(Number(e.target.value))} className="w-full px-3 py-2 border border-divider rounded" />
+                <input type="number" value={editDurationDays} onChange={e => setEditDurationDays(Number(e.target.value))} className="w-full px-3 py-2 shadow-soft rounded" />
               </div>
               <div>
                 <label className="block text-xs font-semibold text-text-sub mb-1">남은 횟수</label>
@@ -292,13 +292,13 @@ export function AdminCoupons() {
                   <label htmlFor="edit-unlimited" className="text-sm">무제한</label>
                 </div>
                 {!editUnlimitedUses && (
-                  <input type="number" value={editRemainingUses ?? ''} onChange={e => setEditRemainingUses(Number(e.target.value))} className="w-full px-3 py-2 border border-divider rounded" />
+                  <input type="number" value={editRemainingUses ?? ''} onChange={e => setEditRemainingUses(Number(e.target.value))} className="w-full px-3 py-2 shadow-soft rounded" />
                 )}
               </div>
             </div>
             <div>
               <label className="block text-xs font-semibold text-text-sub mb-1">비고</label>
-              <input type="text" value={editNote} onChange={e => setEditNote(e.target.value)} className="w-full px-3 py-2 border border-divider rounded" />
+              <input type="text" value={editNote} onChange={e => setEditNote(e.target.value)} className="w-full px-3 py-2 shadow-soft rounded" />
             </div>
             <button onClick={handleUpdateCode} disabled={updating} className="w-full py-3 px-4 bg-primary text-white rounded-lg text-body font-semibold active:opacity-80 disabled:opacity-50">
               {updating ? '수정 중...' : '수정 완료'}

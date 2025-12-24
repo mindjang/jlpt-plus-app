@@ -242,7 +242,7 @@ export function ContentTable({ level, type }: ContentTableProps) {
               setSearchTerm(e.target.value)
               // 검색어 변경 시 페이지를 1로 리셋 (URL 업데이트는 useEffect에서 처리)
             }}
-            className="flex-1 px-4 py-2 border border-divider rounded-lg text-body"
+            className="flex-1 px-4 py-2 shadow-soft rounded-lg text-body"
           />
           <button
             onClick={() => setShowAddModal(true)}
@@ -264,7 +264,7 @@ export function ContentTable({ level, type }: ContentTableProps) {
         </div>
 
         {/* 테이블 */}
-        <div className="bg-surface rounded-lg border border-divider overflow-hidden">
+        <div className="bg-surface rounded-lg shadow-soft overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-page border-b border-divider">
@@ -355,7 +355,7 @@ export function ContentTable({ level, type }: ContentTableProps) {
             <button
               onClick={() => updatePage(Math.max(1, page - 1))}
               disabled={page === 1}
-              className="px-3 py-2 border border-divider rounded-lg text-body disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50"
+              className="px-3 py-2 shadow-soft rounded-lg text-body disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50"
             >
               이전
             </button>
@@ -365,7 +365,7 @@ export function ContentTable({ level, type }: ContentTableProps) {
             <button
               onClick={() => updatePage(Math.min(totalPages, page + 1))}
               disabled={page === totalPages}
-              className="px-3 py-2 border border-divider rounded-lg text-body disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50"
+              className="px-3 py-2 shadow-soft rounded-lg text-body disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-50"
             >
               다음
             </button>

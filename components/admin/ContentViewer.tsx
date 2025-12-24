@@ -167,7 +167,7 @@ export function ContentViewer({ isOpen, onClose, level, type }: ContentViewerPro
               placeholder="검색어 입력..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="flex-1 px-4 py-2 border border-divider rounded-lg text-body"
+              className="flex-1 px-4 py-2 shadow-soft rounded-lg text-body"
             />
             <button
               onClick={() => setShowAddModal(true)}
@@ -192,7 +192,7 @@ export function ContentViewer({ isOpen, onClose, level, type }: ContentViewerPro
           {!loading && !error && (
             <div className="max-h-[60vh] overflow-y-auto space-y-2 pr-2">
               {filteredItems.slice(0, 100).map((item) => (
-                <div key={item.id} className="p-3 bg-page border border-divider rounded-lg flex justify-between items-center gap-2">
+                <div key={item.id} className="p-3 bg-page shadow-soft rounded-lg flex justify-between items-center gap-2">
                   <div className="flex-1 min-w-0">
                     <div className="text-subtitle font-semibold text-text-main">{item.main}</div>
                     {item.extra && <div className="text-label text-text-sub">{item.extra}</div>}
@@ -230,7 +230,7 @@ export function ContentViewer({ isOpen, onClose, level, type }: ContentViewerPro
           )}
 
           <div className="flex justify-end pt-2">
-            <button onClick={onClose} className="px-4 py-3 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-50">
+            <button onClick={onClose} className="px-4 py-3 bg-page shadow-soft rounded-lg text-body font-medium active:bg-gray-50">
               닫기
             </button>
           </div>

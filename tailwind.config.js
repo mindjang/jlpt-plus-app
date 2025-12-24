@@ -29,25 +29,25 @@ function generateMediumGradientColor(hex, lightness = 0.85) {
 
 // 레벨별 그라데이션 (LEVEL_COLORS에서 자동 생성)
 const LEVEL_GRADIENTS = {
-  N5: { 
-    from: generateLightGradientColor(LEVEL_COLORS.N5, 0.92), 
-    to: generateMediumGradientColor(LEVEL_COLORS.N5, 0.85) 
+  N5: {
+    from: generateLightGradientColor(LEVEL_COLORS.N5, 0.92),
+    to: generateMediumGradientColor(LEVEL_COLORS.N5, 0.85)
   },
-  N4: { 
-    from: generateLightGradientColor(LEVEL_COLORS.N4, 0.92), 
-    to: generateMediumGradientColor(LEVEL_COLORS.N4, 0.85) 
+  N4: {
+    from: generateLightGradientColor(LEVEL_COLORS.N4, 0.92),
+    to: generateMediumGradientColor(LEVEL_COLORS.N4, 0.85)
   },
-  N3: { 
-    from: generateLightGradientColor(LEVEL_COLORS.N3, 0.92), 
-    to: generateMediumGradientColor(LEVEL_COLORS.N3, 0.85) 
+  N3: {
+    from: generateLightGradientColor(LEVEL_COLORS.N3, 0.92),
+    to: generateMediumGradientColor(LEVEL_COLORS.N3, 0.85)
   },
-  N2: { 
-    from: generateLightGradientColor(LEVEL_COLORS.N2, 0.92), 
-    to: generateMediumGradientColor(LEVEL_COLORS.N2, 0.85) 
+  N2: {
+    from: generateLightGradientColor(LEVEL_COLORS.N2, 0.92),
+    to: generateMediumGradientColor(LEVEL_COLORS.N2, 0.85)
   },
-  N1: { 
-    from: generateLightGradientColor(LEVEL_COLORS.N1, 0.92), 
-    to: generateMediumGradientColor(LEVEL_COLORS.N1, 0.85) 
+  N1: {
+    from: generateLightGradientColor(LEVEL_COLORS.N1, 0.92),
+    to: generateMediumGradientColor(LEVEL_COLORS.N1, 0.85)
   },
 }
 
@@ -126,15 +126,16 @@ module.exports = {
         divider: '#F3F3F3',
       },
       borderRadius: {
-        card: '8px', // 네이버 스타일: 8px
+        card: '16px',
         chip: '6px',
         kanji: '8px',
         search: '999px',
-        levelCard: '12px', // 네이버 스타일: 12px
+        levelCard: '16px',
+        lg: '16px',
       },
       boxShadow: {
-        // 네이버 스타일: 그림자 최소화 (필요시에만 사용)
-        soft: 'none', // 기본적으로 그림자 없음
+        soft: '0 2px 12px rgba(0, 0, 0, 0.06)',
+        card: '0 8px 32px rgba(0, 0, 0, 0.08)',
       },
       fontFamily: {
         sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'sans-serif'],

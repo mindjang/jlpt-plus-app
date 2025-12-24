@@ -77,7 +77,7 @@ export function ReportModal({
             {contentType === 'word' ? '단어' : '한자'}
           </label>
           <div
-            className="w-full px-3 py-2 rounded-md border border-divider bg-gray-50 text-body text-text-main cursor-not-allowed"
+            className="w-full px-3 py-2 rounded-md shadow-soft bg-gray-50 text-body text-text-main cursor-not-allowed"
             dangerouslySetInnerHTML={{ __html: contentText }}
           >
           </div>
@@ -92,7 +92,7 @@ export function ReportModal({
             type="text"
             value={level}
             readOnly
-            className="w-full px-3 py-2 rounded-md border border-divider bg-gray-50 text-body text-text-main cursor-not-allowed"
+            className="w-full px-3 py-2 rounded-md shadow-soft bg-gray-50 text-body text-text-main cursor-not-allowed"
           />
         </div>
 
@@ -107,7 +107,7 @@ export function ReportModal({
             onChange={(e) => setReason(e.target.value)}
             placeholder="예: 뜻이 잘못되었습니다. '사과'가 아니라 '감사'가 맞습니다."
             rows={5}
-            className="w-full px-3 py-2 rounded-md border border-divider bg-surface text-body text-text-main placeholder:text-text-sub focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
+            className="w-full px-3 py-2 rounded-md shadow-soft bg-surface text-body text-text-main placeholder:text-text-sub focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
             disabled={submitting}
           />
           <p className="text-xs text-text-sub mt-1">
@@ -127,7 +127,7 @@ export function ReportModal({
           <button
             onClick={handleClose}
             disabled={submitting}
-            className="flex-1 py-3 px-4 rounded-lg bg-surface border border-divider text-body font-medium text-text-main active:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex-1 py-3 px-4 rounded-lg bg-surface shadow-soft text-body font-medium text-text-main active:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             취소
           </button>

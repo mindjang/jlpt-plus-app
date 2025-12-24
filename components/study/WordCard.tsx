@@ -64,7 +64,7 @@ export function WordCard({
   // WordDetails 로드 (비동기, 블로킹하지 않음)
   useEffect(() => {
     let cancelled = false
-    
+
     const loadDetails = async () => {
       setLoadingDetails(true)
       try {
@@ -148,7 +148,7 @@ export function WordCard({
     <div className="w-full px-4 mx-auto flex-1 py-4">
       {/* 카드 */}
       <motion.div
-        className="flex flex-col bg-surface rounded-lg border border-divider relative h-full"
+        className="flex flex-col bg-surface rounded-lg shadow-card relative h-full"
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.18 }}
@@ -167,7 +167,7 @@ export function WordCard({
           {/* 신고 아이콘 */}
           <button
             onClick={() => setShowReportModal(true)}
-            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
+            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 shadow-soft"
             title="신고하기"
           >
             <FontAwesomeIcon
@@ -179,7 +179,7 @@ export function WordCard({
           {/* 눈 아이콘 (모든 내용 보이기/숨기기 토글) */}
           <button
             onClick={handleToggleAll}
-            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
+            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 shadow-soft"
           >
             <FontAwesomeIcon
               icon={isAllVisible ? faEye : faEyeSlash}
@@ -190,7 +190,7 @@ export function WordCard({
           {/* 상세 아이콘 */}
           <button
             onClick={() => router.push(`/acquire/word/${encodeURIComponent(word.entry)}`)}
-            className="h-8 px-2 gap-1 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
+            className="h-8 px-2 gap-1 flex items-center justify-center rounded-full active:bg-gray-100 shadow-soft"
           >
             <FontAwesomeIcon icon={faFileLines} className="text-text-sub" size="2xs" />
             <span className="text-xs">상세</span>
@@ -251,9 +251,9 @@ export function WordCard({
             >
               <div className="text-center">
                 <p className="text-label text-text-sub mb-2">예문</p>
-                <div 
+                <div
                   className={`text-lg text-jp text-text-main mb-3 leading-relaxed [&_rt]:text-sm [&_rt]:font-medium [&_rt]:text-blue-400 ${!showFurigana ? '[&_rt]:invisible' : ''}`}
-                  dangerouslySetInnerHTML={{ __html: firstExample.expExample1 }} 
+                  dangerouslySetInnerHTML={{ __html: firstExample.expExample1 }}
                 />
                 <div className={`text-text-sub ${showMeaning ? 'visible' : 'invisible'}`}>
                   {firstExample.expExample2}
@@ -276,21 +276,19 @@ export function WordCard({
           </button>
           <button
             onClick={() => setShowMeaning(!showMeaning)}
-            className={`button-press flex-1 py-3 px-4 rounded-lg text-body font-medium ${
-              showMeaning
+            className={`button-press flex-1 py-3 px-4 rounded-lg text-body font-medium ${showMeaning
                 ? 'bg-primary text-white'
                 : 'bg-surface border border-gray-400 text-text-main'
-            }`}
+              }`}
           >
             의미
           </button>
           <button
             onClick={() => setShowFurigana(!showFurigana)}
-            className={`button-press flex-1 py-3 px-4 rounded-lg text-body font-medium ${
-              showFurigana
+            className={`button-press flex-1 py-3 px-4 rounded-lg text-body font-medium ${showFurigana
                 ? 'bg-primary text-white'
                 : 'bg-surface border border-gray-400 text-text-main'
-            }`}
+              }`}
           >
             히라가나
           </button>

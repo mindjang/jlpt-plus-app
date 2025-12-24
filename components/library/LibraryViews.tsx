@@ -53,20 +53,30 @@ const ProgressCard: React.FC<ProgressCardProps> = ({
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`w-full bg-surface rounded-lg border border-divider p-4 flex flex-col gap-3 text-left transition-all ${
-        disabled ? 'opacity-60 cursor-not-allowed' : 'active:bg-gray-50'
-      }`}
+      className={`w-full bg-surface rounded-lg p-3.5 flex flex-col text-left transition-all shadow-soft border border-white/60 ${disabled ? 'opacity-60 cursor-not-allowed' : 'active:bg-gray-50'
+        }`}
     >
-      {/* 아이콘 */}
-      <div className="flex items-center justify-start">
-        {icon}
+      <div className="flex items-center justify-between mb-2">
+        {/* 아이콘 */}
+        <div className="flex items-center justify-start">
+          {icon}
+        </div>
+        {/* 퍼센트 */}
+        <div className="text-[10px] font-black" style={{ color: color }}>
+          {percentage}%
+        </div>
       </div>
 
-      {/* 제목 */}
-      <div className="text-body font-semibold text-text-main">{title}</div>
+      {/* 제목 (부연 설명) */}
+      <div className="text-[10px] font-bold text-text-sub mb-0.5">{title}</div>
+
+      {/* 숫자 (중요 정보) */}
+      <div className="text-body font-black text-text-main mb-2">
+        {learned.toLocaleString()}<span className="text-[10px] font-bold text-text-hint ml-0.5">/{total.toLocaleString()}</span>
+      </div>
 
       {/* 진행 바 */}
-      <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+      <div className="w-full h-1.5 rounded-full overflow-hidden" style={{ backgroundColor: `${color}15` }}>
         <div
           className="h-full rounded-full transition-all duration-300"
           style={{
@@ -74,16 +84,6 @@ const ProgressCard: React.FC<ProgressCardProps> = ({
             backgroundColor: color,
           }}
         />
-      </div>
-
-      {/* 숫자와 퍼센트 */}
-      <div className="flex items-center justify-between">
-        <div className="text-sm font-semibold text-text-main">
-          {learned.toLocaleString()}/{total.toLocaleString()}
-        </div>
-        <div className="text-xs text-text-sub">
-          {percentage}%
-        </div>
       </div>
     </button>
   )
@@ -172,7 +172,7 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
   }
 
   return (
-    <div className="flex flex-col gap-2 p-4 pb-16">
+    <div className="flex flex-col pb-14">
       {levels.map((level, i) => {
         const data = levelData[level]
         const progress = progressData[level]
@@ -184,59 +184,62 @@ export const StackLevelView: React.FC<ViewProps> = ({ onNavigate }) => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.05 }}
-            className="flex items-center justify-between gap-2 rounded-lg pl-1 pr-2 py-2"
+            className="flex items-center justify-between gap-4 p-4 border-b border-white/40 last:border-none"
             style={{
               backgroundColor: LEVEL_BG_COLORS[level as Level],
             }}
           >
             {/* Level Header */}
-            <div className="px-1">
-              <span className="font-bold text-text-main" style={{
+            <div className="px-1 min-w-[3.5rem] flex flex-col items-center justify-center">
+              <span className="text-2xl font-black text-text-main leading-none" style={{
                 fontFamily: 'var(--font-mungyeong), MungyeongGamhongApple, Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif',
                 color: levelColor,
+                textShadow: '0 2px 4px rgba(0,0,0,0.05)',
               }}>{level}</span>
             </div>
 
             {/* Progress Cards Grid */}
-            {/* 단어 암기 카드 */}
-            <ProgressCard
-              title="단어 암기"
-              icon={
-                <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{
-                  backgroundColor: `${levelColor}20`,
-                }}>
-                  <Book size={20} style={{ color: levelColor }} />
-                </div>
-              }
-              learned={progress.learnedWords}
-              total={data.words}
-              progress={progress.wordProgress}
-              color={levelColor}
-              onClick={() => {
-                if (isEnabled(level, 'word')) onNavigate(level, 'word')
-              }}
-              disabled={!isEnabled(level, 'word')}
-            />
+            <div className="flex-1 grid grid-cols-2 gap-2">
+              {/* 단어 암기 카드 */}
+              <ProgressCard
+                title="단어 암기"
+                icon={
+                  <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{
+                    backgroundColor: `${levelColor}25`,
+                  }}>
+                    <Book size={16} style={{ color: levelColor }} />
+                  </div>
+                }
+                learned={progress.learnedWords}
+                total={data.words}
+                progress={progress.wordProgress}
+                color={levelColor}
+                onClick={() => {
+                  if (isEnabled(level, 'word')) onNavigate(level, 'word')
+                }}
+                disabled={!isEnabled(level, 'word')}
+              />
 
-            {/* 한자 암기 카드 */}
-            <ProgressCard
-              title="한자 암기"
-              icon={
-                <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{
-                  backgroundColor: `${levelColor}20`,
-                }}>
-                  <Type size={20} style={{ color: levelColor }} />
-                </div>
-              }
-              learned={progress.learnedKanjis}
-              total={data.kanji}
-              progress={progress.kanjiProgress}
-              color={levelColor}
-              onClick={() => {
-                if (isEnabled(level, 'kanji')) onNavigate(level, 'kanji')
-              }}
-              disabled={!isEnabled(level, 'kanji')}
-            />
+              {/* 한자 암기 카드 */}
+              <ProgressCard
+                title="한자 암기"
+                icon={
+                  <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{
+                    backgroundColor: `${levelColor}25`,
+                  }}>
+                    <Type size={16} style={{ color: levelColor }} />
+                  </div>
+                }
+                learned={progress.learnedKanjis}
+                total={data.kanji}
+                progress={progress.kanjiProgress}
+                color={levelColor}
+                onClick={() => {
+                  if (isEnabled(level, 'kanji')) onNavigate(level, 'kanji')
+                }}
+                disabled={!isEnabled(level, 'kanji')}
+              />
+            </div>
           </motion.div>
         )
       })}

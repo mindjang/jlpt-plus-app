@@ -118,7 +118,7 @@ export function KanjiCard({
     <div className={`w-full px-4 mx-auto flex-1 py-4 ${className}`}>
       {/* 카드 */}
       <motion.div 
-        className="flex flex-col bg-surface rounded-lg border border-divider relative h-full"
+        className="flex flex-col bg-surface rounded-lg shadow-soft relative h-full"
         initial={{ scale: 0.95, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.18 }}
@@ -137,7 +137,7 @@ export function KanjiCard({
           {/* 신고 아이콘 */}
           <button
             onClick={() => setShowReportModal(true)}
-            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
+            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 shadow-soft"
             title="신고하기"
           >
             <FontAwesomeIcon
@@ -149,7 +149,7 @@ export function KanjiCard({
           {/* 눈 아이콘 (모든 내용 보이기/숨기기 토글) */}
           <button
             onClick={handleToggleAll}
-            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
+            className="w-8 h-8 flex items-center justify-center rounded-full active:bg-gray-100 shadow-soft"
           >
             <FontAwesomeIcon 
               icon={isAllVisible ? faEye : faEyeSlash} 
@@ -159,7 +159,7 @@ export function KanjiCard({
           {/* 상세 아이콘 */}
           <button
             onClick={() => router.push(`/acquire/kanji/${encodeURIComponent(kanjiCharacter)}`)}
-            className="h-8 px-2 gap-1 flex items-center justify-center rounded-full active:bg-gray-100 border border-divider"
+            className="h-8 px-2 gap-1 flex items-center justify-center rounded-full active:bg-gray-100 shadow-soft"
           >
             <FontAwesomeIcon icon={faFileLines} className="text-text-sub" size="2xs" />
             <span className="text-xs">상세</span>

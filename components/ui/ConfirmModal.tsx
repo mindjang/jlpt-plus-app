@@ -46,7 +46,7 @@ export function ConfirmModal({
           <button
             onClick={onClose}
             disabled={loading}
-            className="flex-1 py-3 px-4 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-100 disabled:opacity-50"
+            className="flex-1 py-3 px-4 bg-page shadow-soft rounded-lg text-body font-medium active:bg-gray-100 disabled:opacity-50"
           >
             {cancelText}
           </button>

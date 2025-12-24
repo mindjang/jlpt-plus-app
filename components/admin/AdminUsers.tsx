@@ -136,7 +136,7 @@ export function AdminUsers() {
             placeholder="이름, 이메일, 전화번호, UID로 검색..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border border-divider rounded-lg text-body focus:outline-none focus:border-primary"
+            className="w-full pl-10 pr-4 py-2 shadow-soft rounded-lg text-body focus:outline-none focus:border-primary"
           />
         </div>
         <div className="text-body text-text-sub">
@@ -155,7 +155,7 @@ export function AdminUsers() {
       )}
 
       {/* 테이블 */}
-      <div className="bg-surface rounded-lg border border-divider overflow-hidden">
+      <div className="bg-surface rounded-lg shadow-soft overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>

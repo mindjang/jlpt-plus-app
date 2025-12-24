@@ -100,7 +100,7 @@ export function QuizResultScreen({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="bg-white rounded-lg overflow-hidden border border-divider"
+          className="bg-white rounded-lg overflow-hidden shadow-soft"
         >
           {/* 통계 카드들 */}
           <div className="p-6 grid grid-cols-3 gap-3 border-b border-gray-50">
@@ -294,7 +294,7 @@ export function QuizResultScreen({
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: hasWrongAnswers && onReviewWrong ? 1.4 : 1.3 }}
               onClick={() => router.push('/quiz')}
-              className="w-full py-4 px-6 bg-white border border-divider text-gray-700 rounded-lg text-body font-semibold active:bg-gray-50"
+              className="w-full py-4 px-6 bg-white shadow-soft text-gray-700 rounded-lg text-body font-semibold active:bg-gray-50"
             >
               메뉴로 돌아가기
             </motion.button>

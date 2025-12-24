@@ -286,7 +286,7 @@ export function AdminStats() {
   return (
     <div className="space-y-6">
       {/* 날짜 범위 선택 */}
-      <div className="bg-surface rounded-lg border border-divider p-4">
+      <div className="bg-surface rounded-lg shadow-soft p-4">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
             <Calendar className="w-5 h-5 text-text-sub" />
@@ -312,31 +312,31 @@ export function AdminStats() {
 
       {/* 요약 통계 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-page rounded-lg p-4 border border-divider">
+        <div className="bg-page rounded-lg p-4 shadow-soft">
           <div className="text-label text-text-sub mb-1">총 사용자</div>
           <div className="text-display-s font-bold text-text-main">{totalUsers.toLocaleString()}명</div>
         </div>
 
-        <div className="bg-page rounded-lg p-4 border border-divider">
+        <div className="bg-page rounded-lg p-4 shadow-soft">
           <div className="text-label text-text-sub mb-1">활성 멤버십</div>
           <div className="text-display-s font-bold text-text-main">{membershipStats.active.toLocaleString()}개</div>
           <div className="text-xs text-green-600 mt-1">전체: {membershipStats.total}개</div>
         </div>
 
-        <div className="bg-page rounded-lg p-4 border border-divider">
+        <div className="bg-page rounded-lg p-4 shadow-soft">
           <div className="text-label text-text-sub mb-1">총 학습 콘텐츠</div>
           <div className="text-display-s font-bold text-text-main">{totalContent.toLocaleString()}개</div>
           <div className="text-label text-text-sub mt-1">단어 + 한자</div>
         </div>
 
-        <div className="bg-page rounded-lg p-4 border border-divider">
+        <div className="bg-page rounded-lg p-4 shadow-soft">
           <div className="text-label text-text-sub mb-1">발급된 쿠폰</div>
           <div className="text-display-s font-bold text-text-main">{totalCodes.toLocaleString()}개</div>
         </div>
       </div>
 
       {/* 레벨별 학습 통계 */}
-      <div className="bg-surface rounded-lg border border-divider p-6">
+      <div className="bg-surface rounded-lg shadow-soft p-6">
         <h3 className="text-subtitle font-semibold text-text-main mb-4">레벨별 학습 통계</h3>
         <div className="space-y-4">
           {levelStats.map((stat) => (
@@ -359,7 +359,7 @@ export function AdminStats() {
       </div>
 
       {/* 최근 활동 추이 */}
-      <div className="bg-surface rounded-lg border border-divider p-6">
+      <div className="bg-surface rounded-lg shadow-soft p-6">
         <h3 className="text-subtitle font-semibold text-text-main mb-4">최근 {dateRange}일 활동 추이</h3>
         {dailyActivity.length > 0 ? (
           <div className="space-y-4">
@@ -399,7 +399,7 @@ export function AdminStats() {
       </div>
 
       {/* 멤버십 통계 */}
-      <div className="bg-surface rounded-lg border border-divider p-6">
+      <div className="bg-surface rounded-lg shadow-soft p-6">
         <h3 className="text-subtitle font-semibold text-text-main mb-4">멤버십 통계</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div>

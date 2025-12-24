@@ -146,7 +146,7 @@ export function AdminContentManager() {
       </div>
 
       {/* 선택 정보 표시 */}
-      <div className="bg-surface rounded-lg border border-divider p-4">
+      <div className="bg-surface rounded-lg shadow-soft p-4">
         <div className="flex items-center gap-2 text-body text-text-main">
           <span className="font-semibold">{selectedLevel}</span>
           <span className="text-text-sub">·</span>

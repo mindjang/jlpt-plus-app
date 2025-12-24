@@ -112,25 +112,25 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       // 초기 큐를 사용하여 통계 계산 (실제 학습한 카드 수 반영)
       const queueForStats = sessionInitialQueue.length > 0 ? sessionInitialQueue : finalQueue
       const stats = calculateStudyStats(queueForStats, studyTime)
-      
+
       // 타입 결정 (words 배열이 있으면 'word', kanjis 배열이 있으면 'kanji')
       const contentType = words.length > 0 ? 'word' : 'kanji'
-      
+
       // sessionStorage에 결과 저장
       sessionStorage.setItem('studyResult', JSON.stringify(stats))
-      
+
       // 자동 학습 페이지로 돌아가기 위한 레벨과 타입 정보 저장
       sessionStorage.setItem('studyReturnInfo', JSON.stringify({
         level: level.toLowerCase(),
         type: contentType,
       }))
-      
+
       // 결과 페이지 로드 완료 플래그 설정
       sessionStorage.setItem('studyResultLoading', 'true')
-      
+
       // 결과 화면으로 리다이렉트
       router.push('/practice/result')
-      
+
       // 페이지 전환이 완료될 때까지 충분한 딜레이 후 finishing 상태 해제
       setTimeout(() => {
         setIsSaving(false)
@@ -175,7 +175,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       setCompletedCount(initialCompleted)
       setCurrentIndex(0)
       setCardStartTime(Date.now()) // 첫 카드 시작 시간 설정
-      
+
       // 큐가 로드되면 즉시 세션 예약 (무료 회차 소진)
       if (user && membershipStatus !== 'member' && !sessionReserved && studySessionAccess.allowed) {
         recordSession()
@@ -264,7 +264,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
     // 일별 활동 통계 업데이트
     try {
       const { updateDailyActivity, updateStreak, isFirstStudyToday } = await import('@/lib/firebase/firestore/dailyActivity')
-      
+
       await updateDailyActivity(user.uid, {
         mode: 'exampleStudy',
         questions: 1,
@@ -310,7 +310,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
     }
 
     setQueue(updatedQueue)
-    
+
     // 다음 카드 시작 시간 설정
     if (nextIndex < updatedQueue.length) {
       setCardStartTime(Date.now())
@@ -419,7 +419,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
       {/* 저장 중 로딩 오버레이 */}
       {isSaving && (
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
-          <div className="bg-surface rounded-lg border border-divider p-6 flex flex-col items-center gap-4">
+          <div className="bg-surface rounded-lg shadow-soft p-6 flex flex-col items-center gap-4">
             <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
             <p className="text-body text-text-main font-medium">데이터를 저장하는 중입니다...</p>
           </div>
@@ -434,7 +434,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
             💡 의미를 보는 것은 정답 보기가 아닙니다. 기억을 확인하는 과정이에요.
           </p>
         </div> */}
-        
+
         <div className="flex items-center justify-between mb-1">
           <span className="text-label text-text-sub">
             {totalCount - displayIndex}개 남음
@@ -444,7 +444,7 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
           </span>
         </div>
         <div className="h-1 bg-gray-100 rounded-full overflow-hidden">
-          <div 
+          <div
             className="h-full bg-primary rounded-full transition-all duration-300"
             style={{ width: `${(displayIndex / totalCount) * 100}%` }}
           />
@@ -478,11 +478,10 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
           {/* Primary 버튼 (good) */}
           <button
             onClick={() => handleGrade('good')}
-            className={`w-full py-4 px-6 rounded-xl transition-colors mb-3 shadow-sm ${
-              selectedGrade === 'good'
+            className={`w-full py-4 px-6 rounded-xl transition-colors mb-3 shadow-sm ${selectedGrade === 'good'
                 ? 'bg-primary text-white shadow-md'
                 : 'bg-primary text-white active:opacity-90'
-            }`}
+              }`}
           >
             <div>기억났어요</div>
             {/* <div className="text-label mt-1 opacity-90">잘 기억하고 있어요</div> */}
@@ -500,52 +499,30 @@ export const StudySession = forwardRef<StudySessionHandle, StudySessionProps>(({
           <div className="grid grid-cols-3 gap-2">
             <button
               onClick={() => handleGrade('again')}
-              className={`py-3 px-2 rounded-lg text-body font-medium transition-colors ${
-                selectedGrade === 'again'
-                  ? 'bg-gray-200 text-text-main border-2 border-gray-300'
-                  : 'bg-gray-100 border border-gray-300 text-text-main active:bg-gray-200'
-              }`}
+              className={`py-3 px-2 rounded-lg text-body font-medium transition-colors ${selectedGrade === 'again'
+                  ? 'bg-gray-200 text-gray-700 border-2 border-gray-300'
+                  : 'bg-gray-50 border border-gray-200 text-gray-600 active:bg-gray-100'
+                }`}
             >
-              <div className="font-medium text-sm">기억이 안 나요</div>
-              {/* <div className="text-label text-text-sub text-xs mt-0.5">나중에 다시</div> */}
+              <div className="font-semibold text-xs">몰라요</div>
             </button>
             <button
               onClick={() => handleGrade('hard')}
-              className={`py-3 px-2 rounded-lg text-body font-medium transition-colors ${
-                selectedGrade === 'hard'
-                  ? 'bg-orange-100 border-2 border-orange-300 text-orange-900'
-                  : 'bg-orange-50 border border-orange-200 text-orange-800 active:bg-orange-100'
-              }`}
+              className={`py-3 px-2 rounded-lg text-body font-medium transition-colors ${selectedGrade === 'hard'
+                  ? 'bg-orange-100 border-2 border-orange-200 text-orange-700'
+                  : 'bg-[#FFF9F2] border border-[#FFE4CC] text-[#D97706] active:bg-[#FFF2E5]'
+                }`}
             >
-              <div className="font-medium text-sm">어려워요</div>
-              {/* <div className="text-label text-orange-600 text-xs mt-0.5">조금 더 연습</div> */}
-              {/* {selectedGrade === 'hard' && nextReviewInterval !== null && (
-                <div className="text-label text-orange-700 text-xs mt-0.5 font-medium">
-                  {nextReviewInterval < 1440
-                    ? `${Math.round(nextReviewInterval / 60)}시간 후`
-                    : `${minutesToDays(nextReviewInterval)}일 후`
-                  }
-                </div>
-              )} */}
+              <div className="font-semibold text-xs">어려워요</div>
             </button>
             <button
               onClick={() => handleGrade('easy')}
-              className={`py-3 px-2 rounded-lg text-body font-medium transition-colors ${
-                selectedGrade === 'easy'
-                  ? 'bg-green-100 border-2 border-green-300 text-green-900'
-                  : 'bg-green-50 border border-green-200 text-green-800 active:bg-green-100'
-              }`}
+              className={`py-3 px-2 rounded-lg text-body font-medium transition-colors ${selectedGrade === 'easy'
+                  ? 'bg-emerald-100 border-2 border-emerald-200 text-emerald-700'
+                  : 'bg-[#F2FBF9] border border-[#CCF2E9] text-[#059669] active:bg-[#E6F7F3]'
+                }`}
             >
-              <div className="font-medium text-sm">쉬워요</div>
-              {/* <div className="text-label text-green-600 text-xs mt-0.5">완벽해요</div> */}
-              {/* {selectedGrade === 'easy' && nextReviewInterval !== null && (
-                <div className="text-label text-green-700 text-xs mt-0.5 font-medium">
-                  {nextReviewInterval < 1440
-                    ? `${Math.round(nextReviewInterval / 60)}시간 후`
-                    : `${minutesToDays(nextReviewInterval)}일 후`
-                  }
-                </div>
-              )} */}
+              <div className="font-semibold text-xs">쉬워요</div>
             </button>
           </div>
         </div>

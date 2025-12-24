@@ -41,11 +41,11 @@ export function AdminWords() {
           <button
             key={level}
             onClick={() => setSelectedLevel(level)}
-            className="bg-surface rounded-lg p-6 border border-divider hover:border-primary transition-colors text-left"
+            className="bg-surface rounded-lg p-6 shadow-soft hover:border-primary transition-colors text-left"
           >
             <div className="flex items-center justify-between mb-2">
               <span className="text-subtitle font-semibold text-text-main">{level}</span>
-              <span className="text-label text-text-sub bg-page px-2 py-1 rounded border border-divider">
+              <span className="text-label text-text-sub bg-page px-2 py-1 rounded shadow-soft">
                 {level === 'N5' ? '입문' : level === 'N4' ? '기본' : level === 'N3' ? '응용' : level === 'N2' ? '심화' : '완성'}
               </span>
             </div>

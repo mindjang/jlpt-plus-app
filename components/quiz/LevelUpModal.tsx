@@ -26,7 +26,7 @@ export function LevelUpModal({ isOpen, newLevel, onClose }: LevelUpModalProps) {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ type: 'spring', damping: 15 }}
-            className="bg-surface rounded-lg border border-divider p-8 max-w-md w-full"
+            className="bg-surface rounded-lg shadow-soft p-8 max-w-md w-full"
             onClick={(e) => e.stopPropagation()}
           >
             {/* 애니메이션 아이콘 */}

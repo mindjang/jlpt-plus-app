@@ -95,10 +95,10 @@ export function AdminContent() {
           const setting = settings[level] || { word: true, kanji: true }
 
           return (
-            <div key={level} className="bg-page rounded-lg p-5 border border-divider">
+            <div key={level} className="bg-page rounded-lg p-5 shadow-soft">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-subtitle font-semibold text-text-main">{level}</span>
-                <span className="text-label text-text-sub bg-white px-2 py-1 rounded border border-divider">
+                <span className="text-label text-text-sub bg-white px-2 py-1 rounded shadow-soft">
                   {level === 'N5' ? '입문' : level === 'N4' ? '기본' : level === 'N3' ? '응용' : level === 'N2' ? '심화' : '완성'}
                 </span>
               </div>
@@ -143,13 +143,13 @@ export function AdminContent() {
                 <div className="pt-2 border-t border-divider flex gap-2">
                   <button
                     onClick={() => openViewer(level, 'word')}
-                    className="flex-1 py-2 px-3 text-label font-medium text-text-main bg-white border border-divider rounded active:bg-gray-50"
+                    className="flex-1 py-2 px-3 text-label font-medium text-text-main bg-white shadow-soft rounded active:bg-gray-50"
                   >
                     단어 목록
                   </button>
                   <button
                     onClick={() => openViewer(level, 'kanji')}
-                    className="flex-1 py-2 px-3 text-label font-medium text-text-main bg-white border border-divider rounded active:bg-gray-50"
+                    className="flex-1 py-2 px-3 text-label font-medium text-text-main bg-white shadow-soft rounded active:bg-gray-50"
                   >
                     한자 목록
                   </button>

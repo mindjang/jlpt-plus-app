@@ -297,7 +297,7 @@ export function ContentEditModal({
                 type="text"
                 value={wordEntry}
                 onChange={(e) => setWordEntry(e.target.value)}
-                className="w-full px-4 py-2 border border-divider rounded-lg text-body"
+                className="w-full px-4 py-2 shadow-soft rounded-lg text-body"
                 placeholder="あき"
               />
             </div>
@@ -310,7 +310,7 @@ export function ContentEditModal({
                 type="text"
                 value={wordKanji}
                 onChange={(e) => setWordKanji(e.target.value)}
-                className="w-full px-4 py-2 border border-divider rounded-lg text-body"
+                className="w-full px-4 py-2 shadow-soft rounded-lg text-body"
                 placeholder="秋"
               />
             </div>
@@ -323,7 +323,7 @@ export function ContentEditModal({
                 type="text"
                 value={wordLevel}
                 onChange={(e) => setWordLevel(e.target.value)}
-                className="w-full px-4 py-2 border border-divider rounded-lg text-body"
+                className="w-full px-4 py-2 shadow-soft rounded-lg text-body"
                 placeholder="5"
               />
             </div>
@@ -333,7 +333,7 @@ export function ContentEditModal({
                 품사 및 의미 *
               </label>
               {wordPartsMeans.map((pm, partIndex) => (
-                <div key={partIndex} className="mb-4 p-3 bg-page border border-divider rounded-lg">
+                <div key={partIndex} className="mb-4 p-3 bg-page shadow-soft rounded-lg">
                   <div className="flex gap-2 mb-2">
                     <input
                       type="text"
@@ -343,7 +343,7 @@ export function ContentEditModal({
                         updated[partIndex].part = e.target.value
                         setWordPartsMeans(updated)
                       }}
-                      className="flex-1 px-3 py-2 border border-divider rounded text-body"
+                      className="flex-1 px-3 py-2 shadow-soft rounded text-body"
                       placeholder="품사 (예: 명사)"
                     />
                     {wordPartsMeans.length > 1 && (
@@ -362,7 +362,7 @@ export function ContentEditModal({
                           type="text"
                           value={mean}
                           onChange={(e) => updatePartMean(partIndex, meanIndex, e.target.value)}
-                          className="flex-1 px-3 py-2 border border-divider rounded text-body"
+                          className="flex-1 px-3 py-2 shadow-soft rounded text-body"
                           placeholder="의미"
                         />
                         {pm.means.length > 1 && (
@@ -406,7 +406,7 @@ export function ContentEditModal({
                 type="text"
                 value={kanjiCharacter}
                 onChange={(e) => setKanjiCharacter(e.target.value)}
-                className="w-full px-4 py-2 border border-divider rounded-lg text-body text-2xl"
+                className="w-full px-4 py-2 shadow-soft rounded-lg text-body text-2xl"
                 placeholder="人"
                 maxLength={1}
               />
@@ -420,7 +420,7 @@ export function ContentEditModal({
                 type="text"
                 value={kanjiMeaning}
                 onChange={(e) => setKanjiMeaning(e.target.value)}
-                className="w-full px-4 py-2 border border-divider rounded-lg text-body"
+                className="w-full px-4 py-2 shadow-soft rounded-lg text-body"
                 placeholder="사람"
               />
             </div>
@@ -433,7 +433,7 @@ export function ContentEditModal({
                 type="text"
                 value={kanjiOnyomi}
                 onChange={(e) => setKanjiOnyomi(e.target.value)}
-                className="w-full px-4 py-2 border border-divider rounded-lg text-body"
+                className="w-full px-4 py-2 shadow-soft rounded-lg text-body"
                 placeholder="ジン、ニン"
               />
             </div>
@@ -446,7 +446,7 @@ export function ContentEditModal({
                 type="text"
                 value={kanjiKunyomi}
                 onChange={(e) => setKanjiKunyomi(e.target.value)}
-                className="w-full px-4 py-2 border border-divider rounded-lg text-body"
+                className="w-full px-4 py-2 shadow-soft rounded-lg text-body"
                 placeholder="ひと"
               />
             </div>
@@ -461,7 +461,7 @@ export function ContentEditModal({
                 type="text"
                 value={exampleEntry}
                 onChange={(e) => setExampleEntry(e.target.value)}
-                className="w-full px-4 py-2 border border-divider rounded-lg text-body"
+                className="w-full px-4 py-2 shadow-soft rounded-lg text-body"
                 placeholder="あき"
                 disabled={isEditMode}
               />
@@ -477,7 +477,7 @@ export function ContentEditModal({
               <textarea
                 value={exampleJapanese}
                 onChange={(e) => setExampleJapanese(e.target.value)}
-                className="w-full px-4 py-2 border border-divider rounded-lg text-body"
+                className="w-full px-4 py-2 shadow-soft rounded-lg text-body"
                 placeholder="秋が来ました。"
                 rows={3}
               />
@@ -490,7 +490,7 @@ export function ContentEditModal({
               <textarea
                 value={exampleKorean}
                 onChange={(e) => setExampleKorean(e.target.value)}
-                className="w-full px-4 py-2 border border-divider rounded-lg text-body"
+                className="w-full px-4 py-2 shadow-soft rounded-lg text-body"
                 placeholder="가을이 왔습니다."
                 rows={3}
               />
@@ -504,7 +504,7 @@ export function ContentEditModal({
                 type="text"
                 value={exampleRank}
                 onChange={(e) => setExampleRank(e.target.value)}
-                className="w-full px-4 py-2 border border-divider rounded-lg text-body"
+                className="w-full px-4 py-2 shadow-soft rounded-lg text-body"
                 placeholder="1"
               />
             </div>
@@ -514,7 +514,7 @@ export function ContentEditModal({
         <div className="flex justify-end gap-2 pt-4">
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-page border border-divider rounded-lg text-body font-medium active:bg-gray-50"
+            className="px-4 py-2 bg-page shadow-soft rounded-lg text-body font-medium active:bg-gray-50"
             disabled={saving}
           >
             취소

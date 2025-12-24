@@ -70,7 +70,7 @@ function generateMediumGradientColor(hex: string, lightness: number = 0.85): str
  */
 export const MOGU_BRAND_COLORS = {
   // 메인 포인트 컬러 (초록색 - 고양이와 풀)
-  primary: '#199c00', // 자연 초록색
+  primary: '#ff841f', // 자연 초록색
   // 보조 컬러
   cream: '#F0F8F0', // 연한 초록색 (배경/강조용)
   light: '#4DB84D', // 밝은 초록색 (배경용)

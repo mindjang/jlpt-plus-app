@@ -103,10 +103,10 @@ module.exports = {
           level: '#444444',
         },
         // Primary 색상 (Mogu 브랜드 컬러)
-        primary: '#199c00',
+        primary: '#ff841f',
         // Mogu 브랜드 포인트 컬러 (고양이와 자연 이미지 기반)
         mogu: {
-          DEFAULT: '#199c00', // 메인 포인트 컬러 (자연 초록색)
+          DEFAULT: '#ff841f', // 메인 포인트 컬러 (자연 초록색)
           cream: '#F0F8F0', // 연한 초록색
           light: '#4DB84D', // 밝은 초록색
           dark: '#147A00', // 어두운 초록색

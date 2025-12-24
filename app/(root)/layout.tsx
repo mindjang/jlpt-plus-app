@@ -22,6 +22,7 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
     // 사이드 메뉴에서 진입한 화면은 하단 네비 숨김
     searchParams.get('from') === 'menu' ||
     (pathname === '/quiz' && searchParams.get('state') === 'playing') ||
+    pathname === '/quiz/playing' ||
     (pathname === '/quiz/result') ||
     (pathname === '/practice/result')
 

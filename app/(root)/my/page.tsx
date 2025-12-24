@@ -421,7 +421,7 @@ function MyPageContent() {
 
   const handleLogout = async () => {
     await signOutUser()
-    router.push('/my')
+    router.push('/login')
   }
 
   const loadReports = async () => {

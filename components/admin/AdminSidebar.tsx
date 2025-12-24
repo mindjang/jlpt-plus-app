@@ -12,6 +12,7 @@ import {
   Settings,
   Flag
 } from 'lucide-react'
+import { signOutUser } from '@/lib/firebase/auth'
 
 export function AdminSidebar() {
   const pathname = usePathname()
@@ -29,6 +30,11 @@ export function AdminSidebar() {
   
   const handleNavigate = (path: string) => {
     router.push(path)
+  }
+
+  const handleLogout = async () => {
+    await signOutUser()
+    router.push('/login')
   }
 
   return (
@@ -66,6 +72,7 @@ export function AdminSidebar() {
       {/* 하단 로그아웃 */}
       <div className="p-2 border-t border-divider">
         <button 
+          onClick={handleLogout}
           className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-lg text-text-sub hover:bg-red-50 hover:text-red-600 active:bg-red-100 transition-colors"
           title="나가기"
         >

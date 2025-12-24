@@ -27,6 +27,7 @@ export function useMatchEngine(
   const [moves, setMoves] = useState(0)
   const [timeElapsed, setTimeElapsed] = useState(0)
   const [canFlip, setCanFlip] = useState(true)
+  const [restartCount, setRestartCount] = useState(0)
 
   const timerRef = useRef<number>()
   const gameStateRef = useRef<GameState>('playing')
@@ -136,7 +137,7 @@ export function useMatchEngine(
     }
 
     loadData()
-  }, [level, mode, difficulty])
+  }, [level, mode, difficulty, restartCount])
 
   const handleCardClick = (cardId: number) => {
     if (!canFlip) return
@@ -200,11 +201,8 @@ export function useMatchEngine(
     setCanFlip(true)
     setGameState('playing')
     gameStateRef.current = 'playing'
-    // 카드 재생성을 위해 useEffect 트리거
-    setTimeout(() => {
-      const event = new Event('restart')
-      window.dispatchEvent(event)
-    }, 100)
+    // trigger data reload
+    setRestartCount(prev => prev + 1)
   }
 
   const togglePause = () => {

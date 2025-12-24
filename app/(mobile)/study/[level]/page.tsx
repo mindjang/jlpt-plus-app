@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { useParams } from 'next/navigation'
+import { useParams, useRouter } from 'next/navigation'
 import { useAuth } from '@/components/auth/AuthProvider'
 import { useUserSettings } from '@/hooks/useUserSettings'
 import { StudySession } from '@/components/study/StudySession'
@@ -16,9 +16,15 @@ const mockKanjis: any[] = []
 export default function StudyPage() {
   const params = useParams()
   const level = params.level as string
+  const router = useRouter()
   const { user, loading } = useAuth()
   const { settings } = useUserSettings(user)
   const [mode, setMode] = useState<'example' | 'quiz'>('example')
+
+  const handleLogout = async () => {
+    await signOutUser()
+    router.push('/login')
+  }
 
   if (loading) {
     return (
@@ -45,7 +51,7 @@ export default function StudyPage() {
             {level} 학습
           </h1>
           <button
-            onClick={signOutUser}
+            onClick={handleLogout}
             className="text-body text-text-sub active:text-text-main"
           >
             로그아웃

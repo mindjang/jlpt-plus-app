@@ -163,7 +163,7 @@ export default function HomePage() {
     <div className="w-full min-h-screen bg-page">
       {/* 맵 헤더 */}
       <header className="fixed top-0 left-0 right-0 z-30 bg-surface border-b border-divider">
-        <div className="max-w-lg mx-auto flex items-center justify-start h-14 px-4">
+        <div className="max-w-lg mx-auto flex items-center justify-start h-12 px-4">
           <h1 
             className="text-lg font-black text-primary"
             style={{ 
@@ -186,7 +186,7 @@ export default function HomePage() {
           className="space-y-4"
         >
           {/* 사용자 이름 */}
-          <div>
+          <div className='mt-4'>
             <h2>
               <span className="text-primary font-bold pr-0.5">{userName}</span>님
             </h2>

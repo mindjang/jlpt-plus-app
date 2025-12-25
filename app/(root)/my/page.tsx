@@ -309,6 +309,11 @@ function MyPageContent() {
               plan: finalPlan,
               paymentMethod: finalPaymentMethod,
               easyPayProvider: finalEasyPayProvider,
+              customer: {
+                fullName: user.displayName || user.email?.split('@')[0] || '사용자',
+                email: user.email || undefined,
+                phoneNumber: phoneNumber || undefined,
+              },
             }),
           })
 

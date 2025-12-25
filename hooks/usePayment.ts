@@ -603,7 +603,7 @@ export function usePayment({
       // 카카오페이 버튼을 통한 결제가 아닌 경우에만 undefined로 설정
       const payMethod = config.billingKeyMethod === 'EASY_PAY' && config.issueIdPrefix.startsWith('kko')
         ? 'EASY_PAY' // 카카오페이 전용 버튼을 통한 결제인 경우에만 명시적으로 지정
-        : undefined // 그 외의 경우는 undefined로 하여 결제창에서 선택 가능
+        : 'CARD' // 그 외의 경우는 undefined로 하여 결제창에서 선택 가능
 
       interface CustomerPayload {
         fullName: string

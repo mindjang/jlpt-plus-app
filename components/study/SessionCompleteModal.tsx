@@ -31,7 +31,7 @@ export function SessionCompleteModal({
   }, [onClose, router])
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="min-h-screen flex items-center justify-center bg-white px-4">
       <div className="w-full max-w-md text-center">
         <div className="mb-6">
           <div className="text-display-l text-primary mb-3">🎉</div>
@@ -46,7 +46,7 @@ export function SessionCompleteModal({
               오늘 {stats.totalCards}개를 학습했어요
             </p>
           </div>
-          
+
           <div className="space-y-2">
             <div className="flex items-center justify-between py-2 border-b border-gray-100">
               <span className="text-body text-text-sub">신규 카드</span>

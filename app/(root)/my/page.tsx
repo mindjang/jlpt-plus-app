@@ -19,14 +19,12 @@ import { getUserReports } from '@/lib/firebase/firestore/reports'
 import type { ContentReport } from '@/lib/firebase/firestore/reports'
 import { TermsContent } from '@/data/legal/terms'
 import { PrivacyContent } from '@/data/legal/privacy'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { AUTO_STUDY_TARGET_OPTIONS } from '@/lib/constants/ui'
 import {
   ChevronRight,
   ChevronDown,
   ChevronUp,
-  CreditCard,
-  Settings,
   BarChart2,
   LogOut,
   User,
@@ -36,7 +34,6 @@ import {
   Crown,
   Target,
   Gift,
-  Calendar,
   Clock,
   CheckCircle2,
   Languages,

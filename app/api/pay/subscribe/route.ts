@@ -25,11 +25,16 @@ export async function POST(request: NextRequest) {
     if (authError) return authError
 
     const body = await request.json()
-    const { billingKey, plan, paymentMethod, easyPayProvider } = body as {
+    const { billingKey, plan, paymentMethod, easyPayProvider, customer } = body as {
       billingKey?: string
       plan?: Plan
       paymentMethod?: 'CARD' | 'EASY_PAY'
       easyPayProvider?: string
+      customer?: {
+        fullName?: string
+        email?: string
+        phoneNumber?: string
+      }
     }
 
     // customerId는 인증된 사용자의 uid를 사용
@@ -41,6 +46,7 @@ export async function POST(request: NextRequest) {
       billingKeyLength: billingKey?.length,
       plan,
       customerId,
+      hasCustomerInfo: !!customer
     })
 
     if (!billingKey || !plan) {
@@ -51,7 +57,7 @@ export async function POST(request: NextRequest) {
         plan,
       })
       return NextResponse.json(
-        { 
+        {
           error: 'billingKey, plan are required',
           received: { hasBillingKey: !!billingKey, hasPlan: !!plan }
         },
@@ -72,54 +78,74 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'PORTONE_API_SECRET is not configured' }, { status: 500 })
     }
 
-    const paymentId = `sub-${plan}-${customerId}-${Date.now()}`
+    // paymentId 생성 (특수문자 제외)
+    const timestamp = Date.now()
+    const randomPart = Math.random().toString(36).substring(2, 8)
+    const paymentId = `sub-${plan}-${timestamp}-${randomPart}`
+
     const amount = PLAN_AMOUNTS[plan]
-    const orderName = plan === 'monthly' 
+    const orderName = plan === 'monthly'
       ? '일본어학습 구독권 (1개월 정기결제)'
       : '일본어학습 구독권 (3개월 정기결제)'
 
+    // KG이니시스 필수 파라미터 구성
+    const apiBody: any = {
+      billingKey,
+      orderName,
+      customer: {
+        id: customerId,
+        // KG이니시스는 이름/이메일/전화번호가 필수일 수 있음 (문서 기준)
+        name: {
+          full: customer?.fullName || (user as any).name || (user as any).displayName || '사용자',
+        },
+        email: customer?.email || user!.email || 'no-email@example.com',
+        phoneNumber: customer?.phoneNumber || '010-0000-0000',
+      },
+      amount: {
+        total: amount,
+      },
+      currency: 'KRW',
+    };
+
+    console.log('[pay/subscribe] Calling PortOne API', {
+      url: `https://api.portone.io/payments/${paymentId}/billing-key`,
+      paymentId,
+      customer: apiBody.customer
+    });
+
     const paymentResponse = await fetch(
-      `https://api.portone.io/payments/${encodeURIComponent(paymentId)}/billing-key`,
+      `https://api.portone.io/payments/${paymentId}/billing-key`,
       {
         method: 'POST',
         headers: {
           Authorization: `PortOne ${apiSecret}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          billingKey,
-          orderName,
-          customer: {
-            id: customerId,
-          },
-          amount: {
-            total: amount,
-          },
-          currency: 'KRW',
-        }),
+        body: JSON.stringify(apiBody),
       }
     )
 
     const paymentJson = await paymentResponse.json().catch(() => ({}))
+
     if (!paymentResponse.ok) {
       console.error('[pay/subscribe] PortOne API failed', {
         status: paymentResponse.status,
         statusText: paymentResponse.statusText,
-        response: paymentJson,
-        request: {
-          paymentId,
-          billingKey: billingKey?.substring(0, 20) + '...',
-          plan,
-          amount,
-        },
+        error: paymentJson,
+        requestBody: {
+          ...apiBody,
+          billingKey: 'HIDDEN'
+        }
       })
+
+      // 구체적인 에러 메시지 반환
       return NextResponse.json(
-        { 
-          error: paymentJson?.message || 'payment failed',
+        {
+          error: paymentJson?.message || '결제 요청이 실패했습니다.',
           detail: paymentJson,
           portoneStatus: paymentResponse.status,
         },
-        { status: 400 }
+        { status: paymentResponse.status >= 500 ? 502 : 400 }
       )
     }
 
@@ -127,11 +153,10 @@ export async function POST(request: NextRequest) {
     let extractedEasyPayProvider: string | undefined = easyPayProvider
     if (paymentMethod === 'EASY_PAY' && !extractedEasyPayProvider) {
       // PortOne 응답에서 간편결제 제공사 정보 확인
-      // 일반적으로 paymentJson.easyPay?.provider 또는 paymentJson.provider에 있음
-      const responseProvider = (paymentJson as any)?.easyPay?.provider || 
-                              (paymentJson as any)?.provider ||
-                              (paymentJson as any)?.method?.provider
-      
+      const responseProvider = (paymentJson as any)?.easyPay?.provider ||
+        (paymentJson as any)?.provider ||
+        (paymentJson as any)?.method?.provider
+
       if (responseProvider) {
         // PortOne에서 반환하는 제공사 코드를 우리 타입에 맞게 변환
         const providerMap: Record<string, string> = {
@@ -196,7 +221,7 @@ export async function POST(request: NextRequest) {
       name: error?.name,
     })
     return NextResponse.json(
-      { 
+      {
         error: error?.message || 'unknown error',
         type: error?.name || 'UnknownError',
       },

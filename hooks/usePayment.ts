@@ -335,6 +335,11 @@ export function usePayment({
           plan,
           paymentMethod: config.billingKeyMethod, // 결제 수단 전달
           easyPayProvider: easyPayProvider, // 간편결제 제공사 전달
+          customer: {
+            fullName: fallbackName,
+            email: user.email || undefined,
+            phoneNumber: phoneNumber || undefined,
+          },
         }),
       })
       const data = await resp.json()

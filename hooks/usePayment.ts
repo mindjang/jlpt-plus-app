@@ -474,13 +474,13 @@ export function usePayment({
 
   const handleSubscribe = useCallback(async (plan: SubscriptionPlan) => {
     // TWA 환경이고 Google Play Billing이 사용 가능한 경우 우선 사용
-    if (isTWA()) {
-      const available = await isGooglePlayBillingAvailable()
-      if (available) {
-        await processGooglePlaySubscription(plan)
-        return
-      }
-    }
+    // if (isTWA()) {
+    //   const available = await isGooglePlayBillingAvailable()
+    //   if (available) {
+    //     await processGooglePlaySubscription(plan)
+    //     return
+    //   }
+    // }
 
     // 일반 PortOne 결제 처리
     const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID

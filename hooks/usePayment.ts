@@ -3,16 +3,11 @@
  */
 import { useState, useCallback } from 'react'
 import { handleError } from '@/lib/utils/error/errorHandler'
+import { logger } from '@/lib/utils/logger'
 import type { User } from 'firebase/auth'
-import {
-  isTWA,
-  isGooglePlayBillingAvailable,
-  purchaseSubscription,
-  getGooglePlayProductId,
-} from '@/lib/utils/google-play-billing'
 
-type SubscriptionPlan = 'monthly' | 'quarterly' // 정기구독: 1개월, 3개월
-type OneTimePlan = 'monthly' | 'yearly' // 단건결제: 1개월, 1년
+type SubscriptionPlan = 'monthly' | 'quarterly'
+type OneTimePlan = 'monthly' | 'yearly'
 type PaymentPlan = SubscriptionPlan | OneTimePlan
 
 interface UsePaymentOptions {
@@ -37,8 +32,6 @@ interface UsePaymentResult {
   handleOneTimePaymentKakao: (plan: OneTimePlan) => Promise<void>
 }
 
-type PaymentMethod = 'card' | 'kakao'
-
 interface BillingKeyConfig {
   storeId: string
   channelKey: string
@@ -49,9 +42,15 @@ interface BillingKeyConfig {
   successMessage: string
 }
 
-/**
- * 결제 로직을 관리하는 커스텀 훅
- */
+interface CustomerPayload {
+  fullName: string
+  name?: string
+  firstName?: string
+  lastName?: string
+  email?: string
+  phoneNumber?: string
+}
+
 export function usePayment({
   user,
   phoneNumber,
@@ -65,20 +64,12 @@ export function usePayment({
   const [payMessage, setPayMessage] = useState<string | null>(null)
   const [pendingPlan, setPendingPlan] = useState<PaymentPlan | null>(null)
 
-  /**
-   * PC/모바일 감지 유틸리티
-   */
   const isMobile = useCallback(() => {
     if (typeof window === 'undefined' || typeof navigator === 'undefined') return false
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
       window.innerWidth <= 768
   }, [])
 
-  /**
-   * 공통 정기구독 처리 로직
-   * 카드 결제와 간편결제(카카오페이 등)에서 공통으로 사용
-   * PC와 모바일 모두 지원
-   */
   const processSubscription = useCallback(async (
     plan: SubscriptionPlan,
     config: BillingKeyConfig,
@@ -96,8 +87,6 @@ export function usePayment({
 
     const mobile = isMobile()
 
-    // PC에서는 phoneNumber, email 필수 (KG이니시스 요구사항)
-    // 모바일에서는 optional
     if (!mobile && (!phoneNumber || !user.email)) {
       setPendingPlan(plan)
       if (onPhoneRequired) {
@@ -114,17 +103,14 @@ export function usePayment({
     setLoading(plan)
     setPayMessage(null)
 
-    // Log payment attempt
-    console.info('[Payment] Attempting payment', {
+    logger.info('[Payment] Attempting payment', {
       plan,
       method: config.issueIdPrefix === 'kko' ? 'easy_pay' : 'card',
       device: mobile ? 'mobile' : 'pc',
-      testMode: true,
       timestamp: Date.now(),
     })
 
     try {
-      // 서버 사이드에서는 PortOne SDK를 사용할 수 없음
       if (typeof window === 'undefined') {
         setPayMessage('결제는 브라우저에서만 가능합니다.')
         setLoading(null)
@@ -136,20 +122,10 @@ export function usePayment({
       const ts = Date.now().toString(36)
       const issueId = `${config.issueIdPrefix}-${plan}-${uidShort}-${ts}`.slice(0, 40)
 
-      interface CustomerPayload {
-        fullName: string
-        name?: string
-        firstName?: string
-        lastName?: string
-        email?: string
-        phoneNumber?: string
-      }
-
       const customerPayload: CustomerPayload = {
         fullName: fallbackName,
       }
 
-      // PC에서는 필수, 모바일에서는 optional
       if (user.email) {
         customerPayload.email = user.email
       }
@@ -157,14 +133,10 @@ export function usePayment({
         customerPayload.phoneNumber = phoneNumber
       }
 
-      // 카드 결제일 경우 name 필드 추가 (KG이니시스 요구사항)
       if (config.billingKeyMethod === 'CARD') {
         customerPayload.name = fallbackName
-        // KG이니시스는 fullName 또는 (firstName + lastName) 필수
-        // fullName이 이미 있으므로 추가 처리 불필요
       }
 
-      // 모바일 빌링키 발급 시 offerPeriod 필수 (카드 및 간편결제 모두)
       const billingKeyOptions: any = {
         storeId: config.storeId,
         channelKey: config.channelKey,
@@ -174,31 +146,13 @@ export function usePayment({
         customer: customerPayload,
       }
 
-      // 모바일 감지 재확인 (더 정확한 감지를 위해)
-      const isDefinitelyMobile = typeof window !== 'undefined' && typeof navigator !== 'undefined' && (
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-        window.innerWidth <= 768
-      )
-
-      // 모바일에서는 offerPeriod 필수 (KG이니시스 V2 요구사항)
-      // mobile 변수와 isDefinitelyMobile 둘 다 확인하여 안전하게 처리
-      if (mobile || isDefinitelyMobile) {
-        console.info('[Payment] Mobile detected, adding offerPeriod', {
-          mobile,
-          isDefinitelyMobile,
-          userAgent: typeof window !== 'undefined' && typeof navigator !== 'undefined' ? navigator.userAgent : 'N/A',
-          innerWidth: typeof window !== 'undefined' ? window.innerWidth : 'N/A',
-        })
-        // PortOne 문서에 따르면 offerPeriod는 range 객체 안에 from과 to 필드를 사용
+      if (mobile) {
         billingKeyOptions.offerPeriod = {
           range: {
             from: new Date().toISOString(),
-            to: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(), // 1년 후
+            to: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(),
           }
         }
-        // 모바일에서는 리디렉션 URL도 필수
-        // 리다이렉트 시 빌링키와 플랜 정보를 URL 파라미터로 전달
-        // 주의: 실제 빌링키는 리다이렉트 후 PortOne에서 제공되므로, 여기서는 플랜 정보만 전달
         const redirectParams = new URLSearchParams({
           payment: 'success',
           plan: plan,
@@ -207,13 +161,6 @@ export function usePayment({
         billingKeyOptions.redirectUrl = typeof window !== 'undefined'
           ? `${window.location.origin}/my?${redirectParams.toString()}`
           : `/my?${redirectParams.toString()}`
-      } else {
-        console.info('[Payment] PC detected, skipping offerPeriod', {
-          mobile,
-          isDefinitelyMobile,
-          userAgent: typeof window !== 'undefined' && typeof navigator !== 'undefined' ? navigator.userAgent : 'N/A',
-          innerWidth: typeof window !== 'undefined' ? window.innerWidth : 'N/A',
-        })
       }
 
       const issueResponse = await PortOne.requestIssueBillingKey(billingKeyOptions)
@@ -226,14 +173,11 @@ export function usePayment({
 
       const response = issueResponse as IssueResponse
 
-      // 간편결제 제공사 정보 추출
       let easyPayProvider: string | undefined = undefined
       if (config.billingKeyMethod === 'EASY_PAY') {
-        // 카카오페이 버튼을 통한 결제인 경우
         if (config.issueIdPrefix === 'kko') {
           easyPayProvider = 'KAKAOPAY'
         } else {
-          // PortOne 응답에서 간편결제 제공사 정보 확인
           const responseProvider = (response as any)?.easyPay?.provider ||
             (response as any)?.provider ||
             (response as any)?.method?.provider
@@ -258,33 +202,27 @@ export function usePayment({
         }
       }
 
-      // 모바일에서 리다이렉트가 발생한 경우
-      // (빌링키가 없고, 리다이렉트가 설정된 경우)
-      if ((mobile || isDefinitelyMobile) && (!response.billingKey || response.billingKey.trim() === '')) {
-        console.info('[Payment] Mobile redirect occurred, billing key will be received after redirect', {
+      if (mobile && (!response.billingKey || response.billingKey.trim() === '')) {
+        logger.info('[Payment] Mobile redirect occurred', {
           plan,
           method: config.billingKeyMethod === 'EASY_PAY' ? 'easy_pay' : 'card',
           redirectUrl: billingKeyOptions.redirectUrl,
           timestamp: Date.now(),
         })
-        // 모바일에서는 리다이렉트가 발생하므로 여기서는 대기
-        // 리다이렉트된 페이지에서 빌링키를 받아 처리
-        // 플랜 정보를 localStorage에 저장하여 리다이렉트 후 사용
         if (typeof window !== 'undefined') {
           localStorage.setItem('pendingPayment', JSON.stringify({
             plan,
             paymentMethod: config.billingKeyMethod,
-            easyPayProvider: easyPayProvider, // 간편결제 제공사 정보도 저장
+            easyPayProvider,
             timestamp: Date.now(),
           }))
         }
         setPayMessage('결제를 진행 중입니다...')
-        // 리다이렉트가 발생하므로 여기서 종료
         return
       }
 
       if (response.code !== undefined) {
-        console.warn('[Payment] Billing key issue failed', {
+        logger.warn('[Payment] Billing key issue failed', {
           plan,
           method: config.issueIdPrefix === 'kko' ? 'kakao' : 'card',
           error: response.message,
@@ -295,16 +233,15 @@ export function usePayment({
       }
 
       const billingKey = response.billingKey as string
-      console.info('[Payment] Billing key issued successfully', {
+      logger.info('[Payment] Billing key issued successfully', {
         plan,
         method: config.issueIdPrefix === 'kko' ? 'kakao' : 'card',
         billingKeyLength: billingKey?.length,
-        billingKeyPrefix: billingKey?.substring(0, 20),
         timestamp: Date.now(),
       })
 
       if (!billingKey || billingKey.trim() === '') {
-        console.error('[Payment] Billing key is empty', {
+        logger.error('[Payment] Billing key is empty', {
           plan,
           method: config.issueIdPrefix === 'kko' ? 'kakao' : 'card',
           response,
@@ -313,14 +250,12 @@ export function usePayment({
         return
       }
 
-      // Firebase ID 토큰 가져오기
       const idToken = await user.getIdToken()
 
-      console.info('[Payment] Calling subscribe API', {
+      logger.info('[Payment] Calling subscribe API', {
         plan,
         method: config.issueIdPrefix === 'kko' ? 'kakao' : 'card',
         hasBillingKey: !!billingKey,
-        billingKeyLength: billingKey?.length,
         timestamp: Date.now(),
       })
 
@@ -333,8 +268,8 @@ export function usePayment({
         body: JSON.stringify({
           billingKey,
           plan,
-          paymentMethod: config.billingKeyMethod, // 결제 수단 전달
-          easyPayProvider: easyPayProvider, // 간편결제 제공사 전달
+          paymentMethod: config.billingKeyMethod,
+          easyPayProvider,
           customer: {
             fullName: fallbackName,
             email: user.email || undefined,
@@ -344,23 +279,21 @@ export function usePayment({
       })
       const data = await resp.json()
       if (!resp.ok) {
-        console.error('[Payment] Subscription API failed', {
+        logger.error('[Payment] Subscription API failed', {
           plan,
           status: resp.status,
           error: data?.error,
           detail: data?.detail,
-          received: data?.received,
           timestamp: Date.now(),
         })
         setPayMessage(data?.error || '구독 결제에 실패했습니다.')
         return
       }
 
-      console.info('[Payment] Subscription completed successfully', {
+      logger.info('[Payment] Subscription completed successfully', {
         plan,
         method: config.billingKeyMethod === 'EASY_PAY' ? 'easy_pay' : 'card',
         device: isMobile() ? 'mobile' : 'pc',
-        testMode: true,
         timestamp: Date.now(),
       })
 
@@ -376,120 +309,8 @@ export function usePayment({
     }
   }, [user, phoneNumber, displayName, nameInput, onRefresh, onPhoneRequired, isMobile])
 
-  /**
-   * Google Play Billing을 통한 구독 처리
-   */
-  const processGooglePlaySubscription = useCallback(async (plan: SubscriptionPlan) => {
-    if (!user) return
-
-    setPayLoading(plan)
-    setPayMessage(null)
-
-    try {
-      // Google Play Billing 사용 가능 여부 확인
-      const available = await isGooglePlayBillingAvailable()
-      if (!available) {
-        setPayMessage('구글 플레이스토어 결제를 사용할 수 없습니다. 일반 결제를 시도합니다.')
-        // 일반 결제로 폴백
-        const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
-        const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY_CARD_SUBSCRIPTION || process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY
-        if (storeId && channelKey) {
-          const planNames: Record<SubscriptionPlan, string> = {
-            monthly: '1개월 구독',
-            quarterly: '3개월 구독',
-          }
-          const config: BillingKeyConfig = {
-            storeId,
-            channelKey,
-            billingKeyMethod: 'CARD',
-            issueIdPrefix: 'bill',
-            issueName: `${planNames[plan]} 빌링키 발급`,
-            errorMessage: '빌링키 발급에 실패했습니다.',
-            successMessage: '구독이 활성화되었습니다.',
-          }
-          await processSubscription(plan, config, setPayLoading)
-        }
-        return
-      }
-
-      // 구글 플레이스토어 상품 ID 가져오기
-      const productId = getGooglePlayProductId(plan)
-
-      console.info('[Payment] Attempting Google Play Billing', {
-        plan,
-        productId,
-        timestamp: Date.now(),
-      })
-
-      // 구매 요청
-      const purchaseResult = await purchaseSubscription(productId)
-
-      if (!purchaseResult || !purchaseResult.purchaseToken) {
-        setPayMessage('구글 플레이스토어 결제에 실패했습니다.')
-        return
-      }
-
-      // Firebase ID 토큰 가져오기
-      const idToken = await user.getIdToken()
-
-      // 서버에 구매 토큰 전송하여 검증 및 구독 활성화
-      const resp = await fetch('/api/pay/google-play', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${idToken}`,
-        },
-        body: JSON.stringify({
-          purchaseToken: purchaseResult.purchaseToken,
-          productId: purchaseResult.productId,
-          orderId: purchaseResult.orderId,
-          plan,
-        }),
-      })
-
-      const data = await resp.json()
-      if (!resp.ok) {
-        console.error('[Payment] Google Play subscription API failed', {
-          plan,
-          status: resp.status,
-          error: data?.error,
-          timestamp: Date.now(),
-        })
-        setPayMessage(data?.error || '구독 결제에 실패했습니다.')
-        return
-      }
-
-      console.info('[Payment] Google Play subscription completed successfully', {
-        plan,
-        purchaseToken: purchaseResult.purchaseToken.substring(0, 20) + '...',
-        timestamp: Date.now(),
-      })
-
-      setPayMessage('구독이 활성화되었습니다.')
-      if (onRefresh) {
-        await onRefresh()
-      }
-    } catch (error) {
-      const errorMessage = handleError(error, '구글 플레이스토어 구독')
-      setPayMessage(errorMessage)
-    } finally {
-      setPayLoading(null)
-    }
-  }, [user, onRefresh])
-
   const handleSubscribe = useCallback(async (plan: SubscriptionPlan) => {
-    // TWA 환경이고 Google Play Billing이 사용 가능한 경우 우선 사용
-    // if (isTWA()) {
-    //   const available = await isGooglePlayBillingAvailable()
-    //   if (available) {
-    //     await processGooglePlaySubscription(plan)
-    //     return
-    //   }
-    // }
-
-    // 일반 PortOne 결제 처리
     const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
-    // 카드 정기결제 채널 키 (없으면 기본 키 사용)
     const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY_CARD_SUBSCRIPTION || process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY
 
     if (!storeId || !channelKey) {
@@ -513,10 +334,9 @@ export function usePayment({
     }
 
     await processSubscription(plan, config, setPayLoading)
-  }, [processSubscription, processGooglePlaySubscription])
+  }, [processSubscription])
 
   const handleSubscribeKakao = useCallback(async (plan: SubscriptionPlan) => {
-    // 카카오 정기결제 채널 키 (없으면 기본 카카오 키 사용)
     const channelKeyKakao = process.env.NEXT_PUBLIC_PORTONE_KAKAO_CHANNEL_KEY
     const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
 
@@ -543,10 +363,6 @@ export function usePayment({
     await processSubscription(plan, config, setPayLoadingKakao)
   }, [processSubscription])
 
-  /**
-   * 단건결제 처리 로직
-   * PC와 모바일 모두 지원, 카드 및 간편결제 지원
-   */
   const processOneTimePayment = useCallback(async (
     plan: OneTimePlan,
     config: BillingKeyConfig,
@@ -564,8 +380,6 @@ export function usePayment({
 
     const mobile = isMobile()
 
-    // PC에서는 phoneNumber, email 필수 (KG이니시스 요구사항)
-    // 모바일에서는 optional
     if (!mobile && (!phoneNumber || !user.email)) {
       setPendingPlan(plan)
       if (onPhoneRequired) {
@@ -582,21 +396,21 @@ export function usePayment({
     setLoading(plan)
     setPayMessage(null)
 
+    const uidShort = user.uid.replace(/[^A-Za-z0-9]/g, '').slice(0, 8) || 'user'
+    const ts = Date.now().toString(36)
+    const paymentId = `onetime-${plan}-${uidShort}-${ts}`.slice(0, 40)
+
     try {
-      // 서버 사이드에서는 PortOne SDK를 사용할 수 없음
       if (typeof window === 'undefined') {
         setPayMessage('결제는 브라우저에서만 가능합니다.')
         return
       }
 
       const PortOne = await import('@portone/browser-sdk/v2')
-      const uidShort = user.uid.replace(/[^A-Za-z0-9]/g, '').slice(0, 8) || 'user'
-      const ts = Date.now().toString(36)
-      const paymentId = `onetime-${plan}-${uidShort}-${ts}`.slice(0, 40)
 
       const planAmounts: Record<OneTimePlan, number> = {
-        monthly: Number(process.env.NEXT_PUBLIC_PORTONE_ONETIME_MONTHLY_AMOUNT || 4900),
-        yearly: Number(process.env.NEXT_PUBLIC_PORTONE_ONETIME_YEARLY_AMOUNT || 49000),
+        monthly: Number(process.env.NEXT_PUBLIC_PORTONE_ONETIME_MONTHLY_AMOUNT || 6900),
+        yearly: Number(process.env.NEXT_PUBLIC_PORTONE_ONETIME_YEARLY_AMOUNT || 69000),
       }
 
       const planNames: Record<OneTimePlan, string> = {
@@ -604,26 +418,15 @@ export function usePayment({
         yearly: '1년 이용권',
       }
 
-      // PC와 모바일 모두에서 payMethod를 지정하지 않으면 결제창에서 카드/간편결제 선택 가능
-      // 카카오페이 버튼을 통한 결제가 아닌 경우에만 undefined로 설정
-      const payMethod = config.billingKeyMethod === 'EASY_PAY' && config.issueIdPrefix.startsWith('kko')
-        ? 'EASY_PAY' // 카카오페이 전용 버튼을 통한 결제인 경우에만 명시적으로 지정
-        : 'CARD' // 그 외의 경우는 undefined로 하여 결제창에서 선택 가능
-
-      interface CustomerPayload {
-        fullName: string
-        name?: string
-        firstName?: string
-        lastName?: string
-        email?: string
-        phoneNumber?: string
+      let payMethod: string | undefined
+      if (config.billingKeyMethod === 'EASY_PAY' && config.issueIdPrefix.startsWith('kko')) {
+        payMethod = 'EASY_PAY'
       }
 
       const customerPayload: CustomerPayload = {
         fullName: fallbackName,
       }
 
-      // PC에서는 필수, 모바일에서는 optional
       if (user.email) {
         customerPayload.email = user.email
       }
@@ -631,14 +434,13 @@ export function usePayment({
         customerPayload.phoneNumber = phoneNumber
       }
 
-      // 카드 결제일 경우 name 필드 추가 (KG이니시스 요구사항)
-      // payMethod가 undefined일 때는 결제창에서 선택할 수 있으므로 name 필드를 추가하는 것이 안전
-      // payMethod가 'EASY_PAY'가 아닐 때 (undefined 또는 'CARD') name 필드 추가
-      if (!payMethod || payMethod !== 'EASY_PAY') {
-        customerPayload.name = fallbackName
+      if (!mobile && (!customerPayload.phoneNumber || !customerPayload.email)) {
+        logger.warn('[Payment] PC payment requires phoneNumber and email', {
+          hasPhoneNumber: !!customerPayload.phoneNumber,
+          hasEmail: !!customerPayload.email,
+        })
       }
 
-      // PortOne SDK 결제 요청
       const paymentOptions: any = {
         storeId: config.storeId,
         channelKey: config.channelKey,
@@ -649,71 +451,108 @@ export function usePayment({
         customer: customerPayload,
       }
 
-      // payMethod를 지정하지 않으면 결제창에서 카드/간편결제 모두 선택 가능
-      // 카카오페이 전용 버튼을 통한 결제인 경우에만 명시적으로 지정
       if (payMethod) {
         paymentOptions.payMethod = payMethod
       }
-      // 그 외의 경우는 payMethod를 지정하지 않아 KG이니시스 결제창에서 카드/간편결제 선택 가능
 
-      // 모바일에서는 리디렉션 URL 필수
       if (mobile) {
         paymentOptions.redirectUrl = typeof window !== 'undefined'
           ? `${window.location.origin}/my?payment=success`
           : '/my?payment=success'
       }
 
-      const paymentResponse = await PortOne.requestPayment(paymentOptions)
-
-      if (!paymentResponse) {
-        setPayMessage('결제 응답을 받지 못했습니다.')
-        return
-      }
-
-      if ((paymentResponse as any).code) {
-        setPayMessage((paymentResponse as any).message || '결제에 실패했습니다.')
-        return
-      }
-
-      // 실제 결제 ID 가져오기 (PortOne 응답에서)
-      const actualPaymentId = (paymentResponse as any).paymentId || paymentId
-
-      // Firebase ID 토큰 가져오기
-      const idToken = await user.getIdToken()
-
-      const resp = await fetch('/api/pay/one-time', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${idToken}`
-        },
-        body: JSON.stringify({ paymentId: actualPaymentId, plan }),
-      })
-      const data = await resp.json()
-      if (!resp.ok) {
-        console.error('[Payment] One-time payment API failed', {
-          plan,
-          error: data?.error,
-          timestamp: Date.now(),
-        })
-        setPayMessage(data?.error || '결제에 실패했습니다.')
-        return
-      }
-
-      console.info('[Payment] One-time payment completed successfully', {
-        plan,
-        method: config.billingKeyMethod === 'EASY_PAY' ? 'easy_pay' : 'card',
-        device: mobile ? 'mobile' : 'pc',
+      logger.info('[Payment] Requesting payment', {
+        mobile,
+        paymentId,
+        payMethod,
+        hasRedirectUrl: !!paymentOptions.redirectUrl,
+        redirectUrl: paymentOptions.redirectUrl,
+        storeId: config.storeId,
+        channelKey: config.channelKey ? `${config.channelKey.substring(0, 10)}...` : 'missing',
         timestamp: Date.now(),
       })
 
-      setPayMessage('결제가 완료되었습니다.')
-      if (onRefresh) {
-        await onRefresh()
+      try {
+        const paymentResponse = await PortOne.requestPayment(paymentOptions)
+        
+        if (!paymentResponse) {
+          setPayMessage('결제 응답을 받지 못했습니다.')
+          return
+        }
+
+        if ((paymentResponse as any).code) {
+          setPayMessage((paymentResponse as any).message || '결제에 실패했습니다.')
+          return
+        }
+
+        const actualPaymentId = (paymentResponse as any).paymentId || paymentId
+        const idToken = await user.getIdToken()
+
+        const resp = await fetch('/api/pay/one-time', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${idToken}`
+          },
+          body: JSON.stringify({ paymentId: actualPaymentId, plan }),
+        })
+        const data = await resp.json()
+        if (!resp.ok) {
+          logger.error('[Payment] One-time payment API failed', {
+            plan,
+            error: data?.error,
+            timestamp: Date.now(),
+          })
+          setPayMessage(data?.error || '결제에 실패했습니다.')
+          return
+        }
+
+        logger.info('[Payment] One-time payment completed successfully', {
+          plan,
+          method: config.billingKeyMethod === 'EASY_PAY' ? 'easy_pay' : 'card',
+          device: mobile ? 'mobile' : 'pc',
+          timestamp: Date.now(),
+        })
+
+        setPayMessage('결제가 완료되었습니다.')
+        if (onRefresh) {
+          await onRefresh()
+        }
+      } catch (requestError: any) {
+        logger.error('[Payment] PortOne requestPayment failed', {
+          error: requestError?.message || String(requestError),
+          errorCode: requestError?.code,
+          errorName: requestError?.name,
+          stack: requestError?.stack,
+          mobile,
+          paymentId,
+          paymentOptions: {
+            ...paymentOptions,
+            channelKey: paymentOptions.channelKey ? `${paymentOptions.channelKey.substring(0, 10)}...` : 'missing',
+          },
+          timestamp: Date.now(),
+        })
+        throw requestError
       }
-    } catch (error) {
+    } catch (error: any) {
+      logger.error('[Payment] One-time payment error', {
+        error: error?.message || String(error),
+        errorCode: error?.code,
+        errorName: error?.name,
+        stack: error?.stack,
+        mobile,
+        paymentId,
+        plan,
+        timestamp: Date.now(),
+      })
+      
       const errorMessage = handleError(error, config.billingKeyMethod === 'EASY_PAY' ? '간편결제' : '단건결제')
-      setPayMessage(errorMessage)
+      
+      if (mobile && (error?.message?.includes('popup') || error?.message?.includes('window') || error?.code === 'POPUP_BLOCKED')) {
+        setPayMessage('결제창이 열리지 않습니다. 브라우저 팝업 차단 설정을 확인해주세요.')
+      } else {
+        setPayMessage(errorMessage)
+      }
     } finally {
       setLoading(null)
     }
@@ -721,7 +560,6 @@ export function usePayment({
 
   const handleOneTimePayment = useCallback(async (plan: OneTimePlan) => {
     const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
-    // 카드 단건결제 채널 키 (없으면 기본 키 사용)
     const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY_CARD_GENERAL || process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY
 
     if (!storeId || !channelKey) {
@@ -743,7 +581,6 @@ export function usePayment({
   }, [processOneTimePayment])
 
   const handleOneTimePaymentKakao = useCallback(async (plan: OneTimePlan) => {
-    // 카카오 단건결제 채널 키 (없으면 기본 카카오 키 사용)
     const channelKeyKakao = process.env.NEXT_PUBLIC_PORTONE_KAKAO_CHANNEL_KEY
     const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
 

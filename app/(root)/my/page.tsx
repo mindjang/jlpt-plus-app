@@ -192,23 +192,56 @@ function MyPageContent() {
       }
     }
 
-    // 결제 성공 후 리다이렉트 처리 (모바일)
+    // 결제 성공/실패 후 리다이렉트 처리 (모바일)
     // PortOne V2 SDK는 리다이렉트 시 imp_uid를 쿼리 파라미터로 전달
     // imp_uid로 빌링키를 조회해야 함
     if (paymentParam === 'success' && user) {
       const impUid = searchParams.get('imp_uid')
       const merchantUid = searchParams.get('merchant_uid')
       const impSuccess = searchParams.get('imp_success')
+      const failureCode = searchParams.get('code')
+      const pgCode = searchParams.get('pgCode')
+      const pgMessage = searchParams.get('pgMessage')
+      const paymentId = searchParams.get('paymentId')
+      const isOneTimePayment = paymentId?.includes('onetime')
 
-      logger.info('[Payment] Payment success redirect detected', {
+      logger.info('[Payment] Payment redirect detected', {
         impUid,
         merchantUid,
         impSuccess,
+        failureCode,
+        pgCode,
+        pgMessage,
+        paymentId,
+        isOneTimePayment,
         hasBillingKey: !!billingKey,
         plan: plan || (pendingPayment ? pendingPayment.plan : null),
         paymentMethod: paymentMethod || (pendingPayment ? pendingPayment.paymentMethod : null),
         timestamp: Date.now(),
       })
+
+      // 단건결제 실패 케이스 처리 (먼저 체크)
+      // payment=success 파라미터가 있어도 실패 코드가 있으면 실패로 처리
+      if (isOneTimePayment && (failureCode === 'FAILURE_TYPE_PG' || impSuccess === 'false' || pgCode)) {
+        const errorMsg = decodeURIComponent(pgMessage || searchParams.get('message') || '결제에 실패했습니다.')
+        logger.error('[Payment] One-time payment failed', {
+          failureCode,
+          pgCode,
+          pgMessage: errorMsg,
+          paymentId,
+          timestamp: Date.now(),
+        })
+        // URL에서 파라미터 제거 (먼저 처리)
+        router.replace('/my', { scroll: false })
+        // 에러 메시지 표시
+        setMessage({ type: 'error', text: errorMsg })
+        // 결제 모달 다시 열기 (재시도 가능하도록)
+        // URL 정리 후 모달 열기 (약간의 지연으로 URL 변경 완료 대기)
+        setTimeout(() => {
+          setShowPaymentModal(true)
+        }, 300)
+        return
+      }
 
       // 모바일에서 빌링키 발급 완료 후 리다이렉트된 경우
       const completeMobilePayment = async () => {
@@ -805,7 +838,7 @@ function MyPageContent() {
                             onClick={() => { setShowManageModal(false); setShowPaymentModal(true); }}
                             className="w-full py-3.5 rounded-lg bg-black text-white font-semibold active:opacity-80 text-body"
                           >
-                            구독하기
+                            기간 연장 (구독/단건)
                           </button>
                         )}
                       </div>
@@ -827,12 +860,12 @@ function MyPageContent() {
                           <h2 className="text-display-s font-black text-gray-900">Premium Plan</h2>
                           <button onClick={() => setShowPaymentModal(false)} className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 active:bg-gray-200 text-gray-500">✕</button>
                         </div>
-                        <div className="flex items-center gap-2">
+                        {process.env.NODE_ENV === 'development' && <div className="flex items-center gap-2">
                           <span className="inline-block px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-bold">
                             테스트 모드
                           </span>
                           <span className="text-xs text-gray-500">실제 결제되지 않습니다</span>
-                        </div>
+                        </div>}
                       </div>
 
                       {/* Tabs */}

@@ -8,8 +8,8 @@ import type { Membership } from '@/lib/types/membership'
 type OneTimePlan = 'monthly' | 'yearly' // 단건결제: 1개월, 1년
 
 const PLAN_AMOUNTS: Record<OneTimePlan, number> = {
-  monthly: Number(process.env.PORTONE_ONETIME_MONTHLY_AMOUNT || 4900),
-  yearly: Number(process.env.PORTONE_ONETIME_YEARLY_AMOUNT || 49000),
+  monthly: Number(process.env.PORTONE_ONETIME_MONTHLY_AMOUNT || 6900),
+  yearly: Number(process.env.PORTONE_ONETIME_YEARLY_AMOUNT || 69000),
 }
 
 function getDurationMs(plan: OneTimePlan) {

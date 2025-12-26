@@ -915,56 +915,72 @@ function MyPageContent() {
                         {paymentTab === 'subscription' ? (
                           <>
                             {/* 정기구독: 1개월, 3개월 */}
-                            <div
-                              onClick={() => setSelectedPlanId('monthly')}
-                              className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'monthly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
-                            >
-                              <div className="flex justify-between items-center mb-1">
-                                <span className="font-bold text-lg text-gray-900">1개월 구독</span>
-                                {selectedPlanId === 'monthly' && <CheckCircle2 className="text-primary" size={20} />}
-                              </div>
-                              <div className="text-3xl font-black text-gray-900 mb-1">₩4,900<span className="text-sm font-medium text-gray-400 ml-1">/월</span></div>
-                              <p className="text-xs text-gray-500">매월 자동 결제, 언제든 해지 가능</p>
-                            </div>
+                            {(() => {
+                              const monthlyAmount = Number(process.env.NEXT_PUBLIC_PORTONE_SUBSCRIPTION_MONTHLY_AMOUNT || 5900)
+                              const quarterlyAmount = Number(process.env.NEXT_PUBLIC_PORTONE_SUBSCRIPTION_QUARTERLY_AMOUNT || 14900)
+                              return (
+                                <>
+                                  <div
+                                    onClick={() => setSelectedPlanId('monthly')}
+                                    className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'monthly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
+                                  >
+                                    <div className="flex justify-between items-center mb-1">
+                                      <span className="font-bold text-lg text-gray-900">1개월 구독</span>
+                                      {selectedPlanId === 'monthly' && <CheckCircle2 className="text-primary" size={20} />}
+                                    </div>
+                                    <div className="text-3xl font-black text-gray-900 mb-1">₩{monthlyAmount.toLocaleString()}<span className="text-sm font-medium text-gray-400 ml-1">/월</span></div>
+                                    <p className="text-xs text-gray-500">매월 자동 결제, 언제든 해지 가능</p>
+                                  </div>
 
-                            <div
-                              onClick={() => setSelectedPlanId('quarterly')}
-                              className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'quarterly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
-                            >
-                              <div className="flex justify-between items-center mb-1">
-                                <span className="font-bold text-lg text-gray-900">3개월 구독</span>
-                                <span className="bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded-full">10% 할인</span>
-                              </div>
-                              <div className="text-3xl font-black text-gray-900 mb-1">₩13,000<span className="text-sm font-medium text-gray-400 ml-1">/3개월</span></div>
-                              <p className="text-xs text-gray-500">3개월마다 자동 결제, 언제든 해지 가능</p>
-                            </div>
+                                  <div
+                                    onClick={() => setSelectedPlanId('quarterly')}
+                                    className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'quarterly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
+                                  >
+                                    <div className="flex justify-between items-center mb-1">
+                                      <span className="font-bold text-lg text-gray-900">3개월 구독</span>
+                                      <span className="bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded-full">10% 할인</span>
+                                    </div>
+                                    <div className="text-3xl font-black text-gray-900 mb-1">₩{quarterlyAmount.toLocaleString()}<span className="text-sm font-medium text-gray-400 ml-1">/3개월</span></div>
+                                    <p className="text-xs text-gray-500">3개월마다 자동 결제, 언제든 해지 가능</p>
+                                  </div>
+                                </>
+                              )
+                            })()}
                           </>
                         ) : (
                           <>
                             {/* 단건결제: 1개월, 1년 */}
-                            <div
-                              onClick={() => setSelectedPlanId('monthly')}
-                              className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'monthly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
-                            >
-                              <div className="flex justify-between items-center mb-1">
-                                <span className="font-bold text-lg text-gray-900">1개월 이용권</span>
-                                {selectedPlanId === 'monthly' && <CheckCircle2 className="text-primary" size={20} />}
-                              </div>
-                              <div className="text-3xl font-black text-gray-900 mb-1">₩4,900</div>
-                              <p className="text-xs text-gray-500">1회 결제, 자동 갱신 없음</p>
-                            </div>
+                            {(() => {
+                              const monthlyAmount = Number(process.env.NEXT_PUBLIC_PORTONE_ONETIME_MONTHLY_AMOUNT || 6900)
+                              const yearlyAmount = Number(process.env.NEXT_PUBLIC_PORTONE_ONETIME_YEARLY_AMOUNT || 69000)
+                              return (
+                                <>
+                                  <div
+                                    onClick={() => setSelectedPlanId('monthly')}
+                                    className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'monthly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
+                                  >
+                                    <div className="flex justify-between items-center mb-1">
+                                      <span className="font-bold text-lg text-gray-900">1개월 이용권</span>
+                                      {selectedPlanId === 'monthly' && <CheckCircle2 className="text-primary" size={20} />}
+                                    </div>
+                                    <div className="text-3xl font-black text-gray-900 mb-1">₩{monthlyAmount.toLocaleString()}</div>
+                                    <p className="text-xs text-gray-500">1회 결제, 자동 갱신 없음</p>
+                                  </div>
 
-                            <div
-                              onClick={() => setSelectedPlanId('yearly')}
-                              className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'yearly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
-                            >
-                              <div className="flex justify-between items-center mb-1">
-                                <span className="font-bold text-lg text-gray-900">1년 이용권</span>
-                                <span className="bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded-full">17% 할인</span>
-                              </div>
-                              <div className="text-3xl font-black text-gray-900 mb-1">₩49,000</div>
-                              <p className="text-xs text-gray-500">1회 결제, 자동 갱신 없음</p>
-                            </div>
+                                  <div
+                                    onClick={() => setSelectedPlanId('yearly')}
+                                    className={`p-5 rounded-lg border cursor-pointer ${selectedPlanId === 'yearly' ? 'border-primary bg-primary/5' : 'border-gray-100'}`}
+                                  >
+                                    <div className="flex justify-between items-center mb-1">
+                                      <span className="font-bold text-lg text-gray-900">1년 이용권</span>
+                                      <span className="bg-black text-white text-[10px] font-bold px-2 py-0.5 rounded-full">17% 할인</span>
+                                    </div>
+                                    <div className="text-3xl font-black text-gray-900 mb-1">₩{yearlyAmount.toLocaleString()}</div>
+                                    <p className="text-xs text-gray-500">1회 결제, 자동 갱신 없음</p>
+                                  </div>
+                                </>
+                              )
+                            })()}
                           </>
                         )}
                       </div>

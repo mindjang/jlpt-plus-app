@@ -418,9 +418,16 @@ export function usePayment({
         yearly: '1년 이용권',
       }
 
+      // payMethod 설정
+      // 카카오페이 전용 버튼인 경우에만 'EASY_PAY' 설정
+      // 카드 결제인 경우 'CARD'로 설정 (KG이니시스는 payMethod='CARD'로 설정해도 결제창에서 간편결제 선택 가능)
       let payMethod: string | undefined
       if (config.billingKeyMethod === 'EASY_PAY' && config.issueIdPrefix.startsWith('kko')) {
         payMethod = 'EASY_PAY'
+      } else {
+        // 카드 결제인 경우 'CARD'로 설정
+        // KG이니시스는 payMethod='CARD'로 설정해도 결제창에서 간편결제 옵션을 제공함
+        payMethod = 'CARD'
       }
 
       const customerPayload: CustomerPayload = {
@@ -451,10 +458,11 @@ export function usePayment({
         customer: customerPayload,
       }
 
-      if (payMethod) {
-        paymentOptions.payMethod = payMethod
-      }
+      // payMethod는 항상 설정 (PortOne SDK 요구사항)
+      // KG이니시스는 payMethod='CARD'로 설정해도 결제창에서 간편결제 옵션을 제공함
+      paymentOptions.payMethod = payMethod
 
+      // 모바일에서는 redirectUrl 필수
       if (mobile) {
         paymentOptions.redirectUrl = typeof window !== 'undefined'
           ? `${window.location.origin}/my?payment=success`
@@ -464,75 +472,104 @@ export function usePayment({
       logger.info('[Payment] Requesting payment', {
         mobile,
         paymentId,
-        payMethod,
+        payMethod: paymentOptions.payMethod,
+        originalPayMethod: payMethod,
         hasRedirectUrl: !!paymentOptions.redirectUrl,
         redirectUrl: paymentOptions.redirectUrl,
         storeId: config.storeId,
         channelKey: config.channelKey ? `${config.channelKey.substring(0, 10)}...` : 'missing',
+        customer: {
+          hasFullName: !!customerPayload.fullName,
+          hasEmail: !!customerPayload.email,
+          hasPhoneNumber: !!customerPayload.phoneNumber,
+        },
+        paymentOptionsKeys: Object.keys(paymentOptions),
         timestamp: Date.now(),
       })
 
-      try {
-        const paymentResponse = await PortOne.requestPayment(paymentOptions)
-        
-        if (!paymentResponse) {
-          setPayMessage('결제 응답을 받지 못했습니다.')
-          return
-        }
-
-        if ((paymentResponse as any).code) {
-          setPayMessage((paymentResponse as any).message || '결제에 실패했습니다.')
-          return
-        }
-
-        const actualPaymentId = (paymentResponse as any).paymentId || paymentId
-        const idToken = await user.getIdToken()
-
-        const resp = await fetch('/api/pay/one-time', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${idToken}`
-          },
-          body: JSON.stringify({ paymentId: actualPaymentId, plan }),
-        })
-        const data = await resp.json()
-        if (!resp.ok) {
-          logger.error('[Payment] One-time payment API failed', {
-            plan,
-            error: data?.error,
-            timestamp: Date.now(),
+      // 모바일에서는 리다이렉션이 발생하므로 requestPayment 호출 후 바로 리다이렉트됨
+      // PC에서는 팝업이 열리고 응답을 받음
+      // 모바일에서 requestPayment 호출 전 최종 검증
+      if (mobile) {
+        if (!paymentOptions.payMethod) {
+          logger.error('[Payment] payMethod is missing for mobile payment', {
+            paymentOptions,
+            payMethod,
+            mobile,
           })
-          setPayMessage(data?.error || '결제에 실패했습니다.')
+          setPayMessage('결제 설정에 오류가 있습니다. 다시 시도해주세요.')
           return
         }
-
-        logger.info('[Payment] One-time payment completed successfully', {
-          plan,
-          method: config.billingKeyMethod === 'EASY_PAY' ? 'easy_pay' : 'card',
-          device: mobile ? 'mobile' : 'pc',
-          timestamp: Date.now(),
-        })
-
-        setPayMessage('결제가 완료되었습니다.')
-        if (onRefresh) {
-          await onRefresh()
+        if (!paymentOptions.redirectUrl) {
+          logger.error('[Payment] redirectUrl is missing for mobile payment', {
+            paymentOptions,
+            mobile,
+          })
+          setPayMessage('결제 설정에 오류가 있습니다. 다시 시도해주세요.')
+          return
         }
-      } catch (requestError: any) {
-        logger.error('[Payment] PortOne requestPayment failed', {
-          error: requestError?.message || String(requestError),
-          errorCode: requestError?.code,
-          errorName: requestError?.name,
-          stack: requestError?.stack,
-          mobile,
-          paymentId,
-          paymentOptions: {
-            ...paymentOptions,
-            channelKey: paymentOptions.channelKey ? `${paymentOptions.channelKey.substring(0, 10)}...` : 'missing',
-          },
+        
+        // 모바일 결제 전 최종 로깅 (실제 전송되는 데이터 확인)
+        logger.info('[Payment] Mobile payment options (final)', {
+          payMethod: paymentOptions.payMethod,
+          redirectUrl: paymentOptions.redirectUrl,
+          storeId: paymentOptions.storeId,
+          channelKey: paymentOptions.channelKey ? `${paymentOptions.channelKey.substring(0, 10)}...` : 'missing',
+          paymentId: paymentOptions.paymentId,
+          totalAmount: paymentOptions.totalAmount,
+          currency: paymentOptions.currency,
+          hasCustomer: !!paymentOptions.customer,
+          customerKeys: paymentOptions.customer ? Object.keys(paymentOptions.customer) : [],
+          allKeys: Object.keys(paymentOptions),
+        })
+      }
+
+      const paymentResponse = await PortOne.requestPayment(paymentOptions)
+      
+      // 모바일에서는 리다이렉션이 발생하므로 여기까지 도달하지 않음
+      // PC에서만 여기까지 도달
+      if (!paymentResponse) {
+        setPayMessage('결제 응답을 받지 못했습니다.')
+        return
+      }
+
+      if ((paymentResponse as any).code) {
+        setPayMessage((paymentResponse as any).message || '결제에 실패했습니다.')
+        return
+      }
+
+      const actualPaymentId = (paymentResponse as any).paymentId || paymentId
+      const idToken = await user.getIdToken()
+
+      const resp = await fetch('/api/pay/one-time', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${idToken}`
+        },
+        body: JSON.stringify({ paymentId: actualPaymentId, plan }),
+      })
+      const data = await resp.json()
+      if (!resp.ok) {
+        logger.error('[Payment] One-time payment API failed', {
+          plan,
+          error: data?.error,
           timestamp: Date.now(),
         })
-        throw requestError
+        setPayMessage(data?.error || '결제에 실패했습니다.')
+        return
+      }
+
+      logger.info('[Payment] One-time payment completed successfully', {
+        plan,
+        method: config.billingKeyMethod === 'EASY_PAY' ? 'easy_pay' : 'card',
+        device: mobile ? 'mobile' : 'pc',
+        timestamp: Date.now(),
+      })
+
+      setPayMessage('결제가 완료되었습니다.')
+      if (onRefresh) {
+        await onRefresh()
       }
     } catch (error: any) {
       logger.error('[Payment] One-time payment error', {

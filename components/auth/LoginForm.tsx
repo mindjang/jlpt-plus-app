@@ -1,9 +1,33 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { signInWithEmail, signUpWithEmail, signInWithGoogle } from '@/lib/firebase/auth'
+import { signInWithEmail, signUpWithEmail } from '@/lib/firebase/auth'
 import { BottomSheet } from '@/components/ui/BottomSheet'
+import { BrandLoader } from '@/components/ui/BrandLoader'
+import { sendVerificationCode, verifyCode } from '@/lib/utils/emailVerification'
+
+/**
+ * 휴대폰 번호 포맷팅 함수 (010-1234-5678 형식)
+ */
+function formatPhoneNumber(value: string): string {
+  // 숫자만 추출
+  const numbers = value.replace(/\D/g, '')
+  
+  // 11자리 초과 시 자르기
+  const limited = numbers.slice(0, 11)
+  
+  // 포맷팅
+  if (limited.length <= 3) {
+    return limited
+  } else if (limited.length <= 7) {
+    return `${limited.slice(0, 3)}-${limited.slice(3)}`
+  } else {
+    return `${limited.slice(0, 3)}-${limited.slice(3, 7)}-${limited.slice(7)}`
+  }
+}
+
+type SignUpStep = 'email' | 'birthDate' | 'name' | 'password' | 'passwordConfirm' | 'complete'
 
 export function LoginForm() {
   const router = useRouter()
@@ -11,12 +35,150 @@ export function LoginForm() {
   const [isSignUp, setIsSignUp] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [passwordConfirm, setPasswordConfirm] = useState('')
   const [name, setName] = useState('')
-  const [phoneNumber, setPhoneNumber] = useState('')
+  const [birthDate, setBirthDate] = useState('') // YYMMDD 형식
+  const [birthDateLastDigit, setBirthDateLastDigit] = useState('') // 뒷자리 1자리 (성별)
 
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [showEmailForm, setShowEmailForm] = useState(false)
+  
+  // 회원가입 단계 관리
+  const [signUpStep, setSignUpStep] = useState<SignUpStep>('email')
+  const [verificationCode, setVerificationCode] = useState('')
+  const [isEmailVerified, setIsEmailVerified] = useState(false)
+  const [sendingCode, setSendingCode] = useState(false)
+  const [verifyingCode, setVerifyingCode] = useState(false)
+  
+  // 포커스 관리를 위한 ref
+  const birthDateInputRef = useRef<HTMLInputElement>(null)
+  const birthDateLastDigitInputRef = useRef<HTMLInputElement>(null)
+  const nameInputRef = useRef<HTMLInputElement>(null)
+  const passwordInputRef = useRef<HTMLInputElement>(null)
+  const passwordConfirmInputRef = useRef<HTMLInputElement>(null)
+
+  // 생년월일 입력창이 나타나면 포커스
+  useEffect(() => {
+    if (signUpStep === 'birthDate' && birthDateInputRef.current) {
+      setTimeout(() => {
+        birthDateInputRef.current?.focus()
+      }, 100)
+    }
+  }, [signUpStep])
+
+  // 생년월일 뒷자리 입력창이 나타나면 포커스
+  useEffect(() => {
+    if (signUpStep === 'birthDate' && birthDate.length === 6 && birthDateLastDigitInputRef.current) {
+      setTimeout(() => {
+        birthDateLastDigitInputRef.current?.focus()
+      }, 100)
+    }
+  }, [signUpStep, birthDate])
+
+  // 이름 입력창이 나타나면 포커스
+  useEffect(() => {
+    if (signUpStep === 'name' && nameInputRef.current) {
+      setTimeout(() => {
+        nameInputRef.current?.focus()
+      }, 100)
+    }
+  }, [signUpStep])
+
+  // 비밀번호 입력창이 나타나면 포커스
+  useEffect(() => {
+    if (signUpStep === 'password' && passwordInputRef.current) {
+      setTimeout(() => {
+        passwordInputRef.current?.focus()
+      }, 100)
+    }
+  }, [signUpStep])
+
+  // 비밀번호 확인 입력창이 나타나면 포커스
+  useEffect(() => {
+    if (signUpStep === 'passwordConfirm' && passwordConfirmInputRef.current) {
+      setTimeout(() => {
+        passwordConfirmInputRef.current?.focus()
+      }, 100)
+    }
+  }, [signUpStep])
+
+  // 인증번호 발송
+  const handleSendVerificationCode = async () => {
+    if (!email.trim()) {
+      setError('이메일을 입력해주세요.')
+      return
+    }
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      setError('올바른 이메일 형식이 아닙니다.')
+      return
+    }
+
+    setSendingCode(true)
+    setError(null)
+
+    try {
+      await sendVerificationCode(email)
+      setError(null)
+      // 성공 메시지는 UI에서 표시
+    } catch (err) {
+      setError('인증번호 발송에 실패했습니다. 다시 시도해주세요.')
+    } finally {
+      setSendingCode(false)
+    }
+  }
+
+  // 인증번호 확인
+  const handleVerifyCode = async () => {
+    if (!verificationCode.trim()) {
+      setError('인증번호를 입력해주세요.')
+      return
+    }
+
+    setVerifyingCode(true)
+    setError(null)
+
+    try {
+      const isValid = await verifyCode(email, verificationCode)
+      if (isValid) {
+        setIsEmailVerified(true)
+        setError(null)
+        // 다음 단계로 자동 이동
+        setSignUpStep('birthDate')
+      } else {
+        setError('인증번호가 올바르지 않습니다.')
+      }
+    } catch (err) {
+      setError('인증번호 확인에 실패했습니다.')
+    } finally {
+      setVerifyingCode(false)
+    }
+  }
+
+  // 생년월일 입력 완료 시 자동으로 다음 단계로 이동
+  useEffect(() => {
+    if (signUpStep === 'birthDate' && birthDate.length === 6 && birthDateLastDigit.length === 1) {
+      // 생년월일 6자리 + 뒷자리 1자리 입력 완료 시 자동으로 이름 입력창으로 이동
+      setError(null)
+      setSignUpStep('name')
+    }
+  }, [signUpStep, birthDate, birthDateLastDigit])
+
+  // 이름 입력 후 다음 버튼 클릭 시 비밀번호 입력 단계로 이동
+  const handlePasswordNext = () => {
+    // 이름 입력 단계에서 호출된 경우
+    if (signUpStep === 'name') {
+      if (!name.trim()) {
+        setError('이름을 입력해주세요.')
+        return
+      }
+      setError(null)
+      setSignUpStep('passwordConfirm')
+      return
+    }
+  }
 
   const handleEmailAuth = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -25,19 +187,49 @@ export function LoginForm() {
 
     try {
       if (isSignUp) {
-        if (!name.trim()) {
-          throw new Error('이름을 입력해주세요.')
+        // 비밀번호 확인
+        if (password !== passwordConfirm) {
+          throw new Error('비밀번호가 일치하지 않습니다.')
         }
-        if (!phoneNumber.trim()) {
-          throw new Error('휴대폰 번호를 입력해주세요.')
+        if (password.length < 6) {
+          throw new Error('비밀번호는 최소 6자 이상이어야 합니다.')
         }
-        await signUpWithEmail(email, password, name, phoneNumber)
+        
+        // 이메일 인증 확인
+        if (!isEmailVerified) {
+          throw new Error('이메일 인증을 완료해주세요.')
+        }
+
+        // 생년월일 형식 변환 (YYMMDD + 뒷자리 1자리 → YYYY-MM-DD)
+        // 뒷자리 1자리가 1,2면 1900년대, 3,4면 2000년대
+        let fullBirthDate = ''
+        if (birthDate.length === 6 && birthDateLastDigit.length === 1) {
+          const year = parseInt(birthDate.slice(0, 2))
+          const month = birthDate.slice(2, 4)
+          const day = birthDate.slice(4, 6)
+          const lastDigit = parseInt(birthDateLastDigit)
+          
+          // 뒷자리 1자리가 1,2면 1900년대, 3,4면 2000년대
+          const fullYear = (lastDigit === 1 || lastDigit === 2) ? `19${year.toString().padStart(2, '0')}` : `20${year.toString().padStart(2, '0')}`
+          fullBirthDate = `${fullYear}-${month}-${day}`
+        } else {
+          fullBirthDate = birthDate // date input에서 온 경우 그대로 사용
+        }
+
+        await signUpWithEmail(email, password, name, undefined, fullBirthDate)
+        setSignUpStep('complete')
+        // 회원가입 완료 후 홈으로 이동
+        setTimeout(() => {
+          const next = searchParams.get('next')
+          const safeNext = next && next.startsWith('/') ? next : '/home'
+          router.replace(safeNext)
+        }, 1500)
       } else {
         await signInWithEmail(email, password)
+        const next = searchParams.get('next')
+        const safeNext = next && next.startsWith('/') ? next : '/home'
+        router.replace(safeNext)
       }
-      const next = searchParams.get('next')
-      const safeNext = next && next.startsWith('/') ? next : '/home'
-      router.replace(safeNext)
     } catch (err) {
       const error = err as { code?: string; message?: string }
       let errorMessage = error.message || '인증에 실패했습니다.'
@@ -63,32 +255,21 @@ export function LoginForm() {
     }
   }
 
-  const handleGoogleAuth = async () => {
-    setLoading(true)
+  // 회원가입 초기화
+  const resetSignUp = () => {
+    setSignUpStep('email')
+    setIsEmailVerified(false)
+    setVerificationCode('')
+    setEmail('')
+    setPassword('')
+    setPasswordConfirm('')
+    setName('')
+    setBirthDate('')
+    setBirthDateLastDigit('')
     setError(null)
-
-    try {
-      await signInWithGoogle()
-      const next = searchParams.get('next')
-      const safeNext = next && next.startsWith('/') ? next : '/home'
-      router.replace(safeNext)
-    } catch (err) {
-      const error = err as { code?: string; message?: string }
-      let errorMessage = error.message || 'Google 로그인에 실패했습니다.'
-
-      if (error.code === 'auth/operation-not-allowed') {
-        errorMessage = 'Google 로그인이 활성화되지 않았습니다. Firebase Console에서 활성화해주세요.'
-      } else if (error.code === 'auth/popup-closed-by-user') {
-        errorMessage = '로그인 창이 닫혔습니다.'
-      }
-
-      setError(errorMessage)
-    } finally {
-      setLoading(false)
-    }
   }
 
-  // 이메일 폼이 표시되지 않으면 소셜 로그인 버튼들만 표시
+  // 이메일 폼이 표시되지 않으면 로그인/회원가입 버튼만 표시
   if (!showEmailForm && !isSignUp) {
     return (
       <>
@@ -99,50 +280,45 @@ export function LoginForm() {
             </div>
           )}
 
-          {/* 구글 로그인 버튼 */}
-          <button
-            onClick={handleGoogleAuth}
-            disabled={loading}
-            className="w-full py-4 px-4 rounded-xl bg-white border-2 border-gray-200 text-gray-700 font-bold active:bg-gray-50 disabled:opacity-50 shadow-sm flex items-center justify-center gap-2"
-          >
-            <svg className="w-5 h-5" viewBox="0 0 24 24">
-              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-            </svg>
-            구글로 로그인하기
-          </button>
-
           {/* 이메일 로그인 | 회원가입 버튼 */}
-          <div className="mt-4 flex items-center justify-center gap-2">
+          <div className="flex flex-col gap-3">
             <button
               onClick={() => {
                 setIsSignUp(false)
                 setShowEmailForm(true)
               }}
-              className="text-body text-text-sub active:opacity-70"
+              className="w-full py-4 px-4 rounded-xl bg-primary/90 text-white font-bold active:opacity-90 shadow-sm"
             >
               이메일 로그인
             </button>
-            <span className="text-body text-text-sub">|</span>
-            <button
-              onClick={() => {
-                setIsSignUp(true)
-                setShowEmailForm(true)
-              }}
-              className="text-body text-text-sub active:opacity-70"
-            >
-              회원가입
-            </button>
+            <div className="text-center text-body text-text-sub">
+              아직 계정이 없나요?{' '}
+              <button
+                onClick={() => {
+                  setIsSignUp(true)
+                  setShowEmailForm(true)
+                  resetSignUp()
+                }}
+                className="text-primary font-semibold hover:underline active:opacity-80"
+              >
+                회원가입
+              </button>
+            </div>
           </div>
         </div>
 
         {/* 하단 시트 모달 */}
         <BottomSheet
           isOpen={showEmailForm}
-          onClose={() => setShowEmailForm(false)}
+          onClose={() => {
+            setShowEmailForm(false)
+            if (isSignUp) {
+              resetSignUp()
+            }
+          }}
           title={isSignUp ? '회원가입' : '이메일 로그인'}
+          closeOnBackdropClick={false}
+          showCloseButton={true}
         >
           <EmailAuthForm
             isSignUp={isSignUp}
@@ -151,14 +327,39 @@ export function LoginForm() {
             setEmail={setEmail}
             password={password}
             setPassword={setPassword}
+            passwordConfirm={passwordConfirm}
+            setPasswordConfirm={setPasswordConfirm}
             name={name}
             setName={setName}
-            phoneNumber={phoneNumber}
-            setPhoneNumber={setPhoneNumber}
+            birthDate={birthDate}
+            setBirthDate={setBirthDate}
+            birthDateLastDigit={birthDateLastDigit}
+            setBirthDateLastDigit={setBirthDateLastDigit}
+            signUpStep={signUpStep}
+            setSignUpStep={setSignUpStep}
+            verificationCode={verificationCode}
+            setVerificationCode={setVerificationCode}
+            isEmailVerified={isEmailVerified}
+            setIsEmailVerified={setIsEmailVerified}
+            sendingCode={sendingCode}
+            verifyingCode={verifyingCode}
+            onSendCode={handleSendVerificationCode}
+            onVerifyCode={handleVerifyCode}
+            onPasswordNext={handlePasswordNext}
+            birthDateInputRef={birthDateInputRef}
+            birthDateLastDigitInputRef={birthDateLastDigitInputRef}
+            nameInputRef={nameInputRef}
+            passwordInputRef={passwordInputRef}
+            passwordConfirmInputRef={passwordConfirmInputRef}
             loading={loading}
             error={error}
             onSubmit={handleEmailAuth}
-            onClose={() => setShowEmailForm(false)}
+            onClose={() => {
+              setShowEmailForm(false)
+              if (isSignUp) {
+                resetSignUp()
+              }
+            }}
           />
         </BottomSheet>
       </>
@@ -173,49 +374,44 @@ export function LoginForm() {
         </div>
       )}
 
-      {/* 구글 로그인 버튼 */}
-      <button
-        onClick={handleGoogleAuth}
-        disabled={loading}
-        className="w-full py-4 px-4 rounded-xl bg-white border-2 border-gray-200 text-gray-700 font-bold active:bg-gray-50 disabled:opacity-50 shadow-sm flex items-center justify-center gap-2"
-      >
-        <svg className="w-5 h-5" viewBox="0 0 24 24">
-          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-        </svg>
-        구글로 로그인하기
-      </button>
-
       {/* 이메일 로그인 | 회원가입 버튼 */}
-      <div className="mt-4 flex items-center justify-center gap-2">
+      <div className="flex flex-col gap-3">
         <button
           onClick={() => {
             setIsSignUp(false)
             setShowEmailForm(true)
           }}
-          className="text-body text-text-sub active:opacity-70"
+          className="w-full py-4 px-4 rounded-xl bg-primary text-white font-bold active:opacity-90 shadow-sm"
         >
           이메일 로그인
         </button>
-        <span className="text-body text-text-sub">|</span>
-        <button
-          onClick={() => {
-            setIsSignUp(true)
-            setShowEmailForm(true)
-          }}
-          className="text-body text-text-sub active:opacity-70"
-        >
-          회원가입
-        </button>
+        <div className="text-center text-body text-text-sub">
+          아직 계정이 없나요?{' '}
+          <button
+            onClick={() => {
+              setIsSignUp(true)
+              setShowEmailForm(true)
+              resetSignUp()
+            }}
+            className="text-primary font-semibold hover:underline active:opacity-80"
+          >
+            회원가입
+          </button>
+        </div>
       </div>
 
       {/* 하단 시트 모달 */}
       <BottomSheet
         isOpen={showEmailForm}
-        onClose={() => setShowEmailForm(false)}
+        onClose={() => {
+          setShowEmailForm(false)
+          if (isSignUp) {
+            resetSignUp()
+          }
+        }}
         title={isSignUp ? '회원가입' : '이메일 로그인'}
+        closeOnBackdropClick={false}
+        showCloseButton={true}
       >
         <EmailAuthForm
           isSignUp={isSignUp}
@@ -224,14 +420,39 @@ export function LoginForm() {
           setEmail={setEmail}
           password={password}
           setPassword={setPassword}
+          passwordConfirm={passwordConfirm}
+          setPasswordConfirm={setPasswordConfirm}
           name={name}
           setName={setName}
-          phoneNumber={phoneNumber}
-          setPhoneNumber={setPhoneNumber}
+          birthDate={birthDate}
+          setBirthDate={setBirthDate}
+          birthDateLastDigit={birthDateLastDigit}
+          setBirthDateLastDigit={setBirthDateLastDigit}
+          signUpStep={signUpStep}
+          setSignUpStep={setSignUpStep}
+          verificationCode={verificationCode}
+          setVerificationCode={setVerificationCode}
+          isEmailVerified={isEmailVerified}
+          setIsEmailVerified={setIsEmailVerified}
+          sendingCode={sendingCode}
+          verifyingCode={verifyingCode}
+          onSendCode={handleSendVerificationCode}
+          onVerifyCode={handleVerifyCode}
+          onPasswordNext={handlePasswordNext}
+          birthDateInputRef={birthDateInputRef}
+          birthDateLastDigitInputRef={birthDateLastDigitInputRef}
+          passwordConfirmInputRef={passwordConfirmInputRef}
+          nameInputRef={nameInputRef}
+          passwordInputRef={passwordInputRef}
           loading={loading}
           error={error}
           onSubmit={handleEmailAuth}
-          onClose={() => setShowEmailForm(false)}
+          onClose={() => {
+            setShowEmailForm(false)
+            if (isSignUp) {
+              resetSignUp()
+            }
+          }}
         />
       </BottomSheet>
     </div>
@@ -248,10 +469,30 @@ interface EmailAuthFormProps {
   setEmail: (value: string) => void
   password: string
   setPassword: (value: string) => void
+  passwordConfirm: string
+  setPasswordConfirm: (value: string) => void
   name: string
   setName: (value: string) => void
-  phoneNumber: string
-  setPhoneNumber: (value: string) => void
+  birthDate: string
+  setBirthDate: (value: string) => void
+  birthDateLastDigit: string
+  setBirthDateLastDigit: (value: string) => void
+  signUpStep: SignUpStep
+  setSignUpStep: (value: SignUpStep) => void
+  verificationCode: string
+  setVerificationCode: (value: string) => void
+  isEmailVerified: boolean
+  setIsEmailVerified: (value: boolean) => void
+  sendingCode: boolean
+  verifyingCode: boolean
+  onSendCode: () => void
+  onVerifyCode: () => void
+  onPasswordNext: () => void
+  birthDateInputRef: React.RefObject<HTMLInputElement>
+  birthDateLastDigitInputRef: React.RefObject<HTMLInputElement>
+  nameInputRef: React.RefObject<HTMLInputElement>
+  passwordInputRef: React.RefObject<HTMLInputElement>
+  passwordConfirmInputRef: React.RefObject<HTMLInputElement>
   loading: boolean
   error: string | null
   onSubmit: (e: React.FormEvent) => void
@@ -265,100 +506,286 @@ function EmailAuthForm({
   setEmail,
   password,
   setPassword,
+  passwordConfirm,
+  setPasswordConfirm,
   name,
   setName,
-  phoneNumber,
-  setPhoneNumber,
+  birthDate,
+  setBirthDate,
+  birthDateLastDigit,
+  setBirthDateLastDigit,
+  signUpStep,
+  verificationCode,
+  setVerificationCode,
+  isEmailVerified,
+  setIsEmailVerified,
+  sendingCode,
+  verifyingCode,
+  onSendCode,
+  onVerifyCode,
+  onPasswordNext,
+  birthDateInputRef,
+  birthDateLastDigitInputRef,
+  nameInputRef,
+  passwordInputRef,
+  passwordConfirmInputRef,
   loading,
   error,
   onSubmit,
   onClose,
 }: EmailAuthFormProps) {
-  return (
-    <div className="space-y-4">
-      {error && (
-        <div className="p-3 bg-red-50 border-2 border-red-200 text-red-700 rounded-xl text-body">
-          {error}
-        </div>
-      )}
+  // 회원가입 완료 화면
+  if (signUpStep === 'complete') {
+    return (
+      <div className="space-y-4 text-center py-8">
+        <div className="text-6xl mb-4">🎉</div>
+        <h3 className="text-xl font-bold text-text-main">회원가입이 완료되었습니다!</h3>
+        <p className="text-body text-text-sub">잠시 후 홈으로 이동합니다...</p>
+      </div>
+    )
+  }
 
-      <form onSubmit={onSubmit} className="space-y-4">
-        {isSignUp && (
-          <>
-            <div>
-              <label className="block text-body text-text-main mb-2">이름</label>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-                placeholder="홍길동"
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-              />
-            </div>
-            <div>
-              <label className="block text-body text-text-main mb-2">휴대폰 번호</label>
-              <input
-                type="tel"
-                value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                required
-                placeholder="010-1234-5678"
-                className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-              />
-            </div>
-          </>
+  return (
+    <>
+      {/* 인증번호 발송 중 로딩 화면 */}
+      {sendingCode && (
+        <BrandLoader
+          fullScreen={true}
+          text="인증번호를 발송하고 있어요..."
+        />
+      )}
+      
+      <div className="space-y-4">
+        {error && (
+          <div className="p-3 bg-red-50 border-2 border-red-200 text-red-700 rounded-xl text-body">
+            {error}
+          </div>
         )}
 
-        <div>
-          <label className="block text-body text-text-main mb-2">이메일</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            placeholder="email@example.com"
-            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-          />
-        </div>
+      {isSignUp ? (
+        // 회원가입 단계별 폼
+        <>
+          {signUpStep !== 'passwordConfirm' && (
+            <>
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-body text-text-main mb-2">이메일</label>
+                  <div className="flex gap-2">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      placeholder="email@example.com"
+                      disabled={isEmailVerified}
+                      className="flex-1 px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all disabled:bg-gray-50"
+                    />
+                    <button
+                      type="button"
+                      onClick={onSendCode}
+                      disabled={sendingCode || isEmailVerified || !email.trim()}
+                      className="px-4 py-3 rounded-xl bg-primary text-white font-semibold active:opacity-90 disabled:opacity-50 transition-all whitespace-nowrap"
+                    >
+                      {sendingCode ? '발송중...' : isEmailVerified ? '인증완료' : '인증번호 발송'}
+                    </button>
+                  </div>
+                </div>
 
-        <div>
-          <label className="block text-body text-text-main mb-2">비밀번호</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            placeholder="••••••"
-            className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-          />
-        </div>
+                {!isEmailVerified && (
+                  <div>
+                    <label className="block text-body text-text-main mb-2">인증번호</label>
+                    <div className="flex gap-2">
+                      <input
+                        type="text"
+                        value={verificationCode}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(/\D/g, '').slice(0, 6)
+                          setVerificationCode(value)
+                        }}
+                        placeholder="6자리 숫자"
+                        maxLength={6}
+                        className="flex-1 px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                      />
+                      <button
+                        type="button"
+                        onClick={onVerifyCode}
+                        disabled={verifyingCode || verificationCode.length !== 6}
+                        className="px-4 py-3 rounded-xl bg-gray-700 text-white font-semibold active:opacity-90 disabled:opacity-50 transition-all whitespace-nowrap"
+                      >
+                        {verifyingCode ? '확인중...' : '확인'}
+                      </button>
+                    </div>
+                  </div>
+                )}
 
-        <button
-          type="submit"
-          disabled={loading}
-          className="w-full py-3.5 px-4 rounded-xl bg-primary text-white text-body font-semibold shadow-lg active:opacity-90 disabled:opacity-50 transition-all"
-        >
-          {loading ? '처리 중...' : isSignUp ? '회원가입하기' : '로그인하기'}
-        </button>
-      </form>
+                {isEmailVerified && (
+                  <div className="p-3 bg-green-50 border-2 border-green-200 text-green-700 rounded-xl text-body">
+                    ✓ 이메일 인증이 완료되었습니다.
+                  </div>
+                )}
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-body text-text-main mb-2">생년월일</label>
+                  <div className="flex gap-2 items-center">
+                    <input
+                      ref={birthDateInputRef}
+                      type="text"
+                      value={birthDate}
+                      onChange={(e) => {
+                        const value = e.target.value.replace(/\D/g, '').slice(0, 6)
+                        setBirthDate(value)
+                      }}
+                      placeholder="YYMMDD"
+                      maxLength={6}
+                      className="flex-1 min-w-0 px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-center text-lg tracking-widest"
+                    />
+                    <span className="text-text-sub flex-shrink-0">-</span>
+                    <div className="flex-1 min-w-0 flex gap-2 items-center">
+                      <input
+                        ref={birthDateLastDigitInputRef}
+                        type="text"
+                        value={birthDateLastDigit}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(/\D/g, '').slice(0, 1)
+                          setBirthDateLastDigit(value)
+                        }}
+                        placeholder="●"
+                        maxLength={1}
+                        className="w-16 flex-shrink-0 px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-center text-lg"
+                      />
+                      <span className="text-xs text-text-sub whitespace-nowrap">●●●●●●</span>
+                    </div>
+                  </div>
+                  <p className="text-xs text-text-sub mt-1">생년월일 6자리와 뒷자리 1자리를 입력해주세요</p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-body text-text-main mb-2">이름</label>
+                  <input
+                    ref={nameInputRef}
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    placeholder="홍길동"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <button
+                  type="button"
+                  onClick={onPasswordNext}
+                  disabled={!name.trim()}
+                  className="w-full py-3.5 px-4 rounded-xl bg-primary text-white text-body font-semibold shadow-lg active:opacity-90 disabled:opacity-50 transition-all"
+                >
+                  다음
+                </button>
+              </div>
+            </>
+          )}
+
+          {signUpStep === 'passwordConfirm' && (
+            <form onSubmit={onSubmit} className="space-y-4">
+              <div>
+                <label className="block text-body text-text-main mb-2">비밀번호</label>
+                <input
+                  ref={passwordInputRef}
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  placeholder="••••••"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                />
+              </div>
+              <div>
+                <label className="block text-body text-text-main mb-2">비밀번호 확인</label>
+                <input
+                  ref={passwordConfirmInputRef}
+                  type="password"
+                  value={passwordConfirm}
+                  onChange={(e) => setPasswordConfirm(e.target.value)}
+                  required
+                  placeholder="••••••"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                />
+                {passwordConfirm && password !== passwordConfirm && (
+                  <p className="text-xs text-red-500 mt-1">비밀번호가 일치하지 않습니다.</p>
+                )}
+              </div>
+              <button
+                type="submit"
+                disabled={loading || password !== passwordConfirm || password.length < 6}
+                className="w-full py-3.5 px-4 rounded-xl bg-primary text-white text-body font-semibold shadow-lg active:opacity-90 disabled:opacity-50 transition-all"
+              >
+                {loading ? '처리 중...' : '회원가입하기'}
+              </button>
+            </form>
+          )}
+        </>
+      ) : (
+        // 로그인 폼
+        <form onSubmit={onSubmit} className="space-y-4">
+          <div>
+            <label className="block text-body text-text-main mb-2">이메일</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              placeholder="email@example.com"
+              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+            />
+          </div>
+
+          <div>
+            <label className="block text-body text-text-main mb-2">비밀번호</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              placeholder="••••••"
+              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full py-3.5 px-4 rounded-xl bg-primary text-white text-body font-semibold shadow-lg active:opacity-90 disabled:opacity-50 transition-all"
+          >
+            {loading ? '처리 중...' : '로그인하기'}
+          </button>
+        </form>
+      )}
 
       {/* 로그인/회원가입 전환 */}
-      <div className="mt-4 text-center">
+      {!isSignUp && <div className="mt-4 text-center">
         <button
           onClick={() => {
             setIsSignUp(!isSignUp)
             setEmail('')
             setPassword('')
+            setPasswordConfirm('')
             setName('')
-            setPhoneNumber('')
+            setBirthDate('')
+            setBirthDateLastDigit('')
+            setVerificationCode('')
+            setIsEmailVerified(false)
           }}
           className="text-sm text-text-sub active:opacity-70 transition-colors"
         >
-          {isSignUp ? '이미 계정이 있으신가요? 로그인' : '계정이 없으신가요? 회원가입'}
+          계정이 없으신가요? 회원가입
         </button>
+      </div>}
       </div>
-    </div>
+    </>
   )
 }
-

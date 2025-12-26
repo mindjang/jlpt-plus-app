@@ -9,6 +9,7 @@ export interface UserProfile {
   email?: string
   photoURL?: string
   phoneNumber?: string
+  birthDate?: string // 생년월일 (YYYY-MM-DD 형식)
 }
 
 export interface UserSettings {

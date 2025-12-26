@@ -15,6 +15,7 @@ export async function createUserDocument(
     displayName?: string
     photoURL?: string
     phoneNumber?: string
+    birthDate?: string
   }
 ) {
   const dbInstance = getDbInstance()
@@ -44,6 +45,9 @@ export async function createUserDocument(
   }
   if (initialData?.phoneNumber !== undefined) {
     profile.phoneNumber = initialData.phoneNumber
+  }
+  if (initialData?.birthDate !== undefined) {
+    profile.birthDate = initialData.birthDate
   }
 
   const userData: UserData = {

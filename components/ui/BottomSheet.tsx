@@ -2,18 +2,28 @@
 
 import React, { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { X } from 'lucide-react'
 
 interface BottomSheetProps {
   isOpen: boolean
   onClose: () => void
   children: React.ReactNode
   title?: string
+  closeOnBackdropClick?: boolean
+  showCloseButton?: boolean
 }
 
 /**
  * 하단에서 올라오는 모달 컴포넌트
  */
-export function BottomSheet({ isOpen, onClose, children, title }: BottomSheetProps) {
+export function BottomSheet({
+  isOpen,
+  onClose,
+  children,
+  title,
+  closeOnBackdropClick = true,
+  showCloseButton = false,
+}: BottomSheetProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
@@ -35,7 +45,7 @@ export function BottomSheet({ isOpen, onClose, children, title }: BottomSheetPro
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.45 }}
             exit={{ opacity: 0 }}
-            onClick={onClose}
+            onClick={closeOnBackdropClick ? onClose : undefined}
           />
 
           {/* 하단 시트 */}
@@ -55,10 +65,19 @@ export function BottomSheet({ isOpen, onClose, children, title }: BottomSheetPro
 
               {/* 헤더 */}
               {title && (
-                <div className="px-6 pb-4 border-b border-divider">
+                <div className="px-6 pb-4 border-b border-divider flex items-center justify-between">
                   <h2 className="text-title font-semibold text-text-main">
                     {title}
                   </h2>
+                  {showCloseButton && (
+                    <button
+                      onClick={onClose}
+                      className="p-2 -mr-2 rounded-full hover:bg-gray-100 active:bg-gray-200 transition-colors"
+                      aria-label="닫기"
+                    >
+                      <X className="w-5 h-5 text-text-sub" />
+                    </button>
+                  )}
                 </div>
               )}
 

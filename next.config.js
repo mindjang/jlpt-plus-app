@@ -11,6 +11,21 @@ const nextConfig = {
   reactStrictMode: true,
   // 개발 환경에서 다른 IP에서 접속 허용
   allowedDevOrigins: process.env.NODE_ENV === 'development' ? ['192.168.0.16'] : undefined,
+  // 결제 팝업을 위한 COOP 헤더 설정
+  async headers() {
+    return [
+      {
+        // 모든 경로에 적용
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin-allow-popups',
+          },
+        ],
+      },
+    ]
+  },
   webpack: (config, { isServer }) => {
     // 클라이언트 번들에서 firebase-admin 제외
     if (!isServer) {

@@ -166,6 +166,18 @@ function MyPageContent() {
 
   // Check for payment query param to auto-open modal or handle payment success
   useEffect(() => {
+    // 모바일 결제 로그 확인 (리다이렉트 후에도 확인 가능)
+    try {
+      const paymentLogs = sessionStorage.getItem('paymentLogs')
+      if (paymentLogs) {
+        const logs = JSON.parse(paymentLogs)
+        logger.info('[Payment] Mobile payment logs from sessionStorage', { logs })
+        // 로그 확인 후 삭제하지 않음 (디버깅용으로 유지)
+      }
+    } catch (e) {
+      // 로그 확인 실패 시 무시
+    }
+
     const paymentParam = searchParams.get('payment')
     // PortOne V2 SDK는 리다이렉트 시 imp_uid를 쿼리 파라미터로 전달
     // 빌링키는 직접 전달되지 않으므로 imp_uid로 서버에서 조회 필요

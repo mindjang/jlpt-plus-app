@@ -454,7 +454,7 @@ export function usePayment({
         paymentId,
         orderName: `일본어학습 구독권 (${planNames[plan]})`,
         totalAmount: planAmounts[plan],
-        currency: 'KRW',
+        currency: 'KRW', // KG이니시스 문서 기준: 원화 결제 시 KRW 사용
         customer: customerPayload,
       }
 
@@ -469,8 +469,11 @@ export function usePayment({
           : '/my?payment=success'
       }
 
-      logger.info('[Payment] Requesting payment', {
+      const logData = {
         mobile,
+        isMobileDetected: isMobile(),
+        userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'N/A',
+        innerWidth: typeof window !== 'undefined' ? window.innerWidth : 'N/A',
         paymentId,
         payMethod: paymentOptions.payMethod,
         originalPayMethod: payMethod,
@@ -485,7 +488,25 @@ export function usePayment({
         },
         paymentOptionsKeys: Object.keys(paymentOptions),
         timestamp: Date.now(),
-      })
+      }
+      
+      logger.info('[Payment] Requesting payment', logData)
+      
+      // 모바일에서 리다이렉트가 발생하므로 로그를 sessionStorage에 저장
+      if (mobile && typeof window !== 'undefined') {
+        try {
+          const existingLogs = sessionStorage.getItem('paymentLogs')
+          const logs = existingLogs ? JSON.parse(existingLogs) : []
+          logs.push({
+            type: 'request',
+            ...logData,
+            timestamp: new Date().toISOString(),
+          })
+          sessionStorage.setItem('paymentLogs', JSON.stringify(logs.slice(-10))) // 최근 10개만 저장
+        } catch (e) {
+          // sessionStorage 저장 실패 시 무시
+        }
+      }
 
       // 모바일에서는 리다이렉션이 발생하므로 requestPayment 호출 후 바로 리다이렉트됨
       // PC에서는 팝업이 열리고 응답을 받음
@@ -524,52 +545,91 @@ export function usePayment({
         })
       }
 
-      const paymentResponse = await PortOne.requestPayment(paymentOptions)
-      
-      // 모바일에서는 리다이렉션이 발생하므로 여기까지 도달하지 않음
-      // PC에서만 여기까지 도달
-      if (!paymentResponse) {
-        setPayMessage('결제 응답을 받지 못했습니다.')
-        return
-      }
+      // 모바일에서는 리다이렉션이 발생하므로 requestPayment 호출 후 바로 리다이렉트됨
+      // PC에서는 팝업이 열리고 응답을 받음
+      try {
+        const paymentResponse = await PortOne.requestPayment(paymentOptions)
+        
+        // 모바일에서는 리다이렉션이 발생하므로 여기까지 도달하지 않음
+        // PC에서만 여기까지 도달
+        if (!paymentResponse) {
+          setPayMessage('결제 응답을 받지 못했습니다.')
+          return
+        }
 
-      if ((paymentResponse as any).code) {
-        setPayMessage((paymentResponse as any).message || '결제에 실패했습니다.')
-        return
-      }
+        if ((paymentResponse as any).code) {
+          setPayMessage((paymentResponse as any).message || '결제에 실패했습니다.')
+          return
+        }
 
-      const actualPaymentId = (paymentResponse as any).paymentId || paymentId
-      const idToken = await user.getIdToken()
+        const actualPaymentId = (paymentResponse as any).paymentId || paymentId
+        const idToken = await user.getIdToken()
 
-      const resp = await fetch('/api/pay/one-time', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${idToken}`
-        },
-        body: JSON.stringify({ paymentId: actualPaymentId, plan }),
-      })
-      const data = await resp.json()
-      if (!resp.ok) {
-        logger.error('[Payment] One-time payment API failed', {
+        const resp = await fetch('/api/pay/one-time', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${idToken}`
+          },
+          body: JSON.stringify({ paymentId: actualPaymentId, plan }),
+        })
+        const data = await resp.json()
+        if (!resp.ok) {
+          logger.error('[Payment] One-time payment API failed', {
+            plan,
+            error: data?.error,
+            timestamp: Date.now(),
+          })
+          setPayMessage(data?.error || '결제에 실패했습니다.')
+          return
+        }
+
+        logger.info('[Payment] One-time payment completed successfully', {
           plan,
-          error: data?.error,
+          method: config.billingKeyMethod === 'EASY_PAY' ? 'easy_pay' : 'card',
+          device: mobile ? 'mobile' : 'pc',
           timestamp: Date.now(),
         })
-        setPayMessage(data?.error || '결제에 실패했습니다.')
-        return
-      }
 
-      logger.info('[Payment] One-time payment completed successfully', {
-        plan,
-        method: config.billingKeyMethod === 'EASY_PAY' ? 'easy_pay' : 'card',
-        device: mobile ? 'mobile' : 'pc',
-        timestamp: Date.now(),
-      })
-
-      setPayMessage('결제가 완료되었습니다.')
-      if (onRefresh) {
-        await onRefresh()
+        setPayMessage('결제가 완료되었습니다.')
+        if (onRefresh) {
+          await onRefresh()
+        }
+      } catch (requestError: any) {
+        // 모바일에서 requestPayment 호출 시 에러가 발생하면 리다이렉션이 발생하지 않음
+        const errorLogData = {
+          error: requestError?.message || String(requestError),
+          errorCode: requestError?.code,
+          errorName: requestError?.name,
+          stack: requestError?.stack,
+          mobile,
+          paymentId,
+          paymentOptions: {
+            ...paymentOptions,
+            channelKey: paymentOptions.channelKey ? `${paymentOptions.channelKey.substring(0, 10)}...` : 'missing',
+          },
+          timestamp: Date.now(),
+        }
+        
+        logger.error('[Payment] PortOne requestPayment failed', errorLogData)
+        
+        // 모바일에서 에러 발생 시 로그를 sessionStorage에 저장
+        if (mobile && typeof window !== 'undefined') {
+          try {
+            const existingLogs = sessionStorage.getItem('paymentLogs')
+            const logs = existingLogs ? JSON.parse(existingLogs) : []
+            logs.push({
+              type: 'error',
+              ...errorLogData,
+              timestamp: new Date().toISOString(),
+            })
+            sessionStorage.setItem('paymentLogs', JSON.stringify(logs.slice(-10))) // 최근 10개만 저장
+          } catch (e) {
+            // sessionStorage 저장 실패 시 무시
+          }
+        }
+        
+        throw requestError
       }
     } catch (error: any) {
       logger.error('[Payment] One-time payment error', {

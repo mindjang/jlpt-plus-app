@@ -54,11 +54,25 @@ export async function POST(request: NextRequest) {
       timestamp: Date.now(),
     })
 
+    // 서버 사이드에서 안전하게 날짜 포맷팅
+    let expiresAtFormatted: string
+    try {
+      expiresAtFormatted = new Date(membership.expiresAt).toLocaleDateString('ko-KR', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        timeZone: 'Asia/Seoul',
+      })
+    } catch (dateError) {
+      // 날짜 포맷팅 실패 시 ISO 문자열 사용
+      expiresAtFormatted = new Date(membership.expiresAt).toISOString()
+    }
+
     return NextResponse.json({
       ok: true,
       message: '구독이 취소되었습니다.',
       expiresAt: membership.expiresAt,
-      expiresAtFormatted: new Date(membership.expiresAt).toLocaleDateString('ko-KR'),
+      expiresAtFormatted,
     })
   } catch (error: any) {
     console.error('[pay/cancel-subscription] error', {

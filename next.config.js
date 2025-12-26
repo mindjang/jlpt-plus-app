@@ -9,8 +9,15 @@ const withPWA = require('next-pwa')({
 
 const nextConfig = {
   reactStrictMode: true,
+  // Docker 빌드를 위한 standalone 출력 모드
+  // Docker 빌드 시 항상 활성화 (환경 변수로 비활성화 가능)
+  output: process.env.NEXT_STANDALONE === 'false' ? undefined : 'standalone',
   // 개발 환경에서 다른 IP에서 접속 허용
   allowedDevOrigins: process.env.NODE_ENV === 'development' ? ['192.168.0.16'] : undefined,
+  // instrumentation.ts 활성화 (서버 사이드 전역 에러 핸들러)
+  experimental: {
+    instrumentationHook: true,
+  },
   // 결제 팝업을 위한 COOP 헤더 설정
   async headers() {
     return [

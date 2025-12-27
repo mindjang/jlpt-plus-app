@@ -275,7 +275,7 @@ export function LoginForm() {
       <>
         <div className="w-full max-w-lg mx-auto px-6">
           {error && (
-            <div className="mb-4 p-3 bg-red-50 border-2 border-red-200 text-red-700 rounded-xl text-body">
+            <div className="mb-4 p-3 bg-red-50 border-2 border-red-200 text-red-700 rounded-lg text-body">
               {error}
             </div>
           )}
@@ -287,7 +287,7 @@ export function LoginForm() {
                 setIsSignUp(false)
                 setShowEmailForm(true)
               }}
-              className="w-full py-4 px-4 rounded-xl bg-primary/90 text-white font-bold active:opacity-90 shadow-sm"
+              className="w-full py-4 px-4 rounded-lg bg-primary/90 text-white font-bold active:opacity-90 shadow-sm"
             >
               이메일 로그인
             </button>
@@ -369,7 +369,7 @@ export function LoginForm() {
   return (
     <div className="w-full max-w-md mx-auto px-6">
       {error && (
-        <div className="mb-4 p-3 bg-red-50 border-2 border-red-200 text-red-700 rounded-xl text-body">
+        <div className="mb-4 p-3 bg-red-50 border-2 border-red-200 text-red-700 rounded-lg text-body">
           {error}
         </div>
       )}
@@ -381,7 +381,7 @@ export function LoginForm() {
             setIsSignUp(false)
             setShowEmailForm(true)
           }}
-          className="w-full py-4 px-4 rounded-xl bg-primary text-white font-bold active:opacity-90 shadow-sm"
+          className="w-full py-4 px-4 rounded-lg bg-primary text-white font-bold active:opacity-90 shadow-sm"
         >
           이메일 로그인
         </button>
@@ -557,7 +557,7 @@ function EmailAuthForm({
       
       <div className="space-y-4">
         {error && (
-          <div className="p-3 bg-red-50 border-2 border-red-200 text-red-700 rounded-xl text-body">
+          <div className="p-3 bg-red-50 border-2 border-red-200 text-red-700 rounded-lg text-body">
             {error}
           </div>
         )}
@@ -570,7 +570,7 @@ function EmailAuthForm({
               <div className="space-y-4">
                 <div>
                   <label className="block text-body text-text-main mb-2">이메일</label>
-                  <div className="flex gap-2">
+                  <div className="flex flex-col gap-2">
                     <input
                       type="email"
                       value={email}
@@ -578,13 +578,13 @@ function EmailAuthForm({
                       required
                       placeholder="email@example.com"
                       disabled={isEmailVerified}
-                      className="flex-1 px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all disabled:bg-gray-50"
+                      className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all disabled:bg-gray-50"
                     />
                     <button
                       type="button"
                       onClick={onSendCode}
                       disabled={sendingCode || isEmailVerified || !email.trim()}
-                      className="px-4 py-3 rounded-xl bg-primary text-white font-semibold active:opacity-90 disabled:opacity-50 transition-all whitespace-nowrap"
+                      className="px-4 py-3 rounded-lg bg-primary text-white font-semibold active:opacity-90 disabled:opacity-50 transition-all whitespace-nowrap"
                     >
                       {sendingCode ? '발송중...' : isEmailVerified ? '인증완료' : '인증번호 발송'}
                     </button>
@@ -604,13 +604,13 @@ function EmailAuthForm({
                         }}
                         placeholder="6자리 숫자"
                         maxLength={6}
-                        className="flex-1 px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                        className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                       />
                       <button
                         type="button"
                         onClick={onVerifyCode}
                         disabled={verifyingCode || verificationCode.length !== 6}
-                        className="px-4 py-3 rounded-xl bg-gray-700 text-white font-semibold active:opacity-90 disabled:opacity-50 transition-all whitespace-nowrap"
+                        className="px-4 py-3 rounded-lg bg-gray-700 text-white font-semibold active:opacity-90 disabled:opacity-50 transition-all whitespace-nowrap"
                       >
                         {verifyingCode ? '확인중...' : '확인'}
                       </button>
@@ -619,7 +619,7 @@ function EmailAuthForm({
                 )}
 
                 {isEmailVerified && (
-                  <div className="p-3 bg-green-50 border-2 border-green-200 text-green-700 rounded-xl text-body">
+                  <div className="p-3 bg-green-50 border-2 border-green-200 text-green-700 rounded-lg text-body">
                     ✓ 이메일 인증이 완료되었습니다.
                   </div>
                 )}
@@ -628,7 +628,7 @@ function EmailAuthForm({
               <div className="space-y-4">
                 <div>
                   <label className="block text-body text-text-main mb-2">생년월일</label>
-                  <div className="flex gap-2 items-center">
+                  <div className="relative grid grid-cols-2 gap-4 items-center">
                     <input
                       ref={birthDateInputRef}
                       type="text"
@@ -639,10 +639,10 @@ function EmailAuthForm({
                       }}
                       placeholder="YYMMDD"
                       maxLength={6}
-                      className="flex-1 min-w-0 px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-center text-lg tracking-widest"
+                      className="flex-1 px-4 py-3 rounded-lg border-2 text-center border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                     />
-                    <span className="text-text-sub flex-shrink-0">-</span>
-                    <div className="flex-1 min-w-0 flex gap-2 items-center">
+                    <span className="text-text-sub flex-shrink-0 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">-</span>
+                    <div className="flex-1 flex gap-2 items-center">
                       <input
                         ref={birthDateLastDigitInputRef}
                         type="text"
@@ -653,9 +653,9 @@ function EmailAuthForm({
                         }}
                         placeholder="●"
                         maxLength={1}
-                        className="w-16 flex-shrink-0 px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-center text-lg"
+                        className="w-full px-4 py-3 rounded-lg border-2 text-center border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                       />
-                      <span className="text-xs text-text-sub whitespace-nowrap">●●●●●●</span>
+                      <span className="flex-1 text-text-main text-text-sub whitespace-nowrap">●●●●●●</span>
                     </div>
                   </div>
                   <p className="text-xs text-text-sub mt-1">생년월일 6자리와 뒷자리 1자리를 입력해주세요</p>
@@ -672,7 +672,7 @@ function EmailAuthForm({
                     onChange={(e) => setName(e.target.value)}
                     required
                     placeholder="홍길동"
-                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                   />
                 </div>
               </div>
@@ -682,7 +682,7 @@ function EmailAuthForm({
                   type="button"
                   onClick={onPasswordNext}
                   disabled={!name.trim()}
-                  className="w-full py-3.5 px-4 rounded-xl bg-primary text-white text-body font-semibold shadow-lg active:opacity-90 disabled:opacity-50 transition-all"
+                  className="w-full py-3.5 px-4 rounded-lg bg-primary text-white text-body font-semibold shadow-lg active:opacity-90 disabled:opacity-50 transition-all"
                 >
                   다음
                 </button>
@@ -701,7 +701,7 @@ function EmailAuthForm({
                   onChange={(e) => setPassword(e.target.value)}
                   required
                   placeholder="••••••"
-                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                 />
               </div>
               <div>
@@ -713,7 +713,7 @@ function EmailAuthForm({
                   onChange={(e) => setPasswordConfirm(e.target.value)}
                   required
                   placeholder="••••••"
-                  className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                 />
                 {passwordConfirm && password !== passwordConfirm && (
                   <p className="text-xs text-red-500 mt-1">비밀번호가 일치하지 않습니다.</p>
@@ -722,7 +722,7 @@ function EmailAuthForm({
               <button
                 type="submit"
                 disabled={loading || password !== passwordConfirm || password.length < 6}
-                className="w-full py-3.5 px-4 rounded-xl bg-primary text-white text-body font-semibold shadow-lg active:opacity-90 disabled:opacity-50 transition-all"
+                className="w-full py-3.5 px-4 rounded-lg bg-primary text-white text-body font-semibold shadow-lg active:opacity-90 disabled:opacity-50 transition-all"
               >
                 {loading ? '처리 중...' : '회원가입하기'}
               </button>
@@ -740,7 +740,7 @@ function EmailAuthForm({
               onChange={(e) => setEmail(e.target.value)}
               required
               placeholder="email@example.com"
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+              className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
             />
           </div>
 
@@ -752,14 +752,14 @@ function EmailAuthForm({
               onChange={(e) => setPassword(e.target.value)}
               required
               placeholder="••••••"
-              className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+              className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3.5 px-4 rounded-xl bg-primary text-white text-body font-semibold shadow-lg active:opacity-90 disabled:opacity-50 transition-all"
+            className="w-full py-3.5 px-4 rounded-lg bg-primary text-white text-body font-semibold shadow-lg active:opacity-90 disabled:opacity-50 transition-all"
           >
             {loading ? '처리 중...' : '로그인하기'}
           </button>

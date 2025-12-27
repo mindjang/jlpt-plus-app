@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
     }
 
     const apiSecret = process.env.PORTONE_API_SECRET
-    const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY
+    const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY_CARD_SUBSCRIPTION
     if (!apiSecret || !channelKey) {
       return NextResponse.json({ error: '포트원 설정이 누락되었습니다.' }, { status: 500 })
     }

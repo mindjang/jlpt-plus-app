@@ -594,26 +594,30 @@ function EmailAuthForm({
                 {!isEmailVerified && (
                   <div>
                     <label className="block text-body text-text-main mb-2">인증번호</label>
-                    <div className="flex gap-2">
-                      <input
-                        type="text"
-                        value={verificationCode}
-                        onChange={(e) => {
-                          const value = e.target.value.replace(/\D/g, '').slice(0, 6)
-                          setVerificationCode(value)
-                        }}
-                        placeholder="6자리 숫자"
-                        maxLength={6}
-                        className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      />
-                      <button
-                        type="button"
-                        onClick={onVerifyCode}
-                        disabled={verifyingCode || verificationCode.length !== 6}
-                        className="px-4 py-3 rounded-lg bg-gray-700 text-white font-semibold active:opacity-90 disabled:opacity-50 transition-all whitespace-nowrap"
-                      >
-                        {verifyingCode ? '확인중...' : '확인'}
-                      </button>
+                    <div className="grid grid-cols-4 gap-2">
+                      <div className="col-span-3">
+                        <input
+                          type="text"
+                          value={verificationCode}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/\D/g, '').slice(0, 6)
+                            setVerificationCode(value)
+                          }}
+                          placeholder="6자리 숫자"
+                          maxLength={6}
+                          className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-text-main focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                        />
+                      </div>
+                      <div className="col-span-1">
+                        <button
+                          type="button"
+                          onClick={onVerifyCode}
+                          disabled={verifyingCode || verificationCode.length !== 6}
+                          className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white font-semibold active:opacity-90 disabled:opacity-50 transition-all whitespace-nowrap"
+                        >
+                          {verifyingCode ? '확인중...' : '확인'}
+                        </button>
+                      </div>
                     </div>
                   </div>
                 )}

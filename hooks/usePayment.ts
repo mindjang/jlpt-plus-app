@@ -38,7 +38,7 @@ export function usePayment({
 
   const handleSubscribe = useCallback(async (plan: SubscriptionPlan) => {
     const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
-    const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY_CARD_SUBSCRIPTION || process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY
+    const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY_CARD_SUBSCRIPTION
 
     if (!storeId || !channelKey) {
       setPayMessage('결제 설정이 준비되지 않았습니다. (storeId/channelKey)')
@@ -116,7 +116,7 @@ export function usePayment({
 
   const handleOneTimePayment = useCallback(async (plan: OneTimePlan) => {
     const storeId = process.env.NEXT_PUBLIC_PORTONE_STORE_ID
-    const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY_CARD_GENERAL || process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY
+    const channelKey = process.env.NEXT_PUBLIC_PORTONE_CHANNEL_KEY_CARD_GENERAL
 
     if (!storeId || !channelKey) {
       setPayMessage('결제 설정이 준비되지 않았습니다. (storeId/channelKey)')

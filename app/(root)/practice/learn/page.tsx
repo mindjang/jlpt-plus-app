@@ -132,7 +132,6 @@ function LearnContent() {
       feature="study_session"
       customMessage={{
         title: `${level} ${typeParam === 'word' ? '단어' : '한자'} 학습`,
-        description: '학습을 시작하려면 로그인이 필요합니다.',
       }}
     >
       {loading ? (

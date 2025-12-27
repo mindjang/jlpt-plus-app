@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useAuth } from '../auth/AuthProvider'
+import { useMembership } from './MembershipProvider'
 import { logger } from '@/lib/utils/logger'
 
 interface PaywallOverlayProps {
@@ -32,6 +33,7 @@ export function PaywallOverlay({
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const { user } = useAuth()
+  const { redeemCode: membershipRedeemCode, refresh: refreshMembership } = useMembership()
   const [code, setCode] = useState('')
   const [redeemLoading, setRedeemLoading] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
@@ -48,17 +50,45 @@ export function PaywallOverlay({
   }, [])
 
   const handleRedeem = async () => {
-    if (!onRedeem) return
+    // onRedeem prop이 있으면 사용, 없으면 useMembership의 redeemCode 사용
+    const redeemFunction = onRedeem || membershipRedeemCode
+    
+    if (!redeemFunction) {
+      setMessage('쿠폰 등록 기능을 사용할 수 없습니다.')
+      return
+    }
+    
     if (!code || code.length < 8) {
       setMessage('8자리 코드를 입력해주세요.')
       return
     }
+    
+    if (!user) {
+      setMessage('로그인이 필요합니다.')
+      return
+    }
+    
     setMessage(null)
     setRedeemLoading(true)
     try {
-      await onRedeem(code.trim())
+      await redeemFunction(code.trim())
       setMessage('코드가 적용되었어요!')
       setCode('')
+      
+      // membership 상태 갱신
+      if (refreshMembership) {
+        await refreshMembership()
+      }
+      
+      // 성공 후 잠시 대기 후 페이지 새로고침 또는 모달 닫기
+      setTimeout(() => {
+        if (onClose) {
+          onClose()
+        } else {
+          // 모달이 없으면 페이지 새로고침
+          window.location.reload()
+        }
+      }, 1500)
     } catch (error: any) {
       setMessage(error?.message || '코드 적용에 실패했습니다.')
     } finally {
@@ -87,12 +117,7 @@ export function PaywallOverlay({
 
         {showPlans && (
           <div className="space-y-3">
-            <div className="text-center">
-              <span className="inline-block px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-bold mb-2">
-                테스트 모드
-              </span>
-            </div>
-            
+
             {/* 혜택 설명 */}
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 space-y-2">
               <p className="text-label font-medium text-blue-900">회원이 되시면:</p>
